@@ -7,23 +7,205 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60D69A747F4B18050698D093 /* Pods_Hi5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */; };
+		66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */; };
+		66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */; };
+		66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FE23B4C8FC009DB30A /* FieldsRouter.swift */; };
+		66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FF23B4C8FC009DB30A /* FieldsViewController.swift */; };
+		66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */; };
+		66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0123B4C8FC009DB30A /* FieldsModel.swift */; };
+		66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66340A0223B4C8FC009DB30A /* FieldsViewController.xib */; };
+		66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0323B4C8FC009DB30A /* FieldsManager.swift */; };
+		66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1623B4DB6F009DB30A /* CornerRaduis.swift */; };
+		66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1823B4DE67009DB30A /* CreateBorder.swift */; };
+		66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1A23B4E091009DB30A /* LoginEndpoint.swift */; };
+		66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1C23B4E0B3009DB30A /* NetworkService.swift */; };
 		6663361323B40206004E537C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663361223B40206004E537C /* AppDelegate.swift */; };
 		6663361523B40206004E537C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663361423B40206004E537C /* SceneDelegate.swift */; };
 		6663361723B40206004E537C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663361623B40206004E537C /* ViewController.swift */; };
-		6663361A23B40206004E537C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6663361823B40206004E537C /* Main.storyboard */; };
-		6663361C23B4020A004E537C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6663361B23B4020A004E537C /* Assets.xcassets */; };
-		6663361F23B4020A004E537C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6663361D23B4020A004E537C /* LaunchScreen.storyboard */; };
+		6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362723B40298004E537C /* UserAccountConfiguration.swift */; };
+		6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362823B40298004E537C /* UserAccountPresenter.swift */; };
+		6663363123B40298004E537C /* UserAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362923B40298004E537C /* UserAccountRouter.swift */; };
+		6663363223B40298004E537C /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362A23B40298004E537C /* UserAccountViewController.swift */; };
+		6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362B23B40298004E537C /* UserAccountInteractor.swift */; };
+		6663363423B40298004E537C /* UserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362C23B40298004E537C /* UserAccountModel.swift */; };
+		6663363523B40298004E537C /* UserAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663362D23B40298004E537C /* UserAccountViewController.xib */; };
+		6663363623B40298004E537C /* UserAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663362E23B40298004E537C /* UserAccountManager.swift */; };
+		6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663363923B402F7004E537C /* LoginConfiguration.swift */; };
+		6663364223B402F7004E537C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663363A23B402F7004E537C /* LoginPresenter.swift */; };
+		6663364323B402F7004E537C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663363B23B402F7004E537C /* LoginRouter.swift */; };
+		6663364423B402F7004E537C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663363C23B402F7004E537C /* LoginViewController.swift */; };
+		6663364523B402F7004E537C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663363D23B402F7004E537C /* LoginInteractor.swift */; };
+		6663364623B402F7004E537C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663363E23B402F7004E537C /* LoginModel.swift */; };
+		6663364723B402F7004E537C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663363F23B402F7004E537C /* LoginViewController.xib */; };
+		6663364823B402F7004E537C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364023B402F7004E537C /* LoginManager.swift */; };
+		6663365223B40318004E537C /* RegisterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364A23B40318004E537C /* RegisterConfiguration.swift */; };
+		6663365323B40318004E537C /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364B23B40318004E537C /* RegisterPresenter.swift */; };
+		6663365423B40318004E537C /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364C23B40318004E537C /* RegisterRouter.swift */; };
+		6663365523B40318004E537C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364D23B40318004E537C /* RegisterViewController.swift */; };
+		6663365623B40318004E537C /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364E23B40318004E537C /* RegisterInteractor.swift */; };
+		6663365723B40318004E537C /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663364F23B40318004E537C /* RegisterModel.swift */; };
+		6663365823B40318004E537C /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663365023B40318004E537C /* RegisterViewController.xib */; };
+		6663365923B40318004E537C /* RegisterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663365123B40318004E537C /* RegisterManager.swift */; };
+		6663365B23B40345004E537C /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663365A23B40345004E537C /* AppRoute.swift */; };
+		6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663365C23B4036A004E537C /* GeneralRoute.swift */; };
+		6663366023B405D0004E537C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6663365E23B405D0004E537C /* Main.storyboard */; };
+		6663366323B409B1004E537C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6663366223B409B1004E537C /* Assets.xcassets */; };
+		6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366523B40A6A004E537C /* ForgetPasswordConfiguration.swift */; };
+		6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366623B40A6A004E537C /* ForgetPasswordPresenter.swift */; };
+		6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366723B40A6A004E537C /* ForgetPasswordRouter.swift */; };
+		6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366823B40A6A004E537C /* ForgetPasswordViewController.swift */; };
+		6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366923B40A6A004E537C /* ForgetPasswordInteractor.swift */; };
+		6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366A23B40A6A004E537C /* ForgetPasswordModel.swift */; };
+		6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663366B23B40A6A004E537C /* ForgetPasswordViewController.xib */; };
+		6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663366C23B40A6A004E537C /* ForgetPasswordManager.swift */; };
+		6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367623B40AB3004E537C /* ForgetEmailConfiguration.swift */; };
+		6663367F23B40AB3004E537C /* ForgetEmailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367723B40AB3004E537C /* ForgetEmailPresenter.swift */; };
+		6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367823B40AB3004E537C /* ForgetEmailRouter.swift */; };
+		6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367923B40AB3004E537C /* ForgetEmailViewController.swift */; };
+		6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367A23B40AB3004E537C /* ForgetEmailInteractor.swift */; };
+		6663368323B40AB3004E537C /* ForgetEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367B23B40AB3004E537C /* ForgetEmailModel.swift */; };
+		6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663367C23B40AB3004E537C /* ForgetEmailViewController.xib */; };
+		6663368523B40AB3004E537C /* ForgetEmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663367D23B40AB3004E537C /* ForgetEmailManager.swift */; };
+		6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368723B40AFD004E537C /* EmailVerficationConfiguration.swift */; };
+		6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368823B40AFD004E537C /* EmailVerficationPresenter.swift */; };
+		6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368923B40AFD004E537C /* EmailVerficationRouter.swift */; };
+		6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368A23B40AFD004E537C /* EmailVerficationViewController.swift */; };
+		6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368B23B40AFD004E537C /* EmailVerficationInteractor.swift */; };
+		6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368C23B40AFD004E537C /* EmailVerficationModel.swift */; };
+		6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663368D23B40AFD004E537C /* EmailVerficationViewController.xib */; };
+		6663369623B40AFD004E537C /* EmailVerficationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663368E23B40AFD004E537C /* EmailVerficationManager.swift */; };
+		666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369823B40B47004E537C /* ForgotPhoneConfiguration.swift */; };
+		666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369923B40B47004E537C /* ForgotPhonePresenter.swift */; };
+		666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369A23B40B47004E537C /* ForgotPhoneRouter.swift */; };
+		666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369B23B40B47004E537C /* ForgotPhoneViewController.swift */; };
+		666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369C23B40B47004E537C /* ForgotPhoneInteractor.swift */; };
+		666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369D23B40B47004E537C /* ForgotPhoneModel.swift */; };
+		666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6663369E23B40B47004E537C /* ForgotPhoneViewController.xib */; };
+		666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663369F23B40B47004E537C /* ForgotPhoneManager.swift */; };
+		666336B123B40B84004E537C /* PhoneVerificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336A923B40B84004E537C /* PhoneVerificationConfiguration.swift */; };
+		666336B223B40B84004E537C /* PhoneVerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336AA23B40B84004E537C /* PhoneVerificationPresenter.swift */; };
+		666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336AB23B40B84004E537C /* PhoneVerificationRouter.swift */; };
+		666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336AC23B40B84004E537C /* PhoneVerificationViewController.swift */; };
+		666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336AD23B40B84004E537C /* PhoneVerificationInteractor.swift */; };
+		666336B623B40B84004E537C /* PhoneVerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336AE23B40B84004E537C /* PhoneVerificationModel.swift */; };
+		666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666336AF23B40B84004E537C /* PhoneVerificationViewController.xib */; };
+		666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336B023B40B84004E537C /* PhoneVerificationManager.swift */; };
+		666336C223B40BD3004E537C /* NewPasswordConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BA23B40BD3004E537C /* NewPasswordConfiguration.swift */; };
+		666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BB23B40BD3004E537C /* NewPasswordPresenter.swift */; };
+		666336C423B40BD3004E537C /* NewPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BC23B40BD3004E537C /* NewPasswordRouter.swift */; };
+		666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BD23B40BD3004E537C /* NewPasswordViewController.swift */; };
+		666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BE23B40BD3004E537C /* NewPasswordInteractor.swift */; };
+		666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BF23B40BD3004E537C /* NewPasswordModel.swift */; };
+		666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666336C023B40BD3004E537C /* NewPasswordViewController.xib */; };
+		666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336C123B40BD3004E537C /* NewPasswordManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hi5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		663409F323B4C8C8009DB30A /* SocialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPresenter.swift; sourceTree = "<group>"; };
+		663409F423B4C8C8009DB30A /* SocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
+		663409F523B4C8C8009DB30A /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
+		663409F623B4C8C8009DB30A /* SocialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModel.swift; sourceTree = "<group>"; };
+		663409F723B4C8C8009DB30A /* SocialConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialConfiguration.swift; sourceTree = "<group>"; };
+		663409F823B4C8C8009DB30A /* SocialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInteractor.swift; sourceTree = "<group>"; };
+		663409F923B4C8C8009DB30A /* SocialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialRouter.swift; sourceTree = "<group>"; };
+		663409FA23B4C8C8009DB30A /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsConfiguration.swift; sourceTree = "<group>"; };
+		663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsPresenter.swift; sourceTree = "<group>"; };
+		663409FE23B4C8FC009DB30A /* FieldsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsRouter.swift; sourceTree = "<group>"; };
+		663409FF23B4C8FC009DB30A /* FieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsViewController.swift; sourceTree = "<group>"; };
+		66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsInteractor.swift; sourceTree = "<group>"; };
+		66340A0123B4C8FC009DB30A /* FieldsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsModel.swift; sourceTree = "<group>"; };
+		66340A0223B4C8FC009DB30A /* FieldsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldsViewController.xib; sourceTree = "<group>"; };
+		66340A0323B4C8FC009DB30A /* FieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsManager.swift; sourceTree = "<group>"; };
+		66340A1623B4DB6F009DB30A /* CornerRaduis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRaduis.swift; sourceTree = "<group>"; };
+		66340A1823B4DE67009DB30A /* CreateBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBorder.swift; sourceTree = "<group>"; };
+		66340A1A23B4E091009DB30A /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		66340A1C23B4E0B3009DB30A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6663360F23B40206004E537C /* Hi5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6663361223B40206004E537C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6663361423B40206004E537C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6663361623B40206004E537C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6663361923B40206004E537C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6663361B23B4020A004E537C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6663361E23B4020A004E537C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6663362023B4020A004E537C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6663362723B40298004E537C /* UserAccountConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountConfiguration.swift; sourceTree = "<group>"; };
+		6663362823B40298004E537C /* UserAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountPresenter.swift; sourceTree = "<group>"; };
+		6663362923B40298004E537C /* UserAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountRouter.swift; sourceTree = "<group>"; };
+		6663362A23B40298004E537C /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		6663362B23B40298004E537C /* UserAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountInteractor.swift; sourceTree = "<group>"; };
+		6663362C23B40298004E537C /* UserAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountModel.swift; sourceTree = "<group>"; };
+		6663362D23B40298004E537C /* UserAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAccountViewController.xib; sourceTree = "<group>"; };
+		6663362E23B40298004E537C /* UserAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountManager.swift; sourceTree = "<group>"; };
+		6663363923B402F7004E537C /* LoginConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfiguration.swift; sourceTree = "<group>"; };
+		6663363A23B402F7004E537C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		6663363B23B402F7004E537C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		6663363C23B402F7004E537C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6663363D23B402F7004E537C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		6663363E23B402F7004E537C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		6663363F23B402F7004E537C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		6663364023B402F7004E537C /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		6663364A23B40318004E537C /* RegisterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfiguration.swift; sourceTree = "<group>"; };
+		6663364B23B40318004E537C /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		6663364C23B40318004E537C /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
+		6663364D23B40318004E537C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6663364E23B40318004E537C /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		6663364F23B40318004E537C /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		6663365023B40318004E537C /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		6663365123B40318004E537C /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
+		6663365A23B40345004E537C /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		6663365C23B4036A004E537C /* GeneralRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRoute.swift; sourceTree = "<group>"; };
+		6663365F23B405D0004E537C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6663366223B409B1004E537C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Hi5/Hi5/Assets.xcassets; sourceTree = "<group>"; };
+		6663366523B40A6A004E537C /* ForgetPasswordConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordConfiguration.swift; sourceTree = "<group>"; };
+		6663366623B40A6A004E537C /* ForgetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordPresenter.swift; sourceTree = "<group>"; };
+		6663366723B40A6A004E537C /* ForgetPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordRouter.swift; sourceTree = "<group>"; };
+		6663366823B40A6A004E537C /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		6663366923B40A6A004E537C /* ForgetPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordInteractor.swift; sourceTree = "<group>"; };
+		6663366A23B40A6A004E537C /* ForgetPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordModel.swift; sourceTree = "<group>"; };
+		6663366B23B40A6A004E537C /* ForgetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordViewController.xib; sourceTree = "<group>"; };
+		6663366C23B40A6A004E537C /* ForgetPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordManager.swift; sourceTree = "<group>"; };
+		6663367623B40AB3004E537C /* ForgetEmailConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailConfiguration.swift; sourceTree = "<group>"; };
+		6663367723B40AB3004E537C /* ForgetEmailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailPresenter.swift; sourceTree = "<group>"; };
+		6663367823B40AB3004E537C /* ForgetEmailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailRouter.swift; sourceTree = "<group>"; };
+		6663367923B40AB3004E537C /* ForgetEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailViewController.swift; sourceTree = "<group>"; };
+		6663367A23B40AB3004E537C /* ForgetEmailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailInteractor.swift; sourceTree = "<group>"; };
+		6663367B23B40AB3004E537C /* ForgetEmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailModel.swift; sourceTree = "<group>"; };
+		6663367C23B40AB3004E537C /* ForgetEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetEmailViewController.xib; sourceTree = "<group>"; };
+		6663367D23B40AB3004E537C /* ForgetEmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailManager.swift; sourceTree = "<group>"; };
+		6663368723B40AFD004E537C /* EmailVerficationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationConfiguration.swift; sourceTree = "<group>"; };
+		6663368823B40AFD004E537C /* EmailVerficationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationPresenter.swift; sourceTree = "<group>"; };
+		6663368923B40AFD004E537C /* EmailVerficationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationRouter.swift; sourceTree = "<group>"; };
+		6663368A23B40AFD004E537C /* EmailVerficationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationViewController.swift; sourceTree = "<group>"; };
+		6663368B23B40AFD004E537C /* EmailVerficationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationInteractor.swift; sourceTree = "<group>"; };
+		6663368C23B40AFD004E537C /* EmailVerficationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationModel.swift; sourceTree = "<group>"; };
+		6663368D23B40AFD004E537C /* EmailVerficationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailVerficationViewController.xib; sourceTree = "<group>"; };
+		6663368E23B40AFD004E537C /* EmailVerficationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerficationManager.swift; sourceTree = "<group>"; };
+		6663369823B40B47004E537C /* ForgotPhoneConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhoneConfiguration.swift; sourceTree = "<group>"; };
+		6663369923B40B47004E537C /* ForgotPhonePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhonePresenter.swift; sourceTree = "<group>"; };
+		6663369A23B40B47004E537C /* ForgotPhoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhoneRouter.swift; sourceTree = "<group>"; };
+		6663369B23B40B47004E537C /* ForgotPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhoneViewController.swift; sourceTree = "<group>"; };
+		6663369C23B40B47004E537C /* ForgotPhoneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhoneInteractor.swift; sourceTree = "<group>"; };
+		6663369D23B40B47004E537C /* ForgotPhoneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhoneModel.swift; sourceTree = "<group>"; };
+		6663369E23B40B47004E537C /* ForgotPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPhoneViewController.xib; sourceTree = "<group>"; };
+		6663369F23B40B47004E537C /* ForgotPhoneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPhoneManager.swift; sourceTree = "<group>"; };
+		666336A923B40B84004E537C /* PhoneVerificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationConfiguration.swift; sourceTree = "<group>"; };
+		666336AA23B40B84004E537C /* PhoneVerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationPresenter.swift; sourceTree = "<group>"; };
+		666336AB23B40B84004E537C /* PhoneVerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationRouter.swift; sourceTree = "<group>"; };
+		666336AC23B40B84004E537C /* PhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		666336AD23B40B84004E537C /* PhoneVerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationInteractor.swift; sourceTree = "<group>"; };
+		666336AE23B40B84004E537C /* PhoneVerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationModel.swift; sourceTree = "<group>"; };
+		666336AF23B40B84004E537C /* PhoneVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneVerificationViewController.xib; sourceTree = "<group>"; };
+		666336B023B40B84004E537C /* PhoneVerificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationManager.swift; sourceTree = "<group>"; };
+		666336BA23B40BD3004E537C /* NewPasswordConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordConfiguration.swift; sourceTree = "<group>"; };
+		666336BB23B40BD3004E537C /* NewPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordPresenter.swift; sourceTree = "<group>"; };
+		666336BC23B40BD3004E537C /* NewPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRouter.swift; sourceTree = "<group>"; };
+		666336BD23B40BD3004E537C /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		666336BE23B40BD3004E537C /* NewPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordInteractor.swift; sourceTree = "<group>"; };
+		666336BF23B40BD3004E537C /* NewPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordModel.swift; sourceTree = "<group>"; };
+		666336C023B40BD3004E537C /* NewPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPasswordViewController.xib; sourceTree = "<group>"; };
+		666336C123B40BD3004E537C /* NewPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordManager.swift; sourceTree = "<group>"; };
+		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
+		88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.release.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +213,149 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D69A747F4B18050698D093 /* Pods_Hi5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FF46D04AA2457088992A375 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		663409E023B4C6E8009DB30A /* App Modules  */ = {
+			isa = PBXGroup;
+			children = (
+				6663362623B40221004E537C /* User */,
+				66340A1323B4CE2C009DB30A /* SideMenu */,
+				66340A1223B4CAD3009DB30A /* Profile */,
+				66340A1123B4CAC2009DB30A /* HelpCenter */,
+				66340A1023B4CAB8009DB30A /* Wallet */,
+				66340A0F23B4CA73009DB30A /* Suggested */,
+				66340A0E23B4CA63009DB30A /* Session */,
+				66340A0D23B4CA54009DB30A /* NotificationSetting */,
+				66340A0C23B4CA44009DB30A /* Setting */,
+				663409FB23B4C8E2009DB30A /* Fields */,
+				663409F223B4C8AF009DB30A /* Social */,
+			);
+			path = "App Modules ";
+			sourceTree = "<group>";
+		};
+		663409F223B4C8AF009DB30A /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				663409F923B4C8C8009DB30A /* SocialRouter.swift */,
+				663409FA23B4C8C8009DB30A /* SocialViewController.swift */,
+				663409F523B4C8C8009DB30A /* SocialManager.swift */,
+				663409F423B4C8C8009DB30A /* SocialViewController.xib */,
+				663409F623B4C8C8009DB30A /* SocialModel.swift */,
+				663409F723B4C8C8009DB30A /* SocialConfiguration.swift */,
+				663409F323B4C8C8009DB30A /* SocialPresenter.swift */,
+				663409F823B4C8C8009DB30A /* SocialInteractor.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		663409FB23B4C8E2009DB30A /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */,
+				663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */,
+				663409FE23B4C8FC009DB30A /* FieldsRouter.swift */,
+				663409FF23B4C8FC009DB30A /* FieldsViewController.swift */,
+				66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */,
+				66340A0123B4C8FC009DB30A /* FieldsModel.swift */,
+				66340A0223B4C8FC009DB30A /* FieldsViewController.xib */,
+				66340A0323B4C8FC009DB30A /* FieldsManager.swift */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		66340A0C23B4CA44009DB30A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		66340A0D23B4CA54009DB30A /* NotificationSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotificationSetting;
+			sourceTree = "<group>";
+		};
+		66340A0E23B4CA63009DB30A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		66340A0F23B4CA73009DB30A /* Suggested */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Suggested;
+			sourceTree = "<group>";
+		};
+		66340A1023B4CAB8009DB30A /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		66340A1123B4CAC2009DB30A /* HelpCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HelpCenter;
+			sourceTree = "<group>";
+		};
+		66340A1223B4CAD3009DB30A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		66340A1323B4CE2C009DB30A /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		66340A1423B4DB3C009DB30A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				66340A1523B4DB4E009DB30A /* CommonUIView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		66340A1523B4DB4E009DB30A /* CommonUIView */ = {
+			isa = PBXGroup;
+			children = (
+				66340A1623B4DB6F009DB30A /* CornerRaduis.swift */,
+				66340A1823B4DE67009DB30A /* CreateBorder.swift */,
+			);
+			path = CommonUIView;
+			sourceTree = "<group>";
+		};
 		6663360623B40206004E537C = {
 			isa = PBXGroup;
 			children = (
 				6663361123B40206004E537C /* Hi5 */,
 				6663361023B40206004E537C /* Products */,
+				E17617DCB77855E3802A42A8 /* Pods */,
+				1FF46D04AA2457088992A375 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +372,187 @@
 			children = (
 				6663361223B40206004E537C /* AppDelegate.swift */,
 				6663361423B40206004E537C /* SceneDelegate.swift */,
-				6663361623B40206004E537C /* ViewController.swift */,
-				6663361823B40206004E537C /* Main.storyboard */,
-				6663361B23B4020A004E537C /* Assets.xcassets */,
-				6663361D23B4020A004E537C /* LaunchScreen.storyboard */,
+				6663365A23B40345004E537C /* AppRoute.swift */,
+				6663366223B409B1004E537C /* Assets.xcassets */,
+				6663365C23B4036A004E537C /* GeneralRoute.swift */,
+				66340A1C23B4E0B3009DB30A /* NetworkService.swift */,
+				66340A1423B4DB3C009DB30A /* Common */,
+				6663366123B408E2004E537C /* Launch Screen */,
+				663409E023B4C6E8009DB30A /* App Modules  */,
 				6663362023B4020A004E537C /* Info.plist */,
 			);
 			path = Hi5;
+			sourceTree = "<group>";
+		};
+		6663362623B40221004E537C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				666336B923B40BB7004E537C /* NewPassword */,
+				666336A823B40B66004E537C /* PhoneVerification */,
+				6663369723B40B1E004E537C /* ForgotPhone */,
+				6663368623B40ADF004E537C /* EmailVerfication */,
+				6663367523B40A8F004E537C /* ForgetEmail */,
+				6663366423B40A36004E537C /* ForgetPassword */,
+				6663364923B402FF004E537C /* Register */,
+				6663363723B402B4004E537C /* Login */,
+				6663363823B402D3004E537C /* UserAccount */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		6663363723B402B4004E537C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6663363923B402F7004E537C /* LoginConfiguration.swift */,
+				6663363A23B402F7004E537C /* LoginPresenter.swift */,
+				6663363B23B402F7004E537C /* LoginRouter.swift */,
+				6663363C23B402F7004E537C /* LoginViewController.swift */,
+				6663363D23B402F7004E537C /* LoginInteractor.swift */,
+				6663363E23B402F7004E537C /* LoginModel.swift */,
+				6663363F23B402F7004E537C /* LoginViewController.xib */,
+				6663364023B402F7004E537C /* LoginManager.swift */,
+				66340A1A23B4E091009DB30A /* LoginEndpoint.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6663363823B402D3004E537C /* UserAccount */ = {
+			isa = PBXGroup;
+			children = (
+				6663362723B40298004E537C /* UserAccountConfiguration.swift */,
+				6663362823B40298004E537C /* UserAccountPresenter.swift */,
+				6663362923B40298004E537C /* UserAccountRouter.swift */,
+				6663362A23B40298004E537C /* UserAccountViewController.swift */,
+				6663362B23B40298004E537C /* UserAccountInteractor.swift */,
+				6663362C23B40298004E537C /* UserAccountModel.swift */,
+				6663362D23B40298004E537C /* UserAccountViewController.xib */,
+				6663362E23B40298004E537C /* UserAccountManager.swift */,
+			);
+			path = UserAccount;
+			sourceTree = "<group>";
+		};
+		6663364923B402FF004E537C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				6663364A23B40318004E537C /* RegisterConfiguration.swift */,
+				6663364B23B40318004E537C /* RegisterPresenter.swift */,
+				6663364C23B40318004E537C /* RegisterRouter.swift */,
+				6663364D23B40318004E537C /* RegisterViewController.swift */,
+				6663364E23B40318004E537C /* RegisterInteractor.swift */,
+				6663364F23B40318004E537C /* RegisterModel.swift */,
+				6663365023B40318004E537C /* RegisterViewController.xib */,
+				6663365123B40318004E537C /* RegisterManager.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		6663366123B408E2004E537C /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6663365E23B405D0004E537C /* Main.storyboard */,
+				6663361623B40206004E537C /* ViewController.swift */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		6663366423B40A36004E537C /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				6663366523B40A6A004E537C /* ForgetPasswordConfiguration.swift */,
+				6663366623B40A6A004E537C /* ForgetPasswordPresenter.swift */,
+				6663366723B40A6A004E537C /* ForgetPasswordRouter.swift */,
+				6663366823B40A6A004E537C /* ForgetPasswordViewController.swift */,
+				6663366923B40A6A004E537C /* ForgetPasswordInteractor.swift */,
+				6663366A23B40A6A004E537C /* ForgetPasswordModel.swift */,
+				6663366B23B40A6A004E537C /* ForgetPasswordViewController.xib */,
+				6663366C23B40A6A004E537C /* ForgetPasswordManager.swift */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		6663367523B40A8F004E537C /* ForgetEmail */ = {
+			isa = PBXGroup;
+			children = (
+				6663367623B40AB3004E537C /* ForgetEmailConfiguration.swift */,
+				6663367723B40AB3004E537C /* ForgetEmailPresenter.swift */,
+				6663367823B40AB3004E537C /* ForgetEmailRouter.swift */,
+				6663367923B40AB3004E537C /* ForgetEmailViewController.swift */,
+				6663367A23B40AB3004E537C /* ForgetEmailInteractor.swift */,
+				6663367B23B40AB3004E537C /* ForgetEmailModel.swift */,
+				6663367C23B40AB3004E537C /* ForgetEmailViewController.xib */,
+				6663367D23B40AB3004E537C /* ForgetEmailManager.swift */,
+			);
+			path = ForgetEmail;
+			sourceTree = "<group>";
+		};
+		6663368623B40ADF004E537C /* EmailVerfication */ = {
+			isa = PBXGroup;
+			children = (
+				6663368723B40AFD004E537C /* EmailVerficationConfiguration.swift */,
+				6663368823B40AFD004E537C /* EmailVerficationPresenter.swift */,
+				6663368923B40AFD004E537C /* EmailVerficationRouter.swift */,
+				6663368A23B40AFD004E537C /* EmailVerficationViewController.swift */,
+				6663368B23B40AFD004E537C /* EmailVerficationInteractor.swift */,
+				6663368C23B40AFD004E537C /* EmailVerficationModel.swift */,
+				6663368D23B40AFD004E537C /* EmailVerficationViewController.xib */,
+				6663368E23B40AFD004E537C /* EmailVerficationManager.swift */,
+			);
+			path = EmailVerfication;
+			sourceTree = "<group>";
+		};
+		6663369723B40B1E004E537C /* ForgotPhone */ = {
+			isa = PBXGroup;
+			children = (
+				6663369823B40B47004E537C /* ForgotPhoneConfiguration.swift */,
+				6663369923B40B47004E537C /* ForgotPhonePresenter.swift */,
+				6663369A23B40B47004E537C /* ForgotPhoneRouter.swift */,
+				6663369B23B40B47004E537C /* ForgotPhoneViewController.swift */,
+				6663369C23B40B47004E537C /* ForgotPhoneInteractor.swift */,
+				6663369D23B40B47004E537C /* ForgotPhoneModel.swift */,
+				6663369E23B40B47004E537C /* ForgotPhoneViewController.xib */,
+				6663369F23B40B47004E537C /* ForgotPhoneManager.swift */,
+			);
+			path = ForgotPhone;
+			sourceTree = "<group>";
+		};
+		666336A823B40B66004E537C /* PhoneVerification */ = {
+			isa = PBXGroup;
+			children = (
+				666336A923B40B84004E537C /* PhoneVerificationConfiguration.swift */,
+				666336AA23B40B84004E537C /* PhoneVerificationPresenter.swift */,
+				666336AB23B40B84004E537C /* PhoneVerificationRouter.swift */,
+				666336AC23B40B84004E537C /* PhoneVerificationViewController.swift */,
+				666336AD23B40B84004E537C /* PhoneVerificationInteractor.swift */,
+				666336AE23B40B84004E537C /* PhoneVerificationModel.swift */,
+				666336AF23B40B84004E537C /* PhoneVerificationViewController.xib */,
+				666336B023B40B84004E537C /* PhoneVerificationManager.swift */,
+			);
+			path = PhoneVerification;
+			sourceTree = "<group>";
+		};
+		666336B923B40BB7004E537C /* NewPassword */ = {
+			isa = PBXGroup;
+			children = (
+				666336BA23B40BD3004E537C /* NewPasswordConfiguration.swift */,
+				666336BB23B40BD3004E537C /* NewPasswordPresenter.swift */,
+				666336BC23B40BD3004E537C /* NewPasswordRouter.swift */,
+				666336BD23B40BD3004E537C /* NewPasswordViewController.swift */,
+				666336BE23B40BD3004E537C /* NewPasswordInteractor.swift */,
+				666336BF23B40BD3004E537C /* NewPasswordModel.swift */,
+				666336C023B40BD3004E537C /* NewPasswordViewController.xib */,
+				666336C123B40BD3004E537C /* NewPasswordManager.swift */,
+			);
+			path = NewPassword;
+			sourceTree = "<group>";
+		};
+		E17617DCB77855E3802A42A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */,
+				88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +562,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6663362323B4020A004E537C /* Build configuration list for PBXNativeTarget "Hi5" */;
 			buildPhases = (
+				4373E5CCA3D2E7295F8CFE1F /* [CP] Check Pods Manifest.lock */,
 				6663360B23B40206004E537C /* Sources */,
 				6663360C23B40206004E537C /* Frameworks */,
 				6663360D23B40206004E537C /* Resources */,
@@ -125,42 +614,144 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6663361F23B4020A004E537C /* LaunchScreen.storyboard in Resources */,
-				6663361C23B4020A004E537C /* Assets.xcassets in Resources */,
-				6663361A23B40206004E537C /* Main.storyboard in Resources */,
+				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
+				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
+				6663366023B405D0004E537C /* Main.storyboard in Resources */,
+				6663366323B409B1004E537C /* Assets.xcassets in Resources */,
+				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
+				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
+				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
+				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
+				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
+				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
+				666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */,
+				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4373E5CCA3D2E7295F8CFE1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hi5-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6663360B23B40206004E537C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6663364423B402F7004E537C /* LoginViewController.swift in Sources */,
+				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
+				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
+				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
+				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
+				6663365223B40318004E537C /* RegisterConfiguration.swift in Sources */,
+				6663368523B40AB3004E537C /* ForgetEmailManager.swift in Sources */,
+				6663364223B402F7004E537C /* LoginPresenter.swift in Sources */,
+				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
+				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
+				66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
+				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
 				6663361323B40206004E537C /* AppDelegate.swift in Sources */,
+				6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */,
+				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
+				6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */,
+				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
+				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
+				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
+				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
+				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
+				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
+				6663365523B40318004E537C /* RegisterViewController.swift in Sources */,
+				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
+				6663363423B40298004E537C /* UserAccountModel.swift in Sources */,
+				666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */,
+				6663368323B40AB3004E537C /* ForgetEmailModel.swift in Sources */,
+				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
+				6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */,
+				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
+				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
+				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
+				666336B223B40B84004E537C /* PhoneVerificationPresenter.swift in Sources */,
 				6663361523B40206004E537C /* SceneDelegate.swift in Sources */,
+				66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */,
+				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
+				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
+				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
+				6663365323B40318004E537C /* RegisterPresenter.swift in Sources */,
+				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
+				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
+				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
+				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
+				6663363623B40298004E537C /* UserAccountManager.swift in Sources */,
+				666336C223B40BD3004E537C /* NewPasswordConfiguration.swift in Sources */,
+				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
+				66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */,
+				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
+				6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */,
+				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
+				666336B623B40B84004E537C /* PhoneVerificationModel.swift in Sources */,
+				6663369623B40AFD004E537C /* EmailVerficationManager.swift in Sources */,
+				6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */,
+				6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */,
+				6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */,
+				666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */,
+				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
+				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
+				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
+				6663365B23B40345004E537C /* AppRoute.swift in Sources */,
+				666336C423B40BD3004E537C /* NewPasswordRouter.swift in Sources */,
+				6663367F23B40AB3004E537C /* ForgetEmailPresenter.swift in Sources */,
+				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
+				6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */,
+				6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */,
+				666336B123B40B84004E537C /* PhoneVerificationConfiguration.swift in Sources */,
+				6663363123B40298004E537C /* UserAccountRouter.swift in Sources */,
+				6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */,
+				6663365623B40318004E537C /* RegisterInteractor.swift in Sources */,
+				6663364323B402F7004E537C /* LoginRouter.swift in Sources */,
+				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
+				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
+				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
+				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
+				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
+				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
+				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
+				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6663361823B40206004E537C /* Main.storyboard */ = {
+		6663365E23B405D0004E537C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6663361923B40206004E537C /* Base */,
+				6663365F23B405D0004E537C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6663361D23B4020A004E537C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6663361E23B4020A004E537C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -282,6 +873,7 @@
 		};
 		6663362423B4020A004E537C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +892,7 @@
 		};
 		6663362523B4020A004E537C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -11,13 +11,20 @@
 import UIKit
 
 protocol ILoginPresenter: class {
-	// do someting...
+    // do someting...
+    func showErrorAlert(title: String, msg: String)
 }
 
-class LoginPresenter: ILoginPresenter {	
-	weak var view: ILoginViewController?
-	
-	init(view: ILoginViewController?) {
-		self.view = view
-	}
+class LoginPresenter: ILoginPresenter {
+    
+    weak var view: ILoginViewController?
+    
+    init(view: ILoginViewController?) {
+        self.view = view
+    }
+    func showErrorAlert(title: String, msg: String){
+        
+        view?.showAlert(title: title, msg: msg)
+      
+    }
 }

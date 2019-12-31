@@ -9,11 +9,59 @@
 //              * https://github.com/arimunandar
 
 import Foundation
+import SwiftyJSON
+
+// MARK: - Handle all data requests and responses API / CoreData / Realm etc ...
 
 protocol ILoginManager: class {
-	// do someting...
+    // do someting...
+    func loginFromApi(parameters: [String: Any] ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool ,_ data:Data?)->Void)
+    
+    
 }
 
 class LoginManager: ILoginManager {
-	// do someting...
+    
+    
+    // do someting...
+    
+    func loginFromApi(parameters: [String: Any] , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool ,_ data:Data?)->Void) {
+        
+        NetworkService.share.request(endpoint: LoginEndpoint.login(parameter: parameters), success: { (respnseData) in
+            let response = respnseData
+            do {
+                let decoder = JSONDecoder()
+                let user = try decoder.decode(LoginModel.Response.self, from: response)
+                print(user)
+                
+            } catch let error {
+                print("error : ", error.localizedDescription  )
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let error = try decoder.decode(ErrorModel.self, from: respnseData )
+                    print(error)
+                    complition(error , false , respnseData )
+                } catch let error {
+                    print(error)
+                    
+                }
+                
+                
+            }
+            
+        }, failure: { (error) in
+            do {
+                let decoder = JSONDecoder()
+                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+                print(error)
+                complition(error , false , nil )
+                
+            } catch let error {
+                print(error)
+                complition(nil , false , nil )
+            }
+            
+        })
+    }
 }

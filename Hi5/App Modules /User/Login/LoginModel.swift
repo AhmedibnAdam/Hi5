@@ -16,11 +16,14 @@ struct LoginModel {
 
 		func parameters() -> [String: Any]? {
 			// do someting...
-			return nil
+            return ["username":"01126223344" , "password":"123456"]
 		}
 	}
 
-	struct Response {
+    struct Response: Codable {
 		// do someting...
+        let vvvcode: Int
+        let vvvmessage: String
+       
 	}
 }

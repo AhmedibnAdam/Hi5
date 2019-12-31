@@ -12,15 +12,30 @@ import UIKit
 
 protocol ILoginInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doLogin(view : UIViewController)
 }
 
 class LoginInteractor: ILoginInteractor {
     var presenter: ILoginPresenter?
     var manager: ILoginManager?
     var parameters: [String: Any]?
-
+    
     init(presenter: ILoginPresenter, manager: ILoginManager) {
-    	self.presenter = presenter
-    	self.manager = manager
+        self.presenter = presenter
+        self.manager = manager
+    }
+    func doLogin(view : UIViewController){
+        let request = LoginModel.Request()
+        parameters = request.parameters()
+        manager?.loginFromApi(parameters: parameters!, complition: { (error , success , response) in
+            
+            self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            
+        })
     }
 }
+
+//struct DefaultResponse {
+//    
+//}
+

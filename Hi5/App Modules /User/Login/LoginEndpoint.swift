@@ -17,6 +17,7 @@ enum LoginEndpoint {
      case sample
      case sample(parameter: [String: Any])
     */
+    case login(parameter: [String: Any])
 }
 
 extension LoginEndpoint: IEndpoint {
@@ -29,7 +30,13 @@ extension LoginEndpoint: IEndpoint {
             return .get
         }
         */
-        return .get
+        
+        switch self {
+              case .login:
+                  return .post
+              }
+        
+   //     return .get
     }
     
     var path: String {
@@ -41,7 +48,10 @@ extension LoginEndpoint: IEndpoint {
             return "https://httpbin.org/get"
         }
         */
-        return ""
+        switch self {
+               case .login:
+                   return "https://www.soqiaa-app.com/app/api/" + "userLogin"
+               }
     }
     
     var parameter: Parameters? {
@@ -53,7 +63,12 @@ extension LoginEndpoint: IEndpoint {
             return model.parameter()
         }
         */
-        return nil
+        
+        switch self {
+        case .login:
+            return ["":""]
+        }
+        
     }
     
     var header: HTTPHeaders? {
@@ -65,7 +80,10 @@ extension LoginEndpoint: IEndpoint {
             return ["key": Any]
         }
         */
-        return nil
+         switch self {
+               case .login:
+                   return ["Accept": "application/json"]
+               }
     }
     
     var encoding: ParameterEncoding {        
@@ -79,6 +97,13 @@ extension LoginEndpoint: IEndpoint {
             return JSONEncoding.default
         }
         */
-        return JSONEncoding.default
+        switch self {
+        case .login:
+            return JSONEncoding.default
+        }
     }
+}
+
+struct model {
+    let parameter = Parameters()
 }

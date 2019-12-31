@@ -12,6 +12,7 @@ import UIKit
 
 protocol ILoginViewController: class {
 	var router: ILoginRouter? { get set }
+    func showAlert(title: String, msg: String)
 }
 
 class LoginViewController: UIViewController {
@@ -19,6 +20,9 @@ class LoginViewController: UIViewController {
     
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
+    
+    
+    var ssss: String?
     
     
     // view outlet
@@ -32,6 +36,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgetPasswordOutlet: UIButton!
     @IBOutlet weak var doLoginButtonOutlet: UIButton!
     
+    let loginModel = LoginModel()
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +62,14 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: ILoginViewController {
+    func showAlert(title: String, msg: String) {
+         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    
+   
+    
+
+    
 	// do someting...
 }
 
@@ -84,6 +97,11 @@ extension LoginViewController {
     
     func doLoginAction(){
         self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
+        self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
+        
+//        interactor?.parameters = ["name":"Ahmed", "passowrd":"1234566"]
+        interactor?.doLogin(view: self)
+     
     }
     
 }

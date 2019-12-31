@@ -24,7 +24,7 @@ class NetworkService {
     static let share = NetworkService()
     
     private var dataRequest: DataRequest?
-    private var success: ((_ data: JSON?)->Void)?
+    private var success: ((_ data: Data?)->Void)?
     private var failure: ((_ error: Error?)->Void)?
     
     @discardableResult
@@ -44,27 +44,37 @@ class NetworkService {
             )
     }
     
-    func request<T: IEndpoint>(endpoint: T, success: ((_ data: JSON?)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
+    func request<T: IEndpoint>(endpoint: T, success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
         DispatchQueue.global(qos: .background).async {
             self.dataRequest = self._dataRequest(url: endpoint.path,
                                                  method: endpoint.method,
                                                  parameters: endpoint.parameter,
                                                  encoding: endpoint.encoding,
                                                  headers: endpoint.header)
-            
-            self.dataRequest?.responseJSON(completionHandler: { (response) in
-                
-                /*
-                 let statusCode = response.response?.statusCode
-                 */
+            self.dataRequest?.responseData(completionHandler: { (response) in
+                let statusCode = response.response?.statusCode
+                print(statusCode!)
                 
                 switch response.result {
-                case .success(let value):
-                    success?(JSON(value))
+                case .success (let value):
+                    success?(value)
                 case .failure(let error):
-                    failure?(error)
+                    print(error)
                 }
+
             })
+//            self.dataRequest?.responseJSON(completionHandler: { (response) in
+//
+//                 let statusCode = response.response?.statusCode
+//                print(statusCode!)
+//
+//                switch response.result {
+//                case .success(let value):
+//                    success?(JSON(value))
+//                case .failure(let error):
+//                    print(error)
+//                }
+//            })
         }
     }
     
@@ -82,7 +92,7 @@ class NetworkService {
         completion?()
     }
     
-    func success(_ completion: ((_ data: JSON?)->Void)?) -> NetworkService {
+    func success(_ completion: ((_ data: Data?)->Void)?) -> NetworkService {
         success = completion
         return self
     }

@@ -6,5 +6,12 @@ target 'Hi5' do
   use_frameworks!
 
   # Pods for Hi5
+   pod 'LUExpandableTableView'
+   pod 'IQKeyboardManagerSwift'
+   pod 'Alamofire'
+#   pod 'BTHorizontalPageableView'
+#   pod 'YSSegmentedControl'
+   pod 'SideMenu'
+   pod 'SwiftyJSON'
 
 end

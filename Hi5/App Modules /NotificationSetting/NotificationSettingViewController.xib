@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationSettingViewController" customModule="Hi5" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="850"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="v3U-OU-fRE">
+                    <rect key="frame" x="0.0" y="0.0" width="447" height="850"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification  Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7C-aX-faS">
+                            <rect key="frame" x="148" y="20" width="151.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-ZN-xJO">
+                            <rect key="frame" x="20" y="19.5" width="20" height="22"/>
+                            <state key="normal" image="Back"/>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-8C-hhy">
+                            <rect key="frame" x="0.0" y="119" width="447" height="731"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="7S2-8C-hhy" firstAttribute="leading" secondItem="l4E-3F-4q6" secondAttribute="leading" id="2gV-VD-ebD"/>
+                        <constraint firstItem="l4E-3F-4q6" firstAttribute="trailing" secondItem="7S2-8C-hhy" secondAttribute="trailing" id="7Rw-Nb-HX8"/>
+                        <constraint firstItem="r7C-aX-faS" firstAttribute="centerX" secondItem="l4E-3F-4q6" secondAttribute="centerX" id="8YK-hY-icB"/>
+                        <constraint firstItem="7S2-8C-hhy" firstAttribute="top" secondItem="r7C-aX-faS" secondAttribute="bottom" constant="78" id="ELa-wk-BG1"/>
+                        <constraint firstItem="U5d-ZN-xJO" firstAttribute="leading" secondItem="l4E-3F-4q6" secondAttribute="leading" constant="20" id="V4Y-hP-bQP"/>
+                        <constraint firstItem="l4E-3F-4q6" firstAttribute="bottom" secondItem="7S2-8C-hhy" secondAttribute="bottom" id="W9a-qb-sNa"/>
+                        <constraint firstItem="r7C-aX-faS" firstAttribute="top" secondItem="l4E-3F-4q6" secondAttribute="top" constant="20" id="wPI-Bx-pWJ"/>
+                        <constraint firstItem="U5d-ZN-xJO" firstAttribute="centerY" secondItem="r7C-aX-faS" secondAttribute="centerY" id="xFR-ma-HoZ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="l4E-3F-4q6"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="60" y="-113.3433283358321"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Back" width="20" height="21"/>
+    </resources>
+</document>

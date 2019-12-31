@@ -99,6 +99,26 @@
 		666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BF23B40BD3004E537C /* NewPasswordModel.swift */; };
 		666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666336C023B40BD3004E537C /* NewPasswordViewController.xib */; };
 		666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336C123B40BD3004E537C /* NewPasswordManager.swift */; };
+		6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */; };
+		6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */; };
+		6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */; };
+		6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29C23BB5FD900250702 /* MyFriendsViewController.swift */; };
+		6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29D23BB5FD900250702 /* MyFriendsInteractor.swift */; };
+		6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29E23BB5FD900250702 /* MyFriendsModel.swift */; };
+		6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E29F23BB5FD900250702 /* MyFriendsViewController.xib */; };
+		6683E2A823BB5FD900250702 /* MyFriendsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2A023BB5FD900250702 /* MyFriendsManager.swift */; };
+		6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2A923BB626700250702 /* TableViewCell.swift */; };
+		6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E2AA23BB626700250702 /* TableViewCell.xib */; };
+		6683E2B523BB631D00250702 /* NotificationSettingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */; };
+		6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */; };
+		6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */; };
+		6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */; };
+		6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */; };
+		6683E2BA23BB631D00250702 /* NotificationSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2B223BB631D00250702 /* NotificationSettingModel.swift */; };
+		6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */; };
+		6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2B423BB631D00250702 /* NotificationSettingManager.swift */; };
+		6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */; };
+		6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
 		66F6D09C23B6F352004BF95C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09B23B6F352004BF95C /* APIError.swift */; };
 /* End PBXBuildFile section */
@@ -206,6 +226,26 @@
 		666336BF23B40BD3004E537C /* NewPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordModel.swift; sourceTree = "<group>"; };
 		666336C023B40BD3004E537C /* NewPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPasswordViewController.xib; sourceTree = "<group>"; };
 		666336C123B40BD3004E537C /* NewPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordManager.swift; sourceTree = "<group>"; };
+		6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsConfiguration.swift; sourceTree = "<group>"; };
+		6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsPresenter.swift; sourceTree = "<group>"; };
+		6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRouter.swift; sourceTree = "<group>"; };
+		6683E29C23BB5FD900250702 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
+		6683E29D23BB5FD900250702 /* MyFriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsInteractor.swift; sourceTree = "<group>"; };
+		6683E29E23BB5FD900250702 /* MyFriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsModel.swift; sourceTree = "<group>"; };
+		6683E29F23BB5FD900250702 /* MyFriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsViewController.xib; sourceTree = "<group>"; };
+		6683E2A023BB5FD900250702 /* MyFriendsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsManager.swift; sourceTree = "<group>"; };
+		6683E2A923BB626700250702 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6683E2AA23BB626700250702 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingConfiguration.swift; sourceTree = "<group>"; };
+		6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingPresenter.swift; sourceTree = "<group>"; };
+		6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingRouter.swift; sourceTree = "<group>"; };
+		6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
+		6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingInteractor.swift; sourceTree = "<group>"; };
+		6683E2B223BB631D00250702 /* NotificationSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingModel.swift; sourceTree = "<group>"; };
+		6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationSettingViewController.xib; sourceTree = "<group>"; };
+		6683E2B423BB631D00250702 /* NotificationSettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingManager.swift; sourceTree = "<group>"; };
+		6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationTableViewCell.swift; sourceTree = "<group>"; };
+		6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = notificationTableViewCell.xib; sourceTree = "<group>"; };
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
 		66F6D09B23B6F352004BF95C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +275,7 @@
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
+				6683E29823BB5FB500250702 /* MyFriends */,
 				6663362623B40221004E537C /* User */,
 				66340A1323B4CE2C009DB30A /* SideMenu */,
 				66340A1223B4CAD3009DB30A /* Profile */,
@@ -290,6 +331,16 @@
 		66340A0D23B4CA54009DB30A /* NotificationSetting */ = {
 			isa = PBXGroup;
 			children = (
+				6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */,
+				6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */,
+				6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */,
+				6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */,
+				6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */,
+				6683E2B223BB631D00250702 /* NotificationSettingModel.swift */,
+				6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */,
+				6683E2B423BB631D00250702 /* NotificationSettingManager.swift */,
+				6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */,
+				6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */,
 			);
 			path = NotificationSetting;
 			sourceTree = "<group>";
@@ -551,6 +602,23 @@
 			path = NewPassword;
 			sourceTree = "<group>";
 		};
+		6683E29823BB5FB500250702 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */,
+				6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */,
+				6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */,
+				6683E29C23BB5FD900250702 /* MyFriendsViewController.swift */,
+				6683E29D23BB5FD900250702 /* MyFriendsInteractor.swift */,
+				6683E29E23BB5FD900250702 /* MyFriendsModel.swift */,
+				6683E29F23BB5FD900250702 /* MyFriendsViewController.xib */,
+				6683E2A023BB5FD900250702 /* MyFriendsManager.swift */,
+				6683E2A923BB626700250702 /* TableViewCell.swift */,
+				6683E2AA23BB626700250702 /* TableViewCell.xib */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
 		E17617DCB77855E3802A42A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,7 +696,11 @@
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
+				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
+				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
+				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
+				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
 				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
 				666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */,
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
@@ -686,6 +758,7 @@
 			files = (
 				6663364423B402F7004E537C /* LoginViewController.swift in Sources */,
 				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
+				6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */,
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
 				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
@@ -695,18 +768,21 @@
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
+				6683E2BA23BB631D00250702 /* NotificationSettingModel.swift in Sources */,
 				66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
 				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
 				6663361323B40206004E537C /* AppDelegate.swift in Sources */,
 				6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */,
 				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
+				6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */,
 				6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */,
 				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
+				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
 				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
 				6663365523B40318004E537C /* RegisterViewController.swift in Sources */,
 				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
@@ -723,16 +799,20 @@
 				66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
 				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
+				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
 				6663365323B40318004E537C /* RegisterPresenter.swift in Sources */,
 				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
+				6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */,
 				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
 				6663363623B40298004E537C /* UserAccountManager.swift in Sources */,
 				666336C223B40BD3004E537C /* NewPasswordConfiguration.swift in Sources */,
 				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
+				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
 				66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */,
+				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
 				6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */,
 				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
@@ -742,20 +822,27 @@
 				6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */,
 				6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */,
 				666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */,
+				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
+				6683E2B523BB631D00250702 /* NotificationSettingConfiguration.swift in Sources */,
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
 				6663365B23B40345004E537C /* AppRoute.swift in Sources */,
 				666336C423B40BD3004E537C /* NewPasswordRouter.swift in Sources */,
 				6663367F23B40AB3004E537C /* ForgetEmailPresenter.swift in Sources */,
+				6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */,
+				6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */,
+				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
 				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
 				6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */,
+				6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */,
 				6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */,
 				66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */,
 				666336B123B40B84004E537C /* PhoneVerificationConfiguration.swift in Sources */,
 				6663363123B40298004E537C /* UserAccountRouter.swift in Sources */,
 				6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */,
 				6663365623B40318004E537C /* RegisterInteractor.swift in Sources */,
+				6683E2A823BB5FD900250702 /* MyFriendsManager.swift in Sources */,
 				6663364323B402F7004E537C /* LoginRouter.swift in Sources */,
 				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
@@ -764,6 +851,7 @@
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
+				6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

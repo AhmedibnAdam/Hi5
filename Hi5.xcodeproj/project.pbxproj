@@ -8,6 +8,74 @@
 
 /* Begin PBXBuildFile section */
 		60D69A747F4B18050698D093 /* Pods_Hi5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */; };
+		662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */; };
+		662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167823C3E4B200A3695E /* TransactionsPresenter.swift */; };
+		662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167923C3E4B200A3695E /* TransactionsRouter.swift */; };
+		662A168223C3E4B200A3695E /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167A23C3E4B200A3695E /* TransactionsViewController.swift */; };
+		662A168323C3E4B200A3695E /* TransactionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167B23C3E4B200A3695E /* TransactionsInteractor.swift */; };
+		662A168423C3E4B200A3695E /* TransactionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167C23C3E4B200A3695E /* TransactionsModel.swift */; };
+		662A168523C3E4B200A3695E /* TransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A167D23C3E4B200A3695E /* TransactionsViewController.xib */; };
+		662A168623C3E4B200A3695E /* TransactionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167E23C3E4B200A3695E /* TransactionsManager.swift */; };
+		662A169123C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A168923C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift */; };
+		662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A168A23C3E75400A3695E /* MyFavoriteFriendsPresenter.swift */; };
+		662A169323C3E75400A3695E /* MyFavoriteFriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A168B23C3E75400A3695E /* MyFavoriteFriendsRouter.swift */; };
+		662A169423C3E75400A3695E /* MyFavoriteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A168C23C3E75400A3695E /* MyFavoriteFriendsViewController.swift */; };
+		662A169523C3E75400A3695E /* MyFavoriteFriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A168D23C3E75400A3695E /* MyFavoriteFriendsInteractor.swift */; };
+		662A169623C3E75400A3695E /* MyFavoriteFriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A168E23C3E75400A3695E /* MyFavoriteFriendsModel.swift */; };
+		662A169723C3E75400A3695E /* MyFavoriteFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A168F23C3E75400A3695E /* MyFavoriteFriendsViewController.xib */; };
+		662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169023C3E75400A3695E /* MyFavoriteFriendsManager.swift */; };
+		662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169A23C3E80900A3695E /* MemberOfFriendsConfiguration.swift */; };
+		662A16A323C3E80900A3695E /* MemberOfFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169B23C3E80900A3695E /* MemberOfFriendsPresenter.swift */; };
+		662A16A423C3E80900A3695E /* MemberOfFriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169C23C3E80900A3695E /* MemberOfFriendsRouter.swift */; };
+		662A16A523C3E80900A3695E /* MemberOfFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169D23C3E80900A3695E /* MemberOfFriendsViewController.swift */; };
+		662A16A623C3E80900A3695E /* MemberOfFriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169E23C3E80900A3695E /* MemberOfFriendsInteractor.swift */; };
+		662A16A723C3E80900A3695E /* MemberOfFriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A169F23C3E80900A3695E /* MemberOfFriendsModel.swift */; };
+		662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16A023C3E80900A3695E /* MemberOfFriendsViewController.xib */; };
+		662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16A123C3E80900A3695E /* MemberOfFriendsManager.swift */; };
+		662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16AB23C3E93900A3695E /* MyFriendsDetailsConfiguration.swift */; };
+		662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16AC23C3E93900A3695E /* MyFriendsDetailsPresenter.swift */; };
+		662A16B523C3E93900A3695E /* MyFriendsDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16AD23C3E93900A3695E /* MyFriendsDetailsRouter.swift */; };
+		662A16B623C3E93900A3695E /* MyFriendsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16AE23C3E93900A3695E /* MyFriendsDetailsViewController.swift */; };
+		662A16B723C3E93900A3695E /* MyFriendsDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16AF23C3E93900A3695E /* MyFriendsDetailsInteractor.swift */; };
+		662A16B823C3E93900A3695E /* MyFriendsDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16B023C3E93900A3695E /* MyFriendsDetailsModel.swift */; };
+		662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16B123C3E93900A3695E /* MyFriendsDetailsViewController.xib */; };
+		662A16BA23C3E93900A3695E /* MyFriendsDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16B223C3E93900A3695E /* MyFriendsDetailsManager.swift */; };
+		662A16C423C3EA9F00A3695E /* AddFriendsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16BC23C3EA9F00A3695E /* AddFriendsConfiguration.swift */; };
+		662A16C523C3EA9F00A3695E /* AddFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16BD23C3EA9F00A3695E /* AddFriendsPresenter.swift */; };
+		662A16C623C3EA9F00A3695E /* AddFriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16BE23C3EA9F00A3695E /* AddFriendsRouter.swift */; };
+		662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16BF23C3EA9F00A3695E /* AddFriendsViewController.swift */; };
+		662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16C023C3EA9F00A3695E /* AddFriendsInteractor.swift */; };
+		662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16C123C3EA9F00A3695E /* AddFriendsModel.swift */; };
+		662A16CA23C3EA9F00A3695E /* AddFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16C223C3EA9F00A3695E /* AddFriendsViewController.xib */; };
+		662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16C323C3EA9F00A3695E /* AddFriendsManager.swift */; };
+		662A16D523C3EB7600A3695E /* AddFriendRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16CD23C3EB7600A3695E /* AddFriendRequestConfiguration.swift */; };
+		662A16D623C3EB7600A3695E /* AddFriendRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16CE23C3EB7600A3695E /* AddFriendRequestPresenter.swift */; };
+		662A16D723C3EB7600A3695E /* AddFriendRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16CF23C3EB7600A3695E /* AddFriendRequestRouter.swift */; };
+		662A16D823C3EB7600A3695E /* AddFriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16D023C3EB7600A3695E /* AddFriendRequestViewController.swift */; };
+		662A16D923C3EB7600A3695E /* AddFriendRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16D123C3EB7600A3695E /* AddFriendRequestInteractor.swift */; };
+		662A16DA23C3EB7600A3695E /* AddFriendRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16D223C3EB7600A3695E /* AddFriendRequestModel.swift */; };
+		662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16D323C3EB7600A3695E /* AddFriendRequestViewController.xib */; };
+		662A16DC23C3EB7600A3695E /* AddFriendRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16D423C3EB7600A3695E /* AddFriendRequestManager.swift */; };
+		662A16E623C3ECE000A3695E /* MyFriendsRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16DE23C3ECE000A3695E /* MyFriendsRequestConfiguration.swift */; };
+		662A16E723C3ECE000A3695E /* MyFriendsRequestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16DF23C3ECE000A3695E /* MyFriendsRequestPresenter.swift */; };
+		662A16E823C3ECE000A3695E /* MyFriendsRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E023C3ECE000A3695E /* MyFriendsRequestRouter.swift */; };
+		662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E123C3ECE000A3695E /* MyFriendsRequestViewController.swift */; };
+		662A16EA23C3ECE000A3695E /* MyFriendsRequestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E223C3ECE000A3695E /* MyFriendsRequestInteractor.swift */; };
+		662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */; };
+		662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */; };
+		662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */; };
+		662A16F123C3EDC100A3695E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16EF23C3EDC100A3695E /* TableViewCell.swift */; };
+		662A16F223C3EDC100A3695E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16F023C3EDC100A3695E /* TableViewCell.xib */; };
+		662A16F723C3EF5700A3695E /* MyFriendsRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16F523C3EF5700A3695E /* MyFriendsRequestTableViewCell.swift */; };
+		662A16F823C3EF5700A3695E /* MyFriendsRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16F623C3EF5700A3695E /* MyFriendsRequestTableViewCell.xib */; };
+		662A170323C3F20200A3695E /* SechadualeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FB23C3F20200A3695E /* SechadualeConfiguration.swift */; };
+		662A170423C3F20200A3695E /* SechadualePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FC23C3F20200A3695E /* SechadualePresenter.swift */; };
+		662A170523C3F20200A3695E /* SechadualeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FD23C3F20200A3695E /* SechadualeRouter.swift */; };
+		662A170623C3F20200A3695E /* SechadualeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FE23C3F20200A3695E /* SechadualeViewController.swift */; };
+		662A170723C3F20200A3695E /* SechadualeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FF23C3F20200A3695E /* SechadualeInteractor.swift */; };
+		662A170823C3F20200A3695E /* SechadualeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A170023C3F20200A3695E /* SechadualeModel.swift */; };
+		662A170923C3F20200A3695E /* SechadualeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A170123C3F20200A3695E /* SechadualeViewController.xib */; };
+		662A170A23C3F20300A3695E /* SechadualeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A170223C3F20200A3695E /* SechadualeManager.swift */; };
 		66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */; };
 		66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */; };
 		66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FE23B4C8FC009DB30A /* FieldsRouter.swift */; };
@@ -99,6 +167,22 @@
 		666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BF23B40BD3004E537C /* NewPasswordModel.swift */; };
 		666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666336C023B40BD3004E537C /* NewPasswordViewController.xib */; };
 		666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336C123B40BD3004E537C /* NewPasswordManager.swift */; };
+		667E4B6F23C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6723C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift */; };
+		667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6823C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift */; };
+		667E4B7123C3DCA3007354A7 /* MakeWalletPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6923C3DCA3007354A7 /* MakeWalletPasswordRouter.swift */; };
+		667E4B7223C3DCA3007354A7 /* MakeWalletPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6A23C3DCA3007354A7 /* MakeWalletPasswordViewController.swift */; };
+		667E4B7323C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6B23C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift */; };
+		667E4B7423C3DCA3007354A7 /* MakeWalletPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6C23C3DCA3007354A7 /* MakeWalletPasswordModel.swift */; };
+		667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667E4B6D23C3DCA3007354A7 /* MakeWalletPasswordViewController.xib */; };
+		667E4B7623C3DCA3007354A7 /* MakeWalletPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6E23C3DCA3007354A7 /* MakeWalletPasswordManager.swift */; };
+		667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7823C3E169007354A7 /* AddFundConfiguration.swift */; };
+		667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7923C3E169007354A7 /* AddFundPresenter.swift */; };
+		667E4B8223C3E169007354A7 /* AddFundRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7A23C3E169007354A7 /* AddFundRouter.swift */; };
+		667E4B8323C3E169007354A7 /* AddFundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7B23C3E169007354A7 /* AddFundViewController.swift */; };
+		667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7C23C3E169007354A7 /* AddFundInteractor.swift */; };
+		667E4B8523C3E169007354A7 /* AddFundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7D23C3E169007354A7 /* AddFundModel.swift */; };
+		667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 667E4B7E23C3E169007354A7 /* AddFundViewController.xib */; };
+		667E4B8723C3E169007354A7 /* AddFundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B7F23C3E169007354A7 /* AddFundManager.swift */; };
 		6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */; };
 		6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */; };
 		6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */; };
@@ -135,14 +219,6 @@
 		6683E2DE23BCEBD900250702 /* SuggestedFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2D623BCEBD900250702 /* SuggestedFieldsModel.swift */; };
 		6683E2DF23BCEBD900250702 /* SuggestedFieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E2D723BCEBD900250702 /* SuggestedFieldsViewController.xib */; };
 		6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2D823BCEBD900250702 /* SuggestedFieldsManager.swift */; };
-		6683E2E923BCEC0A00250702 /* WalletConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E123BCEC0A00250702 /* WalletConfiguration.swift */; };
-		6683E2EA23BCEC0A00250702 /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E223BCEC0A00250702 /* WalletPresenter.swift */; };
-		6683E2EB23BCEC0A00250702 /* WalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E323BCEC0A00250702 /* WalletRouter.swift */; };
-		6683E2EC23BCEC0A00250702 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E423BCEC0A00250702 /* WalletViewController.swift */; };
-		6683E2ED23BCEC0A00250702 /* WalletInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E523BCEC0A00250702 /* WalletInteractor.swift */; };
-		6683E2EE23BCEC0A00250702 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E623BCEC0A00250702 /* WalletModel.swift */; };
-		6683E2EF23BCEC0A00250702 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E2E723BCEC0A00250702 /* WalletViewController.xib */; };
-		6683E2F023BCEC0A00250702 /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2E823BCEC0A00250702 /* WalletManager.swift */; };
 		6683E2F923BCEEB300250702 /* HelpCenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2F123BCEEB300250702 /* HelpCenterConfiguration.swift */; };
 		6683E2FA23BCEEB300250702 /* HelpCenterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2F223BCEEB300250702 /* HelpCenterPresenter.swift */; };
 		6683E2FB23BCEEB300250702 /* HelpCenterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E2F323BCEEB300250702 /* HelpCenterRouter.swift */; };
@@ -167,12 +243,144 @@
 		6683E31E23BCEF1600250702 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E31623BCEF1600250702 /* SideMenuModel.swift */; };
 		6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E31723BCEF1600250702 /* SideMenuViewController.xib */; };
 		6683E32023BCEF1600250702 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E31823BCEF1600250702 /* SideMenuManager.swift */; };
+		668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */; };
+		668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */; };
+		668C20E223C3F38600C009A9 /* PublicEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */; };
+		668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DB23C3F38600C009A9 /* PublicEventsViewController.swift */; };
+		668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */; };
+		668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */; };
+		668C20E623C3F38600C009A9 /* PublicEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C20DE23C3F38600C009A9 /* PublicEventsViewController.xib */; };
+		668C20E723C3F38600C009A9 /* PublicEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */; };
+		668C20F523C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */; };
+		668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */; };
+		668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20EF23C3F57800C009A9 /* AddSessionResultFiltterRouter.swift */; };
+		668C20F823C3F57800C009A9 /* AddSessionResultFiltterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20F023C3F57800C009A9 /* AddSessionResultFiltterViewController.swift */; };
+		668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20F123C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift */; };
+		668C20FA23C3F57800C009A9 /* AddSessionResultFiltterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20F223C3F57800C009A9 /* AddSessionResultFiltterModel.swift */; };
+		668C20FB23C3F57800C009A9 /* AddSessionResultFiltterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C20F323C3F57800C009A9 /* AddSessionResultFiltterViewController.xib */; };
+		668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20F423C3F57800C009A9 /* AddSessionResultFiltterManager.swift */; };
+		668C210523C3F5BC00C009A9 /* AddSessionResultConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20FD23C3F5BC00C009A9 /* AddSessionResultConfiguration.swift */; };
+		668C210623C3F5BC00C009A9 /* AddSessionResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20FE23C3F5BC00C009A9 /* AddSessionResultPresenter.swift */; };
+		668C210723C3F5BC00C009A9 /* AddSessionResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20FF23C3F5BC00C009A9 /* AddSessionResultRouter.swift */; };
+		668C210823C3F5BC00C009A9 /* AddSessionResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C210023C3F5BC00C009A9 /* AddSessionResultViewController.swift */; };
+		668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C210123C3F5BC00C009A9 /* AddSessionResultInteractor.swift */; };
+		668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C210223C3F5BC00C009A9 /* AddSessionResultModel.swift */; };
+		668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C210323C3F5BC00C009A9 /* AddSessionResultViewController.xib */; };
+		668C210C23C3F5BC00C009A9 /* AddSessionResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C210423C3F5BC00C009A9 /* AddSessionResultManager.swift */; };
+		668C211823C3F6C100C009A9 /* CheckOutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211023C3F6C100C009A9 /* CheckOutConfiguration.swift */; };
+		668C211923C3F6C100C009A9 /* CheckOutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211123C3F6C100C009A9 /* CheckOutPresenter.swift */; };
+		668C211A23C3F6C100C009A9 /* CheckOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211223C3F6C100C009A9 /* CheckOutRouter.swift */; };
+		668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211323C3F6C100C009A9 /* CheckOutViewController.swift */; };
+		668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211423C3F6C100C009A9 /* CheckOutInteractor.swift */; };
+		668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211523C3F6C100C009A9 /* CheckOutModel.swift */; };
+		668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C211623C3F6C100C009A9 /* CheckOutViewController.xib */; };
+		668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C211723C3F6C100C009A9 /* CheckOutManager.swift */; };
+		668C212823C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212023C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift */; };
+		668C212923C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212123C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift */; };
+		668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212223C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift */; };
+		668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212323C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift */; };
+		668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212423C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift */; };
+		668C212D23C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212523C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift */; };
+		668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C212623C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib */; };
+		668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C212723C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift */; };
+		668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213023C3F6F700C009A9 /* CommentListsConfiguration.swift */; };
+		668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213123C3F6F700C009A9 /* CommentListsPresenter.swift */; };
+		668C213A23C3F6F700C009A9 /* CommentListsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213223C3F6F700C009A9 /* CommentListsRouter.swift */; };
+		668C213B23C3F6F700C009A9 /* CommentListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213323C3F6F700C009A9 /* CommentListsViewController.swift */; };
+		668C213C23C3F6F700C009A9 /* CommentListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213423C3F6F700C009A9 /* CommentListsInteractor.swift */; };
+		668C213D23C3F6F700C009A9 /* CommentListsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213523C3F6F700C009A9 /* CommentListsModel.swift */; };
+		668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C213623C3F6F700C009A9 /* CommentListsViewController.xib */; };
+		668C213F23C3F6F700C009A9 /* CommentListsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C213723C3F6F700C009A9 /* CommentListsManager.swift */; };
+		668C214823C3F70F00C009A9 /* BookSessionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214023C3F70E00C009A9 /* BookSessionConfiguration.swift */; };
+		668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214123C3F70F00C009A9 /* BookSessionPresenter.swift */; };
+		668C214A23C3F70F00C009A9 /* BookSessionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214223C3F70F00C009A9 /* BookSessionRouter.swift */; };
+		668C214B23C3F70F00C009A9 /* BookSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214323C3F70F00C009A9 /* BookSessionViewController.swift */; };
+		668C214C23C3F70F00C009A9 /* BookSessionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214423C3F70F00C009A9 /* BookSessionInteractor.swift */; };
+		668C214D23C3F70F00C009A9 /* BookSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214523C3F70F00C009A9 /* BookSessionModel.swift */; };
+		668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C214623C3F70F00C009A9 /* BookSessionViewController.xib */; };
+		668C214F23C3F70F00C009A9 /* BookSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C214723C3F70F00C009A9 /* BookSessionManager.swift */; };
+		668C215923C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215123C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift */; };
+		668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215223C3F75300C009A9 /* CheckOutConfirmationPresenter.swift */; };
+		668C215B23C3F75300C009A9 /* CheckOutConfirmationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215323C3F75300C009A9 /* CheckOutConfirmationRouter.swift */; };
+		668C215C23C3F75300C009A9 /* CheckOutConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215423C3F75300C009A9 /* CheckOutConfirmationViewController.swift */; };
+		668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215523C3F75300C009A9 /* CheckOutConfirmationInteractor.swift */; };
+		668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */; };
+		668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */; };
+		668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
 		66F6D09C23B6F352004BF95C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09B23B6F352004BF95C /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hi5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsConfiguration.swift; sourceTree = "<group>"; };
+		662A167823C3E4B200A3695E /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
+		662A167923C3E4B200A3695E /* TransactionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRouter.swift; sourceTree = "<group>"; };
+		662A167A23C3E4B200A3695E /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		662A167B23C3E4B200A3695E /* TransactionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsInteractor.swift; sourceTree = "<group>"; };
+		662A167C23C3E4B200A3695E /* TransactionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsModel.swift; sourceTree = "<group>"; };
+		662A167D23C3E4B200A3695E /* TransactionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsViewController.xib; sourceTree = "<group>"; };
+		662A167E23C3E4B200A3695E /* TransactionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsManager.swift; sourceTree = "<group>"; };
+		662A168923C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsConfiguration.swift; sourceTree = "<group>"; };
+		662A168A23C3E75400A3695E /* MyFavoriteFriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsPresenter.swift; sourceTree = "<group>"; };
+		662A168B23C3E75400A3695E /* MyFavoriteFriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsRouter.swift; sourceTree = "<group>"; };
+		662A168C23C3E75400A3695E /* MyFavoriteFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsViewController.swift; sourceTree = "<group>"; };
+		662A168D23C3E75400A3695E /* MyFavoriteFriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsInteractor.swift; sourceTree = "<group>"; };
+		662A168E23C3E75400A3695E /* MyFavoriteFriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsModel.swift; sourceTree = "<group>"; };
+		662A168F23C3E75400A3695E /* MyFavoriteFriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFavoriteFriendsViewController.xib; sourceTree = "<group>"; };
+		662A169023C3E75400A3695E /* MyFavoriteFriendsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteFriendsManager.swift; sourceTree = "<group>"; };
+		662A169A23C3E80900A3695E /* MemberOfFriendsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsConfiguration.swift; sourceTree = "<group>"; };
+		662A169B23C3E80900A3695E /* MemberOfFriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsPresenter.swift; sourceTree = "<group>"; };
+		662A169C23C3E80900A3695E /* MemberOfFriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsRouter.swift; sourceTree = "<group>"; };
+		662A169D23C3E80900A3695E /* MemberOfFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsViewController.swift; sourceTree = "<group>"; };
+		662A169E23C3E80900A3695E /* MemberOfFriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsInteractor.swift; sourceTree = "<group>"; };
+		662A169F23C3E80900A3695E /* MemberOfFriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsModel.swift; sourceTree = "<group>"; };
+		662A16A023C3E80900A3695E /* MemberOfFriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberOfFriendsViewController.xib; sourceTree = "<group>"; };
+		662A16A123C3E80900A3695E /* MemberOfFriendsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfFriendsManager.swift; sourceTree = "<group>"; };
+		662A16AB23C3E93900A3695E /* MyFriendsDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsConfiguration.swift; sourceTree = "<group>"; };
+		662A16AC23C3E93900A3695E /* MyFriendsDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsPresenter.swift; sourceTree = "<group>"; };
+		662A16AD23C3E93900A3695E /* MyFriendsDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsRouter.swift; sourceTree = "<group>"; };
+		662A16AE23C3E93900A3695E /* MyFriendsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsViewController.swift; sourceTree = "<group>"; };
+		662A16AF23C3E93900A3695E /* MyFriendsDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsInteractor.swift; sourceTree = "<group>"; };
+		662A16B023C3E93900A3695E /* MyFriendsDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsModel.swift; sourceTree = "<group>"; };
+		662A16B123C3E93900A3695E /* MyFriendsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsDetailsViewController.xib; sourceTree = "<group>"; };
+		662A16B223C3E93900A3695E /* MyFriendsDetailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsDetailsManager.swift; sourceTree = "<group>"; };
+		662A16BC23C3EA9F00A3695E /* AddFriendsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsConfiguration.swift; sourceTree = "<group>"; };
+		662A16BD23C3EA9F00A3695E /* AddFriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsPresenter.swift; sourceTree = "<group>"; };
+		662A16BE23C3EA9F00A3695E /* AddFriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsRouter.swift; sourceTree = "<group>"; };
+		662A16BF23C3EA9F00A3695E /* AddFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
+		662A16C023C3EA9F00A3695E /* AddFriendsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsInteractor.swift; sourceTree = "<group>"; };
+		662A16C123C3EA9F00A3695E /* AddFriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsModel.swift; sourceTree = "<group>"; };
+		662A16C223C3EA9F00A3695E /* AddFriendsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendsViewController.xib; sourceTree = "<group>"; };
+		662A16C323C3EA9F00A3695E /* AddFriendsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsManager.swift; sourceTree = "<group>"; };
+		662A16CD23C3EB7600A3695E /* AddFriendRequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestConfiguration.swift; sourceTree = "<group>"; };
+		662A16CE23C3EB7600A3695E /* AddFriendRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestPresenter.swift; sourceTree = "<group>"; };
+		662A16CF23C3EB7600A3695E /* AddFriendRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestRouter.swift; sourceTree = "<group>"; };
+		662A16D023C3EB7600A3695E /* AddFriendRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestViewController.swift; sourceTree = "<group>"; };
+		662A16D123C3EB7600A3695E /* AddFriendRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestInteractor.swift; sourceTree = "<group>"; };
+		662A16D223C3EB7600A3695E /* AddFriendRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestModel.swift; sourceTree = "<group>"; };
+		662A16D323C3EB7600A3695E /* AddFriendRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFriendRequestViewController.xib; sourceTree = "<group>"; };
+		662A16D423C3EB7600A3695E /* AddFriendRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendRequestManager.swift; sourceTree = "<group>"; };
+		662A16DE23C3ECE000A3695E /* MyFriendsRequestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestConfiguration.swift; sourceTree = "<group>"; };
+		662A16DF23C3ECE000A3695E /* MyFriendsRequestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestPresenter.swift; sourceTree = "<group>"; };
+		662A16E023C3ECE000A3695E /* MyFriendsRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestRouter.swift; sourceTree = "<group>"; };
+		662A16E123C3ECE000A3695E /* MyFriendsRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestViewController.swift; sourceTree = "<group>"; };
+		662A16E223C3ECE000A3695E /* MyFriendsRequestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestInteractor.swift; sourceTree = "<group>"; };
+		662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestModel.swift; sourceTree = "<group>"; };
+		662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsRequestViewController.xib; sourceTree = "<group>"; };
+		662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestManager.swift; sourceTree = "<group>"; };
+		662A16EF23C3EDC100A3695E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		662A16F023C3EDC100A3695E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		662A16F523C3EF5700A3695E /* MyFriendsRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestTableViewCell.swift; sourceTree = "<group>"; };
+		662A16F623C3EF5700A3695E /* MyFriendsRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsRequestTableViewCell.xib; sourceTree = "<group>"; };
+		662A16FB23C3F20200A3695E /* SechadualeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeConfiguration.swift; sourceTree = "<group>"; };
+		662A16FC23C3F20200A3695E /* SechadualePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualePresenter.swift; sourceTree = "<group>"; };
+		662A16FD23C3F20200A3695E /* SechadualeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeRouter.swift; sourceTree = "<group>"; };
+		662A16FE23C3F20200A3695E /* SechadualeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeViewController.swift; sourceTree = "<group>"; };
+		662A16FF23C3F20200A3695E /* SechadualeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeInteractor.swift; sourceTree = "<group>"; };
+		662A170023C3F20200A3695E /* SechadualeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeModel.swift; sourceTree = "<group>"; };
+		662A170123C3F20200A3695E /* SechadualeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SechadualeViewController.xib; sourceTree = "<group>"; };
+		662A170223C3F20200A3695E /* SechadualeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeManager.swift; sourceTree = "<group>"; };
 		663409F323B4C8C8009DB30A /* SocialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPresenter.swift; sourceTree = "<group>"; };
 		663409F423B4C8C8009DB30A /* SocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
 		663409F523B4C8C8009DB30A /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
@@ -274,6 +482,22 @@
 		666336BF23B40BD3004E537C /* NewPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordModel.swift; sourceTree = "<group>"; };
 		666336C023B40BD3004E537C /* NewPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPasswordViewController.xib; sourceTree = "<group>"; };
 		666336C123B40BD3004E537C /* NewPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordManager.swift; sourceTree = "<group>"; };
+		667E4B6723C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordConfiguration.swift; sourceTree = "<group>"; };
+		667E4B6823C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordPresenter.swift; sourceTree = "<group>"; };
+		667E4B6923C3DCA3007354A7 /* MakeWalletPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordRouter.swift; sourceTree = "<group>"; };
+		667E4B6A23C3DCA3007354A7 /* MakeWalletPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordViewController.swift; sourceTree = "<group>"; };
+		667E4B6B23C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordInteractor.swift; sourceTree = "<group>"; };
+		667E4B6C23C3DCA3007354A7 /* MakeWalletPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordModel.swift; sourceTree = "<group>"; };
+		667E4B6D23C3DCA3007354A7 /* MakeWalletPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MakeWalletPasswordViewController.xib; sourceTree = "<group>"; };
+		667E4B6E23C3DCA3007354A7 /* MakeWalletPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordManager.swift; sourceTree = "<group>"; };
+		667E4B7823C3E169007354A7 /* AddFundConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundConfiguration.swift; sourceTree = "<group>"; };
+		667E4B7923C3E169007354A7 /* AddFundPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundPresenter.swift; sourceTree = "<group>"; };
+		667E4B7A23C3E169007354A7 /* AddFundRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundRouter.swift; sourceTree = "<group>"; };
+		667E4B7B23C3E169007354A7 /* AddFundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundViewController.swift; sourceTree = "<group>"; };
+		667E4B7C23C3E169007354A7 /* AddFundInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundInteractor.swift; sourceTree = "<group>"; };
+		667E4B7D23C3E169007354A7 /* AddFundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundModel.swift; sourceTree = "<group>"; };
+		667E4B7E23C3E169007354A7 /* AddFundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFundViewController.xib; sourceTree = "<group>"; };
+		667E4B7F23C3E169007354A7 /* AddFundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFundManager.swift; sourceTree = "<group>"; };
 		6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsConfiguration.swift; sourceTree = "<group>"; };
 		6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsPresenter.swift; sourceTree = "<group>"; };
 		6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRouter.swift; sourceTree = "<group>"; };
@@ -310,14 +534,6 @@
 		6683E2D623BCEBD900250702 /* SuggestedFieldsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedFieldsModel.swift; sourceTree = "<group>"; };
 		6683E2D723BCEBD900250702 /* SuggestedFieldsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestedFieldsViewController.xib; sourceTree = "<group>"; };
 		6683E2D823BCEBD900250702 /* SuggestedFieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedFieldsManager.swift; sourceTree = "<group>"; };
-		6683E2E123BCEC0A00250702 /* WalletConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletConfiguration.swift; sourceTree = "<group>"; };
-		6683E2E223BCEC0A00250702 /* WalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletPresenter.swift; sourceTree = "<group>"; };
-		6683E2E323BCEC0A00250702 /* WalletRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletRouter.swift; sourceTree = "<group>"; };
-		6683E2E423BCEC0A00250702 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
-		6683E2E523BCEC0A00250702 /* WalletInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletInteractor.swift; sourceTree = "<group>"; };
-		6683E2E623BCEC0A00250702 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
-		6683E2E723BCEC0A00250702 /* WalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
-		6683E2E823BCEC0A00250702 /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
 		6683E2F123BCEEB300250702 /* HelpCenterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterConfiguration.swift; sourceTree = "<group>"; };
 		6683E2F223BCEEB300250702 /* HelpCenterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterPresenter.swift; sourceTree = "<group>"; };
 		6683E2F323BCEEB300250702 /* HelpCenterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterRouter.swift; sourceTree = "<group>"; };
@@ -342,6 +558,70 @@
 		6683E31623BCEF1600250702 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		6683E31723BCEF1600250702 /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
 		6683E31823BCEF1600250702 /* SideMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
+		668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsConfiguration.swift; sourceTree = "<group>"; };
+		668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsPresenter.swift; sourceTree = "<group>"; };
+		668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsRouter.swift; sourceTree = "<group>"; };
+		668C20DB23C3F38600C009A9 /* PublicEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsViewController.swift; sourceTree = "<group>"; };
+		668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsInteractor.swift; sourceTree = "<group>"; };
+		668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsModel.swift; sourceTree = "<group>"; };
+		668C20DE23C3F38600C009A9 /* PublicEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicEventsViewController.xib; sourceTree = "<group>"; };
+		668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsManager.swift; sourceTree = "<group>"; };
+		668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterConfiguration.swift; sourceTree = "<group>"; };
+		668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterPresenter.swift; sourceTree = "<group>"; };
+		668C20EF23C3F57800C009A9 /* AddSessionResultFiltterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterRouter.swift; sourceTree = "<group>"; };
+		668C20F023C3F57800C009A9 /* AddSessionResultFiltterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterViewController.swift; sourceTree = "<group>"; };
+		668C20F123C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterInteractor.swift; sourceTree = "<group>"; };
+		668C20F223C3F57800C009A9 /* AddSessionResultFiltterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterModel.swift; sourceTree = "<group>"; };
+		668C20F323C3F57800C009A9 /* AddSessionResultFiltterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSessionResultFiltterViewController.xib; sourceTree = "<group>"; };
+		668C20F423C3F57800C009A9 /* AddSessionResultFiltterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterManager.swift; sourceTree = "<group>"; };
+		668C20FD23C3F5BC00C009A9 /* AddSessionResultConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultConfiguration.swift; sourceTree = "<group>"; };
+		668C20FE23C3F5BC00C009A9 /* AddSessionResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultPresenter.swift; sourceTree = "<group>"; };
+		668C20FF23C3F5BC00C009A9 /* AddSessionResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultRouter.swift; sourceTree = "<group>"; };
+		668C210023C3F5BC00C009A9 /* AddSessionResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultViewController.swift; sourceTree = "<group>"; };
+		668C210123C3F5BC00C009A9 /* AddSessionResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultInteractor.swift; sourceTree = "<group>"; };
+		668C210223C3F5BC00C009A9 /* AddSessionResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultModel.swift; sourceTree = "<group>"; };
+		668C210323C3F5BC00C009A9 /* AddSessionResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSessionResultViewController.xib; sourceTree = "<group>"; };
+		668C210423C3F5BC00C009A9 /* AddSessionResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultManager.swift; sourceTree = "<group>"; };
+		668C211023C3F6C100C009A9 /* CheckOutConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfiguration.swift; sourceTree = "<group>"; };
+		668C211123C3F6C100C009A9 /* CheckOutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutPresenter.swift; sourceTree = "<group>"; };
+		668C211223C3F6C100C009A9 /* CheckOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutRouter.swift; sourceTree = "<group>"; };
+		668C211323C3F6C100C009A9 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
+		668C211423C3F6C100C009A9 /* CheckOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutInteractor.swift; sourceTree = "<group>"; };
+		668C211523C3F6C100C009A9 /* CheckOutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutModel.swift; sourceTree = "<group>"; };
+		668C211623C3F6C100C009A9 /* CheckOutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutViewController.xib; sourceTree = "<group>"; };
+		668C211723C3F6C100C009A9 /* CheckOutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutManager.swift; sourceTree = "<group>"; };
+		668C212023C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListConfiguration.swift; sourceTree = "<group>"; };
+		668C212123C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListPresenter.swift; sourceTree = "<group>"; };
+		668C212223C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListRouter.swift; sourceTree = "<group>"; };
+		668C212323C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListViewController.swift; sourceTree = "<group>"; };
+		668C212423C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListInteractor.swift; sourceTree = "<group>"; };
+		668C212523C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListModel.swift; sourceTree = "<group>"; };
+		668C212623C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveCommentInCommentListViewController.xib; sourceTree = "<group>"; };
+		668C212723C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveCommentInCommentListManager.swift; sourceTree = "<group>"; };
+		668C213023C3F6F700C009A9 /* CommentListsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsConfiguration.swift; sourceTree = "<group>"; };
+		668C213123C3F6F700C009A9 /* CommentListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsPresenter.swift; sourceTree = "<group>"; };
+		668C213223C3F6F700C009A9 /* CommentListsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsRouter.swift; sourceTree = "<group>"; };
+		668C213323C3F6F700C009A9 /* CommentListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsViewController.swift; sourceTree = "<group>"; };
+		668C213423C3F6F700C009A9 /* CommentListsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsInteractor.swift; sourceTree = "<group>"; };
+		668C213523C3F6F700C009A9 /* CommentListsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsModel.swift; sourceTree = "<group>"; };
+		668C213623C3F6F700C009A9 /* CommentListsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentListsViewController.xib; sourceTree = "<group>"; };
+		668C213723C3F6F700C009A9 /* CommentListsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListsManager.swift; sourceTree = "<group>"; };
+		668C214023C3F70E00C009A9 /* BookSessionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionConfiguration.swift; sourceTree = "<group>"; };
+		668C214123C3F70F00C009A9 /* BookSessionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionPresenter.swift; sourceTree = "<group>"; };
+		668C214223C3F70F00C009A9 /* BookSessionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionRouter.swift; sourceTree = "<group>"; };
+		668C214323C3F70F00C009A9 /* BookSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionViewController.swift; sourceTree = "<group>"; };
+		668C214423C3F70F00C009A9 /* BookSessionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionInteractor.swift; sourceTree = "<group>"; };
+		668C214523C3F70F00C009A9 /* BookSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionModel.swift; sourceTree = "<group>"; };
+		668C214623C3F70F00C009A9 /* BookSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookSessionViewController.xib; sourceTree = "<group>"; };
+		668C214723C3F70F00C009A9 /* BookSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSessionManager.swift; sourceTree = "<group>"; };
+		668C215123C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationConfiguration.swift; sourceTree = "<group>"; };
+		668C215223C3F75300C009A9 /* CheckOutConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationPresenter.swift; sourceTree = "<group>"; };
+		668C215323C3F75300C009A9 /* CheckOutConfirmationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationRouter.swift; sourceTree = "<group>"; };
+		668C215423C3F75300C009A9 /* CheckOutConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationViewController.swift; sourceTree = "<group>"; };
+		668C215523C3F75300C009A9 /* CheckOutConfirmationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationInteractor.swift; sourceTree = "<group>"; };
+		668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationModel.swift; sourceTree = "<group>"; };
+		668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutConfirmationViewController.xib; sourceTree = "<group>"; };
+		668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationManager.swift; sourceTree = "<group>"; };
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
 		66F6D09B23B6F352004BF95C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
@@ -368,9 +648,169 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		662A167623C3E2B200A3695E /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */,
+				662A167823C3E4B200A3695E /* TransactionsPresenter.swift */,
+				662A167923C3E4B200A3695E /* TransactionsRouter.swift */,
+				662A167A23C3E4B200A3695E /* TransactionsViewController.swift */,
+				662A167B23C3E4B200A3695E /* TransactionsInteractor.swift */,
+				662A167C23C3E4B200A3695E /* TransactionsModel.swift */,
+				662A167D23C3E4B200A3695E /* TransactionsViewController.xib */,
+				662A167E23C3E4B200A3695E /* TransactionsManager.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		662A168723C3E6B200A3695E /* NearBy */ = {
+			isa = PBXGroup;
+			children = (
+				6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */,
+				6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */,
+				6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */,
+				6683E29C23BB5FD900250702 /* MyFriendsViewController.swift */,
+				6683E29D23BB5FD900250702 /* MyFriendsInteractor.swift */,
+				6683E29E23BB5FD900250702 /* MyFriendsModel.swift */,
+				6683E29F23BB5FD900250702 /* MyFriendsViewController.xib */,
+				6683E2A023BB5FD900250702 /* MyFriendsManager.swift */,
+				6683E2A923BB626700250702 /* TableViewCell.swift */,
+				6683E2AA23BB626700250702 /* TableViewCell.xib */,
+			);
+			path = NearBy;
+			sourceTree = "<group>";
+		};
+		662A168823C3E72600A3695E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				662A168923C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift */,
+				662A168A23C3E75400A3695E /* MyFavoriteFriendsPresenter.swift */,
+				662A168B23C3E75400A3695E /* MyFavoriteFriendsRouter.swift */,
+				662A168C23C3E75400A3695E /* MyFavoriteFriendsViewController.swift */,
+				662A168D23C3E75400A3695E /* MyFavoriteFriendsInteractor.swift */,
+				662A168E23C3E75400A3695E /* MyFavoriteFriendsModel.swift */,
+				662A168F23C3E75400A3695E /* MyFavoriteFriendsViewController.xib */,
+				662A169023C3E75400A3695E /* MyFavoriteFriendsManager.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		662A169923C3E7DF00A3695E /* MemberOf */ = {
+			isa = PBXGroup;
+			children = (
+				662A169A23C3E80900A3695E /* MemberOfFriendsConfiguration.swift */,
+				662A169B23C3E80900A3695E /* MemberOfFriendsPresenter.swift */,
+				662A169C23C3E80900A3695E /* MemberOfFriendsRouter.swift */,
+				662A169D23C3E80900A3695E /* MemberOfFriendsViewController.swift */,
+				662A169E23C3E80900A3695E /* MemberOfFriendsInteractor.swift */,
+				662A169F23C3E80900A3695E /* MemberOfFriendsModel.swift */,
+				662A16A023C3E80900A3695E /* MemberOfFriendsViewController.xib */,
+				662A16A123C3E80900A3695E /* MemberOfFriendsManager.swift */,
+			);
+			path = MemberOf;
+			sourceTree = "<group>";
+		};
+		662A16AA23C3E8FF00A3695E /* MyFriendsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				662A16AB23C3E93900A3695E /* MyFriendsDetailsConfiguration.swift */,
+				662A16AC23C3E93900A3695E /* MyFriendsDetailsPresenter.swift */,
+				662A16AD23C3E93900A3695E /* MyFriendsDetailsRouter.swift */,
+				662A16AE23C3E93900A3695E /* MyFriendsDetailsViewController.swift */,
+				662A16AF23C3E93900A3695E /* MyFriendsDetailsInteractor.swift */,
+				662A16B023C3E93900A3695E /* MyFriendsDetailsModel.swift */,
+				662A16B123C3E93900A3695E /* MyFriendsDetailsViewController.xib */,
+				662A16B223C3E93900A3695E /* MyFriendsDetailsManager.swift */,
+			);
+			path = MyFriendsDetails;
+			sourceTree = "<group>";
+		};
+		662A16BB23C3EA8300A3695E /* AddFriends */ = {
+			isa = PBXGroup;
+			children = (
+				662A16BC23C3EA9F00A3695E /* AddFriendsConfiguration.swift */,
+				662A16BD23C3EA9F00A3695E /* AddFriendsPresenter.swift */,
+				662A16BE23C3EA9F00A3695E /* AddFriendsRouter.swift */,
+				662A16BF23C3EA9F00A3695E /* AddFriendsViewController.swift */,
+				662A16C023C3EA9F00A3695E /* AddFriendsInteractor.swift */,
+				662A16C123C3EA9F00A3695E /* AddFriendsModel.swift */,
+				662A16C223C3EA9F00A3695E /* AddFriendsViewController.xib */,
+				662A16C323C3EA9F00A3695E /* AddFriendsManager.swift */,
+			);
+			path = AddFriends;
+			sourceTree = "<group>";
+		};
+		662A16CC23C3EB5600A3695E /* AddFriendRequest */ = {
+			isa = PBXGroup;
+			children = (
+				662A16CD23C3EB7600A3695E /* AddFriendRequestConfiguration.swift */,
+				662A16CE23C3EB7600A3695E /* AddFriendRequestPresenter.swift */,
+				662A16CF23C3EB7600A3695E /* AddFriendRequestRouter.swift */,
+				662A16D023C3EB7600A3695E /* AddFriendRequestViewController.swift */,
+				662A16D123C3EB7600A3695E /* AddFriendRequestInteractor.swift */,
+				662A16D223C3EB7600A3695E /* AddFriendRequestModel.swift */,
+				662A16D323C3EB7600A3695E /* AddFriendRequestViewController.xib */,
+				662A16D423C3EB7600A3695E /* AddFriendRequestManager.swift */,
+			);
+			path = AddFriendRequest;
+			sourceTree = "<group>";
+		};
+		662A16DD23C3ECBD00A3695E /* MyFriendsRequest */ = {
+			isa = PBXGroup;
+			children = (
+				662A16DE23C3ECE000A3695E /* MyFriendsRequestConfiguration.swift */,
+				662A16DF23C3ECE000A3695E /* MyFriendsRequestPresenter.swift */,
+				662A16E023C3ECE000A3695E /* MyFriendsRequestRouter.swift */,
+				662A16E123C3ECE000A3695E /* MyFriendsRequestViewController.swift */,
+				662A16E223C3ECE000A3695E /* MyFriendsRequestInteractor.swift */,
+				662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */,
+				662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */,
+				662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */,
+			);
+			path = MyFriendsRequest;
+			sourceTree = "<group>";
+		};
+		662A16EE23C3EDAA00A3695E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				662A16EF23C3EDC100A3695E /* TableViewCell.swift */,
+				662A16F023C3EDC100A3695E /* TableViewCell.xib */,
+				662A16F923C3EFD000A3695E /* MyFriendsRequestTableViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		662A16F923C3EFD000A3695E /* MyFriendsRequestTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				662A16F523C3EF5700A3695E /* MyFriendsRequestTableViewCell.swift */,
+				662A16F623C3EF5700A3695E /* MyFriendsRequestTableViewCell.xib */,
+			);
+			path = MyFriendsRequestTableViewCell;
+			sourceTree = "<group>";
+		};
+		662A16FA23C3F1B400A3695E /* Sechaduale */ = {
+			isa = PBXGroup;
+			children = (
+				662A16FB23C3F20200A3695E /* SechadualeConfiguration.swift */,
+				662A16FC23C3F20200A3695E /* SechadualePresenter.swift */,
+				662A16FD23C3F20200A3695E /* SechadualeRouter.swift */,
+				662A16FE23C3F20200A3695E /* SechadualeViewController.swift */,
+				662A16FF23C3F20200A3695E /* SechadualeInteractor.swift */,
+				662A170023C3F20200A3695E /* SechadualeModel.swift */,
+				662A170123C3F20200A3695E /* SechadualeViewController.xib */,
+				662A170223C3F20200A3695E /* SechadualeManager.swift */,
+			);
+			path = Sechaduale;
+			sourceTree = "<group>";
+		};
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
+				662A16FA23C3F1B400A3695E /* Sechaduale */,
+				663409F223B4C8AF009DB30A /* Social */,
+				663409FB23B4C8E2009DB30A /* Fields */,
+				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
 				6663362623B40221004E537C /* User */,
 				66340A1323B4CE2C009DB30A /* SideMenu */,
@@ -378,11 +818,8 @@
 				66340A1123B4CAC2009DB30A /* HelpCenter */,
 				66340A1023B4CAB8009DB30A /* Wallet */,
 				66340A0F23B4CA73009DB30A /* Suggested */,
-				66340A0E23B4CA63009DB30A /* Session */,
 				66340A0D23B4CA54009DB30A /* NotificationSetting */,
 				66340A0C23B4CA44009DB30A /* Setting */,
-				663409FB23B4C8E2009DB30A /* Fields */,
-				663409F223B4C8AF009DB30A /* Social */,
 			);
 			path = "App Modules ";
 			sourceTree = "<group>";
@@ -405,14 +842,8 @@
 		663409FB23B4C8E2009DB30A /* Fields */ = {
 			isa = PBXGroup;
 			children = (
-				663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */,
-				663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */,
-				663409FE23B4C8FC009DB30A /* FieldsRouter.swift */,
-				663409FF23B4C8FC009DB30A /* FieldsViewController.swift */,
-				66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */,
-				66340A0123B4C8FC009DB30A /* FieldsModel.swift */,
-				66340A0223B4C8FC009DB30A /* FieldsViewController.xib */,
-				66340A0323B4C8FC009DB30A /* FieldsManager.swift */,
+				668C20E923C3F48000C009A9 /* SendTo */,
+				668C20E823C3F47200C009A9 /* Fields */,
 			);
 			path = Fields;
 			sourceTree = "<group>";
@@ -435,16 +866,8 @@
 		66340A0D23B4CA54009DB30A /* NotificationSetting */ = {
 			isa = PBXGroup;
 			children = (
-				6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */,
-				6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */,
-				6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */,
-				6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */,
-				6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */,
-				6683E2B223BB631D00250702 /* NotificationSettingModel.swift */,
-				6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */,
-				6683E2B423BB631D00250702 /* NotificationSettingManager.swift */,
-				6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */,
-				6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */,
+				668C20D723C3F36600C009A9 /* PublicEvents */,
+				668C20D623C3F34100C009A9 /* Setting */,
 			);
 			path = NotificationSetting;
 			sourceTree = "<group>";
@@ -452,6 +875,13 @@
 		66340A0E23B4CA63009DB30A /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				668C215023C3F73A00C009A9 /* CheckOutConfirmation */,
+				668C210F23C3F6A800C009A9 /* CheckOut */,
+				668C210E23C3F66F00C009A9 /* LeaveCommentInCommentList */,
+				668C210D23C3F65A00C009A9 /* CommentLists */,
+				668C20EC23C3F55F00C009A9 /* AddSessionResultFiltter */,
+				668C20EB23C3F4B500C009A9 /* AddSessionResult */,
+				668C20EA23C3F49400C009A9 /* BookSession */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -474,14 +904,9 @@
 		66340A1023B4CAB8009DB30A /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				6683E2E123BCEC0A00250702 /* WalletConfiguration.swift */,
-				6683E2E223BCEC0A00250702 /* WalletPresenter.swift */,
-				6683E2E323BCEC0A00250702 /* WalletRouter.swift */,
-				6683E2E423BCEC0A00250702 /* WalletViewController.swift */,
-				6683E2E523BCEC0A00250702 /* WalletInteractor.swift */,
-				6683E2E623BCEC0A00250702 /* WalletModel.swift */,
-				6683E2E723BCEC0A00250702 /* WalletViewController.xib */,
-				6683E2E823BCEC0A00250702 /* WalletManager.swift */,
+				667E4B6623C3DC78007354A7 /* MakeWalletPassword */,
+				667E4B7723C3E150007354A7 /* AddFund */,
+				662A167623C3E2B200A3695E /* Transactions */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -746,21 +1171,208 @@
 			path = NewPassword;
 			sourceTree = "<group>";
 		};
+		667E4B6623C3DC78007354A7 /* MakeWalletPassword */ = {
+			isa = PBXGroup;
+			children = (
+				667E4B6723C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift */,
+				667E4B6823C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift */,
+				667E4B6923C3DCA3007354A7 /* MakeWalletPasswordRouter.swift */,
+				667E4B6A23C3DCA3007354A7 /* MakeWalletPasswordViewController.swift */,
+				667E4B6B23C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift */,
+				667E4B6C23C3DCA3007354A7 /* MakeWalletPasswordModel.swift */,
+				667E4B6D23C3DCA3007354A7 /* MakeWalletPasswordViewController.xib */,
+				667E4B6E23C3DCA3007354A7 /* MakeWalletPasswordManager.swift */,
+			);
+			path = MakeWalletPassword;
+			sourceTree = "<group>";
+		};
+		667E4B7723C3E150007354A7 /* AddFund */ = {
+			isa = PBXGroup;
+			children = (
+				667E4B7823C3E169007354A7 /* AddFundConfiguration.swift */,
+				667E4B7923C3E169007354A7 /* AddFundPresenter.swift */,
+				667E4B7A23C3E169007354A7 /* AddFundRouter.swift */,
+				667E4B7B23C3E169007354A7 /* AddFundViewController.swift */,
+				667E4B7C23C3E169007354A7 /* AddFundInteractor.swift */,
+				667E4B7D23C3E169007354A7 /* AddFundModel.swift */,
+				667E4B7E23C3E169007354A7 /* AddFundViewController.xib */,
+				667E4B7F23C3E169007354A7 /* AddFundManager.swift */,
+			);
+			path = AddFund;
+			sourceTree = "<group>";
+		};
 		6683E29823BB5FB500250702 /* MyFriends */ = {
 			isa = PBXGroup;
 			children = (
-				6683E29923BB5FD900250702 /* MyFriendsConfiguration.swift */,
-				6683E29A23BB5FD900250702 /* MyFriendsPresenter.swift */,
-				6683E29B23BB5FD900250702 /* MyFriendsRouter.swift */,
-				6683E29C23BB5FD900250702 /* MyFriendsViewController.swift */,
-				6683E29D23BB5FD900250702 /* MyFriendsInteractor.swift */,
-				6683E29E23BB5FD900250702 /* MyFriendsModel.swift */,
-				6683E29F23BB5FD900250702 /* MyFriendsViewController.xib */,
-				6683E2A023BB5FD900250702 /* MyFriendsManager.swift */,
-				6683E2A923BB626700250702 /* TableViewCell.swift */,
-				6683E2AA23BB626700250702 /* TableViewCell.xib */,
+				662A16EE23C3EDAA00A3695E /* Cell */,
+				662A16DD23C3ECBD00A3695E /* MyFriendsRequest */,
+				662A16CC23C3EB5600A3695E /* AddFriendRequest */,
+				662A16BB23C3EA8300A3695E /* AddFriends */,
+				662A16AA23C3E8FF00A3695E /* MyFriendsDetails */,
+				662A168723C3E6B200A3695E /* NearBy */,
+				662A168823C3E72600A3695E /* Favorites */,
+				662A169923C3E7DF00A3695E /* MemberOf */,
 			);
 			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		668C20D623C3F34100C009A9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */,
+				6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */,
+				6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */,
+				6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */,
+				6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */,
+				6683E2B223BB631D00250702 /* NotificationSettingModel.swift */,
+				6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */,
+				6683E2B423BB631D00250702 /* NotificationSettingManager.swift */,
+				6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */,
+				6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		668C20D723C3F36600C009A9 /* PublicEvents */ = {
+			isa = PBXGroup;
+			children = (
+				668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */,
+				668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */,
+				668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */,
+				668C20DB23C3F38600C009A9 /* PublicEventsViewController.swift */,
+				668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */,
+				668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */,
+				668C20DE23C3F38600C009A9 /* PublicEventsViewController.xib */,
+				668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */,
+			);
+			path = PublicEvents;
+			sourceTree = "<group>";
+		};
+		668C20E823C3F47200C009A9 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */,
+				663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */,
+				663409FE23B4C8FC009DB30A /* FieldsRouter.swift */,
+				663409FF23B4C8FC009DB30A /* FieldsViewController.swift */,
+				66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */,
+				66340A0123B4C8FC009DB30A /* FieldsModel.swift */,
+				66340A0223B4C8FC009DB30A /* FieldsViewController.xib */,
+				66340A0323B4C8FC009DB30A /* FieldsManager.swift */,
+			);
+			path = Fields;
+			sourceTree = "<group>";
+		};
+		668C20E923C3F48000C009A9 /* SendTo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SendTo;
+			sourceTree = "<group>";
+		};
+		668C20EA23C3F49400C009A9 /* BookSession */ = {
+			isa = PBXGroup;
+			children = (
+				668C214023C3F70E00C009A9 /* BookSessionConfiguration.swift */,
+				668C214123C3F70F00C009A9 /* BookSessionPresenter.swift */,
+				668C214223C3F70F00C009A9 /* BookSessionRouter.swift */,
+				668C214323C3F70F00C009A9 /* BookSessionViewController.swift */,
+				668C214423C3F70F00C009A9 /* BookSessionInteractor.swift */,
+				668C214523C3F70F00C009A9 /* BookSessionModel.swift */,
+				668C214623C3F70F00C009A9 /* BookSessionViewController.xib */,
+				668C214723C3F70F00C009A9 /* BookSessionManager.swift */,
+			);
+			path = BookSession;
+			sourceTree = "<group>";
+		};
+		668C20EB23C3F4B500C009A9 /* AddSessionResult */ = {
+			isa = PBXGroup;
+			children = (
+				668C20FD23C3F5BC00C009A9 /* AddSessionResultConfiguration.swift */,
+				668C20FE23C3F5BC00C009A9 /* AddSessionResultPresenter.swift */,
+				668C20FF23C3F5BC00C009A9 /* AddSessionResultRouter.swift */,
+				668C210023C3F5BC00C009A9 /* AddSessionResultViewController.swift */,
+				668C210123C3F5BC00C009A9 /* AddSessionResultInteractor.swift */,
+				668C210223C3F5BC00C009A9 /* AddSessionResultModel.swift */,
+				668C210323C3F5BC00C009A9 /* AddSessionResultViewController.xib */,
+				668C210423C3F5BC00C009A9 /* AddSessionResultManager.swift */,
+			);
+			path = AddSessionResult;
+			sourceTree = "<group>";
+		};
+		668C20EC23C3F55F00C009A9 /* AddSessionResultFiltter */ = {
+			isa = PBXGroup;
+			children = (
+				668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */,
+				668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */,
+				668C20EF23C3F57800C009A9 /* AddSessionResultFiltterRouter.swift */,
+				668C20F023C3F57800C009A9 /* AddSessionResultFiltterViewController.swift */,
+				668C20F123C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift */,
+				668C20F223C3F57800C009A9 /* AddSessionResultFiltterModel.swift */,
+				668C20F323C3F57800C009A9 /* AddSessionResultFiltterViewController.xib */,
+				668C20F423C3F57800C009A9 /* AddSessionResultFiltterManager.swift */,
+			);
+			path = AddSessionResultFiltter;
+			sourceTree = "<group>";
+		};
+		668C210D23C3F65A00C009A9 /* CommentLists */ = {
+			isa = PBXGroup;
+			children = (
+				668C213023C3F6F700C009A9 /* CommentListsConfiguration.swift */,
+				668C213123C3F6F700C009A9 /* CommentListsPresenter.swift */,
+				668C213223C3F6F700C009A9 /* CommentListsRouter.swift */,
+				668C213323C3F6F700C009A9 /* CommentListsViewController.swift */,
+				668C213423C3F6F700C009A9 /* CommentListsInteractor.swift */,
+				668C213523C3F6F700C009A9 /* CommentListsModel.swift */,
+				668C213623C3F6F700C009A9 /* CommentListsViewController.xib */,
+				668C213723C3F6F700C009A9 /* CommentListsManager.swift */,
+			);
+			path = CommentLists;
+			sourceTree = "<group>";
+		};
+		668C210E23C3F66F00C009A9 /* LeaveCommentInCommentList */ = {
+			isa = PBXGroup;
+			children = (
+				668C212023C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift */,
+				668C212123C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift */,
+				668C212223C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift */,
+				668C212323C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift */,
+				668C212423C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift */,
+				668C212523C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift */,
+				668C212623C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib */,
+				668C212723C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift */,
+			);
+			path = LeaveCommentInCommentList;
+			sourceTree = "<group>";
+		};
+		668C210F23C3F6A800C009A9 /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				668C211023C3F6C100C009A9 /* CheckOutConfiguration.swift */,
+				668C211123C3F6C100C009A9 /* CheckOutPresenter.swift */,
+				668C211223C3F6C100C009A9 /* CheckOutRouter.swift */,
+				668C211323C3F6C100C009A9 /* CheckOutViewController.swift */,
+				668C211423C3F6C100C009A9 /* CheckOutInteractor.swift */,
+				668C211523C3F6C100C009A9 /* CheckOutModel.swift */,
+				668C211623C3F6C100C009A9 /* CheckOutViewController.xib */,
+				668C211723C3F6C100C009A9 /* CheckOutManager.swift */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
+		668C215023C3F73A00C009A9 /* CheckOutConfirmation */ = {
+			isa = PBXGroup;
+			children = (
+				668C215123C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift */,
+				668C215223C3F75300C009A9 /* CheckOutConfirmationPresenter.swift */,
+				668C215323C3F75300C009A9 /* CheckOutConfirmationRouter.swift */,
+				668C215423C3F75300C009A9 /* CheckOutConfirmationViewController.swift */,
+				668C215523C3F75300C009A9 /* CheckOutConfirmationInteractor.swift */,
+				668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */,
+				668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */,
+				668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */,
+			);
+			path = CheckOutConfirmation;
 			sourceTree = "<group>";
 		};
 		E17617DCB77855E3802A42A8 /* Pods */ = {
@@ -832,28 +1444,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				662A16CA23C3EA9F00A3695E /* AddFriendsViewController.xib in Resources */,
 				6683E30F23BCEEFF00250702 /* ProfileViewController.xib in Resources */,
+				662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */,
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
+				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
+				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
+				662A169723C3E75400A3695E /* MyFavoriteFriendsViewController.xib in Resources */,
+				662A170923C3F20200A3695E /* SechadualeViewController.xib in Resources */,
+				662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */,
+				668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */,
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
+				662A16F223C3EDC100A3695E /* TableViewCell.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
-				6683E2EF23BCEC0A00250702 /* WalletViewController.xib in Resources */,
 				6683E2DF23BCEBD900250702 /* SuggestedFieldsViewController.xib in Resources */,
+				668C20E623C3F38600C009A9 /* PublicEventsViewController.xib in Resources */,
+				662A16F823C3EF5700A3695E /* MyFriendsRequestTableViewCell.xib in Resources */,
 				6683E2CF23BCEB8800250702 /* SettingViewController.xib in Resources */,
 				6663366323B409B1004E537C /* Assets.xcassets in Resources */,
+				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
+				667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */,
+				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
+				668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */,
 				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
+				668C20FB23C3F57800C009A9 /* AddSessionResultFiltterViewController.xib in Resources */,
 				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
 				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
 				666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */,
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
+				668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */,
+				668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */,
+				662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */,
+				662A168523C3E4B200A3695E /* TransactionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,144 +1537,265 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668C213C23C3F6F700C009A9 /* CommentListsInteractor.swift in Sources */,
 				6663364423B402F7004E537C /* LoginViewController.swift in Sources */,
 				6683E2CB23BCEB8800250702 /* SettingRouter.swift in Sources */,
+				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
+				662A169423C3E75400A3695E /* MyFavoriteFriendsViewController.swift in Sources */,
 				6683E2DE23BCEBD900250702 /* SuggestedFieldsModel.swift in Sources */,
+				668C210723C3F5BC00C009A9 /* AddSessionResultRouter.swift in Sources */,
+				662A16C423C3EA9F00A3695E /* AddFriendsConfiguration.swift in Sources */,
 				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
+				668C210C23C3F5BC00C009A9 /* AddSessionResultManager.swift in Sources */,
+				668C212823C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift in Sources */,
+				662A16E823C3ECE000A3695E /* MyFriendsRequestRouter.swift in Sources */,
+				662A16D623C3EB7600A3695E /* AddFriendRequestPresenter.swift in Sources */,
+				662A168423C3E4B200A3695E /* TransactionsModel.swift in Sources */,
+				662A16B823C3E93900A3695E /* MyFriendsDetailsModel.swift in Sources */,
 				6683E2DC23BCEBD900250702 /* SuggestedFieldsViewController.swift in Sources */,
-				6683E2EB23BCEC0A00250702 /* WalletRouter.swift in Sources */,
 				6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */,
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
+				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
+				662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */,
 				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
 				6663365223B40318004E537C /* RegisterConfiguration.swift in Sources */,
+				662A168623C3E4B200A3695E /* TransactionsManager.swift in Sources */,
 				6663368523B40AB3004E537C /* ForgetEmailManager.swift in Sources */,
+				668C211823C3F6C100C009A9 /* CheckOutConfiguration.swift in Sources */,
+				662A169323C3E75400A3695E /* MyFavoriteFriendsRouter.swift in Sources */,
 				6663364223B402F7004E537C /* LoginPresenter.swift in Sources */,
+				668C213F23C3F6F700C009A9 /* CommentListsManager.swift in Sources */,
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
 				6683E2FC23BCEEB300250702 /* HelpCenterViewController.swift in Sources */,
+				668C210623C3F5BC00C009A9 /* AddSessionResultPresenter.swift in Sources */,
+				668C213B23C3F6F700C009A9 /* CommentListsViewController.swift in Sources */,
 				6683E2BA23BB631D00250702 /* NotificationSettingModel.swift in Sources */,
+				662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */,
 				66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
 				6683E31923BCEF1600250702 /* SideMenuConfiguration.swift in Sources */,
 				6683E2DD23BCEBD900250702 /* SuggestedFieldsInteractor.swift in Sources */,
+				668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */,
 				6683E2D023BCEB8800250702 /* SettingManager.swift in Sources */,
+				662A170523C3F20200A3695E /* SechadualeRouter.swift in Sources */,
 				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
 				6683E2FE23BCEEB300250702 /* HelpCenterModel.swift in Sources */,
+				662A16B623C3E93900A3695E /* MyFriendsDetailsViewController.swift in Sources */,
 				6663361323B40206004E537C /* AppDelegate.swift in Sources */,
+				667E4B7323C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift in Sources */,
+				668C213D23C3F6F700C009A9 /* CommentListsModel.swift in Sources */,
 				6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */,
+				667E4B8223C3E169007354A7 /* AddFundRouter.swift in Sources */,
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
+				668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */,
+				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
 				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
 				6683E30A23BCEEFF00250702 /* ProfilePresenter.swift in Sources */,
+				662A16F723C3EF5700A3695E /* MyFriendsRequestTableViewCell.swift in Sources */,
 				6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */,
+				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
+				668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */,
+				668C20E723C3F38600C009A9 /* PublicEventsManager.swift in Sources */,
+				667E4B7223C3DCA3007354A7 /* MakeWalletPasswordViewController.swift in Sources */,
 				6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */,
+				667E4B8723C3E169007354A7 /* AddFundManager.swift in Sources */,
+				668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */,
 				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
+				668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
+				667E4B8323C3E169007354A7 /* AddFundViewController.swift in Sources */,
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
-				6683E2EA23BCEC0A00250702 /* WalletPresenter.swift in Sources */,
+				662A16DC23C3EB7600A3695E /* AddFriendRequestManager.swift in Sources */,
 				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
-				6683E2EE23BCEC0A00250702 /* WalletModel.swift in Sources */,
+				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
+				668C213A23C3F6F700C009A9 /* CommentListsRouter.swift in Sources */,
 				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
+				662A16B523C3E93900A3695E /* MyFriendsDetailsRouter.swift in Sources */,
+				662A168223C3E4B200A3695E /* TransactionsViewController.swift in Sources */,
 				6663365523B40318004E537C /* RegisterViewController.swift in Sources */,
+				668C215923C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift in Sources */,
 				6683E2FD23BCEEB300250702 /* HelpCenterInteractor.swift in Sources */,
 				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
 				6663363423B40298004E537C /* UserAccountModel.swift in Sources */,
+				662A16A623C3E80900A3695E /* MemberOfFriendsInteractor.swift in Sources */,
 				666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */,
+				662A16D523C3EB7600A3695E /* AddFriendRequestConfiguration.swift in Sources */,
 				6663368323B40AB3004E537C /* ForgetEmailModel.swift in Sources */,
+				668C211A23C3F6C100C009A9 /* CheckOutRouter.swift in Sources */,
+				662A16D823C3EB7600A3695E /* AddFriendRequestViewController.swift in Sources */,
+				668C20E223C3F38600C009A9 /* PublicEventsRouter.swift in Sources */,
 				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
 				6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */,
+				662A16DA23C3EB7600A3695E /* AddFriendRequestModel.swift in Sources */,
+				662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */,
+				662A16C523C3EA9F00A3695E /* AddFriendsPresenter.swift in Sources */,
 				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
+				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
+				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
+				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
+				668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */,
 				666336B223B40B84004E537C /* PhoneVerificationPresenter.swift in Sources */,
+				667E4B7623C3DCA3007354A7 /* MakeWalletPasswordManager.swift in Sources */,
 				6663361523B40206004E537C /* SceneDelegate.swift in Sources */,
+				662A169123C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift in Sources */,
 				66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
+				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
+				668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */,
 				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
 				6683E32023BCEF1600250702 /* SideMenuManager.swift in Sources */,
+				668C212D23C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift in Sources */,
 				6683E31D23BCEF1600250702 /* SideMenuInteractor.swift in Sources */,
+				662A169523C3E75400A3695E /* MyFavoriteFriendsInteractor.swift in Sources */,
 				6663365323B40318004E537C /* RegisterPresenter.swift in Sources */,
 				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
+				662A170723C3F20200A3695E /* SechadualeInteractor.swift in Sources */,
+				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
+				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
+				668C212923C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift in Sources */,
 				6683E2CC23BCEB8800250702 /* SettingViewController.swift in Sources */,
+				662A16E623C3ECE000A3695E /* MyFriendsRequestConfiguration.swift in Sources */,
+				662A16BA23C3E93900A3695E /* MyFriendsDetailsManager.swift in Sources */,
 				6683E30D23BCEEFF00250702 /* ProfileInteractor.swift in Sources */,
 				6683E30E23BCEEFF00250702 /* ProfileModel.swift in Sources */,
 				6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */,
+				662A170623C3F20200A3695E /* SechadualeViewController.swift in Sources */,
 				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
 				6683E30B23BCEEFF00250702 /* ProfileRouter.swift in Sources */,
 				6663363623B40298004E537C /* UserAccountManager.swift in Sources */,
 				666336C223B40BD3004E537C /* NewPasswordConfiguration.swift in Sources */,
+				662A16A423C3E80900A3695E /* MemberOfFriendsRouter.swift in Sources */,
 				6683E31A23BCEF1600250702 /* SideMenuPresenter.swift in Sources */,
+				662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */,
 				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
+				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
+				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
 				66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */,
+				662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */,
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
+				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				6683E2DB23BCEBD900250702 /* SuggestedFieldsRouter.swift in Sources */,
+				668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */,
 				6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
 				6683E2DA23BCEBD900250702 /* SuggestedFieldsPresenter.swift in Sources */,
+				662A16EA23C3ECE000A3695E /* MyFriendsRequestInteractor.swift in Sources */,
+				668C215C23C3F75300C009A9 /* CheckOutConfirmationViewController.swift in Sources */,
+				662A16A723C3E80900A3695E /* MemberOfFriendsModel.swift in Sources */,
 				6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */,
 				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
-				6683E2E923BCEC0A00250702 /* WalletConfiguration.swift in Sources */,
+				668C214F23C3F70F00C009A9 /* BookSessionManager.swift in Sources */,
 				666336B623B40B84004E537C /* PhoneVerificationModel.swift in Sources */,
 				6683E30023BCEEB300250702 /* HelpCenterManager.swift in Sources */,
 				6683E2CA23BCEB8800250702 /* SettingPresenter.swift in Sources */,
+				662A170323C3F20200A3695E /* SechadualeConfiguration.swift in Sources */,
 				6663369623B40AFD004E537C /* EmailVerficationManager.swift in Sources */,
+				668C214C23C3F70F00C009A9 /* BookSessionInteractor.swift in Sources */,
 				6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */,
+				662A170823C3F20200A3695E /* SechadualeModel.swift in Sources */,
+				668C210823C3F5BC00C009A9 /* AddSessionResultViewController.swift in Sources */,
 				6683E2CE23BCEB8800250702 /* SettingModel.swift in Sources */,
+				668C20F823C3F57800C009A9 /* AddSessionResultFiltterViewController.swift in Sources */,
 				6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */,
 				6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */,
 				6683E30923BCEEFF00250702 /* ProfileConfiguration.swift in Sources */,
+				668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */,
 				666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */,
+				662A16A523C3E80900A3695E /* MemberOfFriendsViewController.swift in Sources */,
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
-				6683E2F023BCEC0A00250702 /* WalletManager.swift in Sources */,
+				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
+				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
+				667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */,
+				667E4B7423C3DCA3007354A7 /* MakeWalletPasswordModel.swift in Sources */,
 				6683E2F923BCEEB300250702 /* HelpCenterConfiguration.swift in Sources */,
 				6683E2B523BB631D00250702 /* NotificationSettingConfiguration.swift in Sources */,
+				662A16D723C3EB7600A3695E /* AddFriendRequestRouter.swift in Sources */,
+				662A16D923C3EB7600A3695E /* AddFriendRequestInteractor.swift in Sources */,
+				668C214D23C3F70F00C009A9 /* BookSessionModel.swift in Sources */,
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
+				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
-				6683E2ED23BCEC0A00250702 /* WalletInteractor.swift in Sources */,
+				668C214B23C3F70F00C009A9 /* BookSessionViewController.swift in Sources */,
+				662A16F123C3EDC100A3695E /* TableViewCell.swift in Sources */,
+				662A16E723C3ECE000A3695E /* MyFriendsRequestPresenter.swift in Sources */,
 				6683E31E23BCEF1600250702 /* SideMenuModel.swift in Sources */,
+				668C214A23C3F70F00C009A9 /* BookSessionRouter.swift in Sources */,
 				6663365B23B40345004E537C /* AppRoute.swift in Sources */,
+				668C210523C3F5BC00C009A9 /* AddSessionResultConfiguration.swift in Sources */,
 				666336C423B40BD3004E537C /* NewPasswordRouter.swift in Sources */,
 				6663367F23B40AB3004E537C /* ForgetEmailPresenter.swift in Sources */,
+				662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */,
 				6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */,
 				6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */,
+				662A170A23C3F20300A3695E /* SechadualeManager.swift in Sources */,
 				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
 				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
+				662A16B723C3E93900A3695E /* MyFriendsDetailsInteractor.swift in Sources */,
+				668C211923C3F6C100C009A9 /* CheckOutPresenter.swift in Sources */,
 				6683E2CD23BCEB8800250702 /* SettingInteractor.swift in Sources */,
+				662A16C623C3EA9F00A3695E /* AddFriendsRouter.swift in Sources */,
 				6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */,
 				6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */,
+				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
+				668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */,
+				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
 				6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */,
 				66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */,
+				667E4B6F23C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift in Sources */,
 				666336B123B40B84004E537C /* PhoneVerificationConfiguration.swift in Sources */,
 				6663363123B40298004E537C /* UserAccountRouter.swift in Sources */,
-				6683E2EC23BCEC0A00250702 /* WalletViewController.swift in Sources */,
 				6683E2D923BCEBD900250702 /* SuggestedFieldsConfiguration.swift in Sources */,
 				6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */,
+				668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */,
+				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
+				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
+				668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */,
 				6663365623B40318004E537C /* RegisterInteractor.swift in Sources */,
 				6683E2A823BB5FD900250702 /* MyFriendsManager.swift in Sources */,
 				6683E2C923BCEB8800250702 /* SettingConfiguration.swift in Sources */,
+				668C20F523C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift in Sources */,
+				667E4B8523C3E169007354A7 /* AddFundModel.swift in Sources */,
+				668C20FA23C3F57800C009A9 /* AddSessionResultFiltterModel.swift in Sources */,
+				662A16A323C3E80900A3695E /* MemberOfFriendsPresenter.swift in Sources */,
+				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
+				662A168323C3E4B200A3695E /* TransactionsInteractor.swift in Sources */,
 				6663364323B402F7004E537C /* LoginRouter.swift in Sources */,
+				668C214823C3F70F00C009A9 /* BookSessionConfiguration.swift in Sources */,
 				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
+				668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */,
+				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
+				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
 				6683E2FB23BCEEB300250702 /* HelpCenterRouter.swift in Sources */,
+				668C215B23C3F75300C009A9 /* CheckOutConfirmationRouter.swift in Sources */,
 				6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */,
+				662A169623C3E75400A3695E /* MyFavoriteFriendsModel.swift in Sources */,
+				668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */,
+				662A170423C3F20200A3695E /* SechadualePresenter.swift in Sources */,
 				6683E30C23BCEEFF00250702 /* ProfileViewController.swift in Sources */,
+				662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */,
 				6683E2FA23BCEEB300250702 /* HelpCenterPresenter.swift in Sources */,
+				667E4B7123C3DCA3007354A7 /* MakeWalletPasswordRouter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

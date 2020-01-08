@@ -1,14 +1,14 @@
 //
-//  TableViewCell.swift
+//  ScheduleTableViewCell.swift
 //  Hi5
 //
-//  Created by Adam on 1/7/20.
+//  Created by Mohamed Gamal on 1/8/20.
 //  Copyright © 2020 FudexApp. All rights reserved.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class ScheduleTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

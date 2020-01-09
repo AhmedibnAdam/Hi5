@@ -13,6 +13,7 @@ import UIKit
 protocol ILoginRouter: class {
 	// do someting...
     func navigateToSignUp()
+    func navigateToForgetPassword()
 }
 
 class LoginRouter: ILoginRouter {
@@ -25,5 +26,9 @@ class LoginRouter: ILoginRouter {
     
     func navigateToSignUp() {
         view?.navigate(type: .modal, module: GeneralRoute.register, completion: nil)
+    }
+    
+    func navigateToForgetPassword() {
+        view?.navigate(type: .modal, module: GeneralRoute.forgetPassword, completion: nil)
     }
 }

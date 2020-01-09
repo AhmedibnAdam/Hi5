@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgetEmailViewController" customModule="Hi5" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="neR-D8-Oqh" id="F67-xY-I7B"/>
+                <outlet property="continueBtn" destination="1kZ-W2-nt4" id="uZy-WZ-4CS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea2-Op-VuY">
+                    <rect key="frame" x="30" y="40" width="23" height="22"/>
+                    <state key="normal" image="leftArrow"/>
+                    <connections>
+                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="Rav-sZ-hJ4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kZ-W2-nt4">
+                    <rect key="frame" x="10" y="382.5" width="355" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="O4b-mN-OPP"/>
+                    </constraints>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="continueBtnTapped:" destination="-1" eventType="touchUpInside" id="UJL-sz-MvD"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="neR-D8-Oqh">
+                    <rect key="frame" x="10" y="315" width="355" height="37"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yE5-CX-KRV">
+                            <rect key="frame" x="10" y="10" width="335" height="17"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.89322024828767121" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="yE5-CX-KRV" secondAttribute="bottom" constant="10" id="9fq-Io-8Sd"/>
+                        <constraint firstAttribute="trailing" secondItem="yE5-CX-KRV" secondAttribute="trailing" constant="10" id="Ojo-AR-beX"/>
+                        <constraint firstItem="yE5-CX-KRV" firstAttribute="top" secondItem="neR-D8-Oqh" secondAttribute="top" constant="10" id="ePA-XN-eLe"/>
+                        <constraint firstItem="yE5-CX-KRV" firstAttribute="leading" secondItem="neR-D8-Oqh" secondAttribute="leading" constant="10" id="ktM-MO-CDj"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="480-1W-Qta">
+                    <rect key="frame" x="78" y="211" width="219" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="480-1W-Qta" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="DqR-n4-Ijp"/>
+                <constraint firstItem="ea2-Op-VuY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ERL-rU-p3p"/>
+                <constraint firstItem="neR-D8-Oqh" firstAttribute="top" secondItem="480-1W-Qta" secondAttribute="bottom" constant="80" id="I0O-ik-0X7"/>
+                <constraint firstItem="ea2-Op-VuY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="N8N-lr-KAo"/>
+                <constraint firstItem="neR-D8-Oqh" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="SVL-2i-Pfv"/>
+                <constraint firstItem="1kZ-W2-nt4" firstAttribute="trailing" secondItem="neR-D8-Oqh" secondAttribute="trailing" id="Uc1-NL-0h8"/>
+                <constraint firstItem="neR-D8-Oqh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="VAF-Nk-zaB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="neR-D8-Oqh" secondAttribute="trailing" constant="10" id="bM1-qE-w9m"/>
+                <constraint firstItem="1kZ-W2-nt4" firstAttribute="top" secondItem="neR-D8-Oqh" secondAttribute="bottom" constant="30.5" id="fbI-vw-OZP"/>
+                <constraint firstItem="1kZ-W2-nt4" firstAttribute="leading" secondItem="neR-D8-Oqh" secondAttribute="leading" id="w9j-uP-aSb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="136.80000000000001" y="145.27736131934034"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="leftArrow" width="23" height="17"/>
+    </resources>
+</document>

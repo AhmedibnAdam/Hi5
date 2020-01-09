@@ -44,6 +44,10 @@ class LoginViewController: UIViewController {
     // MARK : - Actions
     @IBAction func login(_ sender: UIButton) {
     }
+    
+    @IBAction func ForgetPasswordTapped(_ sender: Any) {
+        router?.navigateToForgetPassword()
+    }
     @IBAction func signUP(_ sender: UIButton) {
         router?.navigateToSignUp()
     }

@@ -38,8 +38,8 @@
                                 <constraint firstAttribute="height" constant="120" id="uN5-0U-aSi"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighFive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aq-Ej-w22">
-                            <rect key="frame" x="130" y="150" width="115" height="33.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighFive Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aq-Ej-w22">
+                            <rect key="frame" x="78.5" y="150" width="218" height="33.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -50,41 +50,45 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Olj-1L-hiC">
-                            <rect key="frame" x="0.0" y="283.5" width="375" height="40"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Olj-1L-hiC">
+                            <rect key="frame" x="0.0" y="293.5" width="375" height="40"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPs-fi-nxa">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7sq-1y-bs9">
                                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="Ik5-Ww-4yz"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <state key="normal" title="Sign in">
-                                        <color key="titleColor" red="0.99607843139999996" green="0.94901960780000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="login:" destination="-1" eventType="touchUpInside" id="rzJ-84-ZTw"/>
-                                    </connections>
-                                </button>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPs-fi-nxa">
+                                            <rect key="frame" x="64.5" y="0.0" width="59" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Ik5-Ww-4yz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <state key="normal" title="Sign in">
+                                                <color key="titleColor" red="0.99607843139999996" green="0.94901960780000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="login:" destination="-1" eventType="touchUpInside" id="rzJ-84-ZTw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuW-V9-brd">
-                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="40"/>
+                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="34"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <state key="normal" title="Sign up">
                                         <color key="titleColor" red="0.99607843139999996" green="0.94901960780000005" blue="0.91372549020000005" alpha="0.63267872431506844" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="signUP:" destination="-1" eventType="touchUpInside" id="ubF-f6-snR"/>
+                                    </connections>
                                 </button>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="CuW-V9-brd" firstAttribute="height" secondItem="lPs-fi-nxa" secondAttribute="height" id="Vrq-qJ-euD"/>
-                                <constraint firstItem="CuW-V9-brd" firstAttribute="width" secondItem="lPs-fi-nxa" secondAttribute="width" id="Vyo-JY-Xgq"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Udm-xL-tQN" secondAttribute="bottom" id="75y-4A-KxU"/>
                         <constraint firstItem="Olj-1L-hiC" firstAttribute="leading" secondItem="lWR-EC-99x" secondAttribute="leading" id="9ZW-a2-YRY"/>
-                        <constraint firstAttribute="bottom" secondItem="Olj-1L-hiC" secondAttribute="bottom" constant="10" id="PC4-ED-3lr"/>
+                        <constraint firstAttribute="bottom" secondItem="Olj-1L-hiC" secondAttribute="bottom" id="PC4-ED-3lr"/>
                         <constraint firstItem="SAf-SC-f7g" firstAttribute="centerX" secondItem="lWR-EC-99x" secondAttribute="centerX" id="WTc-MM-hz2"/>
                         <constraint firstAttribute="trailing" secondItem="Udm-xL-tQN" secondAttribute="trailing" id="h5d-Pm-9vc"/>
                         <constraint firstItem="6aq-Ej-w22" firstAttribute="centerY" secondItem="lWR-EC-99x" secondAttribute="centerY" id="ih9-vY-Gbx"/>
@@ -99,7 +103,7 @@
                         <constraint firstItem="1Tz-uY-I1G" firstAttribute="leading" secondItem="lWR-EC-99x" secondAttribute="leading" constant="30" id="wRx-Pe-a5T"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haf-6P-mB2">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haf-6P-mB2" userLabel="Bottom View">
                     <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="y4x-xX-h5S">
@@ -144,8 +148,8 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="P1u-n7-4aw">
                                                     <rect key="frame" x="10" y="9" width="315" height="32"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EzC-gC-J9S">
-                                                            <rect key="frame" x="0.0" y="0.5" width="32" height="30.5"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="EzC-gC-J9S">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                                             <color key="tintColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="32" id="2Jz-kM-10M"/>
@@ -184,6 +188,9 @@
                                     <state key="normal" title="Forgot yor password ?">
                                         <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="ForgetPasswordTapped:" destination="-1" eventType="touchUpInside" id="Fej-H7-PsU"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRK-uE-ILS">
                                     <rect key="frame" x="0.0" y="170" width="335" height="50"/>
@@ -214,14 +221,24 @@
                         <constraint firstItem="y4x-xX-h5S" firstAttribute="top" secondItem="haf-6P-mB2" secondAttribute="top" constant="30" id="Kl3-kL-qqW"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exf-ls-efi">
+                    <rect key="frame" x="0.0" y="330.5" width="187.5" height="3"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="Htr-3H-oTA"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Exf-ls-efi" firstAttribute="leading" secondItem="7sq-1y-bs9" secondAttribute="leading" id="4tz-MI-SGm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="haf-6P-mB2" secondAttribute="trailing" id="9Na-OK-m8w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="haf-6P-mB2" secondAttribute="bottom" id="T8t-0j-ir2"/>
+                <constraint firstItem="Exf-ls-efi" firstAttribute="bottom" secondItem="7sq-1y-bs9" secondAttribute="bottom" id="V3z-qg-F6Y"/>
                 <constraint firstItem="haf-6P-mB2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XU3-TV-vCW"/>
                 <constraint firstItem="lWR-EC-99x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yc2-PU-tlh"/>
                 <constraint firstAttribute="trailing" secondItem="lWR-EC-99x" secondAttribute="trailing" id="YfS-Lo-AMb"/>
+                <constraint firstItem="Exf-ls-efi" firstAttribute="trailing" secondItem="7sq-1y-bs9" secondAttribute="trailing" id="d5V-c0-G3k"/>
                 <constraint firstItem="lWR-EC-99x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fAV-3h-bS7"/>
                 <constraint firstItem="haf-6P-mB2" firstAttribute="top" secondItem="lWR-EC-99x" secondAttribute="bottom" id="frt-tM-fet"/>
                 <constraint firstItem="lWR-EC-99x" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="vZj-Qr-mAC"/>
@@ -232,8 +249,8 @@
     </objects>
     <resources>
         <image name="eye.slash" catalog="system" width="64" height="42"/>
-        <image name="lock.fill" catalog="system" width="64" height="64"/>
         <image name="loginBackground" width="414" height="366"/>
+        <image name="password" width="20" height="20"/>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
 </document>

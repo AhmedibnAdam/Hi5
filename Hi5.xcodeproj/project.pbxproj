@@ -1044,14 +1044,12 @@
 		6663364923B402FF004E537C /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				6663364A23B40318004E537C /* RegisterConfiguration.swift */,
-				6663364B23B40318004E537C /* RegisterPresenter.swift */,
-				6663364C23B40318004E537C /* RegisterRouter.swift */,
-				6663364D23B40318004E537C /* RegisterViewController.swift */,
-				6663364E23B40318004E537C /* RegisterInteractor.swift */,
-				6663364F23B40318004E537C /* RegisterModel.swift */,
-				6663365023B40318004E537C /* RegisterViewController.xib */,
-				6663365123B40318004E537C /* RegisterManager.swift */,
+				867F90BB23C71B6A00C82762 /* Register Contract */,
+				867F90BD23C71B7500C82762 /* Register Interactor */,
+				867F90BC23C71B7000C82762 /* Register Presenter */,
+				867F90C023C71BD900C82762 /* Register Router */,
+				867F90BF23C71BBF00C82762 /* Register Services */,
+				867F90BE23C71B7B00C82762 /* Register Views */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1068,14 +1066,12 @@
 		6663366423B40A36004E537C /* ForgetPassword */ = {
 			isa = PBXGroup;
 			children = (
-				6663366523B40A6A004E537C /* ForgetPasswordConfiguration.swift */,
-				6663366623B40A6A004E537C /* ForgetPasswordPresenter.swift */,
-				6663366723B40A6A004E537C /* ForgetPasswordRouter.swift */,
-				6663366823B40A6A004E537C /* ForgetPasswordViewController.swift */,
-				6663366923B40A6A004E537C /* ForgetPasswordInteractor.swift */,
-				6663366A23B40A6A004E537C /* ForgetPasswordModel.swift */,
-				6663366B23B40A6A004E537C /* ForgetPasswordViewController.xib */,
-				6663366C23B40A6A004E537C /* ForgetPasswordManager.swift */,
+				860E209623C73BCC00F59AE0 /* ForgetPasswordContract */,
+				860E209823C73BFC00F59AE0 /* ForgetPasswordInteractor */,
+				860E209923C73C0F00F59AE0 /* ForgetPasswordPresenter */,
+				860E209723C73BEC00F59AE0 /* ForgetPasswordRouter */,
+				860E209A23C73C2500F59AE0 /* ForgetPasswordServices */,
+				860E209B23C73C3600F59AE0 /* ForgetPasswordViews */,
 			);
 			path = ForgetPassword;
 			sourceTree = "<group>";
@@ -1083,14 +1079,12 @@
 		6663367523B40A8F004E537C /* ForgetEmail */ = {
 			isa = PBXGroup;
 			children = (
-				6663367623B40AB3004E537C /* ForgetEmailConfiguration.swift */,
-				6663367723B40AB3004E537C /* ForgetEmailPresenter.swift */,
-				6663367823B40AB3004E537C /* ForgetEmailRouter.swift */,
-				6663367923B40AB3004E537C /* ForgetEmailViewController.swift */,
-				6663367A23B40AB3004E537C /* ForgetEmailInteractor.swift */,
-				6663367B23B40AB3004E537C /* ForgetEmailModel.swift */,
-				6663367C23B40AB3004E537C /* ForgetEmailViewController.xib */,
-				6663367D23B40AB3004E537C /* ForgetEmailManager.swift */,
+				86BBF3CE23C76B4E00A05900 /* ForgetEmailServices */,
+				86BBF3CD23C76AF400A05900 /* ForgetEmailViews */,
+				86BBF3CC23C76AF100A05900 /* ForgetEmailPresenter */,
+				86BBF3CB23C76AEE00A05900 /* ForgetEmailInteractor */,
+				86BBF3CA23C76AEB00A05900 /* ForgetEmailRouter */,
+				86BBF3C923C76AE700A05900 /* ForgetEmailContract */,
 			);
 			path = ForgetEmail;
 			sourceTree = "<group>";
@@ -1098,14 +1092,12 @@
 		6663368623B40ADF004E537C /* EmailVerfication */ = {
 			isa = PBXGroup;
 			children = (
-				6663368723B40AFD004E537C /* EmailVerficationConfiguration.swift */,
-				6663368823B40AFD004E537C /* EmailVerficationPresenter.swift */,
-				6663368923B40AFD004E537C /* EmailVerficationRouter.swift */,
-				6663368A23B40AFD004E537C /* EmailVerficationViewController.swift */,
-				6663368B23B40AFD004E537C /* EmailVerficationInteractor.swift */,
-				6663368C23B40AFD004E537C /* EmailVerficationModel.swift */,
-				6663368D23B40AFD004E537C /* EmailVerficationViewController.xib */,
-				6663368E23B40AFD004E537C /* EmailVerficationManager.swift */,
+				86C27B5D23C7764200CA2D98 /* EmailVerificationViews */,
+				86C27B5C23C7763E00CA2D98 /* EmailVerificationServices */,
+				86C27B5B23C7763B00CA2D98 /* EmailVerificationPresenter */,
+				86C27B5A23C7763800CA2D98 /* EmailVerificationInteractor */,
+				86C27B5923C7763400CA2D98 /* EmailVerificationRouter */,
+				86C27B5823C7762F00CA2D98 /* EmailVerificationContract */,
 			);
 			path = EmailVerfication;
 			sourceTree = "<group>";
@@ -1113,14 +1105,12 @@
 		6663369723B40B1E004E537C /* ForgotPhone */ = {
 			isa = PBXGroup;
 			children = (
-				6663369823B40B47004E537C /* ForgotPhoneConfiguration.swift */,
-				6663369923B40B47004E537C /* ForgotPhonePresenter.swift */,
-				6663369A23B40B47004E537C /* ForgotPhoneRouter.swift */,
-				6663369B23B40B47004E537C /* ForgotPhoneViewController.swift */,
-				6663369C23B40B47004E537C /* ForgotPhoneInteractor.swift */,
-				6663369D23B40B47004E537C /* ForgotPhoneModel.swift */,
-				6663369E23B40B47004E537C /* ForgotPhoneViewController.xib */,
-				6663369F23B40B47004E537C /* ForgotPhoneManager.swift */,
+				868B074D23C7503800F47AEB /* ForgetPhoneContract */,
+				868B074E23C7504C00F47AEB /* ForgetPhoneInteractor */,
+				868B075023C7507100F47AEB /* ForgetPhonePresenter */,
+				868B074F23C7506000F47AEB /* ForgetPhoneRouter */,
+				868B075123C7508700F47AEB /* ForgetPhoneServices */,
+				868B075223C7509C00F47AEB /* ForgetPhoneViews */,
 			);
 			path = ForgotPhone;
 			sourceTree = "<group>";
@@ -1359,6 +1349,156 @@
 			path = CheckOutConfirmation;
 			sourceTree = "<group>";
 		};
+		860E209623C73BCC00F59AE0 /* ForgetPasswordContract */ = {
+			isa = PBXGroup;
+			children = (
+				6663366523B40A6A004E537C /* ForgetPasswordConfiguration.swift */,
+			);
+			path = ForgetPasswordContract;
+			sourceTree = "<group>";
+		};
+		860E209723C73BEC00F59AE0 /* ForgetPasswordRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6663366723B40A6A004E537C /* ForgetPasswordRouter.swift */,
+			);
+			path = ForgetPasswordRouter;
+			sourceTree = "<group>";
+		};
+		860E209823C73BFC00F59AE0 /* ForgetPasswordInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6663366923B40A6A004E537C /* ForgetPasswordInteractor.swift */,
+			);
+			path = ForgetPasswordInteractor;
+			sourceTree = "<group>";
+		};
+		860E209923C73C0F00F59AE0 /* ForgetPasswordPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6663366623B40A6A004E537C /* ForgetPasswordPresenter.swift */,
+			);
+			path = ForgetPasswordPresenter;
+			sourceTree = "<group>";
+		};
+		860E209A23C73C2500F59AE0 /* ForgetPasswordServices */ = {
+			isa = PBXGroup;
+			children = (
+				6663366A23B40A6A004E537C /* ForgetPasswordModel.swift */,
+				6663366C23B40A6A004E537C /* ForgetPasswordManager.swift */,
+			);
+			path = ForgetPasswordServices;
+			sourceTree = "<group>";
+		};
+		860E209B23C73C3600F59AE0 /* ForgetPasswordViews */ = {
+			isa = PBXGroup;
+			children = (
+				6663366823B40A6A004E537C /* ForgetPasswordViewController.swift */,
+				6663366B23B40A6A004E537C /* ForgetPasswordViewController.xib */,
+			);
+			path = ForgetPasswordViews;
+			sourceTree = "<group>";
+		};
+		867F90BB23C71B6A00C82762 /* Register Contract */ = {
+			isa = PBXGroup;
+			children = (
+				6663364A23B40318004E537C /* RegisterConfiguration.swift */,
+			);
+			path = "Register Contract";
+			sourceTree = "<group>";
+		};
+		867F90BC23C71B7000C82762 /* Register Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6663364B23B40318004E537C /* RegisterPresenter.swift */,
+			);
+			path = "Register Presenter";
+			sourceTree = "<group>";
+		};
+		867F90BD23C71B7500C82762 /* Register Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6663364E23B40318004E537C /* RegisterInteractor.swift */,
+			);
+			path = "Register Interactor";
+			sourceTree = "<group>";
+		};
+		867F90BE23C71B7B00C82762 /* Register Views */ = {
+			isa = PBXGroup;
+			children = (
+				6663364D23B40318004E537C /* RegisterViewController.swift */,
+				6663365023B40318004E537C /* RegisterViewController.xib */,
+			);
+			path = "Register Views";
+			sourceTree = "<group>";
+		};
+		867F90BF23C71BBF00C82762 /* Register Services */ = {
+			isa = PBXGroup;
+			children = (
+				6663364F23B40318004E537C /* RegisterModel.swift */,
+				6663365123B40318004E537C /* RegisterManager.swift */,
+			);
+			path = "Register Services";
+			sourceTree = "<group>";
+		};
+		867F90C023C71BD900C82762 /* Register Router */ = {
+			isa = PBXGroup;
+			children = (
+				6663364C23B40318004E537C /* RegisterRouter.swift */,
+			);
+			path = "Register Router";
+			sourceTree = "<group>";
+		};
+		868B074D23C7503800F47AEB /* ForgetPhoneContract */ = {
+			isa = PBXGroup;
+			children = (
+				6663369823B40B47004E537C /* ForgotPhoneConfiguration.swift */,
+			);
+			path = ForgetPhoneContract;
+			sourceTree = "<group>";
+		};
+		868B074E23C7504C00F47AEB /* ForgetPhoneInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6663369C23B40B47004E537C /* ForgotPhoneInteractor.swift */,
+			);
+			path = ForgetPhoneInteractor;
+			sourceTree = "<group>";
+		};
+		868B074F23C7506000F47AEB /* ForgetPhoneRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6663369A23B40B47004E537C /* ForgotPhoneRouter.swift */,
+			);
+			path = ForgetPhoneRouter;
+			sourceTree = "<group>";
+		};
+		868B075023C7507100F47AEB /* ForgetPhonePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6663369923B40B47004E537C /* ForgotPhonePresenter.swift */,
+			);
+			path = ForgetPhonePresenter;
+			sourceTree = "<group>";
+		};
+		868B075123C7508700F47AEB /* ForgetPhoneServices */ = {
+			isa = PBXGroup;
+			children = (
+				6663369D23B40B47004E537C /* ForgotPhoneModel.swift */,
+				6663369F23B40B47004E537C /* ForgotPhoneManager.swift */,
+			);
+			path = ForgetPhoneServices;
+			sourceTree = "<group>";
+		};
+		868B075223C7509C00F47AEB /* ForgetPhoneViews */ = {
+			isa = PBXGroup;
+			children = (
+				6663369B23B40B47004E537C /* ForgotPhoneViewController.swift */,
+				6663369E23B40B47004E537C /* ForgotPhoneViewController.xib */,
+			);
+			path = ForgetPhoneViews;
+			sourceTree = "<group>";
+		};
 		868C28BE23C605AA003F237A /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1431,6 +1571,106 @@
 				66340A1A23B4E091009DB30A /* LoginEndpoint.swift */,
 			);
 			path = LoginServices;
+			sourceTree = "<group>";
+		};
+		86BBF3C923C76AE700A05900 /* ForgetEmailContract */ = {
+			isa = PBXGroup;
+			children = (
+				6663367623B40AB3004E537C /* ForgetEmailConfiguration.swift */,
+			);
+			path = ForgetEmailContract;
+			sourceTree = "<group>";
+		};
+		86BBF3CA23C76AEB00A05900 /* ForgetEmailRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6663367823B40AB3004E537C /* ForgetEmailRouter.swift */,
+			);
+			path = ForgetEmailRouter;
+			sourceTree = "<group>";
+		};
+		86BBF3CB23C76AEE00A05900 /* ForgetEmailInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6663367A23B40AB3004E537C /* ForgetEmailInteractor.swift */,
+			);
+			path = ForgetEmailInteractor;
+			sourceTree = "<group>";
+		};
+		86BBF3CC23C76AF100A05900 /* ForgetEmailPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6663367723B40AB3004E537C /* ForgetEmailPresenter.swift */,
+			);
+			path = ForgetEmailPresenter;
+			sourceTree = "<group>";
+		};
+		86BBF3CD23C76AF400A05900 /* ForgetEmailViews */ = {
+			isa = PBXGroup;
+			children = (
+				6663367923B40AB3004E537C /* ForgetEmailViewController.swift */,
+				6663367C23B40AB3004E537C /* ForgetEmailViewController.xib */,
+			);
+			path = ForgetEmailViews;
+			sourceTree = "<group>";
+		};
+		86BBF3CE23C76B4E00A05900 /* ForgetEmailServices */ = {
+			isa = PBXGroup;
+			children = (
+				6663367B23B40AB3004E537C /* ForgetEmailModel.swift */,
+				6663367D23B40AB3004E537C /* ForgetEmailManager.swift */,
+			);
+			path = ForgetEmailServices;
+			sourceTree = "<group>";
+		};
+		86C27B5823C7762F00CA2D98 /* EmailVerificationContract */ = {
+			isa = PBXGroup;
+			children = (
+				6663368723B40AFD004E537C /* EmailVerficationConfiguration.swift */,
+			);
+			path = EmailVerificationContract;
+			sourceTree = "<group>";
+		};
+		86C27B5923C7763400CA2D98 /* EmailVerificationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6663368923B40AFD004E537C /* EmailVerficationRouter.swift */,
+			);
+			path = EmailVerificationRouter;
+			sourceTree = "<group>";
+		};
+		86C27B5A23C7763800CA2D98 /* EmailVerificationInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6663368B23B40AFD004E537C /* EmailVerficationInteractor.swift */,
+			);
+			path = EmailVerificationInteractor;
+			sourceTree = "<group>";
+		};
+		86C27B5B23C7763B00CA2D98 /* EmailVerificationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6663368823B40AFD004E537C /* EmailVerficationPresenter.swift */,
+			);
+			path = EmailVerificationPresenter;
+			sourceTree = "<group>";
+		};
+		86C27B5C23C7763E00CA2D98 /* EmailVerificationServices */ = {
+			isa = PBXGroup;
+			children = (
+				6663368C23B40AFD004E537C /* EmailVerficationModel.swift */,
+				6663368E23B40AFD004E537C /* EmailVerficationManager.swift */,
+			);
+			path = EmailVerificationServices;
+			sourceTree = "<group>";
+		};
+		86C27B5D23C7764200CA2D98 /* EmailVerificationViews */ = {
+			isa = PBXGroup;
+			children = (
+				6663368A23B40AFD004E537C /* EmailVerficationViewController.swift */,
+				6663368D23B40AFD004E537C /* EmailVerficationViewController.xib */,
+			);
+			path = EmailVerificationViews;
 			sourceTree = "<group>";
 		};
 		E17617DCB77855E3802A42A8 /* Pods */ = {

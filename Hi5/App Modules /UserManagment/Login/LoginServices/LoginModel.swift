@@ -12,16 +12,15 @@ import UIKit
 
 struct LoginModel {	
 	struct Request {
-		// do someting...
-
+		// MARK : - do someting...
 		func parameters() -> [String: Any]? {
-			// do someting...
+			// MARK : - do someting...
             return ["username":"01126223344" , "password":"123456"]
 		}
 	}
 
     struct Response: Codable {
-		// do someting...
+		// MARK : - do someting...
         let vvvcode: Int
         let vvvmessage: String
        

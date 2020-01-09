@@ -14,21 +14,15 @@ import SwiftyJSON
 // MARK: - Handle all data requests and responses API / CoreData / Realm etc ...
 
 protocol ILoginManager: class {
-    // do someting...
+    // MARK : - do someting...
     func loginFromApi(parameters: [String: Any] ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool ,_ data:Data?)->Void)
-    
-    
 }
 
 class LoginManager: ILoginManager {
-    
-    
-    // do someting...
-    
+    // MARK : - do someting...
     func loginFromApi(parameters: [String: Any] , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool ,_ data:Data?)->Void) {
-        
-        NetworkService.share.request(endpoint: LoginEndpoint.login(parameter: parameters), success: { (respnseData) in
-            let response = respnseData
+        NetworkService.share.request(endpoint: LoginEndpoint.login(parameter: parameters), success: { (responseData) in
+            let response = responseData
             do {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(LoginModel.Response.self, from: response)
@@ -39,18 +33,17 @@ class LoginManager: ILoginManager {
                 
                 do {
                     let decoder = JSONDecoder()
-                    let error = try decoder.decode(ErrorModel.self, from: respnseData )
+                    let error = try decoder.decode(ErrorModel.self, from: responseData )
                     print(error)
-                    complition(error , false , respnseData )
+                    complition(error , false , responseData )
                 } catch let error {
                     print(error)
                     
                 }
-                
-                
-            }
+  
+        }
             
-        }, failure: { (error) in
+    }, failure: { (error) in
             do {
                 let decoder = JSONDecoder()
                 let error = try decoder.decode(ErrorModel.self, from: error as! Data )

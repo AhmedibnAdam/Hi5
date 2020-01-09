@@ -17,20 +17,16 @@ protocol ILoginViewController: class {
 
 class LoginViewController: UIViewController {
     
-    
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
-    
-    
     var ssss: String?
     
-    
-    // view outlet
+    // MARK : - view outlet
     @IBOutlet weak var profilePhoteView: UIView!
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var passwordView: UIView!
     
-     // buttons outlet
+     // MARK : - buttons outlet
     @IBOutlet weak var signInOutlet: UIButton!
     @IBOutlet weak var SignupOutlet: UIButton!
     @IBOutlet weak var forgetPasswordOutlet: UIButton!
@@ -40,24 +36,20 @@ class LoginViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
-        
+		// MARK : - do someting...
         initView()
         configer()
-        
     }
     
-    // Actions
+    // MARK : - Actions
     @IBAction func login(_ sender: UIButton) {
-        
     }
     @IBAction func signUP(_ sender: UIButton) {
-        router?.navigateToNext()
+        router?.navigateToSignUp()
     }
     @IBAction func doLogin(_ sender: UIButton) {
         doLoginAction()
     }
-    
     
 }
 
@@ -65,36 +57,27 @@ extension LoginViewController: ILoginViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-    
-   
-    
-
-    
-	// do someting...
+	// MARK : - do someting...
 }
 
 extension LoginViewController {
+    
     func initView(){
-        
-        
-        // view raduis
+        // MARK : - view raduis
         self.profilePhoteView = CreateCornerRauis.viewRaduis(view: self.profilePhoteView, number: (self.profilePhoteView.frame.size.height / 2))
         self.nameView = CreateCornerRauis.viewRaduis(view: self.nameView, number: 5)
         self.passwordView = CreateCornerRauis.viewRaduis(view: self.passwordView, number: 5)
-        
-        
-          // Button  raduis
+          // MARK : - Button  raduis
         self.doLoginButtonOutlet = CreateCornerRauis.ButtonRaduis(button: self.doLoginButtonOutlet, number: 5)
-      
     }
+    
     func configer(){
         router = LoginRouter(view: self)
     }
 }
 
 extension LoginViewController {
-	// do someting...
-    
+	// MARK : - do someting...
     func doLoginAction(){
         self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
         self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)

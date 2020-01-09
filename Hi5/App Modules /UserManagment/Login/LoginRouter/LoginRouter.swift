@@ -12,19 +12,18 @@ import UIKit
 
 protocol ILoginRouter: class {
 	// do someting...
-    func navigateToNext()
+    func navigateToSignUp()
 }
 
 class LoginRouter: ILoginRouter {
-   
-    
-  
+
 	weak var view: LoginViewController?
 	
 	init(view: LoginViewController?) {
 		self.view = view
 	}
-    func navigateToNext() {
+    
+    func navigateToSignUp() {
         view?.navigate(type: .modal, module: GeneralRoute.register, completion: nil)
-       }
+    }
 }

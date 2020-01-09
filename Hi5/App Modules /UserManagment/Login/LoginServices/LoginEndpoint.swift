@@ -31,13 +31,11 @@ extension LoginEndpoint: IEndpoint {
         }
         */
         
-        switch self {
-              case .login:
-                  return .post
-              }
-        
-   //     return .get
+    switch self {
+      case .login:
+        return .post
     }
+}
     
     var path: String {
         /*
@@ -48,10 +46,10 @@ extension LoginEndpoint: IEndpoint {
             return "https://httpbin.org/get"
         }
         */
-        switch self {
-               case .login:
-                   return "https://www.soqiaa-app.com/app/api/" + "userLogin"
-               }
+    switch self {
+       case .login:
+         return "https://www.soqiaa-app.com/app/api/" + "userLogin"
+       }
     }
     
     var parameter: Parameters? {
@@ -64,12 +62,11 @@ extension LoginEndpoint: IEndpoint {
         }
         */
         
-        switch self {
+    switch self {
         case .login:
             return ["":""]
         }
-        
-    }
+  }
     
     var header: HTTPHeaders? {
         /*
@@ -80,10 +77,10 @@ extension LoginEndpoint: IEndpoint {
             return ["key": Any]
         }
         */
-         switch self {
-               case .login:
-                   return ["Accept": "application/json"]
-               }
+    switch self {
+       case .login:
+           return ["Accept": "application/json"]
+       }
     }
     
     var encoding: ParameterEncoding {        

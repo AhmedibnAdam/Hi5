@@ -49,6 +49,5 @@ extension GeneralRoute {
         case .userAccount:
             return UserAccountConfiguration.setup()
         }
-        
     }
 }

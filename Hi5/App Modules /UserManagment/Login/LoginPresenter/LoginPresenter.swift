@@ -11,10 +11,9 @@
 import UIKit
 
 protocol ILoginPresenter: class {
-    // do someting...
+    // MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
 }
-
 class LoginPresenter: ILoginPresenter {
     
     weak var view: ILoginViewController?
@@ -23,8 +22,6 @@ class LoginPresenter: ILoginPresenter {
         self.view = view
     }
     func showErrorAlert(title: String, msg: String){
-        
         view?.showAlert(title: title, msg: msg)
-      
     }
 }

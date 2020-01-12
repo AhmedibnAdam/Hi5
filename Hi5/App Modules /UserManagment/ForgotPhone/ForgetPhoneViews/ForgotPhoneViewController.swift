@@ -17,37 +17,35 @@ protocol IForgotPhoneViewController: class {
 class ForgotPhoneViewController: UIViewController {
 	var interactor: IForgotPhoneInteractor?
 	var router: IForgotPhoneRouter?
-    //MARK : - Outlets
+    //MARK:- Outlets
     @IBOutlet weak var continueBtn: UIButton!
-    
-
 	override func viewDidLoad() {
         super.viewDidLoad()
 		initView()
         configer()
     }
-    // MARK : - Actions
+    //MARK: - Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func continueBtnTapped(_ sender: Any) {
-        
+        router?.navigateToPhoneVerification()
     }
 }
-
+//MARK:- extensions
 extension ForgotPhoneViewController: IForgotPhoneViewController {
 	// do someting...
 }
 
 extension ForgotPhoneViewController {
-	    func initView(){
-    // MARK : - Button  raduis
-        self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
-    }
+  func initView(){
+      // MARK : - Button  raduis
+    self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
+  }
     
-    func configer(){
-        router = ForgotPhoneRouter(view: self)
-    }
+func configer(){
+    router = ForgotPhoneRouter(view: self)
+  }
 }
 

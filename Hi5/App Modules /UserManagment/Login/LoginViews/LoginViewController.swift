@@ -21,12 +21,12 @@ class LoginViewController: UIViewController {
 	var router: ILoginRouter?
     var ssss: String?
     
-    // MARK : - view outlet
+    //MARK: - view outlet
     @IBOutlet weak var profilePhoteView: UIView!
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var passwordView: UIView!
     
-     // MARK : - buttons outlet
+     //MARK: - buttons outlet
     @IBOutlet weak var signInOutlet: UIButton!
     @IBOutlet weak var SignupOutlet: UIButton!
     @IBOutlet weak var forgetPasswordOutlet: UIButton!
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         configer()
     }
     
-    // MARK : - Actions
+    //MARK: - Actions
     @IBAction func login(_ sender: UIButton) {
     }
     
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
     }
     
 }
-
+//MARK: - extenions
 extension LoginViewController: ILoginViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)

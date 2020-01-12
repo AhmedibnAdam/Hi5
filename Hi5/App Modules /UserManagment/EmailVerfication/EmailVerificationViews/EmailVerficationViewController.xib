@@ -9,6 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailVerficationViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
+                <outlet property="textField1" destination="dTn-e8-XBh" id="SY0-Cn-l9r"/>
+                <outlet property="textField2" destination="ds6-Vb-a2R" id="MHe-f9-Huv"/>
+                <outlet property="textField3" destination="rId-4R-Z0p" id="bo0-Jd-buj"/>
+                <outlet property="textField4" destination="ZBf-CU-XoE" id="bIP-Nt-eCD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,6 +24,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Nd-lx-Sq8">
                     <rect key="frame" x="30" y="40" width="23" height="22"/>
                     <state key="normal" image="leftArrow"/>
+                    <connections>
+                        <action selector="backBtnTapped:" destination="-1" eventType="touchUpInside" id="gOn-le-MZE"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="0Da-yu-DqP">
                     <rect key="frame" x="10" y="416.5" width="355" height="91"/>
@@ -33,6 +40,9 @@
                             <state key="normal" title="Continue">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="continueBtnTapped:" destination="-1" eventType="touchUpInside" id="9bB-Wh-zdz"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaQ-2v-ug0">
                             <rect key="frame" x="0.0" y="57" width="355" height="34"/>
@@ -40,6 +50,9 @@
                             <state key="normal" title="Resend">
                                 <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="resendBtnTapped:" destination="-1" eventType="touchUpInside" id="7RX-tb-efc"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

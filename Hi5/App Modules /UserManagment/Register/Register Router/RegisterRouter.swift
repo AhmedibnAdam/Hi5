@@ -12,12 +12,12 @@ import UIKit
 
 protocol IRegisterRouter: class {
 	// MARK : - do someting...
-     func navigateToNext()
+     func navigateToSignupPhoneVerification()
 }
 
 class RegisterRouter: IRegisterRouter {
-    func navigateToNext() {
-        
+    func navigateToSignupPhoneVerification() {
+        view?.navigate(type: .modal, module: GeneralRoute.sigupVerificationPhone, completion: nil)
     }
     
 	weak var view: RegisterViewController?

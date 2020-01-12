@@ -17,7 +17,7 @@ protocol IForgetEmailRouter: class {
 
 class ForgetEmailRouter: IForgetEmailRouter {
     func navigateToVerificationEmail() {
-        view?.navigate(type: .modal, module: GeneralRoute.verificationEmail, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.emailVerification, completion: nil)
     }
     
 	weak var view: ForgetEmailViewController?

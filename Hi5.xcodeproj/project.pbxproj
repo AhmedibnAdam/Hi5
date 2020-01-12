@@ -304,9 +304,41 @@
 		668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
 		66F6D09C23B6F352004BF95C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09B23B6F352004BF95C /* APIError.swift */; };
+		862A5E8523CB72380058355E /* ChangeUsernameConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */; };
+		862A5E8623CB72380058355E /* ChangeUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */; };
+		862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */; };
+		862A5E8823CB72380058355E /* ChangeUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8023CB72380058355E /* ChangeUsernameViewController.swift */; };
+		862A5E8923CB72380058355E /* ChangeUsernameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8123CB72380058355E /* ChangeUsernameInteractor.swift */; };
+		862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8223CB72380058355E /* ChangeUsernameModel.swift */; };
+		862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */; };
+		862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8423CB72380058355E /* ChangeUsernameManager.swift */; };
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
 		868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */; };
 		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
+		86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */; };
+		86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */; };
+		86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */; };
+		86B14BC723CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBF23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift */; };
+		86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BC023CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift */; };
+		86B14BC923CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BC123CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift */; };
+		86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B14BC223CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib */; };
+		86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BC323CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift */; };
+		86B14BDB23CB543B00B3FEB1 /* WelcomeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD323CB543B00B3FEB1 /* WelcomeConfiguration.swift */; };
+		86B14BDC23CB543B00B3FEB1 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD423CB543B00B3FEB1 /* WelcomePresenter.swift */; };
+		86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD523CB543B00B3FEB1 /* WelcomeRouter.swift */; };
+		86B14BDE23CB543B00B3FEB1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD623CB543B00B3FEB1 /* WelcomeViewController.swift */; };
+		86B14BDF23CB543B00B3FEB1 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD723CB543B00B3FEB1 /* WelcomeInteractor.swift */; };
+		86B14BE023CB543B00B3FEB1 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD823CB543B00B3FEB1 /* WelcomeModel.swift */; };
+		86B14BE123CB543B00B3FEB1 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B14BD923CB543B00B3FEB1 /* WelcomeViewController.xib */; };
+		86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BDA23CB543B00B3FEB1 /* WelcomeManager.swift */; };
+		86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5023CB5F840036C41D /* CreatePasswordConfiguration.swift */; };
+		86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5123CB5F840036C41D /* CreatePasswordPresenter.swift */; };
+		86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5223CB5F840036C41D /* CreatePasswordRouter.swift */; };
+		86BBEE5B23CB5F840036C41D /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5323CB5F840036C41D /* CreatePasswordViewController.swift */; };
+		86BBEE5C23CB5F840036C41D /* CreatePasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5423CB5F840036C41D /* CreatePasswordInteractor.swift */; };
+		86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */; };
+		86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */; };
+		86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -618,9 +650,41 @@
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
 		66F6D09B23B6F352004BF95C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
+		862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameConfiguration.swift; sourceTree = "<group>"; };
+		862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernamePresenter.swift; sourceTree = "<group>"; };
+		862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameRouter.swift; sourceTree = "<group>"; };
+		862A5E8023CB72380058355E /* ChangeUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameViewController.swift; sourceTree = "<group>"; };
+		862A5E8123CB72380058355E /* ChangeUsernameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameInteractor.swift; sourceTree = "<group>"; };
+		862A5E8223CB72380058355E /* ChangeUsernameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameModel.swift; sourceTree = "<group>"; };
+		862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeUsernameViewController.xib; sourceTree = "<group>"; };
+		862A5E8423CB72380058355E /* ChangeUsernameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameManager.swift; sourceTree = "<group>"; };
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationConfiguration.swift; sourceTree = "<group>"; };
+		86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationPresenter.swift; sourceTree = "<group>"; };
+		86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationRouter.swift; sourceTree = "<group>"; };
+		86B14BBF23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationViewController.swift; sourceTree = "<group>"; };
+		86B14BC023CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationInteractor.swift; sourceTree = "<group>"; };
+		86B14BC123CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationModel.swift; sourceTree = "<group>"; };
+		86B14BC223CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupPhoneVerificationViewController.xib; sourceTree = "<group>"; };
+		86B14BC323CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationManager.swift; sourceTree = "<group>"; };
+		86B14BD323CB543B00B3FEB1 /* WelcomeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeConfiguration.swift; sourceTree = "<group>"; };
+		86B14BD423CB543B00B3FEB1 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		86B14BD523CB543B00B3FEB1 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		86B14BD623CB543B00B3FEB1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		86B14BD723CB543B00B3FEB1 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		86B14BD823CB543B00B3FEB1 /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
+		86B14BD923CB543B00B3FEB1 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		86B14BDA23CB543B00B3FEB1 /* WelcomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeManager.swift; sourceTree = "<group>"; };
+		86BBEE5023CB5F840036C41D /* CreatePasswordConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordConfiguration.swift; sourceTree = "<group>"; };
+		86BBEE5123CB5F840036C41D /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
+		86BBEE5223CB5F840036C41D /* CreatePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordRouter.swift; sourceTree = "<group>"; };
+		86BBEE5323CB5F840036C41D /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		86BBEE5423CB5F840036C41D /* CreatePasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordInteractor.swift; sourceTree = "<group>"; };
+		86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordModel.swift; sourceTree = "<group>"; };
+		86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordViewController.xib; sourceTree = "<group>"; };
+		86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordManager.swift; sourceTree = "<group>"; };
 		88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.release.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1000,6 +1064,10 @@
 		6663362623B40221004E537C /* UserManagment */ = {
 			isa = PBXGroup;
 			children = (
+				862A5E7C23CB72130058355E /* ChangeUsername */,
+				86BBEE4F23CB5F5D0036C41D /* CreatePassword */,
+				86B14BD223CB53E600B3FEB1 /* Welcome */,
+				86B14BBB23CB48F300B3FEB1 /* SignupPhoneVerification */,
 				666336B923B40BB7004E537C /* NewPassword */,
 				666336A823B40B66004E537C /* PhoneVerification */,
 				6663369723B40B1E004E537C /* ForgotPhone */,
@@ -1118,14 +1186,12 @@
 		666336A823B40B66004E537C /* PhoneVerification */ = {
 			isa = PBXGroup;
 			children = (
-				666336A923B40B84004E537C /* PhoneVerificationConfiguration.swift */,
-				666336AA23B40B84004E537C /* PhoneVerificationPresenter.swift */,
-				666336AB23B40B84004E537C /* PhoneVerificationRouter.swift */,
-				666336AC23B40B84004E537C /* PhoneVerificationViewController.swift */,
-				666336AD23B40B84004E537C /* PhoneVerificationInteractor.swift */,
-				666336AE23B40B84004E537C /* PhoneVerificationModel.swift */,
-				666336AF23B40B84004E537C /* PhoneVerificationViewController.xib */,
-				666336B023B40B84004E537C /* PhoneVerificationManager.swift */,
+				86142A6923CB180B00EB1DC3 /* PhoneVerificationServices */,
+				86142A6823CB180600EB1DC3 /* PhoneVerificationViews */,
+				86142A6723CB180300EB1DC3 /* PhoneVerificationRouter */,
+				86142A6623CB180000EB1DC3 /* PhoneVerificationPresenter */,
+				86142A6523CB17FD00EB1DC3 /* PhoneVerificationInteractor */,
+				86142A6423CB17F900EB1DC3 /* PhoneVerificationContract */,
 			);
 			path = PhoneVerification;
 			sourceTree = "<group>";
@@ -1133,14 +1199,12 @@
 		666336B923B40BB7004E537C /* NewPassword */ = {
 			isa = PBXGroup;
 			children = (
-				666336BA23B40BD3004E537C /* NewPasswordConfiguration.swift */,
-				666336BB23B40BD3004E537C /* NewPasswordPresenter.swift */,
-				666336BC23B40BD3004E537C /* NewPasswordRouter.swift */,
-				666336BD23B40BD3004E537C /* NewPasswordViewController.swift */,
-				666336BE23B40BD3004E537C /* NewPasswordInteractor.swift */,
-				666336BF23B40BD3004E537C /* NewPasswordModel.swift */,
-				666336C023B40BD3004E537C /* NewPasswordViewController.xib */,
-				666336C123B40BD3004E537C /* NewPasswordManager.swift */,
+				8643730923CB1E21009CAF28 /* NewPasswordServices */,
+				8643730823CB1E1C009CAF28 /* NewPasswordViews */,
+				8643730723CB1E19009CAF28 /* NewPasswordRouter */,
+				8643730623CB1E16009CAF28 /* NewPasswordPresenter */,
+				8643730523CB1E13009CAF28 /* NewPasswordInteractor */,
+				8643730423CB1E10009CAF28 /* NewPasswordContract */,
 			);
 			path = NewPassword;
 			sourceTree = "<group>";
@@ -1399,6 +1463,169 @@
 			path = ForgetPasswordViews;
 			sourceTree = "<group>";
 		};
+		86142A6423CB17F900EB1DC3 /* PhoneVerificationContract */ = {
+			isa = PBXGroup;
+			children = (
+				666336A923B40B84004E537C /* PhoneVerificationConfiguration.swift */,
+			);
+			path = PhoneVerificationContract;
+			sourceTree = "<group>";
+		};
+		86142A6523CB17FD00EB1DC3 /* PhoneVerificationInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				666336AD23B40B84004E537C /* PhoneVerificationInteractor.swift */,
+			);
+			path = PhoneVerificationInteractor;
+			sourceTree = "<group>";
+		};
+		86142A6623CB180000EB1DC3 /* PhoneVerificationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				666336AA23B40B84004E537C /* PhoneVerificationPresenter.swift */,
+			);
+			path = PhoneVerificationPresenter;
+			sourceTree = "<group>";
+		};
+		86142A6723CB180300EB1DC3 /* PhoneVerificationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				666336AB23B40B84004E537C /* PhoneVerificationRouter.swift */,
+			);
+			path = PhoneVerificationRouter;
+			sourceTree = "<group>";
+		};
+		86142A6823CB180600EB1DC3 /* PhoneVerificationViews */ = {
+			isa = PBXGroup;
+			children = (
+				666336AC23B40B84004E537C /* PhoneVerificationViewController.swift */,
+				666336AF23B40B84004E537C /* PhoneVerificationViewController.xib */,
+			);
+			path = PhoneVerificationViews;
+			sourceTree = "<group>";
+		};
+		86142A6923CB180B00EB1DC3 /* PhoneVerificationServices */ = {
+			isa = PBXGroup;
+			children = (
+				666336AE23B40B84004E537C /* PhoneVerificationModel.swift */,
+				666336B023B40B84004E537C /* PhoneVerificationManager.swift */,
+			);
+			path = PhoneVerificationServices;
+			sourceTree = "<group>";
+		};
+		862A5E7C23CB72130058355E /* ChangeUsername */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E9223CB72BF0058355E /* ChangeUsernameContract */,
+				862A5E9123CB72B70058355E /* ChangeUsernameRouter */,
+				862A5E9023CB72B30058355E /* ChangeUsernameInteractor */,
+				862A5E8F23CB72B00058355E /* ChangeUsernamePresenter */,
+				862A5E8E23CB72AC0058355E /* ChangeUsernameViews */,
+				862A5E8D23CB72A80058355E /* ChangeUsernameServices */,
+			);
+			path = ChangeUsername;
+			sourceTree = "<group>";
+		};
+		862A5E8D23CB72A80058355E /* ChangeUsernameServices */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E8223CB72380058355E /* ChangeUsernameModel.swift */,
+				862A5E8423CB72380058355E /* ChangeUsernameManager.swift */,
+			);
+			path = ChangeUsernameServices;
+			sourceTree = "<group>";
+		};
+		862A5E8E23CB72AC0058355E /* ChangeUsernameViews */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E8023CB72380058355E /* ChangeUsernameViewController.swift */,
+				862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */,
+			);
+			path = ChangeUsernameViews;
+			sourceTree = "<group>";
+		};
+		862A5E8F23CB72B00058355E /* ChangeUsernamePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */,
+			);
+			path = ChangeUsernamePresenter;
+			sourceTree = "<group>";
+		};
+		862A5E9023CB72B30058355E /* ChangeUsernameInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E8123CB72380058355E /* ChangeUsernameInteractor.swift */,
+			);
+			path = ChangeUsernameInteractor;
+			sourceTree = "<group>";
+		};
+		862A5E9123CB72B70058355E /* ChangeUsernameRouter */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */,
+			);
+			path = ChangeUsernameRouter;
+			sourceTree = "<group>";
+		};
+		862A5E9223CB72BF0058355E /* ChangeUsernameContract */ = {
+			isa = PBXGroup;
+			children = (
+				862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */,
+			);
+			path = ChangeUsernameContract;
+			sourceTree = "<group>";
+		};
+		8643730423CB1E10009CAF28 /* NewPasswordContract */ = {
+			isa = PBXGroup;
+			children = (
+				666336BA23B40BD3004E537C /* NewPasswordConfiguration.swift */,
+			);
+			path = NewPasswordContract;
+			sourceTree = "<group>";
+		};
+		8643730523CB1E13009CAF28 /* NewPasswordInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				666336BE23B40BD3004E537C /* NewPasswordInteractor.swift */,
+			);
+			path = NewPasswordInteractor;
+			sourceTree = "<group>";
+		};
+		8643730623CB1E16009CAF28 /* NewPasswordPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				666336BB23B40BD3004E537C /* NewPasswordPresenter.swift */,
+			);
+			path = NewPasswordPresenter;
+			sourceTree = "<group>";
+		};
+		8643730723CB1E19009CAF28 /* NewPasswordRouter */ = {
+			isa = PBXGroup;
+			children = (
+				666336BC23B40BD3004E537C /* NewPasswordRouter.swift */,
+			);
+			path = NewPasswordRouter;
+			sourceTree = "<group>";
+		};
+		8643730823CB1E1C009CAF28 /* NewPasswordViews */ = {
+			isa = PBXGroup;
+			children = (
+				666336BD23B40BD3004E537C /* NewPasswordViewController.swift */,
+				666336C023B40BD3004E537C /* NewPasswordViewController.xib */,
+			);
+			path = NewPasswordViews;
+			sourceTree = "<group>";
+		};
+		8643730923CB1E21009CAF28 /* NewPasswordServices */ = {
+			isa = PBXGroup;
+			children = (
+				666336BF23B40BD3004E537C /* NewPasswordModel.swift */,
+				666336C123B40BD3004E537C /* NewPasswordManager.swift */,
+			);
+			path = NewPasswordServices;
+			sourceTree = "<group>";
+		};
 		867F90BB23C71B6A00C82762 /* Register Contract */ = {
 			isa = PBXGroup;
 			children = (
@@ -1573,6 +1800,195 @@
 			path = LoginServices;
 			sourceTree = "<group>";
 		};
+		86B14BBB23CB48F300B3FEB1 /* SignupPhoneVerification */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD123CB4B5300B3FEB1 /* SignupPhoneVerificationServices */,
+				86B14BD023CB4B3B00B3FEB1 /* SignupPhoneVerificationViews */,
+				86B14BCF23CB4B1C00B3FEB1 /* SignupPhoneVerificationInteractor */,
+				86B14BCE23CB4B0700B3FEB1 /* SignupPhoneVerificationPresenter */,
+				86B14BCD23CB4AF100B3FEB1 /* SignupPhoneVerificationRouter */,
+				86B14BCC23CB4AD700B3FEB1 /* SignupPhoneVerificationContract */,
+			);
+			path = SignupPhoneVerification;
+			sourceTree = "<group>";
+		};
+		86B14BCC23CB4AD700B3FEB1 /* SignupPhoneVerificationContract */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */,
+			);
+			path = SignupPhoneVerificationContract;
+			sourceTree = "<group>";
+		};
+		86B14BCD23CB4AF100B3FEB1 /* SignupPhoneVerificationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */,
+			);
+			path = SignupPhoneVerificationRouter;
+			sourceTree = "<group>";
+		};
+		86B14BCE23CB4B0700B3FEB1 /* SignupPhoneVerificationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */,
+			);
+			path = SignupPhoneVerificationPresenter;
+			sourceTree = "<group>";
+		};
+		86B14BCF23CB4B1C00B3FEB1 /* SignupPhoneVerificationInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BC023CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift */,
+			);
+			path = SignupPhoneVerificationInteractor;
+			sourceTree = "<group>";
+		};
+		86B14BD023CB4B3B00B3FEB1 /* SignupPhoneVerificationViews */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BBF23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift */,
+				86B14BC223CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib */,
+			);
+			path = SignupPhoneVerificationViews;
+			sourceTree = "<group>";
+		};
+		86B14BD123CB4B5300B3FEB1 /* SignupPhoneVerificationServices */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BC123CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift */,
+				86B14BC323CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift */,
+			);
+			path = SignupPhoneVerificationServices;
+			sourceTree = "<group>";
+		};
+		86B14BD223CB53E600B3FEB1 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BE823CB548600B3FEB1 /* WelcomeServices */,
+				86B14BE723CB547A00B3FEB1 /* WelcomeContract */,
+				86B14BE623CB546C00B3FEB1 /* WelcomeInteractor */,
+				86B14BE523CB546100B3FEB1 /* WelcomePresenter */,
+				86B14BE423CB545700B3FEB1 /* WelcomeRouter */,
+				86B14BE323CB544C00B3FEB1 /* WelcomeViews */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		86B14BE323CB544C00B3FEB1 /* WelcomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD623CB543B00B3FEB1 /* WelcomeViewController.swift */,
+				86B14BD923CB543B00B3FEB1 /* WelcomeViewController.xib */,
+			);
+			path = WelcomeViews;
+			sourceTree = "<group>";
+		};
+		86B14BE423CB545700B3FEB1 /* WelcomeRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD523CB543B00B3FEB1 /* WelcomeRouter.swift */,
+			);
+			path = WelcomeRouter;
+			sourceTree = "<group>";
+		};
+		86B14BE523CB546100B3FEB1 /* WelcomePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD423CB543B00B3FEB1 /* WelcomePresenter.swift */,
+			);
+			path = WelcomePresenter;
+			sourceTree = "<group>";
+		};
+		86B14BE623CB546C00B3FEB1 /* WelcomeInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD723CB543B00B3FEB1 /* WelcomeInteractor.swift */,
+			);
+			path = WelcomeInteractor;
+			sourceTree = "<group>";
+		};
+		86B14BE723CB547A00B3FEB1 /* WelcomeContract */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD323CB543B00B3FEB1 /* WelcomeConfiguration.swift */,
+			);
+			path = WelcomeContract;
+			sourceTree = "<group>";
+		};
+		86B14BE823CB548600B3FEB1 /* WelcomeServices */ = {
+			isa = PBXGroup;
+			children = (
+				86B14BD823CB543B00B3FEB1 /* WelcomeModel.swift */,
+				86B14BDA23CB543B00B3FEB1 /* WelcomeManager.swift */,
+			);
+			path = WelcomeServices;
+			sourceTree = "<group>";
+		};
+		86BBEE4F23CB5F5D0036C41D /* CreatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE6523CB5F9D0036C41D /* CreatePasswordViews */,
+				86BBEE6423CB5F990036C41D /* CreatePasswordPresenter */,
+				86BBEE6323CB5F960036C41D /* CreatePasswordInteractor */,
+				86BBEE6223CB5F930036C41D /* CreatePasswordRouter */,
+				86BBEE6123CB5F900036C41D /* CreatePasswordServices */,
+				86BBEE6023CB5F8D0036C41D /* CreatePasswordContract */,
+			);
+			path = CreatePassword;
+			sourceTree = "<group>";
+		};
+		86BBEE6023CB5F8D0036C41D /* CreatePasswordContract */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE5023CB5F840036C41D /* CreatePasswordConfiguration.swift */,
+			);
+			path = CreatePasswordContract;
+			sourceTree = "<group>";
+		};
+		86BBEE6123CB5F900036C41D /* CreatePasswordServices */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */,
+				86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */,
+			);
+			path = CreatePasswordServices;
+			sourceTree = "<group>";
+		};
+		86BBEE6223CB5F930036C41D /* CreatePasswordRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE5223CB5F840036C41D /* CreatePasswordRouter.swift */,
+			);
+			path = CreatePasswordRouter;
+			sourceTree = "<group>";
+		};
+		86BBEE6323CB5F960036C41D /* CreatePasswordInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE5423CB5F840036C41D /* CreatePasswordInteractor.swift */,
+			);
+			path = CreatePasswordInteractor;
+			sourceTree = "<group>";
+		};
+		86BBEE6423CB5F990036C41D /* CreatePasswordPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE5123CB5F840036C41D /* CreatePasswordPresenter.swift */,
+			);
+			path = CreatePasswordPresenter;
+			sourceTree = "<group>";
+		};
+		86BBEE6523CB5F9D0036C41D /* CreatePasswordViews */ = {
+			isa = PBXGroup;
+			children = (
+				86BBEE5323CB5F840036C41D /* CreatePasswordViewController.swift */,
+				86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */,
+			);
+			path = CreatePasswordViews;
+			sourceTree = "<group>";
+		};
 		86BBF3C923C76AE700A05900 /* ForgetEmailContract */ = {
 			isa = PBXGroup;
 			children = (
@@ -1745,6 +2161,7 @@
 				662A16CA23C3EA9F00A3695E /* AddFriendsViewController.xib in Resources */,
 				6683E30F23BCEEFF00250702 /* ProfileViewController.xib in Resources */,
 				662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */,
+				86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */,
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
 				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
@@ -1771,7 +2188,9 @@
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
 				668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */,
+				86B14BE123CB543B00B3FEB1 /* WelcomeViewController.xib in Resources */,
 				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
+				862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */,
 				668C20FB23C3F57800C009A9 /* AddSessionResultFiltterViewController.xib in Resources */,
 				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
 				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
@@ -1779,6 +2198,7 @@
 				868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */,
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
 				668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */,
+				86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */,
 				668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */,
 				662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */,
 				662A168523C3E4B200A3695E /* TransactionsViewController.xib in Resources */,
@@ -1855,12 +2275,17 @@
 				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
 				662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */,
+				86B14BDC23CB543B00B3FEB1 /* WelcomePresenter.swift in Sources */,
+				862A5E8823CB72380058355E /* ChangeUsernameViewController.swift in Sources */,
+				86B14BC923CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift in Sources */,
 				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
+				86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */,
 				6663365223B40318004E537C /* RegisterConfiguration.swift in Sources */,
 				662A168623C3E4B200A3695E /* TransactionsManager.swift in Sources */,
 				6663368523B40AB3004E537C /* ForgetEmailManager.swift in Sources */,
 				668C211823C3F6C100C009A9 /* CheckOutConfiguration.swift in Sources */,
 				662A169323C3E75400A3695E /* MyFavoriteFriendsRouter.swift in Sources */,
+				86BBEE5B23CB5F840036C41D /* CreatePasswordViewController.swift in Sources */,
 				6663364223B402F7004E537C /* LoginPresenter.swift in Sources */,
 				668C213F23C3F6F700C009A9 /* CommentListsManager.swift in Sources */,
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
@@ -1871,13 +2296,16 @@
 				668C213B23C3F6F700C009A9 /* CommentListsViewController.swift in Sources */,
 				6683E2BA23BB631D00250702 /* NotificationSettingModel.swift in Sources */,
 				662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */,
+				86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */,
 				66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
 				6683E31923BCEF1600250702 /* SideMenuConfiguration.swift in Sources */,
 				6683E2DD23BCEBD900250702 /* SuggestedFieldsInteractor.swift in Sources */,
+				86B14BDB23CB543B00B3FEB1 /* WelcomeConfiguration.swift in Sources */,
 				668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */,
 				6683E2D023BCEB8800250702 /* SettingManager.swift in Sources */,
 				662A170523C3F20200A3695E /* SechadualeRouter.swift in Sources */,
+				86BBEE5C23CB5F840036C41D /* CreatePasswordInteractor.swift in Sources */,
 				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
 				6683E2FE23BCEEB300250702 /* HelpCenterModel.swift in Sources */,
 				662A16B623C3E93900A3695E /* MyFriendsDetailsViewController.swift in Sources */,
@@ -1889,6 +2317,7 @@
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
 				668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */,
 				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
+				862A5E8923CB72380058355E /* ChangeUsernameInteractor.swift in Sources */,
 				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
 				6683E30A23BCEEFF00250702 /* ProfilePresenter.swift in Sources */,
 				6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */,
@@ -1900,6 +2329,7 @@
 				667E4B8723C3E169007354A7 /* AddFundManager.swift in Sources */,
 				668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */,
 				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
+				862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */,
 				668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
@@ -1912,6 +2342,7 @@
 				668C213A23C3F6F700C009A9 /* CommentListsRouter.swift in Sources */,
 				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
 				662A16B523C3E93900A3695E /* MyFriendsDetailsRouter.swift in Sources */,
+				86B14BDE23CB543B00B3FEB1 /* WelcomeViewController.swift in Sources */,
 				662A168223C3E4B200A3695E /* TransactionsViewController.swift in Sources */,
 				6663365523B40318004E537C /* RegisterViewController.swift in Sources */,
 				668C215923C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift in Sources */,
@@ -1931,6 +2362,7 @@
 				662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */,
 				662A16C523C3EA9F00A3695E /* AddFriendsPresenter.swift in Sources */,
 				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
+				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
@@ -1941,9 +2373,11 @@
 				667E4B7623C3DCA3007354A7 /* MakeWalletPasswordManager.swift in Sources */,
 				6663361523B40206004E537C /* SceneDelegate.swift in Sources */,
 				662A169123C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift in Sources */,
+				862A5E8623CB72380058355E /* ChangeUsernamePresenter.swift in Sources */,
 				66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
 				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
+				86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */,
 				668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */,
 				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
@@ -1951,6 +2385,7 @@
 				6683E32023BCEF1600250702 /* SideMenuManager.swift in Sources */,
 				668C212D23C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift in Sources */,
 				6683E31D23BCEF1600250702 /* SideMenuInteractor.swift in Sources */,
+				86B14BE023CB543B00B3FEB1 /* WelcomeModel.swift in Sources */,
 				662A169523C3E75400A3695E /* MyFavoriteFriendsInteractor.swift in Sources */,
 				6663365323B40318004E537C /* RegisterPresenter.swift in Sources */,
 				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
@@ -1975,6 +2410,7 @@
 				6683E31A23BCEF1600250702 /* SideMenuPresenter.swift in Sources */,
 				662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */,
 				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
+				86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */,
 				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
 				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
@@ -1990,6 +2426,7 @@
 				662A16EA23C3ECE000A3695E /* MyFriendsRequestInteractor.swift in Sources */,
 				668C215C23C3F75300C009A9 /* CheckOutConfirmationViewController.swift in Sources */,
 				662A16A723C3E80900A3695E /* MemberOfFriendsModel.swift in Sources */,
+				862A5E8523CB72380058355E /* ChangeUsernameConfiguration.swift in Sources */,
 				6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */,
 				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
 				668C214F23C3F70F00C009A9 /* BookSessionManager.swift in Sources */,
@@ -2001,6 +2438,7 @@
 				668C214C23C3F70F00C009A9 /* BookSessionInteractor.swift in Sources */,
 				6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */,
 				662A170823C3F20200A3695E /* SechadualeModel.swift in Sources */,
+				862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */,
 				668C210823C3F5BC00C009A9 /* AddSessionResultViewController.swift in Sources */,
 				6683E2CE23BCEB8800250702 /* SettingModel.swift in Sources */,
 				668C20F823C3F57800C009A9 /* AddSessionResultFiltterViewController.swift in Sources */,
@@ -2010,6 +2448,7 @@
 				668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */,
 				666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */,
 				662A16A523C3E80900A3695E /* MemberOfFriendsViewController.swift in Sources */,
+				86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */,
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
@@ -2022,6 +2461,7 @@
 				662A16D923C3EB7600A3695E /* AddFriendRequestInteractor.swift in Sources */,
 				668C214D23C3F70F00C009A9 /* BookSessionModel.swift in Sources */,
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
+				86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
 				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
@@ -2036,6 +2476,7 @@
 				662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */,
 				6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */,
 				6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */,
+				86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */,
 				662A170A23C3F20300A3695E /* SechadualeManager.swift in Sources */,
 				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
 				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
@@ -2048,6 +2489,7 @@
 				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
 				668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */,
+				86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */,
 				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
 				6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */,
 				66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */,
@@ -2056,9 +2498,12 @@
 				6663363123B40298004E537C /* UserAccountRouter.swift in Sources */,
 				6683E2D923BCEBD900250702 /* SuggestedFieldsConfiguration.swift in Sources */,
 				6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */,
+				86B14BC723CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift in Sources */,
+				86B14BDF23CB543B00B3FEB1 /* WelcomeInteractor.swift in Sources */,
 				668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */,
 				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
+				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
 				668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */,
 				6663365623B40318004E537C /* RegisterInteractor.swift in Sources */,
 				6683E2A823BB5FD900250702 /* MyFriendsManager.swift in Sources */,
@@ -2068,7 +2513,9 @@
 				668C20FA23C3F57800C009A9 /* AddSessionResultFiltterModel.swift in Sources */,
 				868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */,
 				662A16A323C3E80900A3695E /* MemberOfFriendsPresenter.swift in Sources */,
+				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
 				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
+				862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */,
 				662A168323C3E4B200A3695E /* TransactionsInteractor.swift in Sources */,
 				6663364323B402F7004E537C /* LoginRouter.swift in Sources */,
 				668C214823C3F70F00C009A9 /* BookSessionConfiguration.swift in Sources */,
@@ -2078,6 +2525,7 @@
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
+				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,
 				668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */,
 				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
 				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,

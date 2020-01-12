@@ -12,6 +12,7 @@ import UIKit
 
 protocol IForgotPhoneRouter: class {
 	// do someting...
+    func navigateToPhoneVerification()
 }
 
 class ForgotPhoneRouter: IForgotPhoneRouter {	
@@ -20,4 +21,8 @@ class ForgotPhoneRouter: IForgotPhoneRouter {
 	init(view: ForgotPhoneViewController?) {
 		self.view = view
 	}
+    //MARK:- Methods
+    func navigateToPhoneVerification() {
+        view?.navigate(type: .modal, module: GeneralRoute.phoneVerification, completion: nil)
+    }
 }

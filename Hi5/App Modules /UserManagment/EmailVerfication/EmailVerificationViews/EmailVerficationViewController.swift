@@ -17,13 +17,29 @@ protocol IEmailVerficationViewController: class {
 class EmailVerficationViewController: UIViewController {
 	var interactor: IEmailVerficationInteractor?
 	var router: IEmailVerficationRouter?
-
-	override func viewDidLoad() {
+    //MARK: - Outlets
+    @IBOutlet weak var textField1: UITextField!
+    @IBOutlet weak var textField3: UITextField!
+    @IBOutlet weak var textField4: UITextField!
+    @IBOutlet weak var textField2: UITextField!
+    override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+		
+    }
+    // MARK: - Actions
+    @IBAction func continueBtnTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func resendBtnTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
-
+//MARK:- extensions
 extension EmailVerficationViewController: IEmailVerficationViewController {
 	// do someting...
 }
@@ -32,6 +48,3 @@ extension EmailVerficationViewController {
 	// do someting...
 }
 
-extension EmailVerficationViewController {
-	// do someting...
-}

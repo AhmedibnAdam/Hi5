@@ -28,7 +28,11 @@ enum GeneralRoute: IRouter {
     case forgetPassword
     case forgetPhone
     case forgetEmail
-    case verificationEmail
+    case emailVerification
+    case phoneVerification
+    case sigupVerificationPhone
+    case welcome
+    case createPassword
 }
 
 extension GeneralRoute {
@@ -58,8 +62,16 @@ extension GeneralRoute {
             return ForgotPhoneConfiguration.setup()
         case .forgetEmail:
             return ForgetEmailConfiguration.setup()
-        case .verificationEmail:
+        case .emailVerification:
             return EmailVerficationConfiguration.setup()
+        case .phoneVerification:
+            return PhoneVerificationConfiguration.setup()
+        case .sigupVerificationPhone:
+            return SignupPhoneVerificationConfiguration.setup()
+        case .welcome:
+            return WelcomeConfiguration.setup()
+        case .createPassword:
+            return CreatePasswordConfiguration.setup()
         }
     }
 }

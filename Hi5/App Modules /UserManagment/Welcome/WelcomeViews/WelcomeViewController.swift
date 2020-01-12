@@ -40,7 +40,7 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func changeUsernameBtnTapped(_ sender: UIButton) {
-        
+        router?.navigateToChangeUsername()
     }
 }
 

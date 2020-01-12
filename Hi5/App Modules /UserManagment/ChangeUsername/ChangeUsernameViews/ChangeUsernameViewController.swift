@@ -17,21 +17,50 @@ protocol IChangeUsernameViewController: class {
 class ChangeUsernameViewController: UIViewController {
 	var interactor: IChangeUsernameInteractor?
 	var router: IChangeUsernameRouter?
+    //MARK:- Outlets
 
-	override func viewDidLoad() {
+    @IBOutlet weak var changeBtn: UIButton!
+    @IBOutlet weak var containerView4: UIView!
+    @IBOutlet weak var containerView3: UIView!
+    @IBOutlet weak var containerView1: UIView!
+    @IBOutlet weak var containerView2: UIView!
+    @IBOutlet weak var logoView: UIView!
+    override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+        initView()
+        configer()
+    }
+    //MARK:- Actions
+    @IBAction func changeBtnTapped(_ sender: UIButton) {
+        
+    }
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func loginBtnTapped(_ sender: UIButton) {
+        
+    }
+}
+   //MARK:- extensions
+extension ChangeUsernameViewController: IChangeUsernameViewController {
+	
+}
+
+extension ChangeUsernameViewController {
+    func initView(){
+        // MARK : - view raduis
+        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
+        self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
+        self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))
+        self.containerView3 = CreateCornerRauis.viewRaduis(view: self.containerView3, number: (self.containerView3.frame.size.height / 2))
+        self.containerView4 = CreateCornerRauis.viewRaduis(view: self.containerView4, number: (self.containerView4.frame.size.height / 2))
+          // MARK : - Button  raduis
+        self.changeBtn = CreateCornerRauis.ButtonRaduis(button: self.changeBtn, number: 5)
+    }
+    
+    func configer(){
+        router = ChangeUsernameRouter(view: self)
     }
 }
 
-extension ChangeUsernameViewController: IChangeUsernameViewController {
-	// do someting...
-}
-
-extension ChangeUsernameViewController {
-	// do someting...
-}
-
-extension ChangeUsernameViewController {
-	// do someting...
-}

@@ -33,6 +33,7 @@ enum GeneralRoute: IRouter {
     case sigupVerificationPhone
     case welcome
     case createPassword
+    case changeUsername
 }
 
 extension GeneralRoute {
@@ -72,6 +73,8 @@ extension GeneralRoute {
             return WelcomeConfiguration.setup()
         case .createPassword:
             return CreatePasswordConfiguration.setup()
+        case .changeUsername:
+            return ChangeUsernameConfiguration.setup()
         }
     }
 }

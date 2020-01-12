@@ -13,9 +13,14 @@ import UIKit
 protocol IWelcomeRouter: class {
 	// do someting...
     func navigateToCreatePassword()
+    func navigateToChangeUsername()
 }
 
 class WelcomeRouter: IWelcomeRouter {
+    func navigateToChangeUsername() {
+        view?.navigate(type: .modal, module: GeneralRoute.changeUsername, completion: nil)
+    }
+    
     func navigateToCreatePassword() {
         view?.navigate(type: .modal, module: GeneralRoute.createPassword, completion: nil)
     }

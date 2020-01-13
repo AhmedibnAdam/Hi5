@@ -18,8 +18,8 @@ class CreatePasswordViewController: UIViewController {
 	var interactor: ICreatePasswordInteractor?
 	var router: ICreatePasswordRouter?
     //MARK:- Outlets
-    @IBOutlet weak var containerView2: UIView!
     
+    @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var getStartedBtn: UIButton!
     @IBOutlet weak var containerView4: UIView!
     @IBOutlet weak var containerView3: UIView!

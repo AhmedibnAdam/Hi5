@@ -12,7 +12,7 @@ import UIKit
 
 protocol ILoginInteractor: class {
 	var parameters: [String: Any]? { get set }
-    func doLogin(view : UIViewController)
+    func doLogin(view : UIViewController , userName: String , password: String)
 }
 
 class LoginInteractor: ILoginInteractor {
@@ -24,12 +24,15 @@ class LoginInteractor: ILoginInteractor {
         self.presenter = presenter
         self.manager = manager
     }
-    func doLogin(view : UIViewController){
-        let request = LoginModel.Request()
-        parameters = request.parameters()
-        manager?.loginFromApi(parameters: parameters!, complition: { (error , success , response) in
-            
-            self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+    func doLogin(view : UIViewController , userName: String , password: String){
+        //let request = LoginModel.Request()
+        //let param = request.parameters(userName: userName, password: password)
+        manager?.loginFromApi(userName: userName , password: password, complition: { (error , success) in
+            if (success == true) {
+               print("Done.........")
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
             
         })
     }

@@ -1,26 +1,24 @@
 //
-//  LoginEndpoint.swift
+//  RegisterEndPoint.swift
 //  Hi5
 //
-//  Created by Adam on 12/26/19.
-//  Copyright (c) 2019 FudexApp. All rights reserved.
-//  Modify By:  * Ari Munandar
-//              * arimunandar.dev@gmail.com
-//              * https://github.com/arimunandar
+//  Created by Mohamed Gamal on 1/13/20.
+//  Copyright © 2020 FudexApp. All rights reserved.
+//
 
 import Foundation
 import Alamofire
 
-enum LoginEndpoint {
+enum RegisterEndpoint {
     /*
      Add Endpoint
      case sample
      case sample(parameter: [String: Any])
     */
-    case login(userName: String , password: String)
+    case signup(parameter: [String: Any])
 }
 
-extension LoginEndpoint: IEndpoint {
+extension RegisterEndpoint: IEndpoint {
     var method: HTTPMethod {
         /*
         Do like this:
@@ -32,7 +30,7 @@ extension LoginEndpoint: IEndpoint {
         */
         
     switch self {
-      case .login:
+      case .signup:
         return .post
     }
 }
@@ -46,11 +44,9 @@ extension LoginEndpoint: IEndpoint {
             return "https://httpbin.org/get"
         }
         */
-       // http://api-ksa.com/demo/hi5/public/api/player/login?
     switch self {
-       case .login:
-         //return "https://www.soqiaa-app.com/app/api/" + "userLogin"
-           return "http://api-ksa.com/demo/hi5/public/api/player/" + "login"
+       case .signup:
+         return "https://www.soqiaa-app.com/app/api/" + "userLogin"
        }
     }
     
@@ -65,8 +61,8 @@ extension LoginEndpoint: IEndpoint {
         */
         
     switch self {
-        case .login(let userName , let password):
-             return ["vie_id": userName , "password": password]
+        case .signup:
+            return ["":""]
         }
   }
     
@@ -80,12 +76,12 @@ extension LoginEndpoint: IEndpoint {
         }
         */
     switch self {
-       case .login:
+       case .signup:
            return ["Accept": "application/json"]
        }
     }
     
-    var encoding: ParameterEncoding {        
+    var encoding: ParameterEncoding {
         /*
         Do like this:
         
@@ -97,12 +93,12 @@ extension LoginEndpoint: IEndpoint {
         }
         */
         switch self {
-        case .login:
+        case .signup:
             return JSONEncoding.default
         }
     }
 }
 
-//struct model {
+//struct RegisterModel {
 //    let parameter = Parameters()
 //}

@@ -19,6 +19,7 @@ class ChangeUsernameViewController: UIViewController {
 	var router: IChangeUsernameRouter?
     //MARK:- Outlets
 
+    @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var changeBtn: UIButton!
     @IBOutlet weak var containerView4: UIView!
     @IBOutlet weak var containerView3: UIView!

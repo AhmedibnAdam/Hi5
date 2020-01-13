@@ -13,9 +13,11 @@
                 <outlet property="doLoginButtonOutlet" destination="kRK-uE-ILS" id="9Hu-B1-ZeV"/>
                 <outlet property="forgetPasswordOutlet" destination="J8I-iM-2Od" id="Yae-jp-JFZ"/>
                 <outlet property="nameView" destination="PPY-lf-XNH" id="TN2-mZ-fXe"/>
+                <outlet property="password" destination="EUB-wR-JIE" id="J61-dn-tE6"/>
                 <outlet property="passwordView" destination="rax-Fc-E61" id="FRY-x2-SAP"/>
                 <outlet property="profilePhoteView" destination="SAf-SC-f7g" id="OAL-V1-xyW"/>
                 <outlet property="signInOutlet" destination="lPs-fi-nxa" id="I9g-id-6ab"/>
+                <outlet property="userName" destination="FqH-ym-C9I" id="x5f-a1-Jj0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -22,6 +22,9 @@ class LoginViewController: UIViewController {
     var ssss: String?
     
     //MARK: - view outlet
+    
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var profilePhoteView: UIView!
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var passwordView: UIView!
@@ -83,12 +86,13 @@ extension LoginViewController {
 extension LoginViewController {
 	// MARK : - do someting...
     func doLoginAction(){
-        self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
-        self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
-        
-//        interactor?.parameters = ["name":"Ahmed", "passowrd":"1234566"]
-        interactor?.doLogin(view: self)
-     
+        guard let userName = userName.text , let password = password.text else {return}
+        if(userName.isEmpty || password.isEmpty || password.count < 4){
+            self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
+            self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
+            return
+        }
+        interactor?.doLogin(view: self, userName: userName, password: password)
     }
     
 }

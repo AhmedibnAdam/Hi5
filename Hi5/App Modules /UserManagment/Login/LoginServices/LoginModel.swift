@@ -10,19 +10,30 @@
 
 import UIKit
 
-struct LoginModel {	
+struct LoginModel {
+     //MARK:- Request
 	struct Request {
 		// MARK : - do someting...
-		func parameters() -> [String: Any]? {
+        
+        func parameters(userName: String , password: String) -> [String: Any]? {
 			// MARK : - do someting...
-            return ["username":"01126223344" , "password":"123456"]
+            return ["vie_id": userName , "password": password]
 		}
-	}
-
-    struct Response: Codable {
-		// MARK : - do someting...
-        let vvvcode: Int
-        let vvvmessage: String
        
-	}
+   }
+    //MARK:- Response
+struct LoginResponse: Codable {
+    let status: Bool?
+    let token, userName, fullName: String?
+    let phoneNumber: Int?
+    let image: String?
+
+    enum CodingKeys: String, CodingKey {
+        case status, token
+        case userName = "user_name"
+        case fullName = "full_name"
+        case phoneNumber = "phone_number"
+        case image
+    }
+  }
 }

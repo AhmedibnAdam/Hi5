@@ -33,6 +33,7 @@ class CreatePasswordViewController: UIViewController {
     
     //MARK:- Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
+        
         self.dismiss(animated: true, completion: nil)
     }
     

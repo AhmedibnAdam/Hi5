@@ -51,10 +51,7 @@ class NetworkService {
                                                  parameters: endpoint.parameter,
                                                  encoding: endpoint.encoding,
                                                  headers: endpoint.header)
-            self.dataRequest?.responseData(completionHandler: { (response) in
-                let statusCode = response.response?.statusCode
-                print(statusCode!)
-                
+            self.dataRequest?.responseData(completionHandler: { (response) in                
                 switch response.result {
                 case .success (let value):
                     success?(value)

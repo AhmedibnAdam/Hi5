@@ -11,10 +11,12 @@
 import UIKit
 
 protocol IRegisterInteractor: class {
-	var parameters: [String: Any]? { get set }
+    var parameters: [String: Any]? { get set }
+    func doSignup(view : UIViewController , fullName: String , phoneNumber: String)
 }
 
 class RegisterInteractor: IRegisterInteractor {
+
     var presenter: IRegisterPresenter?
     var manager: IRegisterManager?
     var parameters: [String: Any]?
@@ -22,5 +24,15 @@ class RegisterInteractor: IRegisterInteractor {
     init(presenter: IRegisterPresenter, manager: IRegisterManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    
+    func doSignup(view: UIViewController, fullName: String, phoneNumber: String) {
+        manager?.signupFromApi(fullName: fullName, phoneNumber: phoneNumber, complition: { (error, succes) in
+            if (succes == true) {
+                print("Done.....")
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

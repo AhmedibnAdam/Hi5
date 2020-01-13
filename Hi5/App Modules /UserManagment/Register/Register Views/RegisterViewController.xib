@@ -14,8 +14,10 @@
                 <outlet property="containerView3" destination="7oy-AO-0XJ" id="MXW-Ry-OB0"/>
                 <outlet property="containerView4" destination="mBS-nn-Am0" id="erN-I3-zIR"/>
                 <outlet property="continueBtn" destination="ZZJ-Lc-FV3" id="cGa-zT-sqf"/>
+                <outlet property="fullNameTextField" destination="V38-pp-YMm" id="vk1-5m-Aqe"/>
                 <outlet property="fullNameView" destination="p94-w9-2KJ" id="JJE-Lg-ny6"/>
                 <outlet property="logoView" destination="wov-zu-F1b" id="FUs-K9-co8"/>
+                <outlet property="phoneNumberTextField" destination="nIg-Wo-HDN" id="BPn-VZ-DdB"/>
                 <outlet property="phoneNumberView" destination="ahN-1d-rvI" id="fhs-3V-pXx"/>
                 <outlet property="view" destination="U6A-HA-3k1" id="dlC-Ot-MDA"/>
             </connections>

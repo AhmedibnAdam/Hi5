@@ -12,12 +12,16 @@ import UIKit
 
 protocol IRegisterViewController: class {
 	var router: IRegisterRouter? { get set }
+    func showAlert(title: String, msg: String)
 }
 
 class RegisterViewController: UIViewController {
 	var interactor: IRegisterInteractor?
 	var router: IRegisterRouter?
     //MARK:- Outlets
+    
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var fullNameView: UIView!
     @IBOutlet weak var phoneNumberView: UIView!
@@ -34,7 +38,8 @@ class RegisterViewController: UIViewController {
     }
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
-        router?.navigateToSignupPhoneVerification()
+        signupAction()
+        //router?.navigateToSignupPhoneVerification()
     }
     @IBAction func loginBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -45,7 +50,11 @@ class RegisterViewController: UIViewController {
 }
 //MARK:- extensions
 extension RegisterViewController: IRegisterViewController {
-	// MARK : - do someting...
+    
+    func showAlert(title: String, msg: String) {
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    
 }
 
 extension RegisterViewController {
@@ -65,6 +74,18 @@ extension RegisterViewController {
     
     func configer(){
         router = RegisterRouter(view: self)
+    }
+}
+
+extension RegisterViewController {
+    func signupAction() {
+        guard let fullName = fullNameTextField.text , let phoneNumber = phoneNumberTextField.text else {return}
+         if(fullName.isEmpty || phoneNumber.isEmpty){
+             self.fullNameView = CreateBorder.viewBorder(view: self.fullNameView, width: 1.0, color: UIColor.red.cgColor)
+             self.phoneNumberView = CreateBorder.viewBorder(view: self.phoneNumberView, width: 1.0, color: UIColor.red.cgColor)
+             return
+         }
+        interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phoneNumber)
     }
 }
 

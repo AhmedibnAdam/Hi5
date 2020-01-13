@@ -12,12 +12,18 @@ import UIKit
 
 protocol IRegisterPresenter: class {
 	// MARK : - do someting...
+    func showErrorAlert(title: String, msg: String)
 }
 
-class RegisterPresenter: IRegisterPresenter {	
+class RegisterPresenter: IRegisterPresenter {
+
 	weak var view: IRegisterViewController?
 	
 	init(view: IRegisterViewController?) {
 		self.view = view
 	}
+    
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
 }

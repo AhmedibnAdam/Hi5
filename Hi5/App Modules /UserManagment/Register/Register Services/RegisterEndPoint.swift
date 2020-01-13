@@ -15,7 +15,7 @@ enum RegisterEndpoint {
      case sample
      case sample(parameter: [String: Any])
     */
-    case signup(parameter: [String: Any])
+    case signup(fullName: String , phoneNumber: String)
 }
 
 extension RegisterEndpoint: IEndpoint {
@@ -46,7 +46,7 @@ extension RegisterEndpoint: IEndpoint {
         */
     switch self {
        case .signup:
-         return "https://www.soqiaa-app.com/app/api/" + "userLogin"
+         return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
        }
     }
     
@@ -61,8 +61,8 @@ extension RegisterEndpoint: IEndpoint {
         */
         
     switch self {
-        case .signup:
-            return ["":""]
+        case .signup(let fullName , let phoneNumber):
+            return ["full_name": fullName , "phone_number": phoneNumber]
         }
   }
     

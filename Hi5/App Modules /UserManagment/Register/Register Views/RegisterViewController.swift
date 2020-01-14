@@ -9,10 +9,13 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import DropDown
+import FlagPhoneNumber
 
 protocol IRegisterViewController: class {
 	var router: IRegisterRouter? { get set }
     func showAlert(title: String, msg: String)
+    func navigateToSignupPhoneVerification()
 }
 
 class RegisterViewController: UIViewController {
@@ -20,6 +23,8 @@ class RegisterViewController: UIViewController {
 	var router: IRegisterRouter?
     //MARK:- Outlets
     
+    @IBOutlet weak var checkBoxBtn: UIButton!
+    @IBOutlet weak var countryCode: FPNTextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var logoView: UIView!
@@ -31,15 +36,31 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var containerView3: UIView!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var containerView1: UIView!
+    
+    //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         configer()
+        delegateCountryCode()
     }
+    
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
-        signupAction()
-        //router?.navigateToSignupPhoneVerification()
+        if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
+            signupAction()
+        }
+        else {
+            showAlert(title: "Message", msg: "Please Accept Terms And Conditions")
+        }
+    }
+    @IBAction func checkBoxBtn(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named:"checkBox") {
+        sender.setImage(UIImage(named:"agreeCheckBox2"), for: .normal)
+         }
+        else if sender.currentImage == UIImage(named:"agreeCheckBox2") {
+            sender.setImage( UIImage(named:"checkBox"), for: .normal)
+        }
     }
     @IBAction func loginBtnTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -55,12 +76,17 @@ extension RegisterViewController: IRegisterViewController {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     
+    func navigateToSignupPhoneVerification() {
+        router?.navigateToSignupPhoneVerification()
+    }
+    
 }
 
 extension RegisterViewController {
     
     func initView(){
         // MARK : - view raduis
+        self.checkBoxBtn.setImage(UIImage(named: "checkBox"), for: .normal)
         self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
         self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
         self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))
@@ -86,6 +112,39 @@ extension RegisterViewController {
              return
          }
         interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phoneNumber)
+    }
+
+}
+
+//MARK:- DropDown Pod
+extension RegisterViewController: FPNTextFieldDelegate {
+    
+    func delegateCountryCode() {
+        countryCode.inputView = FPNCountryPicker()
+        countryCode.setFlag(countryCode: .SA)
+        countryCode.hasPhoneNumberExample = false
+        countryCode.placeholder = ""
+        countryCode.delegate = self
+    }
+    
+    func fpnDisplayCountryList() {
+    }
+    
+    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
+        print(name, dialCode, code)
+    }
+
+    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+        if isValid {
+            // Do something...
+//            textField.getFormattedPhoneNumber(format: .E164)           // Output "+33600000001"
+//            textField.getFormattedPhoneNumber(format: .International)  // Output "+33 6 00 00 00 01"
+//            textField.getFormattedPhoneNumber(format: .National)       // Output "06 00 00 00 01"
+//            textField.getFormattedPhoneNumber(format: .RFC3966)        // Output "tel:+33-6-00-00-00-01"
+//            textField.getRawPhoneNumber()                               // Output "600000001"
+        } else {
+            // Do something...
+        }
     }
 }
 

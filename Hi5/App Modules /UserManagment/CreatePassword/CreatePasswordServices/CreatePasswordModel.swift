@@ -14,13 +14,14 @@ struct CreatePasswordModel {
 	struct Request {
 		// do someting...
 
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
+        func parameters(password: String , confirmPassword: String) -> [String: Any]? {
+            // MARK : - do someting...
+            return ["password": password , "password_confirmation": confirmPassword]
+        }
 	}
 
-	struct Response {
-		// do someting...
-	}
+    struct CreatePasswordResponse: Codable {
+        let status: Bool?
+        let success: String?
+    }
 }

@@ -12,9 +12,11 @@ import UIKit
 
 protocol ICreatePasswordInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doCreatePassword(view : UIViewController , password: String , confirmPassword: String)
 }
 
 class CreatePasswordInteractor: ICreatePasswordInteractor {
+
     var presenter: ICreatePasswordPresenter?
     var manager: ICreatePasswordManager?
     var parameters: [String: Any]?
@@ -22,5 +24,17 @@ class CreatePasswordInteractor: ICreatePasswordInteractor {
     init(presenter: ICreatePasswordPresenter, manager: ICreatePasswordManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    
+    func doCreatePassword(view: UIViewController, password: String, confirmPassword: String) {
+        manager?.createPasswordFromApi(password: password , confirmPassword: confirmPassword, complition: { (error , success) in
+            if (success == true) {
+               print("Done.........")
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+            
+        })
+        
     }
 }

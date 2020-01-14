@@ -13,5 +13,7 @@ target 'Hi5' do
 #   pod 'YSSegmentedControl'
    pod 'SideMenu'
    pod 'SwiftyJSON'
+   pod 'DropDown'
+   pod 'FlagPhoneNumber'
 
 end

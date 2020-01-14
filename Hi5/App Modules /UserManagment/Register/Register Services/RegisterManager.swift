@@ -24,6 +24,10 @@ class RegisterManager: IRegisterManager {
                        let decoder = JSONDecoder()
                        let user = try decoder.decode(RegisterModel.SignupResponse.self, from: response)
                        print(user)
+                       guard let token = user.token else {return}
+                       let defaults = UserDefaults.standard
+                       defaults.set(token, forKey: "Token") as? String
+                       complition(nil , true)
                        
                    } catch let error {
                        print("error : ", error.localizedDescription  )

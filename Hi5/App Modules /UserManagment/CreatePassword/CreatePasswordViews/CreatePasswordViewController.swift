@@ -12,6 +12,7 @@ import UIKit
 
 protocol ICreatePasswordViewController: class {
 	var router: ICreatePasswordRouter? { get set }
+    func showAlert(title: String, msg: String)
 }
 
 class CreatePasswordViewController: UIViewController {
@@ -19,6 +20,11 @@ class CreatePasswordViewController: UIViewController {
 	var router: ICreatePasswordRouter?
     //MARK:- Outlets
     
+    @IBOutlet weak var passwordEyebtn: UIButton!
+    @IBOutlet weak var confirmPasswordView: UIView!
+    @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var getStartedBtn: UIButton!
     @IBOutlet weak var containerView4: UIView!
@@ -33,26 +39,52 @@ class CreatePasswordViewController: UIViewController {
     
     //MARK:- Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func passwordEyeBtnTapped(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named:"eyeLocked") {
+           sender.setImage(UIImage(named:"eye"), for: .normal)
+            self.passwordTextField.isSecureTextEntry = false
+         }
+        else if sender.currentImage == UIImage(named:"eye") {
+            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
+            self.passwordTextField.isSecureTextEntry = true
+        }
+    }
+    
+    @IBAction func confirmPasswordEyeBtnTapped(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named:"eyeLocked") {
+           sender.setImage(UIImage(named:"eye"), for: .normal)
+            self.confirmPasswordTextField.isSecureTextEntry = false
+         }
+        else if sender.currentImage == UIImage(named:"eye") {
+            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
+            self.confirmPasswordTextField.isSecureTextEntry = true
+        }
+    }
+    
     @IBAction func getStartedBtnTapped(_ sender: UIButton) {
-        
+        getStartedAction()
     }
     
     @IBAction func loginBtnTapped(_ sender: UIButton) {
+        
     }
 }
 
 //MARK:- extensions
 extension CreatePasswordViewController: ICreatePasswordViewController {
-	// do someting...
+    func showAlert(title: String, msg: String) {
+         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
 }
 
 extension CreatePasswordViewController {
     func initView(){
         // MARK : - view raduis
+        self.passwordEyebtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
+       // self.confirmPasswordEyeBtn.setImage(UIImage(named: "eyelocked"), for: .normal)
         self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
         self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
         self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))
@@ -64,6 +96,20 @@ extension CreatePasswordViewController {
     
     func configer(){
         router = CreatePasswordRouter(view: self)
+    }
+}
+
+extension CreatePasswordViewController {
+    func getStartedAction() {
+        guard let password = passwordTextField.text , let confirmPassword = confirmPasswordTextField.text else {return}
+        if(password.isEmpty || confirmPassword.isEmpty){
+            self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
+            self.confirmPasswordView = CreateBorder.viewBorder(view: self.confirmPasswordView, width: 1.0, color: UIColor.red.cgColor)
+            return
+        } else if(password != confirmPassword) {
+            showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
+        }
+        interactor?.doCreatePassword(view: self, password: password, confirmPassword: confirmPassword)
     }
 }
 

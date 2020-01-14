@@ -312,6 +312,7 @@
 		862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8223CB72380058355E /* ChangeUsernameModel.swift */; };
 		862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */; };
 		862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8423CB72380058355E /* ChangeUsernameManager.swift */; };
+		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
 		868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */; };
 		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
@@ -659,6 +660,7 @@
 		862A5E8223CB72380058355E /* ChangeUsernameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameModel.swift; sourceTree = "<group>"; };
 		862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeUsernameViewController.xib; sourceTree = "<group>"; };
 		862A5E8423CB72380058355E /* ChangeUsernameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameManager.swift; sourceTree = "<group>"; };
+		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
@@ -1932,12 +1934,12 @@
 		86BBEE4F23CB5F5D0036C41D /* CreatePassword */ = {
 			isa = PBXGroup;
 			children = (
-				86BBEE6523CB5F9D0036C41D /* CreatePasswordViews */,
-				86BBEE6423CB5F990036C41D /* CreatePasswordPresenter */,
+				86BBEE6023CB5F8D0036C41D /* CreatePasswordContract */,
 				86BBEE6323CB5F960036C41D /* CreatePasswordInteractor */,
+				86BBEE6423CB5F990036C41D /* CreatePasswordPresenter */,
 				86BBEE6223CB5F930036C41D /* CreatePasswordRouter */,
 				86BBEE6123CB5F900036C41D /* CreatePasswordServices */,
-				86BBEE6023CB5F8D0036C41D /* CreatePasswordContract */,
+				86BBEE6523CB5F9D0036C41D /* CreatePasswordViews */,
 			);
 			path = CreatePassword;
 			sourceTree = "<group>";
@@ -1955,6 +1957,7 @@
 			children = (
 				86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */,
 				86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */,
+				86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */,
 			);
 			path = CreatePasswordServices;
 			sourceTree = "<group>";
@@ -2517,6 +2520,7 @@
 				668C20FA23C3F57800C009A9 /* AddSessionResultFiltterModel.swift in Sources */,
 				868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */,
 				662A16A323C3E80900A3695E /* MemberOfFriendsPresenter.swift in Sources */,
+				86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
 				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
 				862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */,

@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (4.9.1)
+  - DropDown (2.3.13)
+  - FlagPhoneNumber (0.8.0):
+    - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
+  - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
   - IQKeyboardManagerSwift (6.5.4)
   - LUExpandableTableView (5.0.0)
   - SideMenu (6.4.7)
@@ -7,6 +11,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - DropDown
+  - FlagPhoneNumber
   - IQKeyboardManagerSwift
   - LUExpandableTableView
   - SideMenu
@@ -15,6 +21,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - DropDown
+    - FlagPhoneNumber
     - IQKeyboardManagerSwift
     - LUExpandableTableView
     - SideMenu
@@ -22,11 +30,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
   IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   LUExpandableTableView: 710ed7e7d55d0b58d61c95561bd9ecbf39692010
   SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 7e9d3cbebf53b22a3df631d3d910f48708c2bb66
+PODFILE CHECKSUM: 5f537419dd1a25531cd6cbc718c9cde58e4ae8da
 
 COCOAPODS: 1.8.4

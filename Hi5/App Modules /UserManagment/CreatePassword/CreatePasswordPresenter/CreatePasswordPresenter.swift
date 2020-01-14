@@ -11,13 +11,18 @@
 import UIKit
 
 protocol ICreatePasswordPresenter: class {
-	// do someting...
+	func showErrorAlert(title: String, msg: String)
 }
 
-class CreatePasswordPresenter: ICreatePasswordPresenter {	
+class CreatePasswordPresenter: ICreatePasswordPresenter {
+    
 	weak var view: ICreatePasswordViewController?
 	
 	init(view: ICreatePasswordViewController?) {
 		self.view = view
 	}
+    
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
 }

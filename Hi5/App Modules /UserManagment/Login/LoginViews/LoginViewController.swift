@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
     
     //MARK: - view outlet
     
+    @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var profilePhoteView: UIView!
@@ -46,6 +47,17 @@ class LoginViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func login(_ sender: UIButton) {
+        
+    }
+    @IBAction func eyeBtnTapped(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named:"eyeLocked") {
+           sender.setImage(UIImage(named:"eye"), for: .normal)
+            self.password.isSecureTextEntry = false
+         }
+        else if sender.currentImage == UIImage(named:"eye") {
+            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
+            self.password.isSecureTextEntry = true
+        }
     }
     
     @IBAction func ForgetPasswordTapped(_ sender: Any) {
@@ -71,6 +83,7 @@ extension LoginViewController {
     
     func initView(){
         // MARK : - view raduis
+        self.eyeBtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
         self.profilePhoteView = CreateCornerRauis.viewRaduis(view: self.profilePhoteView, number: (self.profilePhoteView.frame.size.height / 2))
         self.nameView = CreateCornerRauis.viewRaduis(view: self.nameView, number: 5)
         self.passwordView = CreateCornerRauis.viewRaduis(view: self.passwordView, number: 5)

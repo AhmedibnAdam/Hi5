@@ -13,6 +13,7 @@ import UIKit
 protocol IRegisterPresenter: class {
 	// MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
+    func navigateToSignupPhoneVerification()
 }
 
 class RegisterPresenter: IRegisterPresenter {
@@ -25,5 +26,9 @@ class RegisterPresenter: IRegisterPresenter {
     
     func showErrorAlert(title: String, msg: String) {
         view?.showAlert(title: title, msg: msg)
+    }
+    
+    func navigateToSignupPhoneVerification() {
+        view?.navigateToSignupPhoneVerification()
     }
 }

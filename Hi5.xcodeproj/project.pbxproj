@@ -1151,12 +1151,12 @@
 		6663367523B40A8F004E537C /* ForgetEmail */ = {
 			isa = PBXGroup;
 			children = (
+				86BBF3C923C76AE700A05900 /* ForgetEmailContract */,
+				86BBF3CB23C76AEE00A05900 /* ForgetEmailInteractor */,
+				86BBF3CC23C76AF100A05900 /* ForgetEmailPresenter */,
+				86BBF3CA23C76AEB00A05900 /* ForgetEmailRouter */,
 				86BBF3CE23C76B4E00A05900 /* ForgetEmailServices */,
 				86BBF3CD23C76AF400A05900 /* ForgetEmailViews */,
-				86BBF3CC23C76AF100A05900 /* ForgetEmailPresenter */,
-				86BBF3CB23C76AEE00A05900 /* ForgetEmailInteractor */,
-				86BBF3CA23C76AEB00A05900 /* ForgetEmailRouter */,
-				86BBF3C923C76AE700A05900 /* ForgetEmailContract */,
 			);
 			path = ForgetEmail;
 			sourceTree = "<group>";
@@ -1164,12 +1164,12 @@
 		6663368623B40ADF004E537C /* EmailVerfication */ = {
 			isa = PBXGroup;
 			children = (
-				86C27B5D23C7764200CA2D98 /* EmailVerificationViews */,
-				86C27B5C23C7763E00CA2D98 /* EmailVerificationServices */,
-				86C27B5B23C7763B00CA2D98 /* EmailVerificationPresenter */,
-				86C27B5A23C7763800CA2D98 /* EmailVerificationInteractor */,
-				86C27B5923C7763400CA2D98 /* EmailVerificationRouter */,
 				86C27B5823C7762F00CA2D98 /* EmailVerificationContract */,
+				86C27B5A23C7763800CA2D98 /* EmailVerificationInteractor */,
+				86C27B5B23C7763B00CA2D98 /* EmailVerificationPresenter */,
+				86C27B5923C7763400CA2D98 /* EmailVerificationRouter */,
+				86C27B5C23C7763E00CA2D98 /* EmailVerificationServices */,
+				86C27B5D23C7764200CA2D98 /* EmailVerificationViews */,
 			);
 			path = EmailVerfication;
 			sourceTree = "<group>";
@@ -1190,12 +1190,12 @@
 		666336A823B40B66004E537C /* PhoneVerification */ = {
 			isa = PBXGroup;
 			children = (
+				86142A6423CB17F900EB1DC3 /* PhoneVerificationContract */,
+				86142A6523CB17FD00EB1DC3 /* PhoneVerificationInteractor */,
+				86142A6623CB180000EB1DC3 /* PhoneVerificationPresenter */,
+				86142A6723CB180300EB1DC3 /* PhoneVerificationRouter */,
 				86142A6923CB180B00EB1DC3 /* PhoneVerificationServices */,
 				86142A6823CB180600EB1DC3 /* PhoneVerificationViews */,
-				86142A6723CB180300EB1DC3 /* PhoneVerificationRouter */,
-				86142A6623CB180000EB1DC3 /* PhoneVerificationPresenter */,
-				86142A6523CB17FD00EB1DC3 /* PhoneVerificationInteractor */,
-				86142A6423CB17F900EB1DC3 /* PhoneVerificationContract */,
 			);
 			path = PhoneVerification;
 			sourceTree = "<group>";
@@ -1203,12 +1203,12 @@
 		666336B923B40BB7004E537C /* NewPassword */ = {
 			isa = PBXGroup;
 			children = (
+				8643730423CB1E10009CAF28 /* NewPasswordContract */,
+				8643730523CB1E13009CAF28 /* NewPasswordInteractor */,
+				8643730623CB1E16009CAF28 /* NewPasswordPresenter */,
+				8643730723CB1E19009CAF28 /* NewPasswordRouter */,
 				8643730923CB1E21009CAF28 /* NewPasswordServices */,
 				8643730823CB1E1C009CAF28 /* NewPasswordViews */,
-				8643730723CB1E19009CAF28 /* NewPasswordRouter */,
-				8643730623CB1E16009CAF28 /* NewPasswordPresenter */,
-				8643730523CB1E13009CAF28 /* NewPasswordInteractor */,
-				8643730423CB1E10009CAF28 /* NewPasswordContract */,
 			);
 			path = NewPassword;
 			sourceTree = "<group>";
@@ -1808,12 +1808,12 @@
 		86B14BBB23CB48F300B3FEB1 /* SignupPhoneVerification */ = {
 			isa = PBXGroup;
 			children = (
-				86B14BD123CB4B5300B3FEB1 /* SignupPhoneVerificationServices */,
-				86B14BD023CB4B3B00B3FEB1 /* SignupPhoneVerificationViews */,
+				86B14BCC23CB4AD700B3FEB1 /* SignupPhoneVerificationContract */,
 				86B14BCF23CB4B1C00B3FEB1 /* SignupPhoneVerificationInteractor */,
 				86B14BCE23CB4B0700B3FEB1 /* SignupPhoneVerificationPresenter */,
 				86B14BCD23CB4AF100B3FEB1 /* SignupPhoneVerificationRouter */,
-				86B14BCC23CB4AD700B3FEB1 /* SignupPhoneVerificationContract */,
+				86B14BD123CB4B5300B3FEB1 /* SignupPhoneVerificationServices */,
+				86B14BD023CB4B3B00B3FEB1 /* SignupPhoneVerificationViews */,
 			);
 			path = SignupPhoneVerification;
 			sourceTree = "<group>";

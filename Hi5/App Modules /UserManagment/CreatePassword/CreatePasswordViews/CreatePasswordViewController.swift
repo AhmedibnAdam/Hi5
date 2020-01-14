@@ -42,17 +42,6 @@ class CreatePasswordViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func passwordEyeBtnTapped(_ sender: UIButton) {
-        if sender.currentImage == UIImage(named:"eyeLocked") {
-           sender.setImage(UIImage(named:"eye"), for: .normal)
-            self.passwordTextField.isSecureTextEntry = false
-         }
-        else if sender.currentImage == UIImage(named:"eye") {
-            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
-            self.passwordTextField.isSecureTextEntry = true
-        }
-    }
-    
     @IBAction func confirmPasswordEyeBtnTapped(_ sender: UIButton) {
         if sender.currentImage == UIImage(named:"eyeLocked") {
            sender.setImage(UIImage(named:"eye"), for: .normal)
@@ -61,6 +50,17 @@ class CreatePasswordViewController: UIViewController {
         else if sender.currentImage == UIImage(named:"eye") {
             sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
             self.confirmPasswordTextField.isSecureTextEntry = true
+        }
+    }
+    
+    @IBAction func passwordEyeBtnTapped(_ sender: UIButton) {
+        if sender.currentImage == UIImage(named:"eyeLocked") {
+           sender.setImage(UIImage(named:"eye"), for: .normal)
+            self.passwordTextField.isSecureTextEntry = false
+         }
+        else if sender.currentImage == UIImage(named:"eye") {
+            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
+            self.passwordTextField.isSecureTextEntry = true
         }
     }
     
@@ -84,7 +84,7 @@ extension CreatePasswordViewController {
     func initView(){
         // MARK : - view raduis
         self.passwordEyebtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
-       // self.confirmPasswordEyeBtn.setImage(UIImage(named: "eyelocked"), for: .normal)
+        //self.confirmPasswordBtnTapped.setImage(UIImage(named: "eyelocked"), for: .normal)
         self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
         self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
         self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))

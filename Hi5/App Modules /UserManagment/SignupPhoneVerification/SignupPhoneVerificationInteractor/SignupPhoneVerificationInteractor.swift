@@ -13,6 +13,7 @@ import UIKit
 protocol ISignupPhoneVerificationInteractor: class {
 	var parameters: [String: Any]? { get set }
     func doSignupPhoneVerification(view : UIViewController , code: String)
+    func doSignupResendVerificationCode(view : UIViewController)
 }
 
 class SignupPhoneVerificationInteractor: ISignupPhoneVerificationInteractor {
@@ -28,6 +29,16 @@ class SignupPhoneVerificationInteractor: ISignupPhoneVerificationInteractor {
         manager?.signupPhoneVerificationFromApi(code: code, complition: { (error, succes) in
             if (succes == true) {
                 self.presenter?.navigateToCreatePassword()
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    
+    func doSignupResendVerificationCode(view: UIViewController) {
+        manager?.signupResendVerificationCodeFromApi(complition: { (error, succes) in
+            if (succes == true) {
+                print("Done......")
             } else {
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }

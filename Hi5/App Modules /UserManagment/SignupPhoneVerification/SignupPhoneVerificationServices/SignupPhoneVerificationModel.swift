@@ -12,8 +12,8 @@ import UIKit
 
 struct SignupPhoneVerificationModel {	
 	struct Request {
-        func parameters(code: String) -> [String: Any]? {
-            return ["code": code]
+        func parameters(email: String) -> [String: Any]? {
+            return ["email": email]
         }
 	}
 
@@ -21,4 +21,8 @@ struct SignupPhoneVerificationModel {
         let status: Bool?
         let error: String?
 	}
+    
+    struct SignupResendVerificationCodeResponse: Codable {
+         
+    }
 }

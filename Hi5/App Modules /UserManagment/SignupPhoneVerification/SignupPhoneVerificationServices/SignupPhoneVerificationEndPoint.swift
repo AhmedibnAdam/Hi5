@@ -11,6 +11,7 @@ import Alamofire
 
 enum SignupPhoneVerificationEndpoint {
     case signupPhoneVerification(code: String)
+    case signupResendVerificationCode
 }
 
 extension SignupPhoneVerificationEndpoint: IEndpoint {
@@ -19,6 +20,8 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
     switch self {
       case .signupPhoneVerification:
         return .get
+    case .signupResendVerificationCode:
+        return .post
     }
 }
     
@@ -27,6 +30,8 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
     switch self {
        case .signupPhoneVerification:
          return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
+       case .signupResendVerificationCode:
+         return "http://api-ksa.com/demo/hi5/public/api/player/" + "resend"
        }
     }
     
@@ -35,6 +40,8 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
     switch self {
         case .signupPhoneVerification(let code):
             return ["code": code]
+    case .signupResendVerificationCode:
+            return ["email": ""]
         }
   }
     
@@ -43,14 +50,18 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
     switch self {
        case .signupPhoneVerification:
            return ["Accept": "application/json"]
+       case .signupResendVerificationCode:
+          return ["Accept": "application/json"]
        }
     }
     
     var encoding: ParameterEncoding {
 
         switch self {
-        case .signupPhoneVerification:
+         case .signupPhoneVerification:
             return URLEncoding.default
+         case .signupResendVerificationCode:
+            return JSONEncoding.default
         }
     }
 }

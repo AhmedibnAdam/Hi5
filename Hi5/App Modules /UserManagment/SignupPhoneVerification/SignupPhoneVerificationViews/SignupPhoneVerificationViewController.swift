@@ -50,7 +50,7 @@ class SignupPhoneVerificationViewController: UIViewController {
     }
     
     @IBAction func resendBtnTapped(_ sender: UIButton) {
-        
+        resendBtnAction()
     }
 }
     //MARK:- extensions
@@ -92,6 +92,10 @@ extension SignupPhoneVerificationViewController {
         let code = text1+text2+text3+text4
         interactor?.doSignupPhoneVerification(view: self, code: code)
         
+    }
+    
+    func resendBtnAction() {
+        interactor?.doSignupResendVerificationCode(view: self)
     }
 }
 

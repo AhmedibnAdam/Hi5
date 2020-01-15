@@ -12,6 +12,7 @@ import UIKit
 
 protocol ISignupPhoneVerificationInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doSignupPhoneVerification(view : UIViewController , code: String)
 }
 
 class SignupPhoneVerificationInteractor: ISignupPhoneVerificationInteractor {
@@ -22,5 +23,14 @@ class SignupPhoneVerificationInteractor: ISignupPhoneVerificationInteractor {
     init(presenter: ISignupPhoneVerificationPresenter, manager: ISignupPhoneVerificationManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func doSignupPhoneVerification(view: UIViewController, code: String) {
+        manager?.signupPhoneVerificationFromApi(code: code, complition: { (error, succes) in
+            if (succes == true) {
+                self.presenter?.navigateToCreatePassword()
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

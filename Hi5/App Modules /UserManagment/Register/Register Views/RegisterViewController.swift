@@ -49,7 +49,7 @@ class RegisterViewController: UIViewController {
     @IBAction func continueBtnTapped(_ sender: UIButton) {
         if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
             signupAction()
-        }
+             }
         else {
             showAlert(title: "Message", msg: "Please Accept Terms And Conditions")
         }

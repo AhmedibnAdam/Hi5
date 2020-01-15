@@ -12,15 +12,13 @@ import UIKit
 
 struct SignupPhoneVerificationModel {	
 	struct Request {
-		// do someting...
-
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
+        func parameters(code: String) -> [String: Any]? {
+            return ["code": code]
+        }
 	}
 
-	struct Response {
-		// do someting...
+    struct SignupPhoneVerificationResponse: Codable {
+        let status: Bool?
+        let error: String?
 	}
 }

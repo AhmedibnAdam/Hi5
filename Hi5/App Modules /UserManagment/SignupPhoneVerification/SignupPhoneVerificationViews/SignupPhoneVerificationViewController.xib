@@ -16,6 +16,10 @@
                 <outlet property="continueBtn" destination="nCv-lX-aPa" id="eZO-Tq-kPO"/>
                 <outlet property="descriptionLbl" destination="CLB-Nn-Ct6" id="1OO-KC-i2x"/>
                 <outlet property="logoView" destination="eFH-FY-qUk" id="bQq-Ao-RnN"/>
+                <outlet property="textField1" destination="yUC-Ay-lsc" id="hdm-4B-qWH"/>
+                <outlet property="textField2" destination="sMt-AO-6NB" id="v9F-hx-jzf"/>
+                <outlet property="textField3" destination="20L-kD-Aqx" id="3CE-0c-SkN"/>
+                <outlet property="textField4" destination="rUW-gG-mYQ" id="nSe-1C-Eh6"/>
                 <outlet property="view" destination="VS0-56-2k9" id="ope-aN-gma"/>
             </connections>
         </placeholder>

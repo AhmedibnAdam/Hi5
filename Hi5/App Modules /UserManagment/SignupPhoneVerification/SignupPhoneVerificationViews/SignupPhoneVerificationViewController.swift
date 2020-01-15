@@ -12,6 +12,8 @@ import UIKit
 
 protocol ISignupPhoneVerificationViewController: class {
 	var router: ISignupPhoneVerificationRouter? { get set }
+    func showAlert(title: String, msg: String)
+    func navigateToCreatePassword()
 }
 
 class SignupPhoneVerificationViewController: UIViewController {
@@ -20,8 +22,12 @@ class SignupPhoneVerificationViewController: UIViewController {
     
     //MARK:- Outlets
     
+    @IBOutlet weak var textField4: UITextField!
+    @IBOutlet weak var textField3: UITextField!
+    @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var logoView: UIView!
     
+    @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var containerView4: UIView!
@@ -39,17 +45,24 @@ class SignupPhoneVerificationViewController: UIViewController {
     }
     
     @IBAction func continueBtnTapped(_ sender: UIButton) {
-        router?.navigateToWelcome()
+         continueBtnAction()
+        //router?.navigateToWelcome()
     }
     
     @IBAction func resendBtnTapped(_ sender: UIButton) {
+        
     }
-    
 }
     //MARK:- extensions
 extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewController {
-	// do someting...
-}
+	    func showAlert(title: String, msg: String) {
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    
+    func navigateToCreatePassword() {
+        router?.navigateToCreatePassword()
+    }
+ }
 
 extension SignupPhoneVerificationViewController {
     func initView(){
@@ -65,6 +78,20 @@ extension SignupPhoneVerificationViewController {
     
     func configer(){
         router = SignupPhoneVerificationRouter(view: self)
+    }
+}
+
+extension SignupPhoneVerificationViewController {
+    func continueBtnAction() {
+        guard let text1 = textField1.text , let text2 = textField2.text , let text3 = textField3.text , let text4 = textField4.text else {return}
+        if (text1.isEmpty || text2.isEmpty || text3.isEmpty || text4.isEmpty) {
+            showAlert(title: "Error", msg: "Please Fill All Text Fields")
+        } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
+            showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
+        }
+        let code = text1+text2+text3+text4
+        interactor?.doSignupPhoneVerification(view: self, code: code)
+        
     }
 }
 

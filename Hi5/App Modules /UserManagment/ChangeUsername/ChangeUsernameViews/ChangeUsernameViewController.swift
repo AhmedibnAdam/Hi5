@@ -76,6 +76,8 @@ extension ChangeUsernameViewController {
             showAlert(title: "Error", msg: "Please Fill Empty Field")
         } else if (username.count < 3) {
             showAlert(title: "Error", msg: "Username Must Be More Than 3 Character")
+        } else {
+            checkMark.isHidden = false
         }
         
     }

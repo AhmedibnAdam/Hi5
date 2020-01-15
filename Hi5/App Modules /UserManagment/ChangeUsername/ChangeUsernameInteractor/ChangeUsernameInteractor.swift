@@ -12,6 +12,7 @@ import UIKit
 
 protocol IChangeUsernameInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doChangeUserName(view : UIViewController , username: String)
 }
 
 class ChangeUsernameInteractor: IChangeUsernameInteractor {
@@ -22,5 +23,15 @@ class ChangeUsernameInteractor: IChangeUsernameInteractor {
     init(presenter: IChangeUsernamePresenter, manager: IChangeUsernameManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    
+    func doChangeUserName(view: UIViewController, username: String) {
+        manager?.changeUsernameFromApi(username: username, complition: { (error, succes) in
+            if(succes == true){
+                print("navigate to home.......")
+            } else {
+                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

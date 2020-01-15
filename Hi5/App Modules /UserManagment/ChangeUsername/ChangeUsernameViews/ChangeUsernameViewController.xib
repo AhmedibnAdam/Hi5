@@ -16,6 +16,7 @@
                 <outlet property="containerView3" destination="wpM-oJ-aRg" id="12M-de-rT7"/>
                 <outlet property="containerView4" destination="HZu-kn-5lN" id="iWR-MF-Qn3"/>
                 <outlet property="logoView" destination="c8E-1O-Fab" id="L63-Ig-QkC"/>
+                <outlet property="usernameTextField" destination="UTF-OJ-tTt" id="N8E-jQ-mRf"/>
                 <outlet property="view" destination="kb9-Zv-aUt" id="C09-pC-0wL"/>
             </connections>
         </placeholder>
@@ -99,7 +100,7 @@
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-dL-o0U">
                                     <rect key="frame" x="131.5" y="14" width="72" height="2"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="hqU-U8-NIA"/>
                                     </constraints>
@@ -110,11 +111,11 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2c-wT-60S">
                                             <rect key="frame" x="9.5" y="4.5" width="10.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="9l3-w5-Vlj"/>
                                         <constraint firstItem="c2c-wT-60S" firstAttribute="centerY" secondItem="wpM-oJ-aRg" secondAttribute="centerY" id="Bei-ZJ-cvt"/>
@@ -124,7 +125,7 @@
                                 </view>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="7zw-eS-9Cm">
                                     <rect key="frame" x="233.5" y="14" width="71.5" height="2"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="2" id="R9J-VG-H4h"/>
                                     </constraints>
@@ -135,11 +136,11 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btw-kV-WyC">
                                             <rect key="frame" x="9.5" y="4.5" width="11" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="Btw-kV-WyC" firstAttribute="centerX" secondItem="HZu-kn-5lN" secondAttribute="centerX" id="Hzm-Mv-qfv"/>
                                         <constraint firstItem="Btw-kV-WyC" firstAttribute="centerY" secondItem="HZu-kn-5lN" secondAttribute="centerY" id="JEN-VZ-6lP"/>

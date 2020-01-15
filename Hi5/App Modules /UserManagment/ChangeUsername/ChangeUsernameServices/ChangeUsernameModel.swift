@@ -20,7 +20,7 @@ struct ChangeUsernameModel {
 		}
 	}
 
-	struct Response {
+    struct ChangeUsernameResponse: Codable {
 		// do someting...
 	}
 }

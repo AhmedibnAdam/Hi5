@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IChangeUsernamePresenter: class {
-	// do someting...
+	func showErrorAlert(title: String, msg: String)
 }
 
 class ChangeUsernamePresenter: IChangeUsernamePresenter {	
@@ -20,4 +20,7 @@ class ChangeUsernamePresenter: IChangeUsernamePresenter {
 	init(view: IChangeUsernameViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
 }

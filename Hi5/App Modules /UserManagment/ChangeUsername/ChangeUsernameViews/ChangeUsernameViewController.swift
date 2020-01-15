@@ -12,6 +12,7 @@ import UIKit
 
 protocol IChangeUsernameViewController: class {
 	var router: IChangeUsernameRouter? { get set }
+    func showAlert(title: String, msg: String)
 }
 
 class ChangeUsernameViewController: UIViewController {
@@ -19,6 +20,7 @@ class ChangeUsernameViewController: UIViewController {
 	var router: IChangeUsernameRouter?
     //MARK:- Outlets
 
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var changeBtn: UIButton!
     @IBOutlet weak var containerView4: UIView!
@@ -33,7 +35,7 @@ class ChangeUsernameViewController: UIViewController {
     }
     //MARK:- Actions
     @IBAction func changeBtnTapped(_ sender: UIButton) {
-        
+        changeBtnAction()
     }
     @IBAction func backBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -45,7 +47,9 @@ class ChangeUsernameViewController: UIViewController {
 }
    //MARK:- extensions
 extension ChangeUsernameViewController: IChangeUsernameViewController {
-	
+    func showAlert(title: String, msg: String) {
+         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
 }
 
 extension ChangeUsernameViewController {
@@ -62,6 +66,18 @@ extension ChangeUsernameViewController {
     
     func configer(){
         router = ChangeUsernameRouter(view: self)
+    }
+}
+
+extension ChangeUsernameViewController {
+    func changeBtnAction() {
+        guard let username = usernameTextField.text else {return}
+        if(username.isEmpty){
+            showAlert(title: "Error", msg: "Please Fill Empty Field")
+        } else if (username.count < 3) {
+            showAlert(title: "Error", msg: "Username Must Be More Than 3 Character")
+        }
+        
     }
 }
 

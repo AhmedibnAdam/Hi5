@@ -13,6 +13,7 @@ import UIKit
 protocol ICreatePasswordViewController: class {
 	var router: ICreatePasswordRouter? { get set }
     func showAlert(title: String, msg: String)
+    func navigateToWelcome()
 }
 
 class CreatePasswordViewController: UIViewController {
@@ -77,6 +78,9 @@ class CreatePasswordViewController: UIViewController {
 extension CreatePasswordViewController: ICreatePasswordViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func navigateToWelcome() {
+        router?.navigateToWelcome()
     }
 }
 

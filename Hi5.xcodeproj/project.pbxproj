@@ -1874,11 +1874,11 @@
 		86B14BD223CB53E600B3FEB1 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				86B14BE823CB548600B3FEB1 /* WelcomeServices */,
 				86B14BE723CB547A00B3FEB1 /* WelcomeContract */,
 				86B14BE623CB546C00B3FEB1 /* WelcomeInteractor */,
 				86B14BE523CB546100B3FEB1 /* WelcomePresenter */,
 				86B14BE423CB545700B3FEB1 /* WelcomeRouter */,
+				86B14BE823CB548600B3FEB1 /* WelcomeServices */,
 				86B14BE323CB544C00B3FEB1 /* WelcomeViews */,
 			);
 			path = Welcome;

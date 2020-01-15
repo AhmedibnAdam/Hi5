@@ -20,7 +20,11 @@ struct PhoneVerificationModel {
 		}
 	}
 
-	struct Response {
-		// do someting...
+    struct PhoneVerificationResponse: Codable {
+		
 	}
+    
+    struct ResendVerificationCodeResponse: Codable {
+        
+    }
 }

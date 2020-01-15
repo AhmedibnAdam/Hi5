@@ -315,6 +315,7 @@
 		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
 		8671347E23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671347D23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift */; };
 		8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */; };
+		8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */; };
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
 		868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */; };
 		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
@@ -665,6 +666,7 @@
 		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
 		8671347D23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationEndPoint.swift; sourceTree = "<group>"; };
 		8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameEndPoint.swift; sourceTree = "<group>"; };
+		8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationEndPoint.swift; sourceTree = "<group>"; };
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
@@ -1517,6 +1519,7 @@
 			children = (
 				666336AE23B40B84004E537C /* PhoneVerificationModel.swift */,
 				666336B023B40B84004E537C /* PhoneVerificationManager.swift */,
+				8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */,
 			);
 			path = PhoneVerificationServices;
 			sourceTree = "<group>";
@@ -2406,6 +2409,7 @@
 				8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
 				662A170723C3F20200A3695E /* SechadualeInteractor.swift in Sources */,
+				8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */,
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,

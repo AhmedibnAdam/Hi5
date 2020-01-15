@@ -12,6 +12,8 @@ import UIKit
 
 protocol IPhoneVerificationViewController: class {
 	var router: IPhoneVerificationRouter? { get set }
+    func showAlert(title: String, msg: String)
+    func navigateToCreatePassword()
 }
 
 class PhoneVerificationViewController: UIViewController {
@@ -31,7 +33,7 @@ class PhoneVerificationViewController: UIViewController {
     }
     //MARK: - Actions
     @IBAction func continueBtnTapped(_ sender: Any) {
-        
+        continueBtnAction()
     }
     
     @IBAction func resendBtnTapped(_ sender: Any) {
@@ -44,7 +46,12 @@ class PhoneVerificationViewController: UIViewController {
 }
 //MARK: - extensions
 extension PhoneVerificationViewController: IPhoneVerificationViewController {
-	// do someting...
+    func showAlert(title: String, msg: String) {
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func navigateToCreatePassword() {
+        router?.navigateToCreatePassword()
+    }
 }
 
 extension PhoneVerificationViewController {
@@ -56,6 +63,19 @@ extension PhoneVerificationViewController {
     
     func configer(){
         router = PhoneVerificationRouter(view: self)
+    }
+}
+
+extension PhoneVerificationViewController {
+    func continueBtnAction() {
+        guard let text1 = textField1.text , let text2 = textField2.text , let text3 = textField3.text , let text4 = textField4.text else {return}
+        if (text1.isEmpty || text2.isEmpty || text3.isEmpty || text4.isEmpty) {
+            showAlert(title: "Error", msg: "Please Fill All Text Fields")
+        } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
+            showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
+        }
+        //let code = text1+text2+text3+text4
+        //interactor?.doSignupPhoneVerification(view: self, code: code)
     }
 }
 

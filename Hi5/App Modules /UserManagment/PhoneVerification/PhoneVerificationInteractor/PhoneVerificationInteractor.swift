@@ -12,6 +12,8 @@ import UIKit
 
 protocol IPhoneVerificationInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doPhoneVerification(view : UIViewController , code: String)
+    func doResendVerificationCode(view : UIViewController)
 }
 
 class PhoneVerificationInteractor: IPhoneVerificationInteractor {
@@ -22,5 +24,25 @@ class PhoneVerificationInteractor: IPhoneVerificationInteractor {
     init(presenter: IPhoneVerificationPresenter, manager: IPhoneVerificationManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    
+    func doPhoneVerification(view: UIViewController, code: String) {
+        manager?.PhoneVerificationFromApi(code: code, complition: { (error, succes) in
+            if (succes == true) {
+                self.presenter?.navigateToCreatePassword()
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    
+    func doResendVerificationCode(view: UIViewController) {
+        manager?.ResendVerificationCodeFromApi(complition: { (error, succes) in
+            if (succes == true) {
+                print("Done Resend Verification Code......")
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

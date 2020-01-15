@@ -37,7 +37,7 @@ class PhoneVerificationViewController: UIViewController {
     }
     
     @IBAction func resendBtnTapped(_ sender: Any) {
-        
+        resendBtnAction()
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -74,8 +74,12 @@ extension PhoneVerificationViewController {
         } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
             showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
         }
-        //let code = text1+text2+text3+text4
-        //interactor?.doSignupPhoneVerification(view: self, code: code)
+        let code = text1+text2+text3+text4
+        interactor?.doPhoneVerification(view: self, code: code)
+    }
+    
+    func resendBtnAction() {
+        interactor?.doResendVerificationCode(view: self)
     }
 }
 

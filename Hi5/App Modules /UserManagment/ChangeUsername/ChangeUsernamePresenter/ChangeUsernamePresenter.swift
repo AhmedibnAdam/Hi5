@@ -12,6 +12,7 @@ import UIKit
 
 protocol IChangeUsernamePresenter: class {
 	func showErrorAlert(title: String, msg: String)
+    func navigateToCreatePassword()
 }
 
 class ChangeUsernamePresenter: IChangeUsernamePresenter {	
@@ -22,5 +23,8 @@ class ChangeUsernamePresenter: IChangeUsernamePresenter {
 	}
     func showErrorAlert(title: String, msg: String) {
         view?.showAlert(title: title, msg: msg)
+    }
+    func navigateToCreatePassword() {
+        view?.navigateToCreatePassword()
     }
 }

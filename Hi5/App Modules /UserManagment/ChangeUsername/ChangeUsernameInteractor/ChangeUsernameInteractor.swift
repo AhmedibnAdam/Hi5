@@ -28,7 +28,7 @@ class ChangeUsernameInteractor: IChangeUsernameInteractor {
     func doChangeUserName(view: UIViewController, username: String) {
         manager?.changeUsernameFromApi(username: username, complition: { (error, succes) in
             if(succes == true){
-                print("navigate to home.......")
+                self.presenter?.navigateToCreatePassword()
             } else {
                  self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }

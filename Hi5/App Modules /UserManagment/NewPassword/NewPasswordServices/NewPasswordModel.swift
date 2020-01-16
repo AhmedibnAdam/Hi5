@@ -12,15 +12,12 @@ import UIKit
 
 struct NewPasswordModel {	
 	struct Request {
-		// do someting...
-
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
+        func parameters(password: String , confirmPassword: String) -> [String: Any]? {
+            return ["password": password , "password_confirmation": confirmPassword]
+        }
 	}
 
-	struct Response {
-		// do someting...
+    struct NewPasswordResponse: Codable {
+		
 	}
 }

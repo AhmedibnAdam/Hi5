@@ -12,6 +12,7 @@ import UIKit
 
 protocol IForgetEmailInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doForgetEmail(view : UIViewController , email: String)
 }
 
 class ForgetEmailInteractor: IForgetEmailInteractor {
@@ -22,5 +23,15 @@ class ForgetEmailInteractor: IForgetEmailInteractor {
     init(presenter: IForgetEmailPresenter, manager: IForgetEmailManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func doForgetEmail(view: UIViewController, email: String) {
+        manager?.forgetEmailFromApi(email: email, complition: { (error, success) in
+            if (success == true) {
+                print("Done.......")
+                self.presenter?.navigateToEmailVerification()
+            } else {
+               self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

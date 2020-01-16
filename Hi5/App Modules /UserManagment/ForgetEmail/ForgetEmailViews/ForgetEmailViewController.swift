@@ -12,12 +12,16 @@ import UIKit
 
 protocol IForgetEmailViewController: class {
 	var router: IForgetEmailRouter? { get set }
+    func showAlert(title: String, msg: String)
+    func navigateToEmailVerification()
 }
 
 class ForgetEmailViewController: UIViewController {
 	var interactor: IForgetEmailInteractor?
 	var router: IForgetEmailRouter?
-    //MARK : - Outlets
+    
+    //MARK:- Outlets
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
     
@@ -26,9 +30,9 @@ class ForgetEmailViewController: UIViewController {
 		initView()
         configer()
     }
-    //MARK : - Actions
+    //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: Any) {
-        router?.navigateToVerificationEmail()
+        continueBtnAction()
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -36,21 +40,38 @@ class ForgetEmailViewController: UIViewController {
     }
     
 }
-
+//MARK:- Extensions
 extension ForgetEmailViewController: IForgetEmailViewController {
-	// do someting...
+    func showAlert(title: String, msg: String) {
+         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func navigateToEmailVerification() {
+       router?.navigateToVerificationEmail()
+    }
 }
 
 extension ForgetEmailViewController {
-	    func initView(){
-        // MARK : - view raduis
+    func initView(){
         self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
-        // MARK : - Button  raduis
         self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
     }
     
     func configer(){
         router = ForgetEmailRouter(view: self)
+    }
+}
+
+extension ForgetEmailViewController {
+    func continueBtnAction() {
+        guard let email = emailTextField.text else {
+            return
+        }
+        if(email.isEmpty == true) {
+            self.containerView = CreateBorder.viewBorder(view: self.containerView, width: 1.0, color: UIColor.red.cgColor)
+        }
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "Email") as? String
+        interactor?.doForgetEmail(view: self, email: email)
     }
 }
 

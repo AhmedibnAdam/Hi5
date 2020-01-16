@@ -11,7 +11,8 @@
 import UIKit
 
 protocol IForgetEmailPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+    func navigateToEmailVerification()
 }
 
 class ForgetEmailPresenter: IForgetEmailPresenter {	
@@ -20,4 +21,12 @@ class ForgetEmailPresenter: IForgetEmailPresenter {
 	init(view: IForgetEmailViewController?) {
 		self.view = view
 	}
+    
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    
+    func navigateToEmailVerification() {
+        view?.navigateToEmailVerification()
+    }
 }

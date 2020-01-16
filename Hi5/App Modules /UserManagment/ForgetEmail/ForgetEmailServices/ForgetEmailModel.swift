@@ -12,15 +12,12 @@ import UIKit
 
 struct ForgetEmailModel {	
 	struct Request {
-		// do someting...
-
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
+        func parameters(email: String) -> [String: Any]? {
+            return ["email": email]
+        }
 	}
 
-	struct Response {
-		// do someting...
+    struct ForgetEmailResponse: Codable {
+        
 	}
 }

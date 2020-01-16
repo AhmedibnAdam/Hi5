@@ -11,9 +11,45 @@
 import Foundation
 
 protocol IForgetEmailManager: class {
-	// do someting...
+    func forgetEmailFromApi(email: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
 }
 
 class ForgetEmailManager: IForgetEmailManager {
-	// do someting...
+    func forgetEmailFromApi(email: String, complition: @escaping (ErrorModel?, Bool) -> Void) {
+                NetworkService.share.request(endpoint: ForgetEmailEndpoint.ForgetEmail(email: email), success: { (responseData) in
+            let response = responseData
+            do {
+                let decoder = JSONDecoder()
+                let user = try decoder.decode(ForgetEmailModel.ForgetEmailResponse.self, from: response)
+                print(user)
+                complition(nil , true)
+                
+            } catch let error {
+                print("error : ", error.localizedDescription  )
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let error = try decoder.decode(ErrorModel.self, from: responseData )
+                    print(error)
+                    complition(error , false)
+                } catch let error {
+                    print(error)
+                    
+                }
+        }
+            
+    }, failure: { (error) in
+            do {
+                let decoder = JSONDecoder()
+                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+                print(error)
+                complition(error , false)
+                
+            } catch let error {
+                print(error)
+                complition(nil , false)
+            }
+            
+        })
+    }
 }

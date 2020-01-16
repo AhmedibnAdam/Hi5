@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IChangeUsernameRouter: class {
-	// do someting...
+	func navigateToCreatePassword()
 }
 
 class ChangeUsernameRouter: IChangeUsernameRouter {	
@@ -20,4 +20,7 @@ class ChangeUsernameRouter: IChangeUsernameRouter {
 	init(view: ChangeUsernameViewController?) {
 		self.view = view
 	}
+    func navigateToCreatePassword() {
+        view?.navigate(type: .modal, module: GeneralRoute.createPassword, completion: nil)
+    }
 }

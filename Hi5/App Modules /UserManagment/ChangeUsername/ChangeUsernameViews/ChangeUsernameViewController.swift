@@ -13,6 +13,7 @@ import UIKit
 protocol IChangeUsernameViewController: class {
 	var router: IChangeUsernameRouter? { get set }
     func showAlert(title: String, msg: String)
+    func navigateToCreatePassword()
 }
 
 class ChangeUsernameViewController: UIViewController {
@@ -50,6 +51,9 @@ extension ChangeUsernameViewController: IChangeUsernameViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
+    func navigateToCreatePassword() {
+        router?.navigateToCreatePassword()
+    }
 }
 
 extension ChangeUsernameViewController {
@@ -74,12 +78,14 @@ extension ChangeUsernameViewController {
         guard let username = usernameTextField.text else {return}
         if(username.isEmpty){
             showAlert(title: "Error", msg: "Please Fill Empty Field")
+            return
         } else if (username.count < 3) {
             showAlert(title: "Error", msg: "Username Must Be More Than 3 Character")
+            return
         } else {
             checkMark.isHidden = false
         }
-        
+        interactor?.doChangeUserName(view: self, username: username)
     }
 }
 

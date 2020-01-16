@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="containerView" destination="neR-D8-Oqh" id="F67-xY-I7B"/>
                 <outlet property="continueBtn" destination="1kZ-W2-nt4" id="uZy-WZ-4CS"/>
+                <outlet property="emailTextField" destination="yE5-CX-KRV" id="HgU-LV-Sn9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

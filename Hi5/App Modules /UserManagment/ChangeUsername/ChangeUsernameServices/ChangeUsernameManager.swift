@@ -22,6 +22,7 @@ class ChangeUsernameManager: IChangeUsernameManager {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(ChangeUsernameModel.ChangeUsernameResponse.self, from: response)
                 print(user)
+                complition(nil , true)
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )

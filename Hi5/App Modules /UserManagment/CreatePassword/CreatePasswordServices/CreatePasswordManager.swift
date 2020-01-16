@@ -11,7 +11,6 @@
 import Foundation
 
 protocol ICreatePasswordManager: class {
-	// do someting...
     func createPasswordFromApi(password: String ,confirmPassword: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
 }
 
@@ -23,6 +22,7 @@ class CreatePasswordManager: ICreatePasswordManager {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(CreatePasswordModel.CreatePasswordResponse.self, from: response)
                 print(user)
+                complition(nil , true)
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )

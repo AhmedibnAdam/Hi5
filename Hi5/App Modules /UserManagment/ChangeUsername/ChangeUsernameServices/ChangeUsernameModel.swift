@@ -12,15 +12,13 @@ import UIKit
 
 struct ChangeUsernameModel {	
 	struct Request {
-		// do someting...
-
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
+        func parameters(username: String) -> [String: Any]? {
+            return ["vie_id": username]
+        }
 	}
 
     struct ChangeUsernameResponse: Codable {
-		// do someting...
-	}
+        let status: Bool?
+        let success: String?
+    }
 }

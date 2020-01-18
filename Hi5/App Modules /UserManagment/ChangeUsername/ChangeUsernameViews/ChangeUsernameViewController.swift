@@ -43,7 +43,7 @@ class ChangeUsernameViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        
+        loginBtnAction()
     }
 }
    //MARK:- extensions
@@ -86,6 +86,11 @@ extension ChangeUsernameViewController {
             checkMark.isHidden = false
         }
         interactor?.doChangeUserName(view: self, username: username)
+    }
+    
+    func loginBtnAction() {
+        router?.navigateToLogin()
+
     }
 }
 

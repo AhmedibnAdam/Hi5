@@ -11,8 +11,8 @@
 import UIKit
 
 protocol IRegisterRouter: class {
-	// MARK : - do someting...
      func navigateToSignupPhoneVerification()
+     func navigateToLogin()
 }
 
 class RegisterRouter: IRegisterRouter {
@@ -25,4 +25,7 @@ class RegisterRouter: IRegisterRouter {
 	init(view: RegisterViewController?) {
 		self.view = view
 	}
+    func navigateToLogin() {
+        view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
+    }
 }

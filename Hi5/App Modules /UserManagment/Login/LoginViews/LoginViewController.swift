@@ -19,10 +19,7 @@ class LoginViewController: UIViewController {
     
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
-    var ssss: String?
-    
     //MARK: - view outlet
-    
     @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userName: UITextField!
@@ -40,7 +37,6 @@ class LoginViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		// MARK : - do someting...
         initView()
         configer()
     }
@@ -69,18 +65,15 @@ class LoginViewController: UIViewController {
     @IBAction func doLogin(_ sender: UIButton) {
         doLoginAction()
     }
-    
 }
 //MARK: - extenions
 extension LoginViewController: ILoginViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-	// MARK : - do someting...
 }
 
 extension LoginViewController {
-    
     func initView(){
         // MARK : - view raduis
         self.eyeBtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
@@ -97,7 +90,6 @@ extension LoginViewController {
 }
 
 extension LoginViewController {
-	// MARK : - do someting...
     func doLoginAction(){
         guard let userName = userName.text , let password = password.text else {return}
         if(userName.isEmpty || password.isEmpty || password.count < 4){

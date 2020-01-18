@@ -22,7 +22,6 @@ class RegisterViewController: UIViewController {
 	var interactor: IRegisterInteractor?
 	var router: IRegisterRouter?
     //MARK:- Outlets
-    
     @IBOutlet weak var checkBoxBtn: UIButton!
     @IBOutlet weak var countryCode: FPNTextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -63,7 +62,7 @@ class RegisterViewController: UIViewController {
         }
     }
     @IBAction func loginBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        loginBtnAction()
     }
     @IBAction func backBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -112,6 +111,9 @@ extension RegisterViewController {
              return
          }
         interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phoneNumber)
+    }
+    func loginBtnAction() {
+        router?.navigateToLogin()
     }
 
 }

@@ -34,6 +34,7 @@ enum GeneralRoute: IRouter {
     case welcome
     case createPassword
     case changeUsername
+    case tabBar
 }
 
 extension GeneralRoute {
@@ -75,6 +76,8 @@ extension GeneralRoute {
             return CreatePasswordConfiguration.setup()
         case .changeUsername:
             return ChangeUsernameConfiguration.setup()
+        case .tabBar:
+            return TabBarConfiguration.setup()
         }
     }
 }

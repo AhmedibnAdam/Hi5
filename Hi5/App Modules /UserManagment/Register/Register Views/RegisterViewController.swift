@@ -105,8 +105,8 @@ extension RegisterViewController {
 extension RegisterViewController {
     func signupAction() {
         guard let fullName = fullNameTextField.text , let phoneNumber = phoneNumberTextField.text else {return}
-        dialCode?.removeFirst()
-        let phone = (dialCode ?? "966") + phoneNumber
+        let replacedDialCode = dialCode?.replacingOccurrences(of: "+", with: "")
+        let phone = (replacedDialCode ?? "966") + phoneNumber
         print(phone)
          if(fullName.isEmpty || phoneNumber.isEmpty){
              self.fullNameView = CreateBorder.viewBorder(view: self.fullNameView, width: 1.0, color: UIColor.red.cgColor)

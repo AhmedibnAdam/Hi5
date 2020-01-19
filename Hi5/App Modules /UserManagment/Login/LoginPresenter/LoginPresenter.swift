@@ -13,6 +13,7 @@ import UIKit
 protocol ILoginPresenter: class {
     // MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
+    func navigateToTabBar()
 }
 class LoginPresenter: ILoginPresenter {
     
@@ -23,5 +24,8 @@ class LoginPresenter: ILoginPresenter {
     }
     func showErrorAlert(title: String, msg: String){
         view?.showAlert(title: title, msg: msg)
+    }
+    func navigateToTabBar() {
+        view?.navigateToTabBar()
     }
 }

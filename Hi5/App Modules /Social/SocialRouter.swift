@@ -23,7 +23,7 @@ class SocialRouter: ISocialRouter {
 		self.view = view
 	}
     func naveigateToSideMenu() {
-        view?.navigate(type: .present, module: GeneralRoute.userAccountViewController, completion: nil)
+//        view?.navigate(type: .present, module: GeneralRoute.userAccountViewController, completion: nil)
     }
     
 }

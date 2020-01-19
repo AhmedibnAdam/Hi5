@@ -27,6 +27,7 @@ class LoginManager: ILoginManager {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(LoginModel.LoginResponse.self, from: response)
                 print(user)
+                complition(nil,true)
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )

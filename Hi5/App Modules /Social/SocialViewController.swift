@@ -9,7 +9,7 @@
 //              * https://github.com/arimunandar
 
 import UIKit
-import SideMenuSwift
+//import SideMenuSwift
 import SideMenu
 
 protocol ISocialViewController: class {

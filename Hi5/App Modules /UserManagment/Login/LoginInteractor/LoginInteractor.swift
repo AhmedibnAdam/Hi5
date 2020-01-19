@@ -29,7 +29,7 @@ class LoginInteractor: ILoginInteractor {
         //let param = request.parameters(userName: userName, password: password)
         manager?.loginFromApi(userName: userName , password: password, complition: { (error , success) in
             if (success == true) {
-               print("Done.........")
+                self.presenter?.navigateToTabBar()
             } else {
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }

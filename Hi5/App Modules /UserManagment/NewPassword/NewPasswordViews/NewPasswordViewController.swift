@@ -61,7 +61,7 @@ class NewPasswordViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        
+        router?.navigateToLogin()
     }
 }
 //MARK:- extensions

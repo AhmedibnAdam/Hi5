@@ -207,6 +207,9 @@
                                     <state key="normal" title="Log in">
                                         <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="loginBtnTapped:" destination="-1" eventType="touchUpInside" id="DNJ-C8-mgE"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

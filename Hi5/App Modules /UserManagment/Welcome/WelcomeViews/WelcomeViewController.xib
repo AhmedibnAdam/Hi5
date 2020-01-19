@@ -14,6 +14,7 @@
                 <outlet property="containerView3" destination="01q-SM-I0J" id="u3p-5I-U0C"/>
                 <outlet property="containerView4" destination="Bfh-on-02r" id="BXa-dc-cPM"/>
                 <outlet property="continueBtn" destination="JCy-PW-JlA" id="QOH-yd-t9N"/>
+                <outlet property="fullnameLbl" destination="HJB-Za-41p" id="tcI-LZ-XFQ"/>
                 <outlet property="logoView" destination="z1R-be-Pcp" id="oDT-Cq-0th"/>
                 <outlet property="view" destination="2Dh-zH-W1G" id="bmU-y9-iNO"/>
             </connections>
@@ -176,8 +177,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zad-TO-JXd" userLabel="Bottom View">
                     <rect key="frame" x="0.0" y="267" width="375" height="400"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Vie players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM5-D6-UdK">
-                            <rect key="frame" x="87" y="10" width="201" height="21.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Hi5 players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM5-D6-UdK">
+                            <rect key="frame" x="86" y="10" width="203" height="21.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -202,6 +203,9 @@
                                     <state key="normal" title="Log in">
                                         <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="loginBtnTapped:" destination="-1" eventType="touchUpInside" id="gRK-G1-3Bv"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

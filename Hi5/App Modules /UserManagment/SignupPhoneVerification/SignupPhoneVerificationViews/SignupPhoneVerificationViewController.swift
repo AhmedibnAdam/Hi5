@@ -52,6 +52,10 @@ class SignupPhoneVerificationViewController: UIViewController {
     @IBAction func resendBtnTapped(_ sender: UIButton) {
         resendBtnAction()
     }
+    
+    @IBAction func loginBtnTapped(_ sender: UIButton) {
+        router?.navigateToLogin()
+    }
 }
     //MARK:- extensions
 extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewController {

@@ -30,11 +30,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var fullNameView: UIView!
     @IBOutlet weak var phoneNumberView: UIView!
     @IBOutlet weak var continueBtn: UIButton!
-    
     @IBOutlet weak var containerView4: UIView!
     @IBOutlet weak var containerView3: UIView!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var containerView1: UIView!
+    var dialCode: String?
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -105,12 +105,17 @@ extension RegisterViewController {
 extension RegisterViewController {
     func signupAction() {
         guard let fullName = fullNameTextField.text , let phoneNumber = phoneNumberTextField.text else {return}
+        dialCode?.removeFirst()
+        let phone = (dialCode ?? "966") + phoneNumber
+        print(phone)
          if(fullName.isEmpty || phoneNumber.isEmpty){
              self.fullNameView = CreateBorder.viewBorder(view: self.fullNameView, width: 1.0, color: UIColor.red.cgColor)
              self.phoneNumberView = CreateBorder.viewBorder(view: self.phoneNumberView, width: 1.0, color: UIColor.red.cgColor)
              return
          }
-        interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phoneNumber)
+        let defaults = UserDefaults.standard
+        defaults.set(fullName, forKey: "FullName") as? String
+        interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phone)
     }
     func loginBtnAction() {
         router?.navigateToLogin()
@@ -134,6 +139,7 @@ extension RegisterViewController: FPNTextFieldDelegate {
     
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
         print(name, dialCode, code)
+        self.dialCode = dialCode
     }
 
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {

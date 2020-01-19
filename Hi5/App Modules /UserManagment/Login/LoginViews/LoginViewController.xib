@@ -186,8 +186,8 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8I-iM-2Od">
-                                    <rect key="frame" x="183" y="125" width="152" height="30"/>
-                                    <state key="normal" title="Forgot yor password ?">
+                                    <rect key="frame" x="174" y="125" width="161" height="30"/>
+                                    <state key="normal" title="Forgot your password ?">
                                         <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <connections>

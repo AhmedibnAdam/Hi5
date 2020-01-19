@@ -18,6 +18,8 @@ class WelcomeViewController: UIViewController {
 	var interactor: IWelcomeInteractor?
 	var router: IWelcomeRouter?
     //MARK:- Outlets
+    
+    @IBOutlet weak var fullnameLbl: UILabel!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var continueBtn: UIButton!
@@ -28,6 +30,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         initView()
         configer()
+        fetchFullName()
 		
     }
     //MARK:- Actions
@@ -42,11 +45,15 @@ class WelcomeViewController: UIViewController {
     @IBAction func changeUsernameBtnTapped(_ sender: UIButton) {
         router?.navigateToChangeUsername()
     }
+    
+    @IBAction func loginBtnTapped(_ sender: UIButton) {
+        router?.navigateToLogin()
+    }
 }
 
 //MARK:- extensions
 extension WelcomeViewController: IWelcomeViewController {
-	// do someting...
+
 }
 
 extension WelcomeViewController {
@@ -60,9 +67,15 @@ extension WelcomeViewController {
           // MARK : - Button  raduis
         self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
     }
-    
     func configer(){
         router = WelcomeRouter(view: self)
     }
+    func fetchFullName() {
+        let defaults = UserDefaults.standard
+        let fullName = defaults.string(forKey: "FullName")
+        fullnameLbl.text = fullName
+    }
+    
 }
+
 

@@ -70,7 +70,7 @@ class CreatePasswordViewController: UIViewController {
     }
     
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        
+        loginBtnAction()
     }
 }
 
@@ -114,6 +114,9 @@ extension CreatePasswordViewController {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
         }
         interactor?.doCreatePassword(view: self, password: password, confirmPassword: confirmPassword)
+    }
+    func loginBtnAction() {
+        router?.navigateToLogin()
     }
 }
 

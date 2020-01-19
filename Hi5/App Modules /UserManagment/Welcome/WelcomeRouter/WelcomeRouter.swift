@@ -11,12 +11,18 @@
 import UIKit
 
 protocol IWelcomeRouter: class {
-	// do someting...
     func navigateToCreatePassword()
     func navigateToChangeUsername()
+    func navigateToLogin()
 }
 
 class WelcomeRouter: IWelcomeRouter {
+
+	weak var view: WelcomeViewController?
+	
+	init(view: WelcomeViewController?) {
+		self.view = view
+	}
     func navigateToChangeUsername() {
         view?.navigate(type: .modal, module: GeneralRoute.changeUsername, completion: nil)
     }
@@ -25,9 +31,7 @@ class WelcomeRouter: IWelcomeRouter {
         view?.navigate(type: .modal, module: GeneralRoute.createPassword, completion: nil)
     }
     
-	weak var view: WelcomeViewController?
-	
-	init(view: WelcomeViewController?) {
-		self.view = view
-	}
+    func navigateToLogin() {
+        view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
+    }
 }

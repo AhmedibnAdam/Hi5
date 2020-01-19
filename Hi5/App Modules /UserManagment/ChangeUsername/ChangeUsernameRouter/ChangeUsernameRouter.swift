@@ -25,6 +25,6 @@ class ChangeUsernameRouter: IChangeUsernameRouter {
         view?.navigate(type: .modal, module: GeneralRoute.createPassword, completion: nil)
     }
     func navigateToLogin() {
-        view?.navigate(type: .root, module: GeneralRoute.login, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
     }
 }

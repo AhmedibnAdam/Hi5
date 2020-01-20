@@ -13,7 +13,7 @@ import UIKit
 protocol ILoginViewController: class {
 	var router: ILoginRouter? { get set }
     func showAlert(title: String, msg: String)
-    func navigateToTabBar()
+    func navigateToProfile()
 }
 
 class LoginViewController: UIViewController {
@@ -72,8 +72,8 @@ extension LoginViewController: ILoginViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-    func navigateToTabBar() {
-        router?.navigateToTabBar()
+    func navigateToProfile() {
+        router?.navigateToProfile()
     }
 }
 

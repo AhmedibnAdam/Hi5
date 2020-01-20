@@ -11,10 +11,9 @@
 import UIKit
 
 protocol ILoginRouter: class {
-	// do someting...
     func navigateToSignUp()
     func navigateToForgetPassword()
-    func navigateToTabBar()
+    func navigateToProfile()
 }
 
 class LoginRouter: ILoginRouter {
@@ -33,7 +32,7 @@ class LoginRouter: ILoginRouter {
         view?.navigate(type: .modal, module: GeneralRoute.forgetPassword, completion: nil)
     }
     
-    func navigateToTabBar() {
-        view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
+    func navigateToProfile() {
+        view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
     }
 }

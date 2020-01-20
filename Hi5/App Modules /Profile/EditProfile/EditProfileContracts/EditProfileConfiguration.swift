@@ -1,8 +1,8 @@
 //
-//  ChangeUsernameConfiguration.swift
+//  EditProfileConfiguration.swift
 //  Hi5
 //
-//  Created by Mohamed Gamal on 1/12/20.
+//  Created by Mohamed Gamal on 1/20/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -11,13 +11,13 @@
 import Foundation
 import UIKit
 
-class ChangeUsernameConfiguration {
+class EditProfileConfiguration {
     static func setup(parameters: [String: Any] = [:]) -> UIViewController {
-        let controller = ChangeUsernameViewController()
-        let router = ChangeUsernameRouter(view: controller)
-        let presenter = ChangeUsernamePresenter(view: controller)
-        let manager = ChangeUsernameManager()
-        let interactor = ChangeUsernameInteractor(presenter: presenter, manager: manager)
+        let controller = EditProfileViewController()
+        let router = EditProfileRouter(view: controller)
+        let presenter = EditProfilePresenter(view: controller)
+        let manager = EditProfileManager()
+        let interactor = EditProfileInteractor(presenter: presenter, manager: manager)
         
         controller.interactor = interactor
         controller.router = router

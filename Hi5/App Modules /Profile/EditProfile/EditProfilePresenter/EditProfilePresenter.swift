@@ -1,8 +1,8 @@
 //
-//  ProfileRouter.swift
+//  EditProfilePresenter.swift
 //  Hi5
 //
-//  Created by Adam on 1/1/20.
+//  Created by Mohamed Gamal on 1/20/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -10,14 +10,14 @@
 
 import UIKit
 
-protocol IProfileRouter: class {
+protocol IEditProfilePresenter: class {
 	// do someting...
 }
 
-class ProfileRouter: IProfileRouter {	
-	weak var view: ProfileViewController?
+class EditProfilePresenter: IEditProfilePresenter {	
+	weak var view: IEditProfileViewController?
 	
-	init(view: ProfileViewController?) {
+	init(view: IEditProfileViewController?) {
 		self.view = view
 	}
 }

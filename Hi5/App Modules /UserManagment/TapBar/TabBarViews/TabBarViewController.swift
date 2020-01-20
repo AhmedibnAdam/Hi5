@@ -19,48 +19,38 @@ class TabBarViewController: UITabBarController{
 	var router: ITabBarRouter?
     
     
-    lazy var social: SocialViewController = {
-        let vc = SocialViewController()
+    lazy var social: UIViewController = {
+        let vc = SocialConfiguration.setup()
          vc.tabBarItem.title = "social"
-//         vc.tabBarItem.image = #imageLiteral(resourceName: "SM")
         return vc
     }()
     
-    lazy var events: SechadualeViewController = {
-        let vc = SechadualeViewController()
+    lazy var events: UIViewController = {
+        let vc = SechadualeConfiguration.setup()
          vc.tabBarItem.title = "events"
-//         vc.tabBarItem.image = #imageLiteral(resourceName: "NO")
         return vc
     }()
     
-    lazy var notification: NotificationSettingViewController = {
-        let vc = NotificationSettingViewController()
+    lazy var notification: UIViewController = {
+        let vc = NotificationSettingConfiguration.setup()
          vc.tabBarItem.title = "notification"
-//         vc.tabBarItem.image = #imageLiteral(resourceName: "GA")
         return vc
     }()
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-        
 		setViewControllers([social,events,notification], animated: true)
-       // self.select = 0
     }
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-           print("Should select viewController: \(viewController.title ?? "") ?")
-           return true
-       }
 }
 
 extension TabBarViewController: ITabBarViewController {
-	// do someting...
+	
 }
 
 extension TabBarViewController: UITabBarControllerDelegate {
-	// do someting...
+	
 }
 
 extension TabBarViewController {
-	// do someting...
+	
 }

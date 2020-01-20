@@ -345,6 +345,14 @@
 		86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */; };
 		86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */; };
 		86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */; };
+		86DC11DF23D5C19100E577D9 /* EditProfileConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11D723D5C19000E577D9 /* EditProfileConfiguration.swift */; };
+		86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11D823D5C19000E577D9 /* EditProfilePresenter.swift */; };
+		86DC11E123D5C19100E577D9 /* EditProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11D923D5C19000E577D9 /* EditProfileRouter.swift */; };
+		86DC11E223D5C19100E577D9 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11DA23D5C19100E577D9 /* EditProfileViewController.swift */; };
+		86DC11E323D5C19100E577D9 /* EditProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11DB23D5C19100E577D9 /* EditProfileInteractor.swift */; };
+		86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11DC23D5C19100E577D9 /* EditProfileModel.swift */; };
+		86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DC11DD23D5C19100E577D9 /* EditProfileViewController.xib */; };
+		86DC11E623D5C19100E577D9 /* EditProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DC11DE23D5C19100E577D9 /* EditProfileManager.swift */; };
 		86DF4DD523CC6D25008A8868 /* RegisterEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DF4DD423CC6D25008A8868 /* RegisterEndPoint.swift */; };
 		86E1292B23D49E73007CB956 /* TabBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1292323D49E73007CB956 /* TabBarConfiguration.swift */; };
 		86E1292C23D49E73007CB956 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1292423D49E73007CB956 /* TabBarPresenter.swift */; };
@@ -713,6 +721,14 @@
 		86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordModel.swift; sourceTree = "<group>"; };
 		86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordViewController.xib; sourceTree = "<group>"; };
 		86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordManager.swift; sourceTree = "<group>"; };
+		86DC11D723D5C19000E577D9 /* EditProfileConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileConfiguration.swift; sourceTree = "<group>"; };
+		86DC11D823D5C19000E577D9 /* EditProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilePresenter.swift; sourceTree = "<group>"; };
+		86DC11D923D5C19000E577D9 /* EditProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRouter.swift; sourceTree = "<group>"; };
+		86DC11DA23D5C19100E577D9 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		86DC11DB23D5C19100E577D9 /* EditProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileInteractor.swift; sourceTree = "<group>"; };
+		86DC11DC23D5C19100E577D9 /* EditProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileModel.swift; sourceTree = "<group>"; };
+		86DC11DD23D5C19100E577D9 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		86DC11DE23D5C19100E577D9 /* EditProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileManager.swift; sourceTree = "<group>"; };
 		86DF4DD423CC6D25008A8868 /* RegisterEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndPoint.swift; sourceTree = "<group>"; };
 		86E1292323D49E73007CB956 /* TabBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarConfiguration.swift; sourceTree = "<group>"; };
 		86E1292423D49E73007CB956 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
@@ -1023,14 +1039,8 @@
 		66340A1223B4CAD3009DB30A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				6683E30123BCEEFF00250702 /* ProfileConfiguration.swift */,
-				6683E30223BCEEFF00250702 /* ProfilePresenter.swift */,
-				6683E30323BCEEFF00250702 /* ProfileRouter.swift */,
-				6683E30423BCEEFF00250702 /* ProfileViewController.swift */,
-				6683E30523BCEEFF00250702 /* ProfileInteractor.swift */,
-				6683E30623BCEEFF00250702 /* ProfileModel.swift */,
-				6683E30723BCEEFF00250702 /* ProfileViewController.xib */,
-				6683E30823BCEEFF00250702 /* ProfileManager.swift */,
+				86DC11D623D5C16D00E577D9 /* EditProfile */,
+				86DC11CF23D5C0B600E577D9 /* Profile */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -2134,6 +2144,132 @@
 			path = EmailVerificationViews;
 			sourceTree = "<group>";
 		};
+		86DC11CF23D5C0B600E577D9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11D523D5C11E00E577D9 /* ProfileContracts */,
+				86DC11D223D5C0E600E577D9 /* ProfileInteractor */,
+				86DC11D123D5C0D800E577D9 /* ProfilePresenter */,
+				86DC11D023D5C0C400E577D9 /* ProfileRouter */,
+				86DC11D423D5C10800E577D9 /* ProfileServices */,
+				86DC11D323D5C0FA00E577D9 /* ProfileViews */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		86DC11D023D5C0C400E577D9 /* ProfileRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6683E30323BCEEFF00250702 /* ProfileRouter.swift */,
+			);
+			path = ProfileRouter;
+			sourceTree = "<group>";
+		};
+		86DC11D123D5C0D800E577D9 /* ProfilePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6683E30223BCEEFF00250702 /* ProfilePresenter.swift */,
+			);
+			path = ProfilePresenter;
+			sourceTree = "<group>";
+		};
+		86DC11D223D5C0E600E577D9 /* ProfileInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6683E30523BCEEFF00250702 /* ProfileInteractor.swift */,
+			);
+			path = ProfileInteractor;
+			sourceTree = "<group>";
+		};
+		86DC11D323D5C0FA00E577D9 /* ProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				6683E30423BCEEFF00250702 /* ProfileViewController.swift */,
+				6683E30723BCEEFF00250702 /* ProfileViewController.xib */,
+			);
+			path = ProfileViews;
+			sourceTree = "<group>";
+		};
+		86DC11D423D5C10800E577D9 /* ProfileServices */ = {
+			isa = PBXGroup;
+			children = (
+				6683E30623BCEEFF00250702 /* ProfileModel.swift */,
+				6683E30823BCEEFF00250702 /* ProfileManager.swift */,
+			);
+			path = ProfileServices;
+			sourceTree = "<group>";
+		};
+		86DC11D523D5C11E00E577D9 /* ProfileContracts */ = {
+			isa = PBXGroup;
+			children = (
+				6683E30123BCEEFF00250702 /* ProfileConfiguration.swift */,
+			);
+			path = ProfileContracts;
+			sourceTree = "<group>";
+		};
+		86DC11D623D5C16D00E577D9 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11E723D5C1AF00E577D9 /* EditProfileContracts */,
+				86DC11EA23D5C1B900E577D9 /* EditProfileInteractor */,
+				86DC11EB23D5C1BC00E577D9 /* EditProfilePresenter */,
+				86DC11EC23D5C1C000E577D9 /* EditProfileRouter */,
+				86DC11E823D5C1B200E577D9 /* EditProfileServices */,
+				86DC11E923D5C1B500E577D9 /* EditProfileViews */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		86DC11E723D5C1AF00E577D9 /* EditProfileContracts */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11D723D5C19000E577D9 /* EditProfileConfiguration.swift */,
+			);
+			path = EditProfileContracts;
+			sourceTree = "<group>";
+		};
+		86DC11E823D5C1B200E577D9 /* EditProfileServices */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11DC23D5C19100E577D9 /* EditProfileModel.swift */,
+				86DC11DE23D5C19100E577D9 /* EditProfileManager.swift */,
+			);
+			path = EditProfileServices;
+			sourceTree = "<group>";
+		};
+		86DC11E923D5C1B500E577D9 /* EditProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11DA23D5C19100E577D9 /* EditProfileViewController.swift */,
+				86DC11DD23D5C19100E577D9 /* EditProfileViewController.xib */,
+			);
+			path = EditProfileViews;
+			sourceTree = "<group>";
+		};
+		86DC11EA23D5C1B900E577D9 /* EditProfileInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11DB23D5C19100E577D9 /* EditProfileInteractor.swift */,
+			);
+			path = EditProfileInteractor;
+			sourceTree = "<group>";
+		};
+		86DC11EB23D5C1BC00E577D9 /* EditProfilePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11D823D5C19000E577D9 /* EditProfilePresenter.swift */,
+			);
+			path = EditProfilePresenter;
+			sourceTree = "<group>";
+		};
+		86DC11EC23D5C1C000E577D9 /* EditProfileRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86DC11D923D5C19000E577D9 /* EditProfileRouter.swift */,
+			);
+			path = EditProfileRouter;
+			sourceTree = "<group>";
+		};
 		86E128FC23D49781007CB956 /* TapBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -2278,6 +2414,7 @@
 				662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */,
 				668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */,
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
+				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
@@ -2374,6 +2511,7 @@
 				662A16C423C3EA9F00A3695E /* AddFriendsConfiguration.swift in Sources */,
 				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
 				668C210C23C3F5BC00C009A9 /* AddSessionResultManager.swift in Sources */,
+				86DC11E623D5C19100E577D9 /* EditProfileManager.swift in Sources */,
 				668C212823C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift in Sources */,
 				662A16E823C3ECE000A3695E /* MyFriendsRequestRouter.swift in Sources */,
 				662A16D623C3EB7600A3695E /* AddFriendRequestPresenter.swift in Sources */,
@@ -2467,6 +2605,7 @@
 				662A16A623C3E80900A3695E /* MemberOfFriendsInteractor.swift in Sources */,
 				666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */,
 				662A16D523C3EB7600A3695E /* AddFriendRequestConfiguration.swift in Sources */,
+				86DC11E223D5C19100E577D9 /* EditProfileViewController.swift in Sources */,
 				6663368323B40AB3004E537C /* ForgetEmailModel.swift in Sources */,
 				668C211A23C3F6C100C009A9 /* CheckOutRouter.swift in Sources */,
 				662A16D823C3EB7600A3695E /* AddFriendRequestViewController.swift in Sources */,
@@ -2519,6 +2658,7 @@
 				662A16E623C3ECE000A3695E /* MyFriendsRequestConfiguration.swift in Sources */,
 				662A16BA23C3E93900A3695E /* MyFriendsDetailsManager.swift in Sources */,
 				6683E30D23BCEEFF00250702 /* ProfileInteractor.swift in Sources */,
+				86DC11DF23D5C19100E577D9 /* EditProfileConfiguration.swift in Sources */,
 				6683E30E23BCEEFF00250702 /* ProfileModel.swift in Sources */,
 				6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */,
 				86E1293E23D4A15F007CB956 /* SocialPresenter.swift in Sources */,
@@ -2579,6 +2719,7 @@
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
 				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
 				667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */,
+				86DC11E323D5C19100E577D9 /* EditProfileInteractor.swift in Sources */,
 				667E4B7423C3DCA3007354A7 /* MakeWalletPasswordModel.swift in Sources */,
 				6683E2F923BCEEB300250702 /* HelpCenterConfiguration.swift in Sources */,
 				6683E2B523BB631D00250702 /* NotificationSettingConfiguration.swift in Sources */,
@@ -2591,6 +2732,7 @@
 				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
 				668C214B23C3F70F00C009A9 /* BookSessionViewController.swift in Sources */,
+				86DC11E123D5C19100E577D9 /* EditProfileRouter.swift in Sources */,
 				662A16E723C3ECE000A3695E /* MyFriendsRequestPresenter.swift in Sources */,
 				6683E31E23BCEF1600250702 /* SideMenuModel.swift in Sources */,
 				668C214A23C3F70F00C009A9 /* BookSessionRouter.swift in Sources */,
@@ -2628,6 +2770,7 @@
 				668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */,
 				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
 				86E1293C23D4A15A007CB956 /* SocialModel.swift in Sources */,
+				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
 				668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */,
@@ -2653,6 +2796,7 @@
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,
+				86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */,
 				668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */,
 				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
 				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,

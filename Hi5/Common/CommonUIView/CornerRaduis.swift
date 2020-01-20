@@ -21,4 +21,9 @@ class CreateCornerRauis {
         button.layer.cornerRadius = number
         return button
     }
+    
+    static func imageViewRaduis(view:UIImageView , number: CGFloat)-> UIImageView {
+        view.layer.cornerRadius = number
+        return view
+    }
 }

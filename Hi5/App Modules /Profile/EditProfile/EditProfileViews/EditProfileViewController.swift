@@ -27,17 +27,41 @@ class EditProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 //MARK:- Outlets
+    @IBOutlet weak var photoView: UIView!
+    @IBOutlet weak var biographyContainerView: UIView!
+    @IBOutlet weak var fullnameContainerView: UIView!
+    @IBOutlet weak var locationContainerView: UIView!
+    @IBOutlet weak var dateOfBirthContainerView: UIView!
+    @IBOutlet weak var genderContainerView: UIView!
+    @IBOutlet weak var saveBtn: UIButton!
     
-    
-
 //MARK:- View Life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        initView()
+        configure()
     }
 //MARK:- Actions
+    @IBAction func saveBtnTapped(_ sender: UIButton) {
+        saveBtnAction()
+    }
     
+    @IBAction func editPhotoBtnTapped(_ sender: UIButton) {
+        editPhotoBtnAction()
+    }
     
+    @IBAction func locationBtnTapped(_ sender: UIButton) {
+        locationBtnAction()
+    }
+    
+    @IBAction func dateOfBirthBtnTapped(_ sender: UIButton) {
+        dateOfBirthBtnAction()
+    }
+    
+    @IBAction func genderBtnTapped(_ sender: UIButton) {
+        genderBtnAction()
+    }
 }
 //MARK:- Extensions
 extension EditProfileViewController: IEditProfileViewController {
@@ -55,5 +79,40 @@ extension EditProfileViewController {
 }
 
 extension EditProfileViewController {
-	// do someting...
+    func initView() {
+        self.photoView = CreateCornerRauis.viewRaduis(view: self.photoView, number: (self.photoView.frame.size.height / 2))
+        self.biographyContainerView = CreateCornerRauis.viewRaduis(view: self.biographyContainerView, number: 5)
+        self.fullnameContainerView = CreateCornerRauis.viewRaduis(view: self.fullnameContainerView, number: 5)
+        self.locationContainerView = CreateCornerRauis.viewRaduis(view: self.locationContainerView, number: 5)
+        self.dateOfBirthContainerView = CreateCornerRauis.viewRaduis(view: self.dateOfBirthContainerView, number: 5)
+        self.genderContainerView = CreateCornerRauis.viewRaduis(view: self.genderContainerView, number: 5)
+          // MARK : - Button  raduis
+        self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
+    }
+    
+    func configure() {
+        router = EditProfileRouter(view: self)
+    }
+}
+
+extension EditProfileViewController {
+     func saveBtnAction() {
+        
+    }
+    
+    func editPhotoBtnAction() {
+        
+    }
+    
+    func locationBtnAction() {
+        
+    }
+    
+    func dateOfBirthBtnAction() {
+        router?.navigateToDateOfBirth()
+    }
+    
+    func genderBtnAction() {
+        router?.navigateToGender()
+    }
 }

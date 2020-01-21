@@ -37,6 +37,8 @@ enum GeneralRoute: IRouter {
     case tabBar
     case profile
     case editProfile
+    case gender
+    case dateOfBirth
 }
 
 extension GeneralRoute {
@@ -84,6 +86,10 @@ extension GeneralRoute {
             return ProfileConfiguration.setup()
         case .editProfile:
             return EditProfileConfiguration.setup()
+        case .gender:
+            return GenderConfiguration.setup()
+        case .dateOfBirth:
+            return DateOfBirthConfiguration.setup()
         }
     }
 }

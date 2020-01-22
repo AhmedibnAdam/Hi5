@@ -21,6 +21,8 @@ class ForgetEmailViewController: UIViewController, UITextFieldDelegate {
 	var router: IForgetEmailRouter?
     
     //MARK:- Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
@@ -41,6 +43,7 @@ class ForgetEmailViewController: UIViewController, UITextFieldDelegate {
     }
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: Any) {
+        showIndicator()
         continueBtnAction()
     }
     
@@ -67,6 +70,10 @@ extension ForgetEmailViewController {
     
     func configer(){
         router = ForgetEmailRouter(view: self)
+    }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
     }
 }
 

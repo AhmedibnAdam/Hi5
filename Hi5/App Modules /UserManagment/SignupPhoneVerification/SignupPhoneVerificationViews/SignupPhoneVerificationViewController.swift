@@ -22,6 +22,7 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
     
     //MARK:- Outlets
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textField4: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -40,6 +41,10 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
         self.textField2.delegate = self
         self.textField3.delegate = self
         self.textField4.delegate = self
+        textField1.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        textField2.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        textField3.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        textField4.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         initView()
         configer()
     }
@@ -51,6 +56,10 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
         self.view.endEditing(true)
         return false
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        textField.text = ""
+    }
     //MARK:- Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -58,7 +67,6 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
     
     @IBAction func continueBtnTapped(_ sender: UIButton) {
          continueBtnAction()
-        //router?.navigateToWelcome()
     }
     
     @IBAction func resendBtnTapped(_ sender: UIButton) {
@@ -95,6 +103,44 @@ extension SignupPhoneVerificationViewController {
     func configer(){
         router = SignupPhoneVerificationRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+    
+    @objc func textFieldDidChange(textField: UITextField){
+
+//        if(textField1.text?.count == 1){
+//            textField2.becomeFirstResponder()
+//        } else if(textField2.text?.count == 1){
+//            textField3.becomeFirstResponder()
+//        } else if(textField3.text?.count == 1){
+//            textField4.becomeFirstResponder()
+//        }
+        
+        let text = textField.text
+
+        if (text?.utf16.count)! >= 1{
+            switch textField{
+            case textField1:
+                textField2.becomeFirstResponder()
+            case textField2:
+                textField3.becomeFirstResponder()
+            case textField3:
+                textField4.becomeFirstResponder()
+            case textField4:
+                textField4.resignFirstResponder()
+            default:
+                break
+            }
+        }else{
+
+        }
+    }
+    
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
 }
 
 extension SignupPhoneVerificationViewController {
@@ -105,13 +151,16 @@ extension SignupPhoneVerificationViewController {
         } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
             showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
         }
+        showIndicator()
         let code = text1+text2+text3+text4
         interactor?.doSignupPhoneVerification(view: self, code: code)
         
     }
     
     func resendBtnAction() {
+        showIndicator()
         interactor?.doSignupResendVerificationCode(view: self)
     }
 }
+
 

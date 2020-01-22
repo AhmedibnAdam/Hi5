@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateOfBirthViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="RJP-ah-x63" id="PhQ-7T-J6C"/>
+                <outlet property="dateOfBirth" destination="cVk-as-Suc" id="BP1-kT-GBo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,10 +27,23 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-ah-x63">
-                    <rect key="frame" x="30" y="171.5" width="315" height="140"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="30" y="171.5" width="315" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Click here Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-as-Suc">
+                            <rect key="frame" x="10" y="0.0" width="295" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cBO-1N-uh6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.95505136986301364" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="Z7g-ll-QT3"/>
+                        <constraint firstItem="cVk-as-Suc" firstAttribute="leading" secondItem="RJP-ah-x63" secondAttribute="leading" constant="10" id="FsS-aE-8qD"/>
+                        <constraint firstAttribute="trailing" secondItem="cVk-as-Suc" secondAttribute="trailing" constant="10" id="dAO-aF-Pb9"/>
+                        <constraint firstItem="cVk-as-Suc" firstAttribute="top" secondItem="RJP-ah-x63" secondAttribute="top" id="pqM-n1-7rG"/>
+                        <constraint firstAttribute="bottom" secondItem="cVk-as-Suc" secondAttribute="bottom" id="xZ5-uS-FTH"/>
                     </constraints>
                 </view>
             </subviews>

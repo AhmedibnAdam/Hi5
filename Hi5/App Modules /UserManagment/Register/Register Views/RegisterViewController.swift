@@ -22,6 +22,8 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
 	var interactor: IRegisterInteractor?
 	var router: IRegisterRouter?
     //MARK:- Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var checkBoxBtn: UIButton!
     @IBOutlet weak var countryCode: FPNTextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -58,6 +60,7 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
         if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
+            
             signupAction()
              }
         else {
@@ -111,6 +114,10 @@ extension RegisterViewController {
     func configer(){
         router = RegisterRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
 }
 
 extension RegisterViewController {
@@ -126,6 +133,7 @@ extension RegisterViewController {
          }
         let defaults = UserDefaults.standard
         defaults.set(fullName, forKey: "FullName") as? String
+        showIndicator()
         interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phone)
     }
     func loginBtnAction() {

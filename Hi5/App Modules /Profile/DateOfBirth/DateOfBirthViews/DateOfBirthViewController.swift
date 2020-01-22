@@ -20,6 +20,8 @@ class DateOfBirthViewController: UIViewController {
 	var interactor: IDateOfBirthInteractor?
 	var router: IDateOfBirthRouter?
     
+    private var datePicker: UIDatePicker?
+    
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
     }()
@@ -29,14 +31,18 @@ class DateOfBirthViewController: UIViewController {
     }
     //MARK:- Outlets
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var dateOfBirth: UITextField!
     
-
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupNavigationBar()
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
+        dateOfBirth.inputView = datePicker
     
     }
-    
     //MARK:- Actions
     
     
@@ -55,8 +61,22 @@ extension DateOfBirthViewController {
         navigationItem.setLeftBarButton(backBtn, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
+    
+    func initNiew() {
+        
+    }
 }
 
 extension DateOfBirthViewController {
-
+    
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateOfBirth.text = dateFormatter.string(from: datePicker.date)
+        view.endEditing(true)
+    }
 }

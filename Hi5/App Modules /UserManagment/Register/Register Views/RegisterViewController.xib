@@ -18,6 +18,7 @@
                 <outlet property="countryCode" destination="dDf-4i-Inu" id="SDr-h9-AFd"/>
                 <outlet property="fullNameTextField" destination="V38-pp-YMm" id="vk1-5m-Aqe"/>
                 <outlet property="fullNameView" destination="p94-w9-2KJ" id="JJE-Lg-ny6"/>
+                <outlet property="loadingIndicator" destination="7zo-Kp-AxT" id="pf8-1U-ZNO"/>
                 <outlet property="logoView" destination="wov-zu-F1b" id="FUs-K9-co8"/>
                 <outlet property="phoneNumberTextField" destination="nIg-Wo-HDN" id="BPn-VZ-DdB"/>
                 <outlet property="phoneNumberView" destination="ahN-1d-rvI" id="fhs-3V-pXx"/>
@@ -183,10 +184,10 @@
                     <rect key="frame" x="0.0" y="267" width="375" height="400"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-V7-NoN">
-                            <rect key="frame" x="20" y="67" width="335" height="272"/>
+                            <rect key="frame" x="20" y="67" width="335" height="280"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dMX-rE-DGM">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="215"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9H-le-aHB">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -253,27 +254,27 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UDa-6U-Uzn">
-                                            <rect key="frame" x="0.0" y="185" width="335" height="22"/>
+                                            <rect key="frame" x="0.0" y="185" width="335" height="30"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ej5-Y4-7v0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="22"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="18" height="30"/>
                                                     <state key="normal" image="checkBox"/>
                                                     <connections>
                                                         <action selector="checkBoxBtn:" destination="-1" eventType="touchUpInside" id="LGz-oB-kDV"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I accept Terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJf-K4-ad3">
-                                                    <rect key="frame" x="28" y="0.0" width="307" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-qp-MJo">
+                                                    <rect key="frame" x="28" y="0.0" width="307" height="30"/>
+                                                    <state key="normal" title="I accept Terms and Conditions">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZJ-Lc-FV3">
-                                    <rect key="frame" x="0.0" y="222" width="335" height="50"/>
+                                    <rect key="frame" x="0.0" y="230" width="335" height="50"/>
                                     <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="5Gp-ye-AV6"/>
@@ -325,6 +326,10 @@
                                 </button>
                             </subviews>
                         </stackView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7zo-Kp-AxT">
+                            <rect key="frame" x="169" y="181.5" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -332,7 +337,9 @@
                         <constraint firstItem="hJd-Qn-sAc" firstAttribute="leading" secondItem="gQo-WF-vhN" secondAttribute="leading" constant="10" id="2eh-TE-ZPr"/>
                         <constraint firstItem="hJd-Qn-sAc" firstAttribute="top" secondItem="DIe-eW-4pI" secondAttribute="bottom" constant="5" id="5d1-aC-f4J"/>
                         <constraint firstAttribute="bottom" secondItem="bas-4x-LTb" secondAttribute="bottom" constant="10" id="6bj-qX-JY4"/>
+                        <constraint firstItem="7zo-Kp-AxT" firstAttribute="centerY" secondItem="gQo-WF-vhN" secondAttribute="centerY" id="7n4-0d-FEe"/>
                         <constraint firstItem="oc0-V7-NoN" firstAttribute="leading" secondItem="gQo-WF-vhN" secondAttribute="leading" constant="20" id="J2O-Ge-dgt"/>
+                        <constraint firstItem="7zo-Kp-AxT" firstAttribute="centerX" secondItem="gQo-WF-vhN" secondAttribute="centerX" id="MXW-3D-g7E"/>
                         <constraint firstItem="bas-4x-LTb" firstAttribute="centerX" secondItem="gQo-WF-vhN" secondAttribute="centerX" id="WZk-Yp-FG3"/>
                         <constraint firstAttribute="trailing" secondItem="oc0-V7-NoN" secondAttribute="trailing" constant="20" id="kD4-ld-zUg"/>
                         <constraint firstItem="DIe-eW-4pI" firstAttribute="centerX" secondItem="gQo-WF-vhN" secondAttribute="centerX" id="kxM-bO-MDq"/>

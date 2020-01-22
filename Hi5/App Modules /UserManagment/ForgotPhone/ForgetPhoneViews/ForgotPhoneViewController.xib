@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgotPhoneViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="continueBtn" destination="xF2-Hi-PLh" id="fFJ-oa-c90"/>
+                <outlet property="loadingIndicator" destination="4Xd-Ri-voo" id="euf-LW-vCU"/>
                 <outlet property="phoneNumberTextField" destination="Aaa-NZ-dmh" id="bWg-nL-dVW"/>
                 <outlet property="view" destination="zp5-DQ-HCq" id="5Qv-Sa-qef"/>
             </connections>
@@ -79,14 +80,20 @@
                                 <constraint firstAttribute="bottom" secondItem="pEq-Ue-lcm" secondAttribute="bottom" constant="10" id="tTX-Rl-rfj"/>
                             </constraints>
                         </view>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="4Xd-Ri-voo">
+                            <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="xF2-Hi-PLh" secondAttribute="trailing" constant="10" id="6pj-l6-nQu"/>
+                        <constraint firstItem="4Xd-Ri-voo" firstAttribute="centerY" secondItem="WOw-pd-Ps9" secondAttribute="centerY" id="6rp-36-e4g"/>
                         <constraint firstItem="uXK-zZ-aHv" firstAttribute="leading" secondItem="WOw-pd-Ps9" secondAttribute="leading" constant="30" id="7Oq-kb-2XI"/>
                         <constraint firstItem="gGl-0s-Zmd" firstAttribute="leading" secondItem="WOw-pd-Ps9" secondAttribute="leading" constant="10" id="MOk-R4-ftS"/>
                         <constraint firstItem="hdU-rw-GJN" firstAttribute="centerX" secondItem="WOw-pd-Ps9" secondAttribute="centerX" id="N7p-7h-QOE"/>
                         <constraint firstItem="uXK-zZ-aHv" firstAttribute="top" secondItem="WOw-pd-Ps9" secondAttribute="top" constant="40" id="SaE-JA-pb9"/>
+                        <constraint firstItem="4Xd-Ri-voo" firstAttribute="centerX" secondItem="WOw-pd-Ps9" secondAttribute="centerX" id="cRH-b3-Jdg"/>
                         <constraint firstItem="gGl-0s-Zmd" firstAttribute="top" secondItem="hdU-rw-GJN" secondAttribute="bottom" constant="100" id="ekj-1I-J7f"/>
                         <constraint firstItem="xF2-Hi-PLh" firstAttribute="leading" secondItem="WOw-pd-Ps9" secondAttribute="leading" constant="10" id="mIs-dn-dan"/>
                         <constraint firstAttribute="trailing" secondItem="gGl-0s-Zmd" secondAttribute="trailing" constant="10" id="sAL-1G-KJG"/>

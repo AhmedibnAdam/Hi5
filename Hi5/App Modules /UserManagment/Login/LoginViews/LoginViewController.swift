@@ -21,6 +21,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
     //MARK: - view outlet
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userName: UITextField!
@@ -75,6 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         router?.navigateToSignUp()
     }
     @IBAction func doLogin(_ sender: UIButton) {
+        showIndecator()
         doLoginAction()
     }
 }
@@ -101,6 +104,10 @@ extension LoginViewController {
     
     func configer(){
         router = LoginRouter(view: self)
+    }
+    
+    func showIndecator() {
+        loadingIndicator.isHidden = false
     }
 }
 

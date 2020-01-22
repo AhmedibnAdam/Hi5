@@ -20,6 +20,7 @@ class NewPasswordViewController: UIViewController, UITextFieldDelegate {
 	var router: INewPasswordRouter?
     //MARK:- Outlets
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var confirmPasswordBtnEye: UIButton!
     @IBOutlet weak var passwordBtnEye: UIButton!
     @IBOutlet weak var logoView: UIView!
@@ -67,6 +68,7 @@ class NewPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func getStartedBtnTapped(_ sender: Any) {
+        showIndicator()
         
     }
     
@@ -94,6 +96,11 @@ extension NewPasswordViewController {
     func configer(){
         router = NewPasswordRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+
 }
 
 extension NewPasswordViewController {
@@ -106,6 +113,7 @@ extension NewPasswordViewController {
         } else if(password != confirmPassword) {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
         }
+        showIndicator()
 //        interactor?.doCreatePassword(view: self, password: password, confirmPassword: confirmPassword)
     }
 }

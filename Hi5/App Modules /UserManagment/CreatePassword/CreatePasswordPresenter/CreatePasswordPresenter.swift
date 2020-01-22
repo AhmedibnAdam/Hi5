@@ -12,7 +12,7 @@ import UIKit
 
 protocol ICreatePasswordPresenter: class {
 	func showErrorAlert(title: String, msg: String)
-    func navigateToWelcome()
+    func navigateToProfile()
 }
 
 class CreatePasswordPresenter: ICreatePasswordPresenter {
@@ -27,7 +27,7 @@ class CreatePasswordPresenter: ICreatePasswordPresenter {
         view?.showAlert(title: title, msg: msg)
     }
     
-    func navigateToWelcome() {
-        
+    func navigateToProfile() {
+        view?.navigateToProfile()
     }
 }

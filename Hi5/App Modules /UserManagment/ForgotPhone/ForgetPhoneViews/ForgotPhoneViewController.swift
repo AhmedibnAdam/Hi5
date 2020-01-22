@@ -18,6 +18,8 @@ class ForgotPhoneViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IForgotPhoneInteractor?
 	var router: IForgotPhoneRouter?
     //MARK:- Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
@@ -41,6 +43,7 @@ class ForgotPhoneViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func continueBtnTapped(_ sender: Any) {
+        showIndicator()
         router?.navigateToPhoneVerification()
     }
 }
@@ -55,8 +58,13 @@ extension ForgotPhoneViewController {
     self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
   }
     
-func configer(){
+  func configer(){
     router = ForgotPhoneRouter(view: self)
   }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+    
 }
 

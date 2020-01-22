@@ -19,6 +19,8 @@ class WelcomeViewController: UIViewController {
 	var router: IWelcomeRouter?
     //MARK:- Outlets
     
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var fullnameLbl: UILabel!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var containerView2: UIView!
@@ -31,6 +33,7 @@ class WelcomeViewController: UIViewController {
         initView()
         configer()
         fetchFullName()
+        fetchUsername()
 		
     }
     //MARK:- Actions
@@ -39,10 +42,12 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func continueBtnTapped(_ sender: UIButton) {
+       // showIndicator()
         router?.navigateToCreatePassword()
     }
     
     @IBAction func changeUsernameBtnTapped(_ sender: UIButton) {
+        //showIndicator()
         router?.navigateToChangeUsername()
     }
     
@@ -67,14 +72,27 @@ extension WelcomeViewController {
           // MARK : - Button  raduis
         self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
     }
+    
     func configer(){
         router = WelcomeRouter(view: self)
     }
+    
     func fetchFullName() {
         let defaults = UserDefaults.standard
         let fullName = defaults.string(forKey: "FullName")
         fullnameLbl.text = fullName
     }
+    
+    func fetchUsername() {
+        let defaults = UserDefaults.standard
+        guard let userName = defaults.string(forKey: "UserName") else {return}
+        descriptionLbl.text = "Hi \(String(describing: userName)) Find friends, create trainings and participate in matches. You can change your username at any time."
+    }
+    
+//    func showIndicator() {
+//        loadingIndicator.isHidden = false
+//    }
+    
     
 }
 

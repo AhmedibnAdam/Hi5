@@ -29,7 +29,7 @@ class CreatePasswordInteractor: ICreatePasswordInteractor {
     func doCreatePassword(view: UIViewController, password: String, confirmPassword: String) {
         manager?.createPasswordFromApi(password: password , confirmPassword: confirmPassword, complition: { (error , success) in
             if (success == true) {
-                self.presenter?.navigateToWelcome()
+                self.presenter?.navigateToProfile()
             } else {
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }

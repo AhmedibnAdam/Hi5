@@ -13,7 +13,7 @@ import UIKit
 protocol ICreatePasswordViewController: class {
 	var router: ICreatePasswordRouter? { get set }
     func showAlert(title: String, msg: String)
-    func navigateToWelcome()
+    func navigateToProfile()
 }
 
 class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
@@ -21,6 +21,7 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
 	var router: ICreatePasswordRouter?
     //MARK:- Outlets
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var passwordEyebtn: UIButton!
     @IBOutlet weak var confirmPasswordView: UIView!
     @IBOutlet weak var passwordView: UIView!
@@ -32,6 +33,8 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var containerView3: UIView!
     @IBOutlet weak var containerView1: UIView!
     @IBOutlet weak var logoView: UIView!
+    
+    //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.passwordTextField.delegate = self
@@ -89,8 +92,8 @@ extension CreatePasswordViewController: ICreatePasswordViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-    func navigateToWelcome() {
-        router?.navigateToWelcome()
+    func navigateToProfile() {
+        router?.navigateToProfile()
     }
 }
 
@@ -111,6 +114,11 @@ extension CreatePasswordViewController {
     func configer(){
         router = CreatePasswordRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+
 }
 
 extension CreatePasswordViewController {
@@ -123,6 +131,7 @@ extension CreatePasswordViewController {
         } else if(password != confirmPassword) {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
         }
+        showIndicator()
         interactor?.doCreatePassword(view: self, password: password, confirmPassword: confirmPassword)
     }
     func loginBtnAction() {

@@ -15,6 +15,7 @@
                 <outlet property="containerView2" destination="E1o-Nw-GT9" id="Drf-kO-CA8"/>
                 <outlet property="containerView3" destination="wpM-oJ-aRg" id="12M-de-rT7"/>
                 <outlet property="containerView4" destination="HZu-kn-5lN" id="iWR-MF-Qn3"/>
+                <outlet property="loadingIndicator" destination="i4a-t5-AfW" id="hav-pl-axh"/>
                 <outlet property="logoView" destination="c8E-1O-Fab" id="L63-Ig-QkC"/>
                 <outlet property="usernameTextField" destination="UTF-OJ-tTt" id="N8E-jQ-mRf"/>
                 <outlet property="view" destination="kb9-Zv-aUt" id="C09-pC-0wL"/>
@@ -191,7 +192,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZWu-UH-aY1">
-                            <rect key="frame" x="20" y="117.5" width="335" height="145.5"/>
+                            <rect key="frame" x="20" y="107.5" width="335" height="145.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O9c-xy-nI6">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="80.5"/>
@@ -282,6 +283,10 @@
                                 </button>
                             </subviews>
                         </stackView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="i4a-t5-AfW">
+                            <rect key="frame" x="169" y="181.5" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
@@ -291,8 +296,10 @@
                         <constraint firstItem="l7W-k8-0Hr" firstAttribute="leading" secondItem="rBZ-1x-IGM" secondAttribute="leading" constant="10" id="Jd8-gJ-FJa"/>
                         <constraint firstAttribute="trailing" secondItem="l7W-k8-0Hr" secondAttribute="trailing" constant="10" id="Tmc-LR-fvC"/>
                         <constraint firstItem="Ygi-81-GhI" firstAttribute="centerX" secondItem="rBZ-1x-IGM" secondAttribute="centerX" id="W9O-kl-cSH"/>
-                        <constraint firstItem="ZWu-UH-aY1" firstAttribute="top" secondItem="l7W-k8-0Hr" secondAttribute="bottom" constant="40" id="cXD-Gf-6Fx"/>
+                        <constraint firstItem="i4a-t5-AfW" firstAttribute="centerY" secondItem="rBZ-1x-IGM" secondAttribute="centerY" id="bz8-hD-p3d"/>
+                        <constraint firstItem="ZWu-UH-aY1" firstAttribute="top" secondItem="l7W-k8-0Hr" secondAttribute="bottom" constant="30" id="cXD-Gf-6Fx"/>
                         <constraint firstAttribute="bottom" secondItem="iT4-uE-s2s" secondAttribute="bottom" constant="10" id="fF6-Q4-0Pj"/>
+                        <constraint firstItem="i4a-t5-AfW" firstAttribute="centerX" secondItem="rBZ-1x-IGM" secondAttribute="centerX" id="qg0-sk-CYG"/>
                         <constraint firstItem="iT4-uE-s2s" firstAttribute="centerX" secondItem="rBZ-1x-IGM" secondAttribute="centerX" id="vUi-HX-bqR"/>
                     </constraints>
                 </view>

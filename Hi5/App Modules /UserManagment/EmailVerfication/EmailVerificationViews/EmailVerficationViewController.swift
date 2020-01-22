@@ -18,6 +18,8 @@ class EmailVerficationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IEmailVerficationInteractor?
 	var router: IEmailVerficationRouter?
     //MARK: - Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var textField4: UITextField!
@@ -40,11 +42,11 @@ class EmailVerficationViewController: UIViewController, UITextFieldDelegate {
     }
     // MARK: - Actions
     @IBAction func continueBtnTapped(_ sender: Any) {
-        
+        showIndicator()
     }
     
     @IBAction func resendBtnTapped(_ sender: Any) {
-        
+        showIndicator()
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -57,6 +59,8 @@ extension EmailVerficationViewController: IEmailVerficationViewController {
 }
 
 extension EmailVerficationViewController {
-	// do someting...
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
 }
 

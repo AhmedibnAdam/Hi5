@@ -20,6 +20,8 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IPhoneVerificationInteractor?
 	var router: IPhoneVerificationRouter?
     //MARK: - Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -45,10 +47,12 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     }
     //MARK: - Actions
     @IBAction func continueBtnTapped(_ sender: Any) {
+        showIndicator()
         continueBtnAction()
     }
     
     @IBAction func resendBtnTapped(_ sender: Any) {
+        showIndicator()
         resendBtnAction()
     }
     
@@ -75,6 +79,10 @@ extension PhoneVerificationViewController {
     
     func configer(){
         router = PhoneVerificationRouter(view: self)
+    }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
     }
 }
 

@@ -21,6 +21,7 @@ class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
 	var router: IChangeUsernameRouter?
     //MARK:- Outlets
 
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var changeBtn: UIButton!
@@ -80,6 +81,10 @@ extension ChangeUsernameViewController {
     func configer(){
         router = ChangeUsernameRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
 }
 
 extension ChangeUsernameViewController {
@@ -94,6 +99,7 @@ extension ChangeUsernameViewController {
         } else {
             checkMark.isHidden = false
         }
+        showIndicator()
         interactor?.doChangeUserName(view: self, username: username)
     }
     

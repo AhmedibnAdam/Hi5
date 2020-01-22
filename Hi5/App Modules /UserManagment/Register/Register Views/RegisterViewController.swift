@@ -18,7 +18,7 @@ protocol IRegisterViewController: class {
     func navigateToSignupPhoneVerification()
 }
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController , UITextFieldDelegate{
 	var interactor: IRegisterInteractor?
 	var router: IRegisterRouter?
     //MARK:- Outlets
@@ -39,9 +39,20 @@ class RegisterViewController: UIViewController {
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.fullNameTextField.delegate = self
+        self.phoneNumberTextField.delegate = self
         initView()
         configer()
         delegateCountryCode()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     //MARK:- Actions

@@ -16,7 +16,7 @@ protocol ISignupPhoneVerificationViewController: class {
     func navigateToCreatePassword()
 }
 
-class SignupPhoneVerificationViewController: UIViewController {
+class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ISignupPhoneVerificationInteractor?
 	var router: ISignupPhoneVerificationRouter?
     
@@ -36,8 +36,20 @@ class SignupPhoneVerificationViewController: UIViewController {
     @IBOutlet weak var containerView1: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textField1.delegate = self
+        self.textField2.delegate = self
+        self.textField3.delegate = self
+        self.textField4.delegate = self
         initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK:- Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {

@@ -9,9 +9,11 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import ActionSheetPicker_3_0
 
 protocol IDateOfBirthViewController: class {
 	var router: IDateOfBirthRouter? { get set }
+    func showAlert(title: String, msg: String)
 }
 
 class DateOfBirthViewController: UIViewController {
@@ -25,15 +27,26 @@ class DateOfBirthViewController: UIViewController {
     @objc func dismissView() {
         dismiss(animated: true, completion: nil)
     }
+    //MARK:- Outlets
+    @IBOutlet weak var containerView: UIView!
+    
 
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupNavigationBar()
+    
     }
+    
+    //MARK:- Actions
+    
+    
 }
 
+//MARK:- Extensions
 extension DateOfBirthViewController: IDateOfBirthViewController {
-	// do someting...
+     func showAlert(title: String, msg: String) {
+      ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
 }
 
 extension DateOfBirthViewController {
@@ -45,5 +58,5 @@ extension DateOfBirthViewController {
 }
 
 extension DateOfBirthViewController {
-	// do someting...
+
 }

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForgotPhoneViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="continueBtn" destination="xF2-Hi-PLh" id="fFJ-oa-c90"/>
+                <outlet property="phoneNumberTextField" destination="Aaa-NZ-dmh" id="bWg-nL-dVW"/>
                 <outlet property="view" destination="zp5-DQ-HCq" id="5Qv-Sa-qef"/>
             </connections>
         </placeholder>

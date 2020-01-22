@@ -14,15 +14,26 @@ protocol IForgotPhoneViewController: class {
 	var router: IForgotPhoneRouter? { get set }
 }
 
-class ForgotPhoneViewController: UIViewController {
+class ForgotPhoneViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IForgotPhoneInteractor?
 	var router: IForgotPhoneRouter?
     //MARK:- Outlets
     @IBOutlet weak var continueBtn: UIButton!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.phoneNumberTextField.delegate = self
 		initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK: - Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {

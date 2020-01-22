@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "982A68D37F5DCBC1FC1FDC0BB2F0EB8E"
-               BuildableName = "IQKeyboardManagerSwift.bundle"
-               BlueprintName = "IQKeyboardManagerSwift-IQKeyboardManagerSwift"
+               BlueprintIdentifier = "A43B25DDF20FCB9228471F8F5135C866"
+               BuildableName = "ActionSheetPicker_3_0.framework"
+               BlueprintName = "ActionSheetPicker-3.0"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -16,7 +16,7 @@ protocol ILoginViewController: class {
     func navigateToProfile()
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
@@ -38,8 +38,19 @@ class LoginViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.userName.delegate = self
+        self.password.delegate = self
         initView()
         configer()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     //MARK: - Actions

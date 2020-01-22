@@ -16,7 +16,7 @@ protocol ICreatePasswordViewController: class {
     func navigateToWelcome()
 }
 
-class CreatePasswordViewController: UIViewController {
+class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ICreatePasswordInteractor?
 	var router: ICreatePasswordRouter?
     //MARK:- Outlets
@@ -34,8 +34,18 @@ class CreatePasswordViewController: UIViewController {
     @IBOutlet weak var logoView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.passwordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
 		initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     //MARK:- Actions

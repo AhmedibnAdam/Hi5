@@ -15,5 +15,6 @@ target 'Hi5' do
    pod 'SwiftyJSON'
    pod 'DropDown'
    pod 'FlagPhoneNumber'
+   pod 'ActionSheetPicker-3.0'
 
 end

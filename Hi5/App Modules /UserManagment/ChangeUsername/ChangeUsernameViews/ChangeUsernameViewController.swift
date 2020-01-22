@@ -16,7 +16,7 @@ protocol IChangeUsernameViewController: class {
     func navigateToCreatePassword()
 }
 
-class ChangeUsernameViewController: UIViewController {
+class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IChangeUsernameInteractor?
 	var router: IChangeUsernameRouter?
     //MARK:- Outlets
@@ -31,8 +31,17 @@ class ChangeUsernameViewController: UIViewController {
     @IBOutlet weak var logoView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.usernameTextField.delegate = self
         initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK:- Actions
     @IBAction func changeBtnTapped(_ sender: UIButton) {

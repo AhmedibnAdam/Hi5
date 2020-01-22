@@ -16,7 +16,7 @@ protocol IForgetEmailViewController: class {
     func navigateToEmailVerification()
 }
 
-class ForgetEmailViewController: UIViewController {
+class ForgetEmailViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IForgetEmailInteractor?
 	var router: IForgetEmailRouter?
     
@@ -27,8 +27,17 @@ class ForgetEmailViewController: UIViewController {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailTextField.delegate = self
 		initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: Any) {

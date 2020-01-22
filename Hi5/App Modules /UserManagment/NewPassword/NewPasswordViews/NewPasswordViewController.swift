@@ -15,7 +15,7 @@ protocol INewPasswordViewController: class {
     func showAlert(title: String, msg: String)
 }
 
-class NewPasswordViewController: UIViewController {
+class NewPasswordViewController: UIViewController, UITextFieldDelegate {
 	var interactor: INewPasswordInteractor?
 	var router: INewPasswordRouter?
     //MARK:- Outlets
@@ -30,8 +30,18 @@ class NewPasswordViewController: UIViewController {
     @IBOutlet weak var newPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.newPasswordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
         initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK: - Actions
     @IBAction func passwordBtnEyeTapped(_ sender: UIButton) {

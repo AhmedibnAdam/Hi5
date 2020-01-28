@@ -9,8 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateOfBirthViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
-                <outlet property="containerView" destination="RJP-ah-x63" id="PhQ-7T-J6C"/>
-                <outlet property="dateOfBirth" destination="cVk-as-Suc" id="BP1-kT-GBo"/>
+                <outlet property="datePicker" destination="sUb-HZ-04c" id="lIS-wg-vWP"/>
+                <outlet property="saveBtn" destination="0dy-la-Bat" id="Qhw-uG-wgN"/>
+                <outlet property="theMonthAndDayLbl" destination="SPx-9e-Uf6" id="pCz-Kx-o1u"/>
+                <outlet property="theYearLbl" destination="gl6-6D-mSx" id="sST-zj-HrA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,38 +28,87 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-ah-x63">
-                    <rect key="frame" x="30" y="171.5" width="315" height="40"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-HZ-04c">
+                    <rect key="frame" x="0.0" y="191.5" width="375" height="216"/>
+                    <connections>
+                        <action selector="datePickerChanged:" destination="-1" eventType="valueChanged" id="fsr-fo-mY4"/>
+                    </connections>
+                </datePicker>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-9B-Z3B">
+                    <rect key="frame" x="10" y="417.5" width="355" height="30"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Click here Date Of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-as-Suc">
-                            <rect key="frame" x="10" y="0.0" width="295" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="cBO-1N-uh6"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRC-NI-DYm">
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="30"/>
+                            <state key="normal" title="who can see the month and day">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="theMonthAbdDateBtnTapped:" destination="-1" eventType="touchUpInside" id="z2O-QQ-apj"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPx-9e-Uf6">
+                            <rect key="frame" x="308" y="0.0" width="47" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" white="0.95505136986301364" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmz-vN-Zb1">
+                    <rect key="frame" x="10" y="467.5" width="355" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg5-MJ-xvT">
+                            <rect key="frame" x="0.0" y="0.0" width="291.5" height="30"/>
+                            <state key="normal" title="who can see the year">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="yearBtnTapped:" destination="-1" eventType="touchUpInside" id="PGg-7S-NYO"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl6-6D-mSx">
+                            <rect key="frame" x="291.5" y="0.0" width="63.5" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dy-la-Bat">
+                    <rect key="frame" x="10" y="587" width="355" height="50"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="cVk-as-Suc" firstAttribute="leading" secondItem="RJP-ah-x63" secondAttribute="leading" constant="10" id="FsS-aE-8qD"/>
-                        <constraint firstAttribute="trailing" secondItem="cVk-as-Suc" secondAttribute="trailing" constant="10" id="dAO-aF-Pb9"/>
-                        <constraint firstItem="cVk-as-Suc" firstAttribute="top" secondItem="RJP-ah-x63" secondAttribute="top" id="pqM-n1-7rG"/>
-                        <constraint firstAttribute="bottom" secondItem="cVk-as-Suc" secondAttribute="bottom" id="xZ5-uS-FTH"/>
+                        <constraint firstAttribute="height" constant="50" id="Ptg-I4-zYa"/>
                     </constraints>
-                </view>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="saveBtnTapped:" destination="-1" eventType="touchUpInside" id="WN7-0N-qeY"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nFs-lI-12T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="INl-D1-xoe"/>
+                <constraint firstItem="PWG-9B-Z3B" firstAttribute="top" secondItem="sUb-HZ-04c" secondAttribute="bottom" constant="10" id="JmQ-Qp-uKn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nFs-lI-12T" secondAttribute="trailing" constant="15" id="Ku1-Fm-Ber"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RJP-ah-x63" secondAttribute="trailing" constant="30" id="YuQ-NK-qsA"/>
-                <constraint firstItem="RJP-ah-x63" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Zuq-Ka-psm"/>
+                <constraint firstItem="bmz-vN-Zb1" firstAttribute="top" secondItem="PWG-9B-Z3B" secondAttribute="bottom" constant="20" id="O1I-vn-ZVH"/>
+                <constraint firstItem="sUb-HZ-04c" firstAttribute="top" secondItem="nFs-lI-12T" secondAttribute="bottom" constant="50" id="R2W-Ac-rWd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0dy-la-Bat" secondAttribute="trailing" constant="10" id="TaL-w1-1aT"/>
                 <constraint firstItem="nFs-lI-12T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="a3Y-sm-Zd7"/>
-                <constraint firstItem="RJP-ah-x63" firstAttribute="top" secondItem="nFs-lI-12T" secondAttribute="bottom" constant="30" id="aDs-lK-5lJ"/>
+                <constraint firstItem="PWG-9B-Z3B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="bb4-rf-2uX"/>
+                <constraint firstItem="sUb-HZ-04c" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ivm-8t-KRJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0dy-la-Bat" secondAttribute="bottom" constant="30" id="kUz-I9-Udf"/>
+                <constraint firstItem="sUb-HZ-04c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kYu-4S-ua8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PWG-9B-Z3B" secondAttribute="trailing" constant="10" id="n5D-db-6gi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bmz-vN-Zb1" secondAttribute="trailing" constant="10" id="tUy-ce-0M0"/>
+                <constraint firstItem="0dy-la-Bat" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="uDP-CA-9Hg"/>
+                <constraint firstItem="bmz-vN-Zb1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="vEz-ar-nQL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="138" y="152"/>
+            <point key="canvasLocation" x="136.80000000000001" y="151.57421289355324"/>
         </view>
     </objects>
 </document>

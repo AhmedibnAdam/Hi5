@@ -304,6 +304,30 @@
 		668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
 		66F6D09C23B6F352004BF95C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09B23B6F352004BF95C /* APIError.swift */; };
+		8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608422F23DC815200BA87D7 /* SearchLocationConfiguration.swift */; };
+		8608423823DC815200BA87D7 /* SearchLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423023DC815200BA87D7 /* SearchLocationPresenter.swift */; };
+		8608423923DC815200BA87D7 /* SearchLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423123DC815200BA87D7 /* SearchLocationRouter.swift */; };
+		8608423A23DC815200BA87D7 /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423223DC815200BA87D7 /* SearchLocationViewController.swift */; };
+		8608423B23DC815200BA87D7 /* SearchLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423323DC815200BA87D7 /* SearchLocationInteractor.swift */; };
+		8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423423DC815200BA87D7 /* SearchLocationModel.swift */; };
+		8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8608423523DC815200BA87D7 /* SearchLocationViewController.xib */; };
+		8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423623DC815200BA87D7 /* SearchLocationManager.swift */; };
+		861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */; };
+		861D22D323DCAEF5004F16F1 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CB23DCAEF5004F16F1 /* GalleryPresenter.swift */; };
+		861D22D423DCAEF5004F16F1 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CC23DCAEF5004F16F1 /* GalleryRouter.swift */; };
+		861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CD23DCAEF5004F16F1 /* GalleryViewController.swift */; };
+		861D22D623DCAEF5004F16F1 /* GalleryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CE23DCAEF5004F16F1 /* GalleryInteractor.swift */; };
+		861D22D723DCAEF5004F16F1 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CF23DCAEF5004F16F1 /* GalleryModel.swift */; };
+		861D22D823DCAEF5004F16F1 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861D22D023DCAEF5004F16F1 /* GalleryViewController.xib */; };
+		861D22D923DCAEF5004F16F1 /* GalleryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22D123DCAEF5004F16F1 /* GalleryManager.swift */; };
+		861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E023DCAFB9004F16F1 /* LibraryConfiguration.swift */; };
+		861D22E923DCAFB9004F16F1 /* LibraryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E123DCAFB9004F16F1 /* LibraryPresenter.swift */; };
+		861D22EA23DCAFB9004F16F1 /* LibraryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E223DCAFB9004F16F1 /* LibraryRouter.swift */; };
+		861D22EB23DCAFB9004F16F1 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E323DCAFB9004F16F1 /* LibraryViewController.swift */; };
+		861D22EC23DCAFB9004F16F1 /* LibraryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E423DCAFB9004F16F1 /* LibraryInteractor.swift */; };
+		861D22ED23DCAFB9004F16F1 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E523DCAFB9004F16F1 /* LibraryModel.swift */; };
+		861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861D22E623DCAFB9004F16F1 /* LibraryViewController.xib */; };
+		861D22EF23DCAFB9004F16F1 /* LibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E723DCAFB9004F16F1 /* LibraryManager.swift */; };
 		862A5E8523CB72380058355E /* ChangeUsernameConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */; };
 		862A5E8623CB72380058355E /* ChangeUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */; };
 		862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */; };
@@ -385,6 +409,14 @@
 		86E1293D23D4A15D007CB956 /* SocialConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F723B4C8C8009DB30A /* SocialConfiguration.swift */; };
 		86E1293E23D4A15F007CB956 /* SocialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F323B4C8C8009DB30A /* SocialPresenter.swift */; };
 		86E1293F23D4A162007CB956 /* SocialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F823B4C8C8009DB30A /* SocialInteractor.swift */; };
+		86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90223DDAAA5008C1F80 /* LocationConfiguration.swift */; };
+		86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90323DDAAA5008C1F80 /* LocationPresenter.swift */; };
+		86F9B90C23DDAAA5008C1F80 /* LocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90423DDAAA5008C1F80 /* LocationRouter.swift */; };
+		86F9B90D23DDAAA5008C1F80 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90523DDAAA5008C1F80 /* LocationViewController.swift */; };
+		86F9B90E23DDAAA5008C1F80 /* LocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90623DDAAA5008C1F80 /* LocationInteractor.swift */; };
+		86F9B90F23DDAAA5008C1F80 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90723DDAAA5008C1F80 /* LocationModel.swift */; };
+		86F9B91023DDAAA5008C1F80 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F9B90823DDAAA5008C1F80 /* LocationViewController.xib */; };
+		86F9B91123DDAAA5008C1F80 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90923DDAAA5008C1F80 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -696,6 +728,30 @@
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
 		66F6D09B23B6F352004BF95C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
+		8608422F23DC815200BA87D7 /* SearchLocationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationConfiguration.swift; sourceTree = "<group>"; };
+		8608423023DC815200BA87D7 /* SearchLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationPresenter.swift; sourceTree = "<group>"; };
+		8608423123DC815200BA87D7 /* SearchLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationRouter.swift; sourceTree = "<group>"; };
+		8608423223DC815200BA87D7 /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		8608423323DC815200BA87D7 /* SearchLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationInteractor.swift; sourceTree = "<group>"; };
+		8608423423DC815200BA87D7 /* SearchLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationModel.swift; sourceTree = "<group>"; };
+		8608423523DC815200BA87D7 /* SearchLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationViewController.xib; sourceTree = "<group>"; };
+		8608423623DC815200BA87D7 /* SearchLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationManager.swift; sourceTree = "<group>"; };
+		861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryConfiguration.swift; sourceTree = "<group>"; };
+		861D22CB23DCAEF5004F16F1 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
+		861D22CC23DCAEF5004F16F1 /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		861D22CD23DCAEF5004F16F1 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		861D22CE23DCAEF5004F16F1 /* GalleryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryInteractor.swift; sourceTree = "<group>"; };
+		861D22CF23DCAEF5004F16F1 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		861D22D023DCAEF5004F16F1 /* GalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		861D22D123DCAEF5004F16F1 /* GalleryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryManager.swift; sourceTree = "<group>"; };
+		861D22E023DCAFB9004F16F1 /* LibraryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryConfiguration.swift; sourceTree = "<group>"; };
+		861D22E123DCAFB9004F16F1 /* LibraryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenter.swift; sourceTree = "<group>"; };
+		861D22E223DCAFB9004F16F1 /* LibraryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryRouter.swift; sourceTree = "<group>"; };
+		861D22E323DCAFB9004F16F1 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		861D22E423DCAFB9004F16F1 /* LibraryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryInteractor.swift; sourceTree = "<group>"; };
+		861D22E523DCAFB9004F16F1 /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
+		861D22E623DCAFB9004F16F1 /* LibraryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
+		861D22E723DCAFB9004F16F1 /* LibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryManager.swift; sourceTree = "<group>"; };
 		862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameConfiguration.swift; sourceTree = "<group>"; };
 		862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernamePresenter.swift; sourceTree = "<group>"; };
 		862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameRouter.swift; sourceTree = "<group>"; };
@@ -770,6 +826,14 @@
 		86E1292823D49E73007CB956 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		86E1292923D49E73007CB956 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		86E1292A23D49E73007CB956 /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		86F9B90223DDAAA5008C1F80 /* LocationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfiguration.swift; sourceTree = "<group>"; };
+		86F9B90323DDAAA5008C1F80 /* LocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresenter.swift; sourceTree = "<group>"; };
+		86F9B90423DDAAA5008C1F80 /* LocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRouter.swift; sourceTree = "<group>"; };
+		86F9B90523DDAAA5008C1F80 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		86F9B90623DDAAA5008C1F80 /* LocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInteractor.swift; sourceTree = "<group>"; };
+		86F9B90723DDAAA5008C1F80 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		86F9B90823DDAAA5008C1F80 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
+		86F9B90923DDAAA5008C1F80 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.release.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1071,6 +1135,10 @@
 		66340A1223B4CAD3009DB30A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				86F9B90123DDAA84008C1F80 /* Location */,
+				861D22C923DCAED6004F16F1 /* Library */,
+				861D22C823DCAECC004F16F1 /* Gallery */,
+				8608422E23DC813100BA87D7 /* SearchLocation */,
 				862EB5A323D7308100508F1A /* DateOfBirth */,
 				86DB005D23D70B79001E99E8 /* Gender */,
 				86DC11D623D5C16D00E577D9 /* EditProfile */,
@@ -1495,6 +1563,69 @@
 			path = CheckOutConfirmation;
 			sourceTree = "<group>";
 		};
+		8608422E23DC813100BA87D7 /* SearchLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8608424023DC816C00BA87D7 /* SearchLocationContracts */,
+				8608424123DC816F00BA87D7 /* SearchLocationInteractor */,
+				8608424223DC817200BA87D7 /* SearchLocationPresenter */,
+				8608424323DC817500BA87D7 /* SearchLocationRouter */,
+				8608423F23DC816800BA87D7 /* SearchLocationServices */,
+				8608424423DC817800BA87D7 /* SearchLocationViews */,
+			);
+			path = SearchLocation;
+			sourceTree = "<group>";
+		};
+		8608423F23DC816800BA87D7 /* SearchLocationServices */ = {
+			isa = PBXGroup;
+			children = (
+				8608423423DC815200BA87D7 /* SearchLocationModel.swift */,
+				8608423623DC815200BA87D7 /* SearchLocationManager.swift */,
+			);
+			path = SearchLocationServices;
+			sourceTree = "<group>";
+		};
+		8608424023DC816C00BA87D7 /* SearchLocationContracts */ = {
+			isa = PBXGroup;
+			children = (
+				8608422F23DC815200BA87D7 /* SearchLocationConfiguration.swift */,
+			);
+			path = SearchLocationContracts;
+			sourceTree = "<group>";
+		};
+		8608424123DC816F00BA87D7 /* SearchLocationInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				8608423323DC815200BA87D7 /* SearchLocationInteractor.swift */,
+			);
+			path = SearchLocationInteractor;
+			sourceTree = "<group>";
+		};
+		8608424223DC817200BA87D7 /* SearchLocationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				8608423023DC815200BA87D7 /* SearchLocationPresenter.swift */,
+			);
+			path = SearchLocationPresenter;
+			sourceTree = "<group>";
+		};
+		8608424323DC817500BA87D7 /* SearchLocationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				8608423123DC815200BA87D7 /* SearchLocationRouter.swift */,
+			);
+			path = SearchLocationRouter;
+			sourceTree = "<group>";
+		};
+		8608424423DC817800BA87D7 /* SearchLocationViews */ = {
+			isa = PBXGroup;
+			children = (
+				8608423223DC815200BA87D7 /* SearchLocationViewController.swift */,
+				8608423523DC815200BA87D7 /* SearchLocationViewController.xib */,
+			);
+			path = SearchLocationViews;
+			sourceTree = "<group>";
+		};
 		860E209623C73BCC00F59AE0 /* ForgetPasswordContract */ = {
 			isa = PBXGroup;
 			children = (
@@ -1596,15 +1727,141 @@
 			path = PhoneVerificationServices;
 			sourceTree = "<group>";
 		};
+		861D22C823DCAECC004F16F1 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				861D22DF23DCAF0B004F16F1 /* GalleryContracts */,
+				861D22DD23DCAF05004F16F1 /* GalleryInteractor */,
+				861D22DC23DCAF02004F16F1 /* GalleryPresenter */,
+				861D22DB23DCAEFE004F16F1 /* GalleryRouter */,
+				861D22DE23DCAF08004F16F1 /* GalleryServices */,
+				861D22DA23DCAEFA004F16F1 /* GalleryViews */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		861D22C923DCAED6004F16F1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				861D22F023DCAFBE004F16F1 /* LibraryContracts */,
+				861D22F223DCAFC5004F16F1 /* LibraryInteractor */,
+				861D22F323DCAFC8004F16F1 /* LibraryPresenter */,
+				861D22F423DCAFCB004F16F1 /* LibraryRouter */,
+				861D22F623DCB027004F16F1 /* LibraryServices */,
+				861D22F523DCAFCF004F16F1 /* LibraryViews */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		861D22DA23DCAEFA004F16F1 /* GalleryViews */ = {
+			isa = PBXGroup;
+			children = (
+				861D22CD23DCAEF5004F16F1 /* GalleryViewController.swift */,
+				861D22D023DCAEF5004F16F1 /* GalleryViewController.xib */,
+			);
+			path = GalleryViews;
+			sourceTree = "<group>";
+		};
+		861D22DB23DCAEFE004F16F1 /* GalleryRouter */ = {
+			isa = PBXGroup;
+			children = (
+				861D22CC23DCAEF5004F16F1 /* GalleryRouter.swift */,
+			);
+			path = GalleryRouter;
+			sourceTree = "<group>";
+		};
+		861D22DC23DCAF02004F16F1 /* GalleryPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				861D22CB23DCAEF5004F16F1 /* GalleryPresenter.swift */,
+			);
+			path = GalleryPresenter;
+			sourceTree = "<group>";
+		};
+		861D22DD23DCAF05004F16F1 /* GalleryInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				861D22CE23DCAEF5004F16F1 /* GalleryInteractor.swift */,
+			);
+			path = GalleryInteractor;
+			sourceTree = "<group>";
+		};
+		861D22DE23DCAF08004F16F1 /* GalleryServices */ = {
+			isa = PBXGroup;
+			children = (
+				861D22CF23DCAEF5004F16F1 /* GalleryModel.swift */,
+				861D22D123DCAEF5004F16F1 /* GalleryManager.swift */,
+			);
+			path = GalleryServices;
+			sourceTree = "<group>";
+		};
+		861D22DF23DCAF0B004F16F1 /* GalleryContracts */ = {
+			isa = PBXGroup;
+			children = (
+				861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */,
+			);
+			path = GalleryContracts;
+			sourceTree = "<group>";
+		};
+		861D22F023DCAFBE004F16F1 /* LibraryContracts */ = {
+			isa = PBXGroup;
+			children = (
+				861D22E023DCAFB9004F16F1 /* LibraryConfiguration.swift */,
+			);
+			path = LibraryContracts;
+			sourceTree = "<group>";
+		};
+		861D22F223DCAFC5004F16F1 /* LibraryInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				861D22E423DCAFB9004F16F1 /* LibraryInteractor.swift */,
+			);
+			path = LibraryInteractor;
+			sourceTree = "<group>";
+		};
+		861D22F323DCAFC8004F16F1 /* LibraryPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				861D22E123DCAFB9004F16F1 /* LibraryPresenter.swift */,
+			);
+			path = LibraryPresenter;
+			sourceTree = "<group>";
+		};
+		861D22F423DCAFCB004F16F1 /* LibraryRouter */ = {
+			isa = PBXGroup;
+			children = (
+				861D22E223DCAFB9004F16F1 /* LibraryRouter.swift */,
+			);
+			path = LibraryRouter;
+			sourceTree = "<group>";
+		};
+		861D22F523DCAFCF004F16F1 /* LibraryViews */ = {
+			isa = PBXGroup;
+			children = (
+				861D22E323DCAFB9004F16F1 /* LibraryViewController.swift */,
+				861D22E623DCAFB9004F16F1 /* LibraryViewController.xib */,
+			);
+			path = LibraryViews;
+			sourceTree = "<group>";
+		};
+		861D22F623DCB027004F16F1 /* LibraryServices */ = {
+			isa = PBXGroup;
+			children = (
+				861D22E523DCAFB9004F16F1 /* LibraryModel.swift */,
+				861D22E723DCAFB9004F16F1 /* LibraryManager.swift */,
+			);
+			path = LibraryServices;
+			sourceTree = "<group>";
+		};
 		862A5E7C23CB72130058355E /* ChangeUsername */ = {
 			isa = PBXGroup;
 			children = (
 				862A5E9223CB72BF0058355E /* ChangeUsernameContract */,
-				862A5E9123CB72B70058355E /* ChangeUsernameRouter */,
 				862A5E9023CB72B30058355E /* ChangeUsernameInteractor */,
 				862A5E8F23CB72B00058355E /* ChangeUsernamePresenter */,
-				862A5E8E23CB72AC0058355E /* ChangeUsernameViews */,
+				862A5E9123CB72B70058355E /* ChangeUsernameRouter */,
 				862A5E8D23CB72A80058355E /* ChangeUsernameServices */,
+				862A5E8E23CB72AC0058355E /* ChangeUsernameViews */,
 			);
 			path = ChangeUsername;
 			sourceTree = "<group>";
@@ -2493,6 +2750,69 @@
 			path = TabBarServices;
 			sourceTree = "<group>";
 		};
+		86F9B90123DDAA84008C1F80 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B91223DDAAAA008C1F80 /* LocationContracts */,
+				86F9B91423DDAAB1008C1F80 /* LocationInteractor */,
+				86F9B91523DDAAB4008C1F80 /* LocationPresenter */,
+				86F9B91623DDAAB8008C1F80 /* LocationRouter */,
+				86F9B91323DDAAAD008C1F80 /* LocationServices */,
+				86F9B91723DDAABB008C1F80 /* LocationViews */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		86F9B91223DDAAAA008C1F80 /* LocationContracts */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B90223DDAAA5008C1F80 /* LocationConfiguration.swift */,
+			);
+			path = LocationContracts;
+			sourceTree = "<group>";
+		};
+		86F9B91323DDAAAD008C1F80 /* LocationServices */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B90723DDAAA5008C1F80 /* LocationModel.swift */,
+				86F9B90923DDAAA5008C1F80 /* LocationManager.swift */,
+			);
+			path = LocationServices;
+			sourceTree = "<group>";
+		};
+		86F9B91423DDAAB1008C1F80 /* LocationInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B90623DDAAA5008C1F80 /* LocationInteractor.swift */,
+			);
+			path = LocationInteractor;
+			sourceTree = "<group>";
+		};
+		86F9B91523DDAAB4008C1F80 /* LocationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B90323DDAAA5008C1F80 /* LocationPresenter.swift */,
+			);
+			path = LocationPresenter;
+			sourceTree = "<group>";
+		};
+		86F9B91623DDAAB8008C1F80 /* LocationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B90423DDAAA5008C1F80 /* LocationRouter.swift */,
+			);
+			path = LocationRouter;
+			sourceTree = "<group>";
+		};
+		86F9B91723DDAABB008C1F80 /* LocationViews */ = {
+			isa = PBXGroup;
+			children = (
+				86F9B90523DDAAA5008C1F80 /* LocationViewController.swift */,
+				86F9B90823DDAAA5008C1F80 /* LocationViewController.xib */,
+			);
+			path = LocationViews;
+			sourceTree = "<group>";
+		};
 		E17617DCB77855E3802A42A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2565,6 +2885,7 @@
 				662A16CA23C3EA9F00A3695E /* AddFriendsViewController.xib in Resources */,
 				6683E30F23BCEEFF00250702 /* ProfileViewController.xib in Resources */,
 				662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */,
+				86F9B91023DDAAA5008C1F80 /* LocationViewController.xib in Resources */,
 				86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */,
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
@@ -2576,6 +2897,7 @@
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
+				861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
 				6683E2DF23BCEBD900250702 /* SuggestedFieldsViewController.xib in Resources */,
@@ -2587,6 +2909,7 @@
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
+				861D22D823DCAEF5004F16F1 /* GalleryViewController.xib in Resources */,
 				868C28BD23C6042A003F237A /* Assets.xcassets in Resources */,
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
@@ -2596,6 +2919,7 @@
 				668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */,
 				86B14BE123CB543B00B3FEB1 /* WelcomeViewController.xib in Resources */,
 				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
+				8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */,
 				862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */,
 				668C20FB23C3F57800C009A9 /* AddSessionResultFiltterViewController.xib in Resources */,
 				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
@@ -2674,6 +2998,7 @@
 				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
 				668C210C23C3F5BC00C009A9 /* AddSessionResultManager.swift in Sources */,
 				86DC11E623D5C19100E577D9 /* EditProfileManager.swift in Sources */,
+				861D22EA23DCAFB9004F16F1 /* LibraryRouter.swift in Sources */,
 				668C212823C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift in Sources */,
 				662A16E823C3ECE000A3695E /* MyFriendsRequestRouter.swift in Sources */,
 				662A16D623C3EB7600A3695E /* AddFriendRequestPresenter.swift in Sources */,
@@ -2691,8 +3016,10 @@
 				86B14BC923CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift in Sources */,
 				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
 				86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */,
+				861D22EC23DCAFB9004F16F1 /* LibraryInteractor.swift in Sources */,
 				6663365223B40318004E537C /* RegisterConfiguration.swift in Sources */,
 				662A168623C3E4B200A3695E /* TransactionsManager.swift in Sources */,
+				8608423B23DC815200BA87D7 /* SearchLocationInteractor.swift in Sources */,
 				6663368523B40AB3004E537C /* ForgetEmailManager.swift in Sources */,
 				668C211823C3F6C100C009A9 /* CheckOutConfiguration.swift in Sources */,
 				662A169323C3E75400A3695E /* MyFavoriteFriendsRouter.swift in Sources */,
@@ -2703,12 +3030,15 @@
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				86DB006923D70B97001E99E8 /* GenderViewController.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
+				86F9B90C23DDAAA5008C1F80 /* LocationRouter.swift in Sources */,
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
+				8608423A23DC815200BA87D7 /* SearchLocationViewController.swift in Sources */,
 				6683E2FC23BCEEB300250702 /* HelpCenterViewController.swift in Sources */,
 				668C210623C3F5BC00C009A9 /* AddSessionResultPresenter.swift in Sources */,
 				668C213B23C3F6F700C009A9 /* CommentListsViewController.swift in Sources */,
 				6683E2BA23BB631D00250702 /* NotificationSettingModel.swift in Sources */,
 				662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */,
+				861D22ED23DCAFB9004F16F1 /* LibraryModel.swift in Sources */,
 				86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */,
 				66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
@@ -2720,9 +3050,11 @@
 				6683E2D023BCEB8800250702 /* SettingManager.swift in Sources */,
 				662A170523C3F20200A3695E /* SechadualeRouter.swift in Sources */,
 				86BBEE5C23CB5F840036C41D /* CreatePasswordInteractor.swift in Sources */,
+				861D22D423DCAEF5004F16F1 /* GalleryRouter.swift in Sources */,
 				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
 				6683E2FE23BCEEB300250702 /* HelpCenterModel.swift in Sources */,
 				86DB006723D70B97001E99E8 /* GenderPresenter.swift in Sources */,
+				861D22D723DCAEF5004F16F1 /* GalleryModel.swift in Sources */,
 				662A16B623C3E93900A3695E /* MyFriendsDetailsViewController.swift in Sources */,
 				6663361323B40206004E537C /* AppDelegate.swift in Sources */,
 				667E4B7323C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift in Sources */,
@@ -2751,12 +3083,15 @@
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
+				861D22D323DCAEF5004F16F1 /* GalleryPresenter.swift in Sources */,
 				667E4B8323C3E169007354A7 /* AddFundViewController.swift in Sources */,
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
 				662A16DC23C3EB7600A3695E /* AddFriendRequestManager.swift in Sources */,
 				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
+				861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */,
 				862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */,
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
+				8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */,
 				668C213A23C3F6F700C009A9 /* CommentListsRouter.swift in Sources */,
 				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
 				862EB5AE23D730AD00508F1A /* DateOfBirthRouter.swift in Sources */,
@@ -2783,23 +3118,28 @@
 				662A16DA23C3EB7600A3695E /* AddFriendRequestModel.swift in Sources */,
 				662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */,
 				662A16C523C3EA9F00A3695E /* AddFriendsPresenter.swift in Sources */,
+				861D22EB23DCAFB9004F16F1 /* LibraryViewController.swift in Sources */,
 				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
 				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
 				862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */,
+				861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */,
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
 				668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */,
 				862EB5AF23D730AD00508F1A /* DateOfBirthViewController.swift in Sources */,
+				861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */,
 				666336B223B40B84004E537C /* PhoneVerificationPresenter.swift in Sources */,
 				667E4B7623C3DCA3007354A7 /* MakeWalletPasswordManager.swift in Sources */,
 				6663361523B40206004E537C /* SceneDelegate.swift in Sources */,
 				662A169123C3E75400A3695E /* MyFavoriteFriendsConfiguration.swift in Sources */,
 				86DF4DD523CC6D25008A8868 /* RegisterEndPoint.swift in Sources */,
+				8608423923DC815200BA87D7 /* SearchLocationRouter.swift in Sources */,
 				862A5E8623CB72380058355E /* ChangeUsernamePresenter.swift in Sources */,
 				66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */,
+				861D22D923DCAEF5004F16F1 /* GalleryManager.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
 				86E1292E23D49E73007CB956 /* TabBarViewController.swift in Sources */,
 				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
@@ -2822,6 +3162,8 @@
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
+				861D22D623DCAEF5004F16F1 /* GalleryInteractor.swift in Sources */,
+				8608423823DC815200BA87D7 /* SearchLocationPresenter.swift in Sources */,
 				668C212923C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift in Sources */,
 				6683E2CC23BCEB8800250702 /* SettingViewController.swift in Sources */,
 				662A16E623C3ECE000A3695E /* MyFriendsRequestConfiguration.swift in Sources */,
@@ -2933,6 +3275,8 @@
 				668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */,
 				86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */,
 				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
+				8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */,
+				86F9B91123DDAAA5008C1F80 /* LocationManager.swift in Sources */,
 				6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */,
 				66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */,
 				667E4B6F23C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift in Sources */,
@@ -2944,6 +3288,7 @@
 				86B14BDF23CB543B00B3FEB1 /* WelcomeInteractor.swift in Sources */,
 				668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */,
 				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
+				8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */,
 				86E1293C23D4A15A007CB956 /* SocialModel.swift in Sources */,
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
@@ -2966,6 +3311,7 @@
 				6663364323B402F7004E537C /* LoginRouter.swift in Sources */,
 				668C214823C3F70F00C009A9 /* BookSessionConfiguration.swift in Sources */,
 				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
+				86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
@@ -2977,6 +3323,7 @@
 				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
 				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
+				86F9B90F23DDAAA5008C1F80 /* LocationModel.swift in Sources */,
 				6683E2FB23BCEEB300250702 /* HelpCenterRouter.swift in Sources */,
 				668C215B23C3F75300C009A9 /* CheckOutConfirmationRouter.swift in Sources */,
 				86E1292F23D49E73007CB956 /* TabBarInteractor.swift in Sources */,
@@ -2986,11 +3333,16 @@
 				662A170423C3F20200A3695E /* SechadualePresenter.swift in Sources */,
 				6683E30C23BCEEFF00250702 /* ProfileViewController.swift in Sources */,
 				662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */,
+				86F9B90D23DDAAA5008C1F80 /* LocationViewController.swift in Sources */,
 				86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */,
 				86E1292C23D49E73007CB956 /* TabBarPresenter.swift in Sources */,
+				861D22EF23DCAFB9004F16F1 /* LibraryManager.swift in Sources */,
+				86F9B90E23DDAAA5008C1F80 /* LocationInteractor.swift in Sources */,
 				6683E2FA23BCEEB300250702 /* HelpCenterPresenter.swift in Sources */,
 				667E4B7123C3DCA3007354A7 /* MakeWalletPasswordRouter.swift in Sources */,
+				861D22E923DCAFB9004F16F1 /* LibraryPresenter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
+				86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

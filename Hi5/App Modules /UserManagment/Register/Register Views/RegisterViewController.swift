@@ -16,6 +16,7 @@ protocol IRegisterViewController: class {
 	var router: IRegisterRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToSignupPhoneVerification()
+    func hideIndicator()
 }
 
 class RegisterViewController: UIViewController , UITextFieldDelegate{
@@ -91,6 +92,10 @@ extension RegisterViewController: IRegisterViewController {
     
     func navigateToSignupPhoneVerification() {
         router?.navigateToSignupPhoneVerification()
+    }
+    
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
     }
     
 }

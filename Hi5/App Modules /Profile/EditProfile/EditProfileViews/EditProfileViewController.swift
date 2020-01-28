@@ -9,25 +9,28 @@
 //              * https://github.com/arimunandar
 
 import UIKit
-import ActionSheetPicker_3_0
 
 protocol IEditProfileViewController: class {
 	var router: IEditProfileRouter? { get set }
     func showAlert(title: String, msg: String)
 }
 
-class EditProfileViewController: UIViewController {
+class EditProfileViewController: UIViewController , UITextFieldDelegate{
+
 	var interactor: IEditProfileInteractor?
 	var router: IEditProfileRouter?
-    
+     var gender : String?
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
     }()
     
     @objc func dismissView() {
-        dismiss(animated: true, completion: nil)
+        router?.navigateToProfile()
     }
 //MARK:- Outlets
+    @IBOutlet weak var genderBtn: UIButton!
+    @IBOutlet weak var biographyTextField: UITextField!
+    @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var biographyContainerView: UIView!
     @IBOutlet weak var fullnameContainerView: UIView!
@@ -39,9 +42,27 @@ class EditProfileViewController: UIViewController {
 //MARK:- View Life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        fullNameTextField.delegate = self
+        biographyTextField.delegate = self
         setupNavigationBar()
         initView()
         configure()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let gender = gender else {
+            return
+        }
+       genderBtn.setTitle(gender, for: .normal)
+
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 //MARK:- Actions
     @IBAction func saveBtnTapped(_ sender: UIButton) {
@@ -57,15 +78,6 @@ class EditProfileViewController: UIViewController {
     }
     
     @IBAction func dateOfBirthBtnTapped(_ sender: UIButton) {
-//        ActionSheetMultipleStringPicker.show(withTitle: "Date Of Birth", rows: [
-//                   ["1", "2", "3","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"],
-//                   ["Jan", "Feb", "Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
-//                   ["1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990", "1991", "1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030"]
-//                   ], initialSelection: [5, 5, 5], doneBlock: {
-//                       picker, indexes, values in
-//                       print("values = \(values)")
-//                       return
-//               }, cancel: { ActionMultipleStringCancelBlock in return }, origin: sender)
         dateOfBirthBtnAction()
         
     }
@@ -106,17 +118,42 @@ extension EditProfileViewController {
     }
 }
 
-extension EditProfileViewController {
+extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
      func saveBtnAction() {
         
-    }
+      }
     
     func editPhotoBtnAction() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let uploadFromLibraryAction = UIAlertAction(title: "Upload From Library", style: .destructive) { (uploadFromLibrary) in
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+        }
+        let takePhotoAction = UIAlertAction(title: "Take a Photo", style: .destructive) { (takePhoto) in
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
+        alert.addAction(uploadFromLibraryAction)
+        alert.addAction(takePhotoAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        //use image here!
+        dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     func locationBtnAction() {
-        
+        router?.navigateToLocation()
     }
     
     func dateOfBirthBtnAction() {
@@ -126,4 +163,11 @@ extension EditProfileViewController {
     func genderBtnAction() {
         router?.navigateToGender()
     }
+   
+    func setGender(gender: String?) {
+        guard let gend = gender else {return}
+        self.gender = gend
+
+    }
 }
+

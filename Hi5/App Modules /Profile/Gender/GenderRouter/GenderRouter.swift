@@ -11,13 +11,17 @@
 import UIKit
 
 protocol IGenderRouter: class {
-	// do someting...
+    func navigateToEditProfile(gender: String)
 }
 
-class GenderRouter: IGenderRouter {	
+class GenderRouter: IGenderRouter {
+    
 	weak var view: GenderViewController?
 	
 	init(view: GenderViewController?) {
 		self.view = view
 	}
+    func navigateToEditProfile(gender: String) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile(gender: gender), completion: nil)
+    }
 }

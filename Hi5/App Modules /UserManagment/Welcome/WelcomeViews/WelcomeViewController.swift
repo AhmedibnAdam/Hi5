@@ -42,12 +42,10 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func continueBtnTapped(_ sender: UIButton) {
-       // showIndicator()
         router?.navigateToCreatePassword()
     }
     
     @IBAction func changeUsernameBtnTapped(_ sender: UIButton) {
-        //showIndicator()
         router?.navigateToChangeUsername()
     }
     
@@ -87,12 +85,7 @@ extension WelcomeViewController {
         let defaults = UserDefaults.standard
         guard let userName = defaults.string(forKey: "UserName") else {return}
         descriptionLbl.text = "Hi \(String(describing: userName)) Find friends, create trainings and participate in matches. You can change your username at any time."
-    }
-    
-//    func showIndicator() {
-//        loadingIndicator.isHidden = false
-//    }
-    
+    }    
     
 }
 

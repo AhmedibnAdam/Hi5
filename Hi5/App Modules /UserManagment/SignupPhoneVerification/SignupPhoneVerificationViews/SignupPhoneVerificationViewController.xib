@@ -14,9 +14,11 @@
                 <outlet property="containerView3" destination="oc6-wh-1SL" id="A2s-rV-LVs"/>
                 <outlet property="containerView4" destination="Gra-aX-qzX" id="hDP-sh-Rqi"/>
                 <outlet property="continueBtn" destination="nCv-lX-aPa" id="eZO-Tq-kPO"/>
+                <outlet property="counterResendLbl" destination="abG-So-Ilk" id="0TP-JZ-zJb"/>
                 <outlet property="descriptionLbl" destination="CLB-Nn-Ct6" id="1OO-KC-i2x"/>
                 <outlet property="loadingIndicator" destination="yXF-er-xbc" id="kra-eJ-zmd"/>
                 <outlet property="logoView" destination="eFH-FY-qUk" id="bQq-Ao-RnN"/>
+                <outlet property="resendBtn" destination="wml-Oc-BvV" id="WSu-fS-xYP"/>
                 <outlet property="textField1" destination="yUC-Ay-lsc" id="hdm-4B-qWH"/>
                 <outlet property="textField2" destination="sMt-AO-6NB" id="v9F-hx-jzf"/>
                 <outlet property="textField3" destination="20L-kD-Aqx" id="3CE-0c-SkN"/>
@@ -380,7 +382,7 @@
                                         <action selector="continueBtnTapped:" destination="-1" eventType="touchUpInside" id="qKA-Mq-HzR"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wml-Oc-BvV">
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wml-Oc-BvV">
                                     <rect key="frame" x="0.0" y="57" width="355" height="34"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Resend">
@@ -393,19 +395,28 @@
                             </subviews>
                         </stackView>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-er-xbc">
-                            <rect key="frame" x="169" y="181.5" width="37" height="37"/>
+                            <rect key="frame" x="318" y="228" width="37" height="37"/>
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </activityIndicatorView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abG-So-Ilk">
+                            <rect key="frame" x="331.5" y="285.5" width="10.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="PZq-2V-TQt" firstAttribute="centerX" secondItem="PbO-ok-OnR" secondAttribute="centerX" id="1zx-ec-eQp"/>
-                        <constraint firstItem="yXF-er-xbc" firstAttribute="centerX" secondItem="PbO-ok-OnR" secondAttribute="centerX" id="3NE-CM-iZi"/>
                         <constraint firstItem="Jf0-Pa-rdG" firstAttribute="centerX" secondItem="PbO-ok-OnR" secondAttribute="centerX" id="6n1-Gy-6Kn"/>
+                        <constraint firstItem="yXF-er-xbc" firstAttribute="centerY" secondItem="nCv-lX-aPa" secondAttribute="centerY" id="9FW-Jf-VUA"/>
                         <constraint firstAttribute="bottom" secondItem="PZq-2V-TQt" secondAttribute="bottom" constant="10" id="Hke-JK-sAV"/>
+                        <constraint firstItem="abG-So-Ilk" firstAttribute="centerY" secondItem="wml-Oc-BvV" secondAttribute="centerY" id="Mte-Mv-eQq"/>
                         <constraint firstAttribute="trailing" secondItem="feC-FG-8MI" secondAttribute="trailing" constant="10" id="PPo-qT-HoP"/>
                         <constraint firstItem="feC-FG-8MI" firstAttribute="leading" secondItem="PbO-ok-OnR" secondAttribute="leading" constant="10" id="QQL-jQ-Wx0"/>
+                        <constraint firstItem="yXF-er-xbc" firstAttribute="trailing" secondItem="nCv-lX-aPa" secondAttribute="trailing" constant="-10" id="Rn2-Iz-sCe"/>
                         <constraint firstItem="feC-FG-8MI" firstAttribute="top" secondItem="Ht9-E0-C7E" secondAttribute="bottom" constant="20" id="VcI-p1-X1q"/>
+                        <constraint firstItem="abG-So-Ilk" firstAttribute="centerX" secondItem="yXF-er-xbc" secondAttribute="centerX" id="Yls-c5-M9l"/>
                         <constraint firstItem="bf1-RP-qYr" firstAttribute="top" secondItem="CLB-Nn-Ct6" secondAttribute="bottom" constant="20" id="aW3-06-f7K"/>
                         <constraint firstAttribute="trailing" secondItem="Ht9-E0-C7E" secondAttribute="trailing" constant="40" id="afE-Dl-bMH"/>
                         <constraint firstItem="Ht9-E0-C7E" firstAttribute="leading" secondItem="PbO-ok-OnR" secondAttribute="leading" constant="40" id="bfq-D5-Emc"/>
@@ -413,7 +424,6 @@
                         <constraint firstItem="CLB-Nn-Ct6" firstAttribute="top" secondItem="Jf0-Pa-rdG" secondAttribute="bottom" constant="5" id="cru-ym-hdq"/>
                         <constraint firstItem="Ht9-E0-C7E" firstAttribute="top" secondItem="bf1-RP-qYr" secondAttribute="bottom" constant="17.5" id="m6A-fO-Bsm"/>
                         <constraint firstItem="bf1-RP-qYr" firstAttribute="leading" secondItem="Ht9-E0-C7E" secondAttribute="leading" id="oKU-BN-uFb"/>
-                        <constraint firstItem="yXF-er-xbc" firstAttribute="centerY" secondItem="PbO-ok-OnR" secondAttribute="centerY" id="pKZ-Vs-wjZ"/>
                         <constraint firstAttribute="trailing" secondItem="CLB-Nn-Ct6" secondAttribute="trailing" constant="10" id="siM-Tl-hjh"/>
                     </constraints>
                 </view>

@@ -29,8 +29,10 @@ class LoginInteractor: ILoginInteractor {
         //let param = request.parameters(userName: userName, password: password)
         manager?.loginFromApi(userName: userName , password: password, complition: { (error , success) in
             if (success == true) {
+                self.presenter?.hideIndecator()
                 self.presenter?.navigateToProfile()
             } else {
+                self.presenter?.hideIndecator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
             

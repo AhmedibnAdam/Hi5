@@ -14,6 +14,7 @@ protocol IChangeUsernameViewController: class {
 	var router: IChangeUsernameRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 }
 
 class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
@@ -64,6 +65,9 @@ extension ChangeUsernameViewController: IChangeUsernameViewController {
     func navigateToCreatePassword() {
         router?.navigateToCreatePassword()
     }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
 }
 
 extension ChangeUsernameViewController {
@@ -105,7 +109,6 @@ extension ChangeUsernameViewController {
     
     func loginBtnAction() {
         router?.navigateToLogin()
-
     }
 }
 

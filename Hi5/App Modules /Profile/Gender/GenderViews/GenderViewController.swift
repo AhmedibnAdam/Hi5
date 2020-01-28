@@ -15,9 +15,14 @@ protocol IGenderViewController: class {
     func showAlert(title: String, msg: String)
 }
 
+//protocol GenderEnteredDelegate: class {
+//    func userDidEnterGender(gender: String)
+//}
+
 class GenderViewController: UIViewController {
 	var interactor: IGenderInteractor?
 	var router: IGenderRouter?
+    var gender: String?
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
@@ -32,6 +37,7 @@ class GenderViewController: UIViewController {
     @IBOutlet weak var femaleBtn: UIButton!
     @IBOutlet weak var notSpecifiedBtn: UIButton!
     @IBOutlet weak var saveBtn: UIButton!
+    //weak var delegate: GenderEnteredDelegate?
     
 
     //MARK:- View Life Cycle
@@ -46,6 +52,7 @@ class GenderViewController: UIViewController {
         self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.orange.cgColor)
         self.maleBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.maleBtn.tintColor = .orange
+        self.gender = maleBtn.titleLabel?.text
         
         self.femaleBtn = CreateBorder.buttonBorder(button: self.femaleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
         self.femaleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
@@ -60,6 +67,7 @@ class GenderViewController: UIViewController {
         self.femaleBtn = CreateBorder.buttonBorder(button: self.femaleBtn, width: 1.0, color: UIColor.orange.cgColor)
         self.femaleBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.femaleBtn.tintColor = .orange
+        self.gender = femaleBtn.titleLabel?.text
         
         self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
         self.maleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
@@ -74,6 +82,7 @@ class GenderViewController: UIViewController {
         self.notSpecifiedBtn = CreateBorder.buttonBorder(button: self.notSpecifiedBtn, width: 1.0, color: UIColor.orange.cgColor)
         self.notSpecifiedBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.notSpecifiedBtn.tintColor = .orange
+        self.gender = notSpecifiedBtn.titleLabel?.text
         
         self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
         self.maleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
@@ -85,7 +94,12 @@ class GenderViewController: UIViewController {
     }
     
     @IBAction func saveBtnTapped(_ sender: UIButton) {
-        
+//        guard let gender = gender else {return}
+//        delegate?.userDidEnterGender(gender: gender)
+//        let vc = EditProfileViewController()
+//        vc.gender = gender
+        guard let gender = gender else {return}
+        router?.navigateToEditProfile(gender: gender)
     }
 }
 
@@ -126,9 +140,5 @@ extension GenderViewController {
 }
 
 extension GenderViewController {
-//    func selectedBtn(_ sender: UIButton) {
-//        sender = CreateBorder.buttonBorder(button: sender, width: 1.0, color: UIColor.orange.cgColor)
-//        sender.setTitleColor(UIColor .orange, for: UIControl.State.normal)
-//        sender.tintColor = .orange
-//    }
+
 }

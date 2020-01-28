@@ -14,6 +14,7 @@ protocol ILoginPresenter: class {
     // MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
     func navigateToProfile()
+    func hideIndecator()
 }
 class LoginPresenter: ILoginPresenter {
     
@@ -27,5 +28,8 @@ class LoginPresenter: ILoginPresenter {
     }
     func navigateToProfile() {
         view?.navigateToProfile()
+    }
+    func hideIndecator() {
+        view?.hideIndecator()
     }
 }

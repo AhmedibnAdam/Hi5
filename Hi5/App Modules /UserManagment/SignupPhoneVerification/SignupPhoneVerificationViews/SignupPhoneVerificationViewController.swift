@@ -14,14 +14,18 @@ protocol ISignupPhoneVerificationViewController: class {
 	var router: ISignupPhoneVerificationRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 }
 
 class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ISignupPhoneVerificationInteractor?
 	var router: ISignupPhoneVerificationRouter?
+    var count = 0
     
     //MARK:- Outlets
     
+    @IBOutlet weak var counterResendLbl: UILabel!
+    @IBOutlet weak var resendBtn: UIButton!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textField4: UITextField!
     @IBOutlet weak var textField3: UITextField!
@@ -35,6 +39,7 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
     @IBOutlet weak var containerView3: UIView!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var containerView1: UIView!
+    //MARK:- View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField1.delegate = self
@@ -86,6 +91,10 @@ extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewCon
     func navigateToCreatePassword() {
         router?.navigateToCreatePassword()
     }
+    
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
  }
 
 extension SignupPhoneVerificationViewController {
@@ -109,17 +118,7 @@ extension SignupPhoneVerificationViewController {
     }
     
     @objc func textFieldDidChange(textField: UITextField){
-
-//        if(textField1.text?.count == 1){
-//            textField2.becomeFirstResponder()
-//        } else if(textField2.text?.count == 1){
-//            textField3.becomeFirstResponder()
-//        } else if(textField3.text?.count == 1){
-//            textField4.becomeFirstResponder()
-//        }
-        
         let text = textField.text
-
         if (text?.utf16.count)! >= 1{
             switch textField{
             case textField1:
@@ -137,10 +136,7 @@ extension SignupPhoneVerificationViewController {
 
         }
     }
-    
-    func hideIndicator() {
-        loadingIndicator.isHidden = true
-    }
+
 }
 
 extension SignupPhoneVerificationViewController {
@@ -154,12 +150,24 @@ extension SignupPhoneVerificationViewController {
         showIndicator()
         let code = text1+text2+text3+text4
         interactor?.doSignupPhoneVerification(view: self, code: code)
+       // counterResendLbl.isHidden = false
+//        while count != 30 {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+//                self.count += 1
+//                self.counterResendLbl.text = "\(self.count)"
+//            })
+//        }
+        
+//        counterResendLbl.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0, execute: {
+           self.resendBtn.isEnabled = true
+        })
         
     }
     
     func resendBtnAction() {
-        showIndicator()
-        interactor?.doSignupResendVerificationCode(view: self)
+         showIndicator()
+         self.interactor?.doSignupResendVerificationCode(view: self)
     }
 }
 

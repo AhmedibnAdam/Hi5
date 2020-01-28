@@ -10,8 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="biographyContainerView" destination="1e8-Gd-wNN" id="ePc-xM-DpU"/>
+                <outlet property="biographyTextField" destination="Tp7-Jy-NrR" id="uzL-Ud-5Rb"/>
                 <outlet property="dateOfBirthContainerView" destination="ZLD-Dq-IRO" id="7Jr-vJ-4ua"/>
+                <outlet property="fullNameTextField" destination="sbo-nL-c15" id="8zt-Qc-rAc"/>
                 <outlet property="fullnameContainerView" destination="DkL-Yp-BJf" id="U8s-lK-Ltu"/>
+                <outlet property="genderBtn" destination="zui-fu-pnF" id="Fqk-In-BaB"/>
                 <outlet property="genderContainerView" destination="ce3-rz-Bc6" id="dgM-mH-VFD"/>
                 <outlet property="locationContainerView" destination="n3I-aA-wDL" id="isf-pq-KwO"/>
                 <outlet property="photoView" destination="Gcp-ZG-ui1" id="hw3-w9-46P"/>

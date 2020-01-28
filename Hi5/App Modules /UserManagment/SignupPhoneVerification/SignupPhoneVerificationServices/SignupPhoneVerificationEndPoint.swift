@@ -29,7 +29,7 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
 
     switch self {
        case .signupPhoneVerification:
-         return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
+         return "http://api-ksa.com/demo/hi5/public/api/player/register" + "check_verification_code"
        case .signupResendVerificationCode:
          return "http://api-ksa.com/demo/hi5/public/api/player/" + "resend"
        }

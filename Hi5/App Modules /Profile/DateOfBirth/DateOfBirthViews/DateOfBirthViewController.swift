@@ -9,7 +9,6 @@
 //              * https://github.com/arimunandar
 
 import UIKit
-import ActionSheetPicker_3_0
 
 protocol IDateOfBirthViewController: class {
 	var router: IDateOfBirthRouter? { get set }
@@ -20,7 +19,7 @@ class DateOfBirthViewController: UIViewController {
 	var interactor: IDateOfBirthInteractor?
 	var router: IDateOfBirthRouter?
     
-    private var datePicker: UIDatePicker?
+    var date: String?
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
@@ -30,21 +29,67 @@ class DateOfBirthViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     //MARK:- Outlets
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var dateOfBirth: UITextField!
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var theMonthAndDayLbl: UILabel!
+    @IBOutlet weak var theYearLbl: UILabel!
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 		setupNavigationBar()
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped(gestureRecognizer:)))
-        dateOfBirth.inputView = datePicker
-    
+        initView()
+        configure()
     }
     //MARK:- Actions
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let somedateString = dateFormatter.string(from: sender.date)
+        date = somedateString
+        print(somedateString)
+    }
     
+    @IBAction func saveBtnTapped(_ sender: Any) {
+        saveBtnAction()
+    }
+    @IBAction func theMonthAbdDateBtnTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let onlyFriendsAction = UIAlertAction(title: "Only friends", style: .destructive) { (actionSheet) in
+            self.theMonthAndDayLbl.text = "Only friends"
+        }
+        let publicAction = UIAlertAction(title: "Public", style: .destructive) { (actionSheet) in
+            self.theMonthAndDayLbl.text = "Public"
+        }
+        let onlyMeAction = UIAlertAction(title: "Only me", style: .destructive) { (actionSheet) in
+            self.theMonthAndDayLbl.text = "Only me"
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(onlyFriendsAction)
+        alert.addAction(publicAction)
+        alert.addAction(onlyMeAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    @IBAction func yearBtnTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let onlyFriendsAction = UIAlertAction(title: "Only friends", style: .destructive) { (actionSheet) in
+            self.theYearLbl.text = "Only friends"
+        }
+        let publicAction = UIAlertAction(title: "Public", style: .destructive) { (actionSheet) in
+            self.theYearLbl.text = "Public"
+        }
+        let onlyMeAction = UIAlertAction(title: "Only me", style: .destructive) { (actionSheet) in
+            self.theYearLbl.text = "Only me"
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(onlyFriendsAction)
+        alert.addAction(publicAction)
+        alert.addAction(onlyMeAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
     
 }
 
@@ -61,22 +106,18 @@ extension DateOfBirthViewController {
         navigationItem.setLeftBarButton(backBtn, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
+    func initView() {
+        // MARK : - Button  raduis
+        self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
+    }
     
-    func initNiew() {
-        
+    func configure() {
+        router = DateOfBirthRouter(view: self)
     }
 }
 
 extension DateOfBirthViewController {
-    
-    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
-    @objc func dateChanged(datePicker: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        dateOfBirth.text = dateFormatter.string(from: datePicker.date)
-        view.endEditing(true)
+    func saveBtnAction() {
+        
     }
 }

@@ -14,6 +14,7 @@ protocol ICreatePasswordViewController: class {
 	var router: ICreatePasswordRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToProfile()
+    func hideIndicator()
 }
 
 class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
@@ -94,6 +95,9 @@ extension CreatePasswordViewController: ICreatePasswordViewController {
     }
     func navigateToProfile() {
         router?.navigateToProfile()
+    }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
     }
 }
 

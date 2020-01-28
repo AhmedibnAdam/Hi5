@@ -13,6 +13,7 @@ import UIKit
 protocol INewPasswordViewController: class {
 	var router: INewPasswordRouter? { get set }
     func showAlert(title: String, msg: String)
+    func hideIndicator()
 }
 
 class NewPasswordViewController: UIViewController, UITextFieldDelegate {
@@ -80,6 +81,9 @@ class NewPasswordViewController: UIViewController, UITextFieldDelegate {
 extension NewPasswordViewController: INewPasswordViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
     }
 }
 

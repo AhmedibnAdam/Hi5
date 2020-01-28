@@ -14,6 +14,7 @@ protocol ILoginViewController: class {
 	var router: ILoginRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToProfile()
+    func hideIndecator()
 }
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -88,6 +89,9 @@ extension LoginViewController: ILoginViewController {
     }
     func navigateToProfile() {
         router?.navigateToProfile()
+    }
+    func hideIndecator() {
+        loadingIndicator.isHidden = true
     }
 }
 

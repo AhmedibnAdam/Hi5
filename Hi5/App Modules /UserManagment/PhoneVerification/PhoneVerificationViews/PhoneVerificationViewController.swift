@@ -14,6 +14,7 @@ protocol IPhoneVerificationViewController: class {
 	var router: IPhoneVerificationRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 }
 
 class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
@@ -67,6 +68,9 @@ extension PhoneVerificationViewController: IPhoneVerificationViewController {
     }
     func navigateToCreatePassword() {
         router?.navigateToCreatePassword()
+    }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
     }
 }
 

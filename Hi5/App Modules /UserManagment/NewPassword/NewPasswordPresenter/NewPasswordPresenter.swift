@@ -11,7 +11,7 @@
 import UIKit
 
 protocol INewPasswordPresenter: class {
-	// do someting...
+	func hideIndicator()
 }
 
 class NewPasswordPresenter: INewPasswordPresenter {	
@@ -20,4 +20,7 @@ class NewPasswordPresenter: INewPasswordPresenter {
 	init(view: INewPasswordViewController?) {
 		self.view = view
 	}
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
 }

@@ -13,6 +13,8 @@ import UIKit
 protocol IEditProfileRouter: class {
 	func navigateToGender()
     func navigateToDateOfBirth()
+    func navigateToLocation()
+    func navigateToProfile()
 }
 
 class EditProfileRouter: IEditProfileRouter {	
@@ -28,5 +30,13 @@ class EditProfileRouter: IEditProfileRouter {
     
     func navigateToDateOfBirth() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.dateOfBirth, completion: nil)
+    }
+    
+    func navigateToLocation() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.location, completion: nil)
+    }
+    
+    func navigateToProfile() {
+        view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
     }
 }

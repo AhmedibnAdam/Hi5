@@ -11,7 +11,9 @@
 import UIKit
 
 protocol IGenderPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+	func hideIndicator()
+    func navigateToEditProfile()
 }
 
 class GenderPresenter: IGenderPresenter {	
@@ -20,4 +22,13 @@ class GenderPresenter: IGenderPresenter {
 	init(view: IGenderViewController?) {
 		self.view = view
 	}
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
+    func navigateToEditProfile() {
+        view?.navigateToEditProfile()
+    }
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
 }

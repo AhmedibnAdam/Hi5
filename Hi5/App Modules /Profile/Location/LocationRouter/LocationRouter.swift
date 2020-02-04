@@ -25,6 +25,6 @@ class LocationRouter: ILocationRouter {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.searchLocation, completion: nil)
     }
     func navigateToEditProfile() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile(gender: nil), completion: nil)
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile, completion: nil)
     }
 }

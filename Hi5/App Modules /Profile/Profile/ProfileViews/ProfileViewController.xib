@@ -9,9 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="E2r-Y8-pQd" id="y4k-Ox-5B7"/>
                 <outlet property="editBtn" destination="wOE-ck-2Tl" id="UnG-re-Krx"/>
                 <outlet property="logoView" destination="vWr-CP-U3X" id="zVI-rE-dGo"/>
-                <outlet property="profileImage" destination="OiL-ld-por" id="jX0-Er-Tz4"/>
                 <outlet property="view" destination="CWr-VT-VUw" id="lsR-0Q-vFG"/>
             </connections>
         </placeholder>
@@ -44,13 +44,6 @@
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWr-CP-U3X" userLabel="Logo View">
                             <rect key="frame" x="137.5" y="89" width="100" height="100"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AR" translatesAutoresizingMaskIntoConstraints="NO" id="OiL-ld-por">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="100" id="WcW-DU-g6p"/>
-                                        <constraint firstAttribute="width" constant="100" id="XsZ-8X-sXI"/>
-                                    </constraints>
-                                </imageView>
                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-ck-2Tl">
                                     <rect key="frame" x="76" y="76" width="24" height="24"/>
                                     <state key="normal" image="edit"/>
@@ -62,9 +55,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="Ah6-3r-Qq9"/>
-                                <constraint firstItem="OiL-ld-por" firstAttribute="centerX" secondItem="vWr-CP-U3X" secondAttribute="centerX" id="EwM-cf-D5H"/>
                                 <constraint firstAttribute="trailing" secondItem="wOE-ck-2Tl" secondAttribute="trailing" id="TMy-AV-gPB"/>
-                                <constraint firstItem="OiL-ld-por" firstAttribute="centerY" secondItem="vWr-CP-U3X" secondAttribute="centerY" id="egG-ir-Tam"/>
                                 <constraint firstAttribute="width" constant="100" id="jGS-uZ-6Ou"/>
                                 <constraint firstAttribute="bottom" secondItem="wOE-ck-2Tl" secondAttribute="bottom" id="sAh-rl-I0X"/>
                             </constraints>
@@ -193,10 +184,15 @@
                                 <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="E2r-Y8-pQd">
+                            <rect key="frame" x="169" y="148.5" width="37" height="37"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="E2r-Y8-pQd" firstAttribute="centerY" secondItem="N4w-Gg-vkh" secondAttribute="centerY" id="6Ce-By-y4M"/>
                         <constraint firstItem="wCC-MA-mmK" firstAttribute="top" secondItem="N4w-Gg-vkh" secondAttribute="top" constant="15" id="ExT-Ur-HPh"/>
+                        <constraint firstItem="E2r-Y8-pQd" firstAttribute="centerX" secondItem="N4w-Gg-vkh" secondAttribute="centerX" id="KhE-ox-HKM"/>
                         <constraint firstItem="drb-r9-XNw" firstAttribute="leading" secondItem="N4w-Gg-vkh" secondAttribute="leading" constant="10" id="RUm-wl-hAa"/>
                         <constraint firstItem="drb-r9-XNw" firstAttribute="top" secondItem="N4w-Gg-vkh" secondAttribute="top" constant="15" id="aBk-iy-6d0"/>
                         <constraint firstAttribute="trailing" secondItem="wCC-MA-mmK" secondAttribute="trailing" constant="10" id="hAw-4K-J3u"/>
@@ -219,7 +215,6 @@
         </view>
     </objects>
     <resources>
-        <image name="AR" width="21" height="15"/>
         <image name="edit" width="24" height="24"/>
         <image name="flag" width="18" height="12"/>
         <image name="gender" width="18" height="18"/>

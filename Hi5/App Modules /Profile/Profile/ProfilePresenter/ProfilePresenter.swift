@@ -11,7 +11,8 @@
 import UIKit
 
 protocol IProfilePresenter: class {
-	// do someting...
+   func showErrorAlert(title: String, msg: String)
+   func hideIndecator()
 }
 
 class ProfilePresenter: IProfilePresenter {	
@@ -20,4 +21,10 @@ class ProfilePresenter: IProfilePresenter {
 	init(view: IProfileViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String){
+        view?.showAlert(title: title, msg: msg)
+    }
+    func hideIndecator() {
+        view?.hideIndecator()
+    }
 }

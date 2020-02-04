@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IDateOfBirthRouter: class {
-	// do someting...
+	func navigateToEditProfile()
 }
 
 class DateOfBirthRouter: IDateOfBirthRouter {	
@@ -20,4 +20,7 @@ class DateOfBirthRouter: IDateOfBirthRouter {
 	init(view: DateOfBirthViewController?) {
 		self.view = view
 	}
+    func navigateToEditProfile() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile, completion: nil)
+    }
 }

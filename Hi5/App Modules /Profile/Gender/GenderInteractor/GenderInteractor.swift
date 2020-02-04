@@ -12,9 +12,10 @@ import UIKit
 
 protocol IGenderInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doGenderEditProfile(view : UIViewController , gender: String)
 }
 
-class GenderInteractor: IGenderInteractor {
+class GenderInteractor: IGenderInteractor {    
     var presenter: IGenderPresenter?
     var manager: IGenderManager?
     var parameters: [String: Any]?
@@ -22,5 +23,16 @@ class GenderInteractor: IGenderInteractor {
     init(presenter: IGenderPresenter, manager: IGenderManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func doGenderEditProfile(view: UIViewController, gender: String) {
+        manager?.genderEditProfileFromApi(gender: gender, complition: { (error, success) in
+            if (success == true) {
+                self.presenter?.hideIndicator()
+                self.presenter?.navigateToEditProfile()
+            } else {
+                self.presenter?.hideIndicator()
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

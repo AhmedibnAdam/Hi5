@@ -12,9 +12,8 @@ import Foundation
 import UIKit
 
 class EditProfileConfiguration {
-    static func setup(parameters: [String: Any] = [:] , gender: String?) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:]) -> UIViewController {
         let controller = EditProfileViewController()
-        controller.setGender(gender: gender)
         let router = EditProfileRouter(view: controller)
         let presenter = EditProfilePresenter(view: controller)
         let manager = EditProfileManager()
@@ -25,7 +24,4 @@ class EditProfileConfiguration {
         interactor.parameters = parameters
         return controller
     }
-//    func setGender(gender: String?) {
-//        guard let gender = gender else {return}
-//    }
 }

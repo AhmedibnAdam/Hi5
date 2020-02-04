@@ -19,7 +19,8 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
 
 	var interactor: IEditProfileInteractor?
 	var router: IEditProfileRouter?
-     var gender : String?
+    var gender: String?
+    var dateOfBirth: String?
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
     }()
@@ -28,6 +29,7 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
         router?.navigateToProfile()
     }
 //MARK:- Outlets
+    @IBOutlet weak var dateOfBirthBtn: UIButton!
     @IBOutlet weak var genderBtn: UIButton!
     @IBOutlet weak var biographyTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
@@ -50,12 +52,13 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        guard let gender = gender else {
-            return
-        }
-       genderBtn.setTitle(gender, for: .normal)
-
+        let defaults = UserDefaults.standard
+        let gend = defaults.string(forKey: "Gender")
+        let dateOfBirth = defaults.string(forKey: "DateOfBirth")
+        genderBtn.setTitle(gend, for: .normal)
+        dateOfBirthBtn.setTitle(dateOfBirth, for: .normal)
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -120,9 +123,12 @@ extension EditProfileViewController {
 
 extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
      func saveBtnAction() {
+        let defaults = UserDefaults.standard
+        let yearFlag = defaults.string(forKey: "yearFlag")
+        let monthFlag = defaults.string(forKey: "monthFlag")
+        let dayFlag = defaults.string(forKey: "dayFlag")
         
       }
-    
     func editPhotoBtnAction() {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -169,5 +175,18 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         self.gender = gend
 
     }
+    
+    func setDateOfBirth(dateOfBirth: String?) {
+        guard let date = dateOfBirth else {return}
+        self.dateOfBirth = date
+
+    }
 }
+
+//extension EditProfileViewController: GenderEnteredDelegate {
+//    func userDidEnterGender(gender: String) {
+//        genderBtn.setTitle(gender, for: .normal)
+//    }
+//    
+//}
 

@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="biographyContainerView" destination="1e8-Gd-wNN" id="ePc-xM-DpU"/>
                 <outlet property="biographyTextField" destination="Tp7-Jy-NrR" id="uzL-Ud-5Rb"/>
+                <outlet property="dateOfBirthBtn" destination="rNK-c8-oSn" id="Xhk-7u-faU"/>
                 <outlet property="dateOfBirthContainerView" destination="ZLD-Dq-IRO" id="7Jr-vJ-4ua"/>
                 <outlet property="fullNameTextField" destination="sbo-nL-c15" id="8zt-Qc-rAc"/>
                 <outlet property="fullnameContainerView" destination="DkL-Yp-BJf" id="U8s-lK-Ltu"/>
@@ -31,7 +32,7 @@
                     <rect key="frame" x="137.5" y="40" width="100" height="100"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-ma-UbR">
-                            <rect key="frame" x="70" y="70" width="30" height="30"/>
+                            <rect key="frame" x="40" y="40" width="60" height="60"/>
                             <state key="normal" image="editProfile"/>
                             <connections>
                                 <action selector="editPhotoBtnTapped:" destination="-1" eventType="touchUpInside" id="77J-Yt-LSp"/>
@@ -47,7 +48,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-yJ-Zxu">
-                    <rect key="frame" x="15" y="160" width="345" height="78.5"/>
+                    <rect key="frame" x="15" y="160" width="345" height="68.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrR-pf-vqu">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
@@ -56,10 +57,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkL-Yp-BJf">
-                            <rect key="frame" x="0.0" y="28.5" width="345" height="50"/>
+                            <rect key="frame" x="0.0" y="28.5" width="345" height="40"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-nL-c15">
-                                    <rect key="frame" x="10" y="0.0" width="325" height="50"/>
+                                    <rect key="frame" x="10" y="0.0" width="325" height="40"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -70,13 +71,13 @@
                                 <constraint firstItem="sbo-nL-c15" firstAttribute="top" secondItem="DkL-Yp-BJf" secondAttribute="top" id="Vfm-hH-cxc"/>
                                 <constraint firstItem="sbo-nL-c15" firstAttribute="leading" secondItem="DkL-Yp-BJf" secondAttribute="leading" constant="10" id="muI-kA-1xy"/>
                                 <constraint firstAttribute="trailing" secondItem="sbo-nL-c15" secondAttribute="trailing" constant="10" id="nT8-h8-5Pr"/>
-                                <constraint firstAttribute="height" constant="50" id="qRk-Hj-Khc"/>
+                                <constraint firstAttribute="height" constant="40" id="qRk-Hj-Khc"/>
                             </constraints>
                         </view>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jjf-tK-BzR">
-                    <rect key="frame" x="15" y="248.5" width="345" height="108.5"/>
+                    <rect key="frame" x="15" y="238.5" width="345" height="78.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Js0-3J-fBp">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
@@ -85,10 +86,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1e8-Gd-wNN">
-                            <rect key="frame" x="0.0" y="28.5" width="345" height="80"/>
+                            <rect key="frame" x="0.0" y="28.5" width="345" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp7-Jy-NrR">
-                                    <rect key="frame" x="10" y="0.0" width="325" height="80"/>
+                                    <rect key="frame" x="10" y="0.0" width="325" height="50"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -96,7 +97,7 @@
                             <color key="backgroundColor" white="0.95561322770000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="Tp7-Jy-NrR" secondAttribute="bottom" id="Gi6-Wq-ccR"/>
-                                <constraint firstAttribute="height" constant="80" id="Kai-Uk-KTE"/>
+                                <constraint firstAttribute="height" constant="50" id="Kai-Uk-KTE"/>
                                 <constraint firstAttribute="trailing" secondItem="Tp7-Jy-NrR" secondAttribute="trailing" constant="10" id="aA1-Yt-p4N"/>
                                 <constraint firstItem="Tp7-Jy-NrR" firstAttribute="leading" secondItem="1e8-Gd-wNN" secondAttribute="leading" constant="10" id="q6H-bM-QaA"/>
                                 <constraint firstItem="Tp7-Jy-NrR" firstAttribute="top" secondItem="1e8-Gd-wNN" secondAttribute="top" id="uWn-5A-Q8s"/>
@@ -105,7 +106,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gbM-aw-E23">
-                    <rect key="frame" x="15" y="367" width="345" height="78.5"/>
+                    <rect key="frame" x="15" y="327" width="345" height="78.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-h2-Ota">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
@@ -118,7 +119,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPQ-SW-hrZ">
                                     <rect key="frame" x="10" y="0.0" width="325" height="50"/>
-                                    <state key="normal" title="USA, Los Angeles">
+                                    <state key="normal" title="Select your location">
                                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
@@ -138,7 +139,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GeT-5R-AX5">
-                    <rect key="frame" x="15" y="455.5" width="345" height="78.5"/>
+                    <rect key="frame" x="15" y="415.5" width="345" height="78.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn2-tE-Rpn">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
@@ -151,7 +152,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNK-c8-oSn">
                                     <rect key="frame" x="10" y="0.0" width="325" height="50"/>
-                                    <state key="normal" title="10.03.1990">
+                                    <state key="normal" title="Select your date of birth">
                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
@@ -171,7 +172,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l2M-jS-DT9">
-                    <rect key="frame" x="15" y="544" width="345" height="78.5"/>
+                    <rect key="frame" x="15" y="504" width="345" height="78.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fau-mk-VhL">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
@@ -184,7 +185,7 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zui-fu-pnF">
                                     <rect key="frame" x="10" y="0.0" width="325" height="50"/>
-                                    <state key="normal" title="Male">
+                                    <state key="normal" title="Select your gender">
                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>

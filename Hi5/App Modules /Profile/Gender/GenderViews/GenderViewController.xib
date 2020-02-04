@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenderViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="femaleBtn" destination="epF-nx-RLz" id="YuF-pz-dXd"/>
+                <outlet property="loadingIndicator" destination="SP2-ih-VU0" id="fJZ-2s-Exu"/>
                 <outlet property="maleBtn" destination="TxG-h5-SoF" id="sbe-tx-veO"/>
                 <outlet property="notSpecifiedBtn" destination="Eop-Yv-6AS" id="Sgh-6z-dRF"/>
                 <outlet property="saveBtn" destination="o3t-ki-TJj" id="wxb-Tj-ojv"/>
@@ -83,6 +84,9 @@
                         </button>
                     </subviews>
                 </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-ih-VU0">
+                    <rect key="frame" x="169" y="383" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -90,7 +94,9 @@
                 <constraint firstAttribute="trailing" secondItem="Cd3-pD-LwU" secondAttribute="trailing" constant="15" id="HAg-aO-f9u"/>
                 <constraint firstItem="JBV-Mc-UzO" firstAttribute="top" secondItem="Cd3-pD-LwU" secondAttribute="bottom" constant="40" id="LPV-RS-dcx"/>
                 <constraint firstItem="JBV-Mc-UzO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="cx8-fy-n1K"/>
+                <constraint firstItem="SP2-ih-VU0" firstAttribute="centerY" secondItem="o3t-ki-TJj" secondAttribute="centerY" id="kv4-MR-eT3"/>
                 <constraint firstItem="Cd3-pD-LwU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="rRR-YG-hZN"/>
+                <constraint firstItem="SP2-ih-VU0" firstAttribute="centerX" secondItem="o3t-ki-TJj" secondAttribute="centerX" id="wEc-KR-7k9"/>
                 <constraint firstItem="Cd3-pD-LwU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="xP0-wz-xpj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

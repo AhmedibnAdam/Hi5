@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IGenderRouter: class {
-    func navigateToEditProfile(gender: String)
+    func navigateToEditProfile()
 }
 
 class GenderRouter: IGenderRouter {
@@ -21,7 +21,7 @@ class GenderRouter: IGenderRouter {
 	init(view: GenderViewController?) {
 		self.view = view
 	}
-    func navigateToEditProfile(gender: String) {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile(gender: gender), completion: nil)
+    func navigateToEditProfile() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile, completion: nil)
     }
 }

@@ -14,22 +14,26 @@ protocol IProfileViewController: class {
 	var router: IProfileRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToEditProfile()
+    func hideIndecator()
 }
 
 class ProfileViewController: UIViewController {
 	var interactor: IProfileInteractor?
 	var router: IProfileRouter?
 //MARK:- Outlets
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var editBtn: UIButton!
-    @IBOutlet weak var profileImage: UIImageView!
     
 //MARK:- view LifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
         initView()
         configer()
-		
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        showIndecator()
+        loadShowProfileData()
     }
 //MARK:- Actions
     @IBAction func editBtnTapped(_ sender: UIButton) {
@@ -52,20 +56,29 @@ extension ProfileViewController: IProfileViewController {
     func navigateToEditProfile() {
         router?.navigateToEditProfile()
     }
+    func hideIndecator() {
+        activityIndicator.isHidden = true
+    }
 }
 
 extension ProfileViewController {
     func initView(){
-        // MARK : - view raduis
+         //MARK : - view raduis
 //        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-        self.profileImage = CreateCornerRauis.imageViewRaduis(view: profileImage, number: (self.profileImage.frame.size.height / 2))
+//        self.profileImage = CreateCornerRauis.imageViewRaduis(view: profileImage, number: (self.profileImage.frame.size.height / 2))
     }
     
     func configer(){
         router = ProfileRouter(view: self)
     }
+    
+    func showIndecator() {
+        activityIndicator.isHidden = false
+    }
 }
 
 extension ProfileViewController {
-	
+    func loadShowProfileData() {
+        interactor?.doShowProfile(view: self)
+    }
 }

@@ -346,6 +346,7 @@
 		862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */; };
 		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
 		86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */; };
+		8665FEF923E86AC200EB4E1E /* ProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */; };
 		8671347E23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671347D23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift */; };
 		8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */; };
 		8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */; };
@@ -353,6 +354,7 @@
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
 		868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */; };
 		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
+		869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCA5923E98C63000291EB /* GenderEndPoint.swift */; };
 		86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */; };
 		86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */; };
 		86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */; };
@@ -770,6 +772,7 @@
 		862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthManager.swift; sourceTree = "<group>"; };
 		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
 		86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailEndPoint.swift; sourceTree = "<group>"; };
+		8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndPoint.swift; sourceTree = "<group>"; };
 		8671347D23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationEndPoint.swift; sourceTree = "<group>"; };
 		8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameEndPoint.swift; sourceTree = "<group>"; };
 		8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationEndPoint.swift; sourceTree = "<group>"; };
@@ -777,6 +780,7 @@
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		869BCA5923E98C63000291EB /* GenderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEndPoint.swift; sourceTree = "<group>"; };
 		86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationConfiguration.swift; sourceTree = "<group>"; };
 		86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationPresenter.swift; sourceTree = "<group>"; };
 		86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationRouter.swift; sourceTree = "<group>"; };
@@ -2524,6 +2528,7 @@
 			children = (
 				86DB006323D70B97001E99E8 /* GenderModel.swift */,
 				86DB006523D70B97001E99E8 /* GenderManager.swift */,
+				869BCA5923E98C63000291EB /* GenderEndPoint.swift */,
 			);
 			path = GenderServices;
 			sourceTree = "<group>";
@@ -2612,6 +2617,7 @@
 			children = (
 				6683E30623BCEEFF00250702 /* ProfileModel.swift */,
 				6683E30823BCEEFF00250702 /* ProfileManager.swift */,
+				8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */,
 			);
 			path = ProfileServices;
 			sourceTree = "<group>";
@@ -2834,6 +2840,7 @@
 				6663360C23B40206004E537C /* Frameworks */,
 				6663360D23B40206004E537C /* Resources */,
 				82B588C1CBA59C9091BBE462 /* [CP] Embed Pods Frameworks */,
+				0CD478CDFDED9E2A8E6BC642 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2940,6 +2947,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CD478CDFDED9E2A8E6BC642 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4373E5CCA3D2E7295F8CFE1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2993,6 +3017,7 @@
 				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
 				662A169423C3E75400A3695E /* MyFavoriteFriendsViewController.swift in Sources */,
 				6683E2DE23BCEBD900250702 /* SuggestedFieldsModel.swift in Sources */,
+				869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */,
 				668C210723C3F5BC00C009A9 /* AddSessionResultRouter.swift in Sources */,
 				662A16C423C3EA9F00A3695E /* AddFriendsConfiguration.swift in Sources */,
 				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
@@ -3290,6 +3315,7 @@
 				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
 				8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */,
 				86E1293C23D4A15A007CB956 /* SocialModel.swift in Sources */,
+				8665FEF923E86AC200EB4E1E /* ProfileEndPoint.swift in Sources */,
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,

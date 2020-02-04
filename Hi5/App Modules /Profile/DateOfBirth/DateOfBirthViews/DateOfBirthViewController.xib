@@ -28,8 +28,11 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-HZ-04c">
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-HZ-04c">
                     <rect key="frame" x="0.0" y="191.5" width="375" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="599578645.93318903">
+                        <!--2020-01-01 13:37:25 +0000-->
+                    </date>
                     <connections>
                         <action selector="datePickerChanged:" destination="-1" eventType="valueChanged" id="fsr-fo-mY4"/>
                     </connections>
@@ -58,7 +61,7 @@
                     <rect key="frame" x="10" y="467.5" width="355" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg5-MJ-xvT">
-                            <rect key="frame" x="0.0" y="0.0" width="291.5" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="30"/>
                             <state key="normal" title="who can see the year">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
@@ -66,8 +69,8 @@
                                 <action selector="yearBtnTapped:" destination="-1" eventType="touchUpInside" id="PGg-7S-NYO"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Only me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl6-6D-mSx">
-                            <rect key="frame" x="291.5" y="0.0" width="63.5" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Public" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gl6-6D-mSx">
+                            <rect key="frame" x="308" y="0.0" width="47" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>

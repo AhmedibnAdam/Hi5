@@ -21,6 +21,6 @@ class ProfileRouter: IProfileRouter {
 		self.view = view
 	}
     func navigateToEditProfile() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile(gender: nil), completion: nil)
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile, completion: nil)
     }
 }

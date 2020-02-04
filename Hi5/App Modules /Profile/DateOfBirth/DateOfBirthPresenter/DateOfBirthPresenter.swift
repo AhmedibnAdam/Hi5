@@ -11,7 +11,9 @@
 import UIKit
 
 protocol IDateOfBirthPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+    func hideIndicator()
+    func navigateToEditProfile()
 }
 
 class DateOfBirthPresenter: IDateOfBirthPresenter {	
@@ -20,4 +22,13 @@ class DateOfBirthPresenter: IDateOfBirthPresenter {
 	init(view: IDateOfBirthViewController?) {
 		self.view = view
 	}
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
+    func navigateToEditProfile() {
+        view?.navigateToEditProfile()
+    }
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
 }

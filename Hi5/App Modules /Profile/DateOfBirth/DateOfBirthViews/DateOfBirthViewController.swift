@@ -13,12 +13,15 @@ import UIKit
 protocol IDateOfBirthViewController: class {
 	var router: IDateOfBirthRouter? { get set }
     func showAlert(title: String, msg: String)
+    func hideIndicator()
+    func navigateToEditProfile()
 }
 
 class DateOfBirthViewController: UIViewController {
 	var interactor: IDateOfBirthInteractor?
 	var router: IDateOfBirthRouter?
     
+    var words: [String] = []
     var dateOfBirth: String = "01 Jan 2020"
     var yearFlag: String = "Public"
     var monthFlag: String = "Public"
@@ -32,6 +35,7 @@ class DateOfBirthViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     //MARK:- Outlets
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var theMonthAndDayLbl: UILabel!
@@ -118,6 +122,12 @@ extension DateOfBirthViewController: IDateOfBirthViewController {
      func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
+    func navigateToEditProfile() {
+        router?.navigateToEditProfile()
+    }
 }
 
 extension DateOfBirthViewController {
@@ -130,19 +140,35 @@ extension DateOfBirthViewController {
         // MARK : - Button  raduis
         self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
     }
-    
     func configure() {
         router = DateOfBirthRouter(view: self)
     }
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+    
 }
 
 extension DateOfBirthViewController {
     func saveBtnAction() {
+        showIndicator()
+        dateOfBirth.enumerateSubstrings(in: dateOfBirth.startIndex..<dateOfBirth.endIndex, options: .byWords) { substring, _, _, _ in
+            if let substring = substring {
+                self.words.append(substring)
+            }
+        }
+        let day = words[0]
+        let month = words[1]
+        let year = words[2]
+        interactor?.doDateOfBirthEditProfile(view: self, year: year, yearFlag: yearFlag, month: month, monthFlag: monthFlag, day: day, dayFlag: dayFlag)
+        saveDataInUserDefaults()
+    }
+    
+    func saveDataInUserDefaults() {
         let defaults = UserDefaults.standard
         defaults.set(dateOfBirth, forKey: "DateOfBirth")
         defaults.set(yearFlag, forKey: "yearFlag")
         defaults.set(monthFlag, forKey: "monthFlag")
         defaults.set(dayFlag, forKey: "dayFlag")
-        router?.navigateToEditProfile()
     }
 }

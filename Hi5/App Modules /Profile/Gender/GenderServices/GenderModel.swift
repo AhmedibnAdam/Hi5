@@ -35,7 +35,7 @@ struct GenderModel {
         let avatar: String?
         let year, month, day, country: City?
         let city, state: City?
-        let latitude, longitude: Int?
+        let latitude, longitude: Double?
 
         enum CodingKeys: String, CodingKey {
             case id, name, email, gender

@@ -12,6 +12,7 @@ import UIKit
 
 protocol IDateOfBirthInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doDateOfBirthEditProfile(view : UIViewController , year: String , yearFlag: String , month: String , monthFlag: String , day: String , dayFlag: String)
 }
 
 class DateOfBirthInteractor: IDateOfBirthInteractor {
@@ -22,5 +23,16 @@ class DateOfBirthInteractor: IDateOfBirthInteractor {
     init(presenter: IDateOfBirthPresenter, manager: IDateOfBirthManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func doDateOfBirthEditProfile(view: UIViewController, year: String, yearFlag: String, month: String, monthFlag: String, day: String, dayFlag: String) {
+        manager?.dateOfBirthEditProfileFromApi(year: year, yearFlag: yearFlag, month: month, monthFlag: monthFlag, day: day, dayFlag: dayFlag, complition: { (error, success) in
+            if(success == true) {
+                self.presenter?.hideIndicator()
+                self.presenter?.navigateToEditProfile()
+            } else {
+                self.presenter?.hideIndicator()
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateOfBirthViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="datePicker" destination="sUb-HZ-04c" id="lIS-wg-vWP"/>
+                <outlet property="loadingIndicator" destination="CaY-pg-CmU" id="hx3-AE-6H8"/>
                 <outlet property="saveBtn" destination="0dy-la-Bat" id="Qhw-uG-wgN"/>
                 <outlet property="theMonthAndDayLbl" destination="SPx-9e-Uf6" id="pCz-Kx-o1u"/>
                 <outlet property="theYearLbl" destination="gl6-6D-mSx" id="sST-zj-HrA"/>
@@ -91,15 +92,20 @@
                         <action selector="saveBtnTapped:" destination="-1" eventType="touchUpInside" id="WN7-0N-qeY"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-pg-CmU">
+                    <rect key="frame" x="169" y="593.5" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="CaY-pg-CmU" firstAttribute="centerY" secondItem="0dy-la-Bat" secondAttribute="centerY" id="4DQ-0w-kCP"/>
                 <constraint firstItem="nFs-lI-12T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="INl-D1-xoe"/>
                 <constraint firstItem="PWG-9B-Z3B" firstAttribute="top" secondItem="sUb-HZ-04c" secondAttribute="bottom" constant="10" id="JmQ-Qp-uKn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nFs-lI-12T" secondAttribute="trailing" constant="15" id="Ku1-Fm-Ber"/>
                 <constraint firstItem="bmz-vN-Zb1" firstAttribute="top" secondItem="PWG-9B-Z3B" secondAttribute="bottom" constant="20" id="O1I-vn-ZVH"/>
                 <constraint firstItem="sUb-HZ-04c" firstAttribute="top" secondItem="nFs-lI-12T" secondAttribute="bottom" constant="50" id="R2W-Ac-rWd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0dy-la-Bat" secondAttribute="trailing" constant="10" id="TaL-w1-1aT"/>
+                <constraint firstItem="CaY-pg-CmU" firstAttribute="centerX" secondItem="0dy-la-Bat" secondAttribute="centerX" id="VeQ-9N-pYc"/>
                 <constraint firstItem="nFs-lI-12T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="a3Y-sm-Zd7"/>
                 <constraint firstItem="PWG-9B-Z3B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="bb4-rf-2uX"/>
                 <constraint firstItem="sUb-HZ-04c" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ivm-8t-KRJ"/>

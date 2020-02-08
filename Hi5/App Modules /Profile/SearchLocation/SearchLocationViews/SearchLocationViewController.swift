@@ -46,6 +46,10 @@ class SearchLocationViewController: UIViewController , UISearchBarDelegate {
         initView()
         configure()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        getPlace()
+    }
+    //MARK: - Search Bar
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
@@ -62,6 +66,12 @@ class SearchLocationViewController: UIViewController , UISearchBarDelegate {
 
         // Display the autocomplete view controller.
         present(autocompleteController, animated: true, completion: nil)
+    }
+    
+    func getPlace() {
+        let defaults = UserDefaults.standard
+        let places = defaults.string(forKey: "place")
+        searchBar.text = places
     }
    //MARK:- Actions
     
@@ -96,9 +106,11 @@ extension SearchLocationViewController {
 extension SearchLocationViewController: GMSAutocompleteViewControllerDelegate {
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-      print("Place name: \(place.name)")
-      print("Place ID: \(place.placeID)")
-      print("Place attributions: \(place.attributions)")
+        if let place = place.name {
+            let defaults = UserDefaults.standard
+            defaults.set(place, forKey: "place")
+        }
+        getPlace()
       dismiss(animated: true, completion: nil)
     }
 

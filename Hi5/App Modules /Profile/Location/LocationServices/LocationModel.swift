@@ -12,15 +12,44 @@ import UIKit
 
 struct LocationModel {	
 	struct Request {
-		// do someting...
-
 		func parameters() -> [String: Any]? {
-			// do someting...
 			return nil
 		}
 	}
 
-	struct Response {
-		// do someting...
-	}
+    struct LocationEditProfileResponse: Codable {
+        let status: Bool?
+        let user: User?
+    }
+
+    // MARK: - User
+    struct User: Codable {
+        let id: Int?
+        let name: String?
+        let email: String?
+        let gender, vieID: String?
+        let phoneNumber: Int?
+        let isActive: Bool?
+        let createdAt: String?
+        let status: Int?
+        let biography: String?
+        let avatar: String?
+        let year, month, day, country: City?
+        let city, state: City?
+        let latitude, longitude: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case id, name, email, gender
+            case vieID = "vie_id"
+            case phoneNumber = "phone_number"
+            case isActive = "is_active"
+            case createdAt = "created_at"
+            case status, biography, avatar, year, month, day, country, city, state, latitude, longitude
+        }
+    }
+
+    // MARK: - City
+    struct City: Codable {
+        let val, flag: String?
+    }
 }

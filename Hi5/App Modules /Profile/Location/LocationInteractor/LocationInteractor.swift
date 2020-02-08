@@ -12,6 +12,7 @@ import UIKit
 
 protocol ILocationInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doLocationEditProfile(view : UIViewController , country: String , countryFlag: String , city: String , cityFlag: String , state: String , stateFlag: String)
 }
 
 class LocationInteractor: ILocationInteractor {
@@ -22,5 +23,16 @@ class LocationInteractor: ILocationInteractor {
     init(presenter: ILocationPresenter, manager: ILocationManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func doLocationEditProfile(view: UIViewController, country: String, countryFlag: String, city: String, cityFlag: String, state: String, stateFlag: String) {
+        manager?.locationEditProfileFromApi(country: country, countryFlag: countryFlag, city: city, cityFlag: cityFlag, state: state, stateFlag: stateFlag, complition: { (error, success) in
+            if(success == true){
+                self.presenter?.hideIndicator()
+                self.presenter?.navigateToEditProfile()
+            } else {
+                self.presenter?.hideIndicator()
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

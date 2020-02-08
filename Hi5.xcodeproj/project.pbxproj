@@ -344,6 +344,7 @@
 		862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5A923D730AD00508F1A /* DateOfBirthModel.swift */; };
 		862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862EB5AA23D730AD00508F1A /* DateOfBirthViewController.xib */; };
 		862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */; };
+		864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E920023E9BE530095B3EF /* LocationEndPoint.swift */; };
 		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
 		86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */; };
 		8665FEF923E86AC200EB4E1E /* ProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */; };
@@ -351,6 +352,7 @@
 		8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */; };
 		8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */; };
 		8671348423CF5950009093A0 /* NewPasswordEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */; };
+		868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */; };
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
 		868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */; };
 		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
@@ -771,6 +773,7 @@
 		862EB5A923D730AD00508F1A /* DateOfBirthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthModel.swift; sourceTree = "<group>"; };
 		862EB5AA23D730AD00508F1A /* DateOfBirthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirthViewController.xib; sourceTree = "<group>"; };
 		862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthManager.swift; sourceTree = "<group>"; };
+		864E920023E9BE530095B3EF /* LocationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndPoint.swift; sourceTree = "<group>"; };
 		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
 		86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailEndPoint.swift; sourceTree = "<group>"; };
 		8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndPoint.swift; sourceTree = "<group>"; };
@@ -778,6 +781,7 @@
 		8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameEndPoint.swift; sourceTree = "<group>"; };
 		8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationEndPoint.swift; sourceTree = "<group>"; };
 		8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordEndPoint.swift; sourceTree = "<group>"; };
+		868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEndPoint.swift; sourceTree = "<group>"; };
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
@@ -2659,6 +2663,7 @@
 			children = (
 				86DC11DC23D5C19100E577D9 /* EditProfileModel.swift */,
 				86DC11DE23D5C19100E577D9 /* EditProfileManager.swift */,
+				868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */,
 			);
 			path = EditProfileServices;
 			sourceTree = "<group>";
@@ -2785,6 +2790,7 @@
 			children = (
 				86F9B90723DDAAA5008C1F80 /* LocationModel.swift */,
 				86F9B90923DDAAA5008C1F80 /* LocationManager.swift */,
+				864E920023E9BE530095B3EF /* LocationEndPoint.swift */,
 			);
 			path = LocationServices;
 			sourceTree = "<group>";
@@ -3057,6 +3063,7 @@
 				668C213F23C3F6F700C009A9 /* CommentListsManager.swift in Sources */,
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				86DB006923D70B97001E99E8 /* GenderViewController.swift in Sources */,
+				864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
 				86F9B90C23DDAAA5008C1F80 /* LocationRouter.swift in Sources */,
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
@@ -3222,6 +3229,7 @@
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				6683E2DB23BCEBD900250702 /* SuggestedFieldsRouter.swift in Sources */,
+				868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */,
 				668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */,
 				6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,

@@ -10,6 +10,9 @@ PODS:
     - GoogleMaps/Base (= 3.7.0)
   - GooglePlacesSearchController (0.2.3)
   - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.13.0):
+    - Kingfisher/Core (= 5.13.0)
+  - Kingfisher/Core (5.13.0)
   - LUExpandableTableView (5.0.0)
   - SideMenu (6.4.7)
   - SwiftyJSON (5.0.0)
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - GooglePlaces
   - GooglePlacesSearchController
   - IQKeyboardManagerSwift
+  - Kingfisher
   - LUExpandableTableView
   - SideMenu
   - SwiftyJSON
@@ -36,6 +40,7 @@ SPEC REPOS:
     - GooglePlaces
     - GooglePlacesSearchController
     - IQKeyboardManagerSwift
+    - Kingfisher
     - LUExpandableTableView
     - SideMenu
     - SwiftyJSON
@@ -49,10 +54,11 @@ SPEC CHECKSUMS:
   GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
   GooglePlacesSearchController: f8c7da8c3bf0bcf901c5873c22fda7db5fbfc15e
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
   LUExpandableTableView: 710ed7e7d55d0b58d61c95561bd9ecbf39692010
   SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 10e336e85fd84a2dfd3f139789812523a7406f76
+PODFILE CHECKSUM: 59b13dfc9896a6316038e198d827cae10d60935d
 
 COCOAPODS: 1.8.4

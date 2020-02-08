@@ -26,12 +26,16 @@ class ProfileInteractor: IProfileInteractor {
     }
     
     func doShowProfile(view : UIViewController){
-        manager?.showProfileFromApi(complition: { (error, success) in
+        manager?.showProfileFromApi(complition: { (error, success , data) in
             if (success == true) {
                 self.presenter?.hideIndecator()
+                guard let data = data else {
+                    return 
+                }
+                self.presenter?.showResponse(data: data)
             } else {
                 self.presenter?.hideIndecator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "\(error?.code ?? 400)", msg: (error?.message ?? "error"))
             }
         })
     }

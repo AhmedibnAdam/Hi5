@@ -33,9 +33,9 @@ struct ProfileModel {
         let status: Int?
         let biography: String?
         let avatar: String?
-        let year, month, day, country: String?
-        let city, state: String?
-        let latitude, longitude: Double?
+        let year, month, day, country: City?
+        let city, state: City?
+        let latitude, longitude: Int?
 
         enum CodingKeys: String, CodingKey {
             case id, name, email, gender
@@ -45,5 +45,10 @@ struct ProfileModel {
             case createdAt = "created_at"
             case status, biography, avatar, year, month, day, country, city, state, latitude, longitude
         }
+    }
+
+    // MARK: - City
+    struct City: Codable {
+        let val, flag: String?
     }
 }

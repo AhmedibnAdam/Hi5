@@ -85,7 +85,7 @@ class GenderViewController: UIViewController {
         self.notSpecifiedBtn = CreateBorder.buttonBorder(button: self.notSpecifiedBtn, width: 1.0, color: UIColor.orange.cgColor)
         self.notSpecifiedBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.notSpecifiedBtn.tintColor = .orange
-        self.gender = "notSpecified"//notSpecifiedBtn.titleLabel?.text
+        self.gender = "not specified"//notSpecifiedBtn.titleLabel?.text
         
         self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
         self.maleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)

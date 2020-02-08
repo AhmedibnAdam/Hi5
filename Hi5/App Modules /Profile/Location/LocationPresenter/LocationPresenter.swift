@@ -11,7 +11,9 @@
 import UIKit
 
 protocol ILocationPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+    func navigateToEditProfile()
+    func hideIndicator()
 }
 
 class LocationPresenter: ILocationPresenter {	
@@ -20,4 +22,13 @@ class LocationPresenter: ILocationPresenter {
 	init(view: ILocationViewController?) {
 		self.view = view
 	}
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    func navigateToEditProfile() {
+        view?.navigateToEditProfile()
+    }
 }

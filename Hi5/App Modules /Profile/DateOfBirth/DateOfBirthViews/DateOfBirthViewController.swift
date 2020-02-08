@@ -23,9 +23,12 @@ class DateOfBirthViewController: UIViewController {
     
     var words: [String] = []
     var dateOfBirth: String = "01 Jan 2020"
-    var yearFlag: String = "Public"
-    var monthFlag: String = "Public"
-    var dayFlag: String = "Public"
+    var day = "01"
+    var month = "Jan"
+    var year = "2020"
+    var yearFlag: String = "public"
+    var monthFlag: String = "public"
+    var dayFlag: String = "public"
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
@@ -69,20 +72,20 @@ class DateOfBirthViewController: UIViewController {
     }
     @IBAction func theMonthAbdDateBtnTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let onlyFriendsAction = UIAlertAction(title: "Only friends", style: .destructive) { (actionSheet) in
-            self.theMonthAndDayLbl.text = "Only friends"
-            self.monthFlag = "Only friends"
-            self.dayFlag = "Only friends"
+        let onlyFriendsAction = UIAlertAction(title: "only friends", style: .destructive) { (actionSheet) in
+            self.theMonthAndDayLbl.text = "only friends"
+            self.monthFlag = "only friends"
+            self.dayFlag = "only friends"
         }
-        let publicAction = UIAlertAction(title: "Public", style: .destructive) { (actionSheet) in
-            self.theMonthAndDayLbl.text = "Public"
-            self.monthFlag = "Public"
-            self.dayFlag = "Public"
+        let publicAction = UIAlertAction(title: "public", style: .destructive) { (actionSheet) in
+            self.theMonthAndDayLbl.text = "public"
+            self.monthFlag = "public"
+            self.dayFlag = "public"
         }
-        let onlyMeAction = UIAlertAction(title: "Only me", style: .destructive) { (actionSheet) in
-            self.theMonthAndDayLbl.text = "Only me"
-            self.monthFlag = "Only me"
-            self.dayFlag = "Only me"
+        let onlyMeAction = UIAlertAction(title: "only me", style: .destructive) { (actionSheet) in
+            self.theMonthAndDayLbl.text = "only me"
+            self.monthFlag = "only me"
+            self.dayFlag = "only me"
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
@@ -94,17 +97,17 @@ class DateOfBirthViewController: UIViewController {
     }
     @IBAction func yearBtnTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let onlyFriendsAction = UIAlertAction(title: "Only friends", style: .destructive) { (actionSheet) in
-            self.theYearLbl.text = "Only friends"
-            self.yearFlag = "Only friends"
+        let onlyFriendsAction = UIAlertAction(title: "only friends", style: .destructive) { (actionSheet) in
+            self.theYearLbl.text = "only friends"
+            self.yearFlag = "only friends"
         }
-        let publicAction = UIAlertAction(title: "Public", style: .destructive) { (actionSheet) in
-            self.theYearLbl.text = "Public"
-            self.yearFlag = "Public"
+        let publicAction = UIAlertAction(title: "public", style: .destructive) { (actionSheet) in
+            self.theYearLbl.text = "public"
+            self.yearFlag = "public"
         }
-        let onlyMeAction = UIAlertAction(title: "Only me", style: .destructive) { (actionSheet) in
-            self.theYearLbl.text = "Only me"
-            self.yearFlag = "Only me"
+        let onlyMeAction = UIAlertAction(title: "only me", style: .destructive) { (actionSheet) in
+            self.theYearLbl.text = "only me"
+            self.yearFlag = "only me"
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
@@ -157,9 +160,9 @@ extension DateOfBirthViewController {
                 self.words.append(substring)
             }
         }
-        let day = words[0]
-        let month = words[1]
-        let year = words[2]
+        day = words[0]
+        month = words[1]
+        year = words[2]
         interactor?.doDateOfBirthEditProfile(view: self, year: year, yearFlag: yearFlag, month: month, monthFlag: monthFlag, day: day, dayFlag: dayFlag)
         saveDataInUserDefaults()
     }
@@ -167,6 +170,9 @@ extension DateOfBirthViewController {
     func saveDataInUserDefaults() {
         let defaults = UserDefaults.standard
         defaults.set(dateOfBirth, forKey: "DateOfBirth")
+        defaults.set(day, forKey: "day")
+        defaults.set(month, forKey: "month")
+        defaults.set(year, forKey: "year")
         defaults.set(yearFlag, forKey: "yearFlag")
         defaults.set(monthFlag, forKey: "monthFlag")
         defaults.set(dayFlag, forKey: "dayFlag")

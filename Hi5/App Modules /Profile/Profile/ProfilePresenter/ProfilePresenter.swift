@@ -13,6 +13,7 @@ import UIKit
 protocol IProfilePresenter: class {
    func showErrorAlert(title: String, msg: String)
    func hideIndecator()
+   func showResponse(data: ProfileModel.ShowProfileResponse)
 }
 
 class ProfilePresenter: IProfilePresenter {	
@@ -26,5 +27,8 @@ class ProfilePresenter: IProfilePresenter {
     }
     func hideIndecator() {
         view?.hideIndecator()
+    }
+    func showResponse(data: ProfileModel.ShowProfileResponse) {
+        view?.showResponse(data: data)
     }
 }

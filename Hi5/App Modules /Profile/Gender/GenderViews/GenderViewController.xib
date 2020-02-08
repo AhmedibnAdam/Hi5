@@ -37,7 +37,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Xac-2U-48B"/>
                             </constraints>
-                            <state key="normal" title="Male" image="male">
+                            <state key="normal" title="male" image="male">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -49,7 +49,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Vrb-nD-1Ri"/>
                             </constraints>
-                            <state key="normal" title="Female" image="female">
+                            <state key="normal" title="female" image="female">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -61,7 +61,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Di4-3Y-FdX"/>
                             </constraints>
-                            <state key="normal" title="Not specified" image="notSpecified">
+                            <state key="normal" title="not specified" image="notSpecified">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>

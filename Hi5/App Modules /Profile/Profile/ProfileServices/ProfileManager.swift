@@ -14,18 +14,18 @@ import SwiftyJSON
 // MARK: - Handle all data requests and responses API / CoreData / Realm etc ...
 
 protocol IProfileManager: class {
-	func showProfileFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
+    func showProfileFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool , _ data: ProfileModel.ShowProfileResponse?)->Void)
 }
 
 class ProfileManager: IProfileManager {
-    func showProfileFromApi(complition: @escaping (ErrorModel?, Bool) -> Void) {
+    func showProfileFromApi(complition: @escaping (ErrorModel?, Bool , ProfileModel.ShowProfileResponse?) -> Void) {
         NetworkService.share.request(endpoint: ProfileEndpoint.ShowProfile, success: { (responseData) in
         let response = responseData
         do {
             let decoder = JSONDecoder()
             let user = try decoder.decode(ProfileModel.ShowProfileResponse.self, from: response)
             print(user)
-            complition(nil,true)
+            complition(nil , true , user)
             
         } catch let error {
             print("error : ", error.localizedDescription  )
@@ -34,7 +34,7 @@ class ProfileManager: IProfileManager {
                 let decoder = JSONDecoder()
                 let error = try decoder.decode(ErrorModel.self, from: responseData )
                 print(error)
-                complition(error , false)
+                complition(error , false , nil)
             } catch let error {
                 print(error)
                 
@@ -46,11 +46,11 @@ class ProfileManager: IProfileManager {
             let decoder = JSONDecoder()
             let error = try decoder.decode(ErrorModel.self, from: error as! Data )
             print(error)
-            complition(error , false)
+            complition(error , false , nil)
             
         } catch let error {
             print(error)
-            complition(nil , false)
+            complition(nil , false , nil)
         }
         
     })

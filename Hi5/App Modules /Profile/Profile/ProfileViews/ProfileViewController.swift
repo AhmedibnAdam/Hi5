@@ -9,10 +9,12 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import Kingfisher
 
 protocol IProfileViewController: class {
 	var router: IProfileRouter? { get set }
     func showAlert(title: String, msg: String)
+    func showResponse(data: ProfileModel.ShowProfileResponse)
     func navigateToEditProfile()
     func hideIndecator()
 }
@@ -21,6 +23,12 @@ class ProfileViewController: UIViewController {
 	var interactor: IProfileInteractor?
 	var router: IProfileRouter?
 //MARK:- Outlets
+    
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var profilePhoto: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var editBtn: UIButton!
@@ -59,13 +67,22 @@ extension ProfileViewController: IProfileViewController {
     func hideIndecator() {
         activityIndicator.isHidden = true
     }
+    func showResponse(data: ProfileModel.ShowProfileResponse) {
+        guard let responseData = data.user else {
+            return
+        }
+        let url = URL(fileURLWithPath: responseData.avatar!)
+        self.fullName.text = responseData.name
+        self.profilePhoto.kf.setImage(with: url)
+        self.userName.text = responseData.vieID
+    }
 }
 
 extension ProfileViewController {
     func initView(){
          //MARK : - view raduis
 //        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-//        self.profileImage = CreateCornerRauis.imageViewRaduis(view: profileImage, number: (self.profileImage.frame.size.height / 2))
+        self.profilePhoto = CreateCornerRauis.imageViewRaduis(view: profilePhoto, number: (self.profilePhoto.frame.size.height / 2))
     }
     
     func configer(){

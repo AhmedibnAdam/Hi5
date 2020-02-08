@@ -13,10 +13,8 @@ import UIKit
 protocol ILocationViewController: class {
 	var router: ILocationRouter? { get set }
     func showAlert(title: String, msg: String)
-}
-
-protocol DataEnteredDelegate: class {
-    func userDidEnterInformation(countryFlag: String , stateFlag: String , cityFlag: String)
+    func navigateToEditProfile()
+    func hideIndicator()
 }
 
 class LocationViewController: UIViewController{
@@ -24,10 +22,14 @@ class LocationViewController: UIViewController{
 	var interactor: ILocationInteractor?
 	var router: ILocationRouter?
     
-    var countryFlag = "Public"
-    var stateFlag = "Public"
-    var cityFlag = "Public"
-    weak var delegate: DataEnteredDelegate?
+    var words: [String] = []
+    var country = ""
+    var city = ""
+    var state = ""
+    var countryFlag = "public"
+    var stateFlag = "public"
+    var cityFlag = "public"
+    //weak var delegate: DataEnteredDelegate?
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
@@ -37,6 +39,7 @@ class LocationViewController: UIViewController{
         router?.navigateToEditProfile()
     }
     //MARK:- outlets
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var locationBtn: UIButton!
     @IBOutlet weak var countryLbl: UILabel!
     @IBOutlet weak var stateLbl: UILabel!
@@ -50,14 +53,19 @@ class LocationViewController: UIViewController{
         initView()
         configure()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard
+        let place = defaults.string(forKey: "place")
+        locationBtn.setTitle(place, for: .normal)
+    }
     //MARK:- Actions
     @IBAction func locationBtn(_ sender: UIButton) {
         router?.navigateToSearchLocation()
     }
     
     @IBAction func saveBtnTapped(_ sender: UIButton) {
-        delegate?.userDidEnterInformation(countryFlag: countryFlag , stateFlag: stateFlag , cityFlag: cityFlag)
-        router?.navigateToEditProfile()
+        saveBtnAction()
     }
 
     @IBAction func countryBtnTapped(_ sender: UIButton) {
@@ -135,6 +143,12 @@ extension LocationViewController: ILocationViewController {
      func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
+    func navigateToEditProfile() {
+        router?.navigateToEditProfile()
+    }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
 }
 
 extension LocationViewController {
@@ -150,9 +164,45 @@ extension LocationViewController {
     func configure() {
         router = LocationRouter(view: self)
     }
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
 }
 
 extension LocationViewController {
-	
+    func saveBtnAction() {
+        showIndicator()
+        guard let location = locationBtn.titleLabel?.text else {
+            hideIndicator()
+            return showAlert(title: "Notification", msg: "Please select your location")
+        }
+        location.enumerateSubstrings(in: location.startIndex..<location.endIndex, options: .byWords) { substring, _, _, _ in
+            if let substring = substring {
+                self.words.append(substring)
+            }
+        }
+        if words.count == 1 {
+            self.country = words[0]
+            self.city = ""
+            self.state = ""
+        } else if words.count == 2{
+            self.country = words[0]
+            self.city = words[1]
+            self.state = ""
+        } else {
+            self.country = words[0]
+            self.city = words[1]
+            self.state = words[2]
+        }
+        interactor?.doLocationEditProfile(view: self, country: country, countryFlag: countryLbl.text ?? countryFlag, city: city, cityFlag: cityLbl.text ?? cityFlag, state: state, stateFlag: stateLbl.text ?? stateFlag)
+        saveDataInUserDefaults()
+    }
+    func saveDataInUserDefaults() {
+        let defaults = UserDefaults.standard
+        defaults.set(locationBtn.titleLabel?.text, forKey: "location")
+        defaults.set(countryFlag, forKey: "countryFlag")
+        defaults.set(cityFlag, forKey: "cityFlag")
+        defaults.set(stateFlag, forKey: "stateFlag")
+    }
 }
 

@@ -24,6 +24,7 @@ class NetworkService {
     static let share = NetworkService()
     
     private var dataRequest: DataRequest?
+   // private var uploadRequest: UploadRequest?
     private var success: ((_ data: Data?)->Void)?
     private var failure: ((_ error: Error?)->Void)?
     
@@ -99,3 +100,35 @@ class NetworkService {
         return self
     }
 }
+
+//extension NetworkService {
+//
+//    private func uploadToServerWith<T: IEndpoint>(endpoint: T, success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
+//        DispatchQueue.global(qos: .background).async {
+//            self.uploadRequest = self._dataRequest(url: endpoint.path,
+//                                                   method: endpoint.method,
+//                                                   parameters: endpoint.parameter,
+//                                                   encoding: endpoint.encoding,
+//                                                   headers: endpoint.header)
+//            upload(multipartFormData: { (mul) in
+//                mul.append(data.data, withName: data.name, fileName: data.fileName, mimeType: data.mimeType)
+//                guard let parameters = parameters else { return }
+//                for (key, value) in parameters {
+//                    mul.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+//                }
+//            }, with: uploadRequest) { (response) in
+//                switch response {
+//                case .success(let requestUp, _, _):
+//                    requestUp.responseData(completionHandler: { (response) in
+//                        switch response.result {
+//                        case .success (let value):
+//                            success?(value)
+//                        case .failure(let error):
+//                            print(error)
+//                        }
+//                    })
+//                }
+//            }
+//        }
+//    }
+//}

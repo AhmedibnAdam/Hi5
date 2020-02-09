@@ -183,19 +183,25 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
                 state = locationWords[2]
             }
         }
-        if(fullNameTextField.text?.isEmpty == false){
+        
+        if(fullNameTextField.text?.isEmpty == false && biographyTextField.text?.isEmpty == true){
             guard let name = fullNameTextField.text else {return}
             parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "name": name]
         }
-       else if(biographyTextField.text?.isEmpty == false){
+            
+        else if(biographyTextField.text?.isEmpty == false && fullNameTextField.text?.isEmpty == true){
             guard let biography = biographyTextField.text else {return}
             parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "biography": biography]
+            
+        } else if(fullNameTextField.text?.isEmpty == false && biographyTextField.text?.isEmpty == false){
+            guard let name = fullNameTextField.text else {return}
+            guard let biography = biographyTextField.text else {return}
+            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "biography": biography , "name": name]
         }
 
         else { parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag ,"year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "gender": gender]
         }
         interactor?.doEditProfile(view: self, editProfile: parameters)
-        
       }
     func editPhotoBtnAction() {
         let picker = UIImagePickerController()

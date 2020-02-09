@@ -75,6 +75,7 @@ extension ProfileViewController: IProfileViewController {
         self.fullName.text = responseData.name
         self.profilePhoto.kf.setImage(with: url)
         self.userName.text = responseData.vieID
+        self.descriptionLbl.text = responseData.biography
     }
 }
 

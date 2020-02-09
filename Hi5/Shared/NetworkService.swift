@@ -24,7 +24,6 @@ class NetworkService {
     static let share = NetworkService()
     
     private var dataRequest: DataRequest?
-   // private var uploadRequest: UploadRequest?
     private var success: ((_ data: Data?)->Void)?
     private var failure: ((_ error: Error?)->Void)?
     
@@ -101,34 +100,42 @@ class NetworkService {
     }
 }
 
-//extension NetworkService {
-//
-//    private func uploadToServerWith<T: IEndpoint>(endpoint: T, success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
-//        DispatchQueue.global(qos: .background).async {
-//            self.uploadRequest = self._dataRequest(url: endpoint.path,
-//                                                   method: endpoint.method,
-//                                                   parameters: endpoint.parameter,
-//                                                   encoding: endpoint.encoding,
-//                                                   headers: endpoint.header)
-//            upload(multipartFormData: { (mul) in
-//                mul.append(data.data, withName: data.name, fileName: data.fileName, mimeType: data.mimeType)
-//                guard let parameters = parameters else { return }
-//                for (key, value) in parameters {
-//                    mul.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-//                }
-//            }, with: uploadRequest) { (response) in
-//                switch response {
-//                case .success(let requestUp, _, _):
-//                    requestUp.responseData(completionHandler: { (response) in
-//                        switch response.result {
-//                        case .success (let value):
-//                            success?(value)
-//                        case .failure(let error):
-//                            print(error)
-//                        }
-//                    })
-//                }
-//            }
-//        }
-//    }
-//}
+// upload request
+
+extension NetworkService {
+    
+    private func uploadToServerWith<T: IEndpoint>(endpoint: T, success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
+        DispatchQueue.global(qos: .background).async {
+            let image = endpoint.parameter?["image"] as! UIImage
+            let imgData = image.jpegData(compressionQuality: 0.1)!
+            Alamofire.upload(multipartFormData: { multipartFormData in
+                multipartFormData.append(imgData, withName: "image",fileName: "image", mimeType: "image/jpg")
+                for (key, value) in endpoint.parameter ?? ["":""] {
+                    multipartFormData.append(((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!), withName: key)
+                }
+            }, usingThreshold:UInt64.init(), to:endpoint.path , method:.post, headers: endpoint.header)
+            { (result) in
+                switch result {
+                case .success(let upload, _ , _):
+                  //  success?(value)
+                    upload.uploadProgress(closure: { (Progress) in
+                        print("Upload Progress: \(Progress.fractionCompleted)")
+                    })
+                    upload.responseData { (response) in
+                        switch response.result {
+                        case .success (let value):
+                            success?(value)
+                        case .failure(let error):
+                            print(error)
+                        }
+
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+
+            }
+        }
+    }
+    
+}

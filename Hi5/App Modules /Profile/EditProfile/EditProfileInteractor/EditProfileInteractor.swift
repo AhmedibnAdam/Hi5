@@ -12,7 +12,7 @@ import UIKit
 
 protocol IEditProfileInteractor: class {
 	var parameters: [String: Any]? { get set }
-    func doEditProfile(view : UIViewController , editProfile: [String: Any]?)
+    func doEditProfile(view : UIViewController , editProfile: [String: Any]? , image: UIImage)
 }
 
 class EditProfileInteractor: IEditProfileInteractor {
@@ -25,8 +25,8 @@ class EditProfileInteractor: IEditProfileInteractor {
     	self.manager = manager
         
     }
-    func doEditProfile(view: UIViewController, editProfile: [String : Any]?) {
-        manager?.editProfileFromApi(editProfile: editProfile, complition: { (error, success) in
+    func doEditProfile(view: UIViewController, editProfile: [String : Any]? , image: UIImage) {
+        manager?.editProfileFromApi(editProfile: editProfile ,image: image, complition: { (error, success) in
             if(success == true){
                 self.presenter?.hideIndicator()
             }else{

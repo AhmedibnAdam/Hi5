@@ -10,10 +10,17 @@ import Foundation
 import Alamofire
 
 enum EditProfileEndPoint {
-    case editProfile( editProfile: [String: Any]?)
+    case editProfile( editProfile: [String: Any]? , image: UIImage)
 }
 //MARK: - Extensions
 extension EditProfileEndPoint: IEndpoint {
+    var image: UIImage? {
+        switch self {
+        case .editProfile(let editProfile , let image):
+            return image
+        }
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .editProfile:
@@ -30,8 +37,8 @@ extension EditProfileEndPoint: IEndpoint {
     
     var parameter: Parameters? {
         switch self {
-        case .editProfile:
-            return ["":""]
+        case .editProfile(let editProfile , let image):
+            return editProfile
         }
     }
     

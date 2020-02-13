@@ -14,6 +14,8 @@ protocol ILoginViewController: class {
 	var router: ILoginRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToProfile()
+    func navigateToTabBar()
+    func navigateToFields()
     func hideIndecator()
 }
 
@@ -89,6 +91,12 @@ extension LoginViewController: ILoginViewController {
     }
     func navigateToProfile() {
         router?.navigateToProfile()
+    }
+    func navigateToTabBar() {
+        router?.navigateToTabBar()
+    }
+    func navigateToFields() {
+        router?.navigateToFields()
     }
     func hideIndecator() {
         loadingIndicator.isHidden = true

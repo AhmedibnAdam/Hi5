@@ -21,6 +21,7 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
 	var interactor: IEditProfileInteractor?
 	var router: IEditProfileRouter?
     
+    var photo = UIImage(named: "username")
     var gender: String = "male"
     var yearFlag = "public"
     var monthFlag = "public"
@@ -74,6 +75,13 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
         let gend = defaults.string(forKey: "Gender")
         let dateOfBirth = defaults.string(forKey: "DateOfBirth")
         let location = defaults.string(forKey: "location")
+        if let data = defaults.object(forKey: "image") as? Data {
+            let image = UIImage(data: data)
+            profilePhoto.image = image
+            photo = image
+        }
+//        let images = UserDefaults.standard.imageArray(forKey: "image")
+//        profilePhoto.image = images?[0]
         genderBtn.setTitle(gend, for: .normal)
         dateOfBirthBtn.setTitle(dateOfBirth, for: .normal)
         locationBtn.setTitle(location, for: .normal)
@@ -186,22 +194,22 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         
         if(fullNameTextField.text?.isEmpty == false && biographyTextField.text?.isEmpty == true){
             guard let name = fullNameTextField.text else {return}
-            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "name": name]
+            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "name": name ]
         }
             
         else if(biographyTextField.text?.isEmpty == false && fullNameTextField.text?.isEmpty == true){
             guard let biography = biographyTextField.text else {return}
-            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "biography": biography]
+            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "biography": biography ]
             
         } else if(fullNameTextField.text?.isEmpty == false && biographyTextField.text?.isEmpty == false){
             guard let name = fullNameTextField.text else {return}
             guard let biography = biographyTextField.text else {return}
-            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "biography": biography , "name": name]
+            parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag , "year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "biography": biography , "name": name ]
         }
 
-        else { parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag ,"year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "gender": gender]
+        else { parameters = ["yearFlag": yearFlag , "monthFlag": monthFlag , "dayFlag": dayFlag ,"year": year,"month": month,"day": day, "countryFlag": countryFlag , "cityFlag": cityFlag , "stateFlag": stateFlag , "country": country , "city": city , "state": state , "gender": gender ]
         }
-        interactor?.doEditProfile(view: self, editProfile: parameters)
+        interactor?.doEditProfile(view: self, editProfile: parameters , image: photo!)
       }
     func editPhotoBtnAction() {
         let picker = UIImagePickerController()
@@ -227,6 +235,12 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.editedImage] as? UIImage
         self.profilePhoto.image = image
+        self.photo = image
+        let images = image!.pngData()
+        UserDefaults().set(images, forKey: "image")
+//        let imageArray = [image]
+//        UserDefaults.standard.set(imageArray, forKey: "images")
+//        UserDefaults.standard.synchronize()
         dismiss(animated: true, completion: nil)
     }
 
@@ -245,6 +259,18 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
     func genderBtnAction() {
         router?.navigateToGender()
     }
-
 }
+
+//extension UserDefaults {
+//    func imageArray(forKey key: String) -> [UIImage]? {
+//        guard let array = self.array(forKey: key) as? [Data] else {
+//            return nil
+//        }
+//        return array.flatMap() { UIImage(data: $0) }
+//    }
+//
+//    func set(_ imageArray: [UIImage], forKey key: String) {
+//        self.set(imageArray.flatMap({ $0.pngData() }), forKey: key)
+//    }
+//}
 

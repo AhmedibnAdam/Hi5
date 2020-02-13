@@ -15,6 +15,10 @@ enum GenderEndPoint {
 //MARK:- Extensions
 
 extension GenderEndPoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .gender:

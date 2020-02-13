@@ -30,6 +30,8 @@ class LoginInteractor: ILoginInteractor {
         manager?.loginFromApi(userName: userName , password: password, complition: { (error , success) in
             if (success == true) {
                 self.presenter?.hideIndecator()
+                //self.presenter?.navigateToFields()
+                //self.presenter?.navigateToTabBar()
                 self.presenter?.navigateToProfile()
             } else {
                 self.presenter?.hideIndecator()

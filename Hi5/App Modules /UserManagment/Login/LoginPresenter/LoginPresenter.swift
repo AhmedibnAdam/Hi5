@@ -14,7 +14,9 @@ protocol ILoginPresenter: class {
     // MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
     func navigateToProfile()
+    func navigateToFields()
     func hideIndecator()
+    func navigateToTabBar()
 }
 class LoginPresenter: ILoginPresenter {
     
@@ -31,5 +33,11 @@ class LoginPresenter: ILoginPresenter {
     }
     func hideIndecator() {
         view?.hideIndecator()
+    }
+    func navigateToTabBar() {
+        view?.navigateToTabBar()
+    }
+    func navigateToFields() {
+        view?.navigateToFields()
     }
 }

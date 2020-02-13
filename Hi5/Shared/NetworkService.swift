@@ -16,6 +16,7 @@ protocol IEndpoint {
     var method: HTTPMethod { get }
     var path: String { get }
     var parameter: Parameters? { get }
+    var image: UIImage? { get }
     var header: HTTPHeaders? { get }
     var encoding: ParameterEncoding { get }
 }
@@ -100,16 +101,15 @@ class NetworkService {
     }
 }
 
-// upload request
-
+//MARK:-  Upload Request
 extension NetworkService {
     
-    private func uploadToServerWith<T: IEndpoint>(endpoint: T, success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
+    func uploadToServerWith<T: IEndpoint>(endpoint: T , success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
         DispatchQueue.global(qos: .background).async {
-            let image = endpoint.parameter?["image"] as! UIImage
+            let image = endpoint.image!
             let imgData = image.jpegData(compressionQuality: 0.1)!
             Alamofire.upload(multipartFormData: { multipartFormData in
-                multipartFormData.append(imgData, withName: "image",fileName: "image", mimeType: "image/jpg")
+                multipartFormData.append(imgData, withName: "avatar",fileName: "avatar", mimeType: "avatar/jpg")
                 for (key, value) in endpoint.parameter ?? ["":""] {
                     multipartFormData.append(((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!), withName: key)
                 }

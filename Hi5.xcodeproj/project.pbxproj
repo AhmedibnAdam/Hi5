@@ -312,6 +312,16 @@
 		8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423423DC815200BA87D7 /* SearchLocationModel.swift */; };
 		8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8608423523DC815200BA87D7 /* SearchLocationViewController.xib */; };
 		8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423623DC815200BA87D7 /* SearchLocationManager.swift */; };
+		860AB7F323F2D177005691C1 /* SocialConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EB23F2D177005691C1 /* SocialConfiguration.swift */; };
+		860AB7F423F2D177005691C1 /* SocialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EC23F2D177005691C1 /* SocialPresenter.swift */; };
+		860AB7F523F2D177005691C1 /* SocialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7ED23F2D177005691C1 /* SocialRouter.swift */; };
+		860AB7F623F2D177005691C1 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EE23F2D177005691C1 /* SocialViewController.swift */; };
+		860AB7F723F2D177005691C1 /* SocialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EF23F2D177005691C1 /* SocialInteractor.swift */; };
+		860AB7F823F2D177005691C1 /* SocialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7F023F2D177005691C1 /* SocialModel.swift */; };
+		860AB7F923F2D177005691C1 /* SocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860AB7F123F2D177005691C1 /* SocialViewController.xib */; };
+		860AB7FA23F2D177005691C1 /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7F223F2D177005691C1 /* SocialManager.swift */; };
+		861CA2F723F40D45004FC02F /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CA2F523F40D45004FC02F /* TypeCollectionViewCell.swift */; };
+		861CA2F823F40D45004FC02F /* TypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861CA2F623F40D45004FC02F /* TypeCollectionViewCell.xib */; };
 		861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */; };
 		861D22D323DCAEF5004F16F1 /* GalleryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CB23DCAEF5004F16F1 /* GalleryPresenter.swift */; };
 		861D22D423DCAEF5004F16F1 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CC23DCAEF5004F16F1 /* GalleryRouter.swift */; };
@@ -344,6 +354,8 @@
 		862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5A923D730AD00508F1A /* DateOfBirthModel.swift */; };
 		862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862EB5AA23D730AD00508F1A /* DateOfBirthViewController.xib */; };
 		862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */; };
+		864450F623F45758009DFA9A /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864450F423F45758009DFA9A /* BottomCollectionViewCell.swift */; };
+		864450F723F45758009DFA9A /* BottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */; };
 		864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E920023E9BE530095B3EF /* LocationEndPoint.swift */; };
 		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
 		86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */; };
@@ -358,6 +370,8 @@
 		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
 		869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCA5923E98C63000291EB /* GenderEndPoint.swift */; };
 		869BCA5C23E99C66000291EB /* DateOfBirthEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCA5B23E99C66000291EB /* DateOfBirthEndPoint.swift */; };
+		86A2FF6A23F4220F0053E5A1 /* FieldsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FF6823F4220F0053E5A1 /* FieldsTableViewCell.swift */; };
+		86A2FF6B23F4220F0053E5A1 /* FieldsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A2FF6923F4220F0053E5A1 /* FieldsTableViewCell.xib */; };
 		86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */; };
 		86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */; };
 		86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */; };
@@ -407,13 +421,6 @@
 		86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1292823D49E73007CB956 /* TabBarModel.swift */; };
 		86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E1292923D49E73007CB956 /* TabBarViewController.xib */; };
 		86E1293223D49E73007CB956 /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1292A23D49E73007CB956 /* TabBarManager.swift */; };
-		86E1293923D4A146007CB956 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FA23B4C8C8009DB30A /* SocialViewController.swift */; };
-		86E1293A23D4A14C007CB956 /* SocialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F923B4C8C8009DB30A /* SocialRouter.swift */; };
-		86E1293B23D4A14F007CB956 /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F523B4C8C8009DB30A /* SocialManager.swift */; };
-		86E1293C23D4A15A007CB956 /* SocialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F623B4C8C8009DB30A /* SocialModel.swift */; };
-		86E1293D23D4A15D007CB956 /* SocialConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F723B4C8C8009DB30A /* SocialConfiguration.swift */; };
-		86E1293E23D4A15F007CB956 /* SocialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F323B4C8C8009DB30A /* SocialPresenter.swift */; };
-		86E1293F23D4A162007CB956 /* SocialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409F823B4C8C8009DB30A /* SocialInteractor.swift */; };
 		86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90223DDAAA5008C1F80 /* LocationConfiguration.swift */; };
 		86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90323DDAAA5008C1F80 /* LocationPresenter.swift */; };
 		86F9B90C23DDAAA5008C1F80 /* LocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90423DDAAA5008C1F80 /* LocationRouter.swift */; };
@@ -490,14 +497,6 @@
 		662A170023C3F20200A3695E /* SechadualeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeModel.swift; sourceTree = "<group>"; };
 		662A170123C3F20200A3695E /* SechadualeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SechadualeViewController.xib; sourceTree = "<group>"; };
 		662A170223C3F20200A3695E /* SechadualeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeManager.swift; sourceTree = "<group>"; };
-		663409F323B4C8C8009DB30A /* SocialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPresenter.swift; sourceTree = "<group>"; };
-		663409F423B4C8C8009DB30A /* SocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
-		663409F523B4C8C8009DB30A /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
-		663409F623B4C8C8009DB30A /* SocialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModel.swift; sourceTree = "<group>"; };
-		663409F723B4C8C8009DB30A /* SocialConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialConfiguration.swift; sourceTree = "<group>"; };
-		663409F823B4C8C8009DB30A /* SocialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInteractor.swift; sourceTree = "<group>"; };
-		663409F923B4C8C8009DB30A /* SocialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialRouter.swift; sourceTree = "<group>"; };
-		663409FA23B4C8C8009DB30A /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsConfiguration.swift; sourceTree = "<group>"; };
 		663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsPresenter.swift; sourceTree = "<group>"; };
 		663409FE23B4C8FC009DB30A /* FieldsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsRouter.swift; sourceTree = "<group>"; };
@@ -741,6 +740,16 @@
 		8608423423DC815200BA87D7 /* SearchLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationModel.swift; sourceTree = "<group>"; };
 		8608423523DC815200BA87D7 /* SearchLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationViewController.xib; sourceTree = "<group>"; };
 		8608423623DC815200BA87D7 /* SearchLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationManager.swift; sourceTree = "<group>"; };
+		860AB7EB23F2D177005691C1 /* SocialConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialConfiguration.swift; sourceTree = "<group>"; };
+		860AB7EC23F2D177005691C1 /* SocialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPresenter.swift; sourceTree = "<group>"; };
+		860AB7ED23F2D177005691C1 /* SocialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialRouter.swift; sourceTree = "<group>"; };
+		860AB7EE23F2D177005691C1 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		860AB7EF23F2D177005691C1 /* SocialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInteractor.swift; sourceTree = "<group>"; };
+		860AB7F023F2D177005691C1 /* SocialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModel.swift; sourceTree = "<group>"; };
+		860AB7F123F2D177005691C1 /* SocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
+		860AB7F223F2D177005691C1 /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
+		861CA2F523F40D45004FC02F /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		861CA2F623F40D45004FC02F /* TypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryConfiguration.swift; sourceTree = "<group>"; };
 		861D22CB23DCAEF5004F16F1 /* GalleryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPresenter.swift; sourceTree = "<group>"; };
 		861D22CC23DCAEF5004F16F1 /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
@@ -773,6 +782,8 @@
 		862EB5A923D730AD00508F1A /* DateOfBirthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthModel.swift; sourceTree = "<group>"; };
 		862EB5AA23D730AD00508F1A /* DateOfBirthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirthViewController.xib; sourceTree = "<group>"; };
 		862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthManager.swift; sourceTree = "<group>"; };
+		864450F423F45758009DFA9A /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
+		864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCollectionViewCell.xib; sourceTree = "<group>"; };
 		864E920023E9BE530095B3EF /* LocationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndPoint.swift; sourceTree = "<group>"; };
 		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
 		86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailEndPoint.swift; sourceTree = "<group>"; };
@@ -787,6 +798,8 @@
 		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		869BCA5923E98C63000291EB /* GenderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEndPoint.swift; sourceTree = "<group>"; };
 		869BCA5B23E99C66000291EB /* DateOfBirthEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthEndPoint.swift; sourceTree = "<group>"; };
+		86A2FF6823F4220F0053E5A1 /* FieldsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsTableViewCell.swift; sourceTree = "<group>"; };
+		86A2FF6923F4220F0053E5A1 /* FieldsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldsTableViewCell.xib; sourceTree = "<group>"; };
 		86B14BBC23CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationConfiguration.swift; sourceTree = "<group>"; };
 		86B14BBD23CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationPresenter.swift; sourceTree = "<group>"; };
 		86B14BBE23CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneVerificationRouter.swift; sourceTree = "<group>"; };
@@ -1023,8 +1036,8 @@
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
+				860AB7EA23F2D140005691C1 /* Social */,
 				662A16FA23C3F1B400A3695E /* Sechaduale */,
-				663409F223B4C8AF009DB30A /* Social */,
 				663409FB23B4C8E2009DB30A /* Fields */,
 				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
@@ -1040,25 +1053,9 @@
 			path = "App Modules ";
 			sourceTree = "<group>";
 		};
-		663409F223B4C8AF009DB30A /* Social */ = {
-			isa = PBXGroup;
-			children = (
-				663409F923B4C8C8009DB30A /* SocialRouter.swift */,
-				663409FA23B4C8C8009DB30A /* SocialViewController.swift */,
-				663409F523B4C8C8009DB30A /* SocialManager.swift */,
-				663409F423B4C8C8009DB30A /* SocialViewController.xib */,
-				663409F623B4C8C8009DB30A /* SocialModel.swift */,
-				663409F723B4C8C8009DB30A /* SocialConfiguration.swift */,
-				663409F323B4C8C8009DB30A /* SocialPresenter.swift */,
-				663409F823B4C8C8009DB30A /* SocialInteractor.swift */,
-			);
-			path = Social;
-			sourceTree = "<group>";
-		};
 		663409FB23B4C8E2009DB30A /* Fields */ = {
 			isa = PBXGroup;
 			children = (
-				668C20E923C3F48000C009A9 /* SendTo */,
 				668C20E823C3F47200C009A9 /* Fields */,
 			);
 			path = Fields;
@@ -1449,23 +1446,14 @@
 		668C20E823C3F47200C009A9 /* Fields */ = {
 			isa = PBXGroup;
 			children = (
-				663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */,
-				663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */,
-				663409FE23B4C8FC009DB30A /* FieldsRouter.swift */,
-				663409FF23B4C8FC009DB30A /* FieldsViewController.swift */,
-				66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */,
-				66340A0123B4C8FC009DB30A /* FieldsModel.swift */,
-				66340A0223B4C8FC009DB30A /* FieldsViewController.xib */,
-				66340A0323B4C8FC009DB30A /* FieldsManager.swift */,
+				861CA2F323F40C0E004FC02F /* FieldsContracts */,
+				861CA2F123F40BED004FC02F /* FieldsInteractor */,
+				861CA2F023F40BE2004FC02F /* FieldsPresenter */,
+				861CA2EF23F40BD8004FC02F /* FieldsRouter */,
+				861CA2F223F40BF9004FC02F /* FieldsServices */,
+				861CA2EE23F40BCC004FC02F /* FieldsViews */,
 			);
 			path = Fields;
-			sourceTree = "<group>";
-		};
-		668C20E923C3F48000C009A9 /* SendTo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SendTo;
 			sourceTree = "<group>";
 		};
 		668C20EA23C3F49400C009A9 /* BookSession */ = {
@@ -1636,6 +1624,69 @@
 			path = SearchLocationViews;
 			sourceTree = "<group>";
 		};
+		860AB7EA23F2D140005691C1 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7FC23F2D1B6005691C1 /* SocialContract */,
+				860AB7FE23F2D1D7005691C1 /* SocialInteractor */,
+				860AB7FD23F2D1CC005691C1 /* SocialPresenter */,
+				860AB80023F2D1F9005691C1 /* SocialRouter */,
+				860AB7FF23F2D1E7005691C1 /* SocialServices */,
+				860AB7FB23F2D1A9005691C1 /* SocialViews */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		860AB7FB23F2D1A9005691C1 /* SocialViews */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7EE23F2D177005691C1 /* SocialViewController.swift */,
+				860AB7F123F2D177005691C1 /* SocialViewController.xib */,
+			);
+			path = SocialViews;
+			sourceTree = "<group>";
+		};
+		860AB7FC23F2D1B6005691C1 /* SocialContract */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7EB23F2D177005691C1 /* SocialConfiguration.swift */,
+			);
+			path = SocialContract;
+			sourceTree = "<group>";
+		};
+		860AB7FD23F2D1CC005691C1 /* SocialPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7EC23F2D177005691C1 /* SocialPresenter.swift */,
+			);
+			path = SocialPresenter;
+			sourceTree = "<group>";
+		};
+		860AB7FE23F2D1D7005691C1 /* SocialInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7EF23F2D177005691C1 /* SocialInteractor.swift */,
+			);
+			path = SocialInteractor;
+			sourceTree = "<group>";
+		};
+		860AB7FF23F2D1E7005691C1 /* SocialServices */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7F023F2D177005691C1 /* SocialModel.swift */,
+				860AB7F223F2D177005691C1 /* SocialManager.swift */,
+			);
+			path = SocialServices;
+			sourceTree = "<group>";
+		};
+		860AB80023F2D1F9005691C1 /* SocialRouter */ = {
+			isa = PBXGroup;
+			children = (
+				860AB7ED23F2D177005691C1 /* SocialRouter.swift */,
+			);
+			path = SocialRouter;
+			sourceTree = "<group>";
+		};
 		860E209623C73BCC00F59AE0 /* ForgetPasswordContract */ = {
 			isa = PBXGroup;
 			children = (
@@ -1735,6 +1786,67 @@
 				8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */,
 			);
 			path = PhoneVerificationServices;
+			sourceTree = "<group>";
+		};
+		861CA2EE23F40BCC004FC02F /* FieldsViews */ = {
+			isa = PBXGroup;
+			children = (
+				864450F323F4572E009DFA9A /* BottomCollectionView */,
+				86A2FF6723F421E10053E5A1 /* TableViewCell */,
+				861CA2F423F40CD8004FC02F /* CollectionViewCell */,
+				86A2FF6C23F434D90053E5A1 /* View */,
+			);
+			path = FieldsViews;
+			sourceTree = "<group>";
+		};
+		861CA2EF23F40BD8004FC02F /* FieldsRouter */ = {
+			isa = PBXGroup;
+			children = (
+				663409FE23B4C8FC009DB30A /* FieldsRouter.swift */,
+			);
+			path = FieldsRouter;
+			sourceTree = "<group>";
+		};
+		861CA2F023F40BE2004FC02F /* FieldsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */,
+			);
+			path = FieldsPresenter;
+			sourceTree = "<group>";
+		};
+		861CA2F123F40BED004FC02F /* FieldsInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				66340A0023B4C8FC009DB30A /* FieldsInteractor.swift */,
+			);
+			path = FieldsInteractor;
+			sourceTree = "<group>";
+		};
+		861CA2F223F40BF9004FC02F /* FieldsServices */ = {
+			isa = PBXGroup;
+			children = (
+				66340A0123B4C8FC009DB30A /* FieldsModel.swift */,
+				66340A0323B4C8FC009DB30A /* FieldsManager.swift */,
+			);
+			path = FieldsServices;
+			sourceTree = "<group>";
+		};
+		861CA2F323F40C0E004FC02F /* FieldsContracts */ = {
+			isa = PBXGroup;
+			children = (
+				663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */,
+			);
+			path = FieldsContracts;
+			sourceTree = "<group>";
+		};
+		861CA2F423F40CD8004FC02F /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				861CA2F523F40D45004FC02F /* TypeCollectionViewCell.swift */,
+				861CA2F623F40D45004FC02F /* TypeCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		861D22C823DCAECC004F16F1 /* Gallery */ = {
@@ -2042,6 +2154,15 @@
 			path = NewPasswordServices;
 			sourceTree = "<group>";
 		};
+		864450F323F4572E009DFA9A /* BottomCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				864450F423F45758009DFA9A /* BottomCollectionViewCell.swift */,
+				864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */,
+			);
+			path = BottomCollectionView;
+			sourceTree = "<group>";
+		};
 		867F90BB23C71B6A00C82762 /* Register Contract */ = {
 			isa = PBXGroup;
 			children = (
@@ -2215,6 +2336,24 @@
 				66340A1A23B4E091009DB30A /* LoginEndpoint.swift */,
 			);
 			path = LoginServices;
+			sourceTree = "<group>";
+		};
+		86A2FF6723F421E10053E5A1 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				86A2FF6823F4220F0053E5A1 /* FieldsTableViewCell.swift */,
+				86A2FF6923F4220F0053E5A1 /* FieldsTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		86A2FF6C23F434D90053E5A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				663409FF23B4C8FC009DB30A /* FieldsViewController.swift */,
+				66340A0223B4C8FC009DB30A /* FieldsViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		86B14BBB23CB48F300B3FEB1 /* SignupPhoneVerification */ = {
@@ -2910,6 +3049,7 @@
 				662A170923C3F20200A3695E /* SechadualeViewController.xib in Resources */,
 				662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */,
 				668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */,
+				86A2FF6B23F4220F0053E5A1 /* FieldsTableViewCell.xib in Resources */,
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
@@ -2922,6 +3062,7 @@
 				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
+				864450F723F45758009DFA9A /* BottomCollectionViewCell.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
@@ -2933,6 +3074,7 @@
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
 				668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */,
+				860AB7F923F2D177005691C1 /* SocialViewController.xib in Resources */,
 				86B14BE123CB543B00B3FEB1 /* WelcomeViewController.xib in Resources */,
 				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
 				8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */,
@@ -2943,6 +3085,7 @@
 				666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */,
 				868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */,
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
+				861CA2F823F40D45004FC02F /* TypeCollectionViewCell.xib in Resources */,
 				862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */,
 				668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */,
 				86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */,
@@ -3020,7 +3163,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				668C213C23C3F6F700C009A9 /* CommentListsInteractor.swift in Sources */,
-				86E1293923D4A146007CB956 /* SocialViewController.swift in Sources */,
 				6663364423B402F7004E537C /* LoginViewController.swift in Sources */,
 				6683E2CB23BCEB8800250702 /* SettingRouter.swift in Sources */,
 				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
@@ -3042,7 +3184,6 @@
 				6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */,
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
 				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
-				86E1293B23D4A14F007CB956 /* SocialManager.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
 				662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */,
 				86B14BDC23CB543B00B3FEB1 /* WelcomePresenter.swift in Sources */,
@@ -3098,6 +3239,7 @@
 				6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */,
 				667E4B8223C3E169007354A7 /* AddFundRouter.swift in Sources */,
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
+				861CA2F723F40D45004FC02F /* TypeCollectionViewCell.swift in Sources */,
 				668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */,
 				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
 				862A5E8923CB72380058355E /* ChangeUsernameInteractor.swift in Sources */,
@@ -3117,12 +3259,14 @@
 				668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
+				860AB7F623F2D177005691C1 /* SocialViewController.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
 				861D22D323DCAEF5004F16F1 /* GalleryPresenter.swift in Sources */,
 				667E4B8323C3E169007354A7 /* AddFundViewController.swift in Sources */,
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
 				662A16DC23C3EB7600A3695E /* AddFriendRequestManager.swift in Sources */,
 				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
+				860AB7F723F2D177005691C1 /* SocialInteractor.swift in Sources */,
 				861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */,
 				862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */,
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
@@ -3161,6 +3305,7 @@
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
 				862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */,
+				860AB7FA23F2D177005691C1 /* SocialManager.swift in Sources */,
 				861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */,
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
@@ -3180,7 +3325,9 @@
 				86E1292E23D49E73007CB956 /* TabBarViewController.swift in Sources */,
 				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
 				86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */,
+				860AB7F523F2D177005691C1 /* SocialRouter.swift in Sources */,
 				668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */,
+				860AB7F423F2D177005691C1 /* SocialPresenter.swift in Sources */,
 				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
@@ -3208,7 +3355,6 @@
 				86DC11DF23D5C19100E577D9 /* EditProfileConfiguration.swift in Sources */,
 				6683E30E23BCEEFF00250702 /* ProfileModel.swift in Sources */,
 				6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */,
-				86E1293E23D4A15F007CB956 /* SocialPresenter.swift in Sources */,
 				662A170623C3F20200A3695E /* SechadualeViewController.swift in Sources */,
 				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
 				6683E30B23BCEEFF00250702 /* ProfileRouter.swift in Sources */,
@@ -3218,6 +3364,7 @@
 				6683E31A23BCEF1600250702 /* SideMenuPresenter.swift in Sources */,
 				662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */,
 				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
+				86A2FF6A23F4220F0053E5A1 /* FieldsTableViewCell.swift in Sources */,
 				86E1292D23D49E73007CB956 /* TabBarRouter.swift in Sources */,
 				86DB006B23D70B97001E99E8 /* GenderModel.swift in Sources */,
 				86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */,
@@ -3234,7 +3381,6 @@
 				6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
 				6683E2DA23BCEBD900250702 /* SuggestedFieldsPresenter.swift in Sources */,
-				86E1293A23D4A14C007CB956 /* SocialRouter.swift in Sources */,
 				662A16EA23C3ECE000A3695E /* MyFriendsRequestInteractor.swift in Sources */,
 				668C215C23C3F75300C009A9 /* CheckOutConfirmationViewController.swift in Sources */,
 				662A16A723C3E80900A3695E /* MemberOfFriendsModel.swift in Sources */,
@@ -3256,7 +3402,6 @@
 				668C20F823C3F57800C009A9 /* AddSessionResultFiltterViewController.swift in Sources */,
 				6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */,
 				6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */,
-				86E1293D23D4A15D007CB956 /* SocialConfiguration.swift in Sources */,
 				6683E30923BCEEFF00250702 /* ProfileConfiguration.swift in Sources */,
 				668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */,
 				666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */,
@@ -3264,8 +3409,8 @@
 				86DB006823D70B97001E99E8 /* GenderRouter.swift in Sources */,
 				86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */,
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
-				86E1293F23D4A162007CB956 /* SocialInteractor.swift in Sources */,
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
+				860AB7F823F2D177005691C1 /* SocialModel.swift in Sources */,
 				862EB5AC23D730AD00508F1A /* DateOfBirthConfiguration.swift in Sources */,
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
 				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
@@ -3280,6 +3425,7 @@
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
 				86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */,
 				862EB5B023D730AD00508F1A /* DateOfBirthInteractor.swift in Sources */,
+				860AB7F323F2D177005691C1 /* SocialConfiguration.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
 				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
@@ -3326,7 +3472,6 @@
 				668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */,
 				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
 				8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */,
-				86E1293C23D4A15A007CB956 /* SocialModel.swift in Sources */,
 				8665FEF923E86AC200EB4E1E /* ProfileEndPoint.swift in Sources */,
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
@@ -3353,6 +3498,7 @@
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
+				864450F623F45758009DFA9A /* BottomCollectionViewCell.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,

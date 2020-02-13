@@ -14,6 +14,10 @@ enum DateOfBirthEndPoint {
 }
 //MARK: - Extensions
 extension DateOfBirthEndPoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .dateOfBirth:

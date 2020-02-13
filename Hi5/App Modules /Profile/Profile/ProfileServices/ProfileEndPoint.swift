@@ -14,6 +14,10 @@ enum ProfileEndpoint {
 }
 //MARK:- Extension
 extension ProfileEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .ShowProfile:

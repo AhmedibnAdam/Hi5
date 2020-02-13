@@ -15,6 +15,10 @@ enum SignupPhoneVerificationEndpoint {
 }
 
 extension SignupPhoneVerificationEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         
     switch self {

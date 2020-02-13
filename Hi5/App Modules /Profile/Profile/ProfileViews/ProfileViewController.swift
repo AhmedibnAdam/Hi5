@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
 	var router: IProfileRouter?
 //MARK:- Outlets
     
+    @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var age: UILabel!
@@ -71,9 +72,17 @@ extension ProfileViewController: IProfileViewController {
         guard let responseData = data.user else {
             return
         }
-        let url = URL(fileURLWithPath: responseData.avatar!)
+        let defaults = UserDefaults.standard
+        let country = defaults.string(forKey: "country")
+        if let data = defaults.object(forKey: "image") as? Data {
+            let image = UIImage(data: data)
+            profilePhoto.image = image
+            
+        }
+        self.countryName.text = country
+        //let url = URL(fileURLWithPath: responseData.avatar!)
         self.fullName.text = responseData.name
-        self.profilePhoto.kf.setImage(with: url)
+        //self.profilePhoto.kf.setImage(with: url)
         self.userName.text = responseData.vieID
         self.descriptionLbl.text = responseData.biography
     }

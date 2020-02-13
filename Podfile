@@ -18,5 +18,6 @@ target 'Hi5' do
    pod 'GooglePlaces'
    pod 'GooglePlacesSearchController'
    pod 'Kingfisher'
+   pod 'SWRevealViewController'
 
 end

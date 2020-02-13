@@ -14,6 +14,10 @@ enum LocationEndPoint {
 }
 //MARK: - Extensions
 extension LocationEndPoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .location:

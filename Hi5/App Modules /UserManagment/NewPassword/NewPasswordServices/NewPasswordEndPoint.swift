@@ -14,6 +14,10 @@ enum NewPasswordEndpoint {
 }
 //MARK:- extension
 extension NewPasswordEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .NewPassword:

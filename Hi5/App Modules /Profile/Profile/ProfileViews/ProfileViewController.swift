@@ -79,8 +79,9 @@ extension ProfileViewController: IProfileViewController {
             profilePhoto.image = image
             
         }
-        self.countryName.text = country
+        //self.countryName.text = country
         //let url = URL(fileURLWithPath: responseData.avatar!)
+        self.countryName.text = responseData.country?.val
         self.fullName.text = responseData.name
         //self.profilePhoto.kf.setImage(with: url)
         self.userName.text = responseData.vieID

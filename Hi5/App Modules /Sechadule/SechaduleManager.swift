@@ -1,8 +1,8 @@
 //
-//  SechadualeManager.swift
+//  SechaduleManager.swift
 //  Hi5
 //
-//  Created by Adam on 1/7/20.
+//  Created by Mohamed Gamal on 2/14/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -10,10 +10,10 @@
 
 import Foundation
 
-protocol ISechadualeManager: class {
+protocol ISechaduleManager: class {
 	// do someting...
 }
 
-class SechadualeManager: ISechadualeManager {
+class SechaduleManager: ISechaduleManager {
 	// do someting...
 }

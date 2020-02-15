@@ -1,8 +1,8 @@
 //
-//  SechadualeModel.swift
+//  SechaduleModel.swift
 //  Hi5
 //
-//  Created by Adam on 1/7/20.
+//  Created by Mohamed Gamal on 2/14/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -10,7 +10,7 @@
 
 import UIKit
 
-struct SechadualeModel {	
+struct SechaduleModel {	
 	struct Request {
 		// do someting...
 

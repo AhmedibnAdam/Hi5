@@ -9,76 +9,51 @@
 //              * https://github.com/arimunandar
 
 import UIKit
-import SWRevealViewController
 
 protocol ITabBarViewController: class {
 	var router: ITabBarRouter? { get set }
 }
 
-class TabBarViewController: UITabBarController{
+//protocol HomeControllerDelegate {
+//    func handleMenuToggle()
+//}
+
+class TabBarViewController: UITabBarController {
 	var interactor: ITabBarInteractor?
 	var router: ITabBarRouter?
     
+    var menuController: UIViewController!
     
-    lazy var buttonSlideBar: UIBarButtonItem = {
-        return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
-    }()
-    
-    @objc func sideMenu() {
-        //router?.navigateToSideMenu()
-    }
-    
-    lazy var social: UIViewController = {
+    lazy var social: UINavigationController = {
         let vc = SocialConfiguration.setup()
          vc.tabBarItem.title = "social"
          vc.tabBarItem.image = UIImage(named: "social")
-        return vc
+        let nav = UINavigationController(rootViewController: vc)
+        return nav
     }()
     
-    lazy var events: UIViewController = {
-        let vc = SechadualeConfiguration.setup()
+    lazy var events: UINavigationController = {
+        let vc = SechaduleConfiguration.setup()
          vc.tabBarItem.title = "events"
          vc.tabBarItem.image = UIImage(named: "event")
-        return vc
+        let nav = UINavigationController(rootViewController: vc)
+        return nav
     }()
     
-    lazy var notification: UIViewController = {
+    lazy var notification: UINavigationController = {
         let vc = NotificationSettingConfiguration.setup()
          vc.tabBarItem.title = "notification"
          vc.tabBarItem.image = UIImage(named: "notification")
-        return vc
+        let nav = UINavigationController(rootViewController: vc)
+        return nav
     }()
     //MARK:- View life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
 		setViewControllers([social,events,notification], animated: true)
-        NotificationCenter.default.addObserver(self, selector: #selector(TabBarViewController.methodOfReceivedNotification(notification:)), name: Notification.Name("NotificationIdentifier"), object: nil)
-        
-        if (self.revealViewController() != nil) {
-            
-            // enable navigation item to open and close Drawer
-//            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            
-            // enable to slide to open Drawer
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-            
-//            self.navigationItem.leftBarButtonItem?.target = revealViewController()
-//            self.navigationItem.leftBarButtonItem?.action = #selector(SWRevealViewController.revealToggle(_:))
-            
-            
-//            buttonSlideBar.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        }
-    }
-    
-    @objc func methodOfReceivedNotification(notification: Notification) {
-//        guard let userInfo = notification.userInfo,
-//            let name = userInfo["Renish"] as? String
-//            else { return }
-//        labelTest.text = name
     }
 }
+
 //MARK:- Extensions
 extension TabBarViewController: ITabBarViewController {
 	
@@ -89,9 +64,18 @@ extension TabBarViewController: UITabBarControllerDelegate {
 }
 
 extension TabBarViewController {
-    func setupNavigationBar() {
-        //navigationItem.title = "Edit Profile"
-        navigationItem.setLeftBarButton(buttonSlideBar, animated: true)
-        navigationItem.leftBarButtonItem?.tintColor = .black
-    }
+//    func configureMenuController() {
+//        if menuController == nil {
+//            menuController = SideMenuConfiguration.setup()
+//            view.insertSubview(menuController.view, at: 0)
+//            addChild(menuController)
+//            menuController.didMove(toParent: self)
+//        }
+//  }
 }
+
+//extension TabBarViewController: HomeControllerDelegate {
+//    func handleMenuToggle() {
+//        configureMenuController()
+//    }
+//}

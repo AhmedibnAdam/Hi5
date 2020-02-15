@@ -18,20 +18,35 @@ class NotificationSettingViewController: UIViewController {
 	var interactor: INotificationSettingInteractor?
 	var router: INotificationSettingRouter?
 
+    //MARK: - Properties
+    lazy var buttonSlideBar: UIBarButtonItem = {
+        return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
+    }()
+    
+    @objc func sideMenu() {
+        print("b555555........")
+    }
+    //MARK: - View Life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+        setupNavigationBar()
     }
 }
 
+
+  //MARK: -Extensions
 extension NotificationSettingViewController: INotificationSettingViewController {
 	// do someting...
 }
 
 extension NotificationSettingViewController {
-	// do someting...
+	
 }
 
 extension NotificationSettingViewController {
-	// do someting...
+  func setupNavigationBar() {
+      navigationItem.title = "Notification"
+      navigationItem.setLeftBarButton(buttonSlideBar, animated: true)
+      navigationItem.leftBarButtonItem?.tintColor = .black
+  }
 }

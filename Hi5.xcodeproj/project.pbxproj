@@ -64,14 +64,6 @@
 		662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */; };
 		662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */; };
 		662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */; };
-		662A170323C3F20200A3695E /* SechadualeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FB23C3F20200A3695E /* SechadualeConfiguration.swift */; };
-		662A170423C3F20200A3695E /* SechadualePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FC23C3F20200A3695E /* SechadualePresenter.swift */; };
-		662A170523C3F20200A3695E /* SechadualeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FD23C3F20200A3695E /* SechadualeRouter.swift */; };
-		662A170623C3F20200A3695E /* SechadualeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FE23C3F20200A3695E /* SechadualeViewController.swift */; };
-		662A170723C3F20200A3695E /* SechadualeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16FF23C3F20200A3695E /* SechadualeInteractor.swift */; };
-		662A170823C3F20200A3695E /* SechadualeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A170023C3F20200A3695E /* SechadualeModel.swift */; };
-		662A170923C3F20200A3695E /* SechadualeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A170123C3F20200A3695E /* SechadualeViewController.xib */; };
-		662A170A23C3F20300A3695E /* SechadualeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A170223C3F20200A3695E /* SechadualeManager.swift */; };
 		66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */; };
 		66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */; };
 		66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FE23B4C8FC009DB30A /* FieldsRouter.swift */; };
@@ -338,6 +330,14 @@
 		861D22ED23DCAFB9004F16F1 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E523DCAFB9004F16F1 /* LibraryModel.swift */; };
 		861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861D22E623DCAFB9004F16F1 /* LibraryViewController.xib */; };
 		861D22EF23DCAFB9004F16F1 /* LibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22E723DCAFB9004F16F1 /* LibraryManager.swift */; };
+		86268A2423F72F1800EFD96B /* SechaduleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A1C23F72F1800EFD96B /* SechaduleConfiguration.swift */; };
+		86268A2523F72F1800EFD96B /* SechadulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A1D23F72F1800EFD96B /* SechadulePresenter.swift */; };
+		86268A2623F72F1800EFD96B /* SechaduleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A1E23F72F1800EFD96B /* SechaduleRouter.swift */; };
+		86268A2723F72F1800EFD96B /* SechaduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A1F23F72F1800EFD96B /* SechaduleViewController.swift */; };
+		86268A2823F72F1800EFD96B /* SechaduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A2023F72F1800EFD96B /* SechaduleInteractor.swift */; };
+		86268A2923F72F1800EFD96B /* SechaduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A2123F72F1800EFD96B /* SechaduleModel.swift */; };
+		86268A2A23F72F1800EFD96B /* SechaduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86268A2223F72F1800EFD96B /* SechaduleViewController.xib */; };
+		86268A2B23F72F1800EFD96B /* SechaduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86268A2323F72F1800EFD96B /* SechaduleManager.swift */; };
 		862A5E8523CB72380058355E /* ChangeUsernameConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */; };
 		862A5E8623CB72380058355E /* ChangeUsernamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */; };
 		862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */; };
@@ -366,8 +366,6 @@
 		8671348423CF5950009093A0 /* NewPasswordEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */; };
 		868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */; };
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
-		868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */; };
-		868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */; };
 		869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCA5923E98C63000291EB /* GenderEndPoint.swift */; };
 		869BCA5C23E99C66000291EB /* DateOfBirthEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCA5B23E99C66000291EB /* DateOfBirthEndPoint.swift */; };
 		86A2FF6A23F4220F0053E5A1 /* FieldsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A2FF6823F4220F0053E5A1 /* FieldsTableViewCell.swift */; };
@@ -489,14 +487,6 @@
 		662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestModel.swift; sourceTree = "<group>"; };
 		662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsRequestViewController.xib; sourceTree = "<group>"; };
 		662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestManager.swift; sourceTree = "<group>"; };
-		662A16FB23C3F20200A3695E /* SechadualeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeConfiguration.swift; sourceTree = "<group>"; };
-		662A16FC23C3F20200A3695E /* SechadualePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualePresenter.swift; sourceTree = "<group>"; };
-		662A16FD23C3F20200A3695E /* SechadualeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeRouter.swift; sourceTree = "<group>"; };
-		662A16FE23C3F20200A3695E /* SechadualeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeViewController.swift; sourceTree = "<group>"; };
-		662A16FF23C3F20200A3695E /* SechadualeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeInteractor.swift; sourceTree = "<group>"; };
-		662A170023C3F20200A3695E /* SechadualeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeModel.swift; sourceTree = "<group>"; };
-		662A170123C3F20200A3695E /* SechadualeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SechadualeViewController.xib; sourceTree = "<group>"; };
-		662A170223C3F20200A3695E /* SechadualeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadualeManager.swift; sourceTree = "<group>"; };
 		663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsConfiguration.swift; sourceTree = "<group>"; };
 		663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsPresenter.swift; sourceTree = "<group>"; };
 		663409FE23B4C8FC009DB30A /* FieldsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsRouter.swift; sourceTree = "<group>"; };
@@ -766,6 +756,14 @@
 		861D22E523DCAFB9004F16F1 /* LibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		861D22E623DCAFB9004F16F1 /* LibraryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
 		861D22E723DCAFB9004F16F1 /* LibraryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryManager.swift; sourceTree = "<group>"; };
+		86268A1C23F72F1800EFD96B /* SechaduleConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleConfiguration.swift; sourceTree = "<group>"; };
+		86268A1D23F72F1800EFD96B /* SechadulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechadulePresenter.swift; sourceTree = "<group>"; };
+		86268A1E23F72F1800EFD96B /* SechaduleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleRouter.swift; sourceTree = "<group>"; };
+		86268A1F23F72F1800EFD96B /* SechaduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleViewController.swift; sourceTree = "<group>"; };
+		86268A2023F72F1800EFD96B /* SechaduleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleInteractor.swift; sourceTree = "<group>"; };
+		86268A2123F72F1800EFD96B /* SechaduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleModel.swift; sourceTree = "<group>"; };
+		86268A2223F72F1800EFD96B /* SechaduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SechaduleViewController.xib; sourceTree = "<group>"; };
+		86268A2323F72F1800EFD96B /* SechaduleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleManager.swift; sourceTree = "<group>"; };
 		862A5E7D23CB72380058355E /* ChangeUsernameConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameConfiguration.swift; sourceTree = "<group>"; };
 		862A5E7E23CB72380058355E /* ChangeUsernamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernamePresenter.swift; sourceTree = "<group>"; };
 		862A5E7F23CB72380058355E /* ChangeUsernameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameRouter.swift; sourceTree = "<group>"; };
@@ -794,8 +792,6 @@
 		8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordEndPoint.swift; sourceTree = "<group>"; };
 		868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEndPoint.swift; sourceTree = "<group>"; };
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
-		868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		869BCA5923E98C63000291EB /* GenderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEndPoint.swift; sourceTree = "<group>"; };
 		869BCA5B23E99C66000291EB /* DateOfBirthEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthEndPoint.swift; sourceTree = "<group>"; };
 		86A2FF6823F4220F0053E5A1 /* FieldsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsTableViewCell.swift; sourceTree = "<group>"; };
@@ -1017,27 +1013,11 @@
 			path = MyFriendsRequestTableViewCell;
 			sourceTree = "<group>";
 		};
-		662A16FA23C3F1B400A3695E /* Sechaduale */ = {
-			isa = PBXGroup;
-			children = (
-				868C28BE23C605AA003F237A /* cell */,
-				662A16FB23C3F20200A3695E /* SechadualeConfiguration.swift */,
-				662A16FC23C3F20200A3695E /* SechadualePresenter.swift */,
-				662A16FD23C3F20200A3695E /* SechadualeRouter.swift */,
-				662A16FE23C3F20200A3695E /* SechadualeViewController.swift */,
-				662A16FF23C3F20200A3695E /* SechadualeInteractor.swift */,
-				662A170023C3F20200A3695E /* SechadualeModel.swift */,
-				662A170123C3F20200A3695E /* SechadualeViewController.xib */,
-				662A170223C3F20200A3695E /* SechadualeManager.swift */,
-			);
-			path = Sechaduale;
-			sourceTree = "<group>";
-		};
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
+				86268A1B23F72ED600EFD96B /* Sechadule */,
 				860AB7EA23F2D140005691C1 /* Social */,
-				662A16FA23C3F1B400A3695E /* Sechaduale */,
 				663409FB23B4C8E2009DB30A /* Fields */,
 				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
@@ -1975,6 +1955,21 @@
 			path = LibraryServices;
 			sourceTree = "<group>";
 		};
+		86268A1B23F72ED600EFD96B /* Sechadule */ = {
+			isa = PBXGroup;
+			children = (
+				86268A1C23F72F1800EFD96B /* SechaduleConfiguration.swift */,
+				86268A1D23F72F1800EFD96B /* SechadulePresenter.swift */,
+				86268A1E23F72F1800EFD96B /* SechaduleRouter.swift */,
+				86268A1F23F72F1800EFD96B /* SechaduleViewController.swift */,
+				86268A2023F72F1800EFD96B /* SechaduleInteractor.swift */,
+				86268A2123F72F1800EFD96B /* SechaduleModel.swift */,
+				86268A2223F72F1800EFD96B /* SechaduleViewController.xib */,
+				86268A2323F72F1800EFD96B /* SechaduleManager.swift */,
+			);
+			path = Sechadule;
+			sourceTree = "<group>";
+		};
 		862A5E7C23CB72130058355E /* ChangeUsername */ = {
 			isa = PBXGroup;
 			children = (
@@ -2262,15 +2257,6 @@
 				6663369E23B40B47004E537C /* ForgotPhoneViewController.xib */,
 			);
 			path = ForgetPhoneViews;
-			sourceTree = "<group>";
-		};
-		868C28BE23C605AA003F237A /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				868C28BF23C605CD003F237A /* ScheduleTableViewCell.swift */,
-				868C28C023C605CD003F237A /* ScheduleTableViewCell.xib */,
-			);
-			path = cell;
 			sourceTree = "<group>";
 		};
 		868C28C323C60935003F237A /* Shared */ = {
@@ -3046,7 +3032,6 @@
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
 				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
 				662A169723C3E75400A3695E /* MyFavoriteFriendsViewController.xib in Resources */,
-				662A170923C3F20200A3695E /* SechadualeViewController.xib in Resources */,
 				662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */,
 				668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */,
 				86A2FF6B23F4220F0053E5A1 /* FieldsTableViewCell.xib in Resources */,
@@ -3083,12 +3068,12 @@
 				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
 				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
 				666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */,
-				868C28C223C605CD003F237A /* ScheduleTableViewCell.xib in Resources */,
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
 				861CA2F823F40D45004FC02F /* TypeCollectionViewCell.xib in Resources */,
 				862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */,
 				668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */,
 				86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */,
+				86268A2A23F72F1800EFD96B /* SechaduleViewController.xib in Resources */,
 				668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */,
 				662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */,
 				86DB006C23D70B97001E99E8 /* GenderViewController.xib in Resources */,
@@ -3205,6 +3190,7 @@
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				86DB006923D70B97001E99E8 /* GenderViewController.swift in Sources */,
 				864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */,
+				86268A2923F72F1800EFD96B /* SechaduleModel.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
 				86F9B90C23DDAAA5008C1F80 /* LocationRouter.swift in Sources */,
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
@@ -3224,7 +3210,6 @@
 				86B14BDB23CB543B00B3FEB1 /* WelcomeConfiguration.swift in Sources */,
 				668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */,
 				6683E2D023BCEB8800250702 /* SettingManager.swift in Sources */,
-				662A170523C3F20200A3695E /* SechadualeRouter.swift in Sources */,
 				86BBEE5C23CB5F840036C41D /* CreatePasswordInteractor.swift in Sources */,
 				861D22D423DCAEF5004F16F1 /* GalleryRouter.swift in Sources */,
 				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
@@ -3258,6 +3243,7 @@
 				862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */,
 				668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
+				86268A2623F72F1800EFD96B /* SechaduleRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
 				860AB7F623F2D177005691C1 /* SocialViewController.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
@@ -3282,6 +3268,7 @@
 				86E1293223D49E73007CB956 /* TabBarManager.swift in Sources */,
 				6683E2FD23BCEEB300250702 /* HelpCenterInteractor.swift in Sources */,
 				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
+				86268A2523F72F1800EFD96B /* SechadulePresenter.swift in Sources */,
 				6663363423B40298004E537C /* UserAccountModel.swift in Sources */,
 				662A16A623C3E80900A3695E /* MemberOfFriendsInteractor.swift in Sources */,
 				666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */,
@@ -3310,6 +3297,7 @@
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
 				668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */,
+				86268A2B23F72F1800EFD96B /* SechaduleManager.swift in Sources */,
 				862EB5AF23D730AD00508F1A /* DateOfBirthViewController.swift in Sources */,
 				861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */,
 				666336B223B40B84004E537C /* PhoneVerificationPresenter.swift in Sources */,
@@ -3340,7 +3328,6 @@
 				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
 				8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
-				662A170723C3F20200A3695E /* SechadualeInteractor.swift in Sources */,
 				8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */,
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
@@ -3355,7 +3342,6 @@
 				86DC11DF23D5C19100E577D9 /* EditProfileConfiguration.swift in Sources */,
 				6683E30E23BCEEFF00250702 /* ProfileModel.swift in Sources */,
 				6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */,
-				662A170623C3F20200A3695E /* SechadualeViewController.swift in Sources */,
 				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
 				6683E30B23BCEEFF00250702 /* ProfileRouter.swift in Sources */,
 				6663363623B40298004E537C /* UserAccountManager.swift in Sources */,
@@ -3391,11 +3377,9 @@
 				666336B623B40B84004E537C /* PhoneVerificationModel.swift in Sources */,
 				6683E30023BCEEB300250702 /* HelpCenterManager.swift in Sources */,
 				6683E2CA23BCEB8800250702 /* SettingPresenter.swift in Sources */,
-				662A170323C3F20200A3695E /* SechadualeConfiguration.swift in Sources */,
 				6663369623B40AFD004E537C /* EmailVerficationManager.swift in Sources */,
 				668C214C23C3F70F00C009A9 /* BookSessionInteractor.swift in Sources */,
 				6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */,
-				662A170823C3F20200A3695E /* SechadualeModel.swift in Sources */,
 				862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */,
 				668C210823C3F5BC00C009A9 /* AddSessionResultViewController.swift in Sources */,
 				6683E2CE23BCEB8800250702 /* SettingModel.swift in Sources */,
@@ -3412,6 +3396,7 @@
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
 				860AB7F823F2D177005691C1 /* SocialModel.swift in Sources */,
 				862EB5AC23D730AD00508F1A /* DateOfBirthConfiguration.swift in Sources */,
+				86268A2723F72F1800EFD96B /* SechaduleViewController.swift in Sources */,
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
 				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
 				667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */,
@@ -3422,6 +3407,7 @@
 				662A16D723C3EB7600A3695E /* AddFriendRequestRouter.swift in Sources */,
 				662A16D923C3EB7600A3695E /* AddFriendRequestInteractor.swift in Sources */,
 				668C214D23C3F70F00C009A9 /* BookSessionModel.swift in Sources */,
+				86268A2423F72F1800EFD96B /* SechaduleConfiguration.swift in Sources */,
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
 				86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */,
 				862EB5B023D730AD00508F1A /* DateOfBirthInteractor.swift in Sources */,
@@ -3443,7 +3429,6 @@
 				6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */,
 				6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */,
 				86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */,
-				662A170A23C3F20300A3695E /* SechadualeManager.swift in Sources */,
 				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
 				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
 				662A16B723C3E93900A3695E /* MyFriendsDetailsInteractor.swift in Sources */,
@@ -3465,6 +3450,7 @@
 				667E4B6F23C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift in Sources */,
 				666336B123B40B84004E537C /* PhoneVerificationConfiguration.swift in Sources */,
 				6663363123B40298004E537C /* UserAccountRouter.swift in Sources */,
+				86268A2823F72F1800EFD96B /* SechaduleInteractor.swift in Sources */,
 				6683E2D923BCEBD900250702 /* SuggestedFieldsConfiguration.swift in Sources */,
 				6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */,
 				86B14BC723CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift in Sources */,
@@ -3483,7 +3469,6 @@
 				668C20F523C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift in Sources */,
 				667E4B8523C3E169007354A7 /* AddFundModel.swift in Sources */,
 				668C20FA23C3F57800C009A9 /* AddSessionResultFiltterModel.swift in Sources */,
-				868C28C123C605CD003F237A /* ScheduleTableViewCell.swift in Sources */,
 				662A16A323C3E80900A3695E /* MemberOfFriendsPresenter.swift in Sources */,
 				86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
@@ -3514,7 +3499,6 @@
 				6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */,
 				662A169623C3E75400A3695E /* MyFavoriteFriendsModel.swift in Sources */,
 				668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */,
-				662A170423C3F20200A3695E /* SechadualePresenter.swift in Sources */,
 				6683E30C23BCEEFF00250702 /* ProfileViewController.swift in Sources */,
 				662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */,
 				86F9B90D23DDAAA5008C1F80 /* LocationViewController.swift in Sources */,

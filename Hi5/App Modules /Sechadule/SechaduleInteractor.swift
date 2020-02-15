@@ -1,8 +1,8 @@
 //
-//  SechadualeInteractor.swift
+//  SechaduleInteractor.swift
 //  Hi5
 //
-//  Created by Adam on 1/7/20.
+//  Created by Mohamed Gamal on 2/14/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -10,16 +10,16 @@
 
 import UIKit
 
-protocol ISechadualeInteractor: class {
+protocol ISechaduleInteractor: class {
 	var parameters: [String: Any]? { get set }
 }
 
-class SechadualeInteractor: ISechadualeInteractor {
-    var presenter: ISechadualePresenter?
-    var manager: ISechadualeManager?
+class SechaduleInteractor: ISechaduleInteractor {
+    var presenter: ISechadulePresenter?
+    var manager: ISechaduleManager?
     var parameters: [String: Any]?
 
-    init(presenter: ISechadualePresenter, manager: ISechadualeManager) {
+    init(presenter: ISechadulePresenter, manager: ISechaduleManager) {
     	self.presenter = presenter
     	self.manager = manager
     }

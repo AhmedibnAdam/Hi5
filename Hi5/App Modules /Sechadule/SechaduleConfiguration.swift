@@ -1,8 +1,8 @@
 //
-//  SechadualeConfiguration.swift
+//  SechaduleConfiguration.swift
 //  Hi5
 //
-//  Created by Adam on 1/7/20.
+//  Created by Mohamed Gamal on 2/14/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -11,13 +11,13 @@
 import Foundation
 import UIKit
 
-class SechadualeConfiguration {
+class SechaduleConfiguration {
     static func setup(parameters: [String: Any] = [:]) -> UIViewController {
-        let controller = SechadualeViewController()
-        let router = SechadualeRouter(view: controller)
-        let presenter = SechadualePresenter(view: controller)
-        let manager = SechadualeManager()
-        let interactor = SechadualeInteractor(presenter: presenter, manager: manager)
+        let controller = SechaduleViewController()
+        let router = SechaduleRouter(view: controller)
+        let presenter = SechadulePresenter(view: controller)
+        let manager = SechaduleManager()
+        let interactor = SechaduleInteractor(presenter: presenter, manager: manager)
         
         controller.interactor = interactor
         controller.router = router

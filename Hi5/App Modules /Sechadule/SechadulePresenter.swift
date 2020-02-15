@@ -1,8 +1,8 @@
 //
-//  SechadualeRouter.swift
+//  SechadulePresenter.swift
 //  Hi5
 //
-//  Created by Adam on 1/7/20.
+//  Created by Mohamed Gamal on 2/14/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com
@@ -10,14 +10,14 @@
 
 import UIKit
 
-protocol ISechadualeRouter: class {
+protocol ISechadulePresenter: class {
 	// do someting...
 }
 
-class SechadualeRouter: ISechadualeRouter {	
-	weak var view: SechadualeViewController?
+class SechadulePresenter: ISechadulePresenter {	
+	weak var view: ISechaduleViewController?
 	
-	init(view: SechadualeViewController?) {
+	init(view: ISechaduleViewController?) {
 		self.view = view
 	}
 }

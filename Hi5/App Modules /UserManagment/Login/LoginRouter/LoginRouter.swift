@@ -39,7 +39,7 @@ class LoginRouter: ILoginRouter {
     }
     
     func navigateToTabBar() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.tabBar, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)

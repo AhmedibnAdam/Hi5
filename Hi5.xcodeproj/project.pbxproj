@@ -312,6 +312,7 @@
 		860AB7F823F2D177005691C1 /* SocialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7F023F2D177005691C1 /* SocialModel.swift */; };
 		860AB7F923F2D177005691C1 /* SocialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860AB7F123F2D177005691C1 /* SocialViewController.xib */; };
 		860AB7FA23F2D177005691C1 /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7F223F2D177005691C1 /* SocialManager.swift */; };
+		8611E00E23F9538B0024D517 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8611E00D23F9538B0024D517 /* ContainerController.swift */; };
 		861CA2F723F40D45004FC02F /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CA2F523F40D45004FC02F /* TypeCollectionViewCell.swift */; };
 		861CA2F823F40D45004FC02F /* TypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 861CA2F623F40D45004FC02F /* TypeCollectionViewCell.xib */; };
 		861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */; };
@@ -738,6 +739,7 @@
 		860AB7F023F2D177005691C1 /* SocialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModel.swift; sourceTree = "<group>"; };
 		860AB7F123F2D177005691C1 /* SocialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialViewController.xib; sourceTree = "<group>"; };
 		860AB7F223F2D177005691C1 /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
+		8611E00D23F9538B0024D517 /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		861CA2F523F40D45004FC02F /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		861CA2F623F40D45004FC02F /* TypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		861D22CA23DCAEF5004F16F1 /* GalleryConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryConfiguration.swift; sourceTree = "<group>"; };
@@ -1622,6 +1624,7 @@
 			children = (
 				860AB7EE23F2D177005691C1 /* SocialViewController.swift */,
 				860AB7F123F2D177005691C1 /* SocialViewController.xib */,
+				8611E00D23F9538B0024D517 /* ContainerController.swift */,
 			);
 			path = SocialViews;
 			sourceTree = "<group>";
@@ -1958,14 +1961,12 @@
 		86268A1B23F72ED600EFD96B /* Sechadule */ = {
 			isa = PBXGroup;
 			children = (
-				86268A1C23F72F1800EFD96B /* SechaduleConfiguration.swift */,
-				86268A1D23F72F1800EFD96B /* SechadulePresenter.swift */,
-				86268A1E23F72F1800EFD96B /* SechaduleRouter.swift */,
-				86268A1F23F72F1800EFD96B /* SechaduleViewController.swift */,
-				86268A2023F72F1800EFD96B /* SechaduleInteractor.swift */,
-				86268A2123F72F1800EFD96B /* SechaduleModel.swift */,
-				86268A2223F72F1800EFD96B /* SechaduleViewController.xib */,
-				86268A2323F72F1800EFD96B /* SechaduleManager.swift */,
+				867ADA2E23F968BE000394DA /* SechaduleContracts */,
+				867ADA2D23F968AF000394DA /* SechaduleServices */,
+				867ADA2C23F9689F000394DA /* SechaduleInteractor */,
+				867ADA2B23F9688F000394DA /* SechadulePresenter */,
+				867ADA2A23F9687A000394DA /* SechaduleRouter */,
+				867ADA2923F96865000394DA /* SechaduleViews */,
 			);
 			path = Sechadule;
 			sourceTree = "<group>";
@@ -2156,6 +2157,56 @@
 				864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */,
 			);
 			path = BottomCollectionView;
+			sourceTree = "<group>";
+		};
+		867ADA2923F96865000394DA /* SechaduleViews */ = {
+			isa = PBXGroup;
+			children = (
+				86268A1F23F72F1800EFD96B /* SechaduleViewController.swift */,
+				86268A2223F72F1800EFD96B /* SechaduleViewController.xib */,
+			);
+			path = SechaduleViews;
+			sourceTree = "<group>";
+		};
+		867ADA2A23F9687A000394DA /* SechaduleRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86268A1E23F72F1800EFD96B /* SechaduleRouter.swift */,
+			);
+			path = SechaduleRouter;
+			sourceTree = "<group>";
+		};
+		867ADA2B23F9688F000394DA /* SechadulePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86268A1D23F72F1800EFD96B /* SechadulePresenter.swift */,
+			);
+			path = SechadulePresenter;
+			sourceTree = "<group>";
+		};
+		867ADA2C23F9689F000394DA /* SechaduleInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86268A2023F72F1800EFD96B /* SechaduleInteractor.swift */,
+			);
+			path = SechaduleInteractor;
+			sourceTree = "<group>";
+		};
+		867ADA2D23F968AF000394DA /* SechaduleServices */ = {
+			isa = PBXGroup;
+			children = (
+				86268A2123F72F1800EFD96B /* SechaduleModel.swift */,
+				86268A2323F72F1800EFD96B /* SechaduleManager.swift */,
+			);
+			path = SechaduleServices;
+			sourceTree = "<group>";
+		};
+		867ADA2E23F968BE000394DA /* SechaduleContracts */ = {
+			isa = PBXGroup;
+			children = (
+				86268A1C23F72F1800EFD96B /* SechaduleConfiguration.swift */,
+			);
+			path = SechaduleContracts;
 			sourceTree = "<group>";
 		};
 		867F90BB23C71B6A00C82762 /* Register Contract */ = {
@@ -3238,6 +3289,7 @@
 				667E4B7223C3DCA3007354A7 /* MakeWalletPasswordViewController.swift in Sources */,
 				6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */,
 				667E4B8723C3E169007354A7 /* AddFundManager.swift in Sources */,
+				8611E00E23F9538B0024D517 /* ContainerController.swift in Sources */,
 				668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */,
 				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
 				862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */,

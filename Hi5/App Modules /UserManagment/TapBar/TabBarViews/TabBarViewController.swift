@@ -23,19 +23,16 @@ class TabBarViewController: UITabBarController {
 	var router: ITabBarRouter?
     
    //MARK: - Properties
-    var menuController: UIViewController!
-    var isExpande = false
-    lazy var social: UINavigationController = {
-        let vc = SocialViewController()
-         vc.delegate = self
+    lazy var social: UIViewController = {
+        let vc = ContainerController()
          vc.tabBarItem.title = "social"
          vc.tabBarItem.image = UIImage(named: "social")
-        let nav = UINavigationController(rootViewController: vc)
-        return nav
+        //let nav = UINavigationController(rootViewController: vc)
+        return vc
     }()
     
     lazy var events: UINavigationController = {
-        let vc = SechaduleConfiguration.setup()
+        let vc = SechaduleViewController()
          vc.tabBarItem.title = "events"
          vc.tabBarItem.image = UIImage(named: "event")
         let nav = UINavigationController(rootViewController: vc)
@@ -66,38 +63,9 @@ extension TabBarViewController: UITabBarControllerDelegate {
 }
 
 extension TabBarViewController {
-    func configureMenuController() {
-        if menuController == nil {
-            menuController = SideMenuConfiguration.setup()
-            view.insertSubview(menuController.view, at: 0)
-            addChild(menuController)
-            menuController.didMove(toParent: self)
-            print("Done.....")
-        }
-   }
-    
-    func showMenuController(shouldExpand: Bool) {
-        if shouldExpand {
-            // show menu
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                self.view.frame.origin.x = self.view.frame.width - 80
-            }, completion: nil)
-        } else {
-            // hide menu
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                self.view.frame.origin.x = 0
-            }, completion: nil)
-        }
-    }
+
 }
 
-extension TabBarViewController: HomeControllerDelegate {
-    func handleMenuToggle() {
-            if !isExpande {
-                configureMenuController()
-            }
-    
-            isExpande = !isExpande
-            showMenuController(shouldExpand: isExpande)
-    }
+extension TabBarViewController {
+
 }

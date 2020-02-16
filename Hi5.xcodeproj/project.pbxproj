@@ -428,6 +428,8 @@
 		86F9B90F23DDAAA5008C1F80 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90723DDAAA5008C1F80 /* LocationModel.swift */; };
 		86F9B91023DDAAA5008C1F80 /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F9B90823DDAAA5008C1F80 /* LocationViewController.xib */; };
 		86F9B91123DDAAA5008C1F80 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90923DDAAA5008C1F80 /* LocationManager.swift */; };
+		86FB634D23F97993001019B1 /* SechaduleContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB634C23F97993001019B1 /* SechaduleContainerController.swift */; };
+		86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB635623F97DE4001019B1 /* NotificationSettingContainerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -855,6 +857,8 @@
 		86F9B90723DDAAA5008C1F80 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		86F9B90823DDAAA5008C1F80 /* LocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		86F9B90923DDAAA5008C1F80 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		86FB634C23F97993001019B1 /* SechaduleContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleContainerController.swift; sourceTree = "<group>"; };
+		86FB635623F97DE4001019B1 /* NotificationSettingContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingContainerController.swift; sourceTree = "<group>"; };
 		88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.release.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1062,7 +1066,7 @@
 			isa = PBXGroup;
 			children = (
 				668C20D723C3F36600C009A9 /* PublicEvents */,
-				668C20D623C3F34100C009A9 /* Setting */,
+				668C20D623C3F34100C009A9 /* NotificationSetting */,
 			);
 			path = NotificationSetting;
 			sourceTree = "<group>";
@@ -1393,21 +1397,17 @@
 			path = MyFriends;
 			sourceTree = "<group>";
 		};
-		668C20D623C3F34100C009A9 /* Setting */ = {
+		668C20D623C3F34100C009A9 /* NotificationSetting */ = {
 			isa = PBXGroup;
 			children = (
-				6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */,
-				6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */,
-				6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */,
-				6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */,
-				6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */,
-				6683E2B223BB631D00250702 /* NotificationSettingModel.swift */,
-				6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */,
-				6683E2B423BB631D00250702 /* NotificationSettingManager.swift */,
-				6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */,
-				6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */,
+				86FB635323F97D2F001019B1 /* NotificationSettingContract */,
+				86FB635123F97D1A001019B1 /* NotificationSettingInteractor */,
+				86FB635023F97D0F001019B1 /* NotificationSettingPresenter */,
+				86FB634F23F97D06001019B1 /* NotificationSettingRouter */,
+				86FB635223F97D25001019B1 /* NotificationSettingServices */,
+				86FB634E23F97CEB001019B1 /* NotificationSettingViews */,
 			);
-			path = Setting;
+			path = NotificationSetting;
 			sourceTree = "<group>";
 		};
 		668C20D723C3F36600C009A9 /* PublicEvents */ = {
@@ -2164,6 +2164,7 @@
 			children = (
 				86268A1F23F72F1800EFD96B /* SechaduleViewController.swift */,
 				86268A2223F72F1800EFD96B /* SechaduleViewController.xib */,
+				86FB634C23F97993001019B1 /* SechaduleContainerController.swift */,
 			);
 			path = SechaduleViews;
 			sourceTree = "<group>";
@@ -3004,6 +3005,75 @@
 			path = LocationViews;
 			sourceTree = "<group>";
 		};
+		86FB634E23F97CEB001019B1 /* NotificationSettingViews */ = {
+			isa = PBXGroup;
+			children = (
+				86FB635523F97D9C001019B1 /* Cell */,
+				86FB635423F97D8A001019B1 /* View */,
+			);
+			path = NotificationSettingViews;
+			sourceTree = "<group>";
+		};
+		86FB634F23F97D06001019B1 /* NotificationSettingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2AF23BB631D00250702 /* NotificationSettingRouter.swift */,
+			);
+			path = NotificationSettingRouter;
+			sourceTree = "<group>";
+		};
+		86FB635023F97D0F001019B1 /* NotificationSettingPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2AE23BB631D00250702 /* NotificationSettingPresenter.swift */,
+			);
+			path = NotificationSettingPresenter;
+			sourceTree = "<group>";
+		};
+		86FB635123F97D1A001019B1 /* NotificationSettingInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2B123BB631D00250702 /* NotificationSettingInteractor.swift */,
+			);
+			path = NotificationSettingInteractor;
+			sourceTree = "<group>";
+		};
+		86FB635223F97D25001019B1 /* NotificationSettingServices */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2B223BB631D00250702 /* NotificationSettingModel.swift */,
+				6683E2B423BB631D00250702 /* NotificationSettingManager.swift */,
+			);
+			path = NotificationSettingServices;
+			sourceTree = "<group>";
+		};
+		86FB635323F97D2F001019B1 /* NotificationSettingContract */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2AD23BB631D00250702 /* NotificationSettingConfiguration.swift */,
+			);
+			path = NotificationSettingContract;
+			sourceTree = "<group>";
+		};
+		86FB635423F97D8A001019B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2B023BB631D00250702 /* NotificationSettingViewController.swift */,
+				6683E2B323BB631D00250702 /* NotificationSettingViewController.xib */,
+				86FB635623F97DE4001019B1 /* NotificationSettingContainerController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86FB635523F97D9C001019B1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6683E2BD23BB63AA00250702 /* notificationTableViewCell.swift */,
+				6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		E17617DCB77855E3802A42A8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3310,6 +3380,7 @@
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
 				8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */,
 				668C213A23C3F6F700C009A9 /* CommentListsRouter.swift in Sources */,
+				86FB634D23F97993001019B1 /* SechaduleContainerController.swift in Sources */,
 				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
 				862EB5AE23D730AD00508F1A /* DateOfBirthRouter.swift in Sources */,
 				662A16B523C3E93900A3695E /* MyFriendsDetailsRouter.swift in Sources */,
@@ -3411,6 +3482,7 @@
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
 				66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */,
 				662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */,
+				86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */,
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				6683E2DB23BCEBD900250702 /* SuggestedFieldsRouter.swift in Sources */,

@@ -19,12 +19,14 @@ class NotificationSettingViewController: UIViewController {
 	var router: INotificationSettingRouter?
 
     //MARK: - Properties
+    
+    var delegate: NotificationSettingControllerDelegate?
     lazy var buttonSlideBar: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
     }()
     
     @objc func sideMenu() {
-        print("b555555........")
+        delegate?.handleMenuToggle()
     }
     //MARK: - View Life Cycle
 	override func viewDidLoad() {

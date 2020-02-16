@@ -31,20 +31,20 @@ class TabBarViewController: UITabBarController {
         return vc
     }()
     
-    lazy var events: UINavigationController = {
-        let vc = SechaduleViewController()
+    lazy var events: UIViewController = {
+        let vc = SechaduleContainerController()
          vc.tabBarItem.title = "events"
          vc.tabBarItem.image = UIImage(named: "event")
-        let nav = UINavigationController(rootViewController: vc)
-        return nav
+        //let nav = UINavigationController(rootViewController: vc)
+        return vc
     }()
     
-    lazy var notification: UINavigationController = {
-        let vc = NotificationSettingConfiguration.setup()
+    lazy var notification: UIViewController = {
+        let vc = NotificationSettingContainerController()
          vc.tabBarItem.title = "notification"
          vc.tabBarItem.image = UIImage(named: "notification")
-        let nav = UINavigationController(rootViewController: vc)
-        return nav
+        //let nav = UINavigationController(rootViewController: vc)
+        return vc
     }()
     //MARK:- View life Cycle
 	override func viewDidLoad() {

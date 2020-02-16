@@ -19,12 +19,13 @@ class SechaduleViewController: UIViewController {
 	var router: ISechaduleRouter?
 
     //MARK: - Properties
+    var delegate: SechaduleControllerDelegate?
     lazy var buttonSlideBar: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
     }()
     
     @objc func sideMenu() {
-        print("b555555........")
+        delegate?.handleMenuToggle()
     }
     //MARK: - ViewLifeCycle
 	override func viewDidLoad() {

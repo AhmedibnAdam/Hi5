@@ -19,24 +19,26 @@ class SocialViewController: UIViewController {
 	var router: ISocialRouter?
     
     //MARK: - Properties
-    var menuController: UIViewController!
-    var isExpande = false
+    //var menuController: UIViewController!
+    //var isExpande = false
     
-    //var delegate: HomeControllerDelegate?
+    var delegate: HomeControllerDelegate?
     
     lazy var buttonSlideBar: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
     }()
     
     @objc func sideMenu() {
-        print("b555555........")
-        
-        if !isExpande {
-            configureMenuController()
-        }
-        
-        isExpande = !isExpande
-        showMenuController(shouldExpand: isExpande)
+        print("menu toggle....")
+        delegate?.handleMenuToggle()
+//        print("b555555........")
+//
+//        if !isExpande {
+//            configureMenuController()
+//        }
+//
+//        isExpande = !isExpande
+//        showMenuController(shouldExpand: isExpande)
     }
 
     //MARK: - ViewlifeCycle
@@ -61,27 +63,27 @@ extension SocialViewController {
         navigationItem.setLeftBarButton(buttonSlideBar, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
-    func configureMenuController() {
-        if menuController == nil {
-            menuController = SideMenuConfiguration.setup()
-            view.insertSubview(menuController.view, at: 0)
-            addChild(menuController)
-            menuController.didMove(toParent: self)
-        }
-    }
-        func showMenuController(shouldExpand: Bool) {
-            if shouldExpand {
-                // show menu
-                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                    self.view.frame.origin.x = self.view.frame.width - 80
-                }, completion: nil)
-            } else {
-                // hide menu
-                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                    self.view.frame.origin.x = 0
-                }, completion: nil)
-            }
-        }
+//    func configureMenuController() {
+//        if menuController == nil {
+//            menuController = SideMenuConfiguration.setup()
+//            view.insertSubview(menuController.view, at: 0)
+//            addChild(menuController)
+//            menuController.didMove(toParent: self)
+//        }
+//    }
+//        func showMenuController(shouldExpand: Bool) {
+//            if shouldExpand {
+//                // show menu
+//                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//                    self.view.frame.origin.x = self.view.frame.width - 80
+//                }, completion: nil)
+//            } else {
+//                // hide menu
+//                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+//                    self.view.frame.origin.x = 0
+//                }, completion: nil)
+//            }
+//        }
         
 }
 

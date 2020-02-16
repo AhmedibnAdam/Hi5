@@ -14,18 +14,20 @@ protocol ITabBarViewController: class {
 	var router: ITabBarRouter? { get set }
 }
 
-//protocol HomeControllerDelegate {
-//    func handleMenuToggle()
-//}
+protocol HomeControllerDelegate {
+    func handleMenuToggle()
+}
 
 class TabBarViewController: UITabBarController {
 	var interactor: ITabBarInteractor?
 	var router: ITabBarRouter?
     
+   //MARK: - Properties
     var menuController: UIViewController!
-    
+    var isExpande = false
     lazy var social: UINavigationController = {
-        let vc = SocialConfiguration.setup()
+        let vc = SocialViewController()
+         vc.delegate = self
          vc.tabBarItem.title = "social"
          vc.tabBarItem.image = UIImage(named: "social")
         let nav = UINavigationController(rootViewController: vc)
@@ -64,18 +66,38 @@ extension TabBarViewController: UITabBarControllerDelegate {
 }
 
 extension TabBarViewController {
-//    func configureMenuController() {
-//        if menuController == nil {
-//            menuController = SideMenuConfiguration.setup()
-//            view.insertSubview(menuController.view, at: 0)
-//            addChild(menuController)
-//            menuController.didMove(toParent: self)
-//        }
-//  }
+    func configureMenuController() {
+        if menuController == nil {
+            menuController = SideMenuConfiguration.setup()
+            view.insertSubview(menuController.view, at: 0)
+            addChild(menuController)
+            menuController.didMove(toParent: self)
+            print("Done.....")
+        }
+   }
+    
+    func showMenuController(shouldExpand: Bool) {
+        if shouldExpand {
+            // show menu
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.view.frame.origin.x = self.view.frame.width - 80
+            }, completion: nil)
+        } else {
+            // hide menu
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.view.frame.origin.x = 0
+            }, completion: nil)
+        }
+    }
 }
 
-//extension TabBarViewController: HomeControllerDelegate {
-//    func handleMenuToggle() {
-//        configureMenuController()
-//    }
-//}
+extension TabBarViewController: HomeControllerDelegate {
+    func handleMenuToggle() {
+            if !isExpande {
+                configureMenuController()
+            }
+    
+            isExpande = !isExpande
+            showMenuController(shouldExpand: isExpande)
+    }
+}

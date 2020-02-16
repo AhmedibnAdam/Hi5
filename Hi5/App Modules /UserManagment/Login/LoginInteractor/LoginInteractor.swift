@@ -32,7 +32,7 @@ class LoginInteractor: ILoginInteractor {
                 self.presenter?.hideIndecator()
                 //self.presenter?.navigateToFields()
                 self.presenter?.navigateToTabBar()
-               // self.presenter?.navigateToProfile()
+                //self.presenter?.navigateToProfile()
             } else {
                 self.presenter?.hideIndecator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)

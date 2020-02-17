@@ -27,6 +27,12 @@ class LoginManager: ILoginManager {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(LoginModel.LoginResponse.self, from: response)
                 print(user)
+                let defaults = UserDefaults.standard
+                if let token = user.token , let username = user.userName , let fullname = user.fullName {
+                    defaults.set(token, forKey: "Token") as? String
+                    defaults.set(username, forKey: "UserName") as? String
+                    defaults.set(fullname, forKey: "FullName") as? String
+                }
                 complition(nil,true)
                 
             } catch let error {

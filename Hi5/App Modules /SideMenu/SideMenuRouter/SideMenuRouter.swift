@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ISideMenuRouter: class {
-	// do someting...
+	func navigatetoProfile()
 }
 
 class SideMenuRouter: ISideMenuRouter {	
@@ -20,4 +20,7 @@ class SideMenuRouter: ISideMenuRouter {
 	init(view: SideMenuViewController?) {
 		self.view = view
 	}
+    func navigatetoProfile() {
+        view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+    }
 }

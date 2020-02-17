@@ -1143,14 +1143,12 @@
 		66340A1323B4CE2C009DB30A /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				6683E31123BCEF1600250702 /* SideMenuConfiguration.swift */,
-				6683E31223BCEF1600250702 /* SideMenuPresenter.swift */,
-				6683E31323BCEF1600250702 /* SideMenuRouter.swift */,
-				6683E31423BCEF1600250702 /* SideMenuViewController.swift */,
-				6683E31523BCEF1600250702 /* SideMenuInteractor.swift */,
-				6683E31623BCEF1600250702 /* SideMenuModel.swift */,
-				6683E31723BCEF1600250702 /* SideMenuViewController.xib */,
-				6683E31823BCEF1600250702 /* SideMenuManager.swift */,
+				86FB635C23F98392001019B1 /* SideMenuContracts */,
+				86FB635A23F9837D001019B1 /* SideMenuInteractor */,
+				86FB635923F98374001019B1 /* SideMenuPresenter */,
+				86FB635823F9835C001019B1 /* SideMenuRouter */,
+				86FB635D23F9839F001019B1 /* SideMenuServices */,
+				86FB635B23F98387001019B1 /* SideMenuViews */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -3072,6 +3070,56 @@
 				6683E2BE23BB63AA00250702 /* notificationTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		86FB635823F9835C001019B1 /* SideMenuRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6683E31323BCEF1600250702 /* SideMenuRouter.swift */,
+			);
+			path = SideMenuRouter;
+			sourceTree = "<group>";
+		};
+		86FB635923F98374001019B1 /* SideMenuPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				6683E31223BCEF1600250702 /* SideMenuPresenter.swift */,
+			);
+			path = SideMenuPresenter;
+			sourceTree = "<group>";
+		};
+		86FB635A23F9837D001019B1 /* SideMenuInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				6683E31523BCEF1600250702 /* SideMenuInteractor.swift */,
+			);
+			path = SideMenuInteractor;
+			sourceTree = "<group>";
+		};
+		86FB635B23F98387001019B1 /* SideMenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				6683E31423BCEF1600250702 /* SideMenuViewController.swift */,
+				6683E31723BCEF1600250702 /* SideMenuViewController.xib */,
+			);
+			path = SideMenuViews;
+			sourceTree = "<group>";
+		};
+		86FB635C23F98392001019B1 /* SideMenuContracts */ = {
+			isa = PBXGroup;
+			children = (
+				6683E31123BCEF1600250702 /* SideMenuConfiguration.swift */,
+			);
+			path = SideMenuContracts;
+			sourceTree = "<group>";
+		};
+		86FB635D23F9839F001019B1 /* SideMenuServices */ = {
+			isa = PBXGroup;
+			children = (
+				6683E31623BCEF1600250702 /* SideMenuModel.swift */,
+				6683E31823BCEF1600250702 /* SideMenuManager.swift */,
+			);
+			path = SideMenuServices;
 			sourceTree = "<group>";
 		};
 		E17617DCB77855E3802A42A8 /* Pods */ = {

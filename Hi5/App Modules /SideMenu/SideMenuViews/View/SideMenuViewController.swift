@@ -14,7 +14,7 @@ protocol ISideMenuViewController: class {
 	var router: ISideMenuRouter? { get set }
 }
 
-class SideMenuViewController: UIViewController {
+class SideMenuViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
 	var interactor: ISideMenuInteractor?
 	var router: ISideMenuRouter?
    //MARK: - Properties
@@ -23,10 +23,14 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var profileImgBtn: UIButton!
     @IBOutlet weak var fullNamelbl: UILabel!
     @IBOutlet weak var userNamelbl: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
    //MARK: - ViewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        registerCell()
 		initView()
         configer()
     }
@@ -58,11 +62,23 @@ extension SideMenuViewController {
         self.profileImgBtn = CreateCornerRauis.ButtonRaduis(button: self.profileImgBtn, number: (self.profileImgBtn.frame.size.width / 2))
     }
     
+    func registerCell() {
+        let cell = UINib(nibName: "MenuCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "MenuCell")
+    }
+    
     func configer(){
         router = SideMenuRouter(view: self)
     }
 }
 
 extension SideMenuViewController {
-	// do someting...
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
+        return cell
+    }
 }

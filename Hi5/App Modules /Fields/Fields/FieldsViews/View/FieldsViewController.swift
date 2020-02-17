@@ -17,22 +17,19 @@ protocol IFieldsViewController: class {
 
 class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     var types = ["Nearby Fields","Favourites","Member of"]
-    //var imageBar = []
-    var titleBar = ["social" , "event" , "notification"]
 	var interactor: IFieldsInteractor?
 	var router: IFieldsRouter?
     
-    lazy var sideMenu: UIBarButtonItem = {
-        return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(openSideMenu))
+    lazy var backBtn: UIBarButtonItem = {
+        return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
     }()
     
-    @objc func openSideMenu() {
-        
+    @objc func backBtntapped() {
+        router?.navigateToTabBar()
     }
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var bottomCollectionView: UICollectionView!
     
     //MARK: - viewLifeCycle
 	override func viewDidLoad() {
@@ -40,15 +37,12 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         initView()
         configer()
         setupNavigationBar()
-        bottomCollectionView.delegate = self
-        bottomCollectionView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
         tableView.delegate = self
         tableView.dataSource = self
         registerCollectionCell()
         registerTableCell()
-        registerBottomCollectionCell()
     }
 }
 
@@ -61,50 +55,26 @@ extension FieldsViewController: IFieldsViewController {
 
 //MARK: - topCollectionView
 extension FieldsViewController {
-        func registerBottomCollectionCell() {
-           let cell = UINib(nibName: "BottomCollectionViewCell", bundle: nil)
-          bottomCollectionView.register(cell, forCellWithReuseIdentifier: "bottomCell")
-    }
-    
         func registerCollectionCell() {
             let cell = UINib(nibName: "TypeCollectionViewCell", bundle: nil)
             collectionView.register(cell, forCellWithReuseIdentifier: "typeCell")
     }
     
 	    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            if collectionView == self.collectionView {
                 return types.count
-            } else {
-                return titleBar.count
-            }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.collectionView {
             let type = types[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "typeCell", for: indexPath) as! TypeCollectionViewCell
             cell.typeLbl.text = type
             return cell
-            
-        } else {
-            let title = titleBar[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as! BottomCollectionViewCell
-            cell.barLbl.text = title
-            cell.barImg.image = UIImage(named: title)
-            return cell
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == self.collectionView {
             let width = collectionView.frame.width / 3
             let height = collectionView.frame.height
             return CGSize(width: width, height: height)
-        } else {
-            let width = bottomCollectionView.frame.width / 3
-            let height = bottomCollectionView.frame.height
-            return CGSize(width: width, height: height)
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -114,14 +84,12 @@ extension FieldsViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView == self.collectionView {
             let cell = collectionView.cellForItem(at: indexPath) as! TypeCollectionViewCell
             cell.typeLbl.textColor = .orange
             cell.hightLightVieww.isHidden = false
-        } else {
-            router?.navigateToTabBar()
+        if (indexPath.row == 0) {
+            alert()
         }
-         
     }
 }
 
@@ -145,12 +113,26 @@ extension FieldsViewController {
         let searchSessionBtn = UIBarButtonItem(customView: button)
         navigationItem.setRightBarButton(searchSessionBtn, animated: true)
         button.addTarget(self, action: #selector(searchSession), for: .touchUpInside)
-        navigationItem.setLeftBarButton(sideMenu, animated: true)
+        navigationItem.setLeftBarButton(backBtn, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
     
     @objc func searchSession() {
         
+    }
+    
+    func alert() {
+        let alert = UIAlertController(title: "Your location", message: "High five Players app would like to use your current loccation to search fields near you.Do you agree?", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default) { (x) in
+            print("OK...")
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
+            
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

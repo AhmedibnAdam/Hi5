@@ -21,6 +21,6 @@ class FieldsRouter: IFieldsRouter {
 		self.view = view
 	}
     func navigateToTabBar() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.tabBar, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
 }

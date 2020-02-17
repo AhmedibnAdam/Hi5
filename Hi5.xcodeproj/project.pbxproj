@@ -357,8 +357,6 @@
 		862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5A923D730AD00508F1A /* DateOfBirthModel.swift */; };
 		862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862EB5AA23D730AD00508F1A /* DateOfBirthViewController.xib */; };
 		862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */; };
-		864450F623F45758009DFA9A /* BottomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864450F423F45758009DFA9A /* BottomCollectionViewCell.swift */; };
-		864450F723F45758009DFA9A /* BottomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */; };
 		864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E920023E9BE530095B3EF /* LocationEndPoint.swift */; };
 		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
 		86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */; };
@@ -788,8 +786,6 @@
 		862EB5A923D730AD00508F1A /* DateOfBirthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthModel.swift; sourceTree = "<group>"; };
 		862EB5AA23D730AD00508F1A /* DateOfBirthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateOfBirthViewController.xib; sourceTree = "<group>"; };
 		862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthManager.swift; sourceTree = "<group>"; };
-		864450F423F45758009DFA9A /* BottomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCollectionViewCell.swift; sourceTree = "<group>"; };
-		864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomCollectionViewCell.xib; sourceTree = "<group>"; };
 		864E920023E9BE530095B3EF /* LocationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndPoint.swift; sourceTree = "<group>"; };
 		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
 		86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailEndPoint.swift; sourceTree = "<group>"; };
@@ -1794,7 +1790,6 @@
 		861CA2EE23F40BCC004FC02F /* FieldsViews */ = {
 			isa = PBXGroup;
 			children = (
-				864450F323F4572E009DFA9A /* BottomCollectionView */,
 				86A2FF6723F421E10053E5A1 /* TableViewCell */,
 				861CA2F423F40CD8004FC02F /* CollectionViewCell */,
 				86A2FF6C23F434D90053E5A1 /* View */,
@@ -2168,15 +2163,6 @@
 				8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */,
 			);
 			path = NewPasswordServices;
-			sourceTree = "<group>";
-		};
-		864450F323F4572E009DFA9A /* BottomCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				864450F423F45758009DFA9A /* BottomCollectionViewCell.swift */,
-				864450F523F45758009DFA9A /* BottomCollectionViewCell.xib */,
-			);
-			path = BottomCollectionView;
 			sourceTree = "<group>";
 		};
 		867ADA2923F96865000394DA /* SechaduleViews */ = {
@@ -3239,7 +3225,6 @@
 				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
-				864450F723F45758009DFA9A /* BottomCollectionViewCell.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
@@ -3679,7 +3664,6 @@
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
-				864450F623F45758009DFA9A /* BottomCollectionViewCell.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,

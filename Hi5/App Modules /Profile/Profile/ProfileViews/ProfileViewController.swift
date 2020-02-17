@@ -49,12 +49,9 @@ class ProfileViewController: UIViewController {
         navigateToEditProfile()
     }
     
-    @IBAction func sideMenuBtnTapped(_ sender: UIButton) {
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        router?.navigateToTabBar()
     }
-    
-    @IBAction func threeDotMenuTapped(_ sender: UIButton) {
-    }
-    
 }
 
 //MARK:- Extensions

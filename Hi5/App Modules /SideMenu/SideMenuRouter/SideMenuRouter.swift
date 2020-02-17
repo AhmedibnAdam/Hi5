@@ -12,6 +12,7 @@ import UIKit
 
 protocol ISideMenuRouter: class {
 	func navigatetoProfile()
+    func navigateToFields()
 }
 
 class SideMenuRouter: ISideMenuRouter {	
@@ -22,5 +23,8 @@ class SideMenuRouter: ISideMenuRouter {
 	}
     func navigatetoProfile() {
         view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+    }
+    func navigateToFields() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
 }

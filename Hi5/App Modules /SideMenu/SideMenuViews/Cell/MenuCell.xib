@@ -16,21 +16,44 @@
                 <rect key="frame" x="0.0" y="0.0" width="346" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4J-qZ-HeH">
-                        <rect key="frame" x="152" y="35" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w0s-GW-myi">
+                        <rect key="frame" x="20" y="20" width="306" height="51"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="friends" translatesAutoresizingMaskIntoConstraints="NO" id="ath-K0-KeJ">
+                                <rect key="frame" x="0.0" y="0.0" width="20.5" height="51"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV9-HG-BqX">
+                                <rect key="frame" x="30.5" y="0.0" width="275.5" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-C3-F0L">
+                                <rect key="frame" x="306" y="0.0" width="0.0" height="51"/>
+                                <state key="normal" image="plus"/>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="F4J-qZ-HeH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1cT-Nr-gBV"/>
-                    <constraint firstItem="F4J-qZ-HeH" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4nw-tP-7cl"/>
+                    <constraint firstItem="w0s-GW-myi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="E75-j9-oFm"/>
+                    <constraint firstAttribute="bottom" secondItem="w0s-GW-myi" secondAttribute="bottom" constant="20" id="NEJ-Ue-Zjt"/>
+                    <constraint firstAttribute="trailing" secondItem="w0s-GW-myi" secondAttribute="trailing" constant="20" id="aRa-aO-Ulh"/>
+                    <constraint firstItem="w0s-GW-myi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="mt6-9x-k5M"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img" destination="ath-K0-KeJ" id="9Vi-3L-Zb4"/>
+                <outlet property="lbl" destination="qV9-HG-BqX" id="7wL-9N-aDk"/>
+                <outlet property="plusBtn" destination="hAf-C3-F0L" id="alx-Xg-N0q"/>
+            </connections>
             <point key="canvasLocation" x="156.52173913043478" y="129.57589285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="friends" width="20.5" height="18.5"/>
+        <image name="plus" width="30" height="30"/>
+    </resources>
 </document>

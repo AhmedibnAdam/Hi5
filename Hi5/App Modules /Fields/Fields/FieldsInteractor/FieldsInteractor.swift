@@ -29,7 +29,7 @@ class FieldsInteractor: IFieldsInteractor {
     func nearBy(view: UIViewController, lon: Double, lat: Double) {
         manager?.nearByFromApi(lon: lon, lat: lat, complition: { (error, success, response) in
              if (success == true) {
-                guard let response = response?.fields else {return}
+                guard let response = response else {return}
                 self.presenter?.showNearByResponse(response: response)
            } else {
                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)

@@ -11,10 +11,25 @@ import UIKit
 class FieldsTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
+    
+    @IBOutlet weak var visibilitylbl: UILabel!
+    @IBOutlet weak var fieldImg: UIImageView!
     @IBOutlet weak var companyImg: UIImageView!
     @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var showDetailsBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var rateLbl: UILabel!
+    @IBOutlet weak var commentLbl: UILabel!
+    @IBOutlet weak var namelbl: UILabel!
+    
+    @IBOutlet weak var locationLbl: UILabel!
+    @IBOutlet weak var recomendedLbl: UILabel!
+    @IBOutlet weak var genderLbl: UILabel!
+    @IBOutlet weak var sportTypeLbl: UILabel!
+    @IBOutlet weak var costLbl: UILabel!
+    @IBOutlet weak var paymentLbl: UILabel!
+    
+    //MARK: - View Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

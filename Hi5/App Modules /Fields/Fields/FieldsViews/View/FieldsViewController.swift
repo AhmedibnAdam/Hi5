@@ -14,7 +14,7 @@ import CoreLocation
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
     func showAlert(title: String, msg: String)
-    func showNearByResponse(response: [FieldsModel.Field])
+    func showNearByResponse(response: FieldsModel.NearByfieldsResponse)
 }
 
 class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
@@ -73,8 +73,9 @@ extension FieldsViewController: IFieldsViewController {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     
-    func showNearByResponse(response: [FieldsModel.Field]){
-        self.nearByField = response
+    func showNearByResponse(response: FieldsModel.NearByfieldsResponse){
+        guard let field = response.fields else {return}
+        self.nearByField = field
         self.tableView.reloadData()
     }
 }
@@ -178,11 +179,19 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return nearByField.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
+        let nearFields = nearByField[indexPath.row]
+        cell.namelbl.text = nearFields.name
+        cell.locationLbl.text = nearFields.address
+        cell.commentLbl.text = String(nearFields.comments ?? 0)
+        cell.rateLbl.text = String(nearFields.rating ?? 0)
+        cell.sportTypeLbl.text = nearFields.sportType
+        cell.genderLbl.text = nearFields.gender
+        cell.recomendedLbl.text = nearFields.recommendedFor
         
         return cell
     }

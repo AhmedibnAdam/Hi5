@@ -63,6 +63,12 @@
                                             <constraint firstAttribute="height" constant="40" id="wLN-6j-xOO"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEr-3u-GkJ">
+                                        <rect key="frame" x="10" y="169.5" width="52" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -71,10 +77,12 @@
                                     <constraint firstAttribute="trailing" secondItem="zES-cl-lnN" secondAttribute="trailing" id="OFt-M7-BTi"/>
                                     <constraint firstItem="cvb-pV-477" firstAttribute="leading" secondItem="tZY-Pr-LkH" secondAttribute="trailing" constant="-15" id="Ybj-BZ-dBc"/>
                                     <constraint firstItem="zES-cl-lnN" firstAttribute="top" secondItem="lSX-gI-HB9" secondAttribute="top" id="d0P-SS-ApV"/>
+                                    <constraint firstItem="gEr-3u-GkJ" firstAttribute="leading" secondItem="tZY-Pr-LkH" secondAttribute="leading" id="e2M-gJ-JCx"/>
                                     <constraint firstItem="zES-cl-lnN" firstAttribute="leading" secondItem="lSX-gI-HB9" secondAttribute="leading" id="ebn-c6-heP"/>
                                     <constraint firstItem="tZY-Pr-LkH" firstAttribute="leading" secondItem="zES-cl-lnN" secondAttribute="leading" constant="10" id="f4d-d9-duu"/>
                                     <constraint firstItem="NkM-eI-PoF" firstAttribute="top" secondItem="zES-cl-lnN" secondAttribute="top" constant="20" id="nWR-cv-gcW"/>
                                     <constraint firstItem="NkM-eI-PoF" firstAttribute="trailing" secondItem="zES-cl-lnN" secondAttribute="trailing" constant="-10" id="tia-42-nEP"/>
+                                    <constraint firstItem="gEr-3u-GkJ" firstAttribute="bottom" secondItem="zES-cl-lnN" secondAttribute="bottom" constant="-15" id="wal-yp-UhQ"/>
                                     <constraint firstAttribute="bottom" secondItem="zES-cl-lnN" secondAttribute="bottom" id="zEC-PN-SMs"/>
                                 </constraints>
                             </view>
@@ -250,10 +258,21 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="commentLbl" destination="BYh-DM-uY4" id="cFe-0r-dZv"/>
                 <outlet property="companyImg" destination="tZY-Pr-LkH" id="03a-q3-aWc"/>
                 <outlet property="containerView" destination="K12-J3-Alz" id="zEh-zl-2YG"/>
+                <outlet property="costLbl" destination="Oxj-sL-b6F" id="M5k-eL-8RF"/>
+                <outlet property="fieldImg" destination="zES-cl-lnN" id="3UN-7G-0SE"/>
+                <outlet property="genderLbl" destination="EBG-Re-a9F" id="Nmr-lz-7AL"/>
+                <outlet property="locationLbl" destination="ewQ-wX-btu" id="8pi-0Y-tdS"/>
                 <outlet property="nameView" destination="cvb-pV-477" id="Qo3-ei-udH"/>
+                <outlet property="namelbl" destination="Fwa-MW-aag" id="evx-D7-e7l"/>
+                <outlet property="paymentLbl" destination="QYt-z9-Bs2" id="Prl-x8-kS8"/>
+                <outlet property="rateLbl" destination="faK-No-1Dg" id="gJ9-LU-T4g"/>
+                <outlet property="recomendedLbl" destination="18I-kQ-gEr" id="J36-eJ-eWc"/>
                 <outlet property="showDetailsBtn" destination="BpQ-Rl-FeU" id="o9v-oG-bd9"/>
+                <outlet property="sportTypeLbl" destination="njK-e6-eCn" id="jCg-L6-paa"/>
+                <outlet property="visibilitylbl" destination="gEr-3u-GkJ" id="fxY-hV-qcw"/>
             </connections>
             <point key="canvasLocation" x="184.78260869565219" y="147.65625"/>
         </tableViewCell>

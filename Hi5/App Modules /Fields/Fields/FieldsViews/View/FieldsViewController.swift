@@ -9,13 +9,19 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import CoreLocation
 
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
     func showAlert(title: String, msg: String)
+    func showNearByResponse(response: [FieldsModel.Field])
 }
 
 class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+    
+    var nearByField = [FieldsModel.Field]()
+    var locManager = CLLocationManager()
+    var currentLocation: CLLocation!
     var types = ["Nearby Fields","Favourites","Member of"]
 	var interactor: IFieldsInteractor?
 	var router: IFieldsRouter?
@@ -36,6 +42,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         super.viewDidLoad()
         initView()
         configer()
+        getCurrentLocation()
         setupNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -44,12 +51,31 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         registerCollectionCell()
         registerTableCell()
     }
+    
+    func getCurrentLocation() {
+        locManager.requestAlwaysAuthorization()
+
+        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
+            print(locManager.location)
+            guard let currentLocation = locManager.location else {
+                return
+            }
+            print(currentLocation.coordinate.latitude)
+            print(currentLocation.coordinate.longitude)
+        }
+    }
 }
 
 //MARK: - Extensions
 extension FieldsViewController: IFieldsViewController {
      func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    
+    func showNearByResponse(response: [FieldsModel.Field]){
+        self.nearByField = response
+        self.tableView.reloadData()
     }
 }
 
@@ -89,6 +115,10 @@ extension FieldsViewController {
             cell.hightLightVieww.isHidden = false
         if (indexPath.row == 0) {
             alert()
+        } else if (indexPath.row == 1){
+            self.interactor?.favourite(view: self)
+        } else if (indexPath.row == 2){
+            self.interactor?.memberOf(view: self)
         }
     }
 }
@@ -124,7 +154,9 @@ extension FieldsViewController {
     func alert() {
         let alert = UIAlertController(title: "Your location", message: "High five Players app would like to use your current loccation to search fields near you.Do you agree?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default) { (x) in
-            print("OK...")
+            self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
+            //print("OK...")
+            //self.getCurrentLocation()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
             
@@ -134,6 +166,7 @@ extension FieldsViewController {
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
     }
+
 }
 
 //MARK: - tableView

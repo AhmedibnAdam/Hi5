@@ -11,7 +11,8 @@
 import UIKit
 
 protocol IFieldsPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+    func showNearByResponse(response: [FieldsModel.Field])
 }
 
 class FieldsPresenter: IFieldsPresenter {	
@@ -20,4 +21,10 @@ class FieldsPresenter: IFieldsPresenter {
 	init(view: IFieldsViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    func showNearByResponse(response: [FieldsModel.Field]) {
+        view?.showNearByResponse(response: response)
+    }
 }

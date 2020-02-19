@@ -26,14 +26,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="208.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NkM-eI-PoF">
-                                        <rect key="frame" x="332" y="20" width="35" height="22"/>
+                                        <rect key="frame" x="298" y="20" width="69" height="49"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaA-jf-KLU">
-                                                <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
-                                                <state key="normal" image="star"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="49"/>
+                                                <state key="normal" image="nonstar"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-xk-rZR">
-                                                <rect key="frame" x="31" y="0.0" width="4" height="22"/>
+                                                <rect key="frame" x="61" y="0.0" width="8" height="49"/>
                                                 <state key="normal" image="seting"/>
                                             </button>
                                         </subviews>
@@ -93,24 +93,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FAe-q4-Cgv" userLabel="Rate And Comment Stack View">
-                                <rect key="frame" x="258" y="218.5" width="109" height="22"/>
+                                <rect key="frame" x="224.5" y="218.5" width="142.5" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5n-ki-p5b">
-                                        <rect key="frame" x="0.0" y="0.0" width="17.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                         <state key="normal" image="rate"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faK-No-1Dg">
-                                        <rect key="frame" x="27.5" y="0.0" width="24.5" height="22"/>
+                                        <rect key="frame" x="45" y="0.0" width="24.5" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRL-sq-PH1">
-                                        <rect key="frame" x="62" y="0.0" width="16" height="22"/>
+                                        <rect key="frame" x="79.5" y="0.0" width="32" height="35"/>
                                         <state key="normal" image="comment"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="54" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYh-DM-uY4">
-                                        <rect key="frame" x="88" y="0.0" width="21" height="22"/>
+                                        <rect key="frame" x="121.5" y="0.0" width="21" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -118,13 +118,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3nt-YY-Mhl" userLabel="Location Stack View">
-                                <rect key="frame" x="10" y="249" width="207.5" height="20.5"/>
+                                <rect key="frame" x="10" y="249" width="217.5" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="jNH-mJ-gJ5">
-                                        <rect key="frame" x="0.0" y="0.0" width="10" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United kingdom, Reading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewQ-wX-btu">
-                                        <rect key="frame" x="15" y="0.0" width="192.5" height="20.5"/>
+                                        <rect key="frame" x="25" y="0.0" width="192.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -132,7 +132,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-yq-ETR" userLabel="Best For Stack View">
-                                <rect key="frame" x="280.5" y="279.5" width="86.5" height="18"/>
+                                <rect key="frame" x="280.5" y="289" width="86.5" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-kV-jNg">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="18"/>
@@ -149,7 +149,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t9d-wx-XFO" userLabel="Sport And Genders Stack View">
-                                <rect key="frame" x="10" y="279.5" width="211" height="18"/>
+                                <rect key="frame" x="10" y="289" width="211" height="18"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="op0-tq-FAx">
                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="18"/>
@@ -188,7 +188,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sju-yo-yIt" userLabel="Payment Stack View">
-                                <rect key="frame" x="204.5" y="307.5" width="162.5" height="18"/>
+                                <rect key="frame" x="204.5" y="317" width="162.5" height="18"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-DW-5f9">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="18"/>
@@ -204,8 +204,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="startfrom: $24/hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxj-sL-b6F">
-                                <rect key="frame" x="10" y="307.5" width="136" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxj-sL-b6F">
+                                <rect key="frame" x="10" y="317" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -282,8 +282,8 @@
         <image name="edit" width="24" height="24"/>
         <image name="field" width="382" height="176"/>
         <image name="location" width="10" height="15"/>
+        <image name="nonstar" width="25.5" height="24.5"/>
         <image name="rate" width="17.5" height="17.5"/>
         <image name="seting" width="4" height="19"/>
-        <image name="star" width="21" height="20"/>
     </resources>
 </document>

@@ -10,6 +10,7 @@
 
 import UIKit
 import CoreLocation
+import Kingfisher
 
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
@@ -40,6 +41,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     //MARK: - viewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         initView()
         configer()
         getCurrentLocation()
@@ -192,6 +194,17 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         cell.sportTypeLbl.text = nearFields.sportType
         cell.genderLbl.text = nearFields.gender
         cell.recomendedLbl.text = nearFields.recommendedFor
+        if let cost = nearFields.cost {
+            cell.costLbl.text = "StartedFrom:$\(String(describing: cost))/hour"
+        }
+        if let payment = nearFields.payment {
+            cell.paymentLbl.text = String(describing: payment)
+        }
+        
+        if let image = nearFields.fieldImage {
+            let url = URL(string: image)
+            cell.fieldImg.kf.setImage(with: url)
+        }
         
         return cell
     }

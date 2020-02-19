@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSX-gI-HB9" userLabel="Photo View">
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="208.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="zES-cl-lnN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="zES-cl-lnN">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="208.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NkM-eI-PoF">
@@ -39,7 +39,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvb-pV-477">
-                                        <rect key="frame" x="30" y="22.5" width="170" height="35"/>
+                                        <rect key="frame" x="25" y="22.5" width="170" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motify company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8x2-CA-NjM">
                                                 <rect key="frame" x="23.5" y="7.5" width="123" height="20.5"/>
@@ -75,7 +75,7 @@
                                     <constraint firstItem="tZY-Pr-LkH" firstAttribute="top" secondItem="zES-cl-lnN" secondAttribute="top" constant="20" id="1xZ-Gj-FhM"/>
                                     <constraint firstItem="cvb-pV-477" firstAttribute="centerY" secondItem="tZY-Pr-LkH" secondAttribute="centerY" id="4ye-HK-jGj"/>
                                     <constraint firstAttribute="trailing" secondItem="zES-cl-lnN" secondAttribute="trailing" id="OFt-M7-BTi"/>
-                                    <constraint firstItem="cvb-pV-477" firstAttribute="leading" secondItem="tZY-Pr-LkH" secondAttribute="trailing" constant="-20" id="Ybj-BZ-dBc"/>
+                                    <constraint firstItem="cvb-pV-477" firstAttribute="leading" secondItem="tZY-Pr-LkH" secondAttribute="trailing" constant="-25" id="Ybj-BZ-dBc"/>
                                     <constraint firstItem="zES-cl-lnN" firstAttribute="top" secondItem="lSX-gI-HB9" secondAttribute="top" id="d0P-SS-ApV"/>
                                     <constraint firstItem="gEr-3u-GkJ" firstAttribute="leading" secondItem="tZY-Pr-LkH" secondAttribute="leading" id="e2M-gJ-JCx"/>
                                     <constraint firstItem="zES-cl-lnN" firstAttribute="leading" secondItem="lSX-gI-HB9" secondAttribute="leading" id="ebn-c6-heP"/>

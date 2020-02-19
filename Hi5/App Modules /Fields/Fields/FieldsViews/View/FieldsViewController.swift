@@ -231,15 +231,29 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             cell.paymentLbl.text = String(describing: payment)
         }
         
-//        if let image = nearFields.fieldImage {
-//            let url = URL(string: image)
-//            cell.fieldImg.kf.setImage(with: url)
-//        }
+        if let partnerImg = nearFields.partnerImage {
+            let url = URL(fileURLWithPath: partnerImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        cell.companyImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
+        if let image = nearFields.fieldImage {
+            let url = URL(string: image)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    cell.fieldImg.image = UIImage(data: data!)
+                }
+            }
+        }
         
         return cell
     }
-    
-    
 }
 
 

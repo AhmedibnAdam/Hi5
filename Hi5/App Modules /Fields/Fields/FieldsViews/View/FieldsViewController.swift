@@ -10,7 +10,7 @@
 
 import UIKit
 import CoreLocation
-//import Kingfisher
+import Kingfisher
 
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }

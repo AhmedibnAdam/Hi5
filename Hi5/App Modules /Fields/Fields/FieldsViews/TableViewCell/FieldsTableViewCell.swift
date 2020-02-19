@@ -12,6 +12,7 @@ class FieldsTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
     
+    @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var visibilitylbl: UILabel!
     @IBOutlet weak var fieldImg: UIImageView!
     @IBOutlet weak var companyImg: UIImageView!

@@ -16,7 +16,7 @@ import SwiftyJSON
 protocol IFieldsManager: class {
     func nearByFromApi(lon: Double ,lat: Double ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
     func favouriteFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
-    func memberOfFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.MemberOfFieldsResponse?)->Void)
+    func memberOfFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
 }
 
 class FieldsManager: IFieldsManager {
@@ -97,12 +97,12 @@ class FieldsManager: IFieldsManager {
         })
     }
     
-    func memberOfFromApi(complition: @escaping (ErrorModel?, Bool, FieldsModel.MemberOfFieldsResponse?) -> Void) {
+    func memberOfFromApi(complition: @escaping (ErrorModel?, Bool, FieldsModel.NearByfieldsResponse?) -> Void) {
             NetworkService.share.request(endpoint: FieldsEndpoint.memberOf, success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
-                let user = try decoder.decode(FieldsModel.MemberOfFieldsResponse.self, from: response)
+                let user = try decoder.decode(FieldsModel.NearByfieldsResponse.self, from: response)
                 print(user)
                 complition(nil , true , user)
                 

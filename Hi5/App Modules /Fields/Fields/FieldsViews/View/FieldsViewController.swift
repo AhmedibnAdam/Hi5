@@ -15,7 +15,11 @@ import CoreLocation
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
     func showAlert(title: String, msg: String)
-    func showNearByResponse(response: FieldsModel.NearByfieldsResponse)
+    func showResponse(response: FieldsModel.NearByfieldsResponse)
+    func removeNoMemberFields()
+    func showNoMemberOfFields()
+    func removeNoFavouriteFields()
+    func showNoFavouriteFields()
 }
 
 class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
@@ -35,6 +39,8 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         router?.navigateToTabBar()
     }
     //MARK: - Outlets
+    @IBOutlet weak var noFavouriteFieldsLbl: UILabel!
+    @IBOutlet weak var noFavouriteFieldsImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -75,10 +81,32 @@ extension FieldsViewController: IFieldsViewController {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     
-    func showNearByResponse(response: FieldsModel.NearByfieldsResponse){
+    func showResponse(response: FieldsModel.NearByfieldsResponse){
         guard let field = response.fields else {return}
         self.nearByField = field
         self.tableView.reloadData()
+    }
+    
+    func removeNoFavouriteFields() {
+        noFavouriteFieldsImg.isHidden = true
+        noFavouriteFieldsLbl.isHidden = true
+    }
+    
+    func showNoFavouriteFields() {
+        noFavouriteFieldsImg.isHidden = false
+        noFavouriteFieldsLbl.isHidden = false
+        noFavouriteFieldsLbl.text = "You don't have favourite fields"
+    }
+    
+    func removeNoMemberFields() {
+        noFavouriteFieldsImg.isHidden = true
+        noFavouriteFieldsLbl.isHidden = true
+    }
+    
+    func showNoMemberOfFields() {
+        noFavouriteFieldsImg.isHidden = false
+        noFavouriteFieldsLbl.isHidden = false
+        noFavouriteFieldsLbl.text = "You have no fields where you would be a member or sent requests"
     }
 }
 
@@ -194,6 +222,8 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         cell.sportTypeLbl.text = nearFields.sportType
         cell.genderLbl.text = nearFields.gender
         cell.recomendedLbl.text = nearFields.recommendedFor
+        cell.companyName.text = nearFields.partnerName
+        cell.visibilitylbl.text = nearFields.visibility
         if let cost = nearFields.cost {
             cell.costLbl.text = "StartedFrom:$\(String(describing: cost))/hour"
         }

@@ -12,7 +12,11 @@ import UIKit
 
 protocol IFieldsPresenter: class {
     func showErrorAlert(title: String, msg: String)
-    func showNearByResponse(response: FieldsModel.NearByfieldsResponse)
+    func showResponse(response: FieldsModel.NearByfieldsResponse)
+    func removeNoMemberFields()
+    func showNoMemberOfFields()
+    func removeNoFavouriteFields()
+    func showNoFavouriteFields()
 }
 
 class FieldsPresenter: IFieldsPresenter {	
@@ -24,7 +28,19 @@ class FieldsPresenter: IFieldsPresenter {
     func showErrorAlert(title: String, msg: String) {
         view?.showAlert(title: title, msg: msg)
     }
-    func showNearByResponse(response: FieldsModel.NearByfieldsResponse) {
-        view?.showNearByResponse(response: response)
+    func showResponse(response: FieldsModel.NearByfieldsResponse) {
+        view?.showResponse(response: response)
+    }
+    func removeNoMemberFields() {
+        view?.removeNoMemberFields()
+    }
+    func showNoMemberOfFields() {
+        view?.showNoMemberOfFields()
+    }
+    func removeNoFavouriteFields(){
+        view?.removeNoFavouriteFields()
+    }
+    func showNoFavouriteFields(){
+        view?.showNoFavouriteFields()
     }
 }

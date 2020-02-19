@@ -29,9 +29,13 @@ class FieldsInteractor: IFieldsInteractor {
     func nearBy(view: UIViewController, lon: Double, lat: Double) {
         manager?.nearByFromApi(lon: lon, lat: lat, complition: { (error, success, response) in
              if (success == true) {
+                self.presenter?.removeNoFavouriteFields()
+                self.presenter?.removeNoMemberFields()
                 guard let response = response else {return}
-                self.presenter?.showNearByResponse(response: response)
+                self.presenter?.showResponse(response: response)
            } else {
+                self.presenter?.removeNoFavouriteFields()
+                self.presenter?.removeNoMemberFields()
                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
            }
         })
@@ -39,8 +43,16 @@ class FieldsInteractor: IFieldsInteractor {
     func favourite(view: UIViewController) {
         manager?.favouriteFromApi(complition: { (error, success, response) in
              if (success == true) {
-                  print("Favourite.....")
+                self.presenter?.removeNoFavouriteFields()
+                self.presenter?.removeNoMemberFields()
+                guard let response = response else {return}
+                 self.presenter?.showResponse(response: response)
+                if (response.fields?.count == 0){
+                    self.presenter?.showNoFavouriteFields()
+                }
               } else {
+                self.presenter?.removeNoFavouriteFields()
+                self.presenter?.removeNoMemberFields()
                   self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
               }
         })
@@ -48,8 +60,16 @@ class FieldsInteractor: IFieldsInteractor {
     func memberOf(view: UIViewController) {
         manager?.memberOfFromApi(complition: { (error, success, response) in
              if (success == true) {
-                 print("Member Of.....")
+                self.presenter?.removeNoFavouriteFields()
+                self.presenter?.removeNoMemberFields()
+                 guard let response = response else {return}
+                 self.presenter?.showResponse(response: response)
+                if (response.fields?.count == 0) {
+                    self.presenter?.showNoMemberOfFields()
+                }
              } else {
+                self.presenter?.removeNoFavouriteFields()
+                self.presenter?.removeNoMemberFields()
                  self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
              }
         })

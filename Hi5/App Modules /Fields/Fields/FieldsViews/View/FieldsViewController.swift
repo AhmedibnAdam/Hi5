@@ -10,7 +10,7 @@
 
 import UIKit
 import CoreLocation
-import Kingfisher
+//import Kingfisher
 
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
@@ -201,10 +201,10 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             cell.paymentLbl.text = String(describing: payment)
         }
         
-        if let image = nearFields.fieldImage {
-            let url = URL(string: image)
-            cell.fieldImg.kf.setImage(with: url)
-        }
+//        if let image = nearFields.fieldImage {
+//            let url = URL(string: image)
+//            cell.fieldImg.kf.setImage(with: url)
+//        }
         
         return cell
     }

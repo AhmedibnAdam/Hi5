@@ -24,41 +24,10 @@ struct FieldsModel {
         let msg: String?
     }
     
-    // MARK: - MemberOfFieldResponse
-    struct MemberOfFieldsResponse: Codable {
+    //MARK: - RemoveFavouriteResponse
+    struct RemovefavouriteResponse: Codable {
         let status: Bool?
-        let playerMemberShips: [PlayerMemberShip]?
-
-        enum CodingKeys: String, CodingKey {
-            case status
-            case playerMemberShips = "player_memberShips"
-        }
-    }
-
-    // MARK: - PlayerMemberShip
-    struct PlayerMemberShip: Codable {
-        let favourite: Bool?
-        let id: Int?
-        let name, partnerName: String?
-        let partnerImage: String?
-        let cost: Int?
-        let gender, address, distance, sportType: String?
-        let recommendedFor: String?
-        let fieldImage: String?
-        let comments, rating: Int?
-        let visibility, payment: String?
-        let membership: Membership?
-
-        enum CodingKeys: String, CodingKey {
-            case favourite, id, name
-            case partnerName = "partner_name"
-            case partnerImage = "partner_image"
-            case cost, gender, address, distance
-            case sportType = "sport_type"
-            case recommendedFor = "recommended_for"
-            case fieldImage = "field_image"
-            case comments, rating, visibility, payment, membership
-        }
+        let msg: String?
     }
     
     // MARK: - NearByFieldResponse

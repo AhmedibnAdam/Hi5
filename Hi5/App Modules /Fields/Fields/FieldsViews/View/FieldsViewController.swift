@@ -190,7 +190,7 @@ extension FieldsViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
             self.removeNoFavouriteFields()
             self.removeNoMemberFields()
-            self.tableView.isHidden = true
+            //self.tableView.isHidden = true
         }
         
         alert.addAction(cancel)

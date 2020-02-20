@@ -40,7 +40,7 @@ extension FieldsEndpoint: IEndpoint{
         case .memberOf:
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "get_memberShip"
         case .addFavourite:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "add_to_favourite"
+            return "http://api-ksa.com/demo/hi5/public/api/player/" + "field/add_to_favourite"
         }
     }
     

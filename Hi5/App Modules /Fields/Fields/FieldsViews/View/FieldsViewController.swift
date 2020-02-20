@@ -190,7 +190,9 @@ extension FieldsViewController {
             //self.getCurrentLocation()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
-            
+            self.removeNoFavouriteFields()
+            self.removeNoMemberFields()
+            self.tableView.isHidden = true
         }
         
         alert.addAction(cancel)
@@ -224,6 +226,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         cell.recomendedLbl.text = nearFields.recommendedFor
         cell.companyName.text = nearFields.partnerName
         cell.visibilitylbl.text = nearFields.visibility
+        cell.fieldId = nearFields.id
         if let cost = nearFields.cost {
             cell.costLbl.text = "StartedFrom:$\(String(describing: cost))/hour"
         }
@@ -245,14 +248,32 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         if let image = nearFields.fieldImage {
             let url = URL(string: image)
             DispatchQueue.global().async {
-                let data = try? Data(contentsOf: url!)
-                DispatchQueue.main.async {
-                    cell.fieldImg.image = UIImage(data: data!)
+                if let data = try? Data(contentsOf: url!){
+                    DispatchQueue.main.async {
+                        cell.fieldImg.image = UIImage(data: data)
+                    }
                 }
             }
         }
         
+        if (nearFields.favourite == true){
+            cell.favouriteBtn.setImage(UIImage(named: "star"), for: .normal)
+        } else {
+            cell.favouriteBtn.setImage(UIImage(named: "nonstar"), for: .normal)
+        }
+        
+        cell.delegate = self
+        
         return cell
+    }
+}
+
+extension FieldsViewController: FavouriteTableViewCellDelegate {
+    func addFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
+        print("Add Favourite Field...\(id)")
+    }
+    func removeFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
+        print("remove Favourite Field...\(id)")
     }
 }
 

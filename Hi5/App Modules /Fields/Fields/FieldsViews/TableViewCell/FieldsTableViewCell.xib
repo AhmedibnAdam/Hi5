@@ -22,7 +22,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSX-gI-HB9" userLabel="Photo View">
                                 <rect key="frame" x="0.0" y="0.0" width="377" height="208.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="zES-cl-lnN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="zES-cl-lnN">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="208.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NkM-eI-PoF">
@@ -31,6 +31,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaA-jf-KLU">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="49"/>
                                                 <state key="normal" image="nonstar"/>
+                                                <connections>
+                                                    <action selector="favouriteBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LhO-Sk-Su0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1G-xk-rZR">
                                                 <rect key="frame" x="61" y="0.0" width="8" height="49"/>
@@ -263,6 +266,7 @@
                 <outlet property="companyName" destination="8x2-CA-NjM" id="vgI-Vm-wOp"/>
                 <outlet property="containerView" destination="K12-J3-Alz" id="zEh-zl-2YG"/>
                 <outlet property="costLbl" destination="Oxj-sL-b6F" id="M5k-eL-8RF"/>
+                <outlet property="favouriteBtn" destination="uaA-jf-KLU" id="v4v-9F-g15"/>
                 <outlet property="fieldImg" destination="zES-cl-lnN" id="3UN-7G-0SE"/>
                 <outlet property="genderLbl" destination="EBG-Re-a9F" id="Nmr-lz-7AL"/>
                 <outlet property="locationLbl" destination="ewQ-wX-btu" id="8pi-0Y-tdS"/>

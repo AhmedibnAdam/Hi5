@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol FavouriteTableViewCellDelegate: class{
+    func addFavouriteDidTap(_ button: UIButton , cell: UITableViewCell , id: Int)
+    func removeFavouriteDidTap(_ button: UIButton , cell: UITableViewCell , id: Int)
+}
+
 class FieldsTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
-    
+    @IBOutlet weak var favouriteBtn: UIButton!
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var visibilitylbl: UILabel!
     @IBOutlet weak var fieldImg: UIImageView!
@@ -30,6 +35,10 @@ class FieldsTableViewCell: UITableViewCell {
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var paymentLbl: UILabel!
     
+    //MARK: - Properties
+    weak var delegate: FavouriteTableViewCellDelegate?
+    var fieldId: Int?
+    
     //MARK: - View Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,7 +53,21 @@ class FieldsTableViewCell: UITableViewCell {
     
     //MARK: - Actions
     @IBAction func showDetailsBtnTapped(_ sender: UIButton) {
-        print("showDetailsTapped....")
+        
+    }
+    
+    @IBAction func favouriteBtnTapped(_ sender: UIButton) {
+        if (favouriteBtn.currentImage == UIImage(named: "nonstar")){
+            favouriteBtn.setImage(UIImage(named: "star"), for: .normal)
+            if let id = fieldId {
+                delegate?.addFavouriteDidTap(sender, cell: self , id: id)
+            }
+        } else {
+            favouriteBtn.setImage(UIImage(named: "nonstar"), for: .normal)
+            if let id = fieldId {
+               delegate?.removeFavouriteDidTap(sender, cell: self , id: id)
+            }
+        }
     }
     
     func initView() {

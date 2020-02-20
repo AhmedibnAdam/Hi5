@@ -268,11 +268,10 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
 
 extension FieldsViewController: FavouriteTableViewCellDelegate {
     func addFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
-        //print("Add Favourite Field...\(id)")
         self.interactor?.addFavourite(view: self, fieldId: id)
     }
     func removeFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
-        print("remove Favourite Field...\(id)")
+        self.interactor?.removeFavourite(view: self, fieldId: id)
     }
 }
 

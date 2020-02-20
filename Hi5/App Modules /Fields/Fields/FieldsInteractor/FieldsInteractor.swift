@@ -16,6 +16,7 @@ protocol IFieldsInteractor: class {
     func favourite(view : UIViewController)
     func memberOf(view : UIViewController)
     func addFavourite(view: UIViewController , fieldId: Int)
+    func removeFavourite(view: UIViewController , fieldId: Int)
 }
 
 class FieldsInteractor: IFieldsInteractor {
@@ -44,7 +45,16 @@ class FieldsInteractor: IFieldsInteractor {
     func addFavourite(view: UIViewController, fieldId: Int) {
         manager?.addFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
             if (success == true){
-                print("ffff....")
+                print("Added Favourite Done......")
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    func removeFavourite(view: UIViewController, fieldId: Int) {
+        manager?.removeFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
+            if(success == true){
+                print("Removed Favourite Done.....")
             } else {
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }

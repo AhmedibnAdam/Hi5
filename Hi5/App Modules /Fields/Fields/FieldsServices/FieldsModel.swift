@@ -17,6 +17,13 @@ struct FieldsModel {
 		}
 	}
     
+    
+    //MARK: - AddFavouriteResponse
+    struct AddfavouriteResponse: Codable {
+        let status: Bool?
+        let msg: String?
+    }
+    
     // MARK: - MemberOfFieldResponse
     struct MemberOfFieldsResponse: Codable {
         let status: Bool?

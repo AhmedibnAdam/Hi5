@@ -13,6 +13,7 @@ enum FieldsEndpoint {
     case nearBy(lon: Double , lat: Double)
     case favourite
     case memberOf
+    case addFavourite(fieldId: Int)
 }
 
 //MARK: - Extension
@@ -25,6 +26,8 @@ extension FieldsEndpoint: IEndpoint{
             return .get
         case .memberOf:
             return .get
+        case .addFavourite:
+            return .post
         }
     }
     
@@ -36,6 +39,8 @@ extension FieldsEndpoint: IEndpoint{
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "get_favourite_fields"
         case .memberOf:
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "get_memberShip"
+        case .addFavourite:
+            return "http://api-ksa.com/demo/hi5/public/api/player/" + "add_to_favourite"
         }
     }
     
@@ -47,6 +52,8 @@ extension FieldsEndpoint: IEndpoint{
             return ["":""]
         case .memberOf:
             return ["":""]
+        case .addFavourite(let fieldId):
+            return ["field_id": fieldId]
         }
     }
     
@@ -57,6 +64,8 @@ extension FieldsEndpoint: IEndpoint{
         case .favourite:
             return nil
         case .memberOf:
+            return nil
+        case .addFavourite:
             return nil
         }
     }
@@ -75,6 +84,10 @@ extension FieldsEndpoint: IEndpoint{
             let defaults = UserDefaults.standard
             let token = defaults.string(forKey: "Token")
             return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
+        case .addFavourite:
+            let defaults = UserDefaults.standard
+            let token = defaults.string(forKey: "Token")
+            return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
         }
     }
     
@@ -86,6 +99,8 @@ extension FieldsEndpoint: IEndpoint{
             return URLEncoding.default
         case .memberOf:
             return URLEncoding.default
+        case .addFavourite:
+            return JSONEncoding.default
         }
     }
 }

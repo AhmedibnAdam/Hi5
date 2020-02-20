@@ -17,9 +17,48 @@ protocol IFieldsManager: class {
     func nearByFromApi(lon: Double ,lat: Double ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
     func favouriteFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
     func memberOfFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
+    func addFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.AddfavouriteResponse?)->Void)
 }
 
 class FieldsManager: IFieldsManager {
+    func addFavouriteFromApi(fieldId: Int ,complition: @escaping (ErrorModel?, Bool, FieldsModel.AddfavouriteResponse?) -> Void) {
+            NetworkService.share.request(endpoint: FieldsEndpoint.addFavourite(fieldId: fieldId), success: { (responseData) in
+            let response = responseData
+            do {
+                let decoder = JSONDecoder()
+                let user = try decoder.decode(FieldsModel.AddfavouriteResponse.self, from: response)
+                print(user)
+                complition(nil , true , user)
+                
+            } catch let error {
+                print("error : ", error.localizedDescription  )
+                
+                do {
+                    let decoder = JSONDecoder()
+                    let error = try decoder.decode(ErrorModel.self, from: responseData )
+                    print(error)
+                    complition(error , false , nil)
+                } catch let error {
+                    print(error)
+                    
+                }
+        }
+            
+    }, failure: { (error) in
+            do {
+                let decoder = JSONDecoder()
+                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+                print(error)
+                complition(error , false , nil)
+                
+            } catch let error {
+                print(error)
+                complition(nil , false , nil)
+            }
+            
+        })
+    }
+    
     func nearByFromApi(lon: Double, lat: Double, complition: @escaping (ErrorModel?, Bool, FieldsModel.NearByfieldsResponse?) -> Void) {
         NetworkService.share.request(endpoint: FieldsEndpoint.nearBy(lon: lon, lat: lat), success: { (responseData) in
                 let response = responseData

@@ -15,6 +15,7 @@ protocol IFieldsInteractor: class {
     func nearBy(view : UIViewController , lon: Double , lat: Double)
     func favourite(view : UIViewController)
     func memberOf(view : UIViewController)
+    func addFavourite(view: UIViewController , fieldId: Int)
 }
 
 class FieldsInteractor: IFieldsInteractor {
@@ -38,6 +39,15 @@ class FieldsInteractor: IFieldsInteractor {
                 self.presenter?.removeNoMemberFields()
                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
            }
+        })
+    }
+    func addFavourite(view: UIViewController, fieldId: Int) {
+        manager?.addFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
+            if (success == true){
+                print("ffff....")
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
         })
     }
     func favourite(view: UIViewController) {

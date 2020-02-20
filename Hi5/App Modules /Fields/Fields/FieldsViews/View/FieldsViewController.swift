@@ -186,8 +186,6 @@ extension FieldsViewController {
         let alert = UIAlertController(title: "Your location", message: "High five Players app would like to use your current loccation to search fields near you.Do you agree?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default) { (x) in
             self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
-            //print("OK...")
-            //self.getCurrentLocation()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
             self.removeNoFavouriteFields()
@@ -270,7 +268,8 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
 
 extension FieldsViewController: FavouriteTableViewCellDelegate {
     func addFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
-        print("Add Favourite Field...\(id)")
+        //print("Add Favourite Field...\(id)")
+        self.interactor?.addFavourite(view: self, fieldId: id)
     }
     func removeFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
         print("remove Favourite Field...\(id)")

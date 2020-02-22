@@ -43,6 +43,7 @@ enum GeneralRoute: IRouter {
     case location
     case sideMenu
     case fields
+    case showDetailsFields
 }
 
 extension GeneralRoute {
@@ -102,6 +103,8 @@ extension GeneralRoute {
             return SideMenuConfiguration.setup()
         case .fields:
             return FieldsConfiguration.setup()
+        case .showDetailsFields:
+            return ShowDetailsConfiguration.setup()
         }
     }
 }

@@ -261,6 +261,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         }
         
         cell.delegate = self
+        cell.showDetailsDelegate = self
         
         return cell
     }
@@ -272,6 +273,12 @@ extension FieldsViewController: FavouriteTableViewCellDelegate {
     }
     func removeFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
         self.interactor?.removeFavourite(view: self, fieldId: id)
+    }
+}
+
+extension FieldsViewController: ShowDetailsTableViewCellDelegate {
+    func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, id: Int) {
+        router?.navigateToShowdetails()
     }
 }
 

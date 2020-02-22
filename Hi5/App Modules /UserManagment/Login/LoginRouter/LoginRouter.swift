@@ -14,6 +14,8 @@ protocol ILoginRouter: class {
     func navigateToSignUp()
     func navigateToForgetPassword()
     func navigateToProfile()
+    func navigateToTabBar()
+    func navigateToFields()
 }
 
 class LoginRouter: ILoginRouter {
@@ -34,5 +36,12 @@ class LoginRouter: ILoginRouter {
     
     func navigateToProfile() {
         view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+    }
+    
+    func navigateToTabBar() {
+        view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
+    }
+    func navigateToFields() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
 }

@@ -14,12 +14,15 @@ protocol IPhoneVerificationViewController: class {
 	var router: IPhoneVerificationRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 }
 
-class PhoneVerificationViewController: UIViewController {
+class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IPhoneVerificationInteractor?
 	var router: IPhoneVerificationRouter?
     //MARK: - Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -28,15 +31,29 @@ class PhoneVerificationViewController: UIViewController {
     @IBOutlet weak var continueBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textField1.delegate = self
+        self.textField2.delegate = self
+        self.textField3.delegate = self
+        self.textField4.delegate = self
 		initView()
         configer()
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     //MARK: - Actions
     @IBAction func continueBtnTapped(_ sender: Any) {
+        showIndicator()
         continueBtnAction()
     }
     
     @IBAction func resendBtnTapped(_ sender: Any) {
+        showIndicator()
         resendBtnAction()
     }
     
@@ -52,6 +69,9 @@ extension PhoneVerificationViewController: IPhoneVerificationViewController {
     func navigateToCreatePassword() {
         router?.navigateToCreatePassword()
     }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
 }
 
 extension PhoneVerificationViewController {
@@ -63,6 +83,10 @@ extension PhoneVerificationViewController {
     
     func configer(){
         router = PhoneVerificationRouter(view: self)
+    }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
     }
 }
 

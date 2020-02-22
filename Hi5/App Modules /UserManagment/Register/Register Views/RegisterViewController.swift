@@ -16,12 +16,15 @@ protocol IRegisterViewController: class {
 	var router: IRegisterRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToSignupPhoneVerification()
+    func hideIndicator()
 }
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController , UITextFieldDelegate{
 	var interactor: IRegisterInteractor?
 	var router: IRegisterRouter?
     //MARK:- Outlets
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var checkBoxBtn: UIButton!
     @IBOutlet weak var countryCode: FPNTextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -39,14 +42,26 @@ class RegisterViewController: UIViewController {
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.fullNameTextField.delegate = self
+        self.phoneNumberTextField.delegate = self
         initView()
         configer()
         delegateCountryCode()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
         if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
+            
             signupAction()
              }
         else {
@@ -79,6 +94,10 @@ extension RegisterViewController: IRegisterViewController {
         router?.navigateToSignupPhoneVerification()
     }
     
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
+    
 }
 
 extension RegisterViewController {
@@ -100,6 +119,10 @@ extension RegisterViewController {
     func configer(){
         router = RegisterRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
 }
 
 extension RegisterViewController {
@@ -115,6 +138,7 @@ extension RegisterViewController {
          }
         let defaults = UserDefaults.standard
         defaults.set(fullName, forKey: "FullName") as? String
+        showIndicator()
         interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phone)
     }
     func loginBtnAction() {

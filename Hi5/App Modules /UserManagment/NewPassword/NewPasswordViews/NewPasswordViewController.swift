@@ -13,13 +13,15 @@ import UIKit
 protocol INewPasswordViewController: class {
 	var router: INewPasswordRouter? { get set }
     func showAlert(title: String, msg: String)
+    func hideIndicator()
 }
 
-class NewPasswordViewController: UIViewController {
+class NewPasswordViewController: UIViewController, UITextFieldDelegate {
 	var interactor: INewPasswordInteractor?
 	var router: INewPasswordRouter?
     //MARK:- Outlets
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var confirmPasswordBtnEye: UIButton!
     @IBOutlet weak var passwordBtnEye: UIButton!
     @IBOutlet weak var logoView: UIView!
@@ -30,8 +32,18 @@ class NewPasswordViewController: UIViewController {
     @IBOutlet weak var newPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.newPasswordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
         initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK: - Actions
     @IBAction func passwordBtnEyeTapped(_ sender: UIButton) {
@@ -57,6 +69,7 @@ class NewPasswordViewController: UIViewController {
     }
     
     @IBAction func getStartedBtnTapped(_ sender: Any) {
+        showIndicator()
         
     }
     
@@ -68,6 +81,9 @@ class NewPasswordViewController: UIViewController {
 extension NewPasswordViewController: INewPasswordViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
     }
 }
 
@@ -84,6 +100,11 @@ extension NewPasswordViewController {
     func configer(){
         router = NewPasswordRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+
 }
 
 extension NewPasswordViewController {
@@ -96,6 +117,7 @@ extension NewPasswordViewController {
         } else if(password != confirmPassword) {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
         }
+        showIndicator()
 //        interactor?.doCreatePassword(view: self, password: password, confirmPassword: confirmPassword)
     }
 }

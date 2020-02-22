@@ -14,35 +14,46 @@ protocol ITabBarViewController: class {
 	var router: ITabBarRouter? { get set }
 }
 
-class TabBarViewController: UITabBarController{
+protocol HomeControllerDelegate {
+    func handleMenuToggle()
+}
+
+class TabBarViewController: UITabBarController {
 	var interactor: ITabBarInteractor?
 	var router: ITabBarRouter?
     
-    
+   //MARK: - Properties
     lazy var social: UIViewController = {
-        let vc = SocialConfiguration.setup()
+        let vc = ContainerController()
          vc.tabBarItem.title = "social"
+         vc.tabBarItem.image = UIImage(named: "social")
+        //let nav = UINavigationController(rootViewController: vc)
         return vc
     }()
     
     lazy var events: UIViewController = {
-        let vc = SechadualeConfiguration.setup()
+        let vc = SechaduleContainerController()
          vc.tabBarItem.title = "events"
+         vc.tabBarItem.image = UIImage(named: "event")
+        //let nav = UINavigationController(rootViewController: vc)
         return vc
     }()
     
     lazy var notification: UIViewController = {
-        let vc = NotificationSettingConfiguration.setup()
+        let vc = NotificationSettingContainerController()
          vc.tabBarItem.title = "notification"
+         vc.tabBarItem.image = UIImage(named: "notification")
+        //let nav = UINavigationController(rootViewController: vc)
         return vc
     }()
-    
+    //MARK:- View life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setViewControllers([social,events,notification], animated: true)
     }
 }
 
+//MARK:- Extensions
 extension TabBarViewController: ITabBarViewController {
 	
 }
@@ -52,5 +63,9 @@ extension TabBarViewController: UITabBarControllerDelegate {
 }
 
 extension TabBarViewController {
-	
+
+}
+
+extension TabBarViewController {
+
 }

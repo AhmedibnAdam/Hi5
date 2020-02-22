@@ -14,7 +14,9 @@
                 <outlet property="containerView3" destination="01q-SM-I0J" id="u3p-5I-U0C"/>
                 <outlet property="containerView4" destination="Bfh-on-02r" id="BXa-dc-cPM"/>
                 <outlet property="continueBtn" destination="JCy-PW-JlA" id="QOH-yd-t9N"/>
+                <outlet property="descriptionLbl" destination="3K6-2B-6yJ" id="Yub-Bi-txe"/>
                 <outlet property="fullnameLbl" destination="HJB-Za-41p" id="tcI-LZ-XFQ"/>
+                <outlet property="loadingIndicator" destination="9Dp-S4-OKn" id="gz0-IQ-5Iw"/>
                 <outlet property="logoView" destination="z1R-be-Pcp" id="oDT-Cq-0th"/>
                 <outlet property="view" destination="2Dh-zH-W1G" id="bmU-y9-iNO"/>
             </connections>
@@ -243,14 +245,20 @@
                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9Dp-S4-OKn">
+                            <rect key="frame" x="169" y="181.5" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstItem="oNU-y9-tJm" firstAttribute="top" secondItem="ujc-Ha-KIf" secondAttribute="bottom" constant="30" id="0ii-LU-hKE"/>
                         <constraint firstItem="oNU-y9-tJm" firstAttribute="centerX" secondItem="Zad-TO-JXd" secondAttribute="centerX" id="9aL-T0-LH3"/>
+                        <constraint firstItem="9Dp-S4-OKn" firstAttribute="centerX" secondItem="Zad-TO-JXd" secondAttribute="centerX" id="EXv-Bt-FUx"/>
                         <constraint firstItem="HJB-Za-41p" firstAttribute="centerX" secondItem="Zad-TO-JXd" secondAttribute="centerX" id="Fy0-UU-lpc"/>
                         <constraint firstAttribute="trailing" secondItem="3K6-2B-6yJ" secondAttribute="trailing" constant="10" id="J48-xA-7Z9"/>
                         <constraint firstItem="3K6-2B-6yJ" firstAttribute="leading" secondItem="Zad-TO-JXd" secondAttribute="leading" constant="10" id="JiD-GQ-Q0L"/>
+                        <constraint firstItem="9Dp-S4-OKn" firstAttribute="centerY" secondItem="Zad-TO-JXd" secondAttribute="centerY" id="Uc4-OG-ux8"/>
                         <constraint firstAttribute="trailing" secondItem="ujc-Ha-KIf" secondAttribute="trailing" constant="10" id="WcB-sd-gpq"/>
                         <constraint firstItem="ujc-Ha-KIf" firstAttribute="leading" secondItem="Zad-TO-JXd" secondAttribute="leading" constant="10" id="Wjk-xq-nHU"/>
                         <constraint firstItem="3K6-2B-6yJ" firstAttribute="top" secondItem="HJB-Za-41p" secondAttribute="bottom" constant="10" id="axp-yV-CPN"/>

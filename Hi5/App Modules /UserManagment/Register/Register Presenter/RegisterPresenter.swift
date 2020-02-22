@@ -14,6 +14,7 @@ protocol IRegisterPresenter: class {
 	// MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
     func navigateToSignupPhoneVerification()
+    func hideIndicator()
 }
 
 class RegisterPresenter: IRegisterPresenter {
@@ -30,5 +31,9 @@ class RegisterPresenter: IRegisterPresenter {
     
     func navigateToSignupPhoneVerification() {
         view?.navigateToSignupPhoneVerification()
+    }
+    
+    func hideIndicator() {
+        view?.hideIndicator()
     }
 }

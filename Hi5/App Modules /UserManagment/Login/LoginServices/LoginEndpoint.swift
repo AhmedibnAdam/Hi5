@@ -21,6 +21,10 @@ enum LoginEndpoint {
 }
 
 extension LoginEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         /*
         Do like this:

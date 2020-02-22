@@ -15,6 +15,10 @@ enum CreatePasswordEndpoint {
 
 //MARK:- Extension
 extension CreatePasswordEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     
     var method: HTTPMethod {
         switch self {

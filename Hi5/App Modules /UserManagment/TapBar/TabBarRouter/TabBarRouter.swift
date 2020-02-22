@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ITabBarRouter: class {
-	// do someting...
+   func navigateToSideMenu()
 }
 
 class TabBarRouter: ITabBarRouter {	
@@ -20,4 +20,7 @@ class TabBarRouter: ITabBarRouter {
 	init(view: TabBarViewController?) {
 		self.view = view
 	}
+    func navigateToSideMenu() {
+        view?.navigate(type: .modal, module: GeneralRoute.sideMenu, completion: nil)
+    }
 }

@@ -13,6 +13,7 @@ import UIKit
 protocol IPhoneVerificationPresenter: class {
     func showErrorAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 
 }
 
@@ -29,5 +30,9 @@ class PhoneVerificationPresenter: IPhoneVerificationPresenter {
     
     func navigateToCreatePassword() {
         view?.navigateToCreatePassword()
+    }
+    
+    func hideIndicator() {
+        view?.hideIndicator()
     }
 }

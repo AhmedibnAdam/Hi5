@@ -14,13 +14,18 @@ protocol ILoginViewController: class {
 	var router: ILoginRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToProfile()
+    func navigateToTabBar()
+    func navigateToFields()
+    func hideIndecator()
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
     //MARK: - view outlet
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var userName: UITextField!
@@ -38,8 +43,19 @@ class LoginViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.userName.delegate = self
+        self.password.delegate = self
         initView()
         configer()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     //MARK: - Actions
@@ -64,6 +80,7 @@ class LoginViewController: UIViewController {
         router?.navigateToSignUp()
     }
     @IBAction func doLogin(_ sender: UIButton) {
+        showIndecator()
         doLoginAction()
     }
 }
@@ -74,6 +91,15 @@ extension LoginViewController: ILoginViewController {
     }
     func navigateToProfile() {
         router?.navigateToProfile()
+    }
+    func navigateToTabBar() {
+        router?.navigateToTabBar()
+    }
+    func navigateToFields() {
+        router?.navigateToFields()
+    }
+    func hideIndecator() {
+        loadingIndicator.isHidden = true
     }
 }
 
@@ -90,6 +116,10 @@ extension LoginViewController {
     
     func configer(){
         router = LoginRouter(view: self)
+    }
+    
+    func showIndecator() {
+        loadingIndicator.isHidden = false
     }
 }
 

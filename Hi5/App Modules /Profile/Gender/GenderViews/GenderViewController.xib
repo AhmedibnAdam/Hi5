@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenderViewController" customModule="Hi5" customModuleProvider="target">
+            <connections>
+                <outlet property="femaleBtn" destination="epF-nx-RLz" id="YuF-pz-dXd"/>
+                <outlet property="loadingIndicator" destination="SP2-ih-VU0" id="fJZ-2s-Exu"/>
+                <outlet property="maleBtn" destination="TxG-h5-SoF" id="sbe-tx-veO"/>
+                <outlet property="notSpecifiedBtn" destination="Eop-Yv-6AS" id="Sgh-6z-dRF"/>
+                <outlet property="saveBtn" destination="o3t-ki-TJj" id="wxb-Tj-ojv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cd3-pD-LwU">
+                    <rect key="frame" x="15" y="30" width="345" height="81.5"/>
+                    <string key="text">You will only be able to join Public event that match your gender. If you decided to continue without determining your gender, you will able to join all genders Public events</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="JBV-Mc-UzO">
+                    <rect key="frame" x="15" y="151.5" width="345" height="275"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-h5-SoF">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Xac-2U-48B"/>
+                            </constraints>
+                            <state key="normal" title="male" image="male">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="maleBtnTapped:" destination="-1" eventType="touchUpInside" id="Ffg-GO-fBe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epF-nx-RLz">
+                            <rect key="frame" x="0.0" y="75" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Vrb-nD-1Ri"/>
+                            </constraints>
+                            <state key="normal" title="female" image="female">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="femaleBtnTapped:" destination="-1" eventType="touchUpInside" id="KGO-Yc-z3c"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eop-Yv-6AS">
+                            <rect key="frame" x="0.0" y="150" width="345" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Di4-3Y-FdX"/>
+                            </constraints>
+                            <state key="normal" title="not specified" image="notSpecified">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="notSpecifiedBtnTapped:" destination="-1" eventType="touchUpInside" id="3Gy-vL-lyQ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3t-ki-TJj">
+                            <rect key="frame" x="0.0" y="225" width="345" height="50"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gEq-VN-I7h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <state key="normal" title="Save">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="-1" eventType="touchUpInside" id="NcH-sT-Jo2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-ih-VU0">
+                    <rect key="frame" x="169" y="383" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JBV-Mc-UzO" secondAttribute="trailing" constant="15" id="6nH-SK-ooL"/>
+                <constraint firstAttribute="trailing" secondItem="Cd3-pD-LwU" secondAttribute="trailing" constant="15" id="HAg-aO-f9u"/>
+                <constraint firstItem="JBV-Mc-UzO" firstAttribute="top" secondItem="Cd3-pD-LwU" secondAttribute="bottom" constant="40" id="LPV-RS-dcx"/>
+                <constraint firstItem="JBV-Mc-UzO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="cx8-fy-n1K"/>
+                <constraint firstItem="SP2-ih-VU0" firstAttribute="centerY" secondItem="o3t-ki-TJj" secondAttribute="centerY" id="kv4-MR-eT3"/>
+                <constraint firstItem="Cd3-pD-LwU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="rRR-YG-hZN"/>
+                <constraint firstItem="SP2-ih-VU0" firstAttribute="centerX" secondItem="o3t-ki-TJj" secondAttribute="centerX" id="wEc-KR-7k9"/>
+                <constraint firstItem="Cd3-pD-LwU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="xP0-wz-xpj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138" y="152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="female" width="10" height="16"/>
+        <image name="male" width="14" height="14"/>
+        <image name="notSpecified" width="15" height="16"/>
+    </resources>
+</document>

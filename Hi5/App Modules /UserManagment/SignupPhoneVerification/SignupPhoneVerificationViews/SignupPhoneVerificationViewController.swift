@@ -14,14 +14,19 @@ protocol ISignupPhoneVerificationViewController: class {
 	var router: ISignupPhoneVerificationRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 }
 
-class SignupPhoneVerificationViewController: UIViewController {
+class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ISignupPhoneVerificationInteractor?
 	var router: ISignupPhoneVerificationRouter?
+    var count = 0
     
     //MARK:- Outlets
     
+    @IBOutlet weak var counterResendLbl: UILabel!
+    @IBOutlet weak var resendBtn: UIButton!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textField4: UITextField!
     @IBOutlet weak var textField3: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -34,10 +39,31 @@ class SignupPhoneVerificationViewController: UIViewController {
     @IBOutlet weak var containerView3: UIView!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var containerView1: UIView!
+    //MARK:- View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textField1.delegate = self
+        self.textField2.delegate = self
+        self.textField3.delegate = self
+        self.textField4.delegate = self
+        textField1.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        textField2.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        textField3.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        textField4.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        textField.text = ""
     }
     //MARK:- Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -46,7 +72,6 @@ class SignupPhoneVerificationViewController: UIViewController {
     
     @IBAction func continueBtnTapped(_ sender: UIButton) {
          continueBtnAction()
-        //router?.navigateToWelcome()
     }
     
     @IBAction func resendBtnTapped(_ sender: UIButton) {
@@ -66,6 +91,10 @@ extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewCon
     func navigateToCreatePassword() {
         router?.navigateToCreatePassword()
     }
+    
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
  }
 
 extension SignupPhoneVerificationViewController {
@@ -83,6 +112,31 @@ extension SignupPhoneVerificationViewController {
     func configer(){
         router = SignupPhoneVerificationRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
+    
+    @objc func textFieldDidChange(textField: UITextField){
+        let text = textField.text
+        if (text?.utf16.count)! >= 1{
+            switch textField{
+            case textField1:
+                textField2.becomeFirstResponder()
+            case textField2:
+                textField3.becomeFirstResponder()
+            case textField3:
+                textField4.becomeFirstResponder()
+            case textField4:
+                textField4.resignFirstResponder()
+            default:
+                break
+            }
+        }else{
+
+        }
+    }
+
 }
 
 extension SignupPhoneVerificationViewController {
@@ -93,13 +147,28 @@ extension SignupPhoneVerificationViewController {
         } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
             showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
         }
+        showIndicator()
         let code = text1+text2+text3+text4
         interactor?.doSignupPhoneVerification(view: self, code: code)
+       // counterResendLbl.isHidden = false
+//        while count != 30 {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+//                self.count += 1
+//                self.counterResendLbl.text = "\(self.count)"
+//            })
+//        }
+        
+//        counterResendLbl.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0, execute: {
+           self.resendBtn.isEnabled = true
+        })
         
     }
     
     func resendBtnAction() {
-        interactor?.doSignupResendVerificationCode(view: self)
+         showIndicator()
+         self.interactor?.doSignupResendVerificationCode(view: self)
     }
 }
+
 

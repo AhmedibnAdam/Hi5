@@ -27,7 +27,7 @@ class RegisterManager: IRegisterManager {
                     guard let token = user.token , let username = user.userName else {return}
                        let defaults = UserDefaults.standard
                        defaults.set(token, forKey: "Token") as? String
-                       defaults.set(username, forKey: "UserName")
+                       defaults.set(username, forKey: "UserName") as? String
                        complition(nil , true)
                        
                    } catch let error {

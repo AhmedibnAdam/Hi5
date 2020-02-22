@@ -14,6 +14,10 @@ enum ChangeUsernameEndpoint {
 }
 //MARK:- Extension
 extension ChangeUsernameEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .ChangeUsername:

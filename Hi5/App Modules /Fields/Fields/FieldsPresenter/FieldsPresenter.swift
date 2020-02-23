@@ -13,7 +13,6 @@ import UIKit
 protocol IFieldsPresenter: class {
     func showErrorAlert(title: String, msg: String)
     func showResponse(response: FieldsModel.NearByfieldsResponse)
-    func showDetailsResponse(response: FieldsModel.ShowDetailsResponse)
     func removeNoMemberFields()
     func showNoMemberOfFields()
     func removeNoFavouriteFields()
@@ -44,7 +43,5 @@ class FieldsPresenter: IFieldsPresenter {
     func showNoFavouriteFields(){
         view?.showNoFavouriteFields()
     }
-    func showDetailsResponse(response: FieldsModel.ShowDetailsResponse) {
-        view?.showDetailsResponse(response: response)
-    }
+    
 }

@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 
 class ShowDetailsConfiguration {
-    static func setup(parameters: [String: Any] = [:] , field: FieldsModel.Fields) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:] , field: FieldsModel.Field) -> UIViewController {
         let controller = ShowDetailsViewController()
         controller.field = field
         let router = ShowDetailsRouter(view: controller)

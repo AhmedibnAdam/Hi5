@@ -15,7 +15,6 @@ enum FieldsEndpoint {
     case memberOf
     case addFavourite(fieldId: Int)
     case removeFavourite(fieldId: Int)
-    case showDetails(fieldId: Int)
 }
 
 //MARK: - Extension
@@ -32,8 +31,6 @@ extension FieldsEndpoint: IEndpoint{
             return .post
         case .removeFavourite:
             return .delete
-        case .showDetails:
-            return .get
         }
     }
     
@@ -49,8 +46,6 @@ extension FieldsEndpoint: IEndpoint{
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "field/add_to_favourite"
         case .removeFavourite:
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "remove_favourite"
-        case .showDetails:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "show_field"
         }
     }
     
@@ -66,8 +61,6 @@ extension FieldsEndpoint: IEndpoint{
             return ["field_id": fieldId]
         case .removeFavourite(let fieldId):
             return ["field_id": fieldId]
-        case .showDetails(let fieldId):
-            return ["field_id": fieldId]
         }
     }
     
@@ -82,8 +75,6 @@ extension FieldsEndpoint: IEndpoint{
         case .addFavourite:
             return nil
         case .removeFavourite:
-            return nil
-        case .showDetails:
             return nil
         }
     }
@@ -110,10 +101,6 @@ extension FieldsEndpoint: IEndpoint{
             let defaults = UserDefaults.standard
             let token = defaults.string(forKey: "Token")
             return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
-        case .showDetails:
-            let defaults = UserDefaults.standard
-            let token = defaults.string(forKey: "Token")
-            return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
         }
     }
     
@@ -128,8 +115,6 @@ extension FieldsEndpoint: IEndpoint{
         case .addFavourite:
             return JSONEncoding.default
         case .removeFavourite:
-            return URLEncoding.default
-        case .showDetails:
             return URLEncoding.default
         }
     }

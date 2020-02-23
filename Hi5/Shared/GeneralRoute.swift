@@ -43,7 +43,7 @@ enum GeneralRoute: IRouter {
     case location
     case sideMenu
     case fields
-    case showDetailsFields(field: FieldsModel.Fields)
+    case showDetailsFields(field: FieldsModel.Field)
 }
 
 extension GeneralRoute {

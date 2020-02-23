@@ -12,13 +12,15 @@ import UIKit
 
 protocol IShowDetailsViewController: class {
 	var router: IShowDetailsRouter? { get set }
+    func showAlert(title: String, msg: String)
+    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse)
 }
 
 class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout  {
     //MARK: - Properties
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
-    var field: FieldsModel.Fields?
+    var field: FieldsModel.Field?
     
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -53,11 +55,24 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
         initView()
         configer()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let id = field?.id {
+            self.interactor?.showDetails(view: self, fieldId: id)
+        } else {
+            showAlert(title: "Error", msg: "SomeThing Wrong")
+        }
+    }
 }
 
 //MARK: - Extensions
 extension ShowDetailsViewController: IShowDetailsViewController {
-	// do someting...
+    func showAlert(title: String, msg: String) {
+      ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse) {
+        
+    }
 }
 
 //MARK: - CollectionViewMethods

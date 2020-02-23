@@ -19,47 +19,9 @@ protocol IFieldsManager: class {
     func memberOfFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
     func addFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.AddfavouriteResponse?)->Void)
     func removeFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.RemovefavouriteResponse?)->Void)
-    func showDetailsFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.ShowDetailsResponse?)->Void)
 }
 
 class FieldsManager: IFieldsManager {
-    func showDetailsFromApi(fieldId: Int, complition: @escaping (ErrorModel?, Bool, FieldsModel.ShowDetailsResponse?) -> Void) {
-        NetworkService.share.request(endpoint: FieldsEndpoint.showDetails(fieldId: fieldId), success: { (responseData) in
-                   let response = responseData
-                   do {
-                    let decoder = JSONDecoder()
-                    let user = try decoder.decode(FieldsModel.ShowDetailsResponse.self, from: response)
-                       print(user)
-                       complition(nil , true , user)
-                       
-                   } catch let error {
-                       print("error : ", error.localizedDescription  )
-                       
-                       do {
-                           let decoder = JSONDecoder()
-                           let error = try decoder.decode(ErrorModel.self, from: responseData )
-                           print(error)
-                           complition(error , false , nil)
-                       } catch let error {
-                           print(error)
-                           
-                       }
-               }
-                   
-           }, failure: { (error) in
-                   do {
-                       let decoder = JSONDecoder()
-                       let error = try decoder.decode(ErrorModel.self, from: error as! Data )
-                       print(error)
-                       complition(error , false , nil)
-                       
-                   } catch let error {
-                       print(error)
-                       complition(nil , false , nil)
-                   }
-                   
-               })
-    }
     
     func removeFavouriteFromApi(fieldId: Int, complition: @escaping (ErrorModel?, Bool, FieldsModel.RemovefavouriteResponse?) -> Void) {
             NetworkService.share.request(endpoint: FieldsEndpoint.removeFavourite(fieldId: fieldId), success: { (responseData) in

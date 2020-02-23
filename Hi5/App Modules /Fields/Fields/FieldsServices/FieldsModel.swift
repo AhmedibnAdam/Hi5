@@ -17,7 +17,50 @@ struct FieldsModel {
 		}
 	}
     
-    
+    struct ShowDetailsResponse: Codable {
+        let status: Bool?
+        let field: Fields?
+    }
+
+    // MARK: - Field
+    struct Fields: Codable {
+        let id: Int?
+        let name, partnerName: String?
+        let partnerImage: String?
+        let cost: Int?
+        let gender, address, distance, sportType: String?
+        let recommendedFor: String?
+        let fieldImage: String?
+        let comments, rating: Int?
+        let visibility, payment: String?
+        let membership: Membership?
+        let fieldDescription, fieldSize, fieldType: String?
+        let image: String?
+        let images: [String]?
+        let services: [Service]?
+
+        enum CodingKeys: String, CodingKey {
+            case id, name
+            case partnerName = "partner_name"
+            case partnerImage = "partner_image"
+            case cost, gender, address, distance
+            case sportType = "sport_type"
+            case recommendedFor = "recommended_for"
+            case fieldImage = "field_image"
+            case comments, rating, visibility, payment, membership
+            case fieldDescription = "description"
+            case fieldSize = "field_size"
+            case fieldType = "field_type"
+            case image, images, services
+        }
+    }
+
+    // MARK: - Service
+    struct Service: Codable {
+        let name: String?
+        let image: String?
+    }
+
     //MARK: - AddFavouriteResponse
     struct AddfavouriteResponse: Codable {
         let status: Bool?

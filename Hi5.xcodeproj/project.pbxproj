@@ -373,6 +373,8 @@
 		8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */; };
 		8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */; };
 		8671348423CF5950009093A0 /* NewPasswordEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */; };
+		867D9DB0240281D400A69A47 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D9DAE240281D400A69A47 /* ServicesCell.swift */; };
+		867D9DB1240281D400A69A47 /* ServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867D9DAF240281D400A69A47 /* ServicesCell.xib */; };
 		868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */; };
 		868C28BD23C6042A003F237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C28BC23C6042A003F237A /* Assets.xcassets */; };
 		869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCA5923E98C63000291EB /* GenderEndPoint.swift */; };
@@ -811,6 +813,8 @@
 		8671347F23CF32E3009093A0 /* ChangeUsernameEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameEndPoint.swift; sourceTree = "<group>"; };
 		8671348123CF4437009093A0 /* PhoneVerificationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationEndPoint.swift; sourceTree = "<group>"; };
 		8671348323CF5950009093A0 /* NewPasswordEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordEndPoint.swift; sourceTree = "<group>"; };
+		867D9DAE240281D400A69A47 /* ServicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
+		867D9DAF240281D400A69A47 /* ServicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCell.xib; sourceTree = "<group>"; };
 		868BF50623EAE9D0005D2437 /* EditProfileEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileEndPoint.swift; sourceTree = "<group>"; };
 		868C28BC23C6042A003F237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		869BCA5923E98C63000291EB /* GenderEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEndPoint.swift; sourceTree = "<group>"; };
@@ -1769,8 +1773,8 @@
 		860EFCB22401673900B40901 /* ShowDetailsViews */ = {
 			isa = PBXGroup;
 			children = (
-				860EFCA32401671100B40901 /* ShowDetailsViewController.swift */,
-				860EFCA62401671100B40901 /* ShowDetailsViewController.xib */,
+				867D9DAD240281A800A69A47 /* Cell */,
+				867D9DAC2402819700A69A47 /* View */,
 			);
 			path = ShowDetailsViews;
 			sourceTree = "<group>";
@@ -2297,6 +2301,24 @@
 				86268A1C23F72F1800EFD96B /* SechaduleConfiguration.swift */,
 			);
 			path = SechaduleContracts;
+			sourceTree = "<group>";
+		};
+		867D9DAC2402819700A69A47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				860EFCA32401671100B40901 /* ShowDetailsViewController.swift */,
+				860EFCA62401671100B40901 /* ShowDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		867D9DAD240281A800A69A47 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				867D9DAE240281D400A69A47 /* ServicesCell.swift */,
+				867D9DAF240281D400A69A47 /* ServicesCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		867F90BB23C71B6A00C82762 /* Register Contract */ = {
@@ -3288,6 +3310,7 @@
 				861C792823FAAB5A00AFCD7B /* MenuCell.xib in Resources */,
 				662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */,
 				86F9B91023DDAAA5008C1F80 /* LocationViewController.xib in Resources */,
+				867D9DB1240281D400A69A47 /* ServicesCell.xib in Resources */,
 				86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */,
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
@@ -3681,6 +3704,7 @@
 				86268A2423F72F1800EFD96B /* SechaduleConfiguration.swift in Sources */,
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
 				86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */,
+				867D9DB0240281D400A69A47 /* ServicesCell.swift in Sources */,
 				862EB5B023D730AD00508F1A /* DateOfBirthInteractor.swift in Sources */,
 				860AB7F323F2D177005691C1 /* SocialConfiguration.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,

@@ -16,6 +16,7 @@ protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
     func showAlert(title: String, msg: String)
     func showResponse(response: FieldsModel.NearByfieldsResponse)
+    func showDetailsResponse(response: FieldsModel.ShowDetailsResponse)
     func removeNoMemberFields()
     func showNoMemberOfFields()
     func removeNoFavouriteFields()
@@ -25,6 +26,7 @@ protocol IFieldsViewController: class {
 class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
     var nearByField = [FieldsModel.Field]()
+    var showDetailsField: FieldsModel.Fields?
     var locManager = CLLocationManager()
     var currentLocation: CLLocation!
     var types = ["Nearby Fields","Favourites","Member of"]
@@ -65,7 +67,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
 
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
-            print(locManager.location)
+            //print(locManager.location)
             guard let currentLocation = locManager.location else {
                 return
             }
@@ -77,6 +79,11 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
 
 //MARK: - Extensions
 extension FieldsViewController: IFieldsViewController {
+    func showDetailsResponse(response: FieldsModel.ShowDetailsResponse) {
+        guard let field = response.field else {return}
+        self.showDetailsField = field
+    }
+    
      func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
@@ -278,7 +285,10 @@ extension FieldsViewController: FavouriteTableViewCellDelegate {
 
 extension FieldsViewController: ShowDetailsTableViewCellDelegate {
     func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, id: Int) {
-        router?.navigateToShowdetails()
+        print("\(id)..............")
+        self.interactor?.showDetails(view: self, fieldId: id)
+        print("b55555555555\(showDetailsField)")
+        //router?.navigateToShowdetails()
     }
 }
 

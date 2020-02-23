@@ -17,6 +17,7 @@ protocol IFieldsInteractor: class {
     func memberOf(view : UIViewController)
     func addFavourite(view: UIViewController , fieldId: Int)
     func removeFavourite(view: UIViewController , fieldId: Int)
+    func showDetails(view: UIViewController , fieldId: Int)
 }
 
 class FieldsInteractor: IFieldsInteractor {
@@ -27,6 +28,16 @@ class FieldsInteractor: IFieldsInteractor {
     init(presenter: IFieldsPresenter, manager: IFieldsManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func showDetails(view: UIViewController, fieldId: Int) {
+        manager?.showDetailsFromApi(fieldId: fieldId, complition: { (error, success, response) in
+            if (success == true){
+                guard let response = response else {return}
+                self.presenter?.showDetailsResponse(response: response)
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
     func nearBy(view: UIViewController, lon: Double, lat: Double) {
         manager?.nearByFromApi(lon: lon, lat: lat, complition: { (error, success, response) in

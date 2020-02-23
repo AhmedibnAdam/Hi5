@@ -13,6 +13,9 @@ protocol FavouriteTableViewCellDelegate: class{
     func removeFavouriteDidTap(_ button: UIButton , cell: UITableViewCell , id: Int)
 }
 
+protocol ShowDetailsTableViewCellDelegate: class {
+    func showDetailsDidTap(_ button: UIButton , cell: UITableViewCell , id: Int)
+}
 class FieldsTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
@@ -37,6 +40,7 @@ class FieldsTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     weak var delegate: FavouriteTableViewCellDelegate?
+    weak var showDetailsDelegate: ShowDetailsTableViewCellDelegate?
     var fieldId: Int?
     
     //MARK: - View Life cycle
@@ -53,7 +57,9 @@ class FieldsTableViewCell: UITableViewCell {
     
     //MARK: - Actions
     @IBAction func showDetailsBtnTapped(_ sender: UIButton) {
-        
+        if let id = fieldId {
+             showDetailsDelegate?.showDetailsDidTap(sender, cell: self, id: id)
+        }
     }
     
     @IBAction func favouriteBtnTapped(_ sender: UIButton) {

@@ -12,6 +12,7 @@ import UIKit
 
 protocol IFieldsRouter: class {
 	func navigateToTabBar()
+    func navigateToShowdetails()
 }
 
 class FieldsRouter: IFieldsRouter {	
@@ -22,5 +23,8 @@ class FieldsRouter: IFieldsRouter {
 	}
     func navigateToTabBar() {
         view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
+    }
+    func navigateToShowdetails() {
+        view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields, completion: nil)
     }
 }

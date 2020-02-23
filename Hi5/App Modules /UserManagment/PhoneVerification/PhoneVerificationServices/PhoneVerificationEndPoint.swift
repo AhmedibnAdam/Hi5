@@ -28,9 +28,7 @@ extension PhoneVerificationEndpoint: IEndpoint {
         return .post
     }
 }
-    
     var path: String {
-
     switch self {
        case .PhoneVerification:
          return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
@@ -38,9 +36,7 @@ extension PhoneVerificationEndpoint: IEndpoint {
          return "http://api-ksa.com/demo/hi5/public/api/player/" + "resend"
        }
     }
-    
     var parameter: Parameters? {
-
     switch self {
         case .PhoneVerification(let code):
             return ["code": code]

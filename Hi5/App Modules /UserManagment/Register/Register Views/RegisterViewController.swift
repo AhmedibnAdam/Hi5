@@ -45,14 +45,12 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
         self.fullNameTextField.delegate = self
         self.phoneNumberTextField.delegate = self
         initView()
-        configer()
+        configure()
         delegateCountryCode()
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -61,7 +59,6 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
         if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
-            
             signupAction()
              }
         else {
@@ -85,23 +82,17 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
 }
 //MARK:- extensions
 extension RegisterViewController: IRegisterViewController {
-    
     func showAlert(title: String, msg: String) {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-    
     func navigateToSignupPhoneVerification() {
         router?.navigateToSignupPhoneVerification()
     }
-    
     func hideIndicator() {
         loadingIndicator.isHidden = true
     }
-    
 }
-
 extension RegisterViewController {
-    
     func initView(){
         // MARK : - view raduis
         self.checkBoxBtn.setImage(UIImage(named: "checkBox"), for: .normal)
@@ -115,16 +106,13 @@ extension RegisterViewController {
           // MARK : - Button  raduis
         self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
     }
-    
-    func configer(){
+    func configure(){
         router = RegisterRouter(view: self)
-    }
-    
+    } // why do we do this where we did in configurator file !
     func showIndicator() {
         loadingIndicator.isHidden = false
     }
 }
-
 extension RegisterViewController {
     func signupAction() {
         guard let fullName = fullNameTextField.text , let phoneNumber = phoneNumberTextField.text else {return}
@@ -144,7 +132,6 @@ extension RegisterViewController {
     func loginBtnAction() {
         router?.navigateToLogin()
     }
-
 }
 
 //MARK:- DropDown Pod

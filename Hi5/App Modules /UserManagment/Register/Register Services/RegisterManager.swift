@@ -14,7 +14,6 @@ protocol IRegisterManager: class {
 	// MARK : - do someting...
     func signupFromApi(fullName: String ,phoneNumber: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
 }
-
 class RegisterManager: IRegisterManager {
 	// MARK : - do someting...
     func signupFromApi(fullName: String, phoneNumber: String, complition: @escaping (ErrorModel?, Bool) -> Void) {

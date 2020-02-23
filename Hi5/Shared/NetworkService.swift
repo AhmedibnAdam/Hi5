@@ -20,10 +20,8 @@ protocol IEndpoint {
     var header: HTTPHeaders? { get }
     var encoding: ParameterEncoding { get }
 }
-
 class NetworkService {
     static let share = NetworkService()
-    
     private var dataRequest: DataRequest?
     private var success: ((_ data: Data?)->Void)?
     private var failure: ((_ error: Error?)->Void)?
@@ -59,20 +57,20 @@ class NetworkService {
                 case .failure(let error):
                     print(error)
                 }
-
+                
             })
-//            self.dataRequest?.responseJSON(completionHandler: { (response) in
-//
-//                 let statusCode = response.response?.statusCode
-//                print(statusCode!)
-//
-//                switch response.result {
-//                case .success(let value):
-//                    success?(JSON(value))
-//                case .failure(let error):
-//                    print(error)
-//                }
-//            })
+            //            self.dataRequest?.responseJSON(completionHandler: { (response) in
+            //
+            //                 let statusCode = response.response?.statusCode
+            //                print(statusCode!)
+            //
+            //                switch response.result {
+            //                case .success(let value):
+            //                    success?(JSON(value))
+            //                case .failure(let error):
+            //                    print(error)
+            //                }
+            //            })
         }
     }
     
@@ -117,7 +115,7 @@ extension NetworkService {
             { (result) in
                 switch result {
                 case .success(let upload, _ , _):
-                  //  success?(value)
+                    //  success?(value)
                     upload.uploadProgress(closure: { (Progress) in
                         print("Upload Progress: \(Progress.fractionCompleted)")
                     })
@@ -128,12 +126,12 @@ extension NetworkService {
                         case .failure(let error):
                             print(error)
                         }
-
+                        
                     }
                 case .failure(let error):
                     print(error)
                 }
-
+                
             }
         }
     }

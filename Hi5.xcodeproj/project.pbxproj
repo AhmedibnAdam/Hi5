@@ -1211,9 +1211,9 @@
 		6663361123B40206004E537C /* Hi5 */ = {
 			isa = PBXGroup;
 			children = (
+				6663366123B408E2004E537C /* Launch Screen */,
 				868C28C323C60935003F237A /* Shared */,
 				66340A1423B4DB3C009DB30A /* Common */,
-				6663366123B408E2004E537C /* Launch Screen */,
 				663409E023B4C6E8009DB30A /* App Modules  */,
 				6663362023B4020A004E537C /* Info.plist */,
 			);
@@ -3233,8 +3233,8 @@
 				6663360B23B40206004E537C /* Sources */,
 				6663360C23B40206004E537C /* Frameworks */,
 				6663360D23B40206004E537C /* Resources */,
-				82B588C1CBA59C9091BBE462 /* [CP] Embed Pods Frameworks */,
-				0CD478CDFDED9E2A8E6BC642 /* [CP] Copy Pods Resources */,
+				74B2B2D0676C41A28DD23C4A /* [CP] Embed Pods Frameworks */,
+				4FB85DEA07DB2D1926D65026 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3345,23 +3345,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CD478CDFDED9E2A8E6BC642 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4373E5CCA3D2E7295F8CFE1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3384,7 +3367,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82B588C1CBA59C9091BBE462 /* [CP] Embed Pods Frameworks */ = {
+		4FB85DEA07DB2D1926D65026 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74B2B2D0676C41A28DD23C4A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

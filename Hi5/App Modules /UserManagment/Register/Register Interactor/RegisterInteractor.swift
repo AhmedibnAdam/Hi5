@@ -20,12 +20,10 @@ class RegisterInteractor: IRegisterInteractor {
     var presenter: IRegisterPresenter?
     var manager: IRegisterManager?
     var parameters: [String: Any]?
-
     init(presenter: IRegisterPresenter, manager: IRegisterManager) {
     	self.presenter = presenter
     	self.manager = manager
     }
-    
     func doSignup(view: UIViewController, fullName: String, phoneNumber: String) {
         manager?.signupFromApi(fullName: fullName, phoneNumber: phoneNumber, complition: { (error, succes) in
             if (succes == true) {

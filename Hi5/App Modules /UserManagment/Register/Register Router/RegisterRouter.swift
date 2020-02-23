@@ -14,14 +14,11 @@ protocol IRegisterRouter: class {
      func navigateToSignupPhoneVerification()
      func navigateToLogin()
 }
-
 class RegisterRouter: IRegisterRouter {
     func navigateToSignupPhoneVerification() {
         view?.navigate(type: .modal, module: GeneralRoute.sigupVerificationPhone, completion: nil)
     }
-    
 	weak var view: RegisterViewController?
-	
 	init(view: RegisterViewController?) {
 		self.view = view
 	}

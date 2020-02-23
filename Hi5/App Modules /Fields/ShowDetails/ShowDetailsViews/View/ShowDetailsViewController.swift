@@ -18,6 +18,7 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
     //MARK: - Properties
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
+    var field: FieldsModel.Fields?
     
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!

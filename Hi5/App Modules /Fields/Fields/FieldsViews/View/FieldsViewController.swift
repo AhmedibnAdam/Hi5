@@ -197,7 +197,6 @@ extension FieldsViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
             self.removeNoFavouriteFields()
             self.removeNoMemberFields()
-            //self.tableView.isHidden = true
         }
         
         alert.addAction(cancel)
@@ -288,7 +287,9 @@ extension FieldsViewController: ShowDetailsTableViewCellDelegate {
         print("\(id)..............")
         self.interactor?.showDetails(view: self, fieldId: id)
         print("b55555555555\(showDetailsField)")
-        //router?.navigateToShowdetails()
+//        if let showDetailsField = showDetailsField {
+//            router?.navigateToShowdetails(field: showDetailsField)
+//        }
     }
 }
 

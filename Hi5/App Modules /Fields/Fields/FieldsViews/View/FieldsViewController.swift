@@ -86,7 +86,6 @@ extension FieldsViewController: IFieldsViewController {
         self.nearByField = field
         self.tableView.reloadData()
     }
-    
     func removeNoFavouriteFields() {
         noFavouriteFieldsImg.isHidden = true
         noFavouriteFieldsLbl.isHidden = true
@@ -116,11 +115,9 @@ extension FieldsViewController {
             let cell = UINib(nibName: "TypeCollectionViewCell", bundle: nil)
             collectionView.register(cell, forCellWithReuseIdentifier: "typeCell")
     }
-    
 	    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                 return types.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let type = types[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "typeCell", for: indexPath) as! TypeCollectionViewCell
@@ -202,16 +199,13 @@ extension FieldsViewController {
 
 //MARK: - tableView
 extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
-    
     func registerTableCell() {
         let cell = UINib(nibName: "FieldsTableViewCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "fieldsCell")
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nearByField.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
         let nearFields = nearByField[indexPath.row]

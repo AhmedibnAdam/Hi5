@@ -32,7 +32,7 @@ class TabBarViewController: UITabBarController {
     }()
     
     lazy var events: UIViewController = {
-        let vc = SechaduleContainerController()
+        let vc = PublicEventsViewController()
          vc.tabBarItem.title = "events"
          vc.tabBarItem.image = UIImage(named: "event")
         //let nav = UINavigationController(rootViewController: vc)

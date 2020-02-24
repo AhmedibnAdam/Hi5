@@ -65,11 +65,29 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
             showAlert(title: "Error", msg: "SomeThing Wrong")
         }
     }
-    
+    //MARK: - Actions
+    @IBAction func requestMemberShipBtnTapped(_ sender: UIButton) {
+        if (sender.currentTitle == "Request membership") {
+            sender.setTitle("Cancel Request", for: .normal)
+            sender.setTitleColor(.lightGray, for: .normal)
+            self.statusLbl.text = "pending"
+            self.statusLbl.textColor = .lightGray
+            if let id = field?.id {
+                self.interactor?.requestMemberShip(view: self, fieldId: id)
+            }
+            
+        } else {
+            sender.setTitle("Request membership", for: .normal)
+            sender.setTitleColor(.red, for: .normal)
+            self.statusLbl.text = "not a member"
+            self.statusLbl.textColor = .black
+            
+        }
+        
+    }
     @IBAction func backBtnTapped(_ sender: UIButton) {
         router?.navigateToFields()
     }
-    
 }
 
 //MARK: - Extensions
@@ -107,6 +125,12 @@ extension ShowDetailsViewController: IShowDetailsViewController {
                 self.requestMemberShipBtn.isHidden = true
                 self.containerView.isHidden = false
                 self.expireDateLbl.text = field.membership?.expireAt
+            } else if (field.membership?.status == "pending") {
+                self.containerView.isHidden = true
+                self.requestMemberShipBtn.isHidden = false
+                self.statusLbl.textColor = .lightGray
+                self.requestMemberShipBtn.setTitle("Cancel Request", for: .normal)
+                self.requestMemberShipBtn.setTitleColor(.lightGray, for: .normal)
             }
         }
         availableLbl.text = field.visibility
@@ -137,8 +161,6 @@ extension ShowDetailsViewController: IShowDetailsViewController {
             self.services = services
             self.collectionView.reloadData()
         }
-                
-        
     }
 }
 

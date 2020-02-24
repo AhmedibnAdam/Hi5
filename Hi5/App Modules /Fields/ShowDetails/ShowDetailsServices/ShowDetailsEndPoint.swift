@@ -11,6 +11,7 @@ import Alamofire
 
 enum ShowDetailsFieldsEndpoint {
     case showDetails(id: Int)
+    case requestMemberShip(id: Int)
 }
 
 //MARK: - Extension
@@ -19,6 +20,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
         switch self {
         case .showDetails:
             return .get
+        case .requestMemberShip:
+            return .post
         }
     }
     
@@ -26,6 +29,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
         switch self {
         case .showDetails:
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "show_field"
+        case .requestMemberShip:
+            return "http://api-ksa.com/demo/hi5/public/api/player/" + "add_member_ship"
         }
     }
     
@@ -33,12 +38,16 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
         switch self {
         case .showDetails(let id):
             return ["field_id": id]
+        case .requestMemberShip(let id):
+            return ["field_id": id]
         }
     }
     
     var image: UIImage? {
         switch self {
         case .showDetails:
+            return nil
+        case .requestMemberShip:
             return nil
         }
     }
@@ -49,6 +58,10 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
             let defaults = UserDefaults.standard
             let token = defaults.string(forKey: "Token")
             return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
+        case .requestMemberShip:
+            let defaults = UserDefaults.standard
+            let token = defaults.string(forKey: "Token")
+            return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
         }
     }
     
@@ -56,6 +69,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
         switch self {
         case .showDetails:
             return URLEncoding.default
+        case .requestMemberShip:
+            return JSONEncoding.default
         }
     }
     

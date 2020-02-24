@@ -13,6 +13,7 @@ import UIKit
 protocol IShowDetailsInteractor: class {
 	var parameters: [String: Any]? { get set }
     func showDetails(view: UIViewController , fieldId: Int)
+    func requestMemberShip(view: UIViewController , fieldId: Int)
 }
 
 class ShowDetailsInteractor: IShowDetailsInteractor {
@@ -29,6 +30,15 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
             if (success == true){
                 guard let response = response else {return}
                 self.presenter?.showDetailsResponse(response: response)
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    func requestMemberShip(view: UIViewController, fieldId: Int) {
+        manager?.requestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
+            if (success == true){
+                
             } else {
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }

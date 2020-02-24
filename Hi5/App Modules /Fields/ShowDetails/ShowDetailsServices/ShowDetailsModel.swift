@@ -16,7 +16,14 @@ struct ShowDetailsModel {
 			return nil
 		}
 	}
+    
+    //MARK: - RequestMemberShipResponse
+    struct RequestMemberShipResponse: Codable {
+        let status: Bool?
+        let msg: String?
+    }
 
+    //MARK: - ShowDetailsResponse
 	struct ShowDetailsResponse: Codable {
         let status: Bool?
         let field: Field?

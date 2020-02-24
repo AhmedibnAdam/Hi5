@@ -280,6 +280,7 @@ extension FieldsViewController: FavouriteTableViewCellDelegate {
 
 extension FieldsViewController: ShowDetailsTableViewCellDelegate {
     func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, field: FieldsModel.Field) {
+        print("\(field.id)..........")
         router?.navigateToShowdetails(field: field)
     }
 }

@@ -24,6 +24,7 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
     var services = [ShowDetailsModel.Service]()
     
     //MARK: - Outlets
+    @IBOutlet weak var statusStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var fieldImg: UIImageView!
     @IBOutlet weak var fieldName: UILabel!
@@ -89,6 +90,25 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         fieldSizeLbl.text = field.fieldSize
         gendersLbl.text = field.gender
         bestForLbl.text = field.recommendedFor
+        if (field.visibility == "public") {
+            availableLbl.text = field.visibility
+            self.statusStackView.isHidden = true
+            self.containerView.isHidden = true
+            self.requestMemberShipBtn.isHidden = true
+        } else {
+            availableLbl.text = field.visibility
+            statusLbl.text = field.membership?.status
+            self.statusStackView.isHidden = false
+            //self.containerView.isHidden = false
+            if (field.membership?.status == "not member") {
+                self.requestMemberShipBtn.isHidden = false
+                self.containerView.isHidden = true
+            } else if (field.membership?.status == "member") {
+                self.requestMemberShipBtn.isHidden = true
+                self.containerView.isHidden = false
+                self.expireDateLbl.text = field.membership?.expireAt
+            }
+        }
         availableLbl.text = field.visibility
         companyName.text = field.partnerName
         if let fieldImg = field.fieldImage {

@@ -32,6 +32,7 @@
                 <outlet property="requestMemberShipBtn" destination="TJP-9w-KUR" id="UvC-FO-i2f"/>
                 <outlet property="sportTypeLbl" destination="3Vo-kN-XD1" id="CIj-KR-o0B"/>
                 <outlet property="statusLbl" destination="h8Y-JI-VHw" id="7YJ-AT-RrB"/>
+                <outlet property="statusStackView" destination="FKJ-zr-6mR" id="v2I-rt-7tu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

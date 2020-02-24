@@ -137,7 +137,16 @@ extension ShowDetailsViewController{
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath) as! ServicesCell
         cell.serviceLbl.text = services[indexPath.row].name
-        
+        if let serviceImg = services[indexPath.row].image {
+            let url = URL(string: serviceImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        cell.serviceimg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
             return cell
        }
     

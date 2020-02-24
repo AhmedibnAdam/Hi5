@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IShowDetailsRouter: class {
-	// do someting...
+    func navigateToFields()
 }
 
 class ShowDetailsRouter: IShowDetailsRouter {	
@@ -20,4 +20,7 @@ class ShowDetailsRouter: IShowDetailsRouter {
 	init(view: ShowDetailsViewController?) {
 		self.view = view
 	}
+    func navigateToFields() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
+    }
 }

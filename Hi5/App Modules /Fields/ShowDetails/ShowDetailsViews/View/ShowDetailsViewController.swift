@@ -63,6 +63,11 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
             showAlert(title: "Error", msg: "SomeThing Wrong")
         }
     }
+    
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        router?.navigateToFields()
+    }
+    
 }
 
 //MARK: - Extensions
@@ -71,6 +76,33 @@ extension ShowDetailsViewController: IShowDetailsViewController {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse) {
+        guard let field = response.field else {return}
+        fieldName.text = field.name
+        commentLbl.text = "\(String(describing: field.comments))"
+        rateLbl.text = "\(String(describing: field.rating))"
+        fieldAddressLbl.text = field.address
+        fieldDescriptionLbl.text = field.fieldDescription
+        sportTypeLbl.text = field.sportType
+        fieldTypeLbl.text = field.fieldType
+        fieldSizeLbl.text = field.fieldSize
+        gendersLbl.text = field.gender
+        bestForLbl.text = field.recommendedFor
+        availableLbl.text = field.visibility
+        companyName.text = field.partnerName
+        if let partnerImg = field.partnerImage {
+            let url = URL(fileURLWithPath: partnerImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url) {
+                    DispatchQueue.main.async {
+                        self.companyImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        costLbl.text = "from: $\(String(describing: field.cost)) / hour"
+        paymentLbl.text = field.payment
+        
+        
         
     }
 }

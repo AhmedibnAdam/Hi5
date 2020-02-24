@@ -81,10 +81,12 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
             sender.setTitleColor(.red, for: .normal)
             self.statusLbl.text = "not a member"
             self.statusLbl.textColor = .black
-            
+            if let id = field?.id {
+                self.interactor?.cancelRequestMemberShip(view: self, fieldId: id)
+            }
         }
-        
     }
+    
     @IBAction func backBtnTapped(_ sender: UIButton) {
         router?.navigateToFields()
     }

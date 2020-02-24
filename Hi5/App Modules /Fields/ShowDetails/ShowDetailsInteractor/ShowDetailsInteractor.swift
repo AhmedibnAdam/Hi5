@@ -14,6 +14,7 @@ protocol IShowDetailsInteractor: class {
 	var parameters: [String: Any]? { get set }
     func showDetails(view: UIViewController , fieldId: Int)
     func requestMemberShip(view: UIViewController , fieldId: Int)
+    func cancelRequestMemberShip(view: UIViewController , fieldId: Int)
 }
 
 class ShowDetailsInteractor: IShowDetailsInteractor {
@@ -38,6 +39,15 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
     func requestMemberShip(view: UIViewController, fieldId: Int) {
         manager?.requestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
             if (success == true){
+                
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    func cancelRequestMemberShip(view: UIViewController, fieldId: Int) {
+        manager?.cancelRequestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
+            if(success == true){
                 
             } else {
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)

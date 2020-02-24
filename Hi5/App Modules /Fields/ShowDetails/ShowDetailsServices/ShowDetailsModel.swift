@@ -22,6 +22,12 @@ struct ShowDetailsModel {
         let status: Bool?
         let msg: String?
     }
+    
+    //MARK: - CancelRequestMemberShipResponse
+    struct CancelRequestMemberShipResponse: Codable {
+        let status: Bool?
+        let msg: String?
+    }
 
     //MARK: - ShowDetailsResponse
 	struct ShowDetailsResponse: Codable {

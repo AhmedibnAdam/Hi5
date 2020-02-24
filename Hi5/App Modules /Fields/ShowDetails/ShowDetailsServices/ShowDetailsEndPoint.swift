@@ -12,6 +12,7 @@ import Alamofire
 enum ShowDetailsFieldsEndpoint {
     case showDetails(id: Int)
     case requestMemberShip(id: Int)
+    case cancelRequestMemberShip(id: Int)
 }
 
 //MARK: - Extension
@@ -22,6 +23,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
             return .get
         case .requestMemberShip:
             return .post
+        case .cancelRequestMemberShip:
+            return .delete
         }
     }
     
@@ -31,6 +34,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "show_field"
         case .requestMemberShip:
             return "http://api-ksa.com/demo/hi5/public/api/player/" + "add_member_ship"
+        case .cancelRequestMemberShip:
+            return "http://api-ksa.com/demo/hi5/public/api/player/" + "remove_member_ship"
         }
     }
     
@@ -40,6 +45,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
             return ["field_id": id]
         case .requestMemberShip(let id):
             return ["field_id": id]
+        case .cancelRequestMemberShip(let id):
+            return ["field_id": id]
         }
     }
     
@@ -48,6 +55,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
         case .showDetails:
             return nil
         case .requestMemberShip:
+            return nil
+        case .cancelRequestMemberShip:
             return nil
         }
     }
@@ -62,6 +71,10 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
             let defaults = UserDefaults.standard
             let token = defaults.string(forKey: "Token")
             return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
+        case .cancelRequestMemberShip:
+            let defaults = UserDefaults.standard
+            let token = defaults.string(forKey: "Token")
+            return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
         }
     }
     
@@ -71,6 +84,8 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
             return URLEncoding.default
         case .requestMemberShip:
             return JSONEncoding.default
+        case .cancelRequestMemberShip:
+            return URLEncoding.default
         }
     }
     

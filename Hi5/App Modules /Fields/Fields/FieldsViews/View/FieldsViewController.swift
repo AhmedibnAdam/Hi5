@@ -234,9 +234,9 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         }
         
         if let partnerImg = nearFields.partnerImage {
-            let url = URL(fileURLWithPath: partnerImg)
+            let url = URL(string: partnerImg)
             DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url) {
+                if let data = try? Data(contentsOf: url!) {
                     DispatchQueue.main.async {
                         cell.companyImg.image = UIImage(data: data)
                     }

@@ -21,6 +21,7 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
     var field: FieldsModel.Field?
+    var services = [ShowDetailsModel.Service]()
     
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -75,11 +76,12 @@ extension ShowDetailsViewController: IShowDetailsViewController {
     func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
+    //MARK:  showDetailsResponse
     func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse) {
         guard let field = response.field else {return}
         fieldName.text = field.name
-        commentLbl.text = "\(String(describing: field.comments))"
-        rateLbl.text = "\(String(describing: field.rating))"
+        commentLbl.text = "\(String(describing: field.comments ?? 0))"
+        rateLbl.text = "\(String(describing: field.rating ?? 0))"
         fieldAddressLbl.text = field.address
         fieldDescriptionLbl.text = field.fieldDescription
         sportTypeLbl.text = field.sportType
@@ -89,20 +91,33 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         bestForLbl.text = field.recommendedFor
         availableLbl.text = field.visibility
         companyName.text = field.partnerName
-        if let partnerImg = field.partnerImage {
-            let url = URL(fileURLWithPath: partnerImg)
+        if let fieldImg = field.fieldImage {
+            let url = URL(string: fieldImg)
             DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url) {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        self.fieldImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        if let partnerImg = field.partnerImage {
+            let url = URL(string: partnerImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
                     DispatchQueue.main.async {
                         self.companyImg.image = UIImage(data: data)
                     }
                 }
             }
         }
-        costLbl.text = "from: $\(String(describing: field.cost)) / hour"
-        paymentLbl.text = field.payment
-        
-        
+        costLbl.text = "Started from: $\(String(describing: field.cost ?? 0)) / hour"
+        paymentLbl.text = "payment: \(field.payment ?? "")"
+        if let services = field.services {
+            self.services = services
+            self.collectionView.reloadData()
+        }
+                
         
     }
 }
@@ -116,11 +131,12 @@ extension ShowDetailsViewController{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return services.count
     }
     
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath) as! ServicesCell
+        cell.serviceLbl.text = services[indexPath.row].name
         
             return cell
        }

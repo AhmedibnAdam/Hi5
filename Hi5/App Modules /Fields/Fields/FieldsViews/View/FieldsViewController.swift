@@ -180,7 +180,7 @@ extension FieldsViewController {
     }
     
     @objc func searchSession() {
-        
+        router?.navigateToFilter()
     }
     
     func alert() {

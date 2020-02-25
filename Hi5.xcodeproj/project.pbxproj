@@ -357,6 +357,14 @@
 		862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8223CB72380058355E /* ChangeUsernameModel.swift */; };
 		862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */; };
 		862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862A5E8423CB72380058355E /* ChangeUsernameManager.swift */; };
+		862C47AC24052A2F006EB93A /* FilterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47A424052A2F006EB93A /* FilterConfiguration.swift */; };
+		862C47AD24052A2F006EB93A /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47A524052A2F006EB93A /* FilterPresenter.swift */; };
+		862C47AE24052A2F006EB93A /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47A624052A2F006EB93A /* FilterRouter.swift */; };
+		862C47AF24052A2F006EB93A /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47A724052A2F006EB93A /* FilterViewController.swift */; };
+		862C47B024052A2F006EB93A /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47A824052A2F006EB93A /* FilterInteractor.swift */; };
+		862C47B124052A2F006EB93A /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47A924052A2F006EB93A /* FilterModel.swift */; };
+		862C47B224052A2F006EB93A /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862C47AA24052A2F006EB93A /* FilterViewController.xib */; };
+		862C47B324052A2F006EB93A /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862C47AB24052A2F006EB93A /* FilterManager.swift */; };
 		862EB5AC23D730AD00508F1A /* DateOfBirthConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5A423D730AD00508F1A /* DateOfBirthConfiguration.swift */; };
 		862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5A523D730AD00508F1A /* DateOfBirthPresenter.swift */; };
 		862EB5AE23D730AD00508F1A /* DateOfBirthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5A623D730AD00508F1A /* DateOfBirthRouter.swift */; };
@@ -398,6 +406,8 @@
 		86B14BE023CB543B00B3FEB1 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BD823CB543B00B3FEB1 /* WelcomeModel.swift */; };
 		86B14BE123CB543B00B3FEB1 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B14BD923CB543B00B3FEB1 /* WelcomeViewController.xib */; };
 		86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B14BDA23CB543B00B3FEB1 /* WelcomeManager.swift */; };
+		86B601EF2405357100066042 /* SelectSportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B601ED2405357100066042 /* SelectSportCell.swift */; };
+		86B601F02405357100066042 /* SelectSportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B601EE2405357100066042 /* SelectSportCell.xib */; };
 		86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5023CB5F840036C41D /* CreatePasswordConfiguration.swift */; };
 		86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5123CB5F840036C41D /* CreatePasswordPresenter.swift */; };
 		86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5223CB5F840036C41D /* CreatePasswordRouter.swift */; };
@@ -798,6 +808,14 @@
 		862A5E8223CB72380058355E /* ChangeUsernameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameModel.swift; sourceTree = "<group>"; };
 		862A5E8323CB72380058355E /* ChangeUsernameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeUsernameViewController.xib; sourceTree = "<group>"; };
 		862A5E8423CB72380058355E /* ChangeUsernameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUsernameManager.swift; sourceTree = "<group>"; };
+		862C47A424052A2F006EB93A /* FilterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterConfiguration.swift; sourceTree = "<group>"; };
+		862C47A524052A2F006EB93A /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		862C47A624052A2F006EB93A /* FilterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
+		862C47A724052A2F006EB93A /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		862C47A824052A2F006EB93A /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
+		862C47A924052A2F006EB93A /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		862C47AA24052A2F006EB93A /* FilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		862C47AB24052A2F006EB93A /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		862EB5A423D730AD00508F1A /* DateOfBirthConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthConfiguration.swift; sourceTree = "<group>"; };
 		862EB5A523D730AD00508F1A /* DateOfBirthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthPresenter.swift; sourceTree = "<group>"; };
 		862EB5A623D730AD00508F1A /* DateOfBirthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthRouter.swift; sourceTree = "<group>"; };
@@ -839,6 +857,8 @@
 		86B14BD823CB543B00B3FEB1 /* WelcomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
 		86B14BD923CB543B00B3FEB1 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		86B14BDA23CB543B00B3FEB1 /* WelcomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeManager.swift; sourceTree = "<group>"; };
+		86B601ED2405357100066042 /* SelectSportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSportCell.swift; sourceTree = "<group>"; };
+		86B601EE2405357100066042 /* SelectSportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSportCell.xib; sourceTree = "<group>"; };
 		86BBEE5023CB5F840036C41D /* CreatePasswordConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordConfiguration.swift; sourceTree = "<group>"; };
 		86BBEE5123CB5F840036C41D /* CreatePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordPresenter.swift; sourceTree = "<group>"; };
 		86BBEE5223CB5F840036C41D /* CreatePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordRouter.swift; sourceTree = "<group>"; };
@@ -1066,6 +1086,7 @@
 		663409FB23B4C8E2009DB30A /* Fields */ = {
 			isa = PBXGroup;
 			children = (
+				862C47A324052A0F006EB93A /* Filter */,
 				860EFC9F240166F000B40901 /* ShowDetails */,
 				668C20E823C3F47200C009A9 /* Fields */,
 			);
@@ -2140,6 +2161,69 @@
 			path = ChangeUsernameContract;
 			sourceTree = "<group>";
 		};
+		862C47A324052A0F006EB93A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				862C47B824052A70006EB93A /* FilterContracts */,
+				862C47B924052A81006EB93A /* FilterInteractor */,
+				862C47B524052A4C006EB93A /* FilterPresenter */,
+				862C47B424052A3E006EB93A /* FilterRouter */,
+				862C47B724052A65006EB93A /* FilterServices */,
+				862C47B624052A5D006EB93A /* FilterViews */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		862C47B424052A3E006EB93A /* FilterRouter */ = {
+			isa = PBXGroup;
+			children = (
+				862C47A624052A2F006EB93A /* FilterRouter.swift */,
+			);
+			path = FilterRouter;
+			sourceTree = "<group>";
+		};
+		862C47B524052A4C006EB93A /* FilterPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				862C47A524052A2F006EB93A /* FilterPresenter.swift */,
+			);
+			path = FilterPresenter;
+			sourceTree = "<group>";
+		};
+		862C47B624052A5D006EB93A /* FilterViews */ = {
+			isa = PBXGroup;
+			children = (
+				86B601EC2405354D00066042 /* CollectionViewCell */,
+				86B601EB2405353600066042 /* View */,
+			);
+			path = FilterViews;
+			sourceTree = "<group>";
+		};
+		862C47B724052A65006EB93A /* FilterServices */ = {
+			isa = PBXGroup;
+			children = (
+				862C47A924052A2F006EB93A /* FilterModel.swift */,
+				862C47AB24052A2F006EB93A /* FilterManager.swift */,
+			);
+			path = FilterServices;
+			sourceTree = "<group>";
+		};
+		862C47B824052A70006EB93A /* FilterContracts */ = {
+			isa = PBXGroup;
+			children = (
+				862C47A424052A2F006EB93A /* FilterConfiguration.swift */,
+			);
+			path = FilterContracts;
+			sourceTree = "<group>";
+		};
+		862C47B924052A81006EB93A /* FilterInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				862C47A824052A2F006EB93A /* FilterInteractor.swift */,
+			);
+			path = FilterInteractor;
+			sourceTree = "<group>";
+		};
 		862EB5A323D7308100508F1A /* DateOfBirth */ = {
 			isa = PBXGroup;
 			children = (
@@ -2633,6 +2717,24 @@
 				86B14BDA23CB543B00B3FEB1 /* WelcomeManager.swift */,
 			);
 			path = WelcomeServices;
+			sourceTree = "<group>";
+		};
+		86B601EB2405353600066042 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				862C47A724052A2F006EB93A /* FilterViewController.swift */,
+				862C47AA24052A2F006EB93A /* FilterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86B601EC2405354D00066042 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				86B601ED2405357100066042 /* SelectSportCell.swift */,
+				86B601EE2405357100066042 /* SelectSportCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		86BBEE4F23CB5F5D0036C41D /* CreatePassword */ = {
@@ -3318,10 +3420,12 @@
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
 				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
+				86B601F02405357100066042 /* SelectSportCell.xib in Resources */,
 				662A169723C3E75400A3695E /* MyFavoriteFriendsViewController.xib in Resources */,
 				662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */,
 				668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */,
 				86A2FF6B23F4220F0053E5A1 /* FieldsTableViewCell.xib in Resources */,
+				862C47B224052A2F006EB93A /* FilterViewController.xib in Resources */,
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
@@ -3440,6 +3544,7 @@
 				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
 				662A169423C3E75400A3695E /* MyFavoriteFriendsViewController.swift in Sources */,
 				6683E2DE23BCEBD900250702 /* SuggestedFieldsModel.swift in Sources */,
+				862C47AF24052A2F006EB93A /* FilterViewController.swift in Sources */,
 				869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */,
 				668C210723C3F5BC00C009A9 /* AddSessionResultRouter.swift in Sources */,
 				662A16C423C3EA9F00A3695E /* AddFriendsConfiguration.swift in Sources */,
@@ -3544,6 +3649,7 @@
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
 				662A16DC23C3EB7600A3695E /* AddFriendRequestManager.swift in Sources */,
 				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
+				862C47AD24052A2F006EB93A /* FilterPresenter.swift in Sources */,
 				860AB7F723F2D177005691C1 /* SocialInteractor.swift in Sources */,
 				861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */,
 				862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */,
@@ -3575,6 +3681,7 @@
 				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
 				860EFCAF2401671100B40901 /* ShowDetailsManager.swift in Sources */,
 				6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */,
+				862C47B324052A2F006EB93A /* FilterManager.swift in Sources */,
 				662A16DA23C3EB7600A3695E /* AddFriendRequestModel.swift in Sources */,
 				662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */,
 				662A16C523C3EA9F00A3695E /* AddFriendsPresenter.swift in Sources */,
@@ -3583,11 +3690,13 @@
 				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
 				869BCA5C23E99C66000291EB /* DateOfBirthEndPoint.swift in Sources */,
+				86B601EF2405357100066042 /* SelectSportCell.swift in Sources */,
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
 				862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */,
 				860AB7FA23F2D177005691C1 /* SocialManager.swift in Sources */,
 				861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */,
+				862C47B024052A2F006EB93A /* FilterInteractor.swift in Sources */,
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
 				668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */,
@@ -3628,6 +3737,7 @@
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
+				862C47B124052A2F006EB93A /* FilterModel.swift in Sources */,
 				861D22D623DCAEF5004F16F1 /* GalleryInteractor.swift in Sources */,
 				8608423823DC815200BA87D7 /* SearchLocationPresenter.swift in Sources */,
 				668C212923C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift in Sources */,
@@ -3741,6 +3851,7 @@
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
 				668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */,
 				86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */,
+				862C47AE24052A2F006EB93A /* FilterRouter.swift in Sources */,
 				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
 				8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */,
 				860EFCAB2401671100B40901 /* ShowDetailsViewController.swift in Sources */,
@@ -3774,6 +3885,7 @@
 				86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
 				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
+				862C47AC24052A2F006EB93A /* FilterConfiguration.swift in Sources */,
 				86DB006A23D70B97001E99E8 /* GenderInteractor.swift in Sources */,
 				862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */,
 				662A168323C3E4B200A3695E /* TransactionsInteractor.swift in Sources */,
@@ -3949,7 +4061,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3971,7 +4083,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

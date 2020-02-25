@@ -3360,8 +3360,8 @@
 				6663360B23B40206004E537C /* Sources */,
 				6663360C23B40206004E537C /* Frameworks */,
 				6663360D23B40206004E537C /* Resources */,
-				82B588C1CBA59C9091BBE462 /* [CP] Embed Pods Frameworks */,
-				0CD478CDFDED9E2A8E6BC642 /* [CP] Copy Pods Resources */,
+				26DACBC8A789CF65B90308E6 /* [CP] Embed Pods Frameworks */,
+				82B53025B24ADF3CC9B61571 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -3475,21 +3475,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CD478CDFDED9E2A8E6BC642 /* [CP] Copy Pods Resources */ = {
+		26DACBC8A789CF65B90308E6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4373E5CCA3D2E7295F8CFE1F /* [CP] Check Pods Manifest.lock */ = {
@@ -3514,21 +3514,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82B588C1CBA59C9091BBE462 /* [CP] Embed Pods Frameworks */ = {
+		82B53025B24ADF3CC9B61571 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hi5/Pods-Hi5-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -46,7 +46,9 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
         configer()
     }
     //MARK: - Actions
-    
+    @IBAction func applyBtnTapped(_ sender: UIButton) {
+        router?.navigateToFilterResult()
+    }
     
 }
 

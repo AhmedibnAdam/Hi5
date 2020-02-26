@@ -45,6 +45,7 @@ enum GeneralRoute: IRouter {
     case fields
     case showDetailsFields(field: FieldsModel.Field)
     case filter
+    case filterResult
 }
 
 extension GeneralRoute {
@@ -108,6 +109,8 @@ extension GeneralRoute {
             return ShowDetailsConfiguration.setup(field: field)
         case .filter:
             return FilterConfiguration.setup()
+        case .filterResult:
+            return FilterResultConfiguration.setup()
         }
     }
 }

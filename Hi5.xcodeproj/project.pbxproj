@@ -416,6 +416,16 @@
 		86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */; };
 		86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */; };
 		86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */; };
+		86D8A2FC2406C978007BDA5E /* FilterResultConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2F42406C978007BDA5E /* FilterResultConfiguration.swift */; };
+		86D8A2FD2406C978007BDA5E /* FilterResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2F52406C978007BDA5E /* FilterResultPresenter.swift */; };
+		86D8A2FE2406C978007BDA5E /* FilterResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2F62406C978007BDA5E /* FilterResultRouter.swift */; };
+		86D8A2FF2406C978007BDA5E /* FilterResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2F72406C978007BDA5E /* FilterResultViewController.swift */; };
+		86D8A3002406C978007BDA5E /* FilterResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2F82406C978007BDA5E /* FilterResultInteractor.swift */; };
+		86D8A3012406C978007BDA5E /* FilterResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2F92406C978007BDA5E /* FilterResultModel.swift */; };
+		86D8A3022406C978007BDA5E /* FilterResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D8A2FA2406C978007BDA5E /* FilterResultViewController.xib */; };
+		86D8A3032406C978007BDA5E /* FilterResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A2FB2406C978007BDA5E /* FilterResultManager.swift */; };
+		86D8A30E2406CD61007BDA5E /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D8A30C2406CD61007BDA5E /* CalenderCell.swift */; };
+		86D8A30F2406CD61007BDA5E /* CalenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D8A30D2406CD61007BDA5E /* CalenderCell.xib */; };
 		86DB006623D70B97001E99E8 /* GenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB005E23D70B97001E99E8 /* GenderConfiguration.swift */; };
 		86DB006723D70B97001E99E8 /* GenderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB005F23D70B97001E99E8 /* GenderPresenter.swift */; };
 		86DB006823D70B97001E99E8 /* GenderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB006023D70B97001E99E8 /* GenderRouter.swift */; };
@@ -867,6 +877,16 @@
 		86BBEE5523CB5F840036C41D /* CreatePasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordModel.swift; sourceTree = "<group>"; };
 		86BBEE5623CB5F840036C41D /* CreatePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePasswordViewController.xib; sourceTree = "<group>"; };
 		86BBEE5723CB5F840036C41D /* CreatePasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordManager.swift; sourceTree = "<group>"; };
+		86D8A2F42406C978007BDA5E /* FilterResultConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultConfiguration.swift; sourceTree = "<group>"; };
+		86D8A2F52406C978007BDA5E /* FilterResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultPresenter.swift; sourceTree = "<group>"; };
+		86D8A2F62406C978007BDA5E /* FilterResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultRouter.swift; sourceTree = "<group>"; };
+		86D8A2F72406C978007BDA5E /* FilterResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultViewController.swift; sourceTree = "<group>"; };
+		86D8A2F82406C978007BDA5E /* FilterResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultInteractor.swift; sourceTree = "<group>"; };
+		86D8A2F92406C978007BDA5E /* FilterResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultModel.swift; sourceTree = "<group>"; };
+		86D8A2FA2406C978007BDA5E /* FilterResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterResultViewController.xib; sourceTree = "<group>"; };
+		86D8A2FB2406C978007BDA5E /* FilterResultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultManager.swift; sourceTree = "<group>"; };
+		86D8A30C2406CD61007BDA5E /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		86D8A30D2406CD61007BDA5E /* CalenderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalenderCell.xib; sourceTree = "<group>"; };
 		86DB005E23D70B97001E99E8 /* GenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderConfiguration.swift; sourceTree = "<group>"; };
 		86DB005F23D70B97001E99E8 /* GenderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPresenter.swift; sourceTree = "<group>"; };
 		86DB006023D70B97001E99E8 /* GenderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderRouter.swift; sourceTree = "<group>"; };
@@ -1086,6 +1106,7 @@
 		663409FB23B4C8E2009DB30A /* Fields */ = {
 			isa = PBXGroup;
 			children = (
+				86D8A2F32406C954007BDA5E /* FilterResult */,
 				862C47A324052A0F006EB93A /* Filter */,
 				860EFC9F240166F000B40901 /* ShowDetails */,
 				668C20E823C3F47200C009A9 /* Fields */,
@@ -2902,6 +2923,87 @@
 			path = EmailVerificationViews;
 			sourceTree = "<group>";
 		};
+		86D8A2F32406C954007BDA5E /* FilterResult */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A3092406C9D4007BDA5E /* FilterResultContracts */,
+				86D8A3062406C9A1007BDA5E /* FilterResultInteractor */,
+				86D8A3052406C993007BDA5E /* FilterResultPresenter */,
+				86D8A3072406C9AD007BDA5E /* FilterResultRouter */,
+				86D8A3082406C9BA007BDA5E /* FilterResultServices */,
+				86D8A3042406C97E007BDA5E /* FilterResultViews */,
+			);
+			path = FilterResult;
+			sourceTree = "<group>";
+		};
+		86D8A3042406C97E007BDA5E /* FilterResultViews */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A30B2406CD35007BDA5E /* CalenderCell */,
+				86D8A30A2406CD2D007BDA5E /* View */,
+			);
+			path = FilterResultViews;
+			sourceTree = "<group>";
+		};
+		86D8A3052406C993007BDA5E /* FilterResultPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A2F52406C978007BDA5E /* FilterResultPresenter.swift */,
+			);
+			path = FilterResultPresenter;
+			sourceTree = "<group>";
+		};
+		86D8A3062406C9A1007BDA5E /* FilterResultInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A2F82406C978007BDA5E /* FilterResultInteractor.swift */,
+			);
+			path = FilterResultInteractor;
+			sourceTree = "<group>";
+		};
+		86D8A3072406C9AD007BDA5E /* FilterResultRouter */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A2F62406C978007BDA5E /* FilterResultRouter.swift */,
+			);
+			path = FilterResultRouter;
+			sourceTree = "<group>";
+		};
+		86D8A3082406C9BA007BDA5E /* FilterResultServices */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A2F92406C978007BDA5E /* FilterResultModel.swift */,
+				86D8A2FB2406C978007BDA5E /* FilterResultManager.swift */,
+			);
+			path = FilterResultServices;
+			sourceTree = "<group>";
+		};
+		86D8A3092406C9D4007BDA5E /* FilterResultContracts */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A2F42406C978007BDA5E /* FilterResultConfiguration.swift */,
+			);
+			path = FilterResultContracts;
+			sourceTree = "<group>";
+		};
+		86D8A30A2406CD2D007BDA5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A2F72406C978007BDA5E /* FilterResultViewController.swift */,
+				86D8A2FA2406C978007BDA5E /* FilterResultViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		86D8A30B2406CD35007BDA5E /* CalenderCell */ = {
+			isa = PBXGroup;
+			children = (
+				86D8A30C2406CD61007BDA5E /* CalenderCell.swift */,
+				86D8A30D2406CD61007BDA5E /* CalenderCell.xib */,
+			);
+			path = CalenderCell;
+			sourceTree = "<group>";
+		};
 		86DB005D23D70B79001E99E8 /* Gender */ = {
 			isa = PBXGroup;
 			children = (
@@ -3465,9 +3567,11 @@
 				668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */,
 				86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */,
 				86268A2A23F72F1800EFD96B /* SechaduleViewController.xib in Resources */,
+				86D8A3022406C978007BDA5E /* FilterResultViewController.xib in Resources */,
 				668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */,
 				662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */,
 				86DB006C23D70B97001E99E8 /* GenderViewController.xib in Resources */,
+				86D8A30F2406CD61007BDA5E /* CalenderCell.xib in Resources */,
 				662A168523C3E4B200A3695E /* TransactionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3737,6 +3841,7 @@
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
+				86D8A3002406C978007BDA5E /* FilterResultInteractor.swift in Sources */,
 				862C47B124052A2F006EB93A /* FilterModel.swift in Sources */,
 				861D22D623DCAEF5004F16F1 /* GalleryInteractor.swift in Sources */,
 				8608423823DC815200BA87D7 /* SearchLocationPresenter.swift in Sources */,
@@ -3766,11 +3871,13 @@
 				66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */,
 				662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */,
 				86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */,
+				86D8A30E2406CD61007BDA5E /* CalenderCell.swift in Sources */,
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				6683E2DB23BCEBD900250702 /* SuggestedFieldsRouter.swift in Sources */,
 				868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */,
 				668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */,
+				86D8A2FE2406C978007BDA5E /* FilterResultRouter.swift in Sources */,
 				6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
 				6683E2DA23BCEBD900250702 /* SuggestedFieldsPresenter.swift in Sources */,
@@ -3817,6 +3924,7 @@
 				668C214D23C3F70F00C009A9 /* BookSessionModel.swift in Sources */,
 				86268A2423F72F1800EFD96B /* SechaduleConfiguration.swift in Sources */,
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
+				86D8A3012406C978007BDA5E /* FilterResultModel.swift in Sources */,
 				86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */,
 				867D9DB0240281D400A69A47 /* ServicesCell.swift in Sources */,
 				862EB5B023D730AD00508F1A /* DateOfBirthInteractor.swift in Sources */,
@@ -3850,6 +3958,7 @@
 				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
 				668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */,
+				86D8A2FD2406C978007BDA5E /* FilterResultPresenter.swift in Sources */,
 				86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */,
 				862C47AE24052A2F006EB93A /* FilterRouter.swift in Sources */,
 				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
@@ -3873,6 +3982,7 @@
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
+				86D8A2FC2406C978007BDA5E /* FilterResultConfiguration.swift in Sources */,
 				668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */,
 				6663365623B40318004E537C /* RegisterInteractor.swift in Sources */,
 				6683E2A823BB5FD900250702 /* MyFriendsManager.swift in Sources */,
@@ -3897,6 +4007,7 @@
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
+				86D8A3032406C978007BDA5E /* FilterResultManager.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,
 				86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */,
@@ -3908,6 +4019,7 @@
 				6683E2FB23BCEEB300250702 /* HelpCenterRouter.swift in Sources */,
 				668C215B23C3F75300C009A9 /* CheckOutConfirmationRouter.swift in Sources */,
 				86E1292F23D49E73007CB956 /* TabBarInteractor.swift in Sources */,
+				86D8A2FF2406C978007BDA5E /* FilterResultViewController.swift in Sources */,
 				6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */,
 				662A169623C3E75400A3695E /* MyFavoriteFriendsModel.swift in Sources */,
 				668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */,

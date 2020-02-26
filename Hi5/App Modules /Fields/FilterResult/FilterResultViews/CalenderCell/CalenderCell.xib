@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalenderCell" id="gTV-IL-0wX" customClass="CalenderCell" customModule="Hi5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="161" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="161" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77y-F2-MCd">
+                        <rect key="frame" x="0.0" y="0.0" width="161" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qwg-EJ-dqm">
+                                <rect key="frame" x="0.0" y="0.0" width="161" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLi-tv-0dj">
+                                        <rect key="frame" x="0.0" y="0.0" width="161" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVL-4u-634">
+                                        <rect key="frame" x="0.0" y="52.5" width="161" height="47.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Qwg-EJ-dqm" secondAttribute="bottom" id="79H-av-QCf"/>
+                            <constraint firstAttribute="trailing" secondItem="Qwg-EJ-dqm" secondAttribute="trailing" id="Kd4-la-iE3"/>
+                            <constraint firstItem="Qwg-EJ-dqm" firstAttribute="leading" secondItem="77y-F2-MCd" secondAttribute="leading" id="rmS-6O-aoz"/>
+                            <constraint firstItem="Qwg-EJ-dqm" firstAttribute="top" secondItem="77y-F2-MCd" secondAttribute="top" id="vdQ-KV-mqN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="77y-F2-MCd" secondAttribute="bottom" id="cYg-sI-3BI"/>
+                <constraint firstItem="77y-F2-MCd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jYn-vp-p4z"/>
+                <constraint firstAttribute="trailing" secondItem="77y-F2-MCd" secondAttribute="trailing" id="r3G-QA-0bF"/>
+                <constraint firstItem="77y-F2-MCd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wfb-0z-Qe2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="161" height="100"/>
+            <connections>
+                <outlet property="containerView" destination="77y-F2-MCd" id="oOV-dd-u5M"/>
+                <outlet property="dateLbl" destination="GVL-4u-634" id="QI3-4d-Y2X"/>
+                <outlet property="nameLbl" destination="zLi-tv-0dj" id="egg-kd-Vy7"/>
+            </connections>
+            <point key="canvasLocation" x="218.11594202898553" y="130.58035714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

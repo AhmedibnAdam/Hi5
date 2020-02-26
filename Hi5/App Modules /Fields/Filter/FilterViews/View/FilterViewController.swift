@@ -9,16 +9,19 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import TTRangeSlider
 
 protocol IFilterViewController: class {
 	var router: IFilterRouter? { get set }
     func showAlert(title: String, msg: String)
 }
 
-class FilterViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+class FilterViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , TTRangeSliderDelegate {
     //MARK: - properties
 	var interactor: IFilterInteractor?
 	var router: IFilterRouter?
+    var minRange: Float = 10
+    var maxRange: Float = 10
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
@@ -29,12 +32,13 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     }
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var rangeSlider: TTRangeSlider!
     
     //MARK: - ViewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
         registerCollectionCell()
+        rangeSlider.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         setupNavigationBar()
@@ -91,6 +95,16 @@ extension FilterViewController {
     }
 }
 
+extension FilterViewController {
+    func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
+        self.minRange = selectedMinimum
+        self.maxRange = selectedMaximum
+        print(minRange)
+        print(maxRange)
+    }
+}
+
+//MARK: - Extension UIButton
 @IBDesignable extension UIButton {
 
     @IBInspectable var borderWidth: CGFloat {

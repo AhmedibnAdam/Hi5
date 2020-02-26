@@ -15,6 +15,10 @@ protocol NotificationSettingControllerDelegate {
 
 class NotificationSettingContainerController: UIViewController {
     
+    
+    // @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
+    
     //MARK: - Properties
     var menuController: UIViewController!
     var centerController: UIViewController!
@@ -24,6 +28,7 @@ class NotificationSettingContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNotificationSettingControllerController()
+        
     }
     
     //MARK: - Handlers

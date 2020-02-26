@@ -41,6 +41,7 @@ class TabBarViewController: UITabBarController {
     
     lazy var notification: UIViewController = {
         let vc = NotificationSettingContainerController()
+      
          vc.tabBarItem.title = "notification"
          vc.tabBarItem.image = UIImage(named: "notification")
         //let nav = UINavigationController(rootViewController: vc)

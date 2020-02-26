@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationSettingViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
+                <outlet property="table" destination="7IQ-yY-7wO" id="fiX-fR-kid"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,42 +22,64 @@
                     <rect key="frame" x="0.0" y="0.0" width="447" height="850"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification  Setting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7C-aX-faS">
-                            <rect key="frame" x="148" y="30" width="151.5" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5d-ZN-xJO">
-                            <rect key="frame" x="20" y="29.5" width="20" height="22"/>
-                            <state key="normal" image="Back"/>
-                        </button>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7S2-8C-hhy">
-                            <rect key="frame" x="0.0" y="129" width="447" height="721"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUH-ND-IuU">
+                            <rect key="frame" x="16" y="202" width="415" height="446"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your notifications will appear here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yd8-ko-eEa">
+                                    <rect key="frame" x="30" y="275" width="355" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="Yd8-ko-eEa" firstAttribute="centerX" secondItem="kUH-ND-IuU" secondAttribute="centerX" id="7aE-Ea-9m8"/>
+                                <constraint firstItem="Yd8-ko-eEa" firstAttribute="leading" secondItem="kUH-ND-IuU" secondAttribute="leading" constant="30" id="kup-aH-Rjl"/>
+                                <constraint firstAttribute="trailing" secondItem="Yd8-ko-eEa" secondAttribute="trailing" constant="30" id="zdV-Ux-SxB"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notifications_grey_192x192" translatesAutoresizingMaskIntoConstraints="NO" id="GYb-JM-HUc">
+                            <rect key="frame" x="191.5" y="393" width="64" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="5xP-cJ-DH9"/>
+                                <constraint firstAttribute="width" constant="64" id="WUH-Ek-EEt"/>
+                            </constraints>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                        </imageView>
+                        <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7IQ-yY-7wO">
+                            <rect key="frame" x="0.0" y="183" width="447" height="667"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </tableView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstItem="7S2-8C-hhy" firstAttribute="leading" secondItem="l4E-3F-4q6" secondAttribute="leading" id="2gV-VD-ebD"/>
-                        <constraint firstItem="l4E-3F-4q6" firstAttribute="trailing" secondItem="7S2-8C-hhy" secondAttribute="trailing" id="7Rw-Nb-HX8"/>
-                        <constraint firstItem="r7C-aX-faS" firstAttribute="centerX" secondItem="l4E-3F-4q6" secondAttribute="centerX" id="8YK-hY-icB"/>
-                        <constraint firstItem="7S2-8C-hhy" firstAttribute="top" secondItem="r7C-aX-faS" secondAttribute="bottom" constant="78" id="ELa-wk-BG1"/>
-                        <constraint firstItem="U5d-ZN-xJO" firstAttribute="leading" secondItem="l4E-3F-4q6" secondAttribute="leading" constant="20" id="V4Y-hP-bQP"/>
-                        <constraint firstItem="l4E-3F-4q6" firstAttribute="bottom" secondItem="7S2-8C-hhy" secondAttribute="bottom" id="W9a-qb-sNa"/>
-                        <constraint firstItem="r7C-aX-faS" firstAttribute="top" secondItem="l4E-3F-4q6" secondAttribute="top" constant="30" id="wPI-Bx-pWJ"/>
-                        <constraint firstItem="U5d-ZN-xJO" firstAttribute="centerY" secondItem="r7C-aX-faS" secondAttribute="centerY" id="xFR-ma-HoZ"/>
+                        <constraint firstItem="Yd8-ko-eEa" firstAttribute="top" secondItem="GYb-JM-HUc" secondAttribute="bottom" constant="20" id="4OA-sF-vX5"/>
+                        <constraint firstItem="kUH-ND-IuU" firstAttribute="centerX" secondItem="l4E-3F-4q6" secondAttribute="centerX" id="IWh-q6-ICW"/>
+                        <constraint firstItem="7IQ-yY-7wO" firstAttribute="top" secondItem="l4E-3F-4q6" secondAttribute="top" constant="183" id="SZW-nG-LhA"/>
+                        <constraint firstItem="7IQ-yY-7wO" firstAttribute="bottom" secondItem="l4E-3F-4q6" secondAttribute="bottom" id="Tnf-K7-hbE"/>
+                        <constraint firstItem="GYb-JM-HUc" firstAttribute="centerX" secondItem="v3U-OU-fRE" secondAttribute="centerX" id="XgK-wB-P5n"/>
+                        <constraint firstItem="GYb-JM-HUc" firstAttribute="centerY" secondItem="v3U-OU-fRE" secondAttribute="centerY" id="gn5-au-5TY"/>
+                        <constraint firstItem="kUH-ND-IuU" firstAttribute="centerY" secondItem="l4E-3F-4q6" secondAttribute="centerY" id="hKc-9w-vpl"/>
+                        <constraint firstItem="7IQ-yY-7wO" firstAttribute="trailing" secondItem="l4E-3F-4q6" secondAttribute="trailing" id="hUf-B4-ekl"/>
+                        <constraint firstItem="7IQ-yY-7wO" firstAttribute="leading" secondItem="l4E-3F-4q6" secondAttribute="leading" id="izK-KA-F8p"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="l4E-3F-4q6"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kUH-ND-IuU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="202" id="1SM-o5-hca"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kUH-ND-IuU" secondAttribute="bottom" constant="202" id="6AU-0x-5zJ"/>
+                <constraint firstItem="kUH-ND-IuU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="acU-hV-8V8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kUH-ND-IuU" secondAttribute="trailing" constant="16" id="eUG-9s-Kos"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="60" y="-113.3433283358321"/>
         </view>
     </objects>
     <resources>
-        <image name="Back" width="20" height="21"/>
+        <image name="notifications_grey_192x192" width="192" height="192"/>
     </resources>
 </document>

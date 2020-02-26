@@ -14,6 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        NSSetUncaughtExceptionHandler { exception in
+           print(exception)
+           print(exception.callStackSymbols)
+        }
         GMSPlacesClient.provideAPIKey("AIzaSyCoVBRCbQ4-8y5LCj_m5Nu4Y0ea1ZYrIXQ")
         return true
     }

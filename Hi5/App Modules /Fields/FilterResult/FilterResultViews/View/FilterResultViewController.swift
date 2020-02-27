@@ -18,8 +18,10 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
    
 	var interactor: IFilterResultInteractor?
 	var router: IFilterResultRouter?
-    //var isSelected = false
+    var dayName: [String] = []
+    var dayMonth: [String] = []
     
+
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -30,6 +32,11 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         registerCalenderCollectionCell()
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getDayName()
+        
     }
     //MARK: - Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -43,8 +50,19 @@ extension FilterResultViewController: IFilterResultViewController {
 }
 
 extension FilterResultViewController {
-    
-	
+    func getDayName() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        for i in 1...14 {
+            let currentDate = date.getDate(dayDifference: i)
+            dateFormatter.dateFormat = "dd"
+            let dateInMonth = dateFormatter.string(from: currentDate - TimeInterval(i))
+            self.dayMonth.append(dateInMonth)
+            dateFormatter.dateFormat = "EEEE"
+            let dayInWeek = dateFormatter.string(from: currentDate - TimeInterval(i))
+            self.dayName.append(String(dayInWeek.prefix(3)))
+        }
+    }
 }
 
 //MARK: - CollectionViewMethods
@@ -56,11 +74,15 @@ extension FilterResultViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return 15
+        return dayName.count
     }
        
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalenderCell", for: indexPath) as! CalenderCell
+        let day = dayName[indexPath.row]
+        let date = dayMonth[indexPath.row]
+        cell.dateLbl.text = date
+        cell.nameLbl.text = day
         
         return cell
     }
@@ -81,5 +103,19 @@ extension FilterResultViewController {
         let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
         cell.isSelected = false
 
+    }
+}
+
+extension Date
+{
+    var startOfDay: Date
+    {
+        return Calendar.current.startOfDay(for: self)
+    }
+
+    func getDate(dayDifference: Int) -> Date {
+        var components = DateComponents()
+        components.day = dayDifference
+        return Calendar.current.date(byAdding: components, to:startOfDay)!
     }
 }

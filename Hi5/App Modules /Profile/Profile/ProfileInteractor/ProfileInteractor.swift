@@ -12,6 +12,7 @@ import UIKit
 
 protocol IProfileInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func doShowProfile(view : UIViewController)
 }
 
 class ProfileInteractor: IProfileInteractor {
@@ -22,5 +23,20 @@ class ProfileInteractor: IProfileInteractor {
     init(presenter: IProfilePresenter, manager: IProfileManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    
+    func doShowProfile(view : UIViewController){
+        manager?.showProfileFromApi(complition: { (error, success , data) in
+            if (success == true) {
+                self.presenter?.hideIndecator()
+                guard let data = data else {
+                    return 
+                }
+                self.presenter?.showResponse(data: data)
+            } else {
+                self.presenter?.hideIndecator()
+                self.presenter?.showErrorAlert(title: "\(error?.code ?? 400)", msg: (error?.message ?? "error"))
+            }
+        })
     }
 }

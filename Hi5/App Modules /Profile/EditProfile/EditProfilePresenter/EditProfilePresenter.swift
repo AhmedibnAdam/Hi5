@@ -11,13 +11,21 @@
 import UIKit
 
 protocol IEditProfilePresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+    func hideIndicator()
 }
 
-class EditProfilePresenter: IEditProfilePresenter {	
+class EditProfilePresenter: IEditProfilePresenter {
 	weak var view: IEditProfileViewController?
 	
 	init(view: IEditProfileViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
 }

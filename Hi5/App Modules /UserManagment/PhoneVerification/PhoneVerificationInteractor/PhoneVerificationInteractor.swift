@@ -39,8 +39,10 @@ class PhoneVerificationInteractor: IPhoneVerificationInteractor {
     func doResendVerificationCode(view: UIViewController) {
         manager?.ResendVerificationCodeFromApi(complition: { (error, succes) in
             if (succes == true) {
+                self.presenter?.hideIndicator()
                 print("Done Resend Verification Code......")
             } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
         })

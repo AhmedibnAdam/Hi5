@@ -12,6 +12,7 @@ import UIKit
 
 protocol IProfileRouter: class {
 	func navigateToEditProfile()
+    func navigateToTabBar()
 }
 
 class ProfileRouter: IProfileRouter {	
@@ -22,5 +23,8 @@ class ProfileRouter: IProfileRouter {
 	}
     func navigateToEditProfile() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.editProfile, completion: nil)
+    }
+    func navigateToTabBar() {
+        view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
 }

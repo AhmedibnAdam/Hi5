@@ -11,7 +11,10 @@
 import UIKit
 
 protocol IEditProfileRouter: class {
-	// do someting...
+	func navigateToGender()
+    func navigateToDateOfBirth()
+    func navigateToLocation()
+    func navigateToProfile()
 }
 
 class EditProfileRouter: IEditProfileRouter {	
@@ -20,4 +23,20 @@ class EditProfileRouter: IEditProfileRouter {
 	init(view: EditProfileViewController?) {
 		self.view = view
 	}
+    
+    func navigateToGender() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.gender, completion: nil)
+    }
+    
+    func navigateToDateOfBirth() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.dateOfBirth, completion: nil)
+    }
+    
+    func navigateToLocation() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.location, completion: nil)
+    }
+    
+    func navigateToProfile() {
+        view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+    }
 }

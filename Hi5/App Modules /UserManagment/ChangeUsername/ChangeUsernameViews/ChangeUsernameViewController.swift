@@ -14,13 +14,15 @@ protocol IChangeUsernameViewController: class {
 	var router: IChangeUsernameRouter? { get set }
     func showAlert(title: String, msg: String)
     func navigateToCreatePassword()
+    func hideIndicator()
 }
 
-class ChangeUsernameViewController: UIViewController {
+class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IChangeUsernameInteractor?
 	var router: IChangeUsernameRouter?
     //MARK:- Outlets
 
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var checkMark: UIImageView!
     @IBOutlet weak var changeBtn: UIButton!
@@ -31,8 +33,17 @@ class ChangeUsernameViewController: UIViewController {
     @IBOutlet weak var logoView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.usernameTextField.delegate = self
         initView()
         configer()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     //MARK:- Actions
     @IBAction func changeBtnTapped(_ sender: UIButton) {
@@ -54,6 +65,9 @@ extension ChangeUsernameViewController: IChangeUsernameViewController {
     func navigateToCreatePassword() {
         router?.navigateToCreatePassword()
     }
+    func hideIndicator() {
+        loadingIndicator.isHidden = true
+    }
 }
 
 extension ChangeUsernameViewController {
@@ -71,6 +85,10 @@ extension ChangeUsernameViewController {
     func configer(){
         router = ChangeUsernameRouter(view: self)
     }
+    
+    func showIndicator() {
+        loadingIndicator.isHidden = false
+    }
 }
 
 extension ChangeUsernameViewController {
@@ -85,12 +103,12 @@ extension ChangeUsernameViewController {
         } else {
             checkMark.isHidden = false
         }
+        showIndicator()
         interactor?.doChangeUserName(view: self, username: username)
     }
     
     func loginBtnAction() {
         router?.navigateToLogin()
-
     }
 }
 

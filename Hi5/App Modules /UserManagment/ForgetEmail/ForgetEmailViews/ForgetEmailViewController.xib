@@ -12,6 +12,7 @@
                 <outlet property="containerView" destination="neR-D8-Oqh" id="F67-xY-I7B"/>
                 <outlet property="continueBtn" destination="1kZ-W2-nt4" id="uZy-WZ-4CS"/>
                 <outlet property="emailTextField" destination="yE5-CX-KRV" id="HgU-LV-Sn9"/>
+                <outlet property="loadingIndicator" destination="kx7-kp-Uzq" id="CjM-og-3il"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,6 +65,10 @@
                     <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kx7-kp-Uzq">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -71,11 +76,13 @@
                 <constraint firstItem="ea2-Op-VuY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ERL-rU-p3p"/>
                 <constraint firstItem="neR-D8-Oqh" firstAttribute="top" secondItem="480-1W-Qta" secondAttribute="bottom" constant="80" id="I0O-ik-0X7"/>
                 <constraint firstItem="ea2-Op-VuY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="N8N-lr-KAo"/>
+                <constraint firstItem="kx7-kp-Uzq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Qcd-RM-fOz"/>
                 <constraint firstItem="neR-D8-Oqh" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="SVL-2i-Pfv"/>
                 <constraint firstItem="1kZ-W2-nt4" firstAttribute="trailing" secondItem="neR-D8-Oqh" secondAttribute="trailing" id="Uc1-NL-0h8"/>
                 <constraint firstItem="neR-D8-Oqh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="VAF-Nk-zaB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="neR-D8-Oqh" secondAttribute="trailing" constant="10" id="bM1-qE-w9m"/>
                 <constraint firstItem="1kZ-W2-nt4" firstAttribute="top" secondItem="neR-D8-Oqh" secondAttribute="bottom" constant="30.5" id="fbI-vw-OZP"/>
+                <constraint firstItem="kx7-kp-Uzq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qrm-Vf-3br"/>
                 <constraint firstItem="1kZ-W2-nt4" firstAttribute="leading" secondItem="neR-D8-Oqh" secondAttribute="leading" id="w9j-uP-aSb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

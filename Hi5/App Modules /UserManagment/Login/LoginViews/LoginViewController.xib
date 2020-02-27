@@ -13,6 +13,7 @@
                 <outlet property="doLoginButtonOutlet" destination="kRK-uE-ILS" id="9Hu-B1-ZeV"/>
                 <outlet property="eyeBtn" destination="zQe-ux-wmW" id="biK-XW-8Ax"/>
                 <outlet property="forgetPasswordOutlet" destination="J8I-iM-2Od" id="Yae-jp-JFZ"/>
+                <outlet property="loadingIndicator" destination="QIn-CI-xVw" id="wUf-PA-EYv"/>
                 <outlet property="nameView" destination="PPY-lf-XNH" id="TN2-mZ-fXe"/>
                 <outlet property="password" destination="EUB-wR-JIE" id="J61-dn-tE6"/>
                 <outlet property="passwordView" destination="rax-Fc-E61" id="FRY-x2-SAP"/>
@@ -215,12 +216,18 @@
                                 <constraint firstAttribute="trailing" secondItem="Chn-U2-hk8" secondAttribute="trailing" id="oWq-Hz-Yec"/>
                             </constraints>
                         </stackView>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-CI-xVw">
+                            <rect key="frame" x="169" y="206.5" width="37" height="37"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="QIn-CI-xVw" firstAttribute="centerY" secondItem="kRK-uE-ILS" secondAttribute="centerY" id="3Ed-eW-nId"/>
                         <constraint firstItem="y4x-xX-h5S" firstAttribute="leading" secondItem="haf-6P-mB2" secondAttribute="leading" constant="20" id="DRy-QI-DSy"/>
                         <constraint firstAttribute="trailing" secondItem="y4x-xX-h5S" secondAttribute="trailing" constant="20" id="GF3-qj-U51"/>
                         <constraint firstItem="y4x-xX-h5S" firstAttribute="top" secondItem="haf-6P-mB2" secondAttribute="top" constant="30" id="Kl3-kL-qqW"/>
+                        <constraint firstItem="QIn-CI-xVw" firstAttribute="centerX" secondItem="kRK-uE-ILS" secondAttribute="centerX" id="v3a-oN-SOC"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exf-ls-efi">

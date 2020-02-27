@@ -38,8 +38,10 @@ class SignupPhoneVerificationInteractor: ISignupPhoneVerificationInteractor {
     func doSignupResendVerificationCode(view: UIViewController) {
         manager?.signupResendVerificationCodeFromApi(complition: { (error, succes) in
             if (succes == true) {
+                self.presenter?.hideIndicator()
                 print("Done Resend Verification Code......")
             } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
         })

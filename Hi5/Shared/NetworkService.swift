@@ -16,13 +16,12 @@ protocol IEndpoint {
     var method: HTTPMethod { get }
     var path: String { get }
     var parameter: Parameters? { get }
+    var image: UIImage? { get }
     var header: HTTPHeaders? { get }
     var encoding: ParameterEncoding { get }
 }
-
 class NetworkService {
     static let share = NetworkService()
-    
     private var dataRequest: DataRequest?
     private var success: ((_ data: Data?)->Void)?
     private var failure: ((_ error: Error?)->Void)?
@@ -58,20 +57,20 @@ class NetworkService {
                 case .failure(let error):
                     print(error)
                 }
-
+                
             })
-//            self.dataRequest?.responseJSON(completionHandler: { (response) in
-//
-//                 let statusCode = response.response?.statusCode
-//                print(statusCode!)
-//
-//                switch response.result {
-//                case .success(let value):
-//                    success?(JSON(value))
-//                case .failure(let error):
-//                    print(error)
-//                }
-//            })
+            //            self.dataRequest?.responseJSON(completionHandler: { (response) in
+            //
+            //                 let statusCode = response.response?.statusCode
+            //                print(statusCode!)
+            //
+            //                switch response.result {
+            //                case .success(let value):
+            //                    success?(JSON(value))
+            //                case .failure(let error):
+            //                    print(error)
+            //                }
+            //            })
         }
     }
     
@@ -98,4 +97,43 @@ class NetworkService {
         failure = completion
         return self
     }
+}
+
+//MARK:-  Upload Request
+extension NetworkService {
+    
+    func uploadToServerWith<T: IEndpoint>(endpoint: T , success: ((_ data: Data)->Void)? = nil, failure: ((_ error: Error?)->Void)? = nil) {
+        DispatchQueue.global(qos: .background).async {
+            let image = endpoint.image!
+            let imgData = image.jpegData(compressionQuality: 0.1)!
+            Alamofire.upload(multipartFormData: { multipartFormData in
+                multipartFormData.append(imgData, withName: "avatar",fileName: "avatar", mimeType: "avatar/jpg")
+                for (key, value) in endpoint.parameter ?? ["":""] {
+                    multipartFormData.append(((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!), withName: key)
+                }
+            }, usingThreshold:UInt64.init(), to:endpoint.path , method:.post, headers: endpoint.header)
+            { (result) in
+                switch result {
+                case .success(let upload, _ , _):
+                    //  success?(value)
+                    upload.uploadProgress(closure: { (Progress) in
+                        print("Upload Progress: \(Progress.fractionCompleted)")
+                    })
+                    upload.responseData { (response) in
+                        switch response.result {
+                        case .success (let value):
+                            success?(value)
+                        case .failure(let error):
+                            print(error)
+                        }
+                        
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+                
+            }
+        }
+    }
+    
 }

@@ -14,21 +14,20 @@ protocol IRegisterPresenter: class {
 	// MARK : - do someting...
     func showErrorAlert(title: String, msg: String)
     func navigateToSignupPhoneVerification()
+    func hideIndicator()
 }
-
 class RegisterPresenter: IRegisterPresenter {
-
 	weak var view: IRegisterViewController?
-	
 	init(view: IRegisterViewController?) {
 		self.view = view
 	}
-    
     func showErrorAlert(title: String, msg: String) {
         view?.showAlert(title: title, msg: msg)
     }
-    
     func navigateToSignupPhoneVerification() {
         view?.navigateToSignupPhoneVerification()
+    }
+    func hideIndicator() {
+        view?.hideIndicator()
     }
 }

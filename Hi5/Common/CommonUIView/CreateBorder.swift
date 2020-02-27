@@ -21,5 +21,5 @@ class CreateBorder {
            button.layer.borderWidth = width
            button.layer.borderColor = color
            return button
-       }
+    }
 }

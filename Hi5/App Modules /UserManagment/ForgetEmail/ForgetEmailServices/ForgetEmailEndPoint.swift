@@ -14,6 +14,10 @@ enum ForgetEmailEndpoint {
 }
 //MARK:- extensions
 extension ForgetEmailEndpoint: IEndpoint {
+    var image: UIImage? {
+        return nil
+    }
+    
     var method: HTTPMethod {
         switch self {
         case .ForgetEmail:

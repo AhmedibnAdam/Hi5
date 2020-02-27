@@ -22,6 +22,7 @@ protocol IFieldsManager: class {
 }
 
 class FieldsManager: IFieldsManager {
+    
     func removeFavouriteFromApi(fieldId: Int, complition: @escaping (ErrorModel?, Bool, FieldsModel.RemovefavouriteResponse?) -> Void) {
             NetworkService.share.request(endpoint: FieldsEndpoint.removeFavourite(fieldId: fieldId), success: { (responseData) in
             let response = responseData

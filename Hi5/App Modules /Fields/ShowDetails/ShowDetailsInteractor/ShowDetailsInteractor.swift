@@ -12,6 +12,9 @@ import UIKit
 
 protocol IShowDetailsInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func showDetails(view: UIViewController , fieldId: Int)
+    func requestMemberShip(view: UIViewController , fieldId: Int)
+    func cancelRequestMemberShip(view: UIViewController , fieldId: Int)
 }
 
 class ShowDetailsInteractor: IShowDetailsInteractor {
@@ -22,5 +25,33 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
     init(presenter: IShowDetailsPresenter, manager: IShowDetailsManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func showDetails(view: UIViewController, fieldId: Int) {
+        manager?.showDetailsFromApi(id: fieldId, complition: { (error, success, response) in
+            if (success == true){
+                guard let response = response else {return}
+                self.presenter?.showDetailsResponse(response: response)
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    func requestMemberShip(view: UIViewController, fieldId: Int) {
+        manager?.requestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
+            if (success == true){
+                
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
+    }
+    func cancelRequestMemberShip(view: UIViewController, fieldId: Int) {
+        manager?.cancelRequestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
+            if(success == true){
+                
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

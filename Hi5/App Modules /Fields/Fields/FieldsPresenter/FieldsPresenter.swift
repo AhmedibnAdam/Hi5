@@ -19,7 +19,7 @@ protocol IFieldsPresenter: class {
     func showNoFavouriteFields()
 }
 
-class FieldsPresenter: IFieldsPresenter {	
+class FieldsPresenter: IFieldsPresenter {
 	weak var view: IFieldsViewController?
 	
 	init(view: IFieldsViewController?) {
@@ -43,4 +43,5 @@ class FieldsPresenter: IFieldsPresenter {
     func showNoFavouriteFields(){
         view?.showNoFavouriteFields()
     }
+    
 }

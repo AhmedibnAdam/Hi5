@@ -133,5 +133,4 @@ extension LoginViewController {
         }
         interactor?.doLogin(view: self, userName: userName, password: password)
     }
-    
 }

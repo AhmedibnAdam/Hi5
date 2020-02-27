@@ -14,7 +14,7 @@ protocol FavouriteTableViewCellDelegate: class{
 }
 
 protocol ShowDetailsTableViewCellDelegate: class {
-    func showDetailsDidTap(_ button: UIButton , cell: UITableViewCell , id: Int)
+    func showDetailsDidTap(_ button: UIButton , cell: UITableViewCell , field: FieldsModel.Field)
 }
 class FieldsTableViewCell: UITableViewCell {
 
@@ -42,6 +42,7 @@ class FieldsTableViewCell: UITableViewCell {
     weak var delegate: FavouriteTableViewCellDelegate?
     weak var showDetailsDelegate: ShowDetailsTableViewCellDelegate?
     var fieldId: Int?
+    var field: FieldsModel.Field?
     
     //MARK: - View Life cycle
     override func awakeFromNib() {
@@ -57,8 +58,8 @@ class FieldsTableViewCell: UITableViewCell {
     
     //MARK: - Actions
     @IBAction func showDetailsBtnTapped(_ sender: UIButton) {
-        if let id = fieldId {
-             showDetailsDelegate?.showDetailsDidTap(sender, cell: self, id: id)
+        if let field = field {
+             showDetailsDelegate?.showDetailsDidTap(sender, cell: self, field: field)
         }
     }
     

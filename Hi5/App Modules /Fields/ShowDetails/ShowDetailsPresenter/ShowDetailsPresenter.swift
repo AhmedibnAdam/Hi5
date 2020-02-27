@@ -11,13 +11,20 @@
 import UIKit
 
 protocol IShowDetailsPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse)
 }
 
-class ShowDetailsPresenter: IShowDetailsPresenter {	
+class ShowDetailsPresenter: IShowDetailsPresenter {
 	weak var view: IShowDetailsViewController?
 	
 	init(view: IShowDetailsViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse) {
+        view?.showDetailsResponse(response: response)
+    }
 }

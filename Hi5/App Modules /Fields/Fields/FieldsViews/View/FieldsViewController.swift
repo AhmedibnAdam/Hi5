@@ -65,7 +65,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
 
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
             CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
-            print(locManager.location)
+            //print(locManager.location)
             guard let currentLocation = locManager.location else {
                 return
             }
@@ -77,6 +77,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
 
 //MARK: - Extensions
 extension FieldsViewController: IFieldsViewController {
+    
      func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
@@ -176,7 +177,7 @@ extension FieldsViewController {
     }
     
     @objc func searchSession() {
-        
+        router?.navigateToFilter()
     }
     
     func alert() {
@@ -187,7 +188,6 @@ extension FieldsViewController {
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
             self.removeNoFavouriteFields()
             self.removeNoMemberFields()
-            //self.tableView.isHidden = true
         }
         
         alert.addAction(cancel)
@@ -219,6 +219,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         cell.companyName.text = nearFields.partnerName
         cell.visibilitylbl.text = nearFields.visibility
         cell.fieldId = nearFields.id
+        cell.field = nearFields
         if let cost = nearFields.cost {
             cell.costLbl.text = "StartedFrom:$\(String(describing: cost))/hour"
         }
@@ -227,9 +228,9 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         }
         
         if let partnerImg = nearFields.partnerImage {
-            let url = URL(fileURLWithPath: partnerImg)
+            let url = URL(string: partnerImg)
             DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url) {
+                if let data = try? Data(contentsOf: url!) {
                     DispatchQueue.main.async {
                         cell.companyImg.image = UIImage(data: data)
                     }
@@ -256,6 +257,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         
         cell.delegate = self
         cell.showDetailsDelegate = self
+        cell.showDetailsBtn.tag = indexPath.row
         
         return cell
     }
@@ -271,8 +273,9 @@ extension FieldsViewController: FavouriteTableViewCellDelegate {
 }
 
 extension FieldsViewController: ShowDetailsTableViewCellDelegate {
-    func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, id: Int) {
-        router?.navigateToShowdetails()
+    func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, field: FieldsModel.Field) {
+        print("\(field.id)..........")
+        router?.navigateToShowdetails(field: field)
     }
 }
 

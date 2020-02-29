@@ -75,31 +75,6 @@ extension PublicEventsViewController {
     func setScrollPosition(_ position: CGFloat) {
         self.collectionView.contentOffset = CGPoint(x: self.collectionView.contentOffset.x, y: position)
     }
-    func scrollViewDidStopScrolling() {
-        let range = self.maxHeaderHeight - self.minHeaderHeight
-        let midPoint = self.minHeaderHeight + (range / 2)
-        
-        if self.headerViewHeight.constant > midPoint {
-            self.expandHeader()
-        } else {
-            self.collapseHeader()
-        }
-    }
-    func collapseHeader() {
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.headerViewHeight.constant = self.minHeaderHeight
-            self.view.layoutIfNeeded()
-        })
-    }
-    
-    func expandHeader() {
-        self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.2, animations: {
-            self.headerViewHeight.constant = self.maxHeaderHeight
-            self.view.layoutIfNeeded()
-        })
-    }
     func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
         if dayIsSelected[indexPath.row] {
             dayIsSelected[indexPath.row] = false
@@ -158,17 +133,9 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
 }
 extension PublicEventsViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        defer {
-            self.previousScrollViewHeight = scrollView.contentSize.height
-            self.previousScrollOffset = scrollView.contentOffset.y
-        }
-        let heightDiff = scrollView.contentSize.height - self.previousScrollViewHeight
         let scrollDiff = (scrollView.contentOffset.y - self.previousScrollOffset)
-        guard heightDiff == 0 else { return }
-        
-        let absoluteTop: CGFloat = 0;
-        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height;
-        
+        let absoluteTop: CGFloat = 0
+        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
         let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
         let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
         if canAnimateHeader(scrollView) {
@@ -181,16 +148,8 @@ extension PublicEventsViewController {
             if newHeight != self.headerViewHeight.constant {
                 self.headerViewHeight.constant = newHeight
                 self.setScrollPosition(self.previousScrollOffset)
+                previousScrollOffset = scrollView.contentOffset.y
             }
         }
     }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        self.scrollViewDidStopScrolling()
-    }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate {
-            self.scrollViewDidStopScrolling()
-        }
-    }
-    
 }

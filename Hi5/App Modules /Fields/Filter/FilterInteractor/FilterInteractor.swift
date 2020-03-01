@@ -12,6 +12,7 @@ import UIKit
 
 protocol IFilterInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func suggestionField(view : UIViewController)
 }
 
 class FilterInteractor: IFilterInteractor {
@@ -22,5 +23,16 @@ class FilterInteractor: IFilterInteractor {
     init(presenter: IFilterPresenter, manager: IFilterManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func suggestionField(view: UIViewController) {
+        manager?.suggestionFieldFromApi(complition: { (error, success, response) in
+            if (success == true) {
+                if let resp = response {
+                    self.presenter?.showResponse(response: resp)
+                }
+            } else {
+                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+            }
+        })
     }
 }

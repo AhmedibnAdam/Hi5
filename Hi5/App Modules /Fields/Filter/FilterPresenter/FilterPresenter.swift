@@ -11,7 +11,8 @@
 import UIKit
 
 protocol IFilterPresenter: class {
-	// do someting...
+   func showErrorAlert(title: String, msg: String)
+   func showResponse(response: FilterModel.SuggestionFieldResponse)
 }
 
 class FilterPresenter: IFilterPresenter {	
@@ -20,4 +21,10 @@ class FilterPresenter: IFilterPresenter {
 	init(view: IFilterViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    func showResponse(response: FilterModel.SuggestionFieldResponse) {
+        view?.showResponse(response: response)
+    }
 }

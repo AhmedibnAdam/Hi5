@@ -14,6 +14,7 @@ import TTRangeSlider
 protocol IFilterViewController: class {
 	var router: IFilterRouter? { get set }
     func showAlert(title: String, msg: String)
+    func showResponse(response: FilterModel.SuggestionFieldResponse)
 }
 
 class FilterViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , TTRangeSliderDelegate {
@@ -21,7 +22,17 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
 	var interactor: IFilterInteractor?
 	var router: IFilterRouter?
     var minRange: Float = 10
-    var maxRange: Float = 10
+    var maxRange: Float = 14
+    var sports: [FilterModel.Sport] = []
+    var sportId = 11
+    var nearByField: Bool?
+    var lat: Double?
+    var long: Double?
+    var favourite: Bool?
+    var memberOf: Bool?
+    var gender: String?
+    var fee: String?
+    var bestFor: String?
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
@@ -45,9 +56,100 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
         initView()
         configer()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        interactor?.suggestionField(view: self)
+    }
     //MARK: - Actions
     @IBAction func applyBtnTapped(_ sender: UIButton) {
         router?.navigateToFilterResult()
+    }
+    @IBAction func nearByBtntapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.nearByField = true
+            self.lat = 31.276941
+            self.long = 31.276941
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.nearByField = nil
+            self.lat = nil
+            self.long = nil
+        }
+    }
+    
+    @IBAction func favouriteBtnTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.favourite = true
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.favourite = nil
+        }
+    }
+    
+    @IBAction func memberOfBtnTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.memberOf = true
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.memberOf = nil
+        }
+    }
+    
+    @IBAction func maleBtnTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.gender = "male"
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.gender = nil
+        }
+    }
+    
+    @IBAction func femaleBtnTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.gender = "female"
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.gender = nil
+        }
+    }
+    
+    @IBAction func freeBtnTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.fee = "free"
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.fee = nil
+        }
+    }
+    
+    @IBAction func paidBtnTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.textColor == UIColor.lightGray) {
+            sender.setTitleColor(.orange, for: .normal)
+            sender.borderColor = .orange
+            self.fee = "paid"
+        } else {
+            sender.setTitleColor(.lightGray, for: .normal)
+            sender.borderColor = .lightGray
+            self.fee = nil
+        }
     }
     
 }
@@ -57,9 +159,15 @@ extension FilterViewController: IFilterViewController {
     func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
+    func showResponse(response: FilterModel.SuggestionFieldResponse) {
+        guard let resp = response.data?.sports else {return}
+        self.sports = resp
+        self.collectionView.reloadData()
+    }
 
 }
 
+//MARK: - Extension
 extension FilterViewController {
     func setupNavigationBar() {
         navigationItem.title = "Filter"
@@ -83,13 +191,39 @@ extension FilterViewController {
             collectionView.register(cell, forCellWithReuseIdentifier: "SelectSportCell")
     }
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return sports.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectSportCell", for: indexPath) as! SelectSportCell
+        let sport = sports[indexPath.row]
+        cell.sportNameLbl.text = sport.name
+        if let sportImg = sport.icon {
+            let url = URL(string: sportImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!){
+                    DispatchQueue.main.async {
+                        cell.sportImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SelectSportCell
+        cell.isSelected = true
+        let sport = sports[indexPath.row]
+        self.sportId = sport.id ?? 11
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SelectSportCell
+        cell.isSelected = false
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let width = collectionView.frame.width / 4
             let height = collectionView.frame.height

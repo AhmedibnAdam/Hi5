@@ -17,7 +17,28 @@ struct FilterModel {
 		}
 	}
 
-	struct Response {
-		// do someting...
-	}
+	struct SuggestionFieldResponse: Codable {
+        let status: Bool?
+        let data: DataClass?
+    }
+
+    // MARK: - DataClass
+    struct DataClass: Codable {
+        let sports: [Sport]?
+        let floors: [Floor]?
+    }
+
+    // MARK: - Floor
+    struct Floor: Codable {
+        let id: Int?
+        let name: String?
+    }
+
+    // MARK: - Sport
+    struct Sport: Codable {
+        let id: Int?
+        let name: String?
+        let icon: String?
+    }
+
 }

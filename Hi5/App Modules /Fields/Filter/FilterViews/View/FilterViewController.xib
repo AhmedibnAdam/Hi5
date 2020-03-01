@@ -54,7 +54,7 @@
                                 <constraint firstAttribute="height" constant="35" id="ess-mY-RIs"/>
                             </constraints>
                             <state key="normal" title="Nearby fields">
-                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -67,6 +67,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="nearByBtntapped:" destination="-1" eventType="touchUpInside" id="88f-Zk-FtM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzl-go-EH0">
                             <rect key="frame" x="196" y="0.0" width="139" height="35"/>
@@ -74,7 +77,7 @@
                                 <constraint firstAttribute="height" constant="35" id="Zy9-7S-rd3"/>
                             </constraints>
                             <state key="normal" title="Favourites">
-                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -87,6 +90,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="favouriteBtnTapped:" destination="-1" eventType="touchUpInside" id="XHZ-Cn-Cn7"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -97,7 +103,7 @@
                         <constraint firstAttribute="width" constant="100" id="mnU-0Q-UWV"/>
                     </constraints>
                     <state key="normal" title="Member of">
-                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -110,6 +116,9 @@
                             <real key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="memberOfBtnTapped:" destination="-1" eventType="touchUpInside" id="a7T-Kq-Yk9"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time range:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBQ-cg-2b4">
                     <rect key="frame" x="30" y="311" width="91" height="20.5"/>
@@ -181,7 +190,7 @@
                                 <constraint firstAttribute="height" constant="35" id="wFp-my-5AD"/>
                             </constraints>
                             <state key="normal" title="Male">
-                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -194,6 +203,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="maleBtnTapped:" destination="-1" eventType="touchUpInside" id="z3v-SX-qFU"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIM-ee-9qR">
                             <rect key="frame" x="141" y="0.0" width="194" height="35"/>
@@ -201,7 +213,7 @@
                                 <constraint firstAttribute="height" constant="35" id="r23-tp-XCe"/>
                             </constraints>
                             <state key="normal" title="Female">
-                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -214,6 +226,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="femaleBtnTapped:" destination="-1" eventType="touchUpInside" id="qyb-3H-rre"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
@@ -232,7 +247,7 @@
                                 <constraint firstAttribute="height" constant="35" id="m1w-Ld-ENd"/>
                             </constraints>
                             <state key="normal" title="Free">
-                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -245,6 +260,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="freeBtnTapped:" destination="-1" eventType="touchUpInside" id="Z0m-Be-CJx"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBi-HY-sIg">
                             <rect key="frame" x="178" y="0.0" width="157" height="35"/>
@@ -252,7 +270,7 @@
                                 <constraint firstAttribute="height" constant="35" id="laV-De-Dtl"/>
                             </constraints>
                             <state key="normal" title="Paid">
-                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -265,6 +283,9 @@
                                     <real key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="paidBtnTapped:" destination="-1" eventType="touchUpInside" id="yPZ-92-OZf"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

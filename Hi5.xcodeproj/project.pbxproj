@@ -453,6 +453,8 @@
 		86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1292823D49E73007CB956 /* TabBarModel.swift */; };
 		86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86E1292923D49E73007CB956 /* TabBarViewController.xib */; };
 		86E1293223D49E73007CB956 /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E1292A23D49E73007CB956 /* TabBarManager.swift */; };
+		86F1D319240BEAF500441542 /* FilterResultEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1D318240BEAF500441542 /* FilterResultEndPoint.swift */; };
+		86F1D31B240BED5500441542 /* FilterendPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F1D31A240BED5500441542 /* FilterendPoint.swift */; };
 		86F4CE1C2402E2DE007F7FF9 /* ShowDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F4CE1B2402E2DE007F7FF9 /* ShowDetailsEndPoint.swift */; };
 		86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90223DDAAA5008C1F80 /* LocationConfiguration.swift */; };
 		86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90323DDAAA5008C1F80 /* LocationPresenter.swift */; };
@@ -916,6 +918,8 @@
 		86E1292823D49E73007CB956 /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
 		86E1292923D49E73007CB956 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		86E1292A23D49E73007CB956 /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
+		86F1D318240BEAF500441542 /* FilterResultEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultEndPoint.swift; sourceTree = "<group>"; };
+		86F1D31A240BED5500441542 /* FilterendPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterendPoint.swift; sourceTree = "<group>"; };
 		86F4CE1B2402E2DE007F7FF9 /* ShowDetailsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsEndPoint.swift; sourceTree = "<group>"; };
 		86F9B90223DDAAA5008C1F80 /* LocationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationConfiguration.swift; sourceTree = "<group>"; };
 		86F9B90323DDAAA5008C1F80 /* LocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresenter.swift; sourceTree = "<group>"; };
@@ -2229,6 +2233,7 @@
 			children = (
 				862C47A924052A2F006EB93A /* FilterModel.swift */,
 				862C47AB24052A2F006EB93A /* FilterManager.swift */,
+				86F1D31A240BED5500441542 /* FilterendPoint.swift */,
 			);
 			path = FilterServices;
 			sourceTree = "<group>";
@@ -2988,6 +2993,7 @@
 			children = (
 				86D8A2F92406C978007BDA5E /* FilterResultModel.swift */,
 				86D8A2FB2406C978007BDA5E /* FilterResultManager.swift */,
+				86F1D318240BEAF500441542 /* FilterResultEndPoint.swift */,
 			);
 			path = FilterResultServices;
 			sourceTree = "<group>";
@@ -3754,6 +3760,7 @@
 				667E4B7223C3DCA3007354A7 /* MakeWalletPasswordViewController.swift in Sources */,
 				6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */,
 				667E4B8723C3E169007354A7 /* AddFundManager.swift in Sources */,
+				86F1D319240BEAF500441542 /* FilterResultEndPoint.swift in Sources */,
 				8611E00E23F9538B0024D517 /* ContainerController.swift in Sources */,
 				668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */,
 				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
@@ -3810,6 +3817,7 @@
 				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
 				869BCA5C23E99C66000291EB /* DateOfBirthEndPoint.swift in Sources */,
+				86F1D31B240BED5500441542 /* FilterendPoint.swift in Sources */,
 				86B601EF2405357100066042 /* SelectSportCell.swift in Sources */,
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,

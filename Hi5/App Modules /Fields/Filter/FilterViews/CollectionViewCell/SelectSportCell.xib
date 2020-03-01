@@ -67,6 +67,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="151" height="131"/>
+            <connections>
+                <outlet property="sportImg" destination="vEE-uz-w95" id="rle-Vw-th3"/>
+                <outlet property="sportNameLbl" destination="52m-0c-4nw" id="P6a-ds-TqV"/>
+            </connections>
             <point key="canvasLocation" x="210.86956521739131" y="102.79017857142857"/>
         </collectionViewCell>
     </objects>

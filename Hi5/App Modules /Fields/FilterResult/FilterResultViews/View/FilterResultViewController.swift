@@ -24,7 +24,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
 
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK: - View Life Cycle
 	override func viewDidLoad() {
@@ -32,6 +32,9 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         registerCalenderCollectionCell()
         collectionView.delegate = self
         collectionView.dataSource = self
+        registerTableViewcell()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +66,24 @@ extension FilterResultViewController {
             self.dayName.append(String(dayInWeek.prefix(3)))
         }
     }
+}
+
+//MARK: - TableViewMethods
+extension FilterResultViewController: UITableViewDelegate , UITableViewDataSource {
+    func registerTableViewcell() {
+        let cell = UINib(nibName: "FieldCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "FieldCell")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell") as! FieldCell
+        return cell
+    }
+    
 }
 
 //MARK: - CollectionViewMethods
@@ -106,6 +127,7 @@ extension FilterResultViewController {
     }
 }
 
+//MARK: - Extebsion Date
 extension Date
 {
     var startOfDay: Date

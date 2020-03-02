@@ -21,8 +21,8 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     //MARK: - properties
 	var interactor: IFilterInteractor?
 	var router: IFilterRouter?
-    var minRange: Float = 10
-    var maxRange: Float = 14
+    var minRange: String = "10.0"
+    var maxRange: String = "14.0"
     var sports: [FilterModel.Sport] = []
     var sportId = 11
     var nearByField: Bool?
@@ -271,8 +271,8 @@ extension FilterViewController {
 
 extension FilterViewController {
     func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
-        self.minRange = selectedMinimum
-        self.maxRange = selectedMaximum
+        self.minRange = String(selectedMinimum)
+        self.maxRange = String(selectedMaximum)
         print(minRange)
         print(maxRange)
     }

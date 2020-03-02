@@ -20,7 +20,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
 	var router: IFilterResultRouter?
     var dayName: [String] = []
     var dayMonth: [String] = []
-    var parameter: [String: Any]?
+    var parameter: [String: Any] = [:]
     var selectedDay: String?
     
     //MARK: - Outlets
@@ -46,10 +46,8 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDay = dateFormatter.string(from: selectDay)
         if let currentDay = selectedDay {
-            parameter = ["date": currentDay]
-            if let param = parameter {
-                interactor?.filterSession(view: self, parameter: param)
-            }
+            parameter["date"] = currentDay
+                interactor?.filterSession(view: self, parameter: parameter)
         }
     }
     //MARK: - Actions

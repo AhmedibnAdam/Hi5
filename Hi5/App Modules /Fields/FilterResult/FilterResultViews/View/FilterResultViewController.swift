@@ -20,8 +20,9 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
 	var router: IFilterResultRouter?
     var dayName: [String] = []
     var dayMonth: [String] = []
+    var parameter: [String: Any]?
+    var selectedDay: String?
     
-
     //MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
@@ -39,7 +40,17 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     
     override func viewWillAppear(_ animated: Bool) {
         getDayName()
-        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        let selectDay = date.getDate(dayDifference: 0)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        selectedDay = dateFormatter.string(from: selectDay)
+        if let currentDay = selectedDay {
+            parameter = ["date": currentDay]
+            if let param = parameter {
+                interactor?.filterSession(view: self, parameter: param)
+            }
+        }
     }
     //MARK: - Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -117,7 +128,14 @@ extension FilterResultViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
         cell.isSelected = true
-
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        let selectDay = date.getDate(dayDifference: indexPath.row)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        selectedDay = dateFormatter.string(from: selectDay)
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

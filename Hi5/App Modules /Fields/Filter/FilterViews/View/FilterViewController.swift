@@ -33,6 +33,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     var gender: String?
     var fee: String?
     var bestFor: String?
+    var param: [String: Any]?
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
@@ -62,7 +63,10 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     }
     //MARK: - Actions
     @IBAction func applyBtnTapped(_ sender: UIButton) {
-        router?.navigateToFilterResult()
+        param = ["sport_type_id": sportId , "start_time": minRange , "end_time": maxRange]
+        if let param = param {
+            router?.navigateToFilterResult(parameter: param)
+        }
     }
     @IBAction func nearByBtntapped(_ sender: UIButton) {
         if (sender.titleLabel?.textColor == UIColor.lightGray) {
@@ -71,12 +75,18 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             self.nearByField = true
             self.lat = 31.276941
             self.long = 31.276941
+            if let nearBy = nearByField , let lat = lat , let long = long {
+                param = ["near_by_fields": nearBy , "latitude": lat , "longitude": long]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.nearByField = nil
             self.lat = nil
             self.long = nil
+            param?.removeValue(forKey: "near_by_fields")
+            param?.removeValue(forKey: "latitude")
+            param?.removeValue(forKey: "longitude")
         }
     }
     
@@ -85,10 +95,14 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.favourite = true
+            if let favourite = favourite {
+                param = ["favourite": favourite]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.favourite = nil
+            param?.removeValue(forKey: "favourite")
         }
     }
     
@@ -97,10 +111,14 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.memberOf = true
+            if let memberOf = memberOf {
+                param = ["member_of": memberOf]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.memberOf = nil
+            param?.removeValue(forKey: "member_of")
         }
     }
     
@@ -109,10 +127,14 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.gender = "male"
+            if let gender = gender {
+               param = ["gender" : gender]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.gender = nil
+            param?.removeValue(forKey: "gender")
         }
     }
     
@@ -121,10 +143,14 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.gender = "female"
+            if let gender = gender {
+               param = ["gender" : gender]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.gender = nil
+            param?.removeValue(forKey: "gender")
         }
     }
     
@@ -133,10 +159,14 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.fee = "free"
+            if let fee = fee {
+               param = ["fee": fee]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.fee = nil
+            param?.removeValue(forKey: "fee")
         }
     }
     
@@ -145,10 +175,14 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.fee = "paid"
+            if let fee = fee {
+               param = ["fee": fee]
+            }
         } else {
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.fee = nil
+            param?.removeValue(forKey: "fee")
         }
     }
     

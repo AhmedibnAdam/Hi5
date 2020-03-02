@@ -12,6 +12,7 @@ import UIKit
 
 protocol IFilterResultInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func filterSession(view : UIViewController , parameter: [String: Any])
 }
 
 class FilterResultInteractor: IFilterResultInteractor {
@@ -22,5 +23,15 @@ class FilterResultInteractor: IFilterResultInteractor {
     init(presenter: IFilterResultPresenter, manager: IFilterResultManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func filterSession(view: UIViewController, parameter: [String : Any]) {
+        manager?.filterSessionFromApi(parameter: parameter, complition: { (error, success, response) in
+            if (success == true) {
+                guard let response = response else {return}
+                
+            } else {
+                
+            }
+        })
     }
 }

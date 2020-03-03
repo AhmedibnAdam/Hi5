@@ -42,22 +42,16 @@ class PublicEventsViewController: UIViewController {
         mainCollectionView.dataSource = self
         subCollectionView.delegate = self
         subCollectionView.dataSource = self
-        
         mainCollectionView.showsVerticalScrollIndicator = false
         subCollectionView.showsHorizontalScrollIndicator = false
         navigationItem.rightBarButtonItem?.image = UIImage(named: "notification", in: nil, with: nil)
         imageView.layer.cornerRadius = 5
-        
     }
-    
-    //MARK:-Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
 }
 //MARK:-Extensions
 extension PublicEventsViewController: IPublicEventsViewController {
     // do someting...
 }
-
 extension PublicEventsViewController {
     // do someting...
     func registerCollectionCell() {
@@ -68,12 +62,11 @@ extension PublicEventsViewController {
     }
     func canAnimateHeader(_ scrollView:UIScrollView) -> Bool {
         let scrollViewMaxHeight = scrollView.frame.height + self.headerViewHeight.constant - minHeaderHeight
-        
-        // Make sure that when header is collapsed, there is still room to scroll
         return scrollView.contentSize.height > scrollViewMaxHeight
     }
-    func setScrollPosition(_ position: CGFloat) {
-        self.collectionView.contentOffset = CGPoint(x: self.collectionView.contentOffset.x, y: position)
+    func setScrollPosition() {
+        self.mainCollectionView.contentOffset = CGPoint(x:1, y: 1)
+        // there is something went unexplainable here, when do we I change the x and y to 0 the scroll became a little intermittent
     }
     func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
         if dayIsSelected[indexPath.row] {
@@ -133,21 +126,19 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
 }
 extension PublicEventsViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollDiff = (scrollView.contentOffset.y - self.previousScrollOffset)
-        let absoluteTop: CGFloat = 0
-        let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
-        let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
-        let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
+        let scrollDiff = (scrollView.contentOffset.y - previousScrollOffset)
+        let isScrollingDown = scrollDiff > 0
+        let isScrollingUp = scrollDiff < 0
         if canAnimateHeader(scrollView) {
-            var newHeight = self.headerViewHeight.constant
+            var newHeight = headerViewHeight.constant
             if isScrollingDown {
-                newHeight = max(self.minHeaderHeight, self.headerViewHeight.constant - abs(scrollDiff))
+                newHeight = max(minHeaderHeight, headerViewHeight.constant - abs(scrollDiff))
             } else if isScrollingUp {
-                newHeight = min(self.maxHeaderHeight, self.headerViewHeight.constant + abs(scrollDiff))
+                newHeight = min(maxHeaderHeight, headerViewHeight.constant + abs(scrollDiff))
             }
-            if newHeight != self.headerViewHeight.constant {
-                self.headerViewHeight.constant = newHeight
-                self.setScrollPosition(self.previousScrollOffset)
+            if newHeight != headerViewHeight.constant {
+                headerViewHeight.constant = newHeight
+                setScrollPosition()
                 previousScrollOffset = scrollView.contentOffset.y
             }
         }

@@ -50,7 +50,6 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
         textField2.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         textField3.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         textField4.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        initView()
         configer()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -97,18 +96,7 @@ extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewCon
     }
  }
 
-extension SignupPhoneVerificationViewController {
-    func initView(){
-        // MARK : - view raduis
-        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-        self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
-        self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))
-        self.containerView3 = CreateCornerRauis.viewRaduis(view: self.containerView3, number: (self.containerView3.frame.size.height / 2))
-        self.containerView4 = CreateCornerRauis.viewRaduis(view: self.containerView4, number: (self.containerView4.frame.size.height / 2))
-          // MARK : - Button  raduis
-        self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
-    }
-    
+extension SignupPhoneVerificationViewController {    
     func configer(){
         router = SignupPhoneVerificationRouter(view: self)
     }

@@ -48,7 +48,6 @@ class FieldsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        initView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -75,11 +74,5 @@ class FieldsTableViewCell: UITableViewCell {
                delegate?.removeFavouriteDidTap(sender, cell: self , id: id)
             }
         }
-    }
-    func initView() {
-        self.companyImg = CreateCornerRauis.imageViewRaduis(view: self.companyImg, number: (self.companyImg.frame.size.height / 2))
-        self.nameView = CreateCornerRauis.viewRaduis(view: self.nameView, number: 15)
-        self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
-        self.showDetailsBtn = CreateCornerRauis.ButtonRaduis(button: self.showDetailsBtn, number: 5)
     }
 }

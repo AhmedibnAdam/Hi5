@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,11 @@
                                 <constraint firstAttribute="width" constant="100" id="BAh-rL-4ba"/>
                                 <constraint firstAttribute="height" constant="100" id="ZKg-rw-Ihf"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="50"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnH-Kv-Nyi">
                             <rect key="frame" x="30" y="40" width="23" height="22"/>
@@ -73,6 +78,11 @@
                                         <constraint firstItem="w8K-Fv-XME" firstAttribute="centerY" secondItem="FQ9-LP-Coh" secondAttribute="centerY" id="kmB-mc-GEt"/>
                                         <constraint firstAttribute="width" constant="30" id="v0A-4K-fEY"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAx-wq-4BA">
                                     <rect key="frame" x="30" y="14" width="71.5" height="2"/>
@@ -98,6 +108,11 @@
                                         <constraint firstItem="d7v-Z7-dOb" firstAttribute="centerY" secondItem="3XS-R5-VDC" secondAttribute="centerY" id="CVa-wD-vht"/>
                                         <constraint firstItem="d7v-Z7-dOb" firstAttribute="centerX" secondItem="3XS-R5-VDC" secondAttribute="centerX" id="Olr-lO-zef"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7i-8m-ZYy">
                                     <rect key="frame" x="131.5" y="14" width="72" height="2"/>
@@ -123,6 +138,11 @@
                                         <constraint firstItem="0K8-JX-Ly2" firstAttribute="centerX" secondItem="01q-SM-I0J" secondAttribute="centerX" id="da0-64-o7l"/>
                                         <constraint firstAttribute="width" constant="30" id="l1d-NF-yGa"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="B3g-My-Cm9">
                                     <rect key="frame" x="233.5" y="14" width="71.5" height="2"/>
@@ -148,6 +168,11 @@
                                         <constraint firstItem="TGn-ec-9HS" firstAttribute="centerY" secondItem="Bfh-on-02r" secondAttribute="centerY" id="drP-5n-XHY"/>
                                         <constraint firstAttribute="width" constant="30" id="oKx-jc-CH3"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -223,6 +248,11 @@
                                     <state key="normal" title="Continue">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="buttonRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="continueBtnTapped:" destination="-1" eventType="touchUpInside" id="IYg-k7-3Rf"/>
                                     </connections>

@@ -52,46 +52,55 @@ class GenderViewController: UIViewController {
     }
     //MARK:- Actions
     @IBAction func maleBtnTapped(_ sender: UIButton) {
-        self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.orange.cgColor)
+        maleBtn.buttonBorderWidth = 1.0
+        maleBtn.buttonBorderColor = UIColor.red
         self.maleBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.maleBtn.tintColor = .orange
         self.gender = "male"//maleBtn.titleLabel?.text
         
-        self.femaleBtn = CreateBorder.buttonBorder(button: self.femaleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        femaleBtn.buttonBorderWidth = 1.0
+        femaleBtn.buttonBorderColor = UIColor.lightGray
         self.femaleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
         self.femaleBtn.tintColor = .lightGray
         
-        self.notSpecifiedBtn = CreateBorder.buttonBorder(button: self.notSpecifiedBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        notSpecifiedBtn.buttonBorderWidth = 1.0
+        notSpecifiedBtn.buttonBorderColor = UIColor.lightGray
         self.notSpecifiedBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
         self.notSpecifiedBtn.tintColor = .lightGray
     }
     
     @IBAction func femaleBtnTapped(_ sender: UIButton) {
-        self.femaleBtn = CreateBorder.buttonBorder(button: self.femaleBtn, width: 1.0, color: UIColor.orange.cgColor)
+        femaleBtn.buttonBorderWidth = 1.0
+        femaleBtn.buttonBorderColor = UIColor.orange
         self.femaleBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.femaleBtn.tintColor = .orange
         self.gender = "female"//femaleBtn.titleLabel?.text
         
-        self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        maleBtn.buttonBorderWidth = 1.0
+        maleBtn.buttonBorderColor = UIColor.lightGray
         self.maleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
         self.maleBtn.tintColor = .lightGray
         
-        self.notSpecifiedBtn = CreateBorder.buttonBorder(button: self.notSpecifiedBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        notSpecifiedBtn.buttonBorderWidth = 1.0
+        notSpecifiedBtn.buttonBorderColor = UIColor.lightGray
         self.notSpecifiedBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
         self.notSpecifiedBtn.tintColor = .lightGray
     }
     
     @IBAction func notSpecifiedBtnTapped(_ sender: UIButton) {
-        self.notSpecifiedBtn = CreateBorder.buttonBorder(button: self.notSpecifiedBtn, width: 1.0, color: UIColor.orange.cgColor)
+        notSpecifiedBtn.buttonBorderWidth = 1.0
+        notSpecifiedBtn.buttonBorderColor = UIColor.orange
         self.notSpecifiedBtn.setTitleColor(UIColor .orange, for: UIControl.State.normal)
         self.notSpecifiedBtn.tintColor = .orange
         self.gender = "not specified"//notSpecifiedBtn.titleLabel?.text
         
-        self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        maleBtn.buttonBorderWidth = 1.0
+        maleBtn.buttonBorderColor = UIColor.lightGray
         self.maleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
         self.maleBtn.tintColor = .lightGray
         
-        self.femaleBtn = CreateBorder.buttonBorder(button: self.femaleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        femaleBtn.buttonBorderWidth = 1.0
+        femaleBtn.buttonBorderColor = UIColor.lightGray
         self.femaleBtn.setTitleColor(UIColor .lightGray, for: UIControl.State.normal)
         self.femaleBtn.tintColor = .lightGray
     }
@@ -124,20 +133,18 @@ extension GenderViewController {
     }
     
     func initView(){
-        // MARK : - Button  raduis
-        self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
-        self.maleBtn = CreateCornerRauis.ButtonRaduis(button: self.maleBtn, number: 5)
-        self.femaleBtn = CreateCornerRauis.ButtonRaduis(button: self.femaleBtn, number: 5)
-        self.notSpecifiedBtn = CreateCornerRauis.ButtonRaduis(button: self.notSpecifiedBtn, number: 5)
         // MARK : - images edge insets
         self.maleBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15)
         self.femaleBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15)
         self.notSpecifiedBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 15)
         self.maleBtn.tintColor = .lightGray
         // MARK : - Button Border
-        self.maleBtn = CreateBorder.buttonBorder(button: self.maleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
-        self.femaleBtn = CreateBorder.buttonBorder(button: self.femaleBtn, width: 1.0, color: UIColor.lightGray.cgColor)
-        self.notSpecifiedBtn = CreateBorder.buttonBorder(button: self.notSpecifiedBtn, width: 1.0, color: UIColor.lightGray.cgColor)
+        maleBtn.buttonBorderWidth = 1.0
+        maleBtn.buttonBorderColor = UIColor.lightGray
+        femaleBtn.buttonBorderWidth = 1.0
+        femaleBtn.buttonBorderColor = UIColor.lightGray
+        notSpecifiedBtn.buttonBorderWidth = 1.0
+        notSpecifiedBtn.buttonBorderColor = UIColor.lightGray
     }
     
     func configer(){

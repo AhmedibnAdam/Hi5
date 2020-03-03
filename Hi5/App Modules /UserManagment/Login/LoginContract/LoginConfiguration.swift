@@ -18,7 +18,6 @@ class LoginConfiguration {
         let presenter = LoginPresenter(view: controller)
         let manager = LoginManager()
         let interactor = LoginInteractor(presenter: presenter, manager: manager)
-        
         controller.interactor = interactor
         controller.router = router
         interactor.parameters = parameters

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,6 +36,11 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="username" translatesAutoresizingMaskIntoConstraints="NO" id="EDy-Uq-THw">
                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="imageViewRaduis">
+                                    <real key="value" value="50"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-ma-UbR">
                             <rect key="frame" x="70" y="70" width="30" height="30"/>
@@ -56,6 +61,11 @@
                         <constraint firstItem="EDy-Uq-THw" firstAttribute="top" secondItem="Gcp-ZG-ui1" secondAttribute="top" id="yUe-Ld-q9b"/>
                         <constraint firstItem="EDy-Uq-THw" firstAttribute="leading" secondItem="Gcp-ZG-ui1" secondAttribute="leading" id="zcj-Pr-kBN"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-yJ-Zxu">
                     <rect key="frame" x="15" y="160" width="345" height="68.5"/>
@@ -83,6 +93,11 @@
                                 <constraint firstAttribute="trailing" secondItem="sbo-nL-c15" secondAttribute="trailing" constant="10" id="nT8-h8-5Pr"/>
                                 <constraint firstAttribute="height" constant="40" id="qRk-Hj-Khc"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
@@ -112,6 +127,11 @@
                                 <constraint firstItem="Tp7-Jy-NrR" firstAttribute="leading" secondItem="1e8-Gd-wNN" secondAttribute="leading" constant="10" id="q6H-bM-QaA"/>
                                 <constraint firstItem="Tp7-Jy-NrR" firstAttribute="top" secondItem="1e8-Gd-wNN" secondAttribute="top" id="uWn-5A-Q8s"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
@@ -145,6 +165,11 @@
                                 <constraint firstItem="gPQ-SW-hrZ" firstAttribute="leading" secondItem="n3I-aA-wDL" secondAttribute="leading" constant="10" id="an6-iz-jdO"/>
                                 <constraint firstAttribute="bottom" secondItem="gPQ-SW-hrZ" secondAttribute="bottom" id="lPT-ps-27l"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
@@ -178,6 +203,11 @@
                                 <constraint firstAttribute="height" constant="50" id="UK7-zt-8lu"/>
                                 <constraint firstAttribute="bottom" secondItem="rNK-c8-oSn" secondAttribute="bottom" id="thI-Uv-Oz2"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
@@ -211,6 +241,11 @@
                                 <constraint firstAttribute="bottom" secondItem="zui-fu-pnF" secondAttribute="bottom" id="fYE-2N-yEm"/>
                                 <constraint firstAttribute="height" constant="50" id="i0J-fA-5ew"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
                 </stackView>
@@ -224,6 +259,11 @@
                     <state key="normal" title="Save">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="buttonRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="saveBtnTapped:" destination="-1" eventType="touchUpInside" id="rKs-Bz-t58"/>
                     </connections>

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { 
-             self.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
+             self.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
         }
        
     }

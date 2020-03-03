@@ -80,7 +80,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         router?.navigateToSignUp()
     }
     @IBAction func doLogin(_ sender: UIButton) {
-        showIndecator()
+        
         doLoginAction()
     }
 }
@@ -131,6 +131,7 @@ extension LoginViewController {
             self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
             return
         }
+        showIndecator()
         interactor?.doLogin(view: self, userName: userName, password: password)
     }
 }

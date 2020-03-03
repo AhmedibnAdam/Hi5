@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="aoi-Ll-dAu" id="eOr-EO-IEC"/>
+                <outlet property="indicator" destination="SQG-2J-rEE" id="ZjH-53-AE6"/>
                 <outlet property="noFavouriteFieldsImg" destination="nlu-z2-vbr" id="bjQ-mm-JRh"/>
                 <outlet property="noFavouriteFieldsLbl" destination="60u-6x-3SU" id="tJt-S8-aah"/>
                 <outlet property="tableView" destination="Dyf-PC-Ms3" id="ysX-ym-4kA"/>
@@ -47,11 +48,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SQG-2J-rEE">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Dyf-PC-Ms3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="BBX-d3-rxi"/>
                 <constraint firstItem="aoi-Ll-dAu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="GNB-Ry-CMY"/>
+                <constraint firstItem="SQG-2J-rEE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gwx-iM-ZrN"/>
                 <constraint firstItem="nlu-z2-vbr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JXB-fb-YIE"/>
                 <constraint firstItem="aoi-Ll-dAu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Jew-GU-Ljz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="60u-6x-3SU" secondAttribute="trailing" constant="40" id="MGO-Ba-RqW"/>
@@ -59,6 +65,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dyf-PC-Ms3" secondAttribute="bottom" id="R18-X7-Cc0"/>
                 <constraint firstItem="nlu-z2-vbr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aWv-ir-rnm"/>
                 <constraint firstItem="Dyf-PC-Ms3" firstAttribute="top" secondItem="aoi-Ll-dAu" secondAttribute="bottom" constant="20" id="cgq-Eh-9Fl"/>
+                <constraint firstItem="SQG-2J-rEE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dkZ-fj-79J"/>
                 <constraint firstItem="60u-6x-3SU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="o6F-LK-qjt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dyf-PC-Ms3" secondAttribute="trailing" constant="5" id="vI2-j6-GAJ"/>
                 <constraint firstItem="60u-6x-3SU" firstAttribute="top" secondItem="nlu-z2-vbr" secondAttribute="bottom" constant="25" id="vKF-N3-8Qc"/>

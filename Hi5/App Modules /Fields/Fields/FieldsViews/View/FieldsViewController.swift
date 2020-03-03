@@ -20,6 +20,7 @@ protocol IFieldsViewController: class {
     func showNoMemberOfFields()
     func removeNoFavouriteFields()
     func showNoFavouriteFields()
+    func hideIndicator()
 }
 
 class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
@@ -39,6 +40,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         router?.navigateToTabBar()
     }
     //MARK: - Outlets
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var noFavouriteFieldsLbl: UILabel!
     @IBOutlet weak var noFavouriteFieldsImg: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,6 +49,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     //MARK: - viewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        showIndicator()
         self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         initView()
         configer()
@@ -58,6 +61,10 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         tableView.dataSource = self
         registerCollectionCell()
         registerTableCell()
+    }
+    
+    func showIndicator() {
+        indicator.isHidden = false
     }
     
     func getCurrentLocation() {
@@ -109,6 +116,10 @@ extension FieldsViewController: IFieldsViewController {
         noFavouriteFieldsLbl.isHidden = false
         noFavouriteFieldsLbl.text = "You have no fields where you would be a member or sent requests"
     }
+    
+    func hideIndicator() {
+        indicator.isHidden = true
+    }
 }
 
 //MARK: - topCollectionView
@@ -148,8 +159,10 @@ extension FieldsViewController {
         if (indexPath.row == 0) {
             alert()
         } else if (indexPath.row == 1){
+            showIndicator()
             self.interactor?.favourite(view: self)
         } else if (indexPath.row == 2){
+            showIndicator()
             self.interactor?.memberOf(view: self)
         }
     }
@@ -186,6 +199,7 @@ extension FieldsViewController {
     func alert() {
         let alert = UIAlertController(title: "Your location", message: "High five Players app would like to use your current loccation to search fields near you.Do you agree?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default) { (x) in
+            self.showIndicator()
             self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
@@ -271,9 +285,11 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
 
 extension FieldsViewController: FavouriteTableViewCellDelegate {
     func addFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
+        showIndicator()
         self.interactor?.addFavourite(view: self, fieldId: id)
     }
     func removeFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
+        showIndicator()
         self.interactor?.removeFavourite(view: self, fieldId: id)
     }
 }

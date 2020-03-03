@@ -17,6 +17,7 @@ protocol IFieldsPresenter: class {
     func showNoMemberOfFields()
     func removeNoFavouriteFields()
     func showNoFavouriteFields()
+    func hideIndicator()
 }
 
 class FieldsPresenter: IFieldsPresenter {
@@ -42,6 +43,9 @@ class FieldsPresenter: IFieldsPresenter {
     }
     func showNoFavouriteFields(){
         view?.showNoFavouriteFields()
+    }
+    func hideIndicator() {
+        view?.hideIndicator()
     }
     
 }

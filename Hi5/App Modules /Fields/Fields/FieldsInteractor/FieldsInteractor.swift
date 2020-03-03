@@ -31,11 +31,13 @@ class FieldsInteractor: IFieldsInteractor {
     func nearBy(view: UIViewController, lon: Double, lat: Double) {
         manager?.nearByFromApi(lon: lon, lat: lat, complition: { (error, success, response) in
              if (success == true) {
+                self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                 guard let response = response else {return}
                 self.presenter?.showResponse(response: response)
            } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
@@ -45,8 +47,10 @@ class FieldsInteractor: IFieldsInteractor {
     func addFavourite(view: UIViewController, fieldId: Int) {
         manager?.addFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
             if (success == true){
+                self.presenter?.hideIndicator()
                 print("Added Favourite Done......")
             } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
         })
@@ -54,8 +58,10 @@ class FieldsInteractor: IFieldsInteractor {
     func removeFavourite(view: UIViewController, fieldId: Int) {
         manager?.removeFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
             if(success == true){
+                self.presenter?.hideIndicator()
                 print("Removed Favourite Done.....")
             } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
         })
@@ -63,6 +69,7 @@ class FieldsInteractor: IFieldsInteractor {
     func favourite(view: UIViewController) {
         manager?.favouriteFromApi(complition: { (error, success, response) in
              if (success == true) {
+                self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                 guard let response = response else {return}
@@ -71,6 +78,7 @@ class FieldsInteractor: IFieldsInteractor {
                     self.presenter?.showNoFavouriteFields()
                 }
               } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                   self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
@@ -80,6 +88,7 @@ class FieldsInteractor: IFieldsInteractor {
     func memberOf(view: UIViewController) {
         manager?.memberOfFromApi(complition: { (error, success, response) in
              if (success == true) {
+                self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                  guard let response = response else {return}
@@ -88,6 +97,7 @@ class FieldsInteractor: IFieldsInteractor {
                     self.presenter?.showNoMemberOfFields()
                 }
              } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                  self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)

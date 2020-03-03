@@ -28,9 +28,11 @@ class FilterInteractor: IFilterInteractor {
         manager?.suggestionFieldFromApi(complition: { (error, success, response) in
             if (success == true) {
                 if let resp = response {
+                    self.presenter?.hideIndicator()
                     self.presenter?.showResponse(response: resp)
                 }
             } else {
+                self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
         })

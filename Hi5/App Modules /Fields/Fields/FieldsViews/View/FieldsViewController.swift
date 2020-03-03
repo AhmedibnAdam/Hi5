@@ -11,6 +11,7 @@
 import UIKit
 import CoreLocation
 import Kingfisher
+import MapKit
 
 protocol IFieldsViewController: class {
 	var router: IFieldsRouter? { get set }
@@ -23,14 +24,15 @@ protocol IFieldsViewController: class {
     func hideIndicator()
 }
 
-class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+class FieldsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , CLLocationManagerDelegate{
     
     var nearByField = [FieldsModel.Field]()
-    var locManager = CLLocationManager()
-    var currentLocation: CLLocation!
     var types = ["Nearby Fields","Favourites","Member of"]
 	var interactor: IFieldsInteractor?
 	var router: IFieldsRouter?
+    var longitude: Double?
+    var latitude: Double?
+    let locationManager = CLLocationManager()
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
@@ -49,11 +51,22 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     //MARK: - viewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Ask for Authorisation from the User.
+        locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
         showIndicator()
         self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         initView()
         configer()
-        getCurrentLocation()
         setupNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -61,24 +74,11 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         tableView.dataSource = self
         registerCollectionCell()
         registerTableCell()
+        
     }
     
     func showIndicator() {
         indicator.isHidden = false
-    }
-    
-    func getCurrentLocation() {
-        locManager.requestAlwaysAuthorization()
-
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
-            //print(locManager.location)
-            guard let currentLocation = locManager.location else {
-                return
-            }
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
-        }
     }
 }
 
@@ -298,6 +298,17 @@ extension FieldsViewController: ShowDetailsTableViewCellDelegate {
     func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, field: FieldsModel.Field) {
         print("\(field.id)..........")
         router?.navigateToShowdetails(field: field)
+    }
+}
+
+extension FieldsViewController {
+    // MARK: - CoreLocation Delegate Methods
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        self.latitude = locValue.latitude
+        self.longitude = locValue.longitude
+        
     }
 }
 

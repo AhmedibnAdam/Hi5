@@ -12,6 +12,11 @@ import UIKit
 
 protocol IFilterResultViewController: class {
 	var router: IFilterResultRouter? { get set }
+    func showAlert(title: String, msg: String)
+    func hideIndicator()
+    func showResponse(response: FilterResultModel.FilterSessionResponse)
+    func showTableView()
+    func hideTableView()
 }
 
 class FilterResultViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -22,8 +27,10 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     var dayMonth: [String] = []
     var parameter: [String: Any] = [:]
     var selectedDay: String?
+    var fields = [FilterResultModel.Field]()
     
     //MARK: - Outlets
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -47,8 +54,13 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         selectedDay = dateFormatter.string(from: selectDay)
         if let currentDay = selectedDay {
             parameter["date"] = currentDay
+            showIndicator()
                 interactor?.filterSession(view: self, parameter: parameter)
         }
+    }
+    
+    func showIndicator() {
+        indicator.isHidden = false
     }
     //MARK: - Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -58,7 +70,23 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
 
 //MARK: - Extensions
 extension FilterResultViewController: IFilterResultViewController {
-
+    func showResponse(response: FilterResultModel.FilterSessionResponse) {
+        guard let field = response.fields else {return}
+        self.fields = field
+        self.tableView.reloadData()
+    }
+    func showAlert(title: String, msg: String) {
+      ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    }
+    func hideIndicator() {
+        indicator.isHidden = true
+    }
+    func showTableView() {
+        self.tableView.isHidden = false
+    }
+    func hideTableView() {
+        self.tableView.isHidden = true
+    }
 }
 
 extension FilterResultViewController {
@@ -85,11 +113,48 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return fields.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let field = fields[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell") as! FieldCell
+        cell.fieldNameLbl.text = field.name
+        cell.partnerNamelbl.text = field.partnerName
+        cell.visibilityLbl.text = field.visibility
+        cell.fieldLocationLbl.text = field.address
+        cell.dateLbl.text = field.date
+        cell.timeLbl.text = field.time
+        cell.sportTypeLbl.text = field.sport
+        cell.genderLbl.text = field.gender
+        cell.bestForLbl.text = field.bestFor
+        cell.paymentLbl.text = field.payment
+        if let cost = field.cost {
+            cell.costLbl.text = "$\(String(describing: cost))"
+        }
+        
+        if let partnerImg = field.partnerImage {
+            let url = URL(string: partnerImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        cell.partnerImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
+        if let image = field.image {
+            let url = URL(string: image)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!){
+                    DispatchQueue.main.async {
+                        cell.fieldImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
         return cell
     }
     
@@ -131,14 +196,18 @@ extension FilterResultViewController {
         let selectDay = date.getDate(dayDifference: indexPath.row)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDay = dateFormatter.string(from: selectDay)
-        
+        if let currentDay = selectedDay {
+            parameter["date"] = currentDay
+                showIndicator()
+                interactor?.filterSession(view: self, parameter: parameter)
+        }
         
         
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
-        cell.isSelected = false
+        let cell = collectionView.cellForItem(at: indexPath) as? CalenderCell
+        cell?.isSelected = false
 
     }
 }

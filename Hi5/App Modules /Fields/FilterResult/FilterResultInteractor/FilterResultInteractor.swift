@@ -28,9 +28,19 @@ class FilterResultInteractor: IFilterResultInteractor {
         manager?.filterSessionFromApi(parameter: parameter, complition: { (error, success, response) in
             if (success == true) {
                 guard let response = response else {return}
-                
+                if (response.fields?.count != 0){
+                    self.presenter?.hideIndicator()
+                    self.presenter?.showTableView()
+                    self.presenter?.showResponse(response: response)
+                } else {
+                    self.presenter?.hideIndicator()
+                    self.presenter?.hideTableView()
+                    self.presenter?.showErrorAlert(title: "Error", msg: "Something Wrong")
+                }
             } else {
-                
+                self.presenter?.hideTableView()
+                self.presenter?.hideIndicator()
+                self.presenter?.showErrorAlert(title: "Error", msg: "Something Wrong")
             }
         })
     }

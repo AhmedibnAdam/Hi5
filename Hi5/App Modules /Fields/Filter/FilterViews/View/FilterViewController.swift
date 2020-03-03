@@ -15,6 +15,7 @@ protocol IFilterViewController: class {
 	var router: IFilterRouter? { get set }
     func showAlert(title: String, msg: String)
     func showResponse(response: FilterModel.SuggestionFieldResponse)
+    func hideIndicator()
 }
 
 class FilterViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , TTRangeSliderDelegate {
@@ -43,6 +44,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
         router?.navigateToFields()
     }
     //MARK: - Outlets
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var rangeSlider: TTRangeSlider!
     
@@ -59,6 +61,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        showIndicator()
         interactor?.suggestionField(view: self)
     }
     //MARK: - Actions
@@ -202,6 +205,9 @@ extension FilterViewController: IFilterViewController {
         self.sports = resp
         self.collectionView.reloadData()
     }
+    func hideIndicator() {
+        indicator.isHidden = true
+    }
 
 }
 
@@ -218,6 +224,10 @@ extension FilterViewController {
 
     func configer(){
        router = FilterRouter(view: self)
+    }
+    
+    func showIndicator() {
+        indicator.isHidden = false
     }
 
 }
@@ -258,8 +268,8 @@ extension FilterViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! SelectSportCell
-        cell.isSelected = false
+        let cell = collectionView.cellForItem(at: indexPath) as? SelectSportCell
+        cell?.isSelected = false
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

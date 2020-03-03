@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="K2y-3z-NDd" id="2oq-QG-OSh"/>
+                <outlet property="indicator" destination="FcZ-bq-7Iy" id="T6U-6j-ASM"/>
                 <outlet property="rangeSlider" destination="A4q-2b-Vw1" id="yk9-hx-8BP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -308,6 +309,10 @@
                         <action selector="applyBtnTapped:" destination="-1" eventType="touchUpInside" id="0s5-HJ-9CT"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-bq-7Iy">
+                    <rect key="frame" x="169" y="82" width="37" height="37"/>
+                    <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -316,6 +321,7 @@
                 <constraint firstItem="R93-9e-Yq9" firstAttribute="leading" secondItem="A4q-2b-Vw1" secondAttribute="leading" id="71v-1P-dRp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="scu-7k-VQK" secondAttribute="trailing" constant="20" id="AL9-nM-adw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WAr-8L-3Ie" secondAttribute="trailing" constant="20" id="AZe-KP-c8T"/>
+                <constraint firstItem="FcZ-bq-7Iy" firstAttribute="centerY" secondItem="K2y-3z-NDd" secondAttribute="centerY" id="AeN-gH-MSX"/>
                 <constraint firstItem="scu-7k-VQK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CQb-iH-PGQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A4q-2b-Vw1" secondAttribute="trailing" constant="20" id="K0z-O7-lYF"/>
                 <constraint firstItem="NTI-NZ-pOZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="LMF-g2-rCz"/>
@@ -337,6 +343,7 @@
                 <constraint firstItem="K2y-3z-NDd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="k40-FP-EVj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="K2y-3z-NDd" secondAttribute="trailing" constant="20" id="kSU-rI-blo"/>
                 <constraint firstItem="K2y-3z-NDd" firstAttribute="top" secondItem="fSm-gr-Mx4" secondAttribute="bottom" constant="10" id="mFX-fK-hlO"/>
+                <constraint firstItem="FcZ-bq-7Iy" firstAttribute="centerX" secondItem="K2y-3z-NDd" secondAttribute="centerX" id="oTh-By-Bxw"/>
                 <constraint firstItem="nBQ-cg-2b4" firstAttribute="top" secondItem="2pI-zC-yJP" secondAttribute="bottom" constant="20" id="pDd-ma-Ajj"/>
                 <constraint firstItem="AAu-Le-bdA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="pJD-td-z0O"/>
                 <constraint firstItem="fSm-gr-Mx4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sA0-Wj-zCQ"/>

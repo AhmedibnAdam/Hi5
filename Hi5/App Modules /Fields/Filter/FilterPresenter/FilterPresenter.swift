@@ -13,6 +13,7 @@ import UIKit
 protocol IFilterPresenter: class {
    func showErrorAlert(title: String, msg: String)
    func showResponse(response: FilterModel.SuggestionFieldResponse)
+   func hideIndicator()
 }
 
 class FilterPresenter: IFilterPresenter {	
@@ -26,5 +27,8 @@ class FilterPresenter: IFilterPresenter {
     }
     func showResponse(response: FilterModel.SuggestionFieldResponse) {
         view?.showResponse(response: response)
+    }
+    func hideIndicator() {
+        view?.hideIndicator()
     }
 }

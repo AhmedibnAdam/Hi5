@@ -11,7 +11,11 @@
 import UIKit
 
 protocol IFilterResultPresenter: class {
-	// do someting...
+    func showResponse(response: FilterResultModel.FilterSessionResponse)
+    func hideIndicator()
+    func showErrorAlert(title: String, msg: String)
+    func showTableView()
+    func hideTableView()
 }
 
 class FilterResultPresenter: IFilterResultPresenter {	
@@ -20,4 +24,19 @@ class FilterResultPresenter: IFilterResultPresenter {
 	init(view: IFilterResultViewController?) {
 		self.view = view
 	}
+    func showResponse(response: FilterResultModel.FilterSessionResponse) {
+        view?.showResponse(response: response)
+    }
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    func showTableView() {
+        view?.showTableView()
+    }
+    func hideTableView() {
+        view?.hideTableView()
+    }
 }

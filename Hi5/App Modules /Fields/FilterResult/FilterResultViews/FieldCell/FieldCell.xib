@@ -222,7 +222,7 @@
                                 <rect key="frame" x="10" y="378" width="357" height="34"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Show Details">
+                                <state key="normal" title="Book Now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -267,6 +267,22 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="KQa-43-lXB"/>
+            <connections>
+                <outlet property="bestForLbl" destination="2nX-ac-jho" id="HHp-z9-HPL"/>
+                <outlet property="costLbl" destination="21Y-MT-bhE" id="O2i-jt-cn2"/>
+                <outlet property="dateLbl" destination="kWD-SR-A5o" id="kty-f5-8b9"/>
+                <outlet property="fieldImg" destination="GLV-hb-DS8" id="hdL-QU-vUF"/>
+                <outlet property="fieldLocationLbl" destination="Xas-Nf-uJZ" id="fiW-yb-Tqs"/>
+                <outlet property="fieldNameLbl" destination="UcS-ei-a5u" id="TlQ-Jd-GWw"/>
+                <outlet property="genderLbl" destination="TWP-jJ-SCp" id="Ztm-lH-IR0"/>
+                <outlet property="nameView" destination="Pni-pY-yOB" id="tGv-UD-2eZ"/>
+                <outlet property="partnerImg" destination="ViC-4i-TSm" id="k80-Tv-9lv"/>
+                <outlet property="partnerNamelbl" destination="sLm-8E-GaD" id="TAx-WE-ytQ"/>
+                <outlet property="paymentLbl" destination="mpf-ZA-tS6" id="niP-mh-qC3"/>
+                <outlet property="sportTypeLbl" destination="Mnn-M1-iGg" id="KaF-gx-Irz"/>
+                <outlet property="timeLbl" destination="HH4-eO-QLj" id="Tyo-98-CyU"/>
+                <outlet property="visibilityLbl" destination="ofC-BH-grS" id="IeP-CQ-gZI"/>
+            </connections>
             <point key="canvasLocation" x="126.81159420289856" y="260.82589285714283"/>
         </tableViewCell>
     </objects>

@@ -72,8 +72,6 @@
 		66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0123B4C8FC009DB30A /* FieldsModel.swift */; };
 		66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66340A0223B4C8FC009DB30A /* FieldsViewController.xib */; };
 		66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0323B4C8FC009DB30A /* FieldsManager.swift */; };
-		66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1623B4DB6F009DB30A /* CornerRaduis.swift */; };
-		66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1823B4DE67009DB30A /* CreateBorder.swift */; };
 		66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1A23B4E091009DB30A /* LoginEndpoint.swift */; };
 		66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1C23B4E0B3009DB30A /* NetworkService.swift */; };
 		6663361323B40206004E537C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6663361223B40206004E537C /* AppDelegate.swift */; };
@@ -233,10 +231,8 @@
 		668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */; };
 		668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */; };
 		668C20E223C3F38600C009A9 /* PublicEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */; };
-		668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DB23C3F38600C009A9 /* PublicEventsViewController.swift */; };
 		668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */; };
 		668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */; };
-		668C20E623C3F38600C009A9 /* PublicEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C20DE23C3F38600C009A9 /* PublicEventsViewController.xib */; };
 		668C20E723C3F38600C009A9 /* PublicEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */; };
 		668C20F523C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */; };
 		668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */; };
@@ -439,16 +435,7 @@
 		86F9B91123DDAAA5008C1F80 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9B90923DDAAA5008C1F80 /* LocationManager.swift */; };
 		86FB634D23F97993001019B1 /* SechaduleContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB634C23F97993001019B1 /* SechaduleContainerController.swift */; };
 		86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB635623F97DE4001019B1 /* NotificationSettingContainerController.swift */; };
-		E20AC73F2402B56D00658918 /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20AC73D2402B56D00658918 /* SocialCell.swift */; };
-		E20AC7402402B56D00658918 /* SocialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20AC73E2402B56D00658918 /* SocialCell.xib */; };
-		E20AC7432402B5C200658918 /* SocialHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20AC7412402B5C200658918 /* SocialHeader.swift */; };
-		E20AC7442402B5C200658918 /* SocialHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = E20AC7422402B5C200658918 /* SocialHeader.xib */; };
-		E2BCA8902407F29000336425 /* dateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BCA88E2407F29000336425 /* dateCell.swift */; };
-		E2BCA8912407F29000336425 /* dateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2BCA88F2407F29000336425 /* dateCell.xib */; };
-		E2FD0CE32403B88200790453 /* SocialHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FD0CE12403B88200790453 /* SocialHeaderCell.swift */; };
-		E2FD0CE42403B88200790453 /* SocialHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0CE22403B88200790453 /* SocialHeaderCell.xib */; };
-		E2FD0CF92403DFC900790453 /* publicEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FD0CF72403DFC900790453 /* publicEventsCell.swift */; };
-		E2FD0CFA2403DFC900790453 /* publicEventsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FD0CF82403DFC900790453 /* publicEventsCell.xib */; };
+		E2FAE576240BEF5C00CD8CFC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE575240BEF5C00CD8CFC /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -517,8 +504,6 @@
 		66340A0123B4C8FC009DB30A /* FieldsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsModel.swift; sourceTree = "<group>"; };
 		66340A0223B4C8FC009DB30A /* FieldsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldsViewController.xib; sourceTree = "<group>"; };
 		66340A0323B4C8FC009DB30A /* FieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsManager.swift; sourceTree = "<group>"; };
-		66340A1623B4DB6F009DB30A /* CornerRaduis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRaduis.swift; sourceTree = "<group>"; };
-		66340A1823B4DE67009DB30A /* CreateBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBorder.swift; sourceTree = "<group>"; };
 		66340A1A23B4E091009DB30A /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		66340A1C23B4E0B3009DB30A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6663360F23B40206004E537C /* Hi5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hi5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -680,10 +665,8 @@
 		668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsConfiguration.swift; sourceTree = "<group>"; };
 		668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsPresenter.swift; sourceTree = "<group>"; };
 		668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsRouter.swift; sourceTree = "<group>"; };
-		668C20DB23C3F38600C009A9 /* PublicEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsViewController.swift; sourceTree = "<group>"; };
 		668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsInteractor.swift; sourceTree = "<group>"; };
 		668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsModel.swift; sourceTree = "<group>"; };
-		668C20DE23C3F38600C009A9 /* PublicEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicEventsViewController.xib; sourceTree = "<group>"; };
 		668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsManager.swift; sourceTree = "<group>"; };
 		668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterConfiguration.swift; sourceTree = "<group>"; };
 		668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterPresenter.swift; sourceTree = "<group>"; };
@@ -888,16 +871,7 @@
 		86FB634C23F97993001019B1 /* SechaduleContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SechaduleContainerController.swift; sourceTree = "<group>"; };
 		86FB635623F97DE4001019B1 /* NotificationSettingContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingContainerController.swift; sourceTree = "<group>"; };
 		88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.release.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.release.xcconfig"; sourceTree = "<group>"; };
-		E20AC73D2402B56D00658918 /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
-		E20AC73E2402B56D00658918 /* SocialCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialCell.xib; sourceTree = "<group>"; };
-		E20AC7412402B5C200658918 /* SocialHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialHeader.swift; sourceTree = "<group>"; };
-		E20AC7422402B5C200658918 /* SocialHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialHeader.xib; sourceTree = "<group>"; };
-		E2BCA88E2407F29000336425 /* dateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dateCell.swift; sourceTree = "<group>"; };
-		E2BCA88F2407F29000336425 /* dateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = dateCell.xib; sourceTree = "<group>"; };
-		E2FD0CE12403B88200790453 /* SocialHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialHeaderCell.swift; sourceTree = "<group>"; };
-		E2FD0CE22403B88200790453 /* SocialHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SocialHeaderCell.xib; sourceTree = "<group>"; };
-		E2FD0CF72403DFC900790453 /* publicEventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicEventsCell.swift; sourceTree = "<group>"; };
-		E2FD0CF82403DFC900790453 /* publicEventsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = publicEventsCell.xib; sourceTree = "<group>"; };
+		E2FAE575240BEF5C00CD8CFC /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1203,8 +1177,7 @@
 		66340A1523B4DB4E009DB30A /* CommonUIView */ = {
 			isa = PBXGroup;
 			children = (
-				66340A1623B4DB6F009DB30A /* CornerRaduis.swift */,
-				66340A1823B4DE67009DB30A /* CreateBorder.swift */,
+				E2FAE575240BEF5C00CD8CFC /* CustomView.swift */,
 				66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */,
 			);
 			path = CommonUIView;
@@ -3243,10 +3216,6 @@
 		E20AC7372402B3A600658918 /* SocialHeader */ = {
 			isa = PBXGroup;
 			children = (
-				E20AC7412402B5C200658918 /* SocialHeader.swift */,
-				E20AC7422402B5C200658918 /* SocialHeader.xib */,
-				E2FD0CE12403B88200790453 /* SocialHeaderCell.swift */,
-				E2FD0CE22403B88200790453 /* SocialHeaderCell.xib */,
 			);
 			path = SocialHeader;
 			sourceTree = "<group>";
@@ -3254,8 +3223,6 @@
 		E20AC73A2402B50100658918 /* SocialCell */ = {
 			isa = PBXGroup;
 			children = (
-				E20AC73D2402B56D00658918 /* SocialCell.swift */,
-				E20AC73E2402B56D00658918 /* SocialCell.xib */,
 			);
 			path = SocialCell;
 			sourceTree = "<group>";
@@ -3314,10 +3281,6 @@
 		E2FD0CEC2403DAD600790453 /* PublicEventsViews */ = {
 			isa = PBXGroup;
 			children = (
-				668C20DB23C3F38600C009A9 /* PublicEventsViewController.swift */,
-				668C20DE23C3F38600C009A9 /* PublicEventsViewController.xib */,
-				E2BCA88E2407F29000336425 /* dateCell.swift */,
-				E2BCA88F2407F29000336425 /* dateCell.xib */,
 				E2FD0CF22403DE2300790453 /* PublicEventsCell */,
 			);
 			path = PublicEventsViews;
@@ -3326,8 +3289,6 @@
 		E2FD0CF22403DE2300790453 /* PublicEventsCell */ = {
 			isa = PBXGroup;
 			children = (
-				E2FD0CF72403DFC900790453 /* publicEventsCell.swift */,
-				E2FD0CF82403DFC900790453 /* publicEventsCell.xib */,
 			);
 			path = PublicEventsCell;
 			sourceTree = "<group>";
@@ -3409,13 +3370,10 @@
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
-				E20AC7402402B56D00658918 /* SocialCell.xib in Resources */,
-				E20AC7442402B5C200658918 /* SocialHeader.xib in Resources */,
 				861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
 				6683E2DF23BCEBD900250702 /* SuggestedFieldsViewController.xib in Resources */,
-				668C20E623C3F38600C009A9 /* PublicEventsViewController.xib in Resources */,
 				6683E2CF23BCEB8800250702 /* SettingViewController.xib in Resources */,
 				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
@@ -3426,11 +3384,9 @@
 				860EFCAE2401671100B40901 /* ShowDetailsViewController.xib in Resources */,
 				861D22D823DCAEF5004F16F1 /* GalleryViewController.xib in Resources */,
 				868C28BD23C6042A003F237A /* Assets.xcassets in Resources */,
-				E2BCA8912407F29000336425 /* dateCell.xib in Resources */,
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
 				667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */,
-				E2FD0CE42403B88200790453 /* SocialHeaderCell.xib in Resources */,
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
 				668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */,
@@ -3439,7 +3395,6 @@
 				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
 				8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */,
 				862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */,
-				E2FD0CFA2403DFC900790453 /* publicEventsCell.xib in Resources */,
 				668C20FB23C3F57800C009A9 /* AddSessionResultFiltterViewController.xib in Resources */,
 				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
 				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
@@ -3541,6 +3496,7 @@
 				662A16D623C3EB7600A3695E /* AddFriendRequestPresenter.swift in Sources */,
 				662A168423C3E4B200A3695E /* TransactionsModel.swift in Sources */,
 				662A16B823C3E93900A3695E /* MyFriendsDetailsModel.swift in Sources */,
+				E2FAE576240BEF5C00CD8CFC /* CustomView.swift in Sources */,
 				6683E2DC23BCEBD900250702 /* SuggestedFieldsViewController.swift in Sources */,
 				6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */,
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
@@ -3550,7 +3506,6 @@
 				86B14BDC23CB543B00B3FEB1 /* WelcomePresenter.swift in Sources */,
 				862A5E8823CB72380058355E /* ChangeUsernameViewController.swift in Sources */,
 				86B14BC923CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift in Sources */,
-				E20AC7432402B5C200658918 /* SocialHeader.swift in Sources */,
 				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
 				86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */,
 				861D22EC23DCAFB9004F16F1 /* LibraryInteractor.swift in Sources */,
@@ -3580,7 +3535,6 @@
 				662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */,
 				861D22ED23DCAFB9004F16F1 /* LibraryModel.swift in Sources */,
 				86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */,
-				66340A1723B4DB6F009DB30A /* CornerRaduis.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
 				860EFCAC2401671100B40901 /* ShowDetailsInteractor.swift in Sources */,
 				6683E31923BCEF1600250702 /* SideMenuConfiguration.swift in Sources */,
@@ -3612,7 +3566,6 @@
 				6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */,
 				86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */,
 				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
-				E2FD0CF92403DFC900790453 /* publicEventsCell.swift in Sources */,
 				668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */,
 				860EFCA82401671100B40901 /* ShowDetailsConfiguration.swift in Sources */,
 				668C20E723C3F38600C009A9 /* PublicEventsManager.swift in Sources */,
@@ -3696,7 +3649,6 @@
 				861D22D923DCAEF5004F16F1 /* GalleryManager.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
 				86E1292E23D49E73007CB956 /* TabBarViewController.swift in Sources */,
-				E2BCA8902407F29000336425 /* dateCell.swift in Sources */,
 				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
 				86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */,
 				860AB7F523F2D177005691C1 /* SocialRouter.swift in Sources */,
@@ -3744,13 +3696,11 @@
 				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
 				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
-				66340A1923B4DE67009DB30A /* CreateBorder.swift in Sources */,
 				662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */,
 				86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */,
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				6683E2DB23BCEBD900250702 /* SuggestedFieldsRouter.swift in Sources */,
-				E2FD0CE32403B88200790453 /* SocialHeaderCell.swift in Sources */,
 				868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */,
 				668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */,
 				6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */,
@@ -3830,7 +3780,6 @@
 				6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */,
 				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
-				668C20E323C3F38600C009A9 /* PublicEventsViewController.swift in Sources */,
 				86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */,
 				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
 				8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */,
@@ -3875,7 +3824,6 @@
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
-				E20AC73F2402B56D00658918 /* SocialCell.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,

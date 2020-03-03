@@ -50,7 +50,6 @@ class LocationViewController: UIViewController{
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        initView()
         configure()
     }
     
@@ -156,10 +155,6 @@ extension LocationViewController {
         navigationItem.title = "Location"
         navigationItem.setLeftBarButton(backBtn, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
-    }
-    func initView() {
-        // MARK : - Button  raduis
-        self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
     }
     func configure() {
         router = LocationRouter(view: self)

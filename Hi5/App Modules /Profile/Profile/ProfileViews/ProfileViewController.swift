@@ -37,7 +37,6 @@ class ProfileViewController: UIViewController {
 //MARK:- view LifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
         configer()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -87,23 +86,15 @@ extension ProfileViewController: IProfileViewController {
 }
 
 extension ProfileViewController {
-    func initView(){
-         //MARK : - view raduis
-//        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-        self.profilePhoto = CreateCornerRauis.imageViewRaduis(view: profilePhoto, number: (self.profilePhoto.frame.size.height / 2))
-    }
-    
     func configer(){
         router = ProfileRouter(view: self)
     }
-    
     func showIndecator() {
         activityIndicator.isHidden = false
     }
 }
-
 extension ProfileViewController {
     func loadShowProfileData() {
-        interactor?.doShowProfile(view: self)
+    interactor?.doShowProfile(view: self)
     }
 }

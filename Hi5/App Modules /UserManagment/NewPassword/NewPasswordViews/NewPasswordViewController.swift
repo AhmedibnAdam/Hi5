@@ -34,7 +34,6 @@ class NewPasswordViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.newPasswordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
-        initView()
         configer()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -88,15 +87,6 @@ extension NewPasswordViewController: INewPasswordViewController {
 }
 
 extension NewPasswordViewController {
-    func initView(){
-        // MARK : - view raduis
-        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-        self.newPasswordView = CreateCornerRauis.viewRaduis(view: self.newPasswordView, number: 5)
-        self.confirmPasswordView = CreateCornerRauis.viewRaduis(view: self.confirmPasswordView, number: 5)
-          // MARK : - Button  raduis
-        self.getStartedBtn = CreateCornerRauis.ButtonRaduis(button: self.getStartedBtn, number: 5)
-    }
-    
     func configer(){
         router = NewPasswordRouter(view: self)
     }
@@ -111,8 +101,10 @@ extension NewPasswordViewController {
     func getStartedAction() {
         guard let password = newPasswordTextField.text , let confirmPassword = confirmPasswordTextField.text else {return}
         if(password.isEmpty || confirmPassword.isEmpty){
-            self.newPasswordView = CreateBorder.viewBorder(view: self.newPasswordView, width: 1.0, color: UIColor.red.cgColor)
-            self.confirmPasswordView = CreateBorder.viewBorder(view: self.confirmPasswordView, width: 1.0, color: UIColor.red.cgColor)
+            newPasswordView.viewBorderWidth = 1.0
+            newPasswordView.viewBorderColor = UIColor.red
+            confirmPasswordView.viewBorderWidth = 1.0
+            confirmPasswordView.viewBorderColor = UIColor.red
             return
         } else if(password != confirmPassword) {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")

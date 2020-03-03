@@ -30,7 +30,6 @@ class ForgetEmailViewController: UIViewController, UITextFieldDelegate {
 	override func viewDidLoad() {
         super.viewDidLoad()
         self.emailTextField.delegate = self
-		initView()
         configer()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -63,11 +62,6 @@ extension ForgetEmailViewController: IForgetEmailViewController {
 }
 
 extension ForgetEmailViewController {
-    func initView(){
-        self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
-        self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
-    }
-    
     func configer(){
         router = ForgetEmailRouter(view: self)
     }
@@ -83,7 +77,8 @@ extension ForgetEmailViewController {
             return
         }
         if(email.isEmpty == true) {
-            self.containerView = CreateBorder.viewBorder(view: self.containerView, width: 1.0, color: UIColor.red.cgColor)
+            containerView.viewBorderWidth = 1.0
+            containerView.viewBorderColor = UIColor.red
         }
         let defaults = UserDefaults.standard
         defaults.set(email, forKey: "Email") as? String

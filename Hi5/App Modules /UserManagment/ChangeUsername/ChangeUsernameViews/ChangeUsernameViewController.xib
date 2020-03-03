@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,11 @@
                                 <constraint firstAttribute="width" constant="100" id="DAf-zI-ctn"/>
                                 <constraint firstAttribute="height" constant="100" id="szv-pc-Yk6"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="50"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR4-vs-U4t">
                             <rect key="frame" x="30" y="40" width="23" height="22"/>
@@ -73,6 +78,11 @@
                                         <constraint firstAttribute="height" constant="30" id="kek-Jk-rmN"/>
                                         <constraint firstItem="H9n-13-mRH" firstAttribute="centerX" secondItem="SzJ-GU-JcY" secondAttribute="centerX" id="qfT-eD-2Fn"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaE-ZF-MEI">
                                     <rect key="frame" x="30" y="14" width="71.5" height="2"/>
@@ -98,6 +108,11 @@
                                         <constraint firstItem="LSc-55-04b" firstAttribute="centerX" secondItem="E1o-Nw-GT9" secondAttribute="centerX" id="KWx-yk-GIK"/>
                                         <constraint firstAttribute="width" constant="30" id="vSz-pt-jw8"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rd-dL-o0U">
                                     <rect key="frame" x="131.5" y="14" width="72" height="2"/>
@@ -123,6 +138,11 @@
                                         <constraint firstAttribute="height" constant="30" id="T2z-cK-oOy"/>
                                         <constraint firstItem="c2c-wT-60S" firstAttribute="centerX" secondItem="wpM-oJ-aRg" secondAttribute="centerX" id="YKW-BD-Yuc"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="7zw-eS-9Cm">
                                     <rect key="frame" x="233.5" y="14" width="71.5" height="2"/>
@@ -148,6 +168,11 @@
                                         <constraint firstAttribute="width" constant="30" id="c9E-8t-iAP"/>
                                         <constraint firstAttribute="height" constant="30" id="zj6-IA-qiK"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>
@@ -241,6 +266,11 @@
                                                 <constraint firstAttribute="height" constant="50" id="sp9-DS-JuQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="Tu1-GK-v6z" secondAttribute="trailing" constant="10" id="vbq-zd-Asm"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -253,6 +283,11 @@
                                     <state key="normal" title="Change">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="buttonRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <action selector="changeBtnTapped:" destination="-1" eventType="touchUpInside" id="thl-cR-CvT"/>
                                     </connections>

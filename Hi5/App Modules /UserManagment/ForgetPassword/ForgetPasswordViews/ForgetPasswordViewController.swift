@@ -26,7 +26,6 @@ class ForgetPasswordViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
         configer()
     }
     
@@ -50,12 +49,6 @@ extension ForgetPasswordViewController: IForgetPasswordViewController {
 }
 
 extension ForgetPasswordViewController {
-    func initView(){
-    // MARK : - Button  raduis
-        self.HighFivePhoneBtn = CreateCornerRauis.ButtonRaduis(button: self.HighFivePhoneBtn, number: 5)
-        self.HighFiveEmailBtn = CreateCornerRauis.ButtonRaduis(button: self.HighFiveEmailBtn, number: 5)
-    }
-    
     func configer(){
         router = ForgetPasswordRouter(view: self)
     }

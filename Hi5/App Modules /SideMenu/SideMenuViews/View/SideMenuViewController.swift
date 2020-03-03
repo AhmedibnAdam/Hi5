@@ -33,7 +33,6 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
         tableView.dataSource = self
         profileImgTapped()
         registerCell()
-		initView()
         configer()
     }
     
@@ -57,31 +56,22 @@ extension SideMenuViewController: ISideMenuViewController {
 }
 
 extension SideMenuViewController {
-    func initView(){
-        // MARK : - view raduis
-        self.profileImg = CreateCornerRauis.imageViewRaduis(view: self.profileImg, number: (self.profileImg.frame.size.height / 2))
-    }
-    
     func registerCell() {
         let cell = UINib(nibName: "MenuCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "MenuCell")
     }
-    
     func profileImgTapped() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(tapGestureRecognizer:)))
         profileImg.isUserInteractionEnabled = true
         profileImg.addGestureRecognizer(tapGestureRecognizer)
     }
-    
     @objc func handleTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
         router?.navigatetoProfile()
     }
-    
     func configer(){
         router = SideMenuRouter(view: self)
     }
 }
-
 //MARK: - Table view delegate and data source
 extension SideMenuViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

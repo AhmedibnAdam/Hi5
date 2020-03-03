@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublicEventsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="DQk-gq-akN" id="SLb-Ne-2Gw"/>
                 <outlet property="headerViewHeight" destination="et5-Dy-bO7" id="BKn-l0-YVQ"/>
                 <outlet property="imageView" destination="5BH-2r-x5F" id="rUf-Jc-NZD"/>
                 <outlet property="mainCollectionView" destination="DQk-gq-akN" id="6H6-D7-uRx"/>

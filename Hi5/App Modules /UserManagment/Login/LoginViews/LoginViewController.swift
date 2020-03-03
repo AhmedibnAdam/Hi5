@@ -16,7 +16,7 @@ protocol ILoginViewController: class {
     func navigateToProfile()
     func navigateToTabBar()
     func navigateToFields()
-    func hideIndecator()
+    func hideIndicator()
 }
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -24,7 +24,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
     //MARK: - view outlet
-    
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var password: UITextField!
@@ -46,7 +45,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.userName.delegate = self
         self.password.delegate = self
         initView()
-        configer()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -80,7 +78,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         router?.navigateToSignUp()
     }
     @IBAction func doLogin(_ sender: UIButton) {
-        showIndecator()
         doLoginAction()
     }
 }
@@ -98,40 +95,32 @@ extension LoginViewController: ILoginViewController {
     func navigateToFields() {
         router?.navigateToFields()
     }
-    func hideIndecator() {
+    func hideIndicator() {
         loadingIndicator.isHidden = true
     }
 }
 
 extension LoginViewController {
     func initView(){
-        // MARK : - view raduis
         self.eyeBtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
-        self.profilePhoteView = CreateCornerRauis.viewRaduis(view: self.profilePhoteView, number: (self.profilePhoteView.frame.size.height / 2))
-        self.nameView = CreateCornerRauis.viewRaduis(view: self.nameView, number: 5)
-        self.passwordView = CreateCornerRauis.viewRaduis(view: self.passwordView, number: 5)
-          // MARK : - Button  raduis
-        self.doLoginButtonOutlet = CreateCornerRauis.ButtonRaduis(button: self.doLoginButtonOutlet, number: 5)
     }
-    
-    func configer(){
-        router = LoginRouter(view: self)
-    }
-    
     func showIndecator() {
         loadingIndicator.isHidden = false
     }
 }
-
 extension LoginViewController {
     func doLoginAction(){
         guard let userName = userName.text , let password = password.text else {return}
         if(userName.isEmpty || password.isEmpty || password.count < 4){
-            self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
-            self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
+            nameView.viewBorderWidth = 1.0
+            nameView.viewBorderColor = UIColor.red
+            passwordView.viewBorderWidth = 1.0
+            passwordView.viewBorderColor = UIColor.red
             return
         }
+        showIndecator()
         interactor?.doLogin(view: self, userName: userName, password: password)
     }
     
 }
+

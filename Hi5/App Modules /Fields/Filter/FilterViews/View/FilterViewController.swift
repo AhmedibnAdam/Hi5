@@ -10,6 +10,8 @@
 
 import UIKit
 import TTRangeSlider
+import CoreLocation
+import MapKit
 
 protocol IFilterViewController: class {
 	var router: IFilterRouter? { get set }
@@ -18,7 +20,7 @@ protocol IFilterViewController: class {
     func hideIndicator()
 }
 
-class FilterViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , TTRangeSliderDelegate {
+class FilterViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout , TTRangeSliderDelegate , CLLocationManagerDelegate {
     //MARK: - properties
 	var interactor: IFilterInteractor?
 	var router: IFilterRouter?
@@ -35,6 +37,9 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     var fee: String?
     var bestFor: String?
     var param: [String: Any] = [:]
+    var longitude: Double?
+    var latitude: Double?
+    let locationManager = CLLocationManager()
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
@@ -51,6 +56,17 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     //MARK: - ViewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        // Ask for Authorisation from the User.
+        locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
         registerCollectionCell()
         rangeSlider.delegate = self
         collectionView.delegate = self
@@ -285,6 +301,16 @@ extension FilterViewController {
         self.maxRange = String(selectedMaximum)
         print(minRange)
         print(maxRange)
+    }
+}
+
+extension FilterViewController {
+    // MARK: - CoreLocation Delegate Methods
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        self.latitude = locValue.latitude
+        self.longitude = locValue.longitude
     }
 }
 

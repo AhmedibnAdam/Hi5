@@ -7,32 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "45F26F9B-331B-4AF2-84DA-D58585DC7BE5"
+            uuid = "D8C73653-6A07-4046-9969-A44925A12B4C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
+            filePath = "Hi5/App Modules /Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "nearBy(view:lon:lat:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D8C73653-6A07-4046-9969-A44925A12B4C - c34f8defcf8d749d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.FieldsInteractor.nearBy(view: __C.UIViewController, lon: Swift.Double, lat: Swift.Double) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gamal/Algorithmz/ios2/Hi5/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "D8C73653-6A07-4046-9969-A44925A12B4C - 489dae2e20bb9bd8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.FieldsModel.NearByfieldsResponse&gt;) -&gt; () in Hi5.FieldsInteractor.nearBy(view: __C.UIViewController, lon: Swift.Double, lat: Swift.Double) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gamal/Algorithmz/ios2/Hi5/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EF460FBE-43CF-4B59-90C1-109DFC2B0097"
+            uuid = "3A15E855-18C3-4B13-8A9A-CE0B505A2F51"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
+            filePath = "Hi5/App Modules /Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "nearBy(view:lon:lat:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

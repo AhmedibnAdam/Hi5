@@ -64,7 +64,6 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
             locationManager.startUpdatingLocation()
         }
         showIndicator()
-        self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         initView()
         configer()
         setupNavigationBar()
@@ -75,6 +74,10 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         registerCollectionCell()
         registerTableCell()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.interactor?.nearBy(view: self, lon: self.longitude ?? 31.276941 , lat: self.latitude ?? 29.962696)
     }
     
     func showIndicator() {
@@ -200,7 +203,7 @@ extension FieldsViewController {
         let alert = UIAlertController(title: "Your location", message: "High five Players app would like to use your current loccation to search fields near you.Do you agree?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default) { (x) in
             self.showIndicator()
-            self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
+            self.interactor?.nearBy(view: self, lon: self.longitude ?? 31.276941, lat: self.latitude ?? 29.962696)
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
             self.removeNoFavouriteFields()
@@ -308,6 +311,7 @@ extension FieldsViewController {
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         self.latitude = locValue.latitude
         self.longitude = locValue.longitude
+        //self.interactor?.nearBy(view: self, lon: locValue.longitude , lat: locValue.latitude)
         
     }
 }

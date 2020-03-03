@@ -228,12 +228,6 @@
 		6683E31E23BCEF1600250702 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E31623BCEF1600250702 /* SideMenuModel.swift */; };
 		6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6683E31723BCEF1600250702 /* SideMenuViewController.xib */; };
 		6683E32023BCEF1600250702 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6683E31823BCEF1600250702 /* SideMenuManager.swift */; };
-		668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */; };
-		668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */; };
-		668C20E223C3F38600C009A9 /* PublicEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */; };
-		668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */; };
-		668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */; };
-		668C20E723C3F38600C009A9 /* PublicEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */; };
 		668C20F523C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */; };
 		668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */; };
 		668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C20EF23C3F57800C009A9 /* AddSessionResultFiltterRouter.swift */; };
@@ -300,12 +294,6 @@
 		8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423423DC815200BA87D7 /* SearchLocationModel.swift */; };
 		8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8608423523DC815200BA87D7 /* SearchLocationViewController.xib */; };
 		8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608423623DC815200BA87D7 /* SearchLocationManager.swift */; };
-		860AB7F323F2D177005691C1 /* SocialConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EB23F2D177005691C1 /* SocialConfiguration.swift */; };
-		860AB7F423F2D177005691C1 /* SocialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EC23F2D177005691C1 /* SocialPresenter.swift */; };
-		860AB7F523F2D177005691C1 /* SocialRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7ED23F2D177005691C1 /* SocialRouter.swift */; };
-		860AB7F723F2D177005691C1 /* SocialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7EF23F2D177005691C1 /* SocialInteractor.swift */; };
-		860AB7F823F2D177005691C1 /* SocialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7F023F2D177005691C1 /* SocialModel.swift */; };
-		860AB7FA23F2D177005691C1 /* SocialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AB7F223F2D177005691C1 /* SocialManager.swift */; };
 		860EFCA82401671100B40901 /* ShowDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EFCA02401671100B40901 /* ShowDetailsConfiguration.swift */; };
 		860EFCA92401671100B40901 /* ShowDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EFCA12401671100B40901 /* ShowDetailsPresenter.swift */; };
 		860EFCAA2401671100B40901 /* ShowDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860EFCA22401671100B40901 /* ShowDetailsRouter.swift */; };
@@ -659,12 +647,6 @@
 		6683E31623BCEF1600250702 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		6683E31723BCEF1600250702 /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
 		6683E31823BCEF1600250702 /* SideMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuManager.swift; sourceTree = "<group>"; };
-		668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsConfiguration.swift; sourceTree = "<group>"; };
-		668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsPresenter.swift; sourceTree = "<group>"; };
-		668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsRouter.swift; sourceTree = "<group>"; };
-		668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsInteractor.swift; sourceTree = "<group>"; };
-		668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsModel.swift; sourceTree = "<group>"; };
-		668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsManager.swift; sourceTree = "<group>"; };
 		668C20ED23C3F57800C009A9 /* AddSessionResultFiltterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterConfiguration.swift; sourceTree = "<group>"; };
 		668C20EE23C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterPresenter.swift; sourceTree = "<group>"; };
 		668C20EF23C3F57800C009A9 /* AddSessionResultFiltterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSessionResultFiltterRouter.swift; sourceTree = "<group>"; };
@@ -732,12 +714,6 @@
 		8608423423DC815200BA87D7 /* SearchLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationModel.swift; sourceTree = "<group>"; };
 		8608423523DC815200BA87D7 /* SearchLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchLocationViewController.xib; sourceTree = "<group>"; };
 		8608423623DC815200BA87D7 /* SearchLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationManager.swift; sourceTree = "<group>"; };
-		860AB7EB23F2D177005691C1 /* SocialConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialConfiguration.swift; sourceTree = "<group>"; };
-		860AB7EC23F2D177005691C1 /* SocialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialPresenter.swift; sourceTree = "<group>"; };
-		860AB7ED23F2D177005691C1 /* SocialRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialRouter.swift; sourceTree = "<group>"; };
-		860AB7EF23F2D177005691C1 /* SocialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialInteractor.swift; sourceTree = "<group>"; };
-		860AB7F023F2D177005691C1 /* SocialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModel.swift; sourceTree = "<group>"; };
-		860AB7F223F2D177005691C1 /* SocialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialManager.swift; sourceTree = "<group>"; };
 		860EFCA02401671100B40901 /* ShowDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsConfiguration.swift; sourceTree = "<group>"; };
 		860EFCA12401671100B40901 /* ShowDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsPresenter.swift; sourceTree = "<group>"; };
 		860EFCA22401671100B40901 /* ShowDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsRouter.swift; sourceTree = "<group>"; };
@@ -1029,7 +1005,6 @@
 			isa = PBXGroup;
 			children = (
 				86268A1B23F72ED600EFD96B /* Sechadule */,
-				860AB7EA23F2D140005691C1 /* Social */,
 				663409FB23B4C8E2009DB30A /* Fields */,
 				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
@@ -1039,7 +1014,6 @@
 				66340A1123B4CAC2009DB30A /* HelpCenter */,
 				66340A1023B4CAB8009DB30A /* Wallet */,
 				66340A0F23B4CA73009DB30A /* Suggested */,
-				668C20D723C3F36600C009A9 /* PublicEvents */,
 				66340A0D23B4CA54009DB30A /* NotificationSetting */,
 				66340A0C23B4CA44009DB30A /* Setting */,
 			);
@@ -1414,19 +1388,6 @@
 			path = NotificationSetting;
 			sourceTree = "<group>";
 		};
-		668C20D723C3F36600C009A9 /* PublicEvents */ = {
-			isa = PBXGroup;
-			children = (
-				E2FD0CEC2403DAD600790453 /* PublicEventsViews */,
-				E2FD0CEB2403DAC900790453 /* PublicEventsRouter */,
-				E2FD0CEA2403DAA700790453 /* PublicEventsPresenter */,
-				E2FD0CE92403DA9600790453 /* PublicEventsInteractor */,
-				E2FD0CE82403DA6E00790453 /* PublicEventsServices */,
-				E2FD0CE72403DA5E00790453 /* PublicEventsContracts */,
-			);
-			path = PublicEvents;
-			sourceTree = "<group>";
-		};
 		668C20E823C3F47200C009A9 /* Fields */ = {
 			isa = PBXGroup;
 			children = (
@@ -1606,70 +1567,6 @@
 				8608423523DC815200BA87D7 /* SearchLocationViewController.xib */,
 			);
 			path = SearchLocationViews;
-			sourceTree = "<group>";
-		};
-		860AB7EA23F2D140005691C1 /* Social */ = {
-			isa = PBXGroup;
-			children = (
-				860AB7FC23F2D1B6005691C1 /* SocialContract */,
-				860AB7FE23F2D1D7005691C1 /* SocialInteractor */,
-				860AB7FD23F2D1CC005691C1 /* SocialPresenter */,
-				860AB80023F2D1F9005691C1 /* SocialRouter */,
-				860AB7FF23F2D1E7005691C1 /* SocialServices */,
-				860AB7FB23F2D1A9005691C1 /* SocialViews */,
-			);
-			path = Social;
-			sourceTree = "<group>";
-		};
-		860AB7FB23F2D1A9005691C1 /* SocialViews */ = {
-			isa = PBXGroup;
-			children = (
-				E20AC7452402BB6C00658918 /* mainSocialView */,
-				E20AC73A2402B50100658918 /* SocialCell */,
-				E20AC7372402B3A600658918 /* SocialHeader */,
-			);
-			path = SocialViews;
-			sourceTree = "<group>";
-		};
-		860AB7FC23F2D1B6005691C1 /* SocialContract */ = {
-			isa = PBXGroup;
-			children = (
-				860AB7EB23F2D177005691C1 /* SocialConfiguration.swift */,
-			);
-			path = SocialContract;
-			sourceTree = "<group>";
-		};
-		860AB7FD23F2D1CC005691C1 /* SocialPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				860AB7EC23F2D177005691C1 /* SocialPresenter.swift */,
-			);
-			path = SocialPresenter;
-			sourceTree = "<group>";
-		};
-		860AB7FE23F2D1D7005691C1 /* SocialInteractor */ = {
-			isa = PBXGroup;
-			children = (
-				860AB7EF23F2D177005691C1 /* SocialInteractor.swift */,
-			);
-			path = SocialInteractor;
-			sourceTree = "<group>";
-		};
-		860AB7FF23F2D1E7005691C1 /* SocialServices */ = {
-			isa = PBXGroup;
-			children = (
-				860AB7F023F2D177005691C1 /* SocialModel.swift */,
-				860AB7F223F2D177005691C1 /* SocialManager.swift */,
-			);
-			path = SocialServices;
-			sourceTree = "<group>";
-		};
-		860AB80023F2D1F9005691C1 /* SocialRouter */ = {
-			isa = PBXGroup;
-			children = (
-				860AB7ED23F2D177005691C1 /* SocialRouter.swift */,
-			);
-			path = SocialRouter;
 			sourceTree = "<group>";
 		};
 		860E209623C73BCC00F59AE0 /* ForgetPasswordContract */ = {
@@ -3207,83 +3104,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E20AC7372402B3A600658918 /* SocialHeader */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SocialHeader;
-			sourceTree = "<group>";
-		};
-		E20AC73A2402B50100658918 /* SocialCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SocialCell;
-			sourceTree = "<group>";
-		};
-		E20AC7452402BB6C00658918 /* mainSocialView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = mainSocialView;
-			sourceTree = "<group>";
-		};
-		E2FD0CE72403DA5E00790453 /* PublicEventsContracts */ = {
-			isa = PBXGroup;
-			children = (
-				668C20D823C3F38600C009A9 /* PublicEventsConfiguration.swift */,
-			);
-			path = PublicEventsContracts;
-			sourceTree = "<group>";
-		};
-		E2FD0CE82403DA6E00790453 /* PublicEventsServices */ = {
-			isa = PBXGroup;
-			children = (
-				668C20DD23C3F38600C009A9 /* PublicEventsModel.swift */,
-				668C20DF23C3F38600C009A9 /* PublicEventsManager.swift */,
-			);
-			path = PublicEventsServices;
-			sourceTree = "<group>";
-		};
-		E2FD0CE92403DA9600790453 /* PublicEventsInteractor */ = {
-			isa = PBXGroup;
-			children = (
-				668C20DC23C3F38600C009A9 /* PublicEventsInteractor.swift */,
-			);
-			path = PublicEventsInteractor;
-			sourceTree = "<group>";
-		};
-		E2FD0CEA2403DAA700790453 /* PublicEventsPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				668C20D923C3F38600C009A9 /* PublicEventsPresenter.swift */,
-			);
-			path = PublicEventsPresenter;
-			sourceTree = "<group>";
-		};
-		E2FD0CEB2403DAC900790453 /* PublicEventsRouter */ = {
-			isa = PBXGroup;
-			children = (
-				668C20DA23C3F38600C009A9 /* PublicEventsRouter.swift */,
-			);
-			path = PublicEventsRouter;
-			sourceTree = "<group>";
-		};
-		E2FD0CEC2403DAD600790453 /* PublicEventsViews */ = {
-			isa = PBXGroup;
-			children = (
-				E2FD0CF22403DE2300790453 /* PublicEventsCell */,
-			);
-			path = PublicEventsViews;
-			sourceTree = "<group>";
-		};
-		E2FD0CF22403DE2300790453 /* PublicEventsCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PublicEventsCell;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3531,7 +3351,6 @@
 				6683E2DD23BCEBD900250702 /* SuggestedFieldsInteractor.swift in Sources */,
 				86DB006D23D70B97001E99E8 /* GenderManager.swift in Sources */,
 				86B14BDB23CB543B00B3FEB1 /* WelcomeConfiguration.swift in Sources */,
-				668C20E423C3F38600C009A9 /* PublicEventsInteractor.swift in Sources */,
 				6683E2D023BCEB8800250702 /* SettingManager.swift in Sources */,
 				86BBEE5C23CB5F840036C41D /* CreatePasswordInteractor.swift in Sources */,
 				861D22D423DCAEF5004F16F1 /* GalleryRouter.swift in Sources */,
@@ -3558,7 +3377,6 @@
 				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
 				668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */,
 				860EFCA82401671100B40901 /* ShowDetailsConfiguration.swift in Sources */,
-				668C20E723C3F38600C009A9 /* PublicEventsManager.swift in Sources */,
 				667E4B7223C3DCA3007354A7 /* MakeWalletPasswordViewController.swift in Sources */,
 				6663369223B40AFD004E537C /* EmailVerficationViewController.swift in Sources */,
 				667E4B8723C3E169007354A7 /* AddFundManager.swift in Sources */,
@@ -3575,7 +3393,6 @@
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
 				662A16DC23C3EB7600A3695E /* AddFriendRequestManager.swift in Sources */,
 				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
-				860AB7F723F2D177005691C1 /* SocialInteractor.swift in Sources */,
 				861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */,
 				862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */,
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
@@ -3601,7 +3418,6 @@
 				6663368323B40AB3004E537C /* ForgetEmailModel.swift in Sources */,
 				668C211A23C3F6C100C009A9 /* CheckOutRouter.swift in Sources */,
 				662A16D823C3EB7600A3695E /* AddFriendRequestViewController.swift in Sources */,
-				668C20E223C3F38600C009A9 /* PublicEventsRouter.swift in Sources */,
 				8671348423CF5950009093A0 /* NewPasswordEndPoint.swift in Sources */,
 				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
 				860EFCAF2401671100B40901 /* ShowDetailsManager.swift in Sources */,
@@ -3617,11 +3433,9 @@
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
 				862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */,
-				860AB7FA23F2D177005691C1 /* SocialManager.swift in Sources */,
 				861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */,
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
-				668C20E123C3F38600C009A9 /* PublicEventsPresenter.swift in Sources */,
 				86268A2B23F72F1800EFD96B /* SechaduleManager.swift in Sources */,
 				862EB5AF23D730AD00508F1A /* DateOfBirthViewController.swift in Sources */,
 				861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */,
@@ -3639,9 +3453,7 @@
 				86E1292E23D49E73007CB956 /* TabBarViewController.swift in Sources */,
 				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
 				86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */,
-				860AB7F523F2D177005691C1 /* SocialRouter.swift in Sources */,
 				668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */,
-				860AB7F423F2D177005691C1 /* SocialPresenter.swift in Sources */,
 				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
@@ -3690,7 +3502,6 @@
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				6683E2DB23BCEBD900250702 /* SuggestedFieldsRouter.swift in Sources */,
 				868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */,
-				668C20E023C3F38600C009A9 /* PublicEventsConfiguration.swift in Sources */,
 				6683E2E023BCEBD900250702 /* SuggestedFieldsManager.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
 				6683E2DA23BCEBD900250702 /* SuggestedFieldsPresenter.swift in Sources */,
@@ -3722,7 +3533,6 @@
 				86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */,
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
-				860AB7F823F2D177005691C1 /* SocialModel.swift in Sources */,
 				862EB5AC23D730AD00508F1A /* DateOfBirthConfiguration.swift in Sources */,
 				86268A2723F72F1800EFD96B /* SechaduleViewController.swift in Sources */,
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
@@ -3739,7 +3549,6 @@
 				666336B523B40B84004E537C /* PhoneVerificationInteractor.swift in Sources */,
 				86B14BC423CB4AA500B3FEB1 /* SignupPhoneVerificationConfiguration.swift in Sources */,
 				862EB5B023D730AD00508F1A /* DateOfBirthInteractor.swift in Sources */,
-				860AB7F323F2D177005691C1 /* SocialConfiguration.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
 				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
@@ -3816,7 +3625,6 @@
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,
 				86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */,
-				668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */,
 				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
 				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,

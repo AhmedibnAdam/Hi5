@@ -19,6 +19,7 @@ protocol ILoginManager: class {
 }
 
 class LoginManager: ILoginManager {
+
     // MARK : - do someting...
     func loginFromApi(userName: String ,password: String , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void) {
         NetworkService.share.request(endpoint: LoginEndpoint.login(userName: userName, password: password), success: { (responseData) in
@@ -28,10 +29,12 @@ class LoginManager: ILoginManager {
                 let user = try decoder.decode(LoginModel.LoginResponse.self, from: response)
                 print(user)
                 let defaults = UserDefaults.standard
-                if let token = user.token , let username = user.userName , let fullname = user.fullName, let userProfileImage = user.image{
-                    defaults.set(token, forKey: "Token") as? String
-                    defaults.set(username, forKey: "UserName") as? String
-                    defaults.set(fullname, forKey: "FullName") as? String
+                if let token = user.token , let username = user.userName , let fullname = user.fullName, let userProfileImage = user.image {
+//                    let image = userProfileImage.pngData()
+                    defaults.set(token, forKey: "Token")
+                    defaults.set(username, forKey: "UserName")
+                    defaults.set(fullname, forKey: "FullName")
+                    defaults.set(userProfileImage,forKey:"image")
                 }
                 complition(nil,true)
                 

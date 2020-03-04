@@ -18,117 +18,117 @@ protocol IShowDetailsManager: class {
 
 class ShowDetailsManager: IShowDetailsManager {
     func cancelRequestMemberShipFromApi(id: Int, complition: @escaping (ErrorModel?, Bool, ShowDetailsModel.CancelRequestMemberShipResponse?) -> Void) {
-        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.cancelRequestMemberShip(id: id), success: { (responseData) in
-            let response = responseData
-            do {
-                let decoder = JSONDecoder()
-                let user = try decoder.decode(ShowDetailsModel.CancelRequestMemberShipResponse.self, from: response)
-                print(user)
-                complition(nil , true , user)
-                
-            } catch let error {
-                print("error : ", error.localizedDescription  )
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let error = try decoder.decode(ErrorModel.self, from: responseData )
-                    print(error)
-                    complition(error , false , nil)
-                } catch let error {
-                    print(error)
-                    
-                }
-        }
-            
-    }, failure: { (error) in
-            do {
-                let decoder = JSONDecoder()
-                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
-                print(error)
-                complition(error , false , nil)
-                
-            } catch let error {
-                print(error)
-                complition(nil , false , nil)
-            }
-            
-        })
+//        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.cancelRequestMemberShip(id: id), success: { (responseData) in
+//            let response = responseData
+//            do {
+//                let decoder = JSONDecoder()
+//                let user = try decoder.decode(ShowDetailsModel.CancelRequestMemberShipResponse.self, from: response)
+//                print(user)
+//                complition(nil , true , user)
+//
+//            } catch let error {
+//                print("error : ", error.localizedDescription  )
+//
+//                do {
+//                    let decoder = JSONDecoder()
+//                    let error = try decoder.decode(ErrorModel.self, from: responseData )
+//                    print(error)
+//                    complition(error , false , nil)
+//                } catch let error {
+//                    print(error)
+//
+//                }
+//        }
+//
+//    }, failure: { (error) in
+//            do {
+//                let decoder = JSONDecoder()
+//                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+//                print(error)
+//                complition(error , false , nil)
+//
+//            } catch let error {
+//                print(error)
+//                complition(nil , false , nil)
+//            }
+//
+//        })
     }
     
     func requestMemberShipFromApi(id: Int, complition: @escaping (ErrorModel?, Bool, ShowDetailsModel.RequestMemberShipResponse?) -> Void) {
-        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.requestMemberShip(id: id), success: { (responseData) in
-            let response = responseData
-            do {
-                let decoder = JSONDecoder()
-                let user = try decoder.decode(ShowDetailsModel.RequestMemberShipResponse.self, from: response)
-                print(user)
-                complition(nil , true , user)
-                
-            } catch let error {
-                print("error : ", error.localizedDescription  )
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let error = try decoder.decode(ErrorModel.self, from: responseData )
-                    print(error)
-                    complition(error , false , nil)
-                } catch let error {
-                    print(error)
-                    
-                }
-        }
-            
-    }, failure: { (error) in
-            do {
-                let decoder = JSONDecoder()
-                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
-                print(error)
-                complition(error , false , nil)
-                
-            } catch let error {
-                print(error)
-                complition(nil , false , nil)
-            }
-            
-        })
+//        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.requestMemberShip(id: id), success: { (responseData) in
+//            let response = responseData
+//            do {
+//                let decoder = JSONDecoder()
+//                let user = try decoder.decode(ShowDetailsModel.RequestMemberShipResponse.self, from: response)
+//                print(user)
+//                complition(nil , true , user)
+//
+//            } catch let error {
+//                print("error : ", error.localizedDescription  )
+//
+//                do {
+//                    let decoder = JSONDecoder()
+//                    let error = try decoder.decode(ErrorModel.self, from: responseData )
+//                    print(error)
+//                    complition(error , false , nil)
+//                } catch let error {
+//                    print(error)
+//
+//                }
+//        }
+//
+//    }, failure: { (error) in
+//            do {
+//                let decoder = JSONDecoder()
+//                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+//                print(error)
+//                complition(error , false , nil)
+//
+//            } catch let error {
+//                print(error)
+//                complition(nil , false , nil)
+//            }
+//
+//        })
     }
     
     func showDetailsFromApi(id: Int, complition: @escaping (ErrorModel?, Bool, ShowDetailsModel.ShowDetailsResponse?) -> Void) {
-        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.showDetails(id: id), success: { (responseData) in
-            let response = responseData
-            do {
-                let decoder = JSONDecoder()
-                let user = try decoder.decode(ShowDetailsModel.ShowDetailsResponse.self, from: response)
-                print(user)
-                complition(nil , true , user)
-                
-            } catch let error {
-                print("error : ", error.localizedDescription  )
-                
-                do {
-                    let decoder = JSONDecoder()
-                    let error = try decoder.decode(ErrorModel.self, from: responseData )
-                    print(error)
-                    complition(error , false , nil)
-                } catch let error {
-                    print(error)
-                    
-                }
-        }
-            
-    }, failure: { (error) in
-            do {
-                let decoder = JSONDecoder()
-                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
-                print(error)
-                complition(error , false , nil)
-                
-            } catch let error {
-                print(error)
-                complition(nil , false , nil)
-            }
-            
-        })
+//        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.showDetails(id: id), success: { (responseData) in
+//            let response = responseData
+//            do {
+//                let decoder = JSONDecoder()
+//                let user = try decoder.decode(ShowDetailsModel.ShowDetailsResponse.self, from: response)
+//                print(user)
+//                complition(nil , true , user)
+//
+//            } catch let error {
+//                print("error : ", error.localizedDescription  )
+//
+//                do {
+//                    let decoder = JSONDecoder()
+//                    let error = try decoder.decode(ErrorModel.self, from: responseData )
+//                    print(error)
+//                    complition(error , false , nil)
+//                } catch let error {
+//                    print(error)
+//
+//                }
+//        }
+//
+//    }, failure: { (error) in
+//            do {
+//                let decoder = JSONDecoder()
+//                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+//                print(error)
+//                complition(error , false , nil)
+//
+//            } catch let error {
+//                print(error)
+//                complition(nil , false , nil)
+//            }
+//
+//        })
     }
 
 }

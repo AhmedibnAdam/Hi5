@@ -49,7 +49,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         super.viewDidLoad()
         self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         initView()
-        configer()
+        //configer()
         getCurrentLocation()
         setupNavigationBar()
         collectionView.delegate = self

@@ -17,6 +17,8 @@ protocol IFilterResultViewController: class {
     func showResponse(response: FilterResultModel.FilterSessionResponse)
     func showTableView()
     func hideTableView()
+    func showNoFields()
+    func removeNoFields()
 }
 
 class FilterResultViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -30,6 +32,8 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     var fields = [FilterResultModel.Field]()
     
     //MARK: - Outlets
+    @IBOutlet weak var noFieldsLbl: UILabel!
+    @IBOutlet weak var noFieldsImg: UIImageView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
@@ -55,6 +59,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         if let currentDay = selectedDay {
             parameter["date"] = currentDay
             showIndicator()
+            removeNoFields()
                 interactor?.filterSession(view: self, parameter: parameter)
         }
     }
@@ -70,6 +75,16 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
 
 //MARK: - Extensions
 extension FilterResultViewController: IFilterResultViewController {
+    func showNoFields() {
+        noFieldsImg.isHidden = false
+        noFieldsLbl.isHidden = false
+    }
+    
+    func removeNoFields() {
+        noFieldsImg.isHidden = true
+        noFieldsLbl.isHidden = true
+    }
+    
     func showResponse(response: FilterResultModel.FilterSessionResponse) {
         guard let field = response.fields else {return}
         self.fields = field
@@ -199,6 +214,7 @@ extension FilterResultViewController {
         if let currentDay = selectedDay {
             parameter["date"] = currentDay
                 showIndicator()
+                removeNoFields()
                 interactor?.filterSession(view: self, parameter: parameter)
         }
         

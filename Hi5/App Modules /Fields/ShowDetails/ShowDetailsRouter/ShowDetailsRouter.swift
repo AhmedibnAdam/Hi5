@@ -12,6 +12,8 @@ import UIKit
 
 protocol IShowDetailsRouter: class {
     func navigateToFields()
+    func navigateToSessionResult()
+    
 }
 
 class ShowDetailsRouter: IShowDetailsRouter {	
@@ -22,5 +24,8 @@ class ShowDetailsRouter: IShowDetailsRouter {
 	}
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
+    }
+    func navigateToSessionResult() {
+        view?.navigate(type: .modal, module: GeneralRoute.sessionResult, completion: nil)
     }
 }

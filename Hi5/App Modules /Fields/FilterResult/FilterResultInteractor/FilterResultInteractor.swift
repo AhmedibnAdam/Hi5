@@ -29,13 +29,15 @@ class FilterResultInteractor: IFilterResultInteractor {
             if (success == true) {
                 guard let response = response else {return}
                 if (response.fields?.count != 0){
+                    self.presenter?.removeNoFields()
                     self.presenter?.hideIndicator()
                     self.presenter?.showTableView()
                     self.presenter?.showResponse(response: response)
                 } else {
                     self.presenter?.hideIndicator()
                     self.presenter?.hideTableView()
-                    self.presenter?.showErrorAlert(title: "Error", msg: "Something Wrong")
+                    self.presenter?.showNoFields()
+                    //self.presenter?.showErrorAlert(title: "Error", msg: "Something Wrong")
                 }
             } else {
                 self.presenter?.hideTableView()

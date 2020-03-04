@@ -46,6 +46,7 @@ enum GeneralRoute: IRouter {
     case showDetailsFields(field: FieldsModel.Field)
     case filter
     case filterResult(param: [String: Any])
+    case sessionResult
 }
 
 extension GeneralRoute {
@@ -111,6 +112,9 @@ extension GeneralRoute {
             return FilterConfiguration.setup()
         case .filterResult(let param):
             return FilterResultConfiguration.setup(param: param)
+        case .sessionResult:
+            return SessionResultConfiguration.setup()
+            
         }
     }
 }

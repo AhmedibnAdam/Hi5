@@ -16,6 +16,8 @@ protocol IFilterResultPresenter: class {
     func showErrorAlert(title: String, msg: String)
     func showTableView()
     func hideTableView()
+    func showNoFields()
+    func removeNoFields()
 }
 
 class FilterResultPresenter: IFilterResultPresenter {	
@@ -38,5 +40,11 @@ class FilterResultPresenter: IFilterResultPresenter {
     }
     func hideTableView() {
         view?.hideTableView()
+    }
+    func showNoFields() {
+        view?.showNoFields()
+    }
+    func removeNoFields() {
+        view?.removeNoFields()
     }
 }

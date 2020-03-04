@@ -2807,8 +2807,7 @@
 		86B17CD8240FE3970029FB35 /* SessionResultViews */ = {
 			isa = PBXGroup;
 			children = (
-				86B17CC9240FE3680029FB35 /* SessionResultViewController.swift */,
-				86B17CCC240FE3680029FB35 /* SessionResultViewController.xib */,
+				86B17CDC240FE85A0029FB35 /* Views */,
 			);
 			path = SessionResultViews;
 			sourceTree = "<group>";
@@ -2836,6 +2835,15 @@
 				86B17CCD240FE3680029FB35 /* SessionResultManager.swift */,
 			);
 			path = SessionResultServices;
+			sourceTree = "<group>";
+		};
+		86B17CDC240FE85A0029FB35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86B17CC9240FE3680029FB35 /* SessionResultViewController.swift */,
+				86B17CCC240FE3680029FB35 /* SessionResultViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		86B601EB2405353600066042 /* View */ = {

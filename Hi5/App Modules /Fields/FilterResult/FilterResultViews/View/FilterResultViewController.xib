@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="collectionView" destination="Mvo-Ci-PyW" id="8GN-Ja-gxo"/>
                 <outlet property="indicator" destination="nHF-gS-FiR" id="2QP-VK-3lb"/>
+                <outlet property="noFieldsImg" destination="9ih-R5-ofQ" id="Kc0-Af-gr0"/>
+                <outlet property="noFieldsLbl" destination="Geq-C8-sOZ" id="xGj-8e-q3P"/>
                 <outlet property="tableView" destination="FW5-03-N43" id="u49-Kz-uJj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -72,10 +74,19 @@
                     <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nofield" translatesAutoresizingMaskIntoConstraints="NO" id="9ih-R5-ofQ">
+                    <rect key="frame" x="139.5" y="404" width="96" height="59"/>
+                </imageView>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-gS-FiR">
                     <rect key="frame" x="169" y="315" width="37" height="37"/>
                     <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </activityIndicatorView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Fields In That Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geq-C8-sOZ">
+                    <rect key="frame" x="40" y="487" width="295" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -86,8 +97,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FS8-5T-3SA" secondAttribute="trailing" id="E50-Ny-Ns3"/>
                 <constraint firstItem="FS8-5T-3SA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GVJ-JY-H2b"/>
                 <constraint firstItem="FW5-03-N43" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GuH-qf-RD9"/>
+                <constraint firstItem="Geq-C8-sOZ" firstAttribute="top" secondItem="9ih-R5-ofQ" secondAttribute="bottom" constant="24" id="WU0-ji-Fvj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Geq-C8-sOZ" secondAttribute="trailing" constant="40" id="Y80-y8-2w9"/>
+                <constraint firstItem="9ih-R5-ofQ" firstAttribute="centerY" secondItem="FW5-03-N43" secondAttribute="centerY" id="dTW-aH-OrE"/>
                 <constraint firstItem="nHF-gS-FiR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dso-x2-7kd"/>
+                <constraint firstItem="9ih-R5-ofQ" firstAttribute="centerX" secondItem="FW5-03-N43" secondAttribute="centerX" id="goK-dK-pdI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FW5-03-N43" secondAttribute="bottom" id="sPe-IF-B4C"/>
+                <constraint firstItem="Geq-C8-sOZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="se3-4E-SN9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="136.80000000000001" y="151.57421289355324"/>
@@ -95,5 +111,6 @@
     </objects>
     <resources>
         <image name="leftArrow2" width="23" height="17"/>
+        <image name="nofield" width="96" height="59"/>
     </resources>
 </document>

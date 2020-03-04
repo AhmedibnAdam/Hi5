@@ -87,6 +87,10 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
         }
     }
     
+    @IBAction func checkAvailabilityBtnTapped(_ sender: UIButton) {
+        router?.navigateToSessionResult()
+    }
+    
     @IBAction func backBtnTapped(_ sender: UIButton) {
         router?.navigateToFields()
     }

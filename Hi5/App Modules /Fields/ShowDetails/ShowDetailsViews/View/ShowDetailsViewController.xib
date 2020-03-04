@@ -450,6 +450,9 @@
                                     <state key="normal" title="Check availability">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="checkAvailabilityBtnTapped:" destination="-1" eventType="touchUpInside" id="uHN-5h-ncK"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

@@ -15,12 +15,20 @@ protocol ISideMenuInteractor: class {
 }
 
 class SideMenuInteractor: ISideMenuInteractor {
+   
+    
+    var userImage:UIImage?
+    var imageCashe = [String:UIImage]()
+    var lastURLUsedToLoadImage:String?
+    
     var presenter: ISideMenuPresenter?
     var manager: ISideMenuManager?
     var parameters: [String: Any]?
+    
 
     init(presenter: ISideMenuPresenter, manager: ISideMenuManager) {
     	self.presenter = presenter
     	self.manager = manager
+        
     }
 }

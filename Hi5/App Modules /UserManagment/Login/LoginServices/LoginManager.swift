@@ -10,7 +10,7 @@
 
 import Foundation
 import SwiftyJSON
-
+import UIKit
 // MARK: - Handle all data requests and responses API / CoreData / Realm etc ...
 
 protocol ILoginManager: class {
@@ -19,10 +19,12 @@ protocol ILoginManager: class {
 }
 
 class LoginManager: ILoginManager {
+    var imageCashe = [String:UIImage]()
+      var lastURLUsedToLoadImage:String?
 
     // MARK : - do someting...
     func loginFromApi(userName: String ,password: String , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void) {
-        NetworkService.share.request(endpoint: LoginEndpoint.login(userName: userName, password: password), success: { (responseData) in
+        NetworkService.share.request(endpoint: LoginEndpoint.login(userName: userName, password: password), success: {[weak self] (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
@@ -34,7 +36,7 @@ class LoginManager: ILoginManager {
                     defaults.set(token, forKey: "Token")
                     defaults.set(username, forKey: "UserName")
                     defaults.set(fullname, forKey: "FullName")
-                    defaults.set(userProfileImage,forKey:"image")
+                    self?.setImage(urlString: userProfileImage)
                 }
                 complition(nil,true)
                 
@@ -66,4 +68,29 @@ class LoginManager: ILoginManager {
             
         })
     }
+    func setImage(urlString: String) {
+             if let cachedImage = imageCashe[urlString] {
+                UserDefaults.standard.set(cachedImage, forKey: "image")
+             }
+                 lastURLUsedToLoadImage = urlString
+    //        userImage = nil
+                 guard let url = URL(string: urlString) else {return}
+                       URLSession.shared.dataTask(with: url) { (data, response, err) in
+                           if let err = err {
+                               print("Failed to fetch post image",err.localizedDescription)
+                               return
+                           }
+                           if url.absoluteString != self.lastURLUsedToLoadImage {
+                               return
+                           }
+                           guard let imageData = data else {return}
+                         guard let photoImage = UIImage(data: imageData) else {return}
+                         self.imageCashe[url.absoluteString] = photoImage
+                           DispatchQueue.main.async {
+    //                         self.userImage = photoImage
+                            UserDefaults.standard.set(imageData, forKey: "image")
+                           }
+                           }.resume()
+        }
+        
 }

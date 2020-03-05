@@ -37,7 +37,6 @@ class FilterResultInteractor: IFilterResultInteractor {
                     self.presenter?.hideIndicator()
                     self.presenter?.hideTableView()
                     self.presenter?.showNoFields()
-                    //self.presenter?.showErrorAlert(title: "Error", msg: "Something Wrong")
                 }
             } else {
                 self.presenter?.hideTableView()

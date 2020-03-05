@@ -12,8 +12,10 @@ import Foundation
 import UIKit
 
 class SessionResultConfiguration {
-    static func setup(parameters: [String: Any] = [:]) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:] , fieldId: Int , fieldName: String) -> UIViewController {
         let controller = SessionResultViewController()
+        controller.fieldId = fieldId
+        controller.fieldName = fieldName
         let router = SessionResultRouter(view: controller)
         let presenter = SessionResultPresenter(view: controller)
         let manager = SessionResultManager()

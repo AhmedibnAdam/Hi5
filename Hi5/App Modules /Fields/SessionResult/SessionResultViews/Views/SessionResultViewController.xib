@@ -11,6 +11,8 @@
             <connections>
                 <outlet property="collectionView" destination="CHG-EV-9eC" id="nuC-SQ-9fW"/>
                 <outlet property="indicator" destination="I3l-mV-Ha4" id="T3U-yz-zG3"/>
+                <outlet property="noFieldsImg" destination="kZU-A5-ooy" id="p5j-RB-Mlb"/>
+                <outlet property="noFieldsLbl" destination="7uz-Oo-TAE" id="SYL-wT-JcU"/>
                 <outlet property="tableView" destination="KBb-W6-Yaa" id="CHa-s1-gDQ"/>
                 <outlet property="titleLbl" destination="875-f6-5Eu" id="gVQ-DQ-VdX"/>
                 <outlet property="view" destination="u2h-SD-SBL" id="cT6-8e-7m3"/>
@@ -69,7 +71,7 @@
                         <constraint firstAttribute="trailing" secondItem="CHG-EV-9eC" secondAttribute="trailing" id="wBU-iZ-t9e"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KBb-W6-Yaa">
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KBb-W6-Yaa">
                     <rect key="frame" x="0.0" y="200" width="375" height="467"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>

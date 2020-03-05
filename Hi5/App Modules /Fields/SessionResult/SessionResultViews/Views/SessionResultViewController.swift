@@ -16,6 +16,9 @@ protocol ISessionResultViewController: class {
     func hideIndicator()
     func showTableView()
     func hideTableView()
+    func addNoFields()
+    func removeNoFields()
+    func showResponse(response: SessionResultModel.SessionResultResponse)
 }
 
 class SessionResultViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -26,8 +29,13 @@ class SessionResultViewController: UIViewController , UICollectionViewDelegate ,
     var dayMonth: [String] = []
     var parameter: [String: Any] = [:]
     var selectedDay: String?
+    var fieldId: Int?
+    var fieldName: String?
+    var fields = [SessionResultModel.Field]()
     
     //MARK: - Outlets
+    @IBOutlet weak var noFieldsLbl: UILabel!
+    @IBOutlet weak var noFieldsImg: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
@@ -36,6 +44,7 @@ class SessionResultViewController: UIViewController , UICollectionViewDelegate ,
     //MARK: - ViewLifeCycle
 	override func viewDidLoad() {
         super.viewDidLoad()
+        titleLbl.text = fieldName
         registerCalenderCollectionCell()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -45,6 +54,7 @@ class SessionResultViewController: UIViewController , UICollectionViewDelegate ,
      }
     
     override func viewWillAppear(_ animated: Bool) {
+        print(fieldId)
         getDayName()
         let date = Date()
         let dateFormatter = DateFormatter()
@@ -53,8 +63,8 @@ class SessionResultViewController: UIViewController , UICollectionViewDelegate ,
         selectedDay = dateFormatter.string(from: selectDay)
         if let currentDay = selectedDay {
             parameter["date"] = currentDay
-            //showIndicator()
-                //interactor?.filterSession(view: self, parameter: parameter)
+            showIndicator()
+            interactor?.checkAvailability(view: self, fieldId: fieldId ?? 9, date: currentDay)
         }
     }
     
@@ -81,6 +91,21 @@ extension SessionResultViewController: ISessionResultViewController {
       func hideTableView() {
           self.tableView.isHidden = true
       }
+      func addNoFields() {
+          noFieldsImg.isHidden = false
+          noFieldsLbl.isHidden = false
+      }
+      
+      func removeNoFields() {
+          noFieldsImg.isHidden = true
+          noFieldsLbl.isHidden = true
+      }
+      
+      func showResponse(response: SessionResultModel.SessionResultResponse) {
+          guard let field = response.fields else {return}
+          self.fields = field
+          self.tableView.reloadData()
+      }
 }
 
 extension SessionResultViewController: UITableViewDelegate , UITableViewDataSource {
@@ -90,7 +115,7 @@ extension SessionResultViewController: UITableViewDelegate , UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return fields.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -149,8 +174,8 @@ extension SessionResultViewController {
             selectedDay = dateFormatter.string(from: selectDay)
             if let currentDay = selectedDay {
                 parameter["date"] = currentDay
-                    //showIndicator()
-                    //interactor?.filterSession(view: self, parameter: parameter)
+                    showIndicator()
+                    interactor?.checkAvailability(view: self, fieldId: fieldId ?? 9, date: currentDay)
             }
         }
         

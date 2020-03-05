@@ -11,7 +11,13 @@
 import UIKit
 
 protocol ISessionResultPresenter: class {
-	// do someting...
+	func showErrorAlert(title: String, msg: String)
+    func hideIndicator()
+    func showTableView()
+    func hideTableView()
+    func addNoFields()
+    func removeNoFields()
+    func showResponse(response: SessionResultModel.SessionResultResponse)
 }
 
 class SessionResultPresenter: ISessionResultPresenter {	
@@ -20,4 +26,25 @@ class SessionResultPresenter: ISessionResultPresenter {
 	init(view: ISessionResultViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+    }
+    func hideIndicator() {
+        view?.hideIndicator()
+    }
+    func showTableView() {
+        view?.showTableView()
+    }
+    func hideTableView() {
+        view?.hideTableView()
+    }
+    func addNoFields() {
+        view?.addNoFields()
+    }
+    func removeNoFields() {
+        view?.removeNoFields()
+    }
+    func showResponse(response: SessionResultModel.SessionResultResponse) {
+        view?.showResponse(response: response)
+    }
 }

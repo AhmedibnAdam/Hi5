@@ -15,12 +15,12 @@ import SwiftyJSON
 
 protocol ILoginManager: class {
     // MARK : - do someting...
-    func loginFromApi(userName: String ,password: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
+    func loginFromApi(userName: String ,password: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: LoginModel.LoginResponse?)->Void)
 }
 
 class LoginManager: ILoginManager {
     // MARK : - do someting...
-    func loginFromApi(userName: String ,password: String , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void) {
+    func loginFromApi(userName: String ,password: String , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: LoginModel.LoginResponse?)->Void) {
         NetworkService.share.request(endpoint: LoginEndpoint.login(userName: userName, password: password), success: { (responseData) in
             let response = responseData
             do {
@@ -33,7 +33,7 @@ class LoginManager: ILoginManager {
                     defaults.set(username, forKey: "UserName") as? String
                     defaults.set(fullname, forKey: "FullName") as? String
                 }
-                complition(nil,true)
+                complition(nil,true,user)
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )
@@ -42,7 +42,7 @@ class LoginManager: ILoginManager {
                     let decoder = JSONDecoder()
                     let error = try decoder.decode(ErrorModel.self, from: responseData )
                     print(error)
-                    complition(error , false)
+                    complition(error , false, nil)
                 } catch let error {
                     print(error)
                     
@@ -54,11 +54,11 @@ class LoginManager: ILoginManager {
                 let decoder = JSONDecoder()
                 let error = try decoder.decode(ErrorModel.self, from: error as! Data )
                 print(error)
-                complition(error , false)
+                complition(error , false , nil)
                 
             } catch let error {
                 print(error)
-                complition(nil , false)
+                complition(nil , false , nil)
             }
             
         })

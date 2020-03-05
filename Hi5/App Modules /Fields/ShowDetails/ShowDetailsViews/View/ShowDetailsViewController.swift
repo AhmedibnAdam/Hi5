@@ -88,7 +88,9 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
     }
     
     @IBAction func checkAvailabilityBtnTapped(_ sender: UIButton) {
-        router?.navigateToSessionResult()
+        let fieldId = field?.id
+        let fieldName = field?.name
+        router?.navigateToSessionResult(fieldId: fieldId ?? 1 , fieldName: fieldName ?? "HighFive")
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {

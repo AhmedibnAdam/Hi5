@@ -12,7 +12,7 @@ import UIKit
 
 protocol IShowDetailsRouter: class {
     func navigateToFields()
-    func navigateToSessionResult()
+    func navigateToSessionResult(fieldId: Int , fieldName: String)
     
 }
 
@@ -25,7 +25,7 @@ class ShowDetailsRouter: IShowDetailsRouter {
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
-    func navigateToSessionResult() {
-        view?.navigate(type: .modal, module: GeneralRoute.sessionResult, completion: nil)
+    func navigateToSessionResult(fieldId: Int , fieldName: String) {
+        view?.navigate(type: .modal, module: GeneralRoute.sessionResult(fieldId: fieldId, fieldName: fieldName), completion: nil)
     }
 }

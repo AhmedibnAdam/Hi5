@@ -17,6 +17,7 @@ protocol ILoginViewController: class {
     func navigateToTabBar()
     func navigateToFields()
     func hideIndecator()
+    func setResponseToErrorLbl()
 }
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -24,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
     //MARK: - view outlet
-    
+    @IBOutlet weak var errorLbl: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var eyeBtn: UIButton!
     @IBOutlet weak var password: UITextField!
@@ -101,6 +102,10 @@ extension LoginViewController: ILoginViewController {
     func hideIndecator() {
         loadingIndicator.isHidden = true
     }
+    func setResponseToErrorLbl() {
+        self.errorLbl.isHidden = false
+        self.errorLbl.text = "userName Or Password is Incorrect"
+    }
 }
 
 extension LoginViewController {
@@ -121,14 +126,18 @@ extension LoginViewController {
     func showIndecator() {
         loadingIndicator.isHidden = false
     }
+    
 }
 
 extension LoginViewController {
     func doLoginAction(){
+        self.errorLbl.isHidden = true
         guard let userName = userName.text , let password = password.text else {return}
         if(userName.isEmpty || password.isEmpty || password.count < 4){
             self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
             self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
+            self.errorLbl.isHidden = false
+            self.errorLbl.text = "userName Or Password is Empty"
             return
         }
         showIndecator()

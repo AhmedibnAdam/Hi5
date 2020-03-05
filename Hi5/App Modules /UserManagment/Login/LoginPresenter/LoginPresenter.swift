@@ -17,6 +17,7 @@ protocol ILoginPresenter: class {
     func navigateToFields()
     func hideIndecator()
     func navigateToTabBar()
+    func setResponseToErrorLbl()
 }
 class LoginPresenter: ILoginPresenter {
     
@@ -39,5 +40,8 @@ class LoginPresenter: ILoginPresenter {
     }
     func navigateToFields() {
         view?.navigateToFields()
+    }
+    func setResponseToErrorLbl() {
+        view?.setResponseToErrorLbl()
     }
 }

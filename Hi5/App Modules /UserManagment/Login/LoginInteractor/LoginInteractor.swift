@@ -27,12 +27,16 @@ class LoginInteractor: ILoginInteractor {
     func doLogin(view : UIViewController , userName: String , password: String){
         //let request = LoginModel.Request()
         //let param = request.parameters(userName: userName, password: password)
-        manager?.loginFromApi(userName: userName , password: password, complition: { (error , success) in
+        manager?.loginFromApi(userName: userName , password: password, complition: { (error , success , response) in
             if (success == true) {
-                self.presenter?.hideIndecator()
-                //self.presenter?.navigateToFields()
-                self.presenter?.navigateToTabBar()
-                //self.presenter?.navigateToProfile()
+                if (response?.status == true) {
+                    self.presenter?.hideIndecator()
+                    self.presenter?.navigateToTabBar()
+                } else {
+                    self.presenter?.hideIndecator()
+                    self.presenter?.showErrorAlert(title: "Error", msg: "userName Or Password is incorrect")
+                    self.presenter?.setResponseToErrorLbl()
+                }
             } else {
                 self.presenter?.hideIndecator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)

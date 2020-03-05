@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ISessionResultRouter: class {
-	// do someting...
+    
 }
 
 class SessionResultRouter: ISessionResultRouter {	

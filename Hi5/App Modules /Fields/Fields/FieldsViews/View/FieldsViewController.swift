@@ -140,6 +140,10 @@ extension FieldsViewController {
             let type = types[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "typeCell", for: indexPath) as! TypeCollectionViewCell
             cell.typeLbl.text = type
+        if (indexPath.row == 0){
+            cell.typeLbl.textColor = .orange
+            cell.hightLightVieww.isHidden = false
+        } 
             return cell
     }
     
@@ -156,6 +160,11 @@ extension FieldsViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = IndexPath(item: 0, section: 0)
+        let firstCell = collectionView.cellForItem(at: index) as! TypeCollectionViewCell
+        firstCell.typeLbl.textColor = .lightGray
+        firstCell.hightLightVieww.isHidden = true
+        
             let cell = collectionView.cellForItem(at: indexPath) as! TypeCollectionViewCell
             cell.typeLbl.textColor = .orange
             cell.hightLightVieww.isHidden = false

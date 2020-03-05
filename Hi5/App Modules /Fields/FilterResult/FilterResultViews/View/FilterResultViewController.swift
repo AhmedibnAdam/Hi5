@@ -193,6 +193,11 @@ extension FilterResultViewController {
         let date = dayMonth[indexPath.row]
         cell.dateLbl.text = date
         cell.nameLbl.text = day
+        if (indexPath.row == 0){
+            cell.containerView.backgroundColor = .white
+            cell.nameLbl.textColor = .orange
+            cell.dateLbl.textColor = .orange
+        }
         
         return cell
     }
@@ -204,6 +209,12 @@ extension FilterResultViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = IndexPath(item: 0, section: 0)
+        let firstCell = collectionView.cellForItem(at: index) as! CalenderCell
+        firstCell.containerView.backgroundColor = .clear
+        firstCell.nameLbl.textColor = .white
+        firstCell.dateLbl.textColor = .white
+        
         let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
         cell.isSelected = true
         let date = Date()

@@ -119,7 +119,42 @@ extension SessionResultViewController: UITableViewDelegate , UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let field = fields[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell") as! FieldCell
+        cell.fieldNameLbl.text = field.name
+        //cell.costLbl.text = "$\(String(describing: field.cost))"
+        cell.partnerNamelbl.text = field.partnerName
+        cell.timeLbl.text = field.time
+        cell.dateLbl.text = field.date
+        cell.fieldLocationLbl.text = field.address
+        cell.sportTypeLbl.text = field.sport
+        cell.genderLbl.text = field.gender
+        cell.bestForLbl.text = field.bestFor
+        cell.paymentLbl.text = field.payment
+        if let cost = field.cost {
+            cell.costLbl.text = "$\(String(describing: cost))"
+        }
+        if let partnerImg = field.partnerImage {
+            let url = URL(string: partnerImg)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        cell.partnerImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
+        
+        if let image = field.image {
+            let url = URL(string: image)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!){
+                    DispatchQueue.main.async {
+                        cell.fieldImg.image = UIImage(data: data)
+                    }
+                }
+            }
+        }
         
         
         return cell
@@ -160,10 +195,10 @@ extension SessionResultViewController {
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let index = IndexPath(item: 0, section: 0)
-            let firstCell = collectionView.cellForItem(at: index) as! CalenderCell
-            firstCell.containerView.backgroundColor = .clear
-            firstCell.nameLbl.textColor = .white
-            firstCell.dateLbl.textColor = .white
+            let firstCell = collectionView.cellForItem(at: index) as? CalenderCell
+            firstCell?.containerView.backgroundColor = .clear
+            firstCell?.nameLbl.textColor = .white
+            firstCell?.dateLbl.textColor = .white
             
             let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
             cell.isSelected = true

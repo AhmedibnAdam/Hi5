@@ -32,7 +32,7 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
                 guard let response = response else {return}
                 self.presenter?.showDetailsResponse(response: response)
             } else {
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }
@@ -41,7 +41,7 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
             if (success == true){
                 
             } else {
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }
@@ -50,7 +50,7 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
             if(success == true){
                 
             } else {
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }

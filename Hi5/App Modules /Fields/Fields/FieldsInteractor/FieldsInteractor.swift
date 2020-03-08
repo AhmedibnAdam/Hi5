@@ -40,7 +40,7 @@ class FieldsInteractor: IFieldsInteractor {
                 self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
-               self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+               self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
            }
         })
     }
@@ -51,7 +51,7 @@ class FieldsInteractor: IFieldsInteractor {
                 print("Added Favourite Done......")
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }
@@ -62,7 +62,7 @@ class FieldsInteractor: IFieldsInteractor {
                 print("Removed Favourite Done.....")
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }
@@ -81,7 +81,7 @@ class FieldsInteractor: IFieldsInteractor {
                 self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
-                  self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                  self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
               }
         })
     }
@@ -100,7 +100,7 @@ class FieldsInteractor: IFieldsInteractor {
                 self.presenter?.hideIndicator()
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
-                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                 self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
              }
         })
     }

@@ -33,7 +33,7 @@ class FilterInteractor: IFilterInteractor {
                 }
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }

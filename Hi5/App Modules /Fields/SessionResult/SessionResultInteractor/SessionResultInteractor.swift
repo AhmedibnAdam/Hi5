@@ -37,13 +37,12 @@ class SessionResultInteractor: ISessionResultInteractor {
                     self.presenter?.hideIndicator()
                     self.presenter?.hideTableView()
                     self.presenter?.addNoFields()
-                    //self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
                 }
             } else {
                 self.presenter?.hideIndicator()
                 self.presenter?.hideTableView()
                 self.presenter?.removeNoFields()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })
     }

@@ -57,6 +57,9 @@ class LocationViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         let place = defaults.string(forKey: "location")
+        countryLbl.text = defaults.string(forKey: "countryFlag")
+        cityLbl.text = defaults.string(forKey: "cityFlag")
+        stateLbl.text = defaults.string(forKey: "stateFlag")
         locationBtn.setTitle(place, for: .normal)
     }
     //MARK:- Actions

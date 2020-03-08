@@ -103,14 +103,28 @@ extension ProfileViewController: IProfileViewController {
         }
         
         if let fullName = responseData.name {
-            let name = fullName
-            defaults.set(name, forKey: "FullName")
+            //let name = fullName
+            defaults.set(fullName, forKey: "FullName")
         }
         
         if let biography = responseData.biography {
-            let bio = biography
-            defaults.set(bio, forKey: "biography")
+            //let bio = biography
+            defaults.set(biography, forKey: "biography")
         }
+        
+        if let yearFlag = responseData.year?.flag , let monthFlag = responseData.month?.flag , let dayFlag = responseData.day?.flag {
+           defaults.set(yearFlag, forKey: "yearFlag")
+           defaults.set(monthFlag, forKey: "monthFlag")
+           defaults.set(dayFlag, forKey: "dayFlag")
+        }
+        
+        if let countryFlag = responseData.country?.flag , let cityFlag = responseData.city?.flag , let stateFlag = responseData.state?.flag {
+                defaults.set(countryFlag, forKey: "countryFlag")
+                defaults.set(cityFlag, forKey: "cityFlag")
+                defaults.set(stateFlag, forKey: "stateFlag")
+        }
+        
+
     }
 }
 

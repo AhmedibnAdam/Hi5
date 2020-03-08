@@ -18,8 +18,8 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
 	var interactor: ISideMenuInteractor?
 	var router: ISideMenuRouter?
    //MARK: - Properties
-   var textArr = ["Friends","My Schedule","My bookings","Fields","Wallet","Suggest Field","Settings & Privacy","Notification setting","Help Center"]
-   var imgArr = ["friends","mySchadule","bookings","fields","wallet","suggestFields","settings","notificationSettings","helpCenter"]
+   var textArr = ["Friends","My Schedule","My bookings","Fields","Wallet","Suggest Field","Settings & Privacy","Notification setting","Help Center","Logout"]
+   var imgArr = ["friends","mySchadule","bookings","fields","wallet","suggestFields","settings","notificationSettings","helpCenter","helpCenter"]
    //MARK: - Outlets
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var fullNamelbl: UILabel!
@@ -120,6 +120,8 @@ extension SideMenuViewController {
             print("Notificatio Setting....")
         } else if(indexPath.row == 8){
             print("Help center.....")
+        } else if(indexPath.row == 9){
+            print("Logout........")
         }
     }
 }

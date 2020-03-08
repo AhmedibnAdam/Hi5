@@ -70,7 +70,7 @@ class SearchLocationViewController: UIViewController , UISearchBarDelegate {
     
     func getPlace() {
         let defaults = UserDefaults.standard
-        let places = defaults.string(forKey: "place")
+        let places = defaults.string(forKey: "location")
         searchBar.text = places
     }
    //MARK:- Actions
@@ -108,7 +108,7 @@ extension SearchLocationViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         if let place = place.name {
             let defaults = UserDefaults.standard
-            defaults.set(place, forKey: "place")
+            defaults.set(place, forKey: "location")
         }
         getPlace()
       dismiss(animated: true, completion: nil)

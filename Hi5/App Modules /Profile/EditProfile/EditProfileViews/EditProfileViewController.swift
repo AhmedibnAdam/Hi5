@@ -75,13 +75,15 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
         let gend = defaults.string(forKey: "Gender")
         let dateOfBirth = defaults.string(forKey: "DateOfBirth")
         let location = defaults.string(forKey: "location")
+        let biography = defaults.string(forKey: "biography")
+        let fullName = defaults.string(forKey: "FullName")
         if let data = defaults.object(forKey: "image") as? Data {
             let image = UIImage(data: data)
             profilePhoto.image = image
             photo = image
         }
-//        let images = UserDefaults.standard.imageArray(forKey: "image")
-//        profilePhoto.image = images?[0]
+        biographyTextField.text = biography
+        fullNameTextField.text = fullName
         genderBtn.setTitle(gend, for: .normal)
         dateOfBirthBtn.setTitle(dateOfBirth, for: .normal)
         locationBtn.setTitle(location, for: .normal)
@@ -137,7 +139,6 @@ extension EditProfileViewController {
 
 extension EditProfileViewController {
     func initView() {
-//        self.photoView = CreateCornerRauis.viewRaduis(view: self.photoView, number: (self.photoView.frame.size.height / 2))
         self.profilePhoto = CreateCornerRauis.imageViewRaduis(view: profilePhoto, number: (self.profilePhoto.frame.size.height / 2))
         self.biographyContainerView = CreateCornerRauis.viewRaduis(view: self.biographyContainerView, number: 5)
         self.fullnameContainerView = CreateCornerRauis.viewRaduis(view: self.fullnameContainerView, number: 5)
@@ -238,9 +239,6 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         self.photo = image
         let images = image!.pngData()
         UserDefaults().set(images, forKey: "image")
-//        let imageArray = [image]
-//        UserDefaults.standard.set(imageArray, forKey: "images")
-//        UserDefaults.standard.synchronize()
         dismiss(animated: true, completion: nil)
     }
 

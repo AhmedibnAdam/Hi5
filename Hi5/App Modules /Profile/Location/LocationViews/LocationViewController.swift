@@ -56,7 +56,7 @@ class LocationViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
-        let place = defaults.string(forKey: "place")
+        let place = defaults.string(forKey: "location")
         locationBtn.setTitle(place, for: .normal)
     }
     //MARK:- Actions

@@ -25,10 +25,16 @@ class LocationInteractor: ILocationInteractor {
     	self.manager = manager
     }
     func doLocationEditProfile(view: UIViewController, country: String, countryFlag: String, city: String, cityFlag: String, state: String, stateFlag: String) {
-        manager?.locationEditProfileFromApi(country: country, countryFlag: countryFlag, city: city, cityFlag: cityFlag, state: state, stateFlag: stateFlag, complition: { (error, success) in
+        manager?.locationEditProfileFromApi(country: country, countryFlag: countryFlag, city: city, cityFlag: cityFlag, state: state, stateFlag: stateFlag, complition: { (error, success , response) in
             if(success == true){
-                self.presenter?.hideIndicator()
-                self.presenter?.navigateToEditProfile()
+                if (response?.status != nil){
+                    self.presenter?.hideIndicator()
+                    self.presenter?.navigateToEditProfile()
+                } else {
+                    self.presenter?.hideIndicator()
+                    self.presenter?.showErrorAlert(title: "Error", msg: "please enter your country, city and state")
+                }
+                
             } else {
                 self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)

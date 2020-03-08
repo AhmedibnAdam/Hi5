@@ -13,18 +13,18 @@ import SwiftyJSON
 
 // MARK: - Handle all data requests and responses API / CoreData / Realm etc ...
 protocol ILocationManager: class {
-    func locationEditProfileFromApi(country: String , countryFlag: String , city: String , cityFlag: String , state: String , stateFlag: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
+    func locationEditProfileFromApi(country: String , countryFlag: String , city: String , cityFlag: String , state: String , stateFlag: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: LocationModel.LocationEditProfileResponse?)->Void)
 }
 
 class LocationManager: ILocationManager {
-    func locationEditProfileFromApi(country: String, countryFlag: String, city: String, cityFlag: String, state: String, stateFlag: String, complition: @escaping (ErrorModel?, Bool) -> Void) {
+    func locationEditProfileFromApi(country: String, countryFlag: String, city: String, cityFlag: String, state: String, stateFlag: String, complition: @escaping (ErrorModel?, Bool,_ data: LocationModel.LocationEditProfileResponse?) -> Void) {
         NetworkService.share.request(endpoint: LocationEndPoint.location(country: country, countryFlag: countryFlag, city: city, cityFlag: cityFlag, state: state, stateFlag: stateFlag), success: { (responseData) in
         let response = responseData
         do {
             let decoder = JSONDecoder()
             let user = try decoder.decode(LocationModel.LocationEditProfileResponse.self, from: response)
             print(user)
-            complition(nil,true)
+            complition(nil,true,user)
             
         } catch let error {
             print("error : ", error.localizedDescription  )
@@ -33,7 +33,7 @@ class LocationManager: ILocationManager {
                 let decoder = JSONDecoder()
                 let error = try decoder.decode(ErrorModel.self, from: responseData )
                 print(error)
-                complition(error , false)
+                complition(error , false , nil)
             } catch let error {
                 print(error)
                 
@@ -45,11 +45,11 @@ class LocationManager: ILocationManager {
             let decoder = JSONDecoder()
             let error = try decoder.decode(ErrorModel.self, from: error as! Data )
             print(error)
-            complition(error , false)
+            complition(error , false , nil)
             
         } catch let error {
             print(error)
-            complition(nil , false)
+            complition(nil , false , nil)
         }
         
       })

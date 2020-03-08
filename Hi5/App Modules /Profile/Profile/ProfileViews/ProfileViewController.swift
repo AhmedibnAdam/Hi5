@@ -22,6 +22,8 @@ protocol IProfileViewController: class {
 class ProfileViewController: UIViewController {
 	var interactor: IProfileInteractor?
 	var router: IProfileRouter?
+    var dateOfBirth: String = ""
+    var location: String = ""
 //MARK:- Outlets
     
     @IBOutlet weak var countryName: UILabel!
@@ -70,7 +72,6 @@ extension ProfileViewController: IProfileViewController {
             return
         }
         let defaults = UserDefaults.standard
-        let country = defaults.string(forKey: "country")        
         if let img = responseData.avatar {
             let url = URL(string: img)
             DispatchQueue.global().async {
@@ -86,6 +87,30 @@ extension ProfileViewController: IProfileViewController {
         self.fullName.text = responseData.name
         self.userName.text = responseData.vieID
         self.descriptionLbl.text = responseData.biography
+        if let gender = responseData.gender{
+            defaults.set(gender, forKey: "Gender")
+        }
+        
+        if let day = responseData.day?.val , let month = responseData.month?.val , let year = responseData.year?.val {
+            dateOfBirth = day+" "+month+" "+year
+            defaults.set(dateOfBirth, forKey: "DateOfBirth")
+        }
+        
+        if let country = responseData.country?.val , let city = responseData.city?.val , let state = responseData.state?.val {
+            location = country+" "+city+" "+state
+            defaults.set(location, forKey: "location")
+            print(location)
+        }
+        
+        if let fullName = responseData.name {
+            let name = fullName
+            defaults.set(name, forKey: "FullName")
+        }
+        
+        if let biography = responseData.biography {
+            let bio = biography
+            defaults.set(bio, forKey: "biography")
+        }
     }
 }
 

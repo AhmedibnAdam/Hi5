@@ -13,6 +13,7 @@ import UIKit
 protocol ISideMenuRouter: class {
 	func navigatetoProfile()
     func navigateToFields()
+    func navigateToLogin()
 }
 
 class SideMenuRouter: ISideMenuRouter {	
@@ -26,5 +27,8 @@ class SideMenuRouter: ISideMenuRouter {
     }
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
+    }
+    func navigateToLogin() {
+        view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
     }
 }

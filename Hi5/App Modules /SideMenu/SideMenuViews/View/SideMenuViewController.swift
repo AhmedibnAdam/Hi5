@@ -121,7 +121,13 @@ extension SideMenuViewController {
         } else if(indexPath.row == 8){
             print("Help center.....")
         } else if(indexPath.row == 9){
-            print("Logout........")
+            print("logout......")
+            let defaults = UserDefaults.standard
+            let dictionary = defaults.dictionaryRepresentation()
+            dictionary.keys.forEach { key in
+                defaults.removeObject(forKey: key)
+            }
+            router?.navigateToLogin()
         }
     }
 }

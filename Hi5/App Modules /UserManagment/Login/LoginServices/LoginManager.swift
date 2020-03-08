@@ -28,10 +28,11 @@ class LoginManager: ILoginManager {
                 let user = try decoder.decode(LoginModel.LoginResponse.self, from: response)
                 print(user)
                 let defaults = UserDefaults.standard
-                if let token = user.token , let username = user.userName , let fullname = user.fullName {
+                if let token = user.token , let username = user.userName , let fullname = user.fullName, let userProfileimage = user.image {
                     defaults.set(token, forKey: "Token") as? String
                     defaults.set(username, forKey: "UserName") as? String
                     defaults.set(fullname, forKey: "FullName") as? String
+                    self.setImage(urlString: userProfileimage, user: user)
                 }
                 complition(nil,true,user)
                 
@@ -62,5 +63,18 @@ class LoginManager: ILoginManager {
             }
             
         })
+    }
+    
+    func setImage(urlString: String , user: LoginModel.LoginResponse) {
+        if let partnerImg = user.image {
+            guard let url = URL(string: partnerImg) else {return}
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url){
+                    DispatchQueue.main.async {
+                        UserDefaults.standard.set(data, forKey: "image")
+                    }
+                }
+            }
+        }
     }
 }

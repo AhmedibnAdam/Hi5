@@ -70,17 +70,20 @@ extension ProfileViewController: IProfileViewController {
             return
         }
         let defaults = UserDefaults.standard
-        let country = defaults.string(forKey: "country")
-        if let data = defaults.object(forKey: "image") as? Data {
-            let image = UIImage(data: data)
-            profilePhoto.image = image
-            
+        let country = defaults.string(forKey: "country")        
+        if let img = responseData.avatar {
+            let url = URL(string: img)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        self.profilePhoto.image = UIImage(data: data)
+                    }
+                }
+            }
         }
-        //self.countryName.text = country
-        //let url = URL(fileURLWithPath: responseData.avatar!)
+        
         self.countryName.text = responseData.country?.val
         self.fullName.text = responseData.name
-        //self.profilePhoto.kf.setImage(with: url)
         self.userName.text = responseData.vieID
         self.descriptionLbl.text = responseData.biography
     }

@@ -59,18 +59,6 @@ class NetworkService {
                 }
                 
             })
-            //            self.dataRequest?.responseJSON(completionHandler: { (response) in
-            //
-            //                 let statusCode = response.response?.statusCode
-            //                print(statusCode!)
-            //
-            //                switch response.result {
-            //                case .success(let value):
-            //                    success?(JSON(value))
-            //                case .failure(let error):
-            //                    print(error)
-            //                }
-            //            })
         }
     }
     

@@ -11,13 +11,23 @@
 import UIKit
 
 protocol IPublicEventsPresenter: class {
-	// do someting...
+	func showErrorAlert(title: String, msg: String)
+    func showFilteresPublicEvent(response: PublicEventsModel.PublicEventResponse)
 }
 
-class PublicEventsPresenter: IPublicEventsPresenter {	
+class PublicEventsPresenter: IPublicEventsPresenter {
+
 	weak var view: IPublicEventsViewController?
 	
 	init(view: IPublicEventsViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+          view?.showAlert(title: title, msg: msg)
+      }
+    func showFilteresPublicEvent(response: PublicEventsModel.PublicEventResponse) {
+        let view = PublicEventsViewController()
+        view.showFilteresPublicEvent(response: response)
+    }
+    
 }

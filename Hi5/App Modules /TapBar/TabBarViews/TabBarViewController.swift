@@ -32,8 +32,8 @@ class TabBarViewController: UITabBarController {
     }()
     
     lazy var events: UIViewController = {
-        let vc = PublicEventsViewController()
-         vc.tabBarItem.title = "events"
+        let vc = PublicEventContainerController()
+         vc.tabBarItem.title = "Public Events"
          vc.tabBarItem.image = UIImage(named: "event")
         //let nav = UINavigationController(rootViewController: vc)
         return vc

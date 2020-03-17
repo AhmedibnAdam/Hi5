@@ -20,7 +20,7 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
     //MARK: - Properties
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
-    var field: FieldsModel.Field?
+    var field: FieldsModel.NearByfieldsResponseField?
     var services = [ShowDetailsModel.Service]()
     
     //MARK: - Outlets

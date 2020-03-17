@@ -13,6 +13,8 @@ import UIKit
 protocol IFieldsPresenter: class {
     func showErrorAlert(title: String, msg: String)
     func showResponse(response: FieldsModel.NearByfieldsResponse)
+    func showFavorites(response: FieldsModel.FavoriteFieldsResponse)
+    func showMemberFields(response: FieldsModel.MemberShipFieldsResponse)
     func removeNoMemberFields()
     func showNoMemberOfFields()
     func removeNoFavouriteFields()
@@ -20,6 +22,8 @@ protocol IFieldsPresenter: class {
 }
 
 class FieldsPresenter: IFieldsPresenter {
+
+    
 	weak var view: IFieldsViewController?
 	
 	init(view: IFieldsViewController?) {
@@ -30,6 +34,12 @@ class FieldsPresenter: IFieldsPresenter {
     }
     func showResponse(response: FieldsModel.NearByfieldsResponse) {
         view?.showResponse(response: response)
+    }
+    func showFavorites(response: FieldsModel.FavoriteFieldsResponse) {
+        view?.showFavorites(response: response)
+    }
+    func showMemberFields(response: FieldsModel.MemberShipFieldsResponse) {
+        view?.showMemberFields(response: response)
     }
     func removeNoMemberFields() {
         view?.removeNoMemberFields()

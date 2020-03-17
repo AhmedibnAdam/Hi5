@@ -66,7 +66,7 @@ class FieldsInteractor: IFieldsInteractor {
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                 guard let response = response else {return}
-                 self.presenter?.showResponse(response: response)
+                 self.presenter?.showFavorites(response: response)
                 if (response.fields?.count == 0){
                     self.presenter?.showNoFavouriteFields()
                 }
@@ -83,7 +83,7 @@ class FieldsInteractor: IFieldsInteractor {
                 self.presenter?.removeNoFavouriteFields()
                 self.presenter?.removeNoMemberFields()
                  guard let response = response else {return}
-                 self.presenter?.showResponse(response: response)
+                 self.presenter?.showMemberFields(response: response)
                 if (response.fields?.count == 0) {
                     self.presenter?.showNoMemberOfFields()
                 }

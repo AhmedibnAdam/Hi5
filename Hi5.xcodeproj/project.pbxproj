@@ -284,6 +284,8 @@
 		668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */; };
 		668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */; };
 		668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */; };
+		66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */; };
+		66AEC5432420FA97003CF2EB /* PublicEventsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */; };
 		66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */; };
 		66CCBE88240EAA840046D672 /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
@@ -730,6 +732,8 @@
 		668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationModel.swift; sourceTree = "<group>"; };
 		668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutConfirmationViewController.xib; sourceTree = "<group>"; };
 		668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationManager.swift; sourceTree = "<group>"; };
+		66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventContainerviewController.swift; sourceTree = "<group>"; };
+		66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsEndpoint.swift; sourceTree = "<group>"; };
 		66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowDetailsViewController.xib; path = View/ShowDetailsViewController.xib; sourceTree = "<group>"; };
 		66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowDetailsViewController.swift; path = View/ShowDetailsViewController.swift; sourceTree = "<group>"; };
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
@@ -1058,11 +1062,13 @@
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
+				6663362623B40221004E537C /* UserManagment */,
+				86E128FC23D49781007CB956 /* TapBar */,
+				E2FAE595240E648300CD8CFC /* Social */,
 				86268A1B23F72ED600EFD96B /* Sechadule */,
 				663409FB23B4C8E2009DB30A /* Fields */,
 				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
-				6663362623B40221004E537C /* UserManagment */,
 				66340A1323B4CE2C009DB30A /* SideMenu */,
 				66340A1223B4CAD3009DB30A /* Profile */,
 				66340A1123B4CAC2009DB30A /* HelpCenter */,
@@ -1239,8 +1245,6 @@
 		6663362623B40221004E537C /* UserManagment */ = {
 			isa = PBXGroup;
 			children = (
-				E2FAE595240E648300CD8CFC /* Social */,
-				86E128FC23D49781007CB956 /* TapBar */,
 				862A5E7C23CB72130058355E /* ChangeUsername */,
 				86BBEE4F23CB5F5D0036C41D /* CreatePassword */,
 				86B14BD223CB53E600B3FEB1 /* Welcome */,
@@ -1560,6 +1564,32 @@
 				668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */,
 			);
 			path = CheckOutConfirmation;
+			sourceTree = "<group>";
+		};
+		66AEC53F2420D588003CF2EB /* DateCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAE5C4240E649E00CD8CFC /* dateCell.swift */,
+				E2FAE5C5240E649E00CD8CFC /* dateCell.xib */,
+			);
+			path = DateCell;
+			sourceTree = "<group>";
+		};
+		66AEC5402420D59A003CF2EB /* ContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */,
+			);
+			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		66AEC5412420D5B0003CF2EB /* PublicEventView */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAE5C2240E649E00CD8CFC /* PublicEventsViewController.swift */,
+				E2FAE5C3240E649E00CD8CFC /* PublicEventsViewController.xib */,
+			);
+			path = PublicEventView;
 			sourceTree = "<group>";
 		};
 		8608422E23DC813100BA87D7 /* SearchLocation */ = {
@@ -3272,10 +3302,9 @@
 			isa = PBXGroup;
 			children = (
 				E2FAE5BF240E649E00CD8CFC /* PublicEventsCell */,
-				E2FAE5C2240E649E00CD8CFC /* PublicEventsViewController.swift */,
-				E2FAE5C3240E649E00CD8CFC /* PublicEventsViewController.xib */,
-				E2FAE5C4240E649E00CD8CFC /* dateCell.swift */,
-				E2FAE5C5240E649E00CD8CFC /* dateCell.xib */,
+				66AEC5412420D5B0003CF2EB /* PublicEventView */,
+				66AEC53F2420D588003CF2EB /* DateCell */,
+				66AEC5402420D59A003CF2EB /* ContainerView */,
 			);
 			path = PublicEventsViews;
 			sourceTree = "<group>";
@@ -3310,6 +3339,7 @@
 			children = (
 				E2FAE5CB240E649E00CD8CFC /* PublicEventsManager.swift */,
 				E2FAE5CC240E649E00CD8CFC /* PublicEventsModel.swift */,
+				66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */,
 			);
 			path = PublicEventsServices;
 			sourceTree = "<group>";
@@ -3715,6 +3745,7 @@
 				662A169523C3E75400A3695E /* MyFavoriteFriendsInteractor.swift in Sources */,
 				6663365323B40318004E537C /* RegisterPresenter.swift in Sources */,
 				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
+				66AEC5432420FA97003CF2EB /* PublicEventsEndpoint.swift in Sources */,
 				8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
 				8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */,
@@ -3791,6 +3822,7 @@
 				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
 				667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */,
 				86DC11E323D5C19100E577D9 /* EditProfileInteractor.swift in Sources */,
+				66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */,
 				667E4B7423C3DCA3007354A7 /* MakeWalletPasswordModel.swift in Sources */,
 				6683E2F923BCEEB300250702 /* HelpCenterConfiguration.swift in Sources */,
 				6683E2B523BB631D00250702 /* NotificationSettingConfiguration.swift in Sources */,
@@ -4038,13 +4070,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FudexApp.Hi5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4060,13 +4093,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FudexApp.Hi5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

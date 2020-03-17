@@ -14,16 +14,32 @@ class publicEventsCell: UICollectionViewCell {
     @IBOutlet weak var ballImageView: UIImageView!
     @IBOutlet weak var noOfPlayersLabel: UILabel!
     @IBOutlet weak var noOfPlayerSlider: UISlider!
+    @IBOutlet weak var sliderLableP: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupCellView()
     }
     
-    @IBAction func sliderValueChanged(_ sender: Any) {
-        noOfPlayersLabel.text = "\(Int(noOfPlayerSlider.value))"
+    
+    
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+//        noOfPlayersLabel.text = "\(Int(noOfPlayerSlider.value))"
+//        noOfPlayerSlider.setThumbImage(UIImage(named: "\(Int(noOfPlayerSlider.value))"), for: .normal)
+
+        let trackRect = sender.trackRect(forBounds: sender.frame)
+        let thumbRect = sender.thumbRect(forBounds: sender.bounds, trackRect: trackRect, value: sender.value)
+        self.sliderLableP.text =  "\(Int(noOfPlayerSlider.value))"
+        self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
     }
     func setupCellView() {
+        noOfPlayerSlider.thumbTintColor = UIColor.orange
+        
+        self.sliderLableP.text = "1"
+        let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
+        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value)
+        self.sliderLableP.text =  "\(Int(noOfPlayerSlider.value))"
+        self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
         wholeCellView.layer.cornerRadius = 10
         ballImageView.layer.cornerRadius = 5
         wholeCellView.layer.shadowColor = UIColor.black.cgColor

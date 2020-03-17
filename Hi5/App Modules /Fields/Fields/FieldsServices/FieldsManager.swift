@@ -15,8 +15,8 @@ import SwiftyJSON
 
 protocol IFieldsManager: class {
     func nearByFromApi(lon: Double ,lat: Double ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
-    func favouriteFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
-    func memberOfFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.NearByfieldsResponse?)->Void)
+    func favouriteFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.FavoriteFieldsResponse?)->Void)
+    func memberOfFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.MemberShipFieldsResponse?)->Void)
     func addFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.AddfavouriteResponse?)->Void)
     func removeFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.RemovefavouriteResponse?)->Void)
 }
@@ -138,12 +138,12 @@ class FieldsManager: IFieldsManager {
 
     }
     
-    func favouriteFromApi(complition: @escaping (ErrorModel?, Bool, FieldsModel.NearByfieldsResponse?) -> Void) {
+    func favouriteFromApi(complition: @escaping (ErrorModel?, Bool, FieldsModel.FavoriteFieldsResponse?) -> Void) {
             NetworkService.share.request(endpoint: FieldsEndpoint.favourite, success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
-                let user = try decoder.decode(FieldsModel.NearByfieldsResponse.self, from: response)
+                let user = try decoder.decode(FieldsModel.FavoriteFieldsResponse.self, from: response)
                 print(user)
                 complition(nil , true , user)
                 
@@ -176,12 +176,12 @@ class FieldsManager: IFieldsManager {
         })
     }
     
-    func memberOfFromApi(complition: @escaping (ErrorModel?, Bool, FieldsModel.NearByfieldsResponse?) -> Void) {
+    func memberOfFromApi(complition: @escaping (ErrorModel?, Bool, FieldsModel.MemberShipFieldsResponse?) -> Void) {
             NetworkService.share.request(endpoint: FieldsEndpoint.memberOf, success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
-                let user = try decoder.decode(FieldsModel.NearByfieldsResponse.self, from: response)
+                let user = try decoder.decode(FieldsModel.MemberShipFieldsResponse.self, from: response)
                 print(user)
                 complition(nil , true , user)
                 

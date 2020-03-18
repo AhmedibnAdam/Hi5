@@ -31,11 +31,12 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     var memberOfFields = [FieldsModel.MemberShipField]()
     var locManager = CLLocationManager()
     var currentLocation: CLLocation!
-    var types = ["Nearby Fields","Favourites","Member of"]
+    var types = ["Nearby","Favourites","Member of"]
 	var interactor: IFieldsInteractor?
 	var router: IFieldsRouter?
     var fieldsCount = 0
     var fieldsTabType = 0  // nearBy = 0 / favorite = 1 / member of = 2
+    var firstTimeIn = 0
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
     }()
@@ -145,6 +146,13 @@ extension FieldsViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let type = types[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "typeCell", for: indexPath) as! TypeCollectionViewCell
+        if firstTimeIn ==  0 {
+                if indexPath.row == 0{
+                    cell.typeLbl.textColor = .orange
+                    cell.hightLightVieww.isHidden = false
+                    firstTimeIn += 1
+                }
+            }
             cell.typeLbl.text = type
             return cell
     }
@@ -162,6 +170,11 @@ extension FieldsViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let firstCellIndexPath = IndexPath(item: 0, section: 0)
+               let firstCell = collectionView.cellForItem(at: firstCellIndexPath) as!TypeCollectionViewCell
+               firstCell.typeLbl.textColor = .lightGray
+               firstCell.hightLightVieww.isHidden = true
             let cell = collectionView.cellForItem(at: indexPath) as! TypeCollectionViewCell
             cell.typeLbl.textColor = .orange
             cell.hightLightVieww.isHidden = false
@@ -241,6 +254,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             //        cell.genderLbl.text = nearFields.gender
             cell.recomendedLbl.text = nearFields.recommendedFor
             cell.companyName.text = nearFields.partnerName
+            cell.partner.text = nearFields.name
             if nearFields.visibility == "public" {
                 cell.visabilityButton.isHidden = true
             }else{

@@ -43,10 +43,11 @@ enum GeneralRoute: IRouter {
     case location
     case sideMenu
     case fields
-    case showDetailsFields(field: FieldsModel.Field)
+    case showDetailsFields(field: FieldsModel.NearByfieldsResponseField)
     case filter
     case filterResult(param: [String: Any])
-    case sessionResult(fieldId: Int , fieldName: String)
+    case myBooking
+//    case sessionResult(fieldId: Int , fieldName: String)
 }
 
 extension GeneralRoute {
@@ -112,9 +113,11 @@ extension GeneralRoute {
             return FilterConfiguration.setup()
         case .filterResult(let param):
             return FilterResultConfiguration.setup(param: param)
-        case .sessionResult(let fieldId , let fieldName):
-            return SessionResultConfiguration.setup(fieldId: fieldId, fieldName: fieldName)
+//        case .sessionResult(let fieldId , let fieldName):
+//            return SessionResultConfiguration.setup(fieldId: fieldId, fieldName: fieldName)
             
+        case .myBooking:
+            return MyBookingsConfiguration.setup()
         }
     }
 }

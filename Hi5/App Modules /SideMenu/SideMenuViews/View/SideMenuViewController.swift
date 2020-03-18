@@ -59,7 +59,7 @@ extension SideMenuViewController: ISideMenuViewController {
 extension SideMenuViewController {
     func initView(){
         // MARK : - view raduis
-        self.profileImg = CreateCornerRauis.imageViewRaduis(view: self.profileImg, number: (self.profileImg.frame.size.height / 2))
+//        self.profileImg = CreateCornerRauis.imageViewRaduis(view: self.profileImg, number: (self.profileImg.frame.size.height / 2))
     }
     
     func registerCell() {
@@ -108,6 +108,7 @@ extension SideMenuViewController {
             print("My Schedule..")
         } else if(indexPath.row == 2){
             print("My booking...")
+             router?.navigateToMyBookings()
         } else if(indexPath.row == 3){
             router?.navigateToFields()
         } else if(indexPath.row == 4){

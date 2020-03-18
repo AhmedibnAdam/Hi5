@@ -209,7 +209,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6X-Ph-Cts">
                                                                 <rect key="frame" x="0.0" y="0.0" width="95.5" height="20"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="best for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1yw-LU-3x0">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1yw-LU-3x0">
                                                                         <rect key="frame" x="0.0" y="0.0" width="61.5" height="20"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -410,6 +410,7 @@
                 <outlet property="genderIcon" destination="Kkx-ss-moe" id="d8w-3r-KD5"/>
                 <outlet property="locationLbl" destination="ewQ-wX-btu" id="8pi-0Y-tdS"/>
                 <outlet property="namelbl" destination="8x2-CA-NjM" id="hnb-W0-dF5"/>
+                <outlet property="partner" destination="QAe-ey-Lwg" id="2mC-BT-wgX"/>
                 <outlet property="paymentLbl" destination="WUX-rj-iYA" id="v4k-nm-w6J"/>
                 <outlet property="rateLbl" destination="faK-No-1Dg" id="gJ9-LU-T4g"/>
                 <outlet property="recomendedLbl" destination="5Au-4W-J1a" id="Mkq-o3-MO2"/>

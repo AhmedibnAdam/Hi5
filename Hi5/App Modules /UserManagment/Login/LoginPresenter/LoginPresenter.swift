@@ -33,7 +33,7 @@ class LoginPresenter: ILoginPresenter {
         view?.navigateToProfile()
     }
     func hideIndecator() {
-        view?.hideIndicator()
+//        view?.hideIndicator()
     }
     func navigateToTabBar() {
         view?.navigateToTabBar()

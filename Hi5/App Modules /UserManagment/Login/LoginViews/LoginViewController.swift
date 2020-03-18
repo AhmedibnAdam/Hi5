@@ -111,12 +111,7 @@ extension LoginViewController: ILoginViewController {
 extension LoginViewController {
     func initView(){
         // MARK : - view raduis
-        self.eyeBtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
-        self.profilePhoteView = CreateCornerRauis.viewRaduis(view: self.profilePhoteView, number: (self.profilePhoteView.frame.size.height / 2))
-        self.nameView = CreateCornerRauis.viewRaduis(view: self.nameView, number: 5)
-        self.passwordView = CreateCornerRauis.viewRaduis(view: self.passwordView, number: 5)
-          // MARK : - Button  raduis
-        self.doLoginButtonOutlet = CreateCornerRauis.ButtonRaduis(button: self.doLoginButtonOutlet, number: 5)
+
     }
     
     func configer(){
@@ -134,8 +129,8 @@ extension LoginViewController {
         self.errorLbl.isHidden = true
         guard let userName = userName.text , let password = password.text else {return}
         if(userName.isEmpty || password.isEmpty || password.count < 4){
-            self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
-            self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
+//            self.nameView = CreateBorder.viewBorder(view: self.nameView, width: 1.0, color: UIColor.red.cgColor)
+//            self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
             self.errorLbl.isHidden = false
             self.errorLbl.text = "userName Or Password is Empty"
             return

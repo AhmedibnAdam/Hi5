@@ -29,6 +29,6 @@ class FieldsRouter: IFieldsRouter {
         view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields(field: field), completion: nil)
     }
     func navigateToFilter() {
-//        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
     }
 }

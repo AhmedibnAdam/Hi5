@@ -21,7 +21,8 @@ class FieldsTableViewCell: UITableViewCell {
     //MARK: - Outlets
     @IBOutlet weak var favouriteBtn: UIButton!
     @IBOutlet weak var companyName: UILabel!
-
+    @IBOutlet weak var partner: UILabel!
+    
     @IBOutlet weak var showDetailsBtn: UIButton!
     @IBOutlet weak var visabilityButton: UIButton!
     @IBOutlet weak var fieldImg: UIImageView!

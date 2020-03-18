@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="aoi-Ll-dAu" id="eOr-EO-IEC"/>
-                <outlet property="indicator" destination="SQG-2J-rEE" id="ZjH-53-AE6"/>
-                <outlet property="noFavouriteFieldsImg" destination="nlu-z2-vbr" id="bjQ-mm-JRh"/>
-                <outlet property="noFavouriteFieldsLbl" destination="60u-6x-3SU" id="tJt-S8-aah"/>
-                <outlet property="tableView" destination="Dyf-PC-Ms3" id="ysX-ym-4kA"/>
+                <outlet property="collectionView" destination="aoi-Ll-dAu" id="2sg-uq-iSw"/>
+                <outlet property="noFavouriteFieldsImg" destination="nlu-z2-vbr" id="KNH-JT-r5p"/>
+                <outlet property="noFavouriteFieldsLbl" destination="60u-6x-3SU" id="Y71-A0-QWo"/>
+                <outlet property="tableView" destination="Dyf-PC-Ms3" id="BVf-w9-v7u"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,56 +21,62 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-Ll-dAu">
-                    <rect key="frame" x="20" y="10" width="335" height="40"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcQ-pS-Ima">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-Ll-dAu">
+                            <rect key="frame" x="20" y="10" width="335" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Pd7-Xr-RUm"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CZZ-eS-z5q">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-PC-Ms3">
+                            <rect key="frame" x="5" y="50" width="365" height="617"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nofavouritefields" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-z2-vbr">
+                            <rect key="frame" x="135" y="299" width="105" height="69"/>
+                        </imageView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60u-6x-3SU">
+                            <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Pd7-Xr-RUm"/>
+                        <constraint firstAttribute="trailing" secondItem="Dyf-PC-Ms3" secondAttribute="trailing" constant="5" id="3wH-eq-IKU"/>
+                        <constraint firstAttribute="trailing" secondItem="aoi-Ll-dAu" secondAttribute="trailing" constant="20" id="9cf-cC-uuG"/>
+                        <constraint firstItem="nlu-z2-vbr" firstAttribute="centerX" secondItem="xcQ-pS-Ima" secondAttribute="centerX" id="EIK-wD-elH"/>
+                        <constraint firstItem="60u-6x-3SU" firstAttribute="centerX" secondItem="xcQ-pS-Ima" secondAttribute="centerX" id="FaB-Ds-xVv"/>
+                        <constraint firstItem="aoi-Ll-dAu" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="20" id="GQc-Ru-MFO"/>
+                        <constraint firstItem="Dyf-PC-Ms3" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="5" id="N0Y-ei-FhZ"/>
+                        <constraint firstItem="Dyf-PC-Ms3" firstAttribute="top" secondItem="aoi-Ll-dAu" secondAttribute="bottom" id="RGi-kD-zvb"/>
+                        <constraint firstItem="aoi-Ll-dAu" firstAttribute="top" secondItem="xcQ-pS-Ima" secondAttribute="top" constant="10" id="bGa-IP-Cy2"/>
+                        <constraint firstAttribute="bottom" secondItem="Dyf-PC-Ms3" secondAttribute="bottom" id="g2S-Uz-ZB1"/>
+                        <constraint firstItem="60u-6x-3SU" firstAttribute="centerY" secondItem="xcQ-pS-Ima" secondAttribute="centerY" id="w6n-ov-rZf"/>
+                        <constraint firstItem="nlu-z2-vbr" firstAttribute="centerY" secondItem="xcQ-pS-Ima" secondAttribute="centerY" id="w8l-8c-JVT"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CZZ-eS-z5q">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dyf-PC-Ms3">
-                    <rect key="frame" x="5" y="70" width="365" height="597"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
-                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nofavouritefields" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-z2-vbr">
-                    <rect key="frame" x="135" y="299" width="105" height="69"/>
-                </imageView>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60u-6x-3SU">
-                    <rect key="frame" x="40" y="393" width="295" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="SQG-2J-rEE">
-                    <rect key="frame" x="169" y="315" width="37" height="37"/>
-                    <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </activityIndicatorView>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Dyf-PC-Ms3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="BBX-d3-rxi"/>
-                <constraint firstItem="aoi-Ll-dAu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="GNB-Ry-CMY"/>
-                <constraint firstItem="SQG-2J-rEE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gwx-iM-ZrN"/>
-                <constraint firstItem="nlu-z2-vbr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JXB-fb-YIE"/>
-                <constraint firstItem="aoi-Ll-dAu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Jew-GU-Ljz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="60u-6x-3SU" secondAttribute="trailing" constant="40" id="MGO-Ba-RqW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aoi-Ll-dAu" secondAttribute="trailing" constant="20" id="NQi-RD-jZW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dyf-PC-Ms3" secondAttribute="bottom" id="R18-X7-Cc0"/>
-                <constraint firstItem="nlu-z2-vbr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aWv-ir-rnm"/>
-                <constraint firstItem="Dyf-PC-Ms3" firstAttribute="top" secondItem="aoi-Ll-dAu" secondAttribute="bottom" constant="20" id="cgq-Eh-9Fl"/>
-                <constraint firstItem="SQG-2J-rEE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dkZ-fj-79J"/>
-                <constraint firstItem="60u-6x-3SU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="o6F-LK-qjt"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dyf-PC-Ms3" secondAttribute="trailing" constant="5" id="vI2-j6-GAJ"/>
-                <constraint firstItem="60u-6x-3SU" firstAttribute="top" secondItem="nlu-z2-vbr" secondAttribute="bottom" constant="25" id="vKF-N3-8Qc"/>
+                <constraint firstItem="xcQ-pS-Ima" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BBd-mo-gcy"/>
+                <constraint firstItem="xcQ-pS-Ima" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="CNW-Z8-VAF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xcQ-pS-Ima" secondAttribute="bottom" id="FbG-cL-d2b"/>
+                <constraint firstItem="xcQ-pS-Ima" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JeV-a5-860"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xcQ-pS-Ima" secondAttribute="trailing" id="iOA-Ue-hUK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="138" y="152"/>
+            <point key="canvasLocation" x="136.80000000000001" y="151.57421289355324"/>
         </view>
     </objects>
     <resources>

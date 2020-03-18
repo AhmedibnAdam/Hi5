@@ -28,6 +28,7 @@ class publicEventsCell: UICollectionViewCell {
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var bestFor: UILabel!
+    @IBOutlet weak var currancy: UILabel!
     
     
     var filteredPublicEventData: PublicEventsModel.PublicEvent?
@@ -41,7 +42,7 @@ class publicEventsCell: UICollectionViewCell {
     
     func showData(){
         //        "id": "47",
-        fieldName.text = filteredPublicEventData?.fieldName
+        fieldName.text = filteredPublicEventData?.partnerName
         if let image = filteredPublicEventData?.fieldImage {
             let url = URL(string: image)
             ballImageView.kf.setImage(with: url)
@@ -53,12 +54,23 @@ class publicEventsCell: UICollectionViewCell {
             partnerImage.kf.setImage(with: url)
             
         }
-        partnerName.text =  filteredPublicEventData?.partnerName
+        partnerName.text = filteredPublicEventData?.fieldName
         playerNumbers.text = "\(filteredPublicEventData?.playersNumber ?? 1) Players"
         bestFor.text = "\(String(describing: filteredPublicEventData?.joinedNumber ?? 1)) x \(String(describing: filteredPublicEventData?.joinedNumber ?? 1))"
-        self.sliderLableP.text = "\(String(describing: filteredPublicEventData?.joinedNumber!))"
-        noOfPlayerSlider.value = Float(filteredPublicEventData?.joinedNumber ?? 1)
+        noOfPlayerSlider.value = Float((filteredPublicEventData?.joinedNumber ?? 1))
+        self.sliderLableP.text = "\(String(describing: filteredPublicEventData?.joinedNumber ?? 1))"
+        
+        let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
+        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value - 1)
+        
+        self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
         cost.text = filteredPublicEventData?.cost
+        if filteredPublicEventData?.cost == "Free" {
+            currancy.isHidden = true
+        }
+        else{
+            currancy.isHidden = false
+        }
         let splitArray = filteredPublicEventData?.date?.split(separator: " ").map(String.init)
         day.text = splitArray?[0]
         date.text = filteredPublicEventData?.dateFormat
@@ -69,13 +81,13 @@ class publicEventsCell: UICollectionViewCell {
         //               "time": "06:00 - 07:00",
         //               "sport_type": "Archery",
         //               "status": "coming",
-
+        
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-//        noOfPlayersLabel.text = "\(Int(noOfPlayerSlider.value))"
-//        noOfPlayerSlider.setThumbImage(UIImage(named: "\(Int(noOfPlayerSlider.value))"), for: .normal)
-
+        //        noOfPlayersLabel.text = "\(Int(noOfPlayerSlider.value))"
+        //        noOfPlayerSlider.setThumbImage(UIImage(named: "\(Int(noOfPlayerSlider.value))"), for: .normal)
+        
         let trackRect = sender.trackRect(forBounds: sender.frame)
         let thumbRect = sender.thumbRect(forBounds: sender.bounds, trackRect: trackRect, value: sender.value)
         self.sliderLableP.text =  "\(Int(noOfPlayerSlider.value))"
@@ -85,6 +97,7 @@ class publicEventsCell: UICollectionViewCell {
         noOfPlayerSlider.thumbTintColor = UIColor.orange
         
         self.sliderLableP.text = "\(String(describing: filteredPublicEventData?.joinedNumber ?? 1))"
+        
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value)
         self.sliderLableP.text =  "\(Int(noOfPlayerSlider.value))"

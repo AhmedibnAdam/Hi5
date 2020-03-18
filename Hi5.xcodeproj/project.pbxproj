@@ -286,6 +286,40 @@
 		668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */; };
 		66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */; };
 		66AEC5432420FA97003CF2EB /* PublicEventsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */; };
+		66AEC5FF242266B0003CF2EB /* FilterResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5D6242266AF003CF2EB /* FilterResultInteractor.swift */; };
+		66AEC600242266B0003CF2EB /* FilterResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5D9242266AF003CF2EB /* FilterResultViewController.swift */; };
+		66AEC601242266B0003CF2EB /* FilterResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC5DA242266AF003CF2EB /* FilterResultViewController.xib */; };
+		66AEC602242266B0003CF2EB /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5DC242266AF003CF2EB /* FieldCell.swift */; };
+		66AEC603242266B0003CF2EB /* FieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC5DD242266AF003CF2EB /* FieldCell.xib */; };
+		66AEC604242266B0003CF2EB /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5DF242266AF003CF2EB /* CalenderCell.swift */; };
+		66AEC605242266B0003CF2EB /* CalenderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC5E0242266AF003CF2EB /* CalenderCell.xib */; };
+		66AEC606242266B0003CF2EB /* FilterResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5E2242266AF003CF2EB /* FilterResultPresenter.swift */; };
+		66AEC607242266B0003CF2EB /* FilterResultConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5E4242266AF003CF2EB /* FilterResultConfiguration.swift */; };
+		66AEC608242266B0003CF2EB /* FilterResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5E6242266AF003CF2EB /* FilterResultRouter.swift */; };
+		66AEC609242266B0003CF2EB /* FilterResultEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5E8242266AF003CF2EB /* FilterResultEndPoint.swift */; };
+		66AEC60A242266B0003CF2EB /* FilterResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5E9242266AF003CF2EB /* FilterResultManager.swift */; };
+		66AEC60B242266B0003CF2EB /* FilterResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5EA242266AF003CF2EB /* FilterResultModel.swift */; };
+		66AEC60C242266B0003CF2EB /* SelectSportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC5EE242266AF003CF2EB /* SelectSportCell.xib */; };
+		66AEC60D242266B0003CF2EB /* SelectSportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5EF242266AF003CF2EB /* SelectSportCell.swift */; };
+		66AEC60E242266B0003CF2EB /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC5F1242266AF003CF2EB /* FilterViewController.xib */; };
+		66AEC60F242266B0003CF2EB /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5F2242266AF003CF2EB /* FilterViewController.swift */; };
+		66AEC610242266B0003CF2EB /* FilterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5F4242266AF003CF2EB /* FilterRouter.swift */; };
+		66AEC611242266B0003CF2EB /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5F6242266AF003CF2EB /* FilterManager.swift */; };
+		66AEC612242266B0003CF2EB /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5F7242266AF003CF2EB /* FilterModel.swift */; };
+		66AEC613242266B0003CF2EB /* FilterendPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5F8242266AF003CF2EB /* FilterendPoint.swift */; };
+		66AEC614242266B0003CF2EB /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5FA242266AF003CF2EB /* FilterPresenter.swift */; };
+		66AEC615242266B0003CF2EB /* FilterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5FC242266AF003CF2EB /* FilterConfiguration.swift */; };
+		66AEC616242266B0003CF2EB /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5FE242266B0003CF2EB /* FilterInteractor.swift */; };
+		66AEC62024227B3D003CF2EB /* MyBookingsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61824227B3D003CF2EB /* MyBookingsConfiguration.swift */; };
+		66AEC62124227B3D003CF2EB /* MyBookingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61924227B3D003CF2EB /* MyBookingsPresenter.swift */; };
+		66AEC62224227B3D003CF2EB /* MyBookingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61A24227B3D003CF2EB /* MyBookingsRouter.swift */; };
+		66AEC62324227B3D003CF2EB /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61B24227B3D003CF2EB /* MyBookingsViewController.swift */; };
+		66AEC62424227B3D003CF2EB /* MyBookingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61C24227B3D003CF2EB /* MyBookingsInteractor.swift */; };
+		66AEC62524227B3D003CF2EB /* MyBookingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61D24227B3D003CF2EB /* MyBookingsModel.swift */; };
+		66AEC62624227B3D003CF2EB /* MyBookingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC61E24227B3D003CF2EB /* MyBookingsViewController.xib */; };
+		66AEC62724227B3D003CF2EB /* MyBookingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC61F24227B3D003CF2EB /* MyBookingsManager.swift */; };
+		66AEC631242283B4003CF2EB /* MyBookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC62F242283B4003CF2EB /* MyBookingsTableViewCell.swift */; };
+		66AEC632242283B4003CF2EB /* MyBookingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66AEC630242283B4003CF2EB /* MyBookingsTableViewCell.xib */; };
 		66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */; };
 		66CCBE88240EAA840046D672 /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
@@ -734,6 +768,40 @@
 		668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationManager.swift; sourceTree = "<group>"; };
 		66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventContainerviewController.swift; sourceTree = "<group>"; };
 		66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsEndpoint.swift; sourceTree = "<group>"; };
+		66AEC5D6242266AF003CF2EB /* FilterResultInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultInteractor.swift; sourceTree = "<group>"; };
+		66AEC5D9242266AF003CF2EB /* FilterResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultViewController.swift; sourceTree = "<group>"; };
+		66AEC5DA242266AF003CF2EB /* FilterResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterResultViewController.xib; sourceTree = "<group>"; };
+		66AEC5DC242266AF003CF2EB /* FieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
+		66AEC5DD242266AF003CF2EB /* FieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldCell.xib; sourceTree = "<group>"; };
+		66AEC5DF242266AF003CF2EB /* CalenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		66AEC5E0242266AF003CF2EB /* CalenderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalenderCell.xib; sourceTree = "<group>"; };
+		66AEC5E2242266AF003CF2EB /* FilterResultPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultPresenter.swift; sourceTree = "<group>"; };
+		66AEC5E4242266AF003CF2EB /* FilterResultConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultConfiguration.swift; sourceTree = "<group>"; };
+		66AEC5E6242266AF003CF2EB /* FilterResultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultRouter.swift; sourceTree = "<group>"; };
+		66AEC5E8242266AF003CF2EB /* FilterResultEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultEndPoint.swift; sourceTree = "<group>"; };
+		66AEC5E9242266AF003CF2EB /* FilterResultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultManager.swift; sourceTree = "<group>"; };
+		66AEC5EA242266AF003CF2EB /* FilterResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterResultModel.swift; sourceTree = "<group>"; };
+		66AEC5EE242266AF003CF2EB /* SelectSportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectSportCell.xib; sourceTree = "<group>"; };
+		66AEC5EF242266AF003CF2EB /* SelectSportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSportCell.swift; sourceTree = "<group>"; };
+		66AEC5F1242266AF003CF2EB /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
+		66AEC5F2242266AF003CF2EB /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		66AEC5F4242266AF003CF2EB /* FilterRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterRouter.swift; sourceTree = "<group>"; };
+		66AEC5F6242266AF003CF2EB /* FilterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		66AEC5F7242266AF003CF2EB /* FilterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		66AEC5F8242266AF003CF2EB /* FilterendPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterendPoint.swift; sourceTree = "<group>"; };
+		66AEC5FA242266AF003CF2EB /* FilterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		66AEC5FC242266AF003CF2EB /* FilterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterConfiguration.swift; sourceTree = "<group>"; };
+		66AEC5FE242266B0003CF2EB /* FilterInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
+		66AEC61824227B3D003CF2EB /* MyBookingsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsConfiguration.swift; sourceTree = "<group>"; };
+		66AEC61924227B3D003CF2EB /* MyBookingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsPresenter.swift; sourceTree = "<group>"; };
+		66AEC61A24227B3D003CF2EB /* MyBookingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsRouter.swift; sourceTree = "<group>"; };
+		66AEC61B24227B3D003CF2EB /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		66AEC61C24227B3D003CF2EB /* MyBookingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsInteractor.swift; sourceTree = "<group>"; };
+		66AEC61D24227B3D003CF2EB /* MyBookingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsModel.swift; sourceTree = "<group>"; };
+		66AEC61E24227B3D003CF2EB /* MyBookingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBookingsViewController.xib; sourceTree = "<group>"; };
+		66AEC61F24227B3D003CF2EB /* MyBookingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsManager.swift; sourceTree = "<group>"; };
+		66AEC62F242283B4003CF2EB /* MyBookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsTableViewCell.swift; sourceTree = "<group>"; };
+		66AEC630242283B4003CF2EB /* MyBookingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBookingsTableViewCell.xib; sourceTree = "<group>"; };
 		66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowDetailsViewController.xib; path = View/ShowDetailsViewController.xib; sourceTree = "<group>"; };
 		66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowDetailsViewController.swift; path = View/ShowDetailsViewController.swift; sourceTree = "<group>"; };
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
@@ -1063,13 +1131,16 @@
 			isa = PBXGroup;
 			children = (
 				6663362623B40221004E537C /* UserManagment */,
+				66340A1323B4CE2C009DB30A /* SideMenu */,
 				86E128FC23D49781007CB956 /* TapBar */,
 				E2FAE595240E648300CD8CFC /* Social */,
 				86268A1B23F72ED600EFD96B /* Sechadule */,
 				663409FB23B4C8E2009DB30A /* Fields */,
+				66AEC5EB242266AF003CF2EB /* Filter */,
+				66AEC5D4242266AE003CF2EB /* FilterResult */,
+				66AEC61724227AFE003CF2EB /* MyBookings */,
 				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
-				66340A1323B4CE2C009DB30A /* SideMenu */,
 				66340A1223B4CAD3009DB30A /* Profile */,
 				66340A1123B4CAC2009DB30A /* HelpCenter */,
 				66340A1023B4CAB8009DB30A /* Wallet */,
@@ -1590,6 +1661,261 @@
 				E2FAE5C3240E649E00CD8CFC /* PublicEventsViewController.xib */,
 			);
 			path = PublicEventView;
+			sourceTree = "<group>";
+		};
+		66AEC5D4242266AE003CF2EB /* FilterResult */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5D5242266AF003CF2EB /* FilterResultInteractor */,
+				66AEC5D7242266AF003CF2EB /* FilterResultViews */,
+				66AEC5E1242266AF003CF2EB /* FilterResultPresenter */,
+				66AEC5E3242266AF003CF2EB /* FilterResultContracts */,
+				66AEC5E5242266AF003CF2EB /* FilterResultRouter */,
+				66AEC5E7242266AF003CF2EB /* FilterResultServices */,
+			);
+			path = FilterResult;
+			sourceTree = "<group>";
+		};
+		66AEC5D5242266AF003CF2EB /* FilterResultInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5D6242266AF003CF2EB /* FilterResultInteractor.swift */,
+			);
+			path = FilterResultInteractor;
+			sourceTree = "<group>";
+		};
+		66AEC5D7242266AF003CF2EB /* FilterResultViews */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5D8242266AF003CF2EB /* View */,
+				66AEC5DB242266AF003CF2EB /* FieldCell */,
+				66AEC5DE242266AF003CF2EB /* CalenderCell */,
+			);
+			path = FilterResultViews;
+			sourceTree = "<group>";
+		};
+		66AEC5D8242266AF003CF2EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5D9242266AF003CF2EB /* FilterResultViewController.swift */,
+				66AEC5DA242266AF003CF2EB /* FilterResultViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66AEC5DB242266AF003CF2EB /* FieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5DC242266AF003CF2EB /* FieldCell.swift */,
+				66AEC5DD242266AF003CF2EB /* FieldCell.xib */,
+			);
+			path = FieldCell;
+			sourceTree = "<group>";
+		};
+		66AEC5DE242266AF003CF2EB /* CalenderCell */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5DF242266AF003CF2EB /* CalenderCell.swift */,
+				66AEC5E0242266AF003CF2EB /* CalenderCell.xib */,
+			);
+			path = CalenderCell;
+			sourceTree = "<group>";
+		};
+		66AEC5E1242266AF003CF2EB /* FilterResultPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5E2242266AF003CF2EB /* FilterResultPresenter.swift */,
+			);
+			path = FilterResultPresenter;
+			sourceTree = "<group>";
+		};
+		66AEC5E3242266AF003CF2EB /* FilterResultContracts */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5E4242266AF003CF2EB /* FilterResultConfiguration.swift */,
+			);
+			path = FilterResultContracts;
+			sourceTree = "<group>";
+		};
+		66AEC5E5242266AF003CF2EB /* FilterResultRouter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5E6242266AF003CF2EB /* FilterResultRouter.swift */,
+			);
+			path = FilterResultRouter;
+			sourceTree = "<group>";
+		};
+		66AEC5E7242266AF003CF2EB /* FilterResultServices */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5E8242266AF003CF2EB /* FilterResultEndPoint.swift */,
+				66AEC5E9242266AF003CF2EB /* FilterResultManager.swift */,
+				66AEC5EA242266AF003CF2EB /* FilterResultModel.swift */,
+			);
+			path = FilterResultServices;
+			sourceTree = "<group>";
+		};
+		66AEC5EB242266AF003CF2EB /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5EC242266AF003CF2EB /* FilterViews */,
+				66AEC5F3242266AF003CF2EB /* FilterRouter */,
+				66AEC5F5242266AF003CF2EB /* FilterServices */,
+				66AEC5F9242266AF003CF2EB /* FilterPresenter */,
+				66AEC5FB242266AF003CF2EB /* FilterContracts */,
+				66AEC5FD242266AF003CF2EB /* FilterInteractor */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		66AEC5EC242266AF003CF2EB /* FilterViews */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5ED242266AF003CF2EB /* CollectionViewCell */,
+				66AEC5F0242266AF003CF2EB /* View */,
+			);
+			path = FilterViews;
+			sourceTree = "<group>";
+		};
+		66AEC5ED242266AF003CF2EB /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5EE242266AF003CF2EB /* SelectSportCell.xib */,
+				66AEC5EF242266AF003CF2EB /* SelectSportCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		66AEC5F0242266AF003CF2EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5F1242266AF003CF2EB /* FilterViewController.xib */,
+				66AEC5F2242266AF003CF2EB /* FilterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66AEC5F3242266AF003CF2EB /* FilterRouter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5F4242266AF003CF2EB /* FilterRouter.swift */,
+			);
+			path = FilterRouter;
+			sourceTree = "<group>";
+		};
+		66AEC5F5242266AF003CF2EB /* FilterServices */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5F6242266AF003CF2EB /* FilterManager.swift */,
+				66AEC5F7242266AF003CF2EB /* FilterModel.swift */,
+				66AEC5F8242266AF003CF2EB /* FilterendPoint.swift */,
+			);
+			path = FilterServices;
+			sourceTree = "<group>";
+		};
+		66AEC5F9242266AF003CF2EB /* FilterPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5FA242266AF003CF2EB /* FilterPresenter.swift */,
+			);
+			path = FilterPresenter;
+			sourceTree = "<group>";
+		};
+		66AEC5FB242266AF003CF2EB /* FilterContracts */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5FC242266AF003CF2EB /* FilterConfiguration.swift */,
+			);
+			path = FilterContracts;
+			sourceTree = "<group>";
+		};
+		66AEC5FD242266AF003CF2EB /* FilterInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC5FE242266B0003CF2EB /* FilterInteractor.swift */,
+			);
+			path = FilterInteractor;
+			sourceTree = "<group>";
+		};
+		66AEC61724227AFE003CF2EB /* MyBookings */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC62B24227C3B003CF2EB /* MyBookingView */,
+				66AEC62824227C05003CF2EB /* MyBookingContracts */,
+				66AEC62924227C16003CF2EB /* MyBookingPresenter */,
+				66AEC62A24227C24003CF2EB /* MyBookingRouter */,
+				66AEC62C24227C4C003CF2EB /* MyBookingInteractor */,
+				66AEC62D24227C5F003CF2EB /* MyBookingServices */,
+			);
+			path = MyBookings;
+			sourceTree = "<group>";
+		};
+		66AEC62824227C05003CF2EB /* MyBookingContracts */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC61824227B3D003CF2EB /* MyBookingsConfiguration.swift */,
+			);
+			path = MyBookingContracts;
+			sourceTree = "<group>";
+		};
+		66AEC62924227C16003CF2EB /* MyBookingPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC61924227B3D003CF2EB /* MyBookingsPresenter.swift */,
+			);
+			path = MyBookingPresenter;
+			sourceTree = "<group>";
+		};
+		66AEC62A24227C24003CF2EB /* MyBookingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC61A24227B3D003CF2EB /* MyBookingsRouter.swift */,
+			);
+			path = MyBookingRouter;
+			sourceTree = "<group>";
+		};
+		66AEC62B24227C3B003CF2EB /* MyBookingView */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC62E2422834D003CF2EB /* view */,
+				66AEC633242283BC003CF2EB /* MyBookingCell */,
+			);
+			path = MyBookingView;
+			sourceTree = "<group>";
+		};
+		66AEC62C24227C4C003CF2EB /* MyBookingInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC61C24227B3D003CF2EB /* MyBookingsInteractor.swift */,
+			);
+			path = MyBookingInteractor;
+			sourceTree = "<group>";
+		};
+		66AEC62D24227C5F003CF2EB /* MyBookingServices */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC61D24227B3D003CF2EB /* MyBookingsModel.swift */,
+				66AEC61F24227B3D003CF2EB /* MyBookingsManager.swift */,
+			);
+			path = MyBookingServices;
+			sourceTree = "<group>";
+		};
+		66AEC62E2422834D003CF2EB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC61B24227B3D003CF2EB /* MyBookingsViewController.swift */,
+				66AEC61E24227B3D003CF2EB /* MyBookingsViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		66AEC633242283BC003CF2EB /* MyBookingCell */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC62F242283B4003CF2EB /* MyBookingsTableViewCell.swift */,
+				66AEC630242283B4003CF2EB /* MyBookingsTableViewCell.xib */,
+			);
+			path = MyBookingCell;
 			sourceTree = "<group>";
 		};
 		8608422E23DC813100BA87D7 /* SearchLocation */ = {
@@ -3430,6 +3756,7 @@
 				86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */,
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
+				66AEC601242266B0003CF2EB /* FilterResultViewController.xib in Resources */,
 				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
 				662A169723C3E75400A3695E /* MyFavoriteFriendsViewController.xib in Resources */,
 				E2FAE5BA240E648300CD8CFC /* SocialViewController.xib in Resources */,
@@ -3439,6 +3766,7 @@
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
+				66AEC603242266B0003CF2EB /* FieldCell.xib in Resources */,
 				861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
@@ -3447,9 +3775,11 @@
 				E2FAE5B7240E648300CD8CFC /* SocialHeader.xib in Resources */,
 				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
 				E2FAE5B2240E648300CD8CFC /* SocialCell.xib in Resources */,
+				66AEC60E242266B0003CF2EB /* FilterViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
 				66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */,
+				66AEC605242266B0003CF2EB /* CalenderCell.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
@@ -3458,6 +3788,7 @@
 				868C28BD23C6042A003F237A /* Assets.xcassets in Resources */,
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
+				66AEC632242283B4003CF2EB /* MyBookingsTableViewCell.xib in Resources */,
 				667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */,
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
@@ -3474,6 +3805,7 @@
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
 				E2FAE5D4240E649E00CD8CFC /* PublicEventsViewController.xib in Resources */,
 				861CA2F823F40D45004FC02F /* TypeCollectionViewCell.xib in Resources */,
+				66AEC60C242266B0003CF2EB /* SelectSportCell.xib in Resources */,
 				862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */,
 				668C214E23C3F70F00C009A9 /* BookSessionViewController.xib in Resources */,
 				86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */,
@@ -3481,6 +3813,7 @@
 				668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */,
 				662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */,
 				86DB006C23D70B97001E99E8 /* GenderViewController.xib in Resources */,
+				66AEC62624227B3D003CF2EB /* MyBookingsViewController.xib in Resources */,
 				662A168523C3E4B200A3695E /* TransactionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3557,6 +3890,7 @@
 				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
 				662A169423C3E75400A3695E /* MyFavoriteFriendsViewController.swift in Sources */,
 				6683E2DE23BCEBD900250702 /* SuggestedFieldsModel.swift in Sources */,
+				66AEC607242266B0003CF2EB /* FilterResultConfiguration.swift in Sources */,
 				E2FAE5D5240E649E00CD8CFC /* dateCell.swift in Sources */,
 				869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */,
 				E2FAE5DB240E649E00CD8CFC /* PublicEventsPresenter.swift in Sources */,
@@ -3568,6 +3902,7 @@
 				861D22EA23DCAFB9004F16F1 /* LibraryRouter.swift in Sources */,
 				668C212823C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift in Sources */,
 				662A16E823C3ECE000A3695E /* MyFriendsRequestRouter.swift in Sources */,
+				66AEC604242266B0003CF2EB /* CalenderCell.swift in Sources */,
 				E2FAE5D8240E649E00CD8CFC /* PublicEventsInteractor.swift in Sources */,
 				E2FAE5B1240E648300CD8CFC /* SocialModel.swift in Sources */,
 				662A16D623C3EB7600A3695E /* AddFriendRequestPresenter.swift in Sources */,
@@ -3581,6 +3916,7 @@
 				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
 				662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */,
+				66AEC62224227B3D003CF2EB /* MyBookingsRouter.swift in Sources */,
 				86B14BDC23CB543B00B3FEB1 /* WelcomePresenter.swift in Sources */,
 				862A5E8823CB72380058355E /* ChangeUsernameViewController.swift in Sources */,
 				86B14BC923CB4AA500B3FEB1 /* SignupPhoneVerificationModel.swift in Sources */,
@@ -3629,6 +3965,7 @@
 				86DB006723D70B97001E99E8 /* GenderPresenter.swift in Sources */,
 				861D22D723DCAEF5004F16F1 /* GalleryModel.swift in Sources */,
 				662A16B623C3E93900A3695E /* MyFriendsDetailsViewController.swift in Sources */,
+				66AEC602242266B0003CF2EB /* FieldCell.swift in Sources */,
 				6663361323B40206004E537C /* AppDelegate.swift in Sources */,
 				667E4B7323C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift in Sources */,
 				668C213D23C3F6F700C009A9 /* CommentListsModel.swift in Sources */,
@@ -3638,6 +3975,7 @@
 				E2FAE5B8240E648300CD8CFC /* ContainerController.swift in Sources */,
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
 				861CA2F723F40D45004FC02F /* TypeCollectionViewCell.swift in Sources */,
+				66AEC60F242266B0003CF2EB /* FilterViewController.swift in Sources */,
 				668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */,
 				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
 				E2FAE5DC240E649E00CD8CFC /* PublicEventsConfiguration.swift in Sources */,
@@ -3645,7 +3983,9 @@
 				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
 				6683E30A23BCEEFF00250702 /* ProfilePresenter.swift in Sources */,
 				6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */,
+				66AEC616242266B0003CF2EB /* FilterInteractor.swift in Sources */,
 				86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */,
+				66AEC5FF242266B0003CF2EB /* FilterResultInteractor.swift in Sources */,
 				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
 				668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */,
 				860EFCA82401671100B40901 /* ShowDetailsConfiguration.swift in Sources */,
@@ -3657,6 +3997,7 @@
 				862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */,
 				668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
+				66AEC612242266B0003CF2EB /* FilterModel.swift in Sources */,
 				86268A2623F72F1800EFD96B /* SechaduleRouter.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
@@ -3671,9 +4012,11 @@
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
 				8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */,
 				E2FAE5BC240E648300CD8CFC /* SocialConfiguration.swift in Sources */,
+				66AEC606242266B0003CF2EB /* FilterResultPresenter.swift in Sources */,
 				668C213A23C3F6F700C009A9 /* CommentListsRouter.swift in Sources */,
 				86FB634D23F97993001019B1 /* SechaduleContainerController.swift in Sources */,
 				6663364623B402F7004E537C /* LoginModel.swift in Sources */,
+				66AEC600242266B0003CF2EB /* FilterResultViewController.swift in Sources */,
 				862EB5AE23D730AD00508F1A /* DateOfBirthRouter.swift in Sources */,
 				662A16B523C3E93900A3695E /* MyFriendsDetailsRouter.swift in Sources */,
 				86B14BDE23CB543B00B3FEB1 /* WelcomeViewController.swift in Sources */,
@@ -3685,6 +4028,7 @@
 				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
 				86268A2523F72F1800EFD96B /* SechadulePresenter.swift in Sources */,
 				6663363423B40298004E537C /* UserAccountModel.swift in Sources */,
+				66AEC62424227B3D003CF2EB /* MyBookingsInteractor.swift in Sources */,
 				E2FAE5D7240E649E00CD8CFC /* PublicEventsRouter.swift in Sources */,
 				662A16A623C3E80900A3695E /* MemberOfFriendsInteractor.swift in Sources */,
 				666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */,
@@ -3697,8 +4041,10 @@
 				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
 				860EFCAF2401671100B40901 /* ShowDetailsManager.swift in Sources */,
 				6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */,
+				66AEC614242266B0003CF2EB /* FilterPresenter.swift in Sources */,
 				662A16DA23C3EB7600A3695E /* AddFriendRequestModel.swift in Sources */,
 				662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */,
+				66AEC62124227B3D003CF2EB /* MyBookingsPresenter.swift in Sources */,
 				662A16C523C3EA9F00A3695E /* AddFriendsPresenter.swift in Sources */,
 				861D22EB23DCAFB9004F16F1 /* LibraryViewController.swift in Sources */,
 				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
@@ -3716,6 +4062,7 @@
 				86268A2B23F72F1800EFD96B /* SechaduleManager.swift in Sources */,
 				862EB5AF23D730AD00508F1A /* DateOfBirthViewController.swift in Sources */,
 				861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */,
+				66AEC62024227B3D003CF2EB /* MyBookingsConfiguration.swift in Sources */,
 				666336B223B40B84004E537C /* PhoneVerificationPresenter.swift in Sources */,
 				667E4B7623C3DCA3007354A7 /* MakeWalletPasswordManager.swift in Sources */,
 				6663361523B40206004E537C /* SceneDelegate.swift in Sources */,
@@ -3743,12 +4090,14 @@
 				860EFCAD2401671100B40901 /* ShowDetailsModel.swift in Sources */,
 				86B14BE023CB543B00B3FEB1 /* WelcomeModel.swift in Sources */,
 				662A169523C3E75400A3695E /* MyFavoriteFriendsInteractor.swift in Sources */,
+				66AEC609242266B0003CF2EB /* FilterResultEndPoint.swift in Sources */,
 				6663365323B40318004E537C /* RegisterPresenter.swift in Sources */,
 				66340A0723B4C8FC009DB30A /* FieldsViewController.swift in Sources */,
 				66AEC5432420FA97003CF2EB /* PublicEventsEndpoint.swift in Sources */,
 				8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
 				8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */,
+				66AEC631242283B4003CF2EB /* MyBookingsTableViewCell.swift in Sources */,
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
@@ -3769,6 +4118,7 @@
 				666336C223B40BD3004E537C /* NewPasswordConfiguration.swift in Sources */,
 				662A16A423C3E80900A3695E /* MemberOfFriendsRouter.swift in Sources */,
 				6683E31A23BCEF1600250702 /* SideMenuPresenter.swift in Sources */,
+				66AEC62724227B3D003CF2EB /* MyBookingsManager.swift in Sources */,
 				662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */,
 				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
 				86A2FF6A23F4220F0053E5A1 /* FieldsTableViewCell.swift in Sources */,
@@ -3778,6 +4128,7 @@
 				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
 				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
+				66AEC608242266B0003CF2EB /* FilterResultRouter.swift in Sources */,
 				662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */,
 				86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */,
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
@@ -3790,6 +4141,7 @@
 				662A16EA23C3ECE000A3695E /* MyFriendsRequestInteractor.swift in Sources */,
 				668C215C23C3F75300C009A9 /* CheckOutConfirmationViewController.swift in Sources */,
 				662A16A723C3E80900A3695E /* MemberOfFriendsModel.swift in Sources */,
+				66AEC62324227B3D003CF2EB /* MyBookingsViewController.swift in Sources */,
 				862A5E8523CB72380058355E /* ChangeUsernameConfiguration.swift in Sources */,
 				6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */,
 				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
@@ -3824,6 +4176,7 @@
 				86DC11E323D5C19100E577D9 /* EditProfileInteractor.swift in Sources */,
 				66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */,
 				667E4B7423C3DCA3007354A7 /* MakeWalletPasswordModel.swift in Sources */,
+				66AEC60B242266B0003CF2EB /* FilterResultModel.swift in Sources */,
 				6683E2F923BCEEB300250702 /* HelpCenterConfiguration.swift in Sources */,
 				6683E2B523BB631D00250702 /* NotificationSettingConfiguration.swift in Sources */,
 				662A16D723C3EB7600A3695E /* AddFriendRequestRouter.swift in Sources */,
@@ -3836,6 +4189,7 @@
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
 				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
+				66AEC62524227B3D003CF2EB /* MyBookingsModel.swift in Sources */,
 				668C214B23C3F70F00C009A9 /* BookSessionViewController.swift in Sources */,
 				86DC11E123D5C19100E577D9 /* EditProfileRouter.swift in Sources */,
 				662A16E723C3ECE000A3695E /* MyFriendsRequestPresenter.swift in Sources */,
@@ -3900,23 +4254,28 @@
 				862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */,
 				662A168323C3E4B200A3695E /* TransactionsInteractor.swift in Sources */,
 				6663364323B402F7004E537C /* LoginRouter.swift in Sources */,
+				66AEC615242266B0003CF2EB /* FilterConfiguration.swift in Sources */,
 				668C214823C3F70F00C009A9 /* BookSessionConfiguration.swift in Sources */,
+				66AEC611242266B0003CF2EB /* FilterManager.swift in Sources */,
 				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
 				86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
+				66AEC610242266B0003CF2EB /* FilterRouter.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,
 				86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */,
 				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
 				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
+				66AEC60A242266B0003CF2EB /* FilterResultManager.swift in Sources */,
 				86F9B90F23DDAAA5008C1F80 /* LocationModel.swift in Sources */,
 				6683E2FB23BCEEB300250702 /* HelpCenterRouter.swift in Sources */,
 				668C215B23C3F75300C009A9 /* CheckOutConfirmationRouter.swift in Sources */,
 				86E1292F23D49E73007CB956 /* TabBarInteractor.swift in Sources */,
+				66AEC60D242266B0003CF2EB /* SelectSportCell.swift in Sources */,
 				6683E2A323BB5FD900250702 /* MyFriendsRouter.swift in Sources */,
 				662A169623C3E75400A3695E /* MyFavoriteFriendsModel.swift in Sources */,
 				668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */,
@@ -3932,6 +4291,7 @@
 				861D22E923DCAFB9004F16F1 /* LibraryPresenter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 				86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */,
+				66AEC613242266B0003CF2EB /* FilterendPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

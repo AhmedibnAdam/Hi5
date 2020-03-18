@@ -26,6 +26,6 @@ class ShowDetailsRouter: IShowDetailsRouter {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
     func navigateToSessionResult(fieldId: Int , fieldName: String) {
-        view?.navigate(type: .modal, module: GeneralRoute.sessionResult(fieldId: fieldId, fieldName: fieldName), completion: nil)
+//        view?.navigate(type: .modal, module: GeneralRoute.sessionResult(fieldId: fieldId, fieldName: fieldName), completion: nil)
     }
 }

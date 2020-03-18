@@ -135,20 +135,11 @@ extension EditProfileViewController {
 }
 
 extension EditProfileViewController {
-<<<<<<< HEAD
     func initView() {
-        self.profilePhoto = CreateCornerRauis.imageViewRaduis(view: profilePhoto, number: (self.profilePhoto.frame.size.height / 2))
-        self.biographyContainerView = CreateCornerRauis.viewRaduis(view: self.biographyContainerView, number: 5)
-        self.fullnameContainerView = CreateCornerRauis.viewRaduis(view: self.fullnameContainerView, number: 5)
-        self.locationContainerView = CreateCornerRauis.viewRaduis(view: self.locationContainerView, number: 5)
-        self.dateOfBirthContainerView = CreateCornerRauis.viewRaduis(view: self.dateOfBirthContainerView, number: 5)
-        self.genderContainerView = CreateCornerRauis.viewRaduis(view: self.genderContainerView, number: 5)
-          // MARK : - Button  raduis
-        self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
+
     }
     
-=======
->>>>>>> f970d127defad3882c275e60ab806fa6915b77c4
+
     func configure() {
         router = EditProfileRouter(view: self)
     }

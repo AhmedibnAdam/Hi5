@@ -55,7 +55,7 @@ class FieldsPresenter: IFieldsPresenter {
         view?.showNoFavouriteFields()
     }
     func hideIndicator() {
-        view?.hideIndicator()
+    //    view?.hideIndicator()
     }
     
 }

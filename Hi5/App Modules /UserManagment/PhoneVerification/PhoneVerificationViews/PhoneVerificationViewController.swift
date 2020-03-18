@@ -35,7 +35,6 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
         self.textField2.delegate = self
         self.textField3.delegate = self
         self.textField4.delegate = self
-		initView()
         configer()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -75,12 +74,6 @@ extension PhoneVerificationViewController: IPhoneVerificationViewController {
 }
 
 extension PhoneVerificationViewController {
-    
-    func initView(){
-          // MARK : - Button  raduis
-        self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
-    }
-    
     func configer(){
         router = PhoneVerificationRouter(view: self)
     }

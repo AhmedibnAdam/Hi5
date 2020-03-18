@@ -105,16 +105,7 @@ extension CreatePasswordViewController {
     func initView(){
         // MARK : - view raduis
         self.passwordEyebtn.setImage(UIImage(named: "eyeLocked"), for: .normal)
-        //self.confirmPasswordBtnTapped.setImage(UIImage(named: "eyelocked"), for: .normal)
-        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-        self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
-        self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))
-        self.containerView3 = CreateCornerRauis.viewRaduis(view: self.containerView3, number: (self.containerView3.frame.size.height / 2))
-        self.containerView4 = CreateCornerRauis.viewRaduis(view: self.containerView4, number: (self.containerView4.frame.size.height / 2))
-          // MARK : - Button  raduis
-        self.getStartedBtn = CreateCornerRauis.ButtonRaduis(button: self.getStartedBtn, number: 5)
     }
-    
     func configer(){
         router = CreatePasswordRouter(view: self)
     }
@@ -129,8 +120,10 @@ extension CreatePasswordViewController {
     func getStartedAction() {
         guard let password = passwordTextField.text , let confirmPassword = confirmPasswordTextField.text else {return}
         if(password.isEmpty || confirmPassword.isEmpty){
-            self.passwordView = CreateBorder.viewBorder(view: self.passwordView, width: 1.0, color: UIColor.red.cgColor)
-            self.confirmPasswordView = CreateBorder.viewBorder(view: self.confirmPasswordView, width: 1.0, color: UIColor.red.cgColor)
+            passwordView.viewBorderWidth = 1.0
+            passwordView.viewBorderColor = UIColor.red
+            confirmPasswordView.viewBorderWidth = 1.0
+            confirmPasswordView.viewBorderColor = UIColor.red
             return
         } else if(password != confirmPassword) {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")

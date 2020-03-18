@@ -131,6 +131,9 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="Layer.cornerRaduis">
                                     <integer key="value" value="10"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="buttonRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KQ-bI-X6a">
@@ -140,7 +143,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wc-2x-Qdv">
-                            <rect key="frame" x="37" y="29.5" width="60" height="22"/>
+                            <rect key="frame" x="37" y="19.5" width="80" height="42"/>
                             <state key="normal" title="Back" image="Back"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Deposit amount ( 10 $ min)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkv-uj-Vdq">
@@ -166,6 +169,11 @@
                                 <constraint firstItem="Awp-1g-mET" firstAttribute="top" secondItem="oMp-sx-nvW" secondAttribute="top" constant="3" id="bnC-cQ-NkH"/>
                                 <constraint firstAttribute="trailing" secondItem="Awp-1g-mET" secondAttribute="trailing" constant="10" id="rE0-Xe-uaD"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2l-Pe-wco">
                             <rect key="frame" x="20" y="335" width="430" height="30"/>
@@ -184,6 +192,11 @@
                                 <constraint firstItem="2Ya-kR-b5D" firstAttribute="leading" secondItem="p2l-Pe-wco" secondAttribute="leading" constant="10" id="ebo-Rw-BtS"/>
                                 <constraint firstItem="2Ya-kR-b5D" firstAttribute="top" secondItem="p2l-Pe-wco" secondAttribute="top" constant="3" id="xHm-bw-OhJ"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-Ne-0eX">
                             <rect key="frame" x="20" y="397" width="109.5" height="30"/>
@@ -202,6 +215,11 @@
                                 <constraint firstItem="hUo-3H-gbF" firstAttribute="leading" secondItem="5TD-Ne-0eX" secondAttribute="leading" constant="10" id="heF-Ih-Amv"/>
                                 <constraint firstItem="hUo-3H-gbF" firstAttribute="top" secondItem="5TD-Ne-0eX" secondAttribute="top" constant="3" id="rkT-uu-ts8"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWM-pv-500">
                             <rect key="frame" x="284.5" y="398" width="165.5" height="30"/>
@@ -220,6 +238,11 @@
                                 <constraint firstAttribute="bottom" secondItem="Vor-5n-Yd4" secondAttribute="bottom" constant="3" id="rtt-Yp-szK"/>
                                 <constraint firstAttribute="height" constant="30" id="zWN-1q-RbF"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Payment Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVU-4W-7Cb">
                             <rect key="frame" x="20" y="218.5" width="92.5" height="17"/>
@@ -250,6 +273,11 @@
                                 <constraint firstAttribute="height" constant="30" id="jgL-G0-dmG"/>
                                 <constraint firstItem="EP1-06-Wra" firstAttribute="leading" secondItem="muE-X1-lm1" secondAttribute="leading" constant="10" id="lqU-Bc-3Ah"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Card Holder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5k-0n-VM1">
                             <rect key="frame" x="20" y="435" width="80" height="17"/>

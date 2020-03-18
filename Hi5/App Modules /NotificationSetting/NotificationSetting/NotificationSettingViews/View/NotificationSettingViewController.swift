@@ -17,7 +17,8 @@ protocol INotificationSettingViewController: class {
 class NotificationSettingViewController: UIViewController {
 	var interactor: INotificationSettingInteractor?
 	var router: INotificationSettingRouter?
-
+    
+    @IBOutlet weak var table: UITableView!
     //MARK: - Properties
     
     var delegate: NotificationSettingControllerDelegate?
@@ -32,6 +33,7 @@ class NotificationSettingViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+//        table.isHidden = false
     }
 }
 
@@ -42,7 +44,7 @@ extension NotificationSettingViewController: INotificationSettingViewController 
 }
 
 extension NotificationSettingViewController {
-	
+    
 }
 
 extension NotificationSettingViewController {

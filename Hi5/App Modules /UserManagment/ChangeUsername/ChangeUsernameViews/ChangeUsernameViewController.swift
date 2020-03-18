@@ -34,7 +34,6 @@ class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameTextField.delegate = self
-        initView()
         configer()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -71,17 +70,6 @@ extension ChangeUsernameViewController: IChangeUsernameViewController {
 }
 
 extension ChangeUsernameViewController {
-    func initView(){
-        // MARK : - view raduis
-        self.logoView = CreateCornerRauis.viewRaduis(view: self.logoView, number: (self.logoView.frame.size.height / 2))
-        self.containerView1 = CreateCornerRauis.viewRaduis(view: self.containerView1, number: (self.containerView1.frame.size.height / 2))
-        self.containerView2 = CreateCornerRauis.viewRaduis(view: self.containerView2, number: (self.containerView2.frame.size.height / 2))
-        self.containerView3 = CreateCornerRauis.viewRaduis(view: self.containerView3, number: (self.containerView3.frame.size.height / 2))
-        self.containerView4 = CreateCornerRauis.viewRaduis(view: self.containerView4, number: (self.containerView4.frame.size.height / 2))
-          // MARK : - Button  raduis
-        self.changeBtn = CreateCornerRauis.ButtonRaduis(button: self.changeBtn, number: 5)
-    }
-    
     func configer(){
         router = ChangeUsernameRouter(view: self)
     }

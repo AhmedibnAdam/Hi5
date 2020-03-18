@@ -47,7 +47,6 @@ class DateOfBirthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupNavigationBar()
-        initView()
         configure()
     }
     
@@ -138,10 +137,6 @@ extension DateOfBirthViewController {
         navigationItem.title = "Date Of Birth"
         navigationItem.setLeftBarButton(backBtn, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
-    }
-    func initView() {
-        // MARK : - Button  raduis
-        self.saveBtn = CreateCornerRauis.ButtonRaduis(button: self.saveBtn, number: 5)
     }
     func configure() {
         router = DateOfBirthRouter(view: self)

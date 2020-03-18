@@ -18,18 +18,13 @@ class ShowAlertView {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
             switch action.style{
             case .default:
-               
                     print(msg)
-            
             case .cancel:
                 print("cancel")
-                
             case .destructive:
                 print("destructive")
-                
             @unknown default:
                 print("error")
-                
             }}))
     }
 }

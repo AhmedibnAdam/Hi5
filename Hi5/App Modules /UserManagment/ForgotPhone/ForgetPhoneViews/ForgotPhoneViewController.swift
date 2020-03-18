@@ -26,7 +26,6 @@ class ForgotPhoneViewController: UIViewController, UITextFieldDelegate {
 	override func viewDidLoad() {
         super.viewDidLoad()
         self.phoneNumberTextField.delegate = self
-		initView()
         configer()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,12 +51,7 @@ extension ForgotPhoneViewController: IForgotPhoneViewController {
 	// do someting...
 }
 
-extension ForgotPhoneViewController {
-  func initView(){
-      // MARK : - Button  raduis
-    self.continueBtn = CreateCornerRauis.ButtonRaduis(button: self.continueBtn, number: 5)
-  }
-    
+extension ForgotPhoneViewController {    
   func configer(){
     router = ForgotPhoneRouter(view: self)
   }

@@ -14,7 +14,9 @@ protocol ISideMenuPresenter: class {
 	// do someting...
 }
 
-class SideMenuPresenter: ISideMenuPresenter {	
+class SideMenuPresenter: ISideMenuPresenter {
+   
+    
 	weak var view: ISideMenuViewController?
 	
 	init(view: ISideMenuViewController?) {

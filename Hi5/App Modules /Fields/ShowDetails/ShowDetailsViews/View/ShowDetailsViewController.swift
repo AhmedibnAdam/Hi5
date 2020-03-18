@@ -20,7 +20,7 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
     //MARK: - Properties
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
-    var field: FieldsModel.Field?
+    var field: FieldsModel.NearByfieldsResponseField?
     var services = [ShowDetailsModel.Service]()
     
     //MARK: - Outlets
@@ -185,14 +185,14 @@ extension ShowDetailsViewController{
     }
     
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath) as! ServicesCell
-        cell.serviceLbl.text = services[indexPath.row].name
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath)// as! ServicesCell
+     //   cell.serviceLbl.text = services[indexPath.row].name
         if let serviceImg = services[indexPath.row].image {
             let url = URL(string: serviceImg)
             DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: url!) {
                     DispatchQueue.main.async {
-                        cell.serviceimg.image = UIImage(data: data)
+              //          cell.serviceimg.image = UIImage(data: data)
                     }
                 }
             }
@@ -210,10 +210,10 @@ extension ShowDetailsViewController{
 extension ShowDetailsViewController {
     func initView(){
         // MARK : - view raduis
-        self.companyImg = CreateCornerRauis.imageViewRaduis(view: self.companyImg, number: (self.companyImg.frame.height / 2))
-        self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
-          // MARK : - Button  raduis
-        self.checkAvailabilityBtn = CreateCornerRauis.ButtonRaduis(button: self.checkAvailabilityBtn, number: 5)
+//        self.companyImg = CreateCornerRauis.imageViewRaduis(view: self.companyImg, number: (self.companyImg.frame.height / 2))
+//        self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
+//          // MARK : - Button  raduis
+//        self.checkAvailabilityBtn = CreateCornerRauis.ButtonRaduis(button: self.checkAvailabilityBtn, number: 5)
     }
     
     func configer(){

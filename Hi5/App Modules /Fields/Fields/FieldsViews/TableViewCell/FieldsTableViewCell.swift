@@ -14,18 +14,19 @@ protocol FavouriteTableViewCellDelegate: class{
 }
 
 protocol ShowDetailsTableViewCellDelegate: class {
-    func showDetailsDidTap(_ button: UIButton , cell: UITableViewCell , field: FieldsModel.Field)
+    func showDetailsDidTap(_ button: UIButton , cell: UITableViewCell , field: FieldsModel.NearByfieldsResponseField)
 }
 class FieldsTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
     @IBOutlet weak var favouriteBtn: UIButton!
     @IBOutlet weak var companyName: UILabel!
-    @IBOutlet weak var visibilitylbl: UILabel!
+
+    @IBOutlet weak var showDetailsBtn: UIButton!
+    @IBOutlet weak var visabilityButton: UIButton!
     @IBOutlet weak var fieldImg: UIImageView!
     @IBOutlet weak var companyImg: UIImageView!
-    @IBOutlet weak var nameView: UIView!
-    @IBOutlet weak var showDetailsBtn: UIButton!
+  
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var rateLbl: UILabel!
     @IBOutlet weak var commentLbl: UILabel!
@@ -33,22 +34,21 @@ class FieldsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var recomendedLbl: UILabel!
-    @IBOutlet weak var genderLbl: UILabel!
-    @IBOutlet weak var sportTypeLbl: UILabel!
+    @IBOutlet weak var typeIcon: UIImageView!
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var paymentLbl: UILabel!
+    @IBOutlet weak var genderIcon: UIImageView!
     
     //MARK: - Properties
     weak var delegate: FavouriteTableViewCellDelegate?
     weak var showDetailsDelegate: ShowDetailsTableViewCellDelegate?
     var fieldId: Int?
-    var field: FieldsModel.Field?
+    var field: FieldsModel.NearByfieldsResponseField?
     
     //MARK: - View Life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        initView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -64,24 +64,16 @@ class FieldsTableViewCell: UITableViewCell {
     }
     
     @IBAction func favouriteBtnTapped(_ sender: UIButton) {
-        if (favouriteBtn.currentImage == UIImage(named: "nonstar")){
-            favouriteBtn.setImage(UIImage(named: "star"), for: .normal)
+        if (favouriteBtn.currentImage == UIImage(named: "fav")){
+            favouriteBtn.setImage(UIImage(named: "favFill"), for: .normal)
             if let id = fieldId {
                 delegate?.addFavouriteDidTap(sender, cell: self , id: id)
             }
         } else {
-            favouriteBtn.setImage(UIImage(named: "nonstar"), for: .normal)
+            favouriteBtn.setImage(UIImage(named: "fav"), for: .normal)
             if let id = fieldId {
                delegate?.removeFavouriteDidTap(sender, cell: self , id: id)
             }
         }
     }
-    
-    func initView() {
-        self.companyImg = CreateCornerRauis.imageViewRaduis(view: self.companyImg, number: (self.companyImg.frame.size.height / 2))
-        self.nameView = CreateCornerRauis.viewRaduis(view: self.nameView, number: 15)
-        self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
-        self.showDetailsBtn = CreateCornerRauis.ButtonRaduis(button: self.showDetailsBtn, number: 5)
-    }
-    
 }

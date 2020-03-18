@@ -9,6 +9,7 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import Kingfisher
 
 protocol IPublicEventsViewController: class {
     var router: IPublicEventsRouter? { get set }
@@ -29,6 +30,7 @@ class PublicEventsViewController: UIViewController {
     let minHeaderHeight: CGFloat = 82
     var previousScrollOffset: CGFloat = 0
     var previousScrollViewHeight: CGFloat = 0
+    var filteredPublicEventData: PublicEventsModel.PublicEventResponse?
      var delegate: PublicEventControllerDelegate?
     var weekDays:[String] = []
     var daysArray:[String] = []
@@ -66,10 +68,10 @@ class PublicEventsViewController: UIViewController {
     }
     
     func setUP(){
-        var vc = self
-        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
-        self.interactor? = vc.interactor!
-        self.router? = vc.router!
+//        var vc = self
+//        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
+//        self.interactor? = vc.interactor!
+//        self.router? = vc.router!
     }
     
         //MARK:- setUp UI
@@ -94,14 +96,14 @@ class PublicEventsViewController: UIViewController {
     }
     
     func getFilteredPublicEvent(){
-        var vc = self
-        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
+//        var vc = self
+//        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
         let params = ["date":"2020-03-06",  // EX "2020-03-06"
                       "latitude": "29.962696",
                       "longitude": "31.276941"
         ]
-        vc.interactor?.parameters = params
-        vc.interactor?.filterPublicEvent(view: self)
+        self.interactor?.parameters = params
+        self.interactor?.filterPublicEvent(view: self)
     }
     
     func getToday(){
@@ -133,26 +135,30 @@ class PublicEventsViewController: UIViewController {
 }
 //MARK:-Extensions
 extension PublicEventsViewController: IPublicEventsViewController {
-
-       func setupNavigationBar() {
-         navigationItem.title = "Public Events"
-         navigationItem.setLeftBarButton(buttonSlideBar, animated: true)
-         navigationItem.leftBarButtonItem?.tintColor = .black
-     }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "Public Events"
+        navigationItem.setLeftBarButton(buttonSlideBar, animated: true)
+        navigationItem.leftBarButtonItem?.tintColor = .black
+    }
     @objc func sideMenu() {
-          delegate?.handleMenuToggle()
-      }
-     func showAlert(title: String, msg: String) {
-      ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+        delegate?.handleMenuToggle()
+    }
+    func showAlert(title: String, msg: String) {
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     
     func showFilteresPublicEvent(response: PublicEventsModel.PublicEventResponse) {
-        
-        
         print(response)
+        self.filteredPublicEventData = response
+        
+        if let image = self.filteredPublicEventData?.publicEvents[0].fieldImage {
+            let url = URL(string: image)
+            self.imageView.kf.setImage(with: url)
+
+        }
+        self.mainCollectionView.reloadData()
     }
-    
-     
 }
 
 
@@ -219,7 +225,7 @@ extension PublicEventsViewController {
 extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == mainCollectionView {
-            return 4
+            return self.filteredPublicEventData?.publicEvents.count ?? 0
         }else {
             return 14
         }
@@ -227,6 +233,10 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == mainCollectionView {
             let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: cellAID, for: indexPath) as! publicEventsCell
+            let cellData = self.filteredPublicEventData?.publicEvents[indexPath.row]
+            cellA.filteredPublicEventData = cellData
+            cellA.showData()
+                
             return cellA
         }else {
             let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: cellBID, for: indexPath) as! dateCell

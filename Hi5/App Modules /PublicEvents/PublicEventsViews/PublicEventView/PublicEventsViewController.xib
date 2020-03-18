@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublicEventsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="headerViewHeight" destination="et5-Dy-bO7" id="BKn-l0-YVQ"/>
-                <outlet property="imageView" destination="5BH-2r-x5F" id="rUf-Jc-NZD"/>
+                <outlet property="imageView" destination="5BH-2r-x5F" id="bnj-kA-2ar"/>
                 <outlet property="mainCollectionView" destination="DQk-gq-akN" id="6H6-D7-uRx"/>
                 <outlet property="month" destination="ip9-43-WoW" id="hfd-jg-TzZ"/>
                 <outlet property="subCollectionView" destination="Yfe-8d-zvi" id="eLK-7y-uHy"/>

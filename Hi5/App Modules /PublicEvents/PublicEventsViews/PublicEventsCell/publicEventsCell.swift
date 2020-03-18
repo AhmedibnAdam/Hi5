@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class publicEventsCell: UICollectionViewCell {
     
@@ -15,13 +16,61 @@ class publicEventsCell: UICollectionViewCell {
     @IBOutlet weak var noOfPlayersLabel: UILabel!
     @IBOutlet weak var noOfPlayerSlider: UISlider!
     @IBOutlet weak var sliderLableP: UILabel!
+    @IBOutlet weak var fieldName: UILabel!
+    @IBOutlet weak var partnerName: UILabel!
+    @IBOutlet weak var gender: UIImageView!
+    @IBOutlet weak var partnerImage: UIImageView!
+    @IBOutlet weak var playerNumbers: UILabel!
+    @IBOutlet weak var cost: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var day: UILabel!
+    @IBOutlet weak var starttime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var bestFor: UILabel!
+    
+    
+    var filteredPublicEventData: PublicEventsModel.PublicEvent?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupCellView()
+        showData()
     }
     
-    
+    func showData(){
+        //        "id": "47",
+        fieldName.text = filteredPublicEventData?.fieldName
+        if let image = filteredPublicEventData?.fieldImage {
+            let url = URL(string: image)
+            ballImageView.kf.setImage(with: url)
+            
+        }
+        
+        if let image = filteredPublicEventData?.partnerImage {
+            let url = URL(string: image)
+            partnerImage.kf.setImage(with: url)
+            
+        }
+        partnerName.text =  filteredPublicEventData?.partnerName
+        playerNumbers.text = "\(filteredPublicEventData?.playersNumber ?? 1) Players"
+        bestFor.text = "\(String(describing: filteredPublicEventData?.joinedNumber ?? 1)) x \(String(describing: filteredPublicEventData?.joinedNumber ?? 1))"
+        self.sliderLableP.text = "\(String(describing: filteredPublicEventData?.joinedNumber!))"
+        noOfPlayerSlider.value = Float(filteredPublicEventData?.joinedNumber ?? 1)
+        cost.text = filteredPublicEventData?.cost
+        let splitArray = filteredPublicEventData?.date?.split(separator: " ").map(String.init)
+        day.text = splitArray?[0]
+        date.text = filteredPublicEventData?.dateFormat
+        let splitTimeArray = filteredPublicEventData?.time?.split(separator: "-").map(String.init)
+        starttime.text = splitTimeArray?[0]
+        endTime.text = splitTimeArray?[1]
+        age.text = filteredPublicEventData?.age
+        //               "time": "06:00 - 07:00",
+        //               "sport_type": "Archery",
+        //               "status": "coming",
+
+    }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
 //        noOfPlayersLabel.text = "\(Int(noOfPlayerSlider.value))"
@@ -35,7 +84,7 @@ class publicEventsCell: UICollectionViewCell {
     func setupCellView() {
         noOfPlayerSlider.thumbTintColor = UIColor.orange
         
-        self.sliderLableP.text = "1"
+        self.sliderLableP.text = "\(String(describing: filteredPublicEventData?.joinedNumber ?? 1))"
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value)
         self.sliderLableP.text =  "\(Int(noOfPlayerSlider.value))"

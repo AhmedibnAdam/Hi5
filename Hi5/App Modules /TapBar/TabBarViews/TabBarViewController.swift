@@ -50,7 +50,7 @@ class TabBarViewController: UITabBarController {
     //MARK:- View life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
-		setViewControllers([social,events,notification], animated: true)
+        setViewControllers([social,events,notification], animated: true)
     }
 }
 

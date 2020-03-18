@@ -34,10 +34,17 @@ class PublicEventContainerController: UIViewController {
     //MARK: - Handlers
     
     func configurePublicEventControllerController() {
+        
+        
         let PublicEventController = PublicEventsViewController()
+        let router = PublicEventsRouter(view: PublicEventController)
+        let presenter = PublicEventsPresenter(view: PublicEventController)
+        let manager = PublicEventsManager()
+        let interactor = PublicEventsInteractor(presenter: presenter, manager: manager)
+        PublicEventController.interactor = interactor
+        PublicEventController.router = router
         PublicEventController.delegate = self
         centerController = UINavigationController(rootViewController: PublicEventController)
-        
         view.addSubview(centerController.view)
         addChild(centerController)
         centerController.didMove(toParent: self)

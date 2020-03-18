@@ -26,8 +26,7 @@ class PublicEventsPresenter: IPublicEventsPresenter {
           view?.showAlert(title: title, msg: msg)
       }
     func showFilteresPublicEvent(response: PublicEventsModel.PublicEventResponse) {
-        let view = PublicEventsViewController()
-        view.showFilteresPublicEvent(response: response)
+        view?.showFilteresPublicEvent(response: response)
     }
     
 }

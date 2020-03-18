@@ -25,14 +25,14 @@ struct PublicEventsModel {
 
     // MARK: - PublicEvent
     struct PublicEvent: Codable {
-        let id, fieldName: String
-        let fieldImage: String
-        let partnerName: String
-        let partnerImage: String
-        let playersNumber, joinedNumber: Int
-        let cost, date, dateFormat, time: String
-        let sportType, status, age: String
-
+        let id, fieldName: String?
+        let fieldImage: String?
+        let partnerName: String?
+        let partnerImage: String?
+        let playersNumber, joinedNumber: Int?
+        let cost, date, dateFormat, time: String?
+        let sportType, status, age: String?
+        
         enum CodingKeys: String, CodingKey {
             case id
             case fieldName = "field_name"

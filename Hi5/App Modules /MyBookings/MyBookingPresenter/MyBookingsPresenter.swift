@@ -11,13 +11,24 @@
 import UIKit
 
 protocol IMyBookingsPresenter: class {
-	// do someting...
+	func showErrorAlert(title: String, msg: String)
+    func showResponse(response: MyBookingsModel.MyBookingSessions)
 }
 
-class MyBookingsPresenter: IMyBookingsPresenter {	
+class MyBookingsPresenter: IMyBookingsPresenter {
+ 
+    
 	weak var view: IMyBookingsViewController?
 	
 	init(view: IMyBookingsViewController?) {
 		self.view = view
 	}
+    
+    func showErrorAlert(title: String, msg: String) {
+        view?.showAlert(title: title, msg: msg)
+     }
+     
+     func showResponse(response: MyBookingsModel.MyBookingSessions) {
+        view?.showResponse(response: response)
+     }
 }

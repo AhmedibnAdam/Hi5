@@ -107,7 +107,6 @@ extension SideMenuViewController {
         } else if(indexPath.row == 1){
             print("My Schedule..")
         } else if(indexPath.row == 2){
-            print("My booking...")
              router?.navigateToMyBookings()
         } else if(indexPath.row == 3){
             router?.navigateToFields()

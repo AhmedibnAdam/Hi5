@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60D69A747F4B18050698D093 /* Pods_Hi5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */; };
+		662922F42423AFFE0041157D /* MyBookingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */; };
 		662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */; };
 		662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167823C3E4B200A3695E /* TransactionsPresenter.swift */; };
 		662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167923C3E4B200A3695E /* TransactionsRouter.swift */; };
@@ -488,6 +489,7 @@
 
 /* Begin PBXFileReference section */
 		28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hi5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsEndpoint.swift; sourceTree = "<group>"; };
 		662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsConfiguration.swift; sourceTree = "<group>"; };
 		662A167823C3E4B200A3695E /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
 		662A167923C3E4B200A3695E /* TransactionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRouter.swift; sourceTree = "<group>"; };
@@ -1896,6 +1898,7 @@
 			children = (
 				66AEC61D24227B3D003CF2EB /* MyBookingsModel.swift */,
 				66AEC61F24227B3D003CF2EB /* MyBookingsManager.swift */,
+				662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */,
 			);
 			path = MyBookingServices;
 			sourceTree = "<group>";
@@ -4163,6 +4166,7 @@
 				668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */,
 				666336B323B40B84004E537C /* PhoneVerificationRouter.swift in Sources */,
 				662A16A523C3E80900A3695E /* MemberOfFriendsViewController.swift in Sources */,
+				662922F42423AFFE0041157D /* MyBookingsEndpoint.swift in Sources */,
 				86A5D9B223FC064A00BC7204 /* FieldsEndPoint.swift in Sources */,
 				86DB006823D70B97001E99E8 /* GenderRouter.swift in Sources */,
 				86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */,

@@ -38,15 +38,14 @@ struct FieldsModel {
         let name, partnerName: String?
         let partnerImage: String?
         let cost: Int?
-        let gender, address: String?
-        let distance: Double?
-        let sportType, recommendedFor: String?
+        let gender, address, distance, sportType: String?
+        let recommendedFor: String?
         let fieldImage: String?
         let comments: Int?
         let rating: Double?
         let visibility, payment: String?
         let membership: Membership?
-        
+
         enum CodingKeys: String, CodingKey {
             case favourite, id, name
             case partnerName = "partner_name"

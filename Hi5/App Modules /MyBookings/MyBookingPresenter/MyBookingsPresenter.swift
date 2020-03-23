@@ -13,9 +13,13 @@ import UIKit
 protocol IMyBookingsPresenter: class {
 	func showErrorAlert(title: String, msg: String)
     func showResponse(response: MyBookingsModel.MyBookingSessions)
+    func showPastBooking(response: MyBookingsModel.PastBookingResponse)
+    func showCancledBooking(response: MyBookingsModel.CanceledBookingResponse)
 }
 
 class MyBookingsPresenter: IMyBookingsPresenter {
+
+    
  
     
 	weak var view: IMyBookingsViewController?
@@ -29,6 +33,13 @@ class MyBookingsPresenter: IMyBookingsPresenter {
      }
      
      func showResponse(response: MyBookingsModel.MyBookingSessions) {
-        view?.showResponse(response: response)
+        view?.showUpCommingBooking(response: response)
      }
+    func showPastBooking(response: MyBookingsModel.PastBookingResponse) {
+        view?.showPastBooking(response: response)
+    }
+    
+    func showCancledBooking(response: MyBookingsModel.CanceledBookingResponse) {
+        view?.showCancledBooking(response: response)
+    }
 }

@@ -61,7 +61,7 @@ class publicEventsCell: UICollectionViewCell {
         self.sliderLableP.text = "\(String(describing: filteredPublicEventData?.joinedNumber ?? 1))"
         
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
-        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value)
+        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value - 0.9)
         
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
         cost.text = filteredPublicEventData?.cost

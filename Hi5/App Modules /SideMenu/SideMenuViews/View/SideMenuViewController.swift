@@ -11,30 +11,35 @@
 import UIKit
 
 protocol ISideMenuViewController: class {
-	var router: ISideMenuRouter? { get set }
+    var router: ISideMenuRouter? { get set }
 }
 
 class SideMenuViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
-	var interactor: ISideMenuInteractor?
-	var router: ISideMenuRouter?
-   //MARK: - Properties
-   var textArr = ["Friends","My Schedule","My bookings","Fields","Wallet","Suggest Field","Settings & Privacy","Notification setting","Help Center","Logout"]
-   var imgArr = ["friends","mySchadule","bookings","fields","wallet","suggestFields","settings","notificationSettings","helpCenter","helpCenter"]
-   //MARK: - Outlets
+    var interactor: ISideMenuInteractor?
+    var router: ISideMenuRouter?
+    var height = 0.0
+    //MARK: - Properties
+    var textArr = ["Friends","My Schedule","My bookings","Fields","Wallet","Suggest Field","Settings & Privacy","Notification setting","Help Center","Logout"]
+    var imgArr = ["friends","mySchadule","bookings","fields","wallet","suggestFields","settings","notificationSettings","helpCenter","helpCenter"]
+    //MARK: - Outlets
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var fullNamelbl: UILabel!
     @IBOutlet weak var userNamelbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    @IBOutlet weak var contentView: UIView!
     
-   //MARK: - ViewLifeCycle
-	override func viewDidLoad() {
+    //MARK: - ViewLifeCycle
+    override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
         profileImgTapped()
         registerCell()
-		initView()
         configer()
+        initView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,17 +54,62 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
         userNamelbl.text = userName
     }
     //MARK: - Actions
-
+    
 }
-  //MARK: - Extensions
+//MARK: - Extensions
 extension SideMenuViewController: ISideMenuViewController {
-	// do someting...
+    // do someting...
 }
 
 extension SideMenuViewController {
     func initView(){
-        // MARK : - view raduis
-//        self.profileImg = CreateCornerRauis.imageViewRaduis(view: self.profileImg, number: (self.profileImg.frame.size.height / 2))
+        
+        let device =  UIDevice().name
+        
+        
+        switch device {
+        case "iPhone 8 Plus":
+            largeHeight()
+        case "iPhone 8":
+            smallHeight()
+        case "iPhone 7 Plus":
+            largeHeight()
+        case "iPhone 7":
+            smallHeight()
+        case "iPhone 6 Plus":
+            largeHeight()
+        case "iPhone 6":
+            smallHeight()
+        case "iPhone X":
+            largeHeight()
+        case "iPhone XS":
+            largeHeight()
+        case "iPhone XS Max":
+            largeHeight()
+        case "iPhone XR":
+            largeHeight()
+        case "iPhone 11":
+            largeHeight()
+        case "iPhone 11 Pro":
+            largeHeight()
+        case "iPhone 11 Pro Max":
+            largeHeight()
+        default:
+            largeHeight()
+        }
+        
+        // self.tableView.frame.size.height = CGFloat(height)
+    }
+    
+    func smallHeight(){
+        height = 540.0
+        self.tableView.frame.size.height = CGFloat(height)
+        tableHeight.constant = CGFloat(height)
+    }
+    func largeHeight(){
+        height = 540.0 + 130
+        self.tableView.frame.size.height = CGFloat(height)
+        tableHeight.constant = CGFloat(height)
     }
     
     func registerCell() {
@@ -88,6 +138,8 @@ extension SideMenuViewController {
         return textArr.count
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let text = textArr[indexPath.row]
         let image = imgArr[indexPath.row]
@@ -107,7 +159,7 @@ extension SideMenuViewController {
         } else if(indexPath.row == 1){
             print("My Schedule..")
         } else if(indexPath.row == 2){
-             router?.navigateToMyBookings()
+            router?.navigateToMyBookings()
         } else if(indexPath.row == 3){
             router?.navigateToFields()
         } else if(indexPath.row == 4){
@@ -129,5 +181,41 @@ extension SideMenuViewController {
             }
             router?.navigateToLogin()
         }
+    }
+}
+
+extension UITableView {
+    
+    public func reloadData(_ completion: @escaping ()->()) {
+        UIView.animate(withDuration: 0, animations: {
+            self.reloadData()
+        }, completion:{ _ in
+            completion()
+        })
+    }
+    
+    func scroll(to: scrollsTo, animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+            let numberOfSections = self.numberOfSections
+            let numberOfRows = self.numberOfRows(inSection: numberOfSections-1)
+            switch to{
+            case .top:
+                if numberOfRows > 0 {
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    self.scrollToRow(at: indexPath, at: .top, animated: animated)
+                }
+                break
+            case .bottom:
+                if numberOfRows > 0 {
+                    let indexPath = IndexPath(row: numberOfRows-1, section: (numberOfSections-1))
+                    self.scrollToRow(at: indexPath, at: .bottom, animated: animated)
+                }
+                break
+            }
+        }
+    }
+    
+    enum scrollsTo {
+        case top,bottom
     }
 }

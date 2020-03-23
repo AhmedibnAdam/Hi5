@@ -23,16 +23,22 @@ class MyBookingsTableViewCell: UITableViewCell {
     @IBOutlet weak var day: UILabel!
     @IBOutlet weak var starttime: UILabel!
     @IBOutlet weak var endTime: UILabel!
-   
+    
+    @IBOutlet weak var pastCost: UILabel!
+    @IBOutlet weak var before: UILabel!
+    @IBOutlet weak var beforeCenterView: UIView!
+    @IBOutlet weak var currancy: UILabel!
+
+    
     @IBOutlet weak var bestFor: UILabel!
     @IBOutlet weak var location: UILabel!
-    @IBOutlet weak var currancy: UILabel!
     
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var paymentType: UILabel!
     @IBOutlet weak var bookingStatus: UILabel!
     @IBOutlet weak var bookingStatusImage: UIImageView!
-    @IBOutlet weak var pastCost: UILabel!
+    
+    @IBOutlet weak var point: UILabel!
     
     var bookingData: MyBookingsModel.MyBookingSessionsField?
     
@@ -44,29 +50,6 @@ class MyBookingsTableViewCell: UITableViewCell {
     }
     
     func showData(){
-        //        "id": "47",
-        fieldName.text = bookingData?.partnerName
-        if let image = bookingData?.image {
-            let url = URL(string: image)
-            ballImageView.kf.setImage(with: url)
-            
-        }
-        
-        if let image = bookingData?.partnerImage {
-            let url = URL(string: image)
-            partnerImage.kf.setImage(with: url)
-            
-        }
-        partnerName.text = bookingData?.partnerName
-   
-        bestFor.text = "\(String(describing: bookingData?.bestFor))"
-        let splitArray = bookingData?.date?.split(separator: " ").map(String.init)
-        day.text = splitArray?[0]
-        date.text = bookingData?.dateFormat
-        let splitTimeArray = bookingData?.time?.split(separator: "-").map(String.init)
-        starttime.text = splitTimeArray?[0]
-        endTime.text = splitTimeArray?[1]
-
         
     }
 

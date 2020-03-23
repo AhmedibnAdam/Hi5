@@ -22,6 +22,7 @@ target 'Hi5' do
      pod 'GooglePlacesSearchController'
      pod 'Kingfisher'
      pod 'TTRangeSlider'
+     pod 'ImageSlideshow'
   #   pod 'SWRevealViewController'
 
 end

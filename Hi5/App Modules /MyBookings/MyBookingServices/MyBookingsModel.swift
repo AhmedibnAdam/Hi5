@@ -31,25 +31,25 @@ struct MyBookingsModel {
         let bookedSessionID, id: Int?
         let name: String?
         let image: String?
-        let address, date, dateFormat, time: String?
-        let gender, bestFor, sport, partnerName: String?
+        let day, date, startTime, endTime: String?
+        let gender, address, bestFor, sport: String?
+        let status, payment, partnerName: String?
         let partnerImage: String?
-        let visibility: String?
-        let membership: Membership?
-        let favourite: Bool?
-        let status, statusDesc: String?
-
+        let oldPrice, newPrice, points: Int?
+        
         enum CodingKeys: String, CodingKey {
             case bookedSessionID = "booked_session_id"
-            case id, name, image, address, date
-            case dateFormat = "date_format"
-            case time, gender
+            case id, name, image, day, date
+            case startTime = "start_time"
+            case endTime = "end_time"
+            case gender, address
             case bestFor = "best_for"
-            case sport
+            case sport, status, payment
             case partnerName = "partner_name"
             case partnerImage = "partner_image"
-            case visibility, membership, favourite, status
-            case statusDesc = "status_desc"
+            case oldPrice = "old_price"
+            case newPrice = "new_price"
+            case points
         }
     }
     // MARK: - Membership
@@ -61,4 +61,71 @@ struct MyBookingsModel {
             case expireAt = "expire_at"
         }
     }
+    
+    // MARK: - CanceledBookingResponse
+    struct CanceledBookingResponse: Codable {
+        let status: Bool?
+        let fields: [CanceledBookingField]?
+    }
+
+    // MARK: - Field
+    struct CanceledBookingField: Codable {
+        let bookedSessionID, id: Int?
+        let name: String?
+        let image: String?
+        let day, date, startTime, endTime: String?
+        let gender, address, bestFor, status: String?
+        let payment, partnerName: String?
+        let partnerImage: String?
+        let oldPrice, newPrice, points: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case bookedSessionID = "booked_session_id"
+            case id, name, image, day, date
+            case startTime = "start_time"
+            case endTime = "end_time"
+            case gender, address
+            case bestFor = "best_for"
+            case status, payment
+            case partnerName = "partner_name"
+            case partnerImage = "partner_image"
+            case oldPrice = "old_price"
+            case newPrice = "new_price"
+            case points
+        }
+    }
+    // MARK: - PastBookingResponse
+    struct PastBookingResponse: Codable {
+        let status: Bool?
+        let fields: [PastBookingField]?
+    }
+
+    // MARK: - Field
+    struct PastBookingField: Codable {
+        let bookedSessionID, id: Int?
+        let name: String?
+        let image: String?
+        let day, date, startTime, endTime: String?
+        let gender, address, bestFor, sport: String?
+        let status, payment, partnerName: String?
+        let partnerImage: String?
+        let oldPrice, newPrice, points: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case bookedSessionID = "booked_session_id"
+            case id, name, image, day, date
+            case startTime = "start_time"
+            case endTime = "end_time"
+            case gender, address
+            case bestFor = "best_for"
+            case sport, status, payment
+            case partnerName = "partner_name"
+            case partnerImage = "partner_image"
+            case oldPrice = "old_price"
+            case newPrice = "new_price"
+            case points
+        }
+    }
+
+
 }

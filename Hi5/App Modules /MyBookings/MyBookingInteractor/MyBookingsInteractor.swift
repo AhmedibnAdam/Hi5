@@ -30,40 +30,53 @@ class MyBookingsInteractor: IMyBookingsInteractor {
     }
 }
 extension MyBookingsInteractor {
-    func getPastBookings(view: UIViewController) {
-        
-    }
+    
     
     func getUpCommingBookings(view: UIViewController) {
         manager?.getUpCommingBookingsFromApi(complition: { (error, success, response) in
             if (success == true) {
-               
-                  guard let response = response else {return}
-                   self.presenter?.showResponse(response: response)
+                
+                guard let response = response else {return}
+                self.presenter?.showResponse(response: response)
                 if (response.fields?.count == 0){
-//                      self.presenter?.showResponse(response: response)
-                  }
-                } else {
-          
-                    self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+                     self.presenter?.showResponse(response: response)
                 }
+            } else {
+                
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
+    }
+    
+    func getPastBookings(view: UIViewController) {
+        manager?.getPastBookingsFromApi(complition: { (error, success, response) in
+            if (success == true) {
+                
+                guard let response = response else {return}
+                if (response.fields?.count != 0){
+                    self.presenter?.showPastBooking(response: response)
+                }
+            } else {
+                
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
         })
     }
     
     func getCancelBookings(view: UIViewController) {
-            manager?.getPastBookingsFromApi(complition: { (error, success, response) in
-                if (success == true) {
-                   
-                      guard let response = response else {return}
-                       self.presenter?.showResponse(response: response)
-                    if (response.fields?.count == 0){
-    //                      self.presenter?.showResponse(response: response)
-                      }
-                    } else {
-              
-                        self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
-                    }
-            })
-        }
+        manager?.getUpCancelBookingsFromApi(complition: { (error, success, response) in
+            if (success == true) {
+                
+                guard let response = response else {return}
+                if (response.fields?.count != 0){
+                    self.presenter?.showCancledBooking(response: response)
+                    
+                }
+            } else {
+                
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
+    }
     
 }

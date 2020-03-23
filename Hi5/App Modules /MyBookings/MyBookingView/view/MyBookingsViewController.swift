@@ -13,7 +13,9 @@ import UIKit
 protocol IMyBookingsViewController: class {
     var router: IMyBookingsRouter? { get set }
     func showAlert(title: String, msg: String)
-    func showResponse(response: MyBookingsModel.MyBookingSessions)
+    func showUpCommingBooking(response: MyBookingsModel.MyBookingSessions)
+    func showPastBooking(response: MyBookingsModel.PastBookingResponse)
+    func showCancledBooking(response: MyBookingsModel.CanceledBookingResponse)
 }
 
 class MyBookingsViewController: UIViewController {
@@ -23,8 +25,11 @@ class MyBookingsViewController: UIViewController {
     var router: IMyBookingsRouter?
     var types = ["Comming","Past","Canceled"]
     var upCommingBooking: MyBookingsModel.MyBookingSessions?
+    var pastBooking: MyBookingsModel.PastBookingResponse?
+    var canceledBooking: MyBookingsModel.CanceledBookingResponse?
     var fieldsTabType = 0  // Comming = 0 / Past = 1 / Canceled = 2
     var firstTimeIn = 0
+    var bookingCellCount = 0
     
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtntapped))
@@ -61,10 +66,28 @@ extension MyBookingsViewController: IMyBookingsViewController {
         print(title + "-" + msg)
     }
     
-    func showResponse(response: MyBookingsModel.MyBookingSessions) {
+    func showUpCommingBooking(response: MyBookingsModel.MyBookingSessions) {
         let upCommingBooking = response
         self.upCommingBooking = upCommingBooking
         fieldsTabType = 0
+        bookingCellCount = upCommingBooking.fields?.count ?? 0
+        self.tableView.reloadData()
+        print(response)
+    }
+    
+    func showPastBooking(response: MyBookingsModel.PastBookingResponse) {
+        let pastBooking = response
+        self.pastBooking = pastBooking
+        fieldsTabType = 1
+        bookingCellCount = pastBooking.fields?.count ?? 0
+        self.tableView.reloadData()
+        print(response)
+    }
+    func showCancledBooking(response: MyBookingsModel.CanceledBookingResponse) {
+        let canceledBooking = response
+        self.canceledBooking = canceledBooking
+        fieldsTabType = 2
+        bookingCellCount = canceledBooking.fields?.count ?? 0
         self.tableView.reloadData()
         print(response)
     }
@@ -130,34 +153,131 @@ extension MyBookingsViewController: UITableViewDelegate , UITableViewDataSource 
         tableView.register(cell, forCellReuseIdentifier: "MyBookingsTableViewCell")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  upCommingBooking?.fields?.count ?? 0
+        return  self.bookingCellCount
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyBookingsTableViewCell") as! MyBookingsTableViewCell
-        let bookingData = self.upCommingBooking?.fields?[indexPath.row]
-        cell.fieldName.text = bookingData?.partnerName
-        if let image = bookingData?.image {
-            let url = URL(string: image)
-            cell.ballImageView.kf.setImage(with: url)
-            cell.partnerImage.kf.setImage(with: url)
-            cell.fieldImage.kf.setImage(with: url)
-        }
         
-        if let image = bookingData?.partnerImage {
-            let url = URL(string: image)
-            //  cell.partnerImage.kf.setImage(with: url)
+        if self.fieldsTabType == 0 {
+            let bookingData = self.upCommingBooking?.fields?[indexPath.row]
+            cell.fieldName.text = bookingData?.partnerName
+            if let image = bookingData?.image {
+                let url = URL(string: image)
+                cell.ballImageView.kf.setImage(with: url)
+                cell.fieldImage.kf.setImage(with: url)
+            }
             
+            if let image = bookingData?.partnerImage {
+                let url = URL(string: image)
+                cell.partnerImage.kf.setImage(with: url)
+                
+            }
+            cell.partnerName.text = bookingData?.name
+            
+            cell.location.text = bookingData?.address
+            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
+            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
+            cell.point.text = "\( bookingData?.points! ?? 0)"
+            
+            cell.bestFor.text = bookingData?.bestFor
+            cell.day.text = bookingData?.day
+            cell.date.text = bookingData?.date
+            cell.starttime.text = bookingData?.startTime
+            cell.endTime.text = bookingData?.endTime
+            
+            if bookingData?.newPrice == bookingData?.oldPrice {
+                cell.pastCost.isHidden = true
+                cell.before.isHidden = true
+                cell.beforeCenterView.isHidden = true
+                cell.currancy.isHidden = true
+            }
+            else{
+                cell.pastCost.isHidden = false
+                cell.before.isHidden = false
+                cell.beforeCenterView.isHidden = false
+                cell.currancy.isHidden = false
+            }
+            
+            return cell
         }
-        cell.partnerName.text = bookingData?.name
-        
-        cell.bestFor.text = bookingData?.bestFor!
-        let splitArray = bookingData?.date?.split(separator: " ").map(String.init)
-        cell.day.text = splitArray?[0]
-        cell.date.text = bookingData?.dateFormat
-        let splitTimeArray = bookingData?.time?.split(separator: "-").map(String.init)
-        cell.starttime.text = splitTimeArray?[0]
-        cell.endTime.text = splitTimeArray?[1]
-        return cell
+        else if self.fieldsTabType == 1 {
+            let bookingData = self.pastBooking?.fields?[indexPath.row]
+            cell.fieldName.text = bookingData?.partnerName
+            if let image = bookingData?.image {
+                let url = URL(string: image)
+                cell.ballImageView.kf.setImage(with: url)
+                cell.fieldImage.kf.setImage(with: url)
+            }
+            
+            if let image = bookingData?.partnerImage {
+                let url = URL(string: image)
+                cell.partnerImage.kf.setImage(with: url)
+                
+            }
+            cell.partnerName.text = bookingData?.name
+            cell.location.text = bookingData?.address
+            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
+            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
+            cell.point.text = "\( bookingData?.points! ?? 0)"
+            cell.bestFor.text = bookingData?.bestFor
+            cell.day.text = bookingData?.day
+            cell.date.text = bookingData?.date
+            cell.starttime.text = bookingData?.startTime
+            cell.endTime.text = bookingData?.endTime
+            
+            if bookingData?.newPrice == bookingData?.oldPrice {
+                cell.pastCost.isHidden = true
+                cell.before.isHidden = true
+                cell.beforeCenterView.isHidden = true
+                cell.currancy.isHidden = true
+            }
+            else{
+                cell.pastCost.isHidden = false
+                cell.before.isHidden = false
+                cell.beforeCenterView.isHidden = false
+                cell.currancy.isHidden = false
+            }
+            return cell
+        }
+        else {
+            let bookingData = self.canceledBooking?.fields?[indexPath.row]
+            cell.fieldName.text = bookingData?.partnerName
+            if let image = bookingData?.image {
+                let url = URL(string: image)
+                cell.ballImageView.kf.setImage(with: url)
+                cell.fieldImage.kf.setImage(with: url)
+            }
+            
+            if let image = bookingData?.partnerImage {
+                let url = URL(string: image)
+                cell.partnerImage.kf.setImage(with: url)
+                
+            }
+            cell.partnerName.text = bookingData?.name
+            cell.location.text = bookingData?.address
+            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
+            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
+            cell.point.text = "\( bookingData?.points! ?? 0)"
+            cell.bestFor.text = bookingData?.bestFor
+            cell.day.text = bookingData?.day
+            cell.date.text = bookingData?.date
+            cell.starttime.text = bookingData?.startTime
+            cell.endTime.text = bookingData?.endTime
+            
+            if bookingData?.newPrice == bookingData?.oldPrice {
+                cell.pastCost.isHidden = true
+                cell.before.isHidden = true
+                cell.beforeCenterView.isHidden = true
+                cell.currancy.isHidden = true
+            }
+            else{
+                cell.pastCost.isHidden = false
+                cell.before.isHidden = false
+                cell.beforeCenterView.isHidden = false
+                cell.currancy.isHidden = false
+            }
+            return cell
+        }
     }
 }
 

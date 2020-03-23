@@ -10,9 +10,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublicEventsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="headerViewHeight" destination="et5-Dy-bO7" id="BKn-l0-YVQ"/>
-                <outlet property="imageView" destination="5BH-2r-x5F" id="bnj-kA-2ar"/>
                 <outlet property="mainCollectionView" destination="DQk-gq-akN" id="6H6-D7-uRx"/>
                 <outlet property="month" destination="ip9-43-WoW" id="hfd-jg-TzZ"/>
+                <outlet property="slideshow" destination="VcU-nJ-tGt" id="CeE-jh-rNk"/>
                 <outlet property="subCollectionView" destination="Yfe-8d-zvi" id="eLK-7y-uHy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="year" destination="CyH-r3-jsN" id="CZM-hS-yZN"/>
@@ -77,18 +77,26 @@
                                 <constraint firstItem="FYD-O6-7kI" firstAttribute="leading" secondItem="L4l-tE-tIo" secondAttribute="leading" constant="8" id="snm-Wt-Ycx"/>
                             </constraints>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stadium" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-2r-x5F">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stadium" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-2r-x5F" customClass="image">
                             <rect key="frame" x="0.0" y="0.0" width="401" height="185"/>
                         </imageView>
+                        <view hidden="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-nJ-tGt" customClass="ImageSlideshow" customModule="Hi5">
+                            <rect key="frame" x="0.0" y="0.0" width="401" height="185"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Yfe-8d-zvi" secondAttribute="trailing" id="1tW-QB-2wS"/>
+                        <constraint firstItem="VcU-nJ-tGt" firstAttribute="trailing" secondItem="5BH-2r-x5F" secondAttribute="trailing" id="9A5-k3-stu"/>
+                        <constraint firstItem="VcU-nJ-tGt" firstAttribute="bottom" secondItem="5BH-2r-x5F" secondAttribute="bottom" id="Lfh-Cn-ovQ"/>
                         <constraint firstItem="Yfe-8d-zvi" firstAttribute="leading" secondItem="Daq-pS-Y1l" secondAttribute="leading" id="OMR-6a-NrN"/>
                         <constraint firstItem="L4l-tE-tIo" firstAttribute="top" secondItem="5BH-2r-x5F" secondAttribute="bottom" id="Oud-hZ-Az6"/>
                         <constraint firstItem="Yfe-8d-zvi" firstAttribute="top" secondItem="L4l-tE-tIo" secondAttribute="bottom" id="TOP-AF-Lbh"/>
+                        <constraint firstItem="VcU-nJ-tGt" firstAttribute="leading" secondItem="5BH-2r-x5F" secondAttribute="leading" id="YtB-59-vAC"/>
                         <constraint firstAttribute="height" constant="300" id="et5-Dy-bO7"/>
                         <constraint firstAttribute="bottom" secondItem="Yfe-8d-zvi" secondAttribute="bottom" id="gqw-eT-Sed"/>
+                        <constraint firstItem="VcU-nJ-tGt" firstAttribute="top" secondItem="5BH-2r-x5F" secondAttribute="top" id="krE-b1-zdz"/>
                         <constraint firstItem="L4l-tE-tIo" firstAttribute="leading" secondItem="Daq-pS-Y1l" secondAttribute="leading" id="pWY-Xb-xUY"/>
                         <constraint firstAttribute="trailing" secondItem="L4l-tE-tIo" secondAttribute="trailing" id="soN-cn-Quy"/>
                     </constraints>

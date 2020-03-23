@@ -46,7 +46,7 @@ struct FieldsModel {
         let gender, address, distance, sportType: String?
         let recommendedFor: String?
         let fieldImage: String?
-        let comments, rating: Int?
+        let comments, rating: Double?
         let visibility, payment: String?
         let membership: Membership?
 

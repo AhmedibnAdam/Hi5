@@ -375,6 +375,14 @@
 		862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */; };
 		864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864E920023E9BE530095B3EF /* LocationEndPoint.swift */; };
 		86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */; };
+		86579360242A776C00ED0087 /* SuggestFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86579358242A776C00ED0087 /* SuggestFieldConfiguration.swift */; };
+		86579361242A776C00ED0087 /* SuggestFieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86579359242A776C00ED0087 /* SuggestFieldPresenter.swift */; };
+		86579362242A776C00ED0087 /* SuggestFieldRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657935A242A776C00ED0087 /* SuggestFieldRouter.swift */; };
+		86579363242A776C00ED0087 /* SuggestFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657935B242A776C00ED0087 /* SuggestFieldViewController.swift */; };
+		86579364242A776C00ED0087 /* SuggestFieldInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657935C242A776C00ED0087 /* SuggestFieldInteractor.swift */; };
+		86579365242A776C00ED0087 /* SuggestFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657935D242A776C00ED0087 /* SuggestFieldModel.swift */; };
+		86579366242A776C00ED0087 /* SuggestFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8657935E242A776C00ED0087 /* SuggestFieldViewController.xib */; };
+		86579367242A776C00ED0087 /* SuggestFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657935F242A776C00ED0087 /* SuggestFieldManager.swift */; };
 		86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */; };
 		8665FEF923E86AC200EB4E1E /* ProfileEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */; };
 		866898982407E9A300EF366F /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866898962407E9A300EF366F /* FieldCell.swift */; };
@@ -849,6 +857,14 @@
 		862EB5AB23D730AD00508F1A /* DateOfBirthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOfBirthManager.swift; sourceTree = "<group>"; };
 		864E920023E9BE530095B3EF /* LocationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEndPoint.swift; sourceTree = "<group>"; };
 		86515E6323CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordWndPoint.swift; sourceTree = "<group>"; };
+		86579358242A776C00ED0087 /* SuggestFieldConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldConfiguration.swift; sourceTree = "<group>"; };
+		86579359242A776C00ED0087 /* SuggestFieldPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldPresenter.swift; sourceTree = "<group>"; };
+		8657935A242A776C00ED0087 /* SuggestFieldRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldRouter.swift; sourceTree = "<group>"; };
+		8657935B242A776C00ED0087 /* SuggestFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldViewController.swift; sourceTree = "<group>"; };
+		8657935C242A776C00ED0087 /* SuggestFieldInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldInteractor.swift; sourceTree = "<group>"; };
+		8657935D242A776C00ED0087 /* SuggestFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldModel.swift; sourceTree = "<group>"; };
+		8657935E242A776C00ED0087 /* SuggestFieldViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestFieldViewController.xib; sourceTree = "<group>"; };
+		8657935F242A776C00ED0087 /* SuggestFieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestFieldManager.swift; sourceTree = "<group>"; };
 		86652BE623D0A31400E68E54 /* ForgetEmailEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetEmailEndPoint.swift; sourceTree = "<group>"; };
 		8665FEF823E86AC200EB4E1E /* ProfileEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEndPoint.swift; sourceTree = "<group>"; };
 		866898962407E9A300EF366F /* FieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
@@ -1112,6 +1128,7 @@
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
+				86579357242A775100ED0087 /* SuggestField */,
 				86268A1B23F72ED600EFD96B /* Sechadule */,
 				860AB7EA23F2D140005691C1 /* Social */,
 				663409FB23B4C8E2009DB30A /* Fields */,
@@ -2388,6 +2405,69 @@
 			path = NewPasswordServices;
 			sourceTree = "<group>";
 		};
+		86579357242A775100ED0087 /* SuggestField */ = {
+			isa = PBXGroup;
+			children = (
+				8657936D242A77BC00ED0087 /* SuggestFieldContract */,
+				8657936B242A77A900ED0087 /* SuggestFieldInteractor */,
+				8657936A242A779F00ED0087 /* SuggestFieldPresenter */,
+				86579369242A779600ED0087 /* SuggestFieldRouter */,
+				8657936C242A77B300ED0087 /* SuggestFieldServices */,
+				86579368242A778000ED0087 /* SuggestFieldViews */,
+			);
+			path = SuggestField;
+			sourceTree = "<group>";
+		};
+		86579368242A778000ED0087 /* SuggestFieldViews */ = {
+			isa = PBXGroup;
+			children = (
+				8657935B242A776C00ED0087 /* SuggestFieldViewController.swift */,
+				8657935E242A776C00ED0087 /* SuggestFieldViewController.xib */,
+			);
+			path = SuggestFieldViews;
+			sourceTree = "<group>";
+		};
+		86579369242A779600ED0087 /* SuggestFieldRouter */ = {
+			isa = PBXGroup;
+			children = (
+				8657935A242A776C00ED0087 /* SuggestFieldRouter.swift */,
+			);
+			path = SuggestFieldRouter;
+			sourceTree = "<group>";
+		};
+		8657936A242A779F00ED0087 /* SuggestFieldPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				86579359242A776C00ED0087 /* SuggestFieldPresenter.swift */,
+			);
+			path = SuggestFieldPresenter;
+			sourceTree = "<group>";
+		};
+		8657936B242A77A900ED0087 /* SuggestFieldInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				8657935C242A776C00ED0087 /* SuggestFieldInteractor.swift */,
+			);
+			path = SuggestFieldInteractor;
+			sourceTree = "<group>";
+		};
+		8657936C242A77B300ED0087 /* SuggestFieldServices */ = {
+			isa = PBXGroup;
+			children = (
+				8657935D242A776C00ED0087 /* SuggestFieldModel.swift */,
+				8657935F242A776C00ED0087 /* SuggestFieldManager.swift */,
+			);
+			path = SuggestFieldServices;
+			sourceTree = "<group>";
+		};
+		8657936D242A77BC00ED0087 /* SuggestFieldContract */ = {
+			isa = PBXGroup;
+			children = (
+				86579358242A776C00ED0087 /* SuggestFieldConfiguration.swift */,
+			);
+			path = SuggestFieldContract;
+			sourceTree = "<group>";
+		};
 		866898952407E95500EF366F /* FieldCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3643,6 +3723,7 @@
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
 				861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */,
+				86579366242A776C00ED0087 /* SuggestFieldViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
 				6683E2DF23BCEBD900250702 /* SuggestedFieldsViewController.xib in Resources */,
@@ -3755,6 +3836,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86579362242A776C00ED0087 /* SuggestFieldRouter.swift in Sources */,
+				86579360242A776C00ED0087 /* SuggestFieldConfiguration.swift in Sources */,
 				668C213C23C3F6F700C009A9 /* CommentListsInteractor.swift in Sources */,
 				6663364423B402F7004E537C /* LoginViewController.swift in Sources */,
 				6683E2CB23BCEB8800250702 /* SettingRouter.swift in Sources */,
@@ -3800,6 +3883,7 @@
 				668C213F23C3F6F700C009A9 /* CommentListsManager.swift in Sources */,
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				86DB006923D70B97001E99E8 /* GenderViewController.swift in Sources */,
+				86579364242A776C00ED0087 /* SuggestFieldInteractor.swift in Sources */,
 				864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */,
 				86268A2923F72F1800EFD96B /* SechaduleModel.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
@@ -3834,6 +3918,7 @@
 				667E4B7323C3DCA3007354A7 /* MakeWalletPasswordInteractor.swift in Sources */,
 				668C213D23C3F6F700C009A9 /* CommentListsModel.swift in Sources */,
 				8671347E23CF0BC1009093A0 /* SignupPhoneVerificationEndPoint.swift in Sources */,
+				86579367242A776C00ED0087 /* SuggestFieldManager.swift in Sources */,
 				6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */,
 				667E4B8223C3E169007354A7 /* AddFundRouter.swift in Sources */,
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
@@ -3937,6 +4022,7 @@
 				861D22D923DCAEF5004F16F1 /* GalleryManager.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
 				86E1292E23D49E73007CB956 /* TabBarViewController.swift in Sources */,
+				86579363242A776C00ED0087 /* SuggestFieldViewController.swift in Sources */,
 				668C211B23C3F6C100C009A9 /* CheckOutViewController.swift in Sources */,
 				86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */,
 				860AB7F523F2D177005691C1 /* SocialRouter.swift in Sources */,
@@ -4104,6 +4190,7 @@
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
+				86579365242A776C00ED0087 /* SuggestFieldModel.swift in Sources */,
 				86D8A2FC2406C978007BDA5E /* FilterResultConfiguration.swift in Sources */,
 				668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */,
 				6663365623B40318004E537C /* RegisterInteractor.swift in Sources */,
@@ -4132,6 +4219,7 @@
 				86D8A3032406C978007BDA5E /* FilterResultManager.swift in Sources */,
 				666336A723B40B47004E537C /* ForgotPhoneManager.swift in Sources */,
 				86B14BC823CB4AA500B3FEB1 /* SignupPhoneVerificationInteractor.swift in Sources */,
+				86579361242A776C00ED0087 /* SuggestFieldPresenter.swift in Sources */,
 				86B17CD3240FE3680029FB35 /* SessionResultModel.swift in Sources */,
 				86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */,
 				668C20E523C3F38600C009A9 /* PublicEventsModel.swift in Sources */,

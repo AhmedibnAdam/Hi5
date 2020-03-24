@@ -5,7 +5,11 @@ PODS:
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
+  - GoogleMaps (3.8.0):
+    - GoogleMaps/Maps (= 3.8.0)
   - GoogleMaps/Base (3.8.0)
+  - GoogleMaps/Maps (3.8.0):
+    - GoogleMaps/Base
   - GooglePlaces (3.8.0):
     - GoogleMaps/Base (= 3.8.0)
   - GooglePlacesSearchController (0.2.3)
@@ -23,6 +27,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.9.1)
   - DropDown
   - FlagPhoneNumber
+  - GoogleMaps
   - GooglePlaces
   - GooglePlacesSearchController
   - IQKeyboardManagerSwift
@@ -63,6 +68,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: 11aa885f178d7e126ca1e8a1a8dd28b8d4978e66
+PODFILE CHECKSUM: e324beff6730898f3576751e2cbdf0e9c0db067d
 
 COCOAPODS: 1.8.4

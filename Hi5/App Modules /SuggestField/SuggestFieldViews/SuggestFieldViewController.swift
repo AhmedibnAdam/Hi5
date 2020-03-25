@@ -19,7 +19,7 @@ protocol ISuggestFieldViewController: class {
     func showAlert(title: String, msg: String)
 }
 
-class SuggestFieldViewController: UIViewController , CLLocationManagerDelegate {
+class SuggestFieldViewController: UIViewController , CLLocationManagerDelegate , GMSMapViewDelegate{
 	var interactor: ISuggestFieldInteractor?
 	var router: ISuggestFieldRouter?
     
@@ -43,25 +43,26 @@ class SuggestFieldViewController: UIViewController , CLLocationManagerDelegate {
         super.viewDidLoad()
         setupNavigationBar()
         
+        MapView.isMyLocationEnabled = true
+        MapView.delegate = self
+
+        //Location Manager code to fetch current location
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //Your map initiation code
-        print(lat)
-        print(long)
-        let camera = GMSCameraPosition.camera(withLatitude: lat ?? 24.774265, longitude: long ?? 46.738586, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude) ?? 23.8859, longitude: (locationManager.location?.coordinate.longitude) ?? 45.0792, zoom: 7)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        self.view = mapView
-        self.MapView.isMyLocationEnabled = true
         
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: lat ?? 24.774265, longitude: long ?? 46.738586)
+        marker.position = CLLocationCoordinate2D(latitude: (locationManager.location?.coordinate.latitude) ?? 23.8859, longitude: (locationManager.location?.coordinate.longitude) ?? 45.0792)
         marker.map = mapView
+        MapView.animate(to: camera)
+        //self.view = mapView
     }
     
     //MARK: - Actions
+    @IBAction func saveBtnTapped(_ sender: UIButton) {
+        print("save button tapped....")
+    }
 }
 
 
@@ -74,7 +75,7 @@ extension SuggestFieldViewController: ISuggestFieldViewController {
 
 extension SuggestFieldViewController {
     func setupNavigationBar() {
-        navigationItem.title = "Sugest Field"
+        navigationItem.title = "Suggest Field"
         navigationController?.navigationBar.barTintColor = .systemOrange
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationItem.setLeftBarButton(backBtn, animated: true)
@@ -92,17 +93,9 @@ extension SuggestFieldViewController {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        self.lat = locValue.latitude
-        self.long = locValue.longitude
-        
-        //let location = locations.last
-        let camera = GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude: locValue.longitude, zoom: 17.0)
-
-        self.MapView.animate(to: camera)
-
+        let location = locations.last
+        let camera = GMSCameraPosition.camera(withLatitude: (location?.coordinate.latitude)!, longitude:(location?.coordinate.longitude)!, zoom:14)
+        MapView.animate(to: camera)
         //Finally stop updating location otherwise it will come again and again in this delegate
         self.locationManager.stopUpdatingLocation()
 

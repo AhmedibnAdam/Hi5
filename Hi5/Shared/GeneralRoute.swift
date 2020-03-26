@@ -115,15 +115,12 @@ extension GeneralRoute {
             return FilterConfiguration.setup()
         case .filterResult(let param):
             return FilterResultConfiguration.setup(param: param)
-//        case .sessionResult(let fieldId , let fieldName):
-//            return SessionResultConfiguration.setup(fieldId: fieldId, fieldName: fieldName)
-            
         case .myBooking:
             return MyBookingsConfiguration.setup()
         case .mySechadule:
             return SechaduleConfiguration.setup()
         case .suggestedField:
-            return SuggestedFieldsConfiguration.setup()
+            return SuggestFieldConfiguration.setup()
         }
     }
 }

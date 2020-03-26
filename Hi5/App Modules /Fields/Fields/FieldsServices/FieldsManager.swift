@@ -104,6 +104,12 @@ class FieldsManager: IFieldsManager {
                 let response = responseData
                 do {
                     let decoder = JSONDecoder()
+                    
+//                    let str = self.nsdataToJSON(data: response as NSData)
+//                    print(str)
+//                    print(Asd().x)
+//                    let data = Data(Asd().x.utf8)
+//                    print(data)
                     let user = try decoder.decode(FieldsModel.NearByfieldsResponse.self, from: response)
                     print(user)
                     complition(nil , true , user)
@@ -212,5 +218,14 @@ class FieldsManager: IFieldsManager {
             }
             
         })
+    }
+    
+    func nsdataToJSON(data: NSData) -> AnyObject? {
+        do {
+            return try JSONSerialization.jsonObject(with: data as Data, options: .mutableContainers) as AnyObject
+        } catch let myJSONError {
+            print(myJSONError)
+        }
+        return nil
     }
 }

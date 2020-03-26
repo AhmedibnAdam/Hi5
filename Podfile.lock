@@ -5,17 +5,18 @@ PODS:
   - FlagPhoneNumber (0.8.0):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.8.0)
   - FlagPhoneNumber/libPhoneNumberiOS (0.8.0)
-  - GoogleMaps/Base (3.7.0)
-  - GooglePlaces (3.7.0):
-    - GoogleMaps/Base (= 3.7.0)
+  - GoogleMaps (3.8.0):
+    - GoogleMaps/Maps (= 3.8.0)
+  - GoogleMaps/Base (3.8.0)
+  - GoogleMaps/Maps (3.8.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.8.0):
+    - GoogleMaps/Base (= 3.8.0)
   - GooglePlacesSearchController (0.2.3)
-  - ImageSlideshow (1.8.3):
-    - ImageSlideshow/Core (= 1.8.3)
-  - ImageSlideshow/Core (1.8.3)
   - IQKeyboardManagerSwift (6.5.5)
-  - Kingfisher (5.13.0):
-    - Kingfisher/Core (= 5.13.0)
-  - Kingfisher/Core (5.13.0)
+  - Kingfisher (5.13.1):
+    - Kingfisher/Core (= 5.13.1)
+  - Kingfisher/Core (5.13.1)
   - LUExpandableTableView (5.0.0)
   - SideMenu (6.4.7)
   - SwiftyJSON (5.0.0)
@@ -26,9 +27,9 @@ DEPENDENCIES:
   - Alamofire (~> 4.9.1)
   - DropDown
   - FlagPhoneNumber
+  - GoogleMaps
   - GooglePlaces
   - GooglePlacesSearchController
-  - ImageSlideshow
   - IQKeyboardManagerSwift
   - Kingfisher
   - LUExpandableTableView
@@ -45,7 +46,6 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - GooglePlacesSearchController
-    - ImageSlideshow
     - IQKeyboardManagerSwift
     - Kingfisher
     - LUExpandableTableView
@@ -58,17 +58,16 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FlagPhoneNumber: 3712455b95f66cb0f2016fef7d9e34cddf8c7f9a
-  GoogleMaps: 55da829c68aa931f3ae982b9e341cc2f3d89c587
-  GooglePlaces: a62077320f9d64239245af63aa1aa136393ebeb6
+  GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
+  GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
   GooglePlacesSearchController: f8c7da8c3bf0bcf901c5873c22fda7db5fbfc15e
-  ImageSlideshow: 4694d7d699a1549582e7cc631fb392d8f91630f3
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
-  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   LUExpandableTableView: 710ed7e7d55d0b58d61c95561bd9ecbf39692010
   SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: 55c1cd85da3bc921b92ba1593577705f18ba2f8c
+PODFILE CHECKSUM: e324beff6730898f3576751e2cbdf0e9c0db067d
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.8.4

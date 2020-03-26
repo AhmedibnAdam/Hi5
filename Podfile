@@ -1,6 +1,3 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
 platform :ios, '10.0'
 
 target 'Hi5' do
@@ -22,7 +19,7 @@ target 'Hi5' do
      pod 'GooglePlacesSearchController'
      pod 'Kingfisher'
      pod 'TTRangeSlider'
-     pod 'ImageSlideshow'
+     pod 'GoogleMaps'
   #   pod 'SWRevealViewController'
 
 end

@@ -14,12 +14,10 @@ protocol ISideMenuRouter: class {
 	func navigatetoProfile()
     func navigateToFields()
     func navigateToLogin()
-    func navigateToMyBookings()
+    func navigateToSuggestField()
 }
 
-class SideMenuRouter: ISideMenuRouter {
-  
-    
+class SideMenuRouter: ISideMenuRouter {	
 	weak var view: SideMenuViewController?
 	
 	init(view: SideMenuViewController?) {
@@ -34,7 +32,7 @@ class SideMenuRouter: ISideMenuRouter {
     func navigateToLogin() {
         view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
     }
-    func navigateToMyBookings() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.myBooking, completion: nil)
-      }
+    func navigateToSuggestField() {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.suggestField, completion: nil)
+    }
 }

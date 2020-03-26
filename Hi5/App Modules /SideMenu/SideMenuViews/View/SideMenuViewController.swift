@@ -165,6 +165,7 @@ extension SideMenuViewController {
         } else if(indexPath.row == 4){
             print("wallet...")
         } else if(indexPath.row == 5){
+            router?.navigateToSuggestField()
             print("Suggest Field...")
         } else if(indexPath.row == 6){
             print("Setting....")

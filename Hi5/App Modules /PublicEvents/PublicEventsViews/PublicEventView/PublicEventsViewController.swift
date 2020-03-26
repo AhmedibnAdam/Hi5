@@ -10,7 +10,6 @@
 
 import UIKit
 import Kingfisher
-import ImageSlideshow
 
 
 protocol IPublicEventsViewController: class {
@@ -41,12 +40,7 @@ class PublicEventsViewController: UIViewController {
     var dayIsSelected = Array(repeating: false, count: 14)
     var sliderLableP = UILabel()
 
-    
-    let localSource = [BundleImageSource(imageString: "ballinpitch"), BundleImageSource(imageString: "field"), BundleImageSource(imageString: "stadium"), BundleImageSource(imageString: "nofavouritefields")]
-   
-//    let alamofireSource = [AlamofireSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, AlamofireSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
-    
-//    let kingfisherSource = [KingfisherSource(urlString: "https://images.unsplash.com/photo-1432679963831-2dab49187847?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1447746249824-4be4e1b76d66?w=1080")!, KingfisherSource(urlString: "https://images.unsplash.com/photo-1463595373836-6e0b0a8ee322?w=1080")!]
+
 
 
     
@@ -55,7 +49,7 @@ class PublicEventsViewController: UIViewController {
     
     //MARK:-OUTLETS
     
-    @IBOutlet weak var slideshow: UIView!
+    @IBOutlet weak var slider: SliderView!
     @IBOutlet weak var headerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     @IBOutlet weak var subCollectionView: UICollectionView!
@@ -69,42 +63,25 @@ class PublicEventsViewController: UIViewController {
     //MARK:-viewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUP()
+      
         
         setUpUI()
         configure()
+ 
     }
     override func viewWillAppear(_ animated: Bool){
        getFilteredPublicEvent()
+          setUP()
     }
     
-    var slider = ImageSlideshow()
     func setUP(){
-        slider.slideshowInterval = 5.0
-        slider.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
-        slider.contentScaleMode = UIViewContentMode.scaleAspectFill
-        let pageControl = UIPageControl()
-        pageControl.currentPageIndicatorTintColor = UIColor.lightGray
-        pageControl.pageIndicatorTintColor = UIColor.black
-        slider.pageIndicator = pageControl
-        
-        // optional way to show activity indicator during image load (skipping the line will show no activity indicator)
-        slider.activityIndicator = DefaultActivityIndicator()
-        slider.delegate = self
-        
-        // can be used with other sample sources as `afNetworkingSource`, `alamofireSource` or `sdWebImageSource` or `kingfisherSource`
-        slider.setImageInputs(localSource)
-        
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.didTap))
-        slider.addGestureRecognizer(recognizer)
-        self.slideshow.addSubview(slider)
+     let images = ["ballinpitch", "ballinpitch", "ballinpitch", "ballinpitch"]
+       let imagesList = images.map{UIImage(named: $0)!}
+       
+       slider.list = imagesList
+//        self.slider.addSubview(sliderView)
     }
 
-        @objc func didTap() {
-            let fullScreenController = slider.presentFullScreenController(from: self)
-            // set the activity indicator for full screen controller (skipping the line will show no activity indicator)
-            fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
-        }
     
         //MARK:- setUp UI
     func setUpUI(){
@@ -317,8 +294,4 @@ extension PublicEventsViewController {
         }
     }
 }
-extension PublicEventsViewController: ImageSlideshowDelegate {
-    func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
-        print("current page:", page)
-    }
-}
+

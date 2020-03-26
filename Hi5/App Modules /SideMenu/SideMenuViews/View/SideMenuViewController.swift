@@ -43,6 +43,7 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
+          initView()
         let defaults = UserDefaults.standard
         if let data = defaults.object(forKey: "image") as? Data {
             let image = UIImage(data: data)
@@ -64,24 +65,26 @@ extension SideMenuViewController: ISideMenuViewController {
 extension SideMenuViewController {
     func initView(){
         
-        let device =  UIDevice().name
+        let device =  UIDevice().model
         
         
         switch device {
+        case "iPhone":
+            plusHeight()
         case "iPhone 8 Plus":
-            largeHeight()
+            smallHeight()
         case "iPhone 8":
             smallHeight()
         case "iPhone 7 Plus":
-            largeHeight()
-        case "iPhone 7":
             smallHeight()
+        case "iPhone 7":
+           smallHeight()
         case "iPhone 6 Plus":
-            largeHeight()
+          smallHeight()
         case "iPhone 6":
             smallHeight()
         case "iPhone X":
-            largeHeight()
+            smallHeight()
         case "iPhone XS":
             largeHeight()
         case "iPhone XS Max":
@@ -95,7 +98,7 @@ extension SideMenuViewController {
         case "iPhone 11 Pro Max":
             largeHeight()
         default:
-            largeHeight()
+            plusHeight()
         }
         
         // self.tableView.frame.size.height = CGFloat(height)
@@ -103,6 +106,11 @@ extension SideMenuViewController {
     
     func smallHeight(){
         height = 540.0
+        self.tableView.frame.size.height = CGFloat(height)
+        tableHeight.constant = CGFloat(height)
+    }
+    func plusHeight(){
+        height = 540.0 + 50
         self.tableView.frame.size.height = CGFloat(height)
         tableHeight.constant = CGFloat(height)
     }
@@ -158,6 +166,7 @@ extension SideMenuViewController {
             print("Friends")
         } else if(indexPath.row == 1){
             print("My Schedule..")
+            router?.navigateToSechadule()
         } else if(indexPath.row == 2){
             router?.navigateToMyBookings()
         } else if(indexPath.row == 3){
@@ -166,6 +175,7 @@ extension SideMenuViewController {
             print("wallet...")
         } else if(indexPath.row == 5){
             print("Suggest Field...")
+            router?.navigateToSuggestedField()
         } else if(indexPath.row == 6){
             print("Setting....")
         } else if(indexPath.row == 7){

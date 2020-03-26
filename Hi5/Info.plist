@@ -43,11 +43,13 @@
 		</dict>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>App needs Location</string>
+	<string>Allow Hi5 to get you Location to get best service</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>App needs Location</string>
+	<string>Allow Hi5 to get you Location to get best service</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow Hi5 to get you Location to get best service</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App needs Location</string>
+	<string>Allow Hi5 to get you Location to get best service</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

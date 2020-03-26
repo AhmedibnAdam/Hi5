@@ -13,7 +13,7 @@ import CoreLocation
 import Kingfisher
 
 protocol IFieldsViewController: class {
-	var router: IFieldsRouter? { get set }
+    var router: IFieldsRouter? { get set }
     func showAlert(title: String, msg: String)
     func showResponse(response: FieldsModel.NearByfieldsResponse)
     func showFavorites(response: FieldsModel.FavoriteFieldsResponse)
@@ -29,11 +29,13 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     var nearByField = [FieldsModel.NearByfieldsResponseField]()
     var favoriteFields = [FieldsModel.FavoriteField]()
     var memberOfFields = [FieldsModel.MemberShipField]()
-    var locManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     var types = ["Nearby","Favourites","Member of"]
-	var interactor: IFieldsInteractor?
-	var router: IFieldsRouter?
+    var interactor: IFieldsInteractor?
+    var router: IFieldsRouter?
+    var lat: Double?
+    var long: Double?
     var fieldsCount = 0
     var fieldsTabType = 0  // nearBy = 0 / favorite = 1 / member of = 2
     var firstTimeIn = 0
@@ -51,12 +53,11 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - viewLifeCycle
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
         initView()
         //configer()
-        getCurrentLocation()
+        
         setupNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -66,32 +67,67 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         registerTableCell()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getCurrentLocation()
+          alert()
+        
+    }
     func getCurrentLocation() {
-        locManager.requestAlwaysAuthorization()
-
-        if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse ||
-            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedAlways){
-            //print(locManager.location)
-            guard let currentLocation = locManager.location else {
-                return
+        locationManager.delegate = self
+        
+        // For use when the app is open
+        locationManager.requestWhenInUseAuthorization()
+        
+        // If location services is enabled get the users location
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // You can change the locaiton accuary here.
+        locationManager.startUpdatingLocation()
+        
+        var latitude: Double? {
+            if let text = lat {
+                return Double(text)
+            } else {
+                return nil
             }
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
+        }
+        
+        var longitude: Double? {
+            if let text = long {
+                return Double(text)
+            } else {
+                return nil
+            }
         }
     }
 }
 
 //MARK: - Extensions
 extension FieldsViewController: IFieldsViewController {
-
-     func showAlert(title: String, msg: String) {
-      ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+    
+    func checkCount(){
+        if self.fieldsCount != 0 {
+            showTableView()
+        }
+        else{
+            hideTableView()
+        }
+    }
+    func showTableView(){
+        tableView.isHidden = false
+    }
+    func hideTableView(){
+        tableView.isHidden = true
+    }
+    
+    func showAlert(title: String, msg: String) {
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     
     func showResponse(response: FieldsModel.NearByfieldsResponse){
         guard let field = response.fields else {return}
         self.nearByField = field
         self.fieldsCount = field.count
+        checkCount()
         fieldsTabType = 0
         self.tableView.reloadData()
     }
@@ -100,6 +136,7 @@ extension FieldsViewController: IFieldsViewController {
         guard let fields = response.fields else {return}
         self.favoriteFields = fields
         self.fieldsCount = fields.count
+        checkCount()
         fieldsTabType = 1
         self.tableView.reloadData()
     }
@@ -107,60 +144,60 @@ extension FieldsViewController: IFieldsViewController {
         guard let fields = response.fields else {return}
         self.memberOfFields = fields
         self.fieldsCount = fields.count
+        checkCount()
         fieldsTabType = 2
         self.tableView.reloadData()
     }
     
     func removeNoFavouriteFields() {
-        noFavouriteFieldsImg.isHidden = true
-        noFavouriteFieldsLbl.isHidden = true
+//        noFavouriteFieldsImg.isHidden = true
+//        noFavouriteFieldsLbl.isHidden = true
     }
     
     func showNoFavouriteFields() {
-        noFavouriteFieldsImg.isHidden = false
-        noFavouriteFieldsLbl.isHidden = false
+        tableView.reloadData()
         noFavouriteFieldsLbl.text = "You don't have favourite fields"
     }
     
     func removeNoMemberFields() {
-        noFavouriteFieldsImg.isHidden = true
-        noFavouriteFieldsLbl.isHidden = true
+//        noFavouriteFieldsImg.isHidden = true
+//        noFavouriteFieldsLbl.isHidden = true
     }
     
     func showNoMemberOfFields() {
-        noFavouriteFieldsImg.isHidden = false
-        noFavouriteFieldsLbl.isHidden = false
+//        noFavouriteFieldsImg.isHidden = false
+//        noFavouriteFieldsLbl.isHidden = false
         noFavouriteFieldsLbl.text = "You have no fields where you would be a member or sent requests"
     }
 }
 
 //MARK: - topCollectionView
 extension FieldsViewController {
-        func registerCollectionCell() {
-            let cell = UINib(nibName: "TypeCollectionViewCell", bundle: nil)
-            collectionView.register(cell, forCellWithReuseIdentifier: "typeCell")
+    func registerCollectionCell() {
+        let cell = UINib(nibName: "TypeCollectionViewCell", bundle: nil)
+        collectionView.register(cell, forCellWithReuseIdentifier: "typeCell")
     }
-	    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-                return types.count
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return types.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let type = types[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "typeCell", for: indexPath) as! TypeCollectionViewCell
+        let type = types[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "typeCell", for: indexPath) as! TypeCollectionViewCell
         if firstTimeIn ==  0 {
-                if indexPath.row == 0{
-                    cell.typeLbl.textColor = .orange
-                    cell.hightLightVieww.isHidden = false
-                    firstTimeIn += 1
-                }
+            if indexPath.row == 0{
+                cell.typeLbl.textColor = .orange
+                cell.hightLightVieww.isHidden = false
+                firstTimeIn += 1
             }
-            cell.typeLbl.text = type
-            return cell
+        }
+        cell.typeLbl.text = type
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = collectionView.frame.width / 3
-            let height = collectionView.frame.height
-            return CGSize(width: width, height: height)
+        let width = collectionView.frame.width / 3
+        let height = collectionView.frame.height
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -170,14 +207,14 @@ extension FieldsViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
         let firstCellIndexPath = IndexPath(item: 0, section: 0)
-               let firstCell = collectionView.cellForItem(at: firstCellIndexPath) as!TypeCollectionViewCell
-               firstCell.typeLbl.textColor = .lightGray
-               firstCell.hightLightVieww.isHidden = true
-            let cell = collectionView.cellForItem(at: indexPath) as! TypeCollectionViewCell
-            cell.typeLbl.textColor = .orange
-            cell.hightLightVieww.isHidden = false
+        let firstCell = collectionView.cellForItem(at: firstCellIndexPath) as!TypeCollectionViewCell
+        firstCell.typeLbl.textColor = .lightGray
+        firstCell.hightLightVieww.isHidden = true
+        let cell = collectionView.cellForItem(at: indexPath) as! TypeCollectionViewCell
+        cell.typeLbl.textColor = .orange
+        cell.hightLightVieww.isHidden = false
         if (indexPath.row == 0) {
             alert()
         } else if (indexPath.row == 1){
@@ -189,13 +226,13 @@ extension FieldsViewController {
 }
 
 //MARK: - initializer
-extension FieldsViewController {
+extension FieldsViewController: CLLocationManagerDelegate {
     func initView(){
-
+        
     }
-
+    
     func configer(){
-       router = FieldsRouter(view: self)
+        router = FieldsRouter(view: self)
     }
     func setupNavigationBar() {
         navigationItem.title = "Fields"
@@ -219,10 +256,10 @@ extension FieldsViewController {
     func alert() {
         let alert = UIAlertController(title: "Your location", message: "High five Players app would like to use your current loccation to search fields near you.Do you agree?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .default) { (x) in
-            self.interactor?.nearBy(view: self, lon: 31.276941, lat: 29.962696)
+            self.interactor?.nearBy(view: self, lon: self.long ?? 31.45445, lat: self.lat ?? 29.54646)
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (y) in
-            self.removeNoFavouriteFields()
+        //    self.removeNoFavouriteFields()
             self.removeNoMemberFields()
         }
         
@@ -230,7 +267,27 @@ extension FieldsViewController {
         alert.addAction(ok)
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    // Print out the location to the console
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            //print(location.coordinate.latitude)
+            self.lat = location.coordinate.latitude
+            self.long = location.coordinate.longitude
+        }
+    }
+    
+    // If we have been deined access give the user the option to change it
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if(status == CLAuthorizationStatus.denied) {
+            print(status)
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("\(error.localizedDescription)")
+    }
+    
+    
 }
 
 //MARK: - tableView
@@ -244,6 +301,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
+        cell.delegate = self
         if self.fieldsTabType == 0 {
             let nearFields = nearByField[indexPath.row]
             cell.namelbl.text = nearFields.name
@@ -300,6 +358,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         else if self.fieldsTabType == 1 {
             let favorFields = favoriteFields[indexPath.row]
             cell.namelbl.text = favorFields.name
+             cell.partner.text = favorFields.name
             cell.locationLbl.text = favorFields.address
             cell.commentLbl.text = String(favorFields.comments ?? 0)
             cell.rateLbl.text = String(favorFields.rating ?? 0)
@@ -333,19 +392,20 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
                 }
             }
             if let image = favorFields.fieldImage {
-                        let url = URL(string: image)
-                        DispatchQueue.global().async {
-                            if let data = try? Data(contentsOf: url!){
-                                DispatchQueue.main.async {
-                                    cell.fieldImg.image = UIImage(data: data)
-                                }
-                            }
+                let url = URL(string: image)
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url!){
+                        DispatchQueue.main.async {
+                            cell.fieldImg.image = UIImage(data: data)
                         }
                     }
+                }
+            }
         }
         else {
             let memberFields = memberOfFields[indexPath.row]
             cell.namelbl.text = memberFields.name
+            cell.partner.text = memberFields.name
             cell.locationLbl.text = memberFields.address
             cell.commentLbl.text = String(memberFields.comments ?? 0)
             cell.rateLbl.text = String(memberFields.rating ?? 0)
@@ -355,11 +415,11 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             cell.companyName.text = memberFields.partnerName
             cell.visabilityButton.isHidden = false
             cell.fieldId = memberFields.id
-              if (memberFields.favourite == true){
-                          cell.favouriteBtn.setImage(UIImage(named: "favFill"), for: .normal)
-                      } else {
-                          cell.favouriteBtn.setImage(UIImage(named: "fav"), for: .normal)
-                      }
+            if (memberFields.favourite == true){
+                cell.favouriteBtn.setImage(UIImage(named: "favFill"), for: .normal)
+            } else {
+                cell.favouriteBtn.setImage(UIImage(named: "fav"), for: .normal)
+            }
             if let cost = memberFields.cost {
                 cell.costLbl.text = "\(String(describing: cost))"
             }
@@ -378,38 +438,51 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
                 }
             }
             if let image = memberFields.fieldImage {
-                        let url = URL(string: image)
-                        DispatchQueue.global().async {
-                            if let data = try? Data(contentsOf: url!){
-                                DispatchQueue.main.async {
-                                    cell.fieldImg.image = UIImage(data: data)
-                                }
-                            }
+                let url = URL(string: image)
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url!){
+                        DispatchQueue.main.async {
+                            cell.fieldImg.image = UIImage(data: data)
                         }
                     }
+                }
+            }
         }
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("\(field.id!)..........")
+        //        print("\(field.id!)..........")
+        if self.fieldsTabType == 0 {
             let nearFields = nearByField[indexPath.row]
-            router?.navigateToShowdetails(field: nearFields)
+            router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
+        }
+        else  if self.fieldsTabType == 1{
+            let nearFields = favoriteFields[indexPath.row]
+            router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
+        }
+        else{
+            let nearFields = memberOfFields[indexPath.row]
+            router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
+        }
+        
     }
 }
 
 extension FieldsViewController: FavouriteTableViewCellDelegate {
     func addFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
         self.interactor?.addFavourite(view: self, fieldId: id)
+        
     }
     func removeFavouriteDidTap(_ button: UIButton, cell: UITableViewCell , id: Int) {
         self.interactor?.removeFavourite(view: self, fieldId: id)
+        self.interactor?.favourite(view: self)
     }
 }
 
 extension FieldsViewController: ShowDetailsTableViewCellDelegate {
     func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, field: FieldsModel.NearByfieldsResponseField) {
         print("\(field.id!)..........")
-        router?.navigateToShowdetails(field: field)
+        router?.navigateToShowdetails(field_id: "\(field.id ?? 0)")
     }
 }
 

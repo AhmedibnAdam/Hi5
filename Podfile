@@ -11,18 +11,19 @@ target 'Hi5' do
      pod 'LUExpandableTableView'
      pod 'IQKeyboardManagerSwift'
      pod 'Alamofire', '~> 4.9.1'
-  #   pod 'BTHorizontalPageableView'
-  #   pod 'YSSegmentedControl'
+
      pod 'SideMenu'
      pod 'SwiftyJSON'
      pod 'DropDown'
      pod 'FlagPhoneNumber'
      pod 'ActionSheetPicker-3.0'
-     pod 'GooglePlaces'
-     pod 'GooglePlacesSearchController'
+     
+
      pod 'Kingfisher'
      pod 'TTRangeSlider'
-     pod 'ImageSlideshow'
-  #   pod 'SWRevealViewController'
 
+     pod 'GoogleMaps'
+     pod 'GooglePlaces'
+     pod 'GooglePlacesSearchController'
+     
 end

@@ -27,25 +27,32 @@ struct PublicEventsModel {
     struct PublicEvent: Codable {
         let id, fieldName: String?
         let fieldImage: String?
-        let partnerName: String?
+        let bestFor, address, partnerName: String?
         let partnerImage: String?
-        let playersNumber, joinedNumber: Int?
-        let cost, date, dateFormat, time: String?
-        let sportType, status, age: String?
-        
+        let playersNumber, joinedCount: Int?
+        let cost, gender, day, date: String?
+        let startTime, endTime, sportType, groupName: String?
+        let age: Int?
+        let payment: String?
+        let points: Int?
+
         enum CodingKeys: String, CodingKey {
             case id
             case fieldName = "field_name"
             case fieldImage = "field_image"
+            case bestFor = "best_for"
+            case address
             case partnerName = "partner_name"
             case partnerImage = "partner_image"
             case playersNumber = "players_number"
-            case joinedNumber = "joined_number"
-            case cost, date
-            case dateFormat = "date_format"
-            case time
+            case joinedCount = "joined_count"
+            case cost, gender, day, date
+            case startTime = "start_time"
+            case endTime = "end_time"
             case sportType = "sport_type"
-            case status, age
+            case groupName = "group_name"
+            case age, payment, points
         }
     }
+
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SechaduleViewController" customModule="Hi5" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="rAx-co-srf" id="uPa-er-5Xl"/>
+                <outlet property="tableView" destination="lRz-0g-Vaj" id="E8g-tY-ctw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="XNv-8H-lBC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nofavouritefields" id="SXA-rF-Hrx">
+                    <rect key="frame" x="135" y="299" width="105" height="69"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LTM-Lu-Y2C">
+                    <rect key="frame" x="166" y="323" width="42" height="20.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rAx-co-srf">
+                    <rect key="frame" x="20" y="10" width="335" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="rpw-oZ-bHT"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pmQ-nQ-1Pw">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BTI-jG-rEn"/>
+                        <outlet property="delegate" destination="-1" id="7X8-kI-l7l"/>
+                    </connections>
+                </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRz-0g-Vaj">
+                    <rect key="frame" x="5" y="60" width="365" height="578"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="x4c-hn-9cf"/>
+                        <outlet property="delegate" destination="-1" id="VrL-zl-sAY"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rAx-co-srf" secondAttribute="trailing" constant="20" id="1aG-aV-ZWv"/>
+                <constraint firstItem="rAx-co-srf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="947-Tf-t2p"/>
+                <constraint firstItem="lRz-0g-Vaj" firstAttribute="top" secondItem="rAx-co-srf" secondAttribute="bottom" constant="10" id="IJk-a7-TF4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lRz-0g-Vaj" secondAttribute="bottom" constant="29" id="IYP-ES-NER"/>
+                <constraint firstItem="lRz-0g-Vaj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="ezg-4h-Pap"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lRz-0g-Vaj" secondAttribute="trailing" constant="5" id="fcQ-oo-e8o"/>
+                <constraint firstItem="rAx-co-srf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="ijL-CY-FgJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nofavouritefields" width="105" height="69"/>
+    </resources>
+</document>

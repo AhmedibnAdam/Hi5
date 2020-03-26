@@ -12,9 +12,9 @@ import Foundation
 import UIKit
 
 class ShowDetailsConfiguration {
-    static func setup(parameters: [String: Any] = [:] , field: FieldsModel.NearByfieldsResponseField) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:] , field: String) -> UIViewController {
         let controller = ShowDetailsViewController()
-        controller.field = field
+        controller.field_id = field
         let router = ShowDetailsRouter(view: controller)
         let presenter = ShowDetailsPresenter(view: controller)
         let manager = ShowDetailsManager()

@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ISechaduleRouter: class {
-	// do someting...
+	func navigateToTabBar()
 }
 
 class SechaduleRouter: ISechaduleRouter {	
@@ -20,4 +20,7 @@ class SechaduleRouter: ISechaduleRouter {
 	init(view: SechaduleViewController?) {
 		self.view = view
 	}
+    func navigateToTabBar() {
+            view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
+        }
 }

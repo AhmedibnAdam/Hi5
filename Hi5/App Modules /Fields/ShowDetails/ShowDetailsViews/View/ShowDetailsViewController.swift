@@ -13,16 +13,16 @@ import UIKit
 protocol IShowDetailsViewController: class {
 	var router: IShowDetailsRouter? { get set }
     func showAlert(title: String, msg: String)
-    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse)
+    func showDetailsResponse(response: ShowDetailsModel.FieldDetails)
 }
 
-class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout  {
+class ShowDetailsViewController: UIViewController   {
     //MARK: - Properties
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
     var field: FieldsModel.NearByfieldsResponseField?
-    var services = [ShowDetailsModel.Service]()
-    
+    var services = [ShowDetailsModel.FieldDetailsService]()
+    var field_id: String?
     //MARK: - Outlets
     @IBOutlet weak var statusStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -51,15 +51,15 @@ class ShowDetailsViewController: UIViewController , UICollectionViewDelegate , U
     //MARK: - View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        registerCollectionCell()
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        registerCollectionCell()
         initView()
         configer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let id = field?.id {
+        if let id = field_id{
             self.interactor?.showDetails(view: self, fieldId: id)
         } else {
             showAlert(title: "Error", msg: "SomeThing Wrong")
@@ -104,7 +104,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     //MARK:  showDetailsResponse
-    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse) {
+    func showDetailsResponse(response: ShowDetailsModel.FieldDetails) {
         guard let field = response.field else {return}
         fieldName.text = field.name
         commentLbl.text = "\(String(describing: field.comments ?? 0))"
@@ -175,36 +175,36 @@ extension ShowDetailsViewController: IShowDetailsViewController {
 //MARK: - CollectionViewMethods
 extension ShowDetailsViewController{
     
-    func registerCollectionCell() {
-        let cell = UINib(nibName: "ServicesCell", bundle: nil)
-        collectionView.register(cell, forCellWithReuseIdentifier: "ServicesCell")
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return services.count
-    }
-    
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath)// as! ServicesCell
-     //   cell.serviceLbl.text = services[indexPath.row].name
-        if let serviceImg = services[indexPath.row].image {
-            let url = URL(string: serviceImg)
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url!) {
-                    DispatchQueue.main.async {
-              //          cell.serviceimg.image = UIImage(data: data)
-                    }
-                }
-            }
-        }
-            return cell
-       }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-               let width = collectionView.frame.width / 4
-               let height = collectionView.frame.height
-               return CGSize(width: width, height: height)
-       }
+//    func registerCollectionCell() {
+//        let cell = UINib(nibName: "ServicesCell", bundle: nil)
+//        collectionView.register(cell, forCellWithReuseIdentifier: "ServicesCell")
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return services.count
+//    }
+//
+//     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath)// as! ServicesCell
+//     //   cell.serviceLbl.text = services[indexPath.row].name
+//        if let serviceImg = services[indexPath.row].image {
+//            let url = URL(string: serviceImg)
+//            DispatchQueue.global().async {
+//                if let data = try? Data(contentsOf: url!) {
+//                    DispatchQueue.main.async {
+//              //          cell.serviceimg.image = UIImage(data: data)
+//                    }
+//                }
+//            }
+//        }
+//            return cell
+//       }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//               let width = collectionView.frame.width / 4
+//               let height = collectionView.frame.height
+//               return CGSize(width: width, height: height)
+//       }
 }
 
 extension ShowDetailsViewController {

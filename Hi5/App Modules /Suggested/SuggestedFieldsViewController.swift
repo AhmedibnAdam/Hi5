@@ -9,18 +9,21 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 protocol ISuggestedFieldsViewController: class {
 	var router: ISuggestedFieldsRouter? { get set }
 }
 
 class SuggestedFieldsViewController: UIViewController {
-	var interactor: ISuggestedFieldsInteractor?
-	var router: ISuggestedFieldsRouter?
+    var interactor: ISuggestedFieldsInteractor?
+    var router: ISuggestedFieldsRouter?
+    
 
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-		// do someting...
+
     }
 }
 

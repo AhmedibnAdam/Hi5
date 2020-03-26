@@ -11,13 +11,36 @@
 import UIKit
 
 protocol ISechadulePresenter: class {
-	// do someting...
+       func showAlert(title: String, msg: String)
+    func showUpCommingSechadule(response: SechaduleModel.SechaduleSessions)
+    func showPastSechadule(response: SechaduleModel.PastSechaduleResponse)
+    func showCancledSechadule(response: SechaduleModel.CanceledSechaduleResponse)
+
 }
 
-class SechadulePresenter: ISechadulePresenter {	
+class SechadulePresenter: ISechadulePresenter {
+
+  
 	weak var view: ISechaduleViewController?
 	
 	init(view: ISechaduleViewController?) {
 		self.view = view
 	}
+    
+    func showAlert(title: String, msg: String) {
+           view?.showAlert(title: title, msg: msg)
+    }
+    
+    func showUpCommingSechadule(response: SechaduleModel.SechaduleSessions) {
+           view?.showUpCommingSechadule(response: response)
+    }
+    
+    func showPastSechadule(response: SechaduleModel.PastSechaduleResponse) {
+        view?.showPastSechadule(response: response)
+    }
+    
+    func showCancledSechadule(response: SechaduleModel.CanceledSechaduleResponse) {
+         view?.showCancledSechadule(response: response)
+    }
+    
 }

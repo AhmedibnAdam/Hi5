@@ -57,7 +57,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDay = dateFormatter.string(from: selectDay)
         if let currentDay = selectedDay {
-            parameter["date"] = currentDay
+            parameter["date"] = "2020-03-05"//currentDay
             showIndicator()
             removeNoFields()
                 interactor?.filterSession(view: self, parameter: parameter)

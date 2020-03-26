@@ -10,8 +10,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="aoi-Ll-dAu" id="2sg-uq-iSw"/>
-                <outlet property="noFavouriteFieldsImg" destination="nlu-z2-vbr" id="KNH-JT-r5p"/>
-                <outlet property="noFavouriteFieldsLbl" destination="60u-6x-3SU" id="Y71-A0-QWo"/>
                 <outlet property="tableView" destination="Dyf-PC-Ms3" id="BVf-w9-v7u"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,6 +22,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcQ-pS-Ima">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hdZ-MF-KnB">
+                            <rect key="frame" x="124.5" y="289" width="126" height="89.5"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nofavouritefields" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-z2-vbr">
+                                    <rect key="frame" x="0.0" y="0.0" width="126" height="69"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="126" id="Frl-g3-PEa"/>
+                                        <constraint firstAttribute="height" constant="69" id="YPd-zY-3Bq"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No fields founed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60u-6x-3SU">
+                                    <rect key="frame" x="0.0" y="69" width="126" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-Ll-dAu">
                             <rect key="frame" x="20" y="10" width="335" height="40"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -41,29 +57,18 @@
                             <rect key="frame" x="5" y="50" width="365" height="617"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
-                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nofavouritefields" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-z2-vbr">
-                            <rect key="frame" x="135" y="299" width="105" height="69"/>
-                        </imageView>
-                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60u-6x-3SU">
-                            <rect key="frame" x="166.5" y="323.5" width="42" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="hdZ-MF-KnB" firstAttribute="centerY" secondItem="xcQ-pS-Ima" secondAttribute="centerY" id="3PJ-05-DzX"/>
                         <constraint firstAttribute="trailing" secondItem="Dyf-PC-Ms3" secondAttribute="trailing" constant="5" id="3wH-eq-IKU"/>
                         <constraint firstAttribute="trailing" secondItem="aoi-Ll-dAu" secondAttribute="trailing" constant="20" id="9cf-cC-uuG"/>
-                        <constraint firstItem="nlu-z2-vbr" firstAttribute="centerX" secondItem="xcQ-pS-Ima" secondAttribute="centerX" id="EIK-wD-elH"/>
-                        <constraint firstItem="60u-6x-3SU" firstAttribute="centerX" secondItem="xcQ-pS-Ima" secondAttribute="centerX" id="FaB-Ds-xVv"/>
                         <constraint firstItem="aoi-Ll-dAu" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="20" id="GQc-Ru-MFO"/>
                         <constraint firstItem="Dyf-PC-Ms3" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="5" id="N0Y-ei-FhZ"/>
                         <constraint firstItem="Dyf-PC-Ms3" firstAttribute="top" secondItem="aoi-Ll-dAu" secondAttribute="bottom" id="RGi-kD-zvb"/>
                         <constraint firstItem="aoi-Ll-dAu" firstAttribute="top" secondItem="xcQ-pS-Ima" secondAttribute="top" constant="10" id="bGa-IP-Cy2"/>
                         <constraint firstAttribute="bottom" secondItem="Dyf-PC-Ms3" secondAttribute="bottom" id="g2S-Uz-ZB1"/>
-                        <constraint firstItem="60u-6x-3SU" firstAttribute="centerY" secondItem="xcQ-pS-Ima" secondAttribute="centerY" id="w6n-ov-rZf"/>
-                        <constraint firstItem="nlu-z2-vbr" firstAttribute="centerY" secondItem="xcQ-pS-Ima" secondAttribute="centerY" id="w8l-8c-JVT"/>
+                        <constraint firstItem="hdZ-MF-KnB" firstAttribute="centerX" secondItem="xcQ-pS-Ima" secondAttribute="centerX" id="uEU-nY-r78"/>
                     </constraints>
                 </view>
             </subviews>

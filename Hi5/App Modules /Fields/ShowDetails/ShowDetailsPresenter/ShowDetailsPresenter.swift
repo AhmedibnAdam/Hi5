@@ -12,7 +12,7 @@ import UIKit
 
 protocol IShowDetailsPresenter: class {
     func showErrorAlert(title: String, msg: String)
-    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse)
+    func showDetailsResponse(response: ShowDetailsModel.FieldDetails)
 }
 
 class ShowDetailsPresenter: IShowDetailsPresenter {
@@ -24,7 +24,7 @@ class ShowDetailsPresenter: IShowDetailsPresenter {
     func showErrorAlert(title: String, msg: String) {
         view?.showAlert(title: title, msg: msg)
     }
-    func showDetailsResponse(response: ShowDetailsModel.ShowDetailsResponse) {
+    func showDetailsResponse(response: ShowDetailsModel.FieldDetails) {
         view?.showDetailsResponse(response: response)
     }
 }

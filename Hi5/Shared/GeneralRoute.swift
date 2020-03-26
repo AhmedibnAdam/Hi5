@@ -43,11 +43,13 @@ enum GeneralRoute: IRouter {
     case location
     case sideMenu
     case fields
-    case showDetailsFields(field: FieldsModel.Field)
+    case showDetailsFields(field_id: String)
     case filter
     case filterResult(param: [String: Any])
-    case sessionResult(fieldId: Int , fieldName: String)
-    case suggestField
+    case myBooking
+    case mySechadule
+    case suggestedField
+//    case sessionResult(fieldId: Int , fieldName: String)
 }
 
 extension GeneralRoute {
@@ -107,17 +109,21 @@ extension GeneralRoute {
             return SideMenuConfiguration.setup()
         case .fields:
             return FieldsConfiguration.setup()
-        case .showDetailsFields(let field):
-            return ShowDetailsConfiguration.setup(field: field)
+        case .showDetailsFields(let field_id):
+            return ShowDetailsConfiguration.setup(field: field_id)
         case .filter:
             return FilterConfiguration.setup()
         case .filterResult(let param):
             return FilterResultConfiguration.setup(param: param)
-        case .sessionResult(let fieldId , let fieldName):
-            return SessionResultConfiguration.setup(fieldId: fieldId, fieldName: fieldName)
-        case .suggestField:
-            return SuggestFieldConfiguration.setup()
+//        case .sessionResult(let fieldId , let fieldName):
+//            return SessionResultConfiguration.setup(fieldId: fieldId, fieldName: fieldName)
             
+        case .myBooking:
+            return MyBookingsConfiguration.setup()
+        case .mySechadule:
+            return SechaduleConfiguration.setup()
+        case .suggestedField:
+            return SuggestedFieldsConfiguration.setup()
         }
     }
 }

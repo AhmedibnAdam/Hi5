@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum ShowDetailsFieldsEndpoint {
-    case showDetails(id: Int)
+    case showDetails(id: String)
     case requestMemberShip(id: Int)
     case cancelRequestMemberShip(id: Int)
 }

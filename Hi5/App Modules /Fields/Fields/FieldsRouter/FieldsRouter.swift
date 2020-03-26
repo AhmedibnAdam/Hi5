@@ -12,11 +12,12 @@ import UIKit
 
 protocol IFieldsRouter: class {
 	func navigateToTabBar()
-    func navigateToShowdetails(field: FieldsModel.NearByfieldsResponseField)
+    func navigateToShowdetails(field_id: String)
     func navigateToFilter()
 }
 
-class FieldsRouter: IFieldsRouter {	
+class FieldsRouter: IFieldsRouter {
+   
 	weak var view: FieldsViewController?
 	
 	init(view: FieldsViewController?) {
@@ -25,10 +26,13 @@ class FieldsRouter: IFieldsRouter {
     func navigateToTabBar() {
         view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
-    func navigateToShowdetails(field: FieldsModel.NearByfieldsResponseField) {
-        view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields(field: field), completion: nil)
-    }
+ 
     func navigateToFilter() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
     }
+    func navigateToShowdetails(field_id: String) {
+           view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields(field_id: field_id))
+       }
+       
 }
+

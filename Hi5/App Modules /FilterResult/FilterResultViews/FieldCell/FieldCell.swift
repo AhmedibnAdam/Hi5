@@ -13,20 +13,29 @@ class FieldCell: UITableViewCell {
     //MARK: - Outlets
     
     @IBOutlet weak var fieldImg: UIImageView!
-    @IBOutlet weak var nameView: UIView!
+    @IBOutlet weak var fieldName: UILabel!
+    @IBOutlet weak var partnerName: UILabel!
+
     @IBOutlet weak var partnerImg: UIImageView!
-    @IBOutlet weak var partnerNamelbl: UILabel!
-    @IBOutlet weak var visibilityLbl: UILabel!
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var paymentLbl: UILabel!
     @IBOutlet weak var bestForLbl: UILabel!
-    @IBOutlet weak var genderLbl: UILabel!
-    @IBOutlet weak var sportTypeLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
-    @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var fieldLocationLbl: UILabel!
     @IBOutlet weak var fieldNameLbl: UILabel!
-    
+    @IBOutlet weak var ballImageView: UIImageView!
+    @IBOutlet weak var gender: UIImageView!
+    @IBOutlet weak var cost: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var day: UILabel!
+    @IBOutlet weak var starttime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    @IBOutlet weak var pastCost: UILabel!
+    @IBOutlet weak var before: UILabel!
+    @IBOutlet weak var beforeCenterView: UIView!
+    @IBOutlet weak var currancy: UILabel!
+    @IBOutlet weak var bookingStatus: UILabel!
+    @IBOutlet weak var bookingStatusImage: UIImageView!
+    @IBOutlet weak var point: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         initView()

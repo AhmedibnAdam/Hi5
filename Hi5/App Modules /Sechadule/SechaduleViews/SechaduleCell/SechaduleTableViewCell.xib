@@ -274,11 +274,6 @@
                                                                             <constraint firstAttribute="width" constant="25" id="xnt-HM-OdL"/>
                                                                         </constraints>
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="regular"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageViewRaduis">
-                                                                                <real key="value" value="20"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male-1" translatesAutoresizingMaskIntoConstraints="NO" id="UhZ-Vg-Mh8">
                                                                         <rect key="frame" x="25" y="0.0" width="25" height="25"/>
@@ -288,11 +283,6 @@
                                                                             <constraint firstAttribute="height" constant="25" id="vGi-42-uUL"/>
                                                                         </constraints>
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="regular"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageViewRaduis">
-                                                                                <real key="value" value="20"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                 </subviews>
                                                             </stackView>

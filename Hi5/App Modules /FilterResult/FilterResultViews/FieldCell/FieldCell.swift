@@ -33,9 +33,8 @@ class FieldCell: UITableViewCell {
     @IBOutlet weak var before: UILabel!
     @IBOutlet weak var beforeCenterView: UIView!
     @IBOutlet weak var currancy: UILabel!
-    @IBOutlet weak var bookingStatus: UILabel!
-    @IBOutlet weak var bookingStatusImage: UIImageView!
     @IBOutlet weak var point: UILabel!
+    @IBOutlet weak var visability: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         initView()

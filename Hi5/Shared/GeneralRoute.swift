@@ -49,6 +49,7 @@ enum GeneralRoute: IRouter {
     case myBooking
     case mySechadule
     case suggestedField
+    case publicEvents(event_id: String)
 //    case sessionResult(fieldId: Int , fieldName: String)
 }
 
@@ -121,6 +122,8 @@ extension GeneralRoute {
             return SechaduleConfiguration.setup()
         case .suggestedField:
             return SuggestFieldConfiguration.setup()
+        case .publicEvents(let event_id):
+            return PublicEventDetailsConfiguration.setup(field_id: event_id)
         }
     }
 }

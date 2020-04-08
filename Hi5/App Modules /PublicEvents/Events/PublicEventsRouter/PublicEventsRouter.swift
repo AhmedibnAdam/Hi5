@@ -12,12 +12,20 @@ import UIKit
 
 protocol IPublicEventsRouter: class {
 	// do someting...
+    func navugateToDetails(event_id: String)
 }
 
-class PublicEventsRouter: IPublicEventsRouter {	
+class PublicEventsRouter: IPublicEventsRouter {
+  
+    
 	weak var view: PublicEventsViewController?
 	
 	init(view: PublicEventsViewController?) {
 		self.view = view
 	}
+    
+    func navugateToDetails(event_id: String) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.publicEvents(event_id: event_id), completion: nil)
+    }
+    
 }

@@ -42,6 +42,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) will use camera to pick photo</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Allow Hi5 to get you Location to get best service</string>
 	<key>NSLocationAlwaysUsageDescription</key>

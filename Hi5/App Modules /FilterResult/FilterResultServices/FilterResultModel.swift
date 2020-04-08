@@ -19,11 +19,11 @@ struct FilterResultModel {
 
 	struct FilterSessionResponse: Codable {
         let status: Bool?
-        let fields: [Field]?
+        let fields: [FilterField]?
     }
 
     // MARK: - Field
-    struct Field: Codable {
+    struct FilterField: Codable {
         let sessionID, id: Int?
         let name: String?
         let image: String?
@@ -36,6 +36,13 @@ struct FilterResultModel {
         let visibility, payment: String?
         let membership: Membership?
         let favourite: Bool?
+        let day:String?
+        let start_time: String?
+        let end_time: String?
+        let points: Int?
+        let old_price: Int?
+        let new_price: Int?
+   
 
         enum CodingKeys: String, CodingKey {
             case sessionID = "session_id"
@@ -48,7 +55,9 @@ struct FilterResultModel {
             case cost
             case partnerName = "partner_name"
             case partnerImage = "partner_image"
-            case visibility, payment, membership, favourite
+            case start_time = "start_time"
+            case end_time = "end_time"
+            case visibility, payment, membership, favourite , day ,points,old_price,new_price
         }
     }
 

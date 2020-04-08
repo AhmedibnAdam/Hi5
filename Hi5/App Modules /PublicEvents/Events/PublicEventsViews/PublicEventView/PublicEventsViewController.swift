@@ -263,6 +263,7 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
             return CGSize(width:50,height: 100)
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -272,7 +273,14 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
             
             handleDaySelection(cell: cellB,indexPath: indexPath)
         }
+        else{
+            let cellData = self.filteredPublicEventData?.publicEvents
+            let id = cellData?[indexPath.row].id
+            router?.navugateToDetails(event_id: id ?? "0")
+        }
     }
+    
+ 
 }
 extension PublicEventsViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

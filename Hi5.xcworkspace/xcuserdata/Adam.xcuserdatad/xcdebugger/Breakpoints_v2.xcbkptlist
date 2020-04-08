@@ -1724,7 +1724,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2A8C48AF-CB64-458B-A6CB-36C48909900E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Filter/FilterViews/View/FilterViewController.swift"
@@ -1740,7 +1740,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FE557133-8D61-4086-BA95-C53BF8541D1A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Filter/FilterViews/View/FilterViewController.swift"
@@ -1756,7 +1756,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "94E0C3D9-AEBB-429B-8583-9A4CBBA90B48"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
@@ -1947,16 +1947,240 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89E496DC-4098-4DBA-9F52-B0154B0C02A1"
+            uuid = "0E773518-2A95-42CD-AF5E-0750705E691C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0219EAD0-6242-4602-B185-644E2CA259EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57CB4D3F-DC03-4A43-8607-9DF881C29139"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67A50460-E8F0-46DC-94E2-ECCE8E4108BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "showResponse(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65E59E5F-F90A-44A5-B406-744A81F8F942"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /FilterResult/FilterResultServices/FilterResultManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "filterSessionFromApi(parameter:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09183641-8A39-401A-B1AD-943050DC1F08"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /FilterResult/FilterResultServices/FilterResultManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "filterSessionFromApi(parameter:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8405486-62CB-40CA-895F-EDCCEB24A9D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "showDetails(view:eventId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "showDetails(view:eventId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89 - 4e49d90f5bae8310"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.PublicEventDetailsInteractor.showDetails(view: __C.UIViewController, eventId: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/GitHub/Hi5/Hi5/App%20Modules%20/PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89 - 56bf30a905bcd887"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.PublicEventDetails&gt;) -&gt; () in Hi5.PublicEventDetailsInteractor.showDetails(view: __C.UIViewController, eventId: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/GitHub/Hi5/Hi5/App%20Modules%20/PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "85">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E169A9E-4E2E-40AD-B0E6-C8A452ECD372"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "showDetailsFromApi(id:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "showDetailsFromApi(id:complition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B - 74652cca9cf96618"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.PublicEventDetailsManager.showDetailsFromApi(id: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.PublicEventDetails&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/GitHub/Hi5/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B - 6805c47078f34077"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventDetailsManager.showDetailsFromApi(id: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.PublicEventDetails&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/GitHub/Hi5/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "222">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABB53AC4-18B9-4A76-9748-3CB4492B0DB0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /PublicEvents/EventDetails/View/PublicEventDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "showDetailsResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

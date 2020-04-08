@@ -29,7 +29,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     var dayMonth: [String] = []
     var parameter: [String: Any] = [:]
     var selectedDay: String?
-    var fields = [FilterResultModel.Field]()
+    var fields = [FilterResultModel.FilterField]()
     
     //MARK: - Outlets
     @IBOutlet weak var noFieldsLbl: UILabel!
@@ -136,11 +136,19 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell") as! FieldCell
         cell.fieldNameLbl.text = field.name
         cell.partnerName.text = field.partnerName
-//        cell.visibilityLbl.text = field.visibility
+        if field.visibility == "public"{
+            cell.visability.isHidden = true
+        }
+        else if field.visibility == "only members" || field.visibility == "only members "{
+            cell.visability.isHidden = false
+
+        }
         cell.fieldLocationLbl.text = field.address
         cell.date.text = field.date
-//        cell.endTime.text = field.time
-//        cell.starttime.text = field.time
+        cell.endTime.text = field.end_time
+        cell.starttime.text = field.start_time
+        cell.cost.text = "\(String(describing: field.new_price!))"
+        cell.pastCost.text = "\(field.old_price!)"
 //        cell.sportTypeLbl.text = field.sport
 //        cell.genderLbl.text = field.gender
         cell.bestForLbl.text = field.bestFor

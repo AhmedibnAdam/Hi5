@@ -495,8 +495,6 @@
 		E2FAE5D2240E649E00CD8CFC /* publicEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE5C1240E649E00CD8CFC /* publicEventsCell.swift */; };
 		E2FAE5D3240E649E00CD8CFC /* PublicEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE5C2240E649E00CD8CFC /* PublicEventsViewController.swift */; };
 		E2FAE5D4240E649E00CD8CFC /* PublicEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FAE5C3240E649E00CD8CFC /* PublicEventsViewController.xib */; };
-		E2FAE5D5240E649E00CD8CFC /* dateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE5C4240E649E00CD8CFC /* dateCell.swift */; };
-		E2FAE5D6240E649E00CD8CFC /* dateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FAE5C5240E649E00CD8CFC /* dateCell.xib */; };
 		E2FAE5D7240E649E00CD8CFC /* PublicEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE5C7240E649E00CD8CFC /* PublicEventsRouter.swift */; };
 		E2FAE5D8240E649E00CD8CFC /* PublicEventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE5C9240E649E00CD8CFC /* PublicEventsInteractor.swift */; };
 		E2FAE5D9240E649E00CD8CFC /* PublicEventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FAE5CB240E649E00CD8CFC /* PublicEventsManager.swift */; };
@@ -998,8 +996,6 @@
 		E2FAE5C1240E649E00CD8CFC /* publicEventsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = publicEventsCell.swift; sourceTree = "<group>"; };
 		E2FAE5C2240E649E00CD8CFC /* PublicEventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicEventsViewController.swift; sourceTree = "<group>"; };
 		E2FAE5C3240E649E00CD8CFC /* PublicEventsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicEventsViewController.xib; sourceTree = "<group>"; };
-		E2FAE5C4240E649E00CD8CFC /* dateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dateCell.swift; sourceTree = "<group>"; };
-		E2FAE5C5240E649E00CD8CFC /* dateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dateCell.xib; sourceTree = "<group>"; };
 		E2FAE5C7240E649E00CD8CFC /* PublicEventsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicEventsRouter.swift; sourceTree = "<group>"; };
 		E2FAE5C9240E649E00CD8CFC /* PublicEventsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicEventsInteractor.swift; sourceTree = "<group>"; };
 		E2FAE5CB240E649E00CD8CFC /* PublicEventsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicEventsManager.swift; sourceTree = "<group>"; };
@@ -1294,6 +1290,7 @@
 			children = (
 				6682B383242985910050CC9A /* SliderView */,
 				66340A1523B4DB4E009DB30A /* CommonUIView */,
+				66AEC5DE242266AF003CF2EB /* CalenderCell */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1833,15 +1830,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		66AEC53F2420D588003CF2EB /* DateCell */ = {
-			isa = PBXGroup;
-			children = (
-				E2FAE5C4240E649E00CD8CFC /* dateCell.swift */,
-				E2FAE5C5240E649E00CD8CFC /* dateCell.xib */,
-			);
-			path = DateCell;
-			sourceTree = "<group>";
-		};
 		66AEC5402420D59A003CF2EB /* ContainerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1885,7 +1873,6 @@
 			children = (
 				66AEC5D8242266AF003CF2EB /* View */,
 				66AEC5DB242266AF003CF2EB /* FieldCell */,
-				66AEC5DE242266AF003CF2EB /* CalenderCell */,
 			);
 			path = FilterResultViews;
 			sourceTree = "<group>";
@@ -3822,7 +3809,6 @@
 			children = (
 				E2FAE5BF240E649E00CD8CFC /* PublicEventsCell */,
 				66AEC5412420D5B0003CF2EB /* PublicEventView */,
-				66AEC53F2420D588003CF2EB /* DateCell */,
 				66AEC5402420D59A003CF2EB /* ContainerView */,
 			);
 			path = PublicEventsViews;
@@ -3978,7 +3964,6 @@
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
 				861D22D823DCAEF5004F16F1 /* GalleryViewController.xib in Resources */,
-				E2FAE5D6240E649E00CD8CFC /* dateCell.xib in Resources */,
 				868C28BD23C6042A003F237A /* Assets.xcassets in Resources */,
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
@@ -4086,7 +4071,6 @@
 				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
 				662A169423C3E75400A3695E /* MyFavoriteFriendsViewController.swift in Sources */,
 				66AEC607242266B0003CF2EB /* FilterResultConfiguration.swift in Sources */,
-				E2FAE5D5240E649E00CD8CFC /* dateCell.swift in Sources */,
 				869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */,
 				E2FAE5DB240E649E00CD8CFC /* PublicEventsPresenter.swift in Sources */,
 				668C210723C3F5BC00C009A9 /* AddSessionResultRouter.swift in Sources */,

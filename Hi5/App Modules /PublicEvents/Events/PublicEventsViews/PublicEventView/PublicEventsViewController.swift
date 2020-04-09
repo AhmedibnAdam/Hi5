@@ -25,7 +25,7 @@ class PublicEventsViewController: UIViewController {
      let today = Date()
     
     let cellAID = "cellAID"
-    let cellBID = "cellBID"
+    let cellBID = "CalenderCell"
     let headerID = "headerID"
     let maxHeaderHeight: CGFloat = 300
     let minHeaderHeight: CGFloat = 82
@@ -37,9 +37,11 @@ class PublicEventsViewController: UIViewController {
     var daysArray:[String] = []
     var monthes:[String] = []
     var years:[String] = []
+    var dayName: [String] = []
+    var dayMonth: [String] = []
     var dayIsSelected = Array(repeating: false, count: 14)
     var sliderLableP = UILabel()
-
+     var selectedDay: String?
 
 
 
@@ -80,7 +82,32 @@ class PublicEventsViewController: UIViewController {
        
        slider.list = imagesList
 //        self.slider.addSubview(sliderView)
+        getDayName()
+              let date = Date()
+              let dateFormatter = DateFormatter()
+              let selectDay = date.getDate(dayDifference: 0)
+              dateFormatter.dateFormat = "yyyy-MM-dd"
+              selectedDay = dateFormatter.string(from: selectDay)
+              if let currentDay = selectedDay {
+//                  parameter["date"] = "2020-03-05"//currentDay
+//                  showIndicator()
+//                  removeNoFields()
+//                      interactor?.filterSession(view: self, parameter: parameter)
+              }
     }
+    func getDayName() {
+          let date = Date()
+          let dateFormatter = DateFormatter()
+          for i in 1...14 {
+              let currentDate = date.getDate(dayDifference: i)
+              dateFormatter.dateFormat = "dd"
+              let dateInMonth = dateFormatter.string(from: currentDate - TimeInterval(i))
+              self.dayMonth.append(dateInMonth)
+              dateFormatter.dateFormat = "EEEE"
+              let dayInWeek = dateFormatter.string(from: currentDate - TimeInterval(i))
+              self.dayName.append(String(dayInWeek.prefix(3)))
+          }
+      }
 
     
         //MARK:- setUp UI
@@ -198,7 +225,7 @@ extension PublicEventsViewController {
     // do someting...
     func registerCollectionCell() {
         let cellA = UINib(nibName: "publicEventsCell", bundle: nil)
-        let cellB = UINib(nibName: "dateCell", bundle: nil)
+        let cellB = UINib(nibName: "CalenderCell", bundle: nil)
         mainCollectionView.register(cellA, forCellWithReuseIdentifier: cellAID)
         subCollectionView.register(cellB, forCellWithReuseIdentifier: cellBID)
     }
@@ -210,25 +237,25 @@ extension PublicEventsViewController {
         self.mainCollectionView.contentOffset = CGPoint(x:1, y: 1)
         // there is something went unexplainable here, when do we I change the x and y to 0 the scroll became a little intermittent
     }
-    func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
-        month.text = self.monthes[indexPath.row]
-        year.text = self.years[indexPath.row]
-        if dayIsSelected[indexPath.row] {
-            dayIsSelected[indexPath.row] = false
-            cell.containerView.isHidden = dayIsSelected[indexPath.row]
-            cell.dayLabel.font = UIFont.boldSystemFont(ofSize: 16)
-            cell.weekDayLabel.font = UIFont.boldSystemFont(ofSize: 10)
-            cell.weekDayLabel.textColor = .orange
-            cell.dayLabel.textColor = .orange
-        }else {
-            dayIsSelected[indexPath.row] = true
-            cell.containerView.isHidden = dayIsSelected[indexPath.row]
-            cell.dayLabel.font = UIFont.systemFont(ofSize: 10)
-            cell.weekDayLabel.font = UIFont.systemFont(ofSize: 10)
-            cell.weekDayLabel.textColor = .black
-            cell.dayLabel.textColor = .black
-        }
-    }
+//    func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
+//        month.text = self.monthes[indexPath.row]
+//        year.text = self.years[indexPath.row]
+//        if dayIsSelected[indexPath.row] {
+//            dayIsSelected[indexPath.row] = false
+//            cell.containerView.isHidden = dayIsSelected[indexPath.row]
+//            cell.dayLabel.font = UIFont.boldSystemFont(ofSize: 16)
+//            cell.weekDayLabel.font = UIFont.boldSystemFont(ofSize: 10)
+//            cell.weekDayLabel.textColor = .orange
+//            cell.dayLabel.textColor = .orange
+//        }else {
+//            dayIsSelected[indexPath.row] = true
+//            cell.containerView.isHidden = dayIsSelected[indexPath.row]
+//            cell.dayLabel.font = UIFont.systemFont(ofSize: 10)
+//            cell.weekDayLabel.font = UIFont.systemFont(ofSize: 10)
+//            cell.weekDayLabel.textColor = .white
+//            cell.dayLabel.textColor = .white
+//        }
+//    }
     
 }
 extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -236,7 +263,7 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
         if collectionView == mainCollectionView {
             return self.filteredPublicEventData?.publicEvents.count ?? 0
         }else {
-            return 14
+            return dayName.count
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -248,20 +275,27 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
                 
             return cellA
         }else {
-            let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: cellBID, for: indexPath) as! dateCell
-            cellB.backgroundColor = .red
-            cellB.weekDay = weekDays[indexPath.row]
-            cellB.Day = daysArray[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalenderCell", for: indexPath) as! CalenderCell
+            let day = dayName[indexPath.row]
+            let date = dayMonth[indexPath.row]
+            cell.dateLbl.text = date
+            cell.nameLbl.text = day
+            if (indexPath.row == 0){
+                cell.containerView.backgroundColor = .white
+                cell.nameLbl.textColor = .orange
+                cell.dateLbl.textColor = .orange
+            }
             
-            return cellB
+            return cell
         }
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == mainCollectionView {
             return CGSize(width: view.frame.width, height: 280)
         }else {
-            return CGSize(width:50,height: 100)
-        }
+            let width = collectionView.frame.width / 7
+                       let height = collectionView.frame.height
+                       return CGSize(width: width, height: height)        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -269,9 +303,27 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == subCollectionView {
-            let cellB = subCollectionView.cellForItem(at: indexPath) as! dateCell
-            
-            handleDaySelection(cell: cellB,indexPath: indexPath)
+            let index = IndexPath(item: 0, section: 0)
+               let firstCell = collectionView.cellForItem(at: index) as? CalenderCell
+               firstCell?.containerView.backgroundColor = .clear
+               firstCell?.nameLbl.textColor = .white
+               firstCell?.dateLbl.textColor = .white
+               
+               let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
+               cell.isSelected = true
+               let date = Date()
+               let dateFormatter = DateFormatter()
+               let selectDay = date.getDate(dayDifference: indexPath.row)
+               dateFormatter.dateFormat = "yyyy-MM-dd"
+               selectedDay = dateFormatter.string(from: selectDay)
+//               if let currentDay = selectedDay {
+//                   parameter["date"] = currentDay
+//                       showIndicator()
+//                       removeNoFields()
+//                       interactor?.filterSession(view: self, parameter: parameter)
+//               
+//            }
+            //            handleDaySelection(cell: cellB,indexPath: indexPath)
         }
         else{
             let cellData = self.filteredPublicEventData?.publicEvents
@@ -279,7 +331,12 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
             router?.navugateToDetails(event_id: id ?? "0")
         }
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if collectionView == subCollectionView {
+            let cell = collectionView.cellForItem(at: indexPath) as? CalenderCell
+             cell?.isSelected = false
+        }
+    }
  
 }
 extension PublicEventsViewController {

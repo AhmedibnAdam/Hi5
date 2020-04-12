@@ -42,7 +42,7 @@ class SideMenuRouter: ISideMenuRouter {
          view?.navigate(type: .modalWithNavigation, module: GeneralRoute.mySechadule, completion: nil)
        }
      func navigateToSuggestedField(){
-         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.suggestedField, completion: nil)
+         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.suggestField, completion: nil)
      }
        
       

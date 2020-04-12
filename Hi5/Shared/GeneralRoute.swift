@@ -20,7 +20,7 @@ enum GeneralRoute: IRouter {
      case sample(parameter: [String: Any])
      
      you can use: String, Int, [String: Any], etc..
-    */
+     */
     
     case login
     case register
@@ -48,9 +48,15 @@ enum GeneralRoute: IRouter {
     case filterResult(param: [String: Any])
     case myBooking
     case mySechadule
-    case suggestedField
     case publicEvents(event_id: String)
-//    case sessionResult(fieldId: Int , fieldName: String)
+    
+    case suggestField
+    case suggestFieldDetails(latitude: Double , longitude: Double)
+    case fieldOwnerDetails(param: [String: Any] , images: [UIImage])
+    case sessionDetails(id: Int , payment: String , sessionId: Int)
+    case checkOutSessionDetails
+    case walletSuccessCheckOut
+    
 }
 
 extension GeneralRoute {
@@ -58,7 +64,12 @@ extension GeneralRoute {
         /*
          Setup module with parameters like:
          
-         switch self {
+         switch self {   case suggestField
+              case suggestFieldDetails(latitude: Double , longitude: Double)
+              case fieldOwnerDetails(param: [String: Any] , images: [UIImage])
+              case sessionDetails(id: Int , payment: String , sessionId: Int)
+              case checkOutSessionDetails
+              case walletSuccessCheckOut
          case .sample:
             return SampleConfiguration.setup()
         case .sample(let parameters):
@@ -120,10 +131,23 @@ extension GeneralRoute {
             return MyBookingsConfiguration.setup()
         case .mySechadule:
             return SechaduleConfiguration.setup()
-        case .suggestedField:
-            return SuggestFieldConfiguration.setup()
+        
         case .publicEvents(let event_id):
             return PublicEventDetailsConfiguration.setup(field_id: event_id)
+            
+            
+            case .suggestField:
+                return SuggestFieldConfiguration.setup()
+            case .suggestFieldDetails(let latitude , let longitude):
+                return SuggestFieldDetailsConfiguration.setup(latitude: latitude, longitude: longitude)
+            case .fieldOwnerDetails(let param , let images):
+                return FieldOwnerDetailsConfiguration.setup(param: param, images: images)
+            case .sessionDetails(let id , let payment , let sessionId):
+                return SessionDetailsConfiguration.setup(id: id, payment: payment , sessionId: sessionId)
+            case .checkOutSessionDetails:
+                return CheckOutSessionDetailsConfiguration.setup()
+            case .walletSuccessCheckOut:
+                return WalletSuccessCheckOutConfiguration.setup()
         }
     }
 }

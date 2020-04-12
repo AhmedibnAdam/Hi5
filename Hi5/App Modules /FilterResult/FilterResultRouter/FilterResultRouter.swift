@@ -12,9 +12,12 @@ import UIKit
 
 protocol IFilterResultRouter: class {
   func navigateToFilter()
+    func navigateTosessionDetails(id: Int, payment: String, sessionId: Int)
 }
 
-class FilterResultRouter: IFilterResultRouter {	
+class FilterResultRouter: IFilterResultRouter {
+ 
+    
 	weak var view: FilterResultViewController?
 	
 	init(view: FilterResultViewController?) {
@@ -23,4 +26,9 @@ class FilterResultRouter: IFilterResultRouter {
     func navigateToFilter() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
     }
+      func navigateTosessionDetails(id: Int, payment: String, sessionId: Int) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.sessionDetails(id: id, payment: payment, sessionId: sessionId), completion: nil)
+       }
+       
+    
 }

@@ -297,8 +297,8 @@ extension FilterViewController {
 
 extension FilterViewController {
     func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
-        self.minRange = String(selectedMinimum)
-        self.maxRange = String(selectedMaximum)
+        self.minRange = String(Int(selectedMinimum))
+        self.maxRange = String(Int(selectedMaximum))
         print(minRange)
         print(maxRange)
     }

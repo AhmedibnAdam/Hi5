@@ -181,7 +181,10 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let field = fields[indexPath.row]
+        router?.navigateTosessionDetails(id: field.id!, payment: field.payment!, sessionId: field.sessionID!)
+    }
 }
 
 //MARK: - CollectionViewMethods

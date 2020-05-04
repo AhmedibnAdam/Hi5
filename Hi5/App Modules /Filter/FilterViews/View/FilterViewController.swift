@@ -82,7 +82,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
     }
     //MARK: - Actions
     @IBAction func applyBtnTapped(_ sender: UIButton) {
-        param["sport_type_id"] = sportId
+        param["sport_type"] = sportId
         param["start_time"] = minRange
         param["end_time"] = maxRange
         print(param)
@@ -97,7 +97,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             self.lat = 31.276941
             self.long = 31.276941
             if let nearBy = nearByField , let lat = lat , let long = long {
-                param["near_by_fields"] = nearBy
+                param["near_by"] = nearBy
                 param["latitude"] = lat
                 param["longitude"] = long
             }
@@ -107,7 +107,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             self.nearByField = nil
             self.lat = nil
             self.long = nil
-            param.removeValue(forKey: "near_by_fields")
+            param.removeValue(forKey: "near_by")
             param.removeValue(forKey: "latitude")
             param.removeValue(forKey: "longitude")
         }

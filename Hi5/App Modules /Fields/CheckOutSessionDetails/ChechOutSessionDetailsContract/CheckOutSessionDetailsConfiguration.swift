@@ -12,8 +12,10 @@ import Foundation
 import UIKit
 
 class CheckOutSessionDetailsConfiguration {
-    static func setup(parameters: [String: Any] = [:]) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:] , field: PublicEventDetailsModel.PublicEventDetails? , session: SessionDetailsModel.SessionDetailsResponse?) -> UIViewController {
         let controller = CheckOutSessionDetailsViewController()
+        controller.fieldData = field
+        controller.sessionData = session
         let router = CheckOutSessionDetailsRouter(view: controller)
         let presenter = CheckOutSessionDetailsPresenter(view: controller)
         let manager = CheckOutSessionDetailsManager()

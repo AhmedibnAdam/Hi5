@@ -11,13 +11,24 @@
 import UIKit
 
 protocol ICheckOutSessionDetailsPresenter: class {
-	// do someting...
+    func showErrorAlert(title: String, msg: String)
+
+        func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?)
+
 }
 
-class CheckOutSessionDetailsPresenter: ICheckOutSessionDetailsPresenter {	
-	weak var view: ICheckOutSessionDetailsViewController?
-	
-	init(view: ICheckOutSessionDetailsViewController?) {
-		self.view = view
-	}
+class CheckOutSessionDetailsPresenter: ICheckOutSessionDetailsPresenter {
+    weak var view: ICheckOutSessionDetailsViewController?
+    
+    init(view: ICheckOutSessionDetailsViewController?) {
+        self.view = view
+    }
+    func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?){
+        view?.showDetailsResponse(response: response)
+        
+    }
+    func showErrorAlert(title: String, msg: String){
+        view?.showAlert(title: title, msg: msg)
+    }
+
 }

@@ -11,16 +11,19 @@
 import UIKit
 
 protocol ISessionDetailsRouter: class {
-	func navigateToCheckOutSessionDetails()
+    func navigateToCheckOutSessionDetails(session:  SessionDetailsModel.SessionDetailsResponse)
 }
 
-class SessionDetailsRouter: ISessionDetailsRouter {	
-	weak var view: SessionDetailsViewController?
-	
-	init(view: SessionDetailsViewController?) {
-		self.view = view
-	}
-    func navigateToCheckOutSessionDetails() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.checkOutSessionDetails, completion: nil)
+class SessionDetailsRouter: ISessionDetailsRouter {
+
+    
+    weak var view: SessionDetailsViewController?
+    
+    init(view: SessionDetailsViewController?) {
+        self.view = view
+    }
+    func navigateToCheckOutSessionDetails(session:  SessionDetailsModel.SessionDetailsResponse) {
+        
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.checkOutSessionDetails(field: nil, session: session), completion: nil)
     }
 }

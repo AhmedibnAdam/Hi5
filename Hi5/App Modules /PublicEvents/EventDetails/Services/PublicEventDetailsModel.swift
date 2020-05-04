@@ -10,44 +10,45 @@
 
 import UIKit
 
-struct PublicEventDetailsModel {	
-	struct Request {
-		// do someting...
-
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
-	}
-
-	
+struct PublicEventDetailsModel {
+    struct Request {
+        // do someting...
+        
+        func parameters() -> [String: Any]? {
+            // do someting...
+            return nil
+        }
+    }
+    
+    
     // MARK: - PublicEventDetails
     struct PublicEventDetails: Codable {
         let status: Bool
         let publicEvent: PublicEvent
-
+        
         enum CodingKeys: String, CodingKey {
             case status
             case publicEvent = "public_event"
         }
     }
-
+    
     // MARK: - PublicEvent
     struct PublicEvent: Codable {
         let id, fieldName: String?
         let fieldImage: String?
         let bestFor, address, partnerName: String?
         let partnerImage: String?
-        let playersNumber, joinedCount: Int?
-        let cost, gender, day, date: String?
-        let startTime, endTime, sportType, groupName: String?
+        let playersNumber, joinedCount, cost: Int?
+        let gender, day, date, startTime: String?
+        let endTime, sportType, groupName: String?
         let age: Int?
         let payment: String?
         let points: Int?
-        let status, fieldType, fieldSize: String?
-        let guaranteedRefundTime, countEssentialPlayer: Int?
+        let status, fieldType, fieldSize, guaranteedRefundTime: String?
+        let feeForCancelation: String?
+        let countEssentialPlayer: Int?
         let createrName, createrImage, createrUsername, playerEventStatus: String?
-        let players: [String]?
+        let players: [Player]?
 
         enum CodingKeys: String, CodingKey {
             case id
@@ -68,6 +69,7 @@ struct PublicEventDetailsModel {
             case fieldType = "field_type"
             case fieldSize = "field_size"
             case guaranteedRefundTime = "guaranteed_refund_time"
+            case feeForCancelation = "fee_for_cancelation"
             case countEssentialPlayer = "count_essential_player"
             case createrName = "creater_name"
             case createrImage = "creater_image"
@@ -76,5 +78,16 @@ struct PublicEventDetailsModel {
             case players
         }
     }
-
+    
+    // MARK: - Player
+    struct Player: Codable {
+        let name, userName, image, eventStatus: String
+        
+        enum CodingKeys: String, CodingKey {
+            case name
+            case userName = "user_name"
+            case image
+            case eventStatus = "event_status"
+        }
+    }
 }

@@ -11,7 +11,8 @@
 import UIKit
 
 protocol ICheckOutSessionDetailsInteractor: class {
-	var parameters: [String: Any]? { get set }
+    var parameters: [String: Any]? { get set }
+    func showDetails(view: UIViewController , eventId: String)
 }
 
 class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
@@ -20,7 +21,17 @@ class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
     var parameters: [String: Any]?
 
     init(presenter: ICheckOutSessionDetailsPresenter, manager: ICheckOutSessionDetailsManager) {
-    	self.presenter = presenter
-    	self.manager = manager
+        self.presenter = presenter
+        self.manager = manager
+    }
+    func showDetails(view: UIViewController , eventId: String){
+        manager?.joinApi(id: eventId, complition: { (error, success, response) in
+            if response == nil {
+                self.presenter?.showErrorAlert(title: "Alert", msg: "your request already booked before , or something goes wrong.")
+            }
+            else{
+            self.presenter?.showDetailsResponse(response: response)
+            }
+        })
     }
 }

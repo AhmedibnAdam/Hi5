@@ -72,8 +72,9 @@ class PublicEventsViewController: UIViewController {
  
     }
     override func viewWillAppear(_ animated: Bool){
-       getFilteredPublicEvent()
+    
           setUP()
+           getFilteredPublicEvent()
     }
     
     func setUP(){
@@ -134,7 +135,7 @@ class PublicEventsViewController: UIViewController {
     func getFilteredPublicEvent(){
 //        var vc = self
 //        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
-        let params = ["date":"2020-03-06",  // EX "2020-03-06"
+        let params = ["date": selectedDay!,//  "2020-04-15" ,
                       "latitude": "29.962696",
                       "longitude": "31.276941"
         ]
@@ -187,13 +188,14 @@ extension PublicEventsViewController: IPublicEventsViewController {
     func showFilteresPublicEvent(response: PublicEventsModel.PublicEventResponse) {
         print(response)
         self.filteredPublicEventData = response
-        
-        if let image = self.filteredPublicEventData?.publicEvents[0].fieldImage {
-            let url = URL(string: image)
-//            self.imageView.kf.setImage(with: url)
-
+        if response.publicEvents.count != 0 {
+            if let image = self.filteredPublicEventData?.publicEvents[0].fieldImage {
+                let url = URL(string: image)
+                //            self.imageView.kf.setImage(with: url)
+                
+            }
+            self.mainCollectionView.reloadData()
         }
-        self.mainCollectionView.reloadData()
     }
 }
 
@@ -321,7 +323,7 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
 //                       showIndicator()
 //                       removeNoFields()
 //                       interactor?.filterSession(view: self, parameter: parameter)
-//               
+//
 //            }
             //            handleDaySelection(cell: cellB,indexPath: indexPath)
         }

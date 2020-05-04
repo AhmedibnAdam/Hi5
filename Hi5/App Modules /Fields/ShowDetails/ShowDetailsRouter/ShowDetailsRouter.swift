@@ -16,16 +16,17 @@ protocol IShowDetailsRouter: class {
     
 }
 
-class ShowDetailsRouter: IShowDetailsRouter {	
-	weak var view: ShowDetailsViewController?
-	
-	init(view: ShowDetailsViewController?) {
-		self.view = view
-	}
+class ShowDetailsRouter: IShowDetailsRouter {
+    weak var view: ShowDetailsViewController?
+    
+    init(view: ShowDetailsViewController?) {
+        self.view = view
+    }
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
     func navigateToSessionResult(fieldId: Int , fieldName: String) {
-        view?.navigate(type: .modal, module: GeneralRoute.sessionDetails(id: fieldId, payment: "free", sessionId: 1), completion: nil)
+        let parameters = ["field_id":"\(fieldId)"]
+        view?.navigate(type: .modal, module: GeneralRoute.filterResult(param: parameters, type: "checkAvalable"), completion: nil)
     }
 }

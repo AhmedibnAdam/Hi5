@@ -167,7 +167,7 @@ extension FieldsViewController: IFieldsViewController {
     func showNoMemberOfFields() {
 //        noFavouriteFieldsImg.isHidden = false
 //        noFavouriteFieldsLbl.isHidden = false
-        noFavouriteFieldsLbl.text = "You have no fields where you would be a member or sent requests"
+//        noFavouriteFieldsLbl.text = "You have no fields where you would be a member or sent requests"
     }
 }
 

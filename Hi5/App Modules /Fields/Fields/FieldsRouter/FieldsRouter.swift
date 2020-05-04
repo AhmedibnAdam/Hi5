@@ -11,18 +11,19 @@
 import UIKit
 
 protocol IFieldsRouter: class {
-	func navigateToTabBar()
+    func navigateToTabBar()
     func navigateToShowdetails(field_id: String)
     func navigateToFilter()
+   
 }
 
 class FieldsRouter: IFieldsRouter {
    
-	weak var view: FieldsViewController?
-	
-	init(view: FieldsViewController?) {
-		self.view = view
-	}
+    weak var view: FieldsViewController?
+    
+    init(view: FieldsViewController?) {
+        self.view = view
+    }
     func navigateToTabBar() {
         view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
@@ -33,6 +34,7 @@ class FieldsRouter: IFieldsRouter {
     func navigateToShowdetails(field_id: String) {
            view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields(field_id: field_id))
        }
+  
        
 }
 

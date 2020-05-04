@@ -11,20 +11,20 @@
 import UIKit
 
 protocol IFilterRouter: class {
-	func navigateToFields()
+    func navigateToFields()
     func navigateToFilterResult(parameter: [String: Any])
 }
 
 class FilterRouter: IFilterRouter {
-	weak var view: FilterViewController?
-	
-	init(view: FilterViewController?) {
-		self.view = view
-	}
+    weak var view: FilterViewController?
+    
+    init(view: FilterViewController?) {
+        self.view = view
+    }
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
     func navigateToFilterResult(parameter: [String : Any]) {
-        view?.navigate(type: .modal, module: GeneralRoute.filterResult(param: parameter), completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.filterResult(param: parameter, type: "filter"), completion: nil)
     }
 }

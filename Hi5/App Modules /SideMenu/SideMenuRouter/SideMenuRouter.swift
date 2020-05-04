@@ -17,15 +17,18 @@ protocol ISideMenuRouter: class {
     func navigateToMyBookings()
     func navigateToSechadule()
     func navigateToSuggestedField()
+    func navigatetoMyWallet()
 }
 class SideMenuRouter: ISideMenuRouter {
 
+  
 
-	weak var view: SideMenuViewController?
-	
-	init(view: SideMenuViewController?) {
-		self.view = view
-	}
+
+    weak var view: SideMenuViewController?
+    
+    init(view: SideMenuViewController?) {
+        self.view = view
+    }
     func navigatetoProfile() {
          view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
      }
@@ -44,6 +47,9 @@ class SideMenuRouter: ISideMenuRouter {
      func navigateToSuggestedField(){
          view?.navigate(type: .modalWithNavigation, module: GeneralRoute.suggestField, completion: nil)
      }
+       func navigatetoMyWallet() {
+           view?.navigate(type: .modalWithNavigation, module: GeneralRoute.MyWallet, completion: nil)
+       }
        
       
     

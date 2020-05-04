@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IFilterResultViewController: class {
-	var router: IFilterResultRouter? { get set }
+    var router: IFilterResultRouter? { get set }
     func showAlert(title: String, msg: String)
     func hideIndicator()
     func showResponse(response: FilterResultModel.FilterSessionResponse)
@@ -23,11 +23,12 @@ protocol IFilterResultViewController: class {
 
 class FilterResultViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
    
-	var interactor: IFilterResultInteractor?
-	var router: IFilterResultRouter?
+    var interactor: IFilterResultInteractor?
+    var router: IFilterResultRouter?
     var dayName: [String] = []
     var dayMonth: [String] = []
     var parameter: [String: Any] = [:]
+    var type: String?
     var selectedDay: String?
     var fields = [FilterResultModel.FilterField]()
     
@@ -39,7 +40,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - View Life Cycle
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         registerCalenderCollectionCell()
         collectionView.delegate = self
@@ -56,12 +57,19 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
         let selectDay = date.getDate(dayDifference: 0)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDay = dateFormatter.string(from: selectDay)
-        if let currentDay = selectedDay {
-            parameter["date"] = "2020-03-05"//currentDay
+        if selectedDay != nil {
+            parameter["date"] = selectedDay
             showIndicator()
             removeNoFields()
-                interactor?.filterSession(view: self, parameter: parameter)
+            if type == "filter"{
+                 interactor?.filterSession(view: self, parameter: parameter)
+            }
+            else{
+                parameter["date"] = selectedDay
+                 interactor?.filterSession(view: self, parameter: parameter)
+            }
         }
+        
     }
     
     func showIndicator() {
@@ -153,6 +161,20 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
 //        cell.genderLbl.text = field.gender
         cell.bestForLbl.text = field.bestFor
         cell.paymentLbl.text = field.payment
+        if field.old_price == field.new_price {
+            cell.before.isHidden = true
+            cell.pastCost.isHidden = true
+
+            cell.beforeCenterView.isHidden = true
+            cell.currancy.isHidden = true
+        }
+        else {
+            cell.before.isHidden = false
+            cell.pastCost.isHidden = false
+
+            cell.beforeCenterView.isHidden = false
+            cell.currancy.isHidden = false
+        }
         if let cost = field.cost {
             cell.costLbl.text = "$\(String(describing: cost))"
         }

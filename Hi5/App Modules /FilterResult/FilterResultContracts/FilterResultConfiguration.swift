@@ -12,9 +12,10 @@ import Foundation
 import UIKit
 
 class FilterResultConfiguration {
-    static func setup(parameters: [String: Any] = [:] , param: [String: Any]) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:] , type: String) -> UIViewController {
         let controller = FilterResultViewController()
-        controller.parameter = param
+        controller.parameter = parameters
+        controller.type = type
         let router = FilterResultRouter(view: controller)
         let presenter = FilterResultPresenter(view: controller)
         let manager = FilterResultManager()

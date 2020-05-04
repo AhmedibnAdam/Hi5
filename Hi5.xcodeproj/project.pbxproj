@@ -8,6 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		60D69A747F4B18050698D093 /* Pods_Hi5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */; };
+		660A1409245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1408245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift */; };
+		660A140C24600376006DAD45 /* PlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A140A24600376006DAD45 /* PlayersTableViewCell.swift */; };
+		660A140D24600376006DAD45 /* PlayersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A140B24600376006DAD45 /* PlayersTableViewCell.xib */; };
+		660A1417246005A6006DAD45 /* MyWalletConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A140F246005A6006DAD45 /* MyWalletConfiguration.swift */; };
+		660A1418246005A6006DAD45 /* MyWalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1410246005A6006DAD45 /* MyWalletPresenter.swift */; };
+		660A1419246005A6006DAD45 /* MyWalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1411246005A6006DAD45 /* MyWalletRouter.swift */; };
+		660A141A246005A6006DAD45 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1412246005A6006DAD45 /* MyWalletViewController.swift */; };
+		660A141B246005A6006DAD45 /* MyWalletInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1413246005A6006DAD45 /* MyWalletInteractor.swift */; };
+		660A141C246005A6006DAD45 /* MyWalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1414246005A6006DAD45 /* MyWalletModel.swift */; };
+		660A141D246005A6006DAD45 /* MyWalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A1415246005A6006DAD45 /* MyWalletViewController.xib */; };
+		660A141E246005A6006DAD45 /* MyWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1416246005A6006DAD45 /* MyWalletManager.swift */; };
+		660A14262460066D006DAD45 /* MyWalletEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14252460066D006DAD45 /* MyWalletEndpoint.swift */; };
+		660A1429246006D3006DAD45 /* WalletTransActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1427246006D3006DAD45 /* WalletTransActionsTableViewCell.swift */; };
+		660A142A246006D3006DAD45 /* WalletTransActionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A1428246006D3006DAD45 /* WalletTransActionsTableViewCell.xib */; };
+		660A142D24600822006DAD45 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A142C24600822006DAD45 /* ActionType.swift */; };
+		660A142F24600873006DAD45 /* MiddlewareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A142E24600873006DAD45 /* MiddlewareType.swift */; };
+		660A1431246008A3006DAD45 /* ModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1430246008A3006DAD45 /* ModelType.swift */; };
+		660A1433246008F2006DAD45 /* ReducerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1432246008F2006DAD45 /* ReducerType.swift */; };
+		660A14352460091E006DAD45 /* RenderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14342460091E006DAD45 /* RenderType.swift */; };
+		660A143724600949006DAD45 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A143624600949006DAD45 /* StateType.swift */; };
 		662922F42423AFFE0041157D /* MyBookingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */; };
 		662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */; };
 		662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167823C3E4B200A3695E /* TransactionsPresenter.swift */; };
@@ -558,6 +578,26 @@
 
 /* Begin PBXFileReference section */
 		28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hi5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		660A1408245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChechOutSessionDetailsServicesEndpoint.swift; sourceTree = "<group>"; };
+		660A140A24600376006DAD45 /* PlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTableViewCell.swift; sourceTree = "<group>"; };
+		660A140B24600376006DAD45 /* PlayersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersTableViewCell.xib; sourceTree = "<group>"; };
+		660A140F246005A6006DAD45 /* MyWalletConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletConfiguration.swift; sourceTree = "<group>"; };
+		660A1410246005A6006DAD45 /* MyWalletPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletPresenter.swift; sourceTree = "<group>"; };
+		660A1411246005A6006DAD45 /* MyWalletRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletRouter.swift; sourceTree = "<group>"; };
+		660A1412246005A6006DAD45 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
+		660A1413246005A6006DAD45 /* MyWalletInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletInteractor.swift; sourceTree = "<group>"; };
+		660A1414246005A6006DAD45 /* MyWalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletModel.swift; sourceTree = "<group>"; };
+		660A1415246005A6006DAD45 /* MyWalletViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyWalletViewController.xib; sourceTree = "<group>"; };
+		660A1416246005A6006DAD45 /* MyWalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletManager.swift; sourceTree = "<group>"; };
+		660A14252460066D006DAD45 /* MyWalletEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletEndpoint.swift; sourceTree = "<group>"; };
+		660A1427246006D3006DAD45 /* WalletTransActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTransActionsTableViewCell.swift; sourceTree = "<group>"; };
+		660A1428246006D3006DAD45 /* WalletTransActionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletTransActionsTableViewCell.xib; sourceTree = "<group>"; };
+		660A142C24600822006DAD45 /* ActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		660A142E24600873006DAD45 /* MiddlewareType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareType.swift; sourceTree = "<group>"; };
+		660A1430246008A3006DAD45 /* ModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelType.swift; sourceTree = "<group>"; };
+		660A1432246008F2006DAD45 /* ReducerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerType.swift; sourceTree = "<group>"; };
+		660A14342460091E006DAD45 /* RenderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderType.swift; sourceTree = "<group>"; };
+		660A143624600949006DAD45 /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
 		662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsEndpoint.swift; sourceTree = "<group>"; };
 		662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsConfiguration.swift; sourceTree = "<group>"; };
 		662A167823C3E4B200A3695E /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
@@ -1130,6 +1170,85 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		660A140E24600584006DAD45 /* MyWallet */ = {
+			isa = PBXGroup;
+			children = (
+				660A141F246005B0006DAD45 /* Contract */,
+				660A1420246005BF006DAD45 /* Presenter */,
+				660A1421246005C9006DAD45 /* Router */,
+				660A1422246005D8006DAD45 /* View */,
+				660A1423246005E0006DAD45 /* Interactor */,
+				660A1424246005EE006DAD45 /* Services */,
+			);
+			path = MyWallet;
+			sourceTree = "<group>";
+		};
+		660A141F246005B0006DAD45 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				660A140F246005A6006DAD45 /* MyWalletConfiguration.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		660A1420246005BF006DAD45 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				660A1410246005A6006DAD45 /* MyWalletPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		660A1421246005C9006DAD45 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				660A1411246005A6006DAD45 /* MyWalletRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		660A1422246005D8006DAD45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				660A1412246005A6006DAD45 /* MyWalletViewController.swift */,
+				660A1415246005A6006DAD45 /* MyWalletViewController.xib */,
+				660A1427246006D3006DAD45 /* WalletTransActionsTableViewCell.swift */,
+				660A1428246006D3006DAD45 /* WalletTransActionsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		660A1423246005E0006DAD45 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				660A1413246005A6006DAD45 /* MyWalletInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		660A1424246005EE006DAD45 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				660A1414246005A6006DAD45 /* MyWalletModel.swift */,
+				660A1416246005A6006DAD45 /* MyWalletManager.swift */,
+				660A14252460066D006DAD45 /* MyWalletEndpoint.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		660A142B24600800006DAD45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				660A142C24600822006DAD45 /* ActionType.swift */,
+				660A142E24600873006DAD45 /* MiddlewareType.swift */,
+				660A1430246008A3006DAD45 /* ModelType.swift */,
+				660A1432246008F2006DAD45 /* ReducerType.swift */,
+				660A14342460091E006DAD45 /* RenderType.swift */,
+				660A143624600949006DAD45 /* StateType.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		662A167623C3E2B200A3695E /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1557,6 +1676,7 @@
 			children = (
 				663117A4243F25D7007C3FED /* CheckOutSessionDetailsManager.swift */,
 				663117A5243F25D7007C3FED /* CheckOutSessionDetailsModel.swift */,
+				660A1408245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift */,
 			);
 			path = ChechOutSessionDetailsServices;
 			sourceTree = "<group>";
@@ -1810,6 +1930,7 @@
 		66340A1023B4CAB8009DB30A /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				660A140E24600584006DAD45 /* MyWallet */,
 				667E4B6623C3DC78007354A7 /* MakeWalletPassword */,
 				667E4B7723C3E150007354A7 /* AddFund */,
 				662A167623C3E2B200A3695E /* Transactions */,
@@ -1863,6 +1984,7 @@
 		66340A1423B4DB3C009DB30A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				660A142B24600800006DAD45 /* View */,
 				6682B383242985910050CC9A /* SliderView */,
 				66340A1523B4DB4E009DB30A /* CommonUIView */,
 				66AEC5DE242266AF003CF2EB /* CalenderCell */,
@@ -2383,6 +2505,8 @@
 			children = (
 				66545F90243B61AC007A547F /* PublicEventDetailsViewController.swift */,
 				66545F93243B61AC007A547F /* PublicEventDetailsViewController.xib */,
+				660A140A24600376006DAD45 /* PlayersTableViewCell.swift */,
+				660A140B24600376006DAD45 /* PlayersTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4450,6 +4574,7 @@
 				86BBEE5E23CB5F840036C41D /* CreatePasswordViewController.xib in Resources */,
 				663117D4243F25D7007C3FED /* CheckOutSessionDetailsViewController.xib in Resources */,
 				6663364723B402F7004E537C /* LoginViewController.xib in Resources */,
+				660A141D246005A6006DAD45 /* MyWalletViewController.xib in Resources */,
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
 				66AEC601242266B0003CF2EB /* FilterResultViewController.xib in Resources */,
 				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
@@ -4485,6 +4610,7 @@
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
 				66AEC632242283B4003CF2EB /* MyBookingsTableViewCell.xib in Resources */,
+				660A140D24600376006DAD45 /* PlayersTableViewCell.xib in Resources */,
 				667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */,
 				6631178E243F254F007C3FED /* SuggestFieldDetailsViewController.xib in Resources */,
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
@@ -4505,6 +4631,7 @@
 				6682B3C52429924D0050CC9A /* SechaduleViewController.xib in Resources */,
 				E2FAE5D4240E649E00CD8CFC /* PublicEventsViewController.xib in Resources */,
 				66545F9B243B61AC007A547F /* PublicEventDetailsViewController.xib in Resources */,
+				660A142A246006D3006DAD45 /* WalletTransActionsTableViewCell.xib in Resources */,
 				861CA2F823F40D45004FC02F /* TypeCollectionViewCell.xib in Resources */,
 				66AEC60C242266B0003CF2EB /* SelectSportCell.xib in Resources */,
 				862EB5B223D730AD00508F1A /* DateOfBirthViewController.xib in Resources */,
@@ -4603,6 +4730,7 @@
 				668C210C23C3F5BC00C009A9 /* AddSessionResultManager.swift in Sources */,
 				86DC11E623D5C19100E577D9 /* EditProfileManager.swift in Sources */,
 				861D22EA23DCAFB9004F16F1 /* LibraryRouter.swift in Sources */,
+				660A1429246006D3006DAD45 /* WalletTransActionsTableViewCell.swift in Sources */,
 				668C212823C3F6E200C009A9 /* LeaveCommentInCommentListConfiguration.swift in Sources */,
 				662A16E823C3ECE000A3695E /* MyFriendsRequestRouter.swift in Sources */,
 				66AEC604242266B0003CF2EB /* CalenderCell.swift in Sources */,
@@ -4648,6 +4776,7 @@
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
 				E2FAE5B3240E648300CD8CFC /* SocialCell.swift in Sources */,
 				8608423A23DC815200BA87D7 /* SearchLocationViewController.swift in Sources */,
+				660A1431246008A3006DAD45 /* ModelType.swift in Sources */,
 				6683E2FC23BCEEB300250702 /* HelpCenterViewController.swift in Sources */,
 				668C210623C3F5BC00C009A9 /* AddSessionResultPresenter.swift in Sources */,
 				668C213B23C3F6F700C009A9 /* CommentListsViewController.swift in Sources */,
@@ -4697,6 +4826,7 @@
 				6682B3C22429924D0050CC9A /* SechaduleConfiguration.swift in Sources */,
 				6631179A243F254F007C3FED /* FieldOwnerDetailsConfiguration.swift in Sources */,
 				66AEC5FF242266B0003CF2EB /* FilterResultInteractor.swift in Sources */,
+				660A141A246005A6006DAD45 /* MyWalletViewController.swift in Sources */,
 				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
 				668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */,
 				860EFCA82401671100B40901 /* ShowDetailsConfiguration.swift in Sources */,
@@ -4740,6 +4870,7 @@
 				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
 				66311782243F254E007C3FED /* SuggestFieldConfiguration.swift in Sources */,
 				6663363423B40298004E537C /* UserAccountModel.swift in Sources */,
+				660A140C24600376006DAD45 /* PlayersTableViewCell.swift in Sources */,
 				66AEC62424227B3D003CF2EB /* MyBookingsInteractor.swift in Sources */,
 				66311797243F254F007C3FED /* FieldOwnerDetailsRouter.swift in Sources */,
 				E2FAE5D7240E649E00CD8CFC /* PublicEventsRouter.swift in Sources */,
@@ -4777,6 +4908,7 @@
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				66311786243F254E007C3FED /* SuggestFieldDetailsInteractor.swift in Sources */,
 				663117E5243F25D7007C3FED /* WalletSuccessCheckOutPresenter.swift in Sources */,
+				660A1433246008F2006DAD45 /* ReducerType.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
 				862EB5AF23D730AD00508F1A /* DateOfBirthViewController.swift in Sources */,
 				861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */,
@@ -4798,6 +4930,7 @@
 				86BBEE5823CB5F840036C41D /* CreatePasswordConfiguration.swift in Sources */,
 				668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */,
 				6663363023B40298004E537C /* UserAccountPresenter.swift in Sources */,
+				660A1418246005A6006DAD45 /* MyWalletPresenter.swift in Sources */,
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
 				E2FAE5D3240E649E00CD8CFC /* PublicEventsViewController.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
@@ -4823,6 +4956,7 @@
 				66545F99243B61AC007A547F /* PublicEventDetailsInteractor.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
 				861D22D623DCAEF5004F16F1 /* GalleryInteractor.swift in Sources */,
+				660A1419246005A6006DAD45 /* MyWalletRouter.swift in Sources */,
 				8608423823DC815200BA87D7 /* SearchLocationPresenter.swift in Sources */,
 				E2FAE5B6240E648300CD8CFC /* SocialHeaderCell.swift in Sources */,
 				668C212923C3F6E200C009A9 /* LeaveCommentInCommentListPresenter.swift in Sources */,
@@ -4838,6 +4972,7 @@
 				6683E30E23BCEEFF00250702 /* ProfileModel.swift in Sources */,
 				6683E2B623BB631D00250702 /* NotificationSettingPresenter.swift in Sources */,
 				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
+				660A1417246005A6006DAD45 /* MyWalletConfiguration.swift in Sources */,
 				6683E30B23BCEEFF00250702 /* ProfileRouter.swift in Sources */,
 				663117EC243F268E007C3FED /* ServicesCell.swift in Sources */,
 				66311784243F254E007C3FED /* SuggestFieldDetailsPresenter.swift in Sources */,
@@ -4846,6 +4981,7 @@
 				6682B389242985920050CC9A /* NextView.swift in Sources */,
 				662A16A423C3E80900A3695E /* MemberOfFriendsRouter.swift in Sources */,
 				6683E31A23BCEF1600250702 /* SideMenuPresenter.swift in Sources */,
+				660A141B246005A6006DAD45 /* MyWalletInteractor.swift in Sources */,
 				66AEC62724227B3D003CF2EB /* MyBookingsManager.swift in Sources */,
 				663117E1243F25D7007C3FED /* WalletSuccessCheckOutModel.swift in Sources */,
 				662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */,
@@ -4856,6 +4992,8 @@
 				86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */,
 				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
 				66311796243F254F007C3FED /* FieldOwnerDetailsEndPoint.swift in Sources */,
+				660A141C246005A6006DAD45 /* MyWalletModel.swift in Sources */,
+				660A1409245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift in Sources */,
 				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
 				66AEC608242266B0003CF2EB /* FilterResultRouter.swift in Sources */,
@@ -4952,6 +5090,7 @@
 				86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */,
 				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
 				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
+				660A142F24600873006DAD45 /* MiddlewareType.swift in Sources */,
 				662A16B723C3E93900A3695E /* MyFriendsDetailsInteractor.swift in Sources */,
 				862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */,
 				668C211923C3F6C100C009A9 /* CheckOutPresenter.swift in Sources */,
@@ -4964,6 +5103,7 @@
 				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
 				86BBEE5D23CB5F840036C41D /* CreatePasswordModel.swift in Sources */,
+				660A142D24600822006DAD45 /* ActionType.swift in Sources */,
 				662A16A223C3E80900A3695E /* MemberOfFriendsConfiguration.swift in Sources */,
 				8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */,
 				86F9B91123DDAAA5008C1F80 /* LocationManager.swift in Sources */,
@@ -5002,6 +5142,7 @@
 				663117DD243F25D7007C3FED /* SessionDetailsInteractor.swift in Sources */,
 				860EFCAA2401671100B40901 /* ShowDetailsRouter.swift in Sources */,
 				86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */,
+				660A141E246005A6006DAD45 /* MyWalletManager.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
 				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
 				6631177E243F254E007C3FED /* SuggestFieldRouter.swift in Sources */,
@@ -5027,6 +5168,7 @@
 				86DC11E423D5C19100E577D9 /* EditProfileModel.swift in Sources */,
 				662A169223C3E75400A3695E /* MyFavoriteFriendsPresenter.swift in Sources */,
 				667E4B8123C3E169007354A7 /* AddFundPresenter.swift in Sources */,
+				660A143724600949006DAD45 /* StateType.swift in Sources */,
 				663117E7243F25D7007C3FED /* WalletSuccessCheckOutViewController.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
 				66AEC60A242266B0003CF2EB /* FilterResultManager.swift in Sources */,
@@ -5040,6 +5182,7 @@
 				662A169623C3E75400A3695E /* MyFavoriteFriendsModel.swift in Sources */,
 				663117E2243F25D7007C3FED /* WalletSuccessCheckOutManager.swift in Sources */,
 				668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */,
+				660A14262460066D006DAD45 /* MyWalletEndpoint.swift in Sources */,
 				6683E30C23BCEEFF00250702 /* ProfileViewController.swift in Sources */,
 				662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */,
 				663117D6243F25D7007C3FED /* SessionDetailsConfiguration.swift in Sources */,
@@ -5050,6 +5193,7 @@
 				86F9B90E23DDAAA5008C1F80 /* LocationInteractor.swift in Sources */,
 				6683E2FA23BCEEB300250702 /* HelpCenterPresenter.swift in Sources */,
 				667E4B7123C3DCA3007354A7 /* MakeWalletPasswordRouter.swift in Sources */,
+				660A14352460091E006DAD45 /* RenderType.swift in Sources */,
 				861D22E923DCAFB9004F16F1 /* LibraryPresenter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 				86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */,
@@ -5192,7 +5336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.6;
+				CURRENT_PROJECT_VERSION = 1.0.12;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5215,7 +5359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.6;
+				CURRENT_PROJECT_VERSION = 1.0.12;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -10,14 +10,15 @@
 
 import UIKit
 
-struct FilterResultModel {	
-	struct Request {
-		func parameters() -> [String: Any]? {
-			return nil
-		}
-	}
+struct FilterResultModel {
+    struct Request {
+        func parameters() -> [String: Any]? {
+            return nil
+        }
+    }
+    
 
-	struct FilterSessionResponse: Codable {
+    struct FilterSessionResponse: Codable {
         let status: Bool?
         let fields: [FilterField]?
     }

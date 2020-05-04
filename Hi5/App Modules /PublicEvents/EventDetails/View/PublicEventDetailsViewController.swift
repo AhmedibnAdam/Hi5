@@ -22,6 +22,7 @@ class PublicEventDetailsViewController: UIViewController {
     var router: IPublicEventDetailsRouter?
     
     var field_id: String?
+    var fieldData: PublicEventDetailsModel.PublicEventDetails?
     
     @IBOutlet weak var noOfPlayerSlider: UISlider!
     @IBOutlet weak var sliderLableP: UILabel!
@@ -43,12 +44,19 @@ class PublicEventDetailsViewController: UIViewController {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var dat3: UILabel!
     @IBOutlet weak var creator: UILabel!
+    @IBOutlet weak var paymentMetod: UILabel!
     @IBOutlet weak var creatorImage: UIImageView!
+    @IBOutlet weak var playerNumbers: UILabel!
+    @IBOutlet weak var cost: UILabel!
+    @IBOutlet weak var refundStack: UIStackView!
+    @IBOutlet weak var refunbootomLineView: UIView!
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // do someting...
         initView()
+        registerTableCell()
         
     }
     override func viewWillAppear(_ animated: Bool){
@@ -66,10 +74,16 @@ class PublicEventDetailsViewController: UIViewController {
         
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
     }
+    @IBAction func join(_ sender: UIButton) {
+        router?.navigateToCheckOutSessionDetails(field: self.fieldData!)
+    }
+    
     @IBAction func backBtnTapped(_ sender: UIButton) {
         //   router?.navigateToFields()
         self.dismiss()
     }
+    
+    
 }
 
 extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
@@ -79,6 +93,8 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
     }
     func showDetailsResponse(response: PublicEventDetailsModel.PublicEventDetails){
         let field = response.publicEvent
+        self.fieldData = response
+        tableView.reloadData()
         name.text = field.fieldName
         noOfPlayerSlider.value = Float(field.playersNumber!)
         sliderLableP.text = "\(field.playersNumber ?? 1)"
@@ -92,12 +108,12 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
         }
         
         location.text = field.address
-        //        descreption.text = field.
+        descreption.text = ""
         sportsType.text = field.sportType
         fieldType.text = field.fieldType
         fieldSize.text = field.fieldSize
         gender.text = field.gender
-        guranteed.text = "\(String(describing: field.guaranteedRefundTime!)) days before"
+        guranteed.text = "\(String(describing: field.guaranteedRefundTime!)) hour before"
         time.text = "\(String(describing: field.startTime!)) - \(String(describing: field.endTime!))"
         dat3.text = field.date
         status.text = field.status
@@ -106,8 +122,17 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
             let url = URL(string: image2)
             creatorImage.kf.setImage(with: url)
         }
-        
-        
+        playerNumbers.text = "\(String(describing: field.players?.count ?? 0 )) members"
+        paymentMetod.text = "Payment method: " + field.payment!
+        if field.payment == "cash"{
+            refundStack.isHidden = true
+            refunbootomLineView.isHidden = true
+        }
+        else{
+            refundStack.isHidden = false
+            refunbootomLineView.isHidden = false
+
+        }
     }
 }
 
@@ -115,6 +140,20 @@ extension PublicEventDetailsViewController {
     // do someting...
 }
 
-extension PublicEventDetailsViewController {
-    // do someting...
+extension PublicEventDetailsViewController:  UITableViewDelegate , UITableViewDataSource {
+    func registerTableCell() {
+        let cell = UINib(nibName: "PlayersTableViewCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "PlayersTableViewCell")
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.fieldData?.publicEvent.players?.count ?? 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayersTableViewCell") as! PlayersTableViewCell
+        let player = self.fieldData?.publicEvent.players?[indexPath.row]
+        cell.name.text = player?.name
+        cell.userName.text = player?.userName
+      
+        return cell
+    }
 }

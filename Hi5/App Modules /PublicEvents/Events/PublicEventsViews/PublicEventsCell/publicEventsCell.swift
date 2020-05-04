@@ -62,11 +62,11 @@ class publicEventsCell: UICollectionViewCell {
         self.sliderLableP.text = "\((filteredPublicEventData?.joinedCount!) ?? 1)"
         
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
-        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value - 0.9)
+        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
         
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
-        cost.text = filteredPublicEventData?.cost
-        if filteredPublicEventData?.cost == "free" || filteredPublicEventData?.cost == "Free"{
+        cost.text = "\(String(describing: filteredPublicEventData?.cost ?? 0))"
+        if filteredPublicEventData?.cost == 0 {
             currancy.isHidden = true
         }
         else{

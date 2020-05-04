@@ -11,18 +11,20 @@
 import UIKit
 
 protocol IFilterResultInteractor: class {
-	var parameters: [String: Any]? { get set }
+    var parameters: [String: Any]? { get set }
     func filterSession(view : UIViewController , parameter: [String: Any])
+    func chechAvalabilty(view : UIViewController , parameter: [String: Any])
 }
 
 class FilterResultInteractor: IFilterResultInteractor {
+
     var presenter: IFilterResultPresenter?
     var manager: IFilterResultManager?
     var parameters: [String: Any]?
 
     init(presenter: IFilterResultPresenter, manager: IFilterResultManager) {
-    	self.presenter = presenter
-    	self.manager = manager
+        self.presenter = presenter
+        self.manager = manager
     }
     func filterSession(view: UIViewController, parameter: [String : Any]) {
         manager?.filterSessionFromApi(parameter: parameter, complition: { (error, success, response) in
@@ -45,4 +47,27 @@ class FilterResultInteractor: IFilterResultInteractor {
             }
         })
     }
+    
+    func chechAvalabilty(view: UIViewController, parameter: [String : Any]) {
+        manager?.filterSessionFromApi(parameter: parameter, complition: { (error, success, response) in
+            if (success == true) {
+                guard let response = response else {return}
+                if (response.fields?.count != 0){
+                    self.presenter?.removeNoFields()
+                    self.presenter?.hideIndicator()
+                    self.presenter?.showTableView()
+                    self.presenter?.showResponse(response: response)
+                } else {
+                    self.presenter?.hideIndicator()
+                    self.presenter?.hideTableView()
+                    self.presenter?.showNoFields()
+                }
+            } else {
+                self.presenter?.hideTableView()
+                self.presenter?.hideIndicator()
+                self.presenter?.showErrorAlert(title: "Error", msg: "Something Wrong")
+            }
+        })
+    }
+
 }

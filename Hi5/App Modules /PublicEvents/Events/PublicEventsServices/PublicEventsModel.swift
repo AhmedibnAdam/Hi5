@@ -10,13 +10,13 @@
 
 import UIKit
 
-struct PublicEventsModel {	
-	struct Request {
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
-	}
+struct PublicEventsModel {
+    struct Request {
+        func parameters() -> [String: Any]? {
+            // do someting...
+            return nil
+        }
+    }
     // MARK: - PublicEventResponse
     struct PublicEventResponse: Codable {
         let status: Bool
@@ -25,33 +25,44 @@ struct PublicEventsModel {
 
     // MARK: - PublicEvent
     struct PublicEvent: Codable {
+//        let id, fieldName: String?
+//        let fieldImage: String?
+//        let bestFor, address, partnerName: String?
+//        let partnerImage: String?
+//        let playersNumber, joinedCount: Int?
+//        let cost, gender, day, date: String?
+//        let startTime, endTime, sportType, groupName: String?
+//        let age: Int?
+//        let payment: String?
+//        let points: Int?
+        
         let id, fieldName: String?
-        let fieldImage: String?
-        let bestFor, address, partnerName: String?
-        let partnerImage: String?
-        let playersNumber, joinedCount: Int?
-        let cost, gender, day, date: String?
-        let startTime, endTime, sportType, groupName: String?
-        let age: Int?
-        let payment: String?
-        let points: Int?
+           let fieldImage: String?
+           let bestFor, address, partnerName: String?
+           let partnerImage: String?
+           let playersNumber, joinedCount, cost: Int?
+           let gender, day, date, startTime: String?
+           let endTime, sportType, groupName: String?
+           let age: Int?
+           let payment: String?
+           let points: Int?
 
         enum CodingKeys: String, CodingKey {
-            case id
-            case fieldName = "field_name"
-            case fieldImage = "field_image"
-            case bestFor = "best_for"
-            case address
-            case partnerName = "partner_name"
-            case partnerImage = "partner_image"
-            case playersNumber = "players_number"
-            case joinedCount = "joined_count"
-            case cost, gender, day, date
-            case startTime = "start_time"
-            case endTime = "end_time"
-            case sportType = "sport_type"
-            case groupName = "group_name"
-            case age, payment, points
+               case id
+                 case fieldName = "field_name"
+                 case fieldImage = "field_image"
+                 case bestFor = "best_for"
+                 case address
+                 case partnerName = "partner_name"
+                 case partnerImage = "partner_image"
+                 case playersNumber = "players_number"
+                 case joinedCount = "joined_count"
+                 case cost, gender, day, date
+                 case startTime = "start_time"
+                 case endTime = "end_time"
+                 case sportType = "sport_type"
+                 case groupName = "group_name"
+                 case age, payment, points
         }
     }
 

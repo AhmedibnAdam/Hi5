@@ -11,13 +11,17 @@
 import UIKit
 
 protocol IPublicEventDetailsRouter: class {
-	// do someting...
+    func navigateToCheckOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails)
 }
 
-class PublicEventDetailsRouter: IPublicEventDetailsRouter {	
-	weak var view: PublicEventDetailsViewController?
-	
-	init(view: PublicEventDetailsViewController?) {
-		self.view = view
-	}
+class PublicEventDetailsRouter: IPublicEventDetailsRouter {
+    weak var view: PublicEventDetailsViewController?
+    
+    init(view: PublicEventDetailsViewController?) {
+        self.view = view
+    }
+    func navigateToCheckOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.checkOutSessionDetails(field: field ,session: nil), completion: nil)
+    }
+
 }

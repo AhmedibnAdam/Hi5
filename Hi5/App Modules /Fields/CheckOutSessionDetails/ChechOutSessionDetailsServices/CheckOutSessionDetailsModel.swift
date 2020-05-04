@@ -10,17 +10,26 @@
 
 import UIKit
 
-struct CheckOutSessionDetailsModel {	
-	struct Request {
-		// do someting...
+struct CheckOutSessionDetailsModel {
+    struct Request {
+        // do someting...
 
-		func parameters() -> [String: Any]? {
-			// do someting...
-			return nil
-		}
-	}
+        func parameters() -> [String: Any]? {
+            // do someting...
+            return nil
+        }
+    }
 
-	struct Response {
-		// do someting...
-	}
+    // MARK: - PublicEventDetailsJoin
+    struct PublicEventDetailsJoin: Codable {
+        let status: Bool
+        let joined: Joined
+    }
+
+    // MARK: - Joined
+    struct Joined: Codable {
+        let id: Int
+        let payment, status: String
+    }
+
 }

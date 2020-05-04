@@ -173,6 +173,7 @@ extension SideMenuViewController {
             router?.navigateToFields()
         } else if(indexPath.row == 4){
             print("wallet...")
+            router?.navigatetoMyWallet()
         } else if(indexPath.row == 5){
             print("Suggest Field...")
             router?.navigateToSuggestedField()

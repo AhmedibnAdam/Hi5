@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ISessionDetailsViewController: class {
-	var router: ISessionDetailsRouter? { get set }
+    var router: ISessionDetailsRouter? { get set }
     func showAlert(title: String, msg: String)
     func showResponse(response: SessionDetailsModel.SessionDetailsResponse)
     func showResponseFromContacts(response: SessionDetailsModel.FieldContactsResponse)
@@ -19,9 +19,9 @@ protocol ISessionDetailsViewController: class {
 
 class SessionDetailsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
 
-	var interactor: ISessionDetailsInteractor?
-	var router: ISessionDetailsRouter?
-    
+    var interactor: ISessionDetailsInteractor?
+    var router: ISessionDetailsRouter?
+    var sessionData: SessionDetailsModel.SessionDetailsResponse?
     //MARK: - Properties
     var payment: String?
     var id: Int?
@@ -57,7 +57,7 @@ class SessionDetailsViewController: UIViewController , UICollectionViewDelegate 
     @IBOutlet weak var contactBtn: UIButton!
     
     //MARK: - ViewLifeCycle
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -83,7 +83,7 @@ class SessionDetailsViewController: UIViewController , UICollectionViewDelegate 
             guard let id = id else {return}
             self.interactor?.fieldContacts(view: self, id: id)
         } else {
-           router?.navigateToCheckOutSessionDetails()
+            router?.navigateToCheckOutSessionDetails(session: sessionData!)
         }
     }
     
@@ -111,6 +111,7 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
         } else {
             contactBtn.setTitle("Booking Now", for: .normal)
         }
+        sessionData = response
         fieldName.text = field.name
         fieldAddressLbl.text = field.address
         descriptionLbl.text = field.fieldDescription
@@ -217,6 +218,11 @@ extension SessionDetailsViewController: UITableViewDelegate , UITableViewDataSou
         cell.nameLbl.text = fieldContact.name
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let fieldContact = fieldContacts[indexPath.row]
+        guard let number = URL(string: "tel://" + (fieldContact.phone ?? "")) else { return }
+        UIApplication.shared.open(number)
     }
     
 }

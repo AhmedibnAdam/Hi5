@@ -18,16 +18,16 @@ protocol IFilterResultRouter: class {
 class FilterResultRouter: IFilterResultRouter {
  
     
-	weak var view: FilterResultViewController?
-	
-	init(view: FilterResultViewController?) {
-		self.view = view
-	}
+    weak var view: FilterResultViewController?
+    
+    init(view: FilterResultViewController?) {
+        self.view = view
+    }
     func navigateToFilter() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
     }
       func navigateTosessionDetails(id: Int, payment: String, sessionId: Int) {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.sessionDetails(id: id, payment: payment, sessionId: sessionId), completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.sessionDetails(id: id, payment: payment, sessionId: sessionId), completion: nil)
        }
        
     

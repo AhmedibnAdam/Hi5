@@ -45,7 +45,7 @@ enum GeneralRoute: IRouter {
     case fields
     case showDetailsFields(field_id: String)
     case filter
-    case filterResult(param: [String: Any])
+    case filterResult(param: [String: Any], type:String)
     case myBooking
     case mySechadule
     case publicEvents(event_id: String)
@@ -54,8 +54,9 @@ enum GeneralRoute: IRouter {
     case suggestFieldDetails(latitude: Double , longitude: Double)
     case fieldOwnerDetails(param: [String: Any] , images: [UIImage])
     case sessionDetails(id: Int , payment: String , sessionId: Int)
-    case checkOutSessionDetails
+    case checkOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails? , session: SessionDetailsModel.SessionDetailsResponse?)
     case walletSuccessCheckOut
+    case MyWallet
     
 }
 
@@ -125,8 +126,8 @@ extension GeneralRoute {
             return ShowDetailsConfiguration.setup(field: field_id)
         case .filter:
             return FilterConfiguration.setup()
-        case .filterResult(let param):
-            return FilterResultConfiguration.setup(param: param)
+        case .filterResult(let param , let type):
+            return FilterResultConfiguration.setup(parameters: param, type: type)
         case .myBooking:
             return MyBookingsConfiguration.setup()
         case .mySechadule:
@@ -144,10 +145,12 @@ extension GeneralRoute {
                 return FieldOwnerDetailsConfiguration.setup(param: param, images: images)
             case .sessionDetails(let id , let payment , let sessionId):
                 return SessionDetailsConfiguration.setup(id: id, payment: payment , sessionId: sessionId)
-            case .checkOutSessionDetails:
-                return CheckOutSessionDetailsConfiguration.setup()
+            case .checkOutSessionDetails(let field , let session):
+                return CheckOutSessionDetailsConfiguration.setup(field: field , session: session)
             case .walletSuccessCheckOut:
                 return WalletSuccessCheckOutConfiguration.setup()
+        case .MyWallet :
+                return MyWalletConfiguration.setup()
         }
     }
 }

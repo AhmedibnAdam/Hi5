@@ -55,6 +55,10 @@ class publicEventsCell: UICollectionViewCell {
             partnerImage.kf.setImage(with: url)
             
         }
+        else {
+            let url = URL(string: "https://pngimage.net/wp-content/uploads/2018/05/default-png-6.png") 
+             partnerImage.kf.setImage(with: url)
+        }
         partnerName.text = filteredPublicEventData?.fieldName
         playerNumbers.text = "\(filteredPublicEventData?.playersNumber ?? 1) Players"
         bestFor.text = filteredPublicEventData?.bestFor
@@ -77,7 +81,7 @@ class publicEventsCell: UICollectionViewCell {
         date.text = filteredPublicEventData?.date
         starttime.text = filteredPublicEventData?.startTime
         endTime.text = filteredPublicEventData?.endTime
-        age.text = (filteredPublicEventData?.groupName ?? "") + " \(filteredPublicEventData?.age! ?? 0)"
+        age.text = (filteredPublicEventData?.groupName ?? "") //+ " \(filteredPublicEventData?.age! ?? 0)"
         points.text = "\(filteredPublicEventData?.points! ?? 0)"
         
     }

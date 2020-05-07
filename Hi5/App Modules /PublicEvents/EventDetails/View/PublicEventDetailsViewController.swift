@@ -38,7 +38,7 @@ class PublicEventDetailsViewController: UIViewController {
     @IBOutlet weak var fieldSize: UILabel!
     @IBOutlet weak var gender: UILabel!
     @IBOutlet weak var bestFor: UILabel!
-    @IBOutlet weak var availableFor: UILabel!
+    @IBOutlet weak var age: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var guranteed: UILabel!
     @IBOutlet weak var time: UILabel!
@@ -95,36 +95,37 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
         let field = response.publicEvent
         self.fieldData = response
         tableView.reloadData()
-        name.text = field.fieldName
-        noOfPlayerSlider.value = Float(field.playersNumber!)
-        sliderLableP.text = "\(field.playersNumber ?? 1)"
+        name.text = field?.fieldName
+        age.text  = field?.groupName
+        noOfPlayerSlider.value = Float((field?.playersNumber!)!)
+        sliderLableP.text = "\(field?.playersNumber ?? 1)"
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
         
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
-        if let image = field.fieldImage {
+        if let image = field?.fieldImage {
             let url = URL(string: image)
             fieldImage.kf.setImage(with: url)
         }
         
-        location.text = field.address
+        location.text = field?.address
         descreption.text = ""
-        sportsType.text = field.sportType
-        fieldType.text = field.fieldType
-        fieldSize.text = field.fieldSize
-        gender.text = field.gender
-        guranteed.text = "\(String(describing: field.guaranteedRefundTime!)) hour before"
-        time.text = "\(String(describing: field.startTime!)) - \(String(describing: field.endTime!))"
-        dat3.text = field.date
-        status.text = field.status
-        creator.text = field.createrName
-        if let image2 = field.partnerImage {
+        sportsType.text = field?.sportType
+        fieldType.text = field?.fieldType
+        fieldSize.text = field?.fieldSize
+        gender.text = field?.gender
+        guranteed.text = "\(String(describing: field?.guaranteedRefundTime ?? 0)) hour before"
+        time.text = "\(String(describing: field?.startTime ?? "")) - \(String(describing: field?.endTime ?? ""))"
+        dat3.text = field?.date
+        status.text = field?.status
+        creator.text = field?.createrName
+        if let image2 = field?.partnerImage {
             let url = URL(string: image2)
             creatorImage.kf.setImage(with: url)
         }
-        playerNumbers.text = "\(String(describing: field.players?.count ?? 0 )) members"
-        paymentMetod.text = "Payment method: " + field.payment!
-        if field.payment == "cash"{
+        playerNumbers.text = "\(String(describing: field?.players?.count ?? 0 )) members"
+        paymentMetod.text = "Payment method: " + (field?.payment!)!
+        if field?.payment == "cash"{
             refundStack.isHidden = true
             refunbootomLineView.isHidden = true
         }
@@ -146,11 +147,11 @@ extension PublicEventDetailsViewController:  UITableViewDelegate , UITableViewDa
         tableView.register(cell, forCellReuseIdentifier: "PlayersTableViewCell")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.fieldData?.publicEvent.players?.count ?? 0
+        return self.fieldData?.publicEvent?.players?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayersTableViewCell") as! PlayersTableViewCell
-        let player = self.fieldData?.publicEvent.players?[indexPath.row]
+        let player = self.fieldData?.publicEvent?.players?[indexPath.row]
         cell.name.text = player?.name
         cell.userName.text = player?.userName
       

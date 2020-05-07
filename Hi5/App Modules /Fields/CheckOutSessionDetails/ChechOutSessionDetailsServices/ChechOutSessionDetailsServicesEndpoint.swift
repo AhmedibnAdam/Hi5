@@ -69,7 +69,7 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
         }
         */
             let defaults = UserDefaults.standard
-                        let token = defaults.string(forKey: "Token")
+            let token = defaults.string(forKey: "Token")
                         return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
         
     }

@@ -31,11 +31,12 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     var memberOfFields = [FieldsModel.MemberShipField]()
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
+    var lat: Double?
+    var long: Double?
     var types = ["Nearby","Favourites","Member of"]
     var interactor: IFieldsInteractor?
     var router: IFieldsRouter?
-    var lat: Double?
-    var long: Double?
+
     var fieldsCount = 0
     var fieldsTabType = 0  // nearBy = 0 / favorite = 1 / member of = 2
     var firstTimeIn = 0

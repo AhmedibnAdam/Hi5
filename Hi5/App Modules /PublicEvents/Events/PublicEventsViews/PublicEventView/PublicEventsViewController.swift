@@ -10,6 +10,7 @@
 
 import UIKit
 import Kingfisher
+import CoreLocation
 
 
 protocol IPublicEventsViewController: class {
@@ -22,7 +23,7 @@ class PublicEventsViewController: UIViewController {
     
     
     //MARK:- Variables
-     let today = Date()
+    let today = Date()
     
     let cellAID = "cellAID"
     let cellBID = "CalenderCell"
@@ -32,7 +33,7 @@ class PublicEventsViewController: UIViewController {
     var previousScrollOffset: CGFloat = 0
     var previousScrollViewHeight: CGFloat = 0
     var filteredPublicEventData: PublicEventsModel.PublicEventResponse?
-     var delegate: PublicEventControllerDelegate?
+    var delegate: PublicEventControllerDelegate?
     var weekDays:[String] = []
     var daysArray:[String] = []
     var monthes:[String] = []
@@ -41,10 +42,13 @@ class PublicEventsViewController: UIViewController {
     var dayMonth: [String] = []
     var dayIsSelected = Array(repeating: false, count: 14)
     var sliderLableP = UILabel()
-     var selectedDay: String?
-
-
-
+    var selectedDay: String?
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    var lat: Double?
+    var long: Double?
+    
+    
     
     var interactor: IPublicEventsInteractor?
     var router: IPublicEventsRouter?
@@ -59,66 +63,96 @@ class PublicEventsViewController: UIViewController {
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var year: UILabel!
     lazy var buttonSlideBar: UIBarButtonItem = {
-          return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
-      }()
+        return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
+    }()
     
     //MARK:-viewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
         
         setUpUI()
         configure()
- 
+        
     }
     override func viewWillAppear(_ animated: Bool){
-    
-          setUP()
-           getFilteredPublicEvent()
+        
+        setUP()
+        getFilteredPublicEvent()
+        
+        getCurrentLocation()
+        
+    }
+    func getCurrentLocation() {
+        locationManager.delegate = self
+        
+        // For use when the app is open
+        locationManager.requestWhenInUseAuthorization()
+        
+        // If location services is enabled get the users location
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // You can change the locaiton accuary here.
+        locationManager.startUpdatingLocation()
+        
+        var latitude: Double? {
+            if let text = lat {
+                return Double(text)
+            } else {
+                return nil
+            }
+        }
+        
+        var longitude: Double? {
+            if let text = long {
+                return Double(text)
+            } else {
+                return nil
+            }
+        }
     }
     
     func setUP(){
-     let images = ["ballinpitch", "ballinpitch", "ballinpitch", "ballinpitch"]
-       let imagesList = images.map{UIImage(named: $0)!}
-       
-       slider.list = imagesList
-//        self.slider.addSubview(sliderView)
+        let images = ["ballinpitch", "ballinpitch", "ballinpitch", "ballinpitch"]
+        let imagesList = images.map{UIImage(named: $0)!}
+        
+        slider.list = imagesList
+        //        self.slider.addSubview(sliderView)
         getDayName()
-              let date = Date()
-              let dateFormatter = DateFormatter()
-              let selectDay = date.getDate(dayDifference: 0)
-              dateFormatter.dateFormat = "yyyy-MM-dd"
-              selectedDay = dateFormatter.string(from: selectDay)
-              if let currentDay = selectedDay {
-//                  parameter["date"] = "2020-03-05"//currentDay
-//                  showIndicator()
-//                  removeNoFields()
-//                      interactor?.filterSession(view: self, parameter: parameter)
-              }
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        let selectDay = date.getDate(dayDifference: 0)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        selectedDay = dateFormatter.string(from: selectDay)
+        if let currentDay = selectedDay {
+            //                  parameter["date"] = "2020-03-05"//currentDay
+            //                  showIndicator()
+            //                  removeNoFields()
+            //                      interactor?.filterSession(view: self, parameter: parameter)
+        }
     }
     func getDayName() {
-          let date = Date()
-          let dateFormatter = DateFormatter()
-          for i in 1...14 {
-              let currentDate = date.getDate(dayDifference: i)
-              dateFormatter.dateFormat = "dd"
-              let dateInMonth = dateFormatter.string(from: currentDate - TimeInterval(i))
-              self.dayMonth.append(dateInMonth)
-              dateFormatter.dateFormat = "EEEE"
-              let dayInWeek = dateFormatter.string(from: currentDate - TimeInterval(i))
-              self.dayName.append(String(dayInWeek.prefix(3)))
-          }
-      }
-
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        for i in 1...14 {
+            let currentDate = date.getDate(dayDifference: i)
+            dateFormatter.dateFormat = "dd"
+            let dateInMonth = dateFormatter.string(from: currentDate - TimeInterval(i))
+            self.dayMonth.append(dateInMonth)
+            dateFormatter.dateFormat = "EEEE"
+            let dayInWeek = dateFormatter.string(from: currentDate - TimeInterval(i))
+            self.dayName.append(String(dayInWeek.prefix(3)))
+        }
+    }
     
-        //MARK:- setUp UI
+    
+    //MARK:- setUp UI
     func setUpUI(){
         getToday()
         get15DayaAfter()
         setupNavigationBar()
         registerCollectionCell()
         navigationItem.rightBarButtonItem?.image = UIImage(named: "notification", in: nil, with: nil)
-//        imageView.layer.cornerRadius = 5
+        //        imageView.layer.cornerRadius = 5
     }
     
     //MARK:- Configure
@@ -133,11 +167,11 @@ class PublicEventsViewController: UIViewController {
     }
     
     func getFilteredPublicEvent(){
-//        var vc = self
-//        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
+        //        var vc = self
+        //        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
         let params = ["date": selectedDay!,//  "2020-04-15" ,
-                      "latitude": "29.962696",
-                      "longitude": "31.276941"
+            "latitude": "\(/*self.lat ??*/ 29.95476)",
+            "longitude": "\(/*self.long ??*/ 31.2758)"
         ]
         self.interactor?.parameters = params
         self.interactor?.filterPublicEvent(view: self)
@@ -157,21 +191,21 @@ class PublicEventsViewController: UIViewController {
         month.text = splitString[2]
         year.text = splitString[3]
     }
-   func get15DayaAfter(){
+    func get15DayaAfter(){
         let upcomming15Days = Date.getDates(forLastNDays: 15)
-           print(upcomming15Days)
+        print(upcomming15Days)
         for days in upcomming15Days {
             var splitString = days.split(separator: ",").map(String.init)
             weekDays.append(splitString[0])
             splitString = days.split(separator: " ").map(String.init)
             daysArray.append(splitString[1])
-             monthes.append(splitString[2])
-             years.append(splitString[3])
+            monthes.append(splitString[2])
+            years.append(splitString[3])
         }
     }
 }
 //MARK:-Extensions
-extension PublicEventsViewController: IPublicEventsViewController {
+extension PublicEventsViewController: IPublicEventsViewController , CLLocationManagerDelegate {
     
     func setupNavigationBar() {
         navigationItem.title = "Public Events"
@@ -189,13 +223,30 @@ extension PublicEventsViewController: IPublicEventsViewController {
         print(response)
         self.filteredPublicEventData = response
         if response.publicEvents.count != 0 {
-            if let image = self.filteredPublicEventData?.publicEvents[0].fieldImage {
-                let url = URL(string: image)
-                //            self.imageView.kf.setImage(with: url)
-                
-            }
+            self.mainCollectionView.isHidden = false
             self.mainCollectionView.reloadData()
         }
+        else {
+            self.mainCollectionView.isHidden = true
+        }
+    }
+    // Print out the location to the console
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            //print(location.coordinate.latitude)
+            self.lat = location.coordinate.latitude
+            self.long = location.coordinate.longitude
+        }
+    }
+    
+    // If we have been deined access give the user the option to change it
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if(status == CLAuthorizationStatus.denied) {
+            print(status)
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("\(error.localizedDescription)")
     }
 }
 
@@ -239,25 +290,25 @@ extension PublicEventsViewController {
         self.mainCollectionView.contentOffset = CGPoint(x:1, y: 1)
         // there is something went unexplainable here, when do we I change the x and y to 0 the scroll became a little intermittent
     }
-//    func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
-//        month.text = self.monthes[indexPath.row]
-//        year.text = self.years[indexPath.row]
-//        if dayIsSelected[indexPath.row] {
-//            dayIsSelected[indexPath.row] = false
-//            cell.containerView.isHidden = dayIsSelected[indexPath.row]
-//            cell.dayLabel.font = UIFont.boldSystemFont(ofSize: 16)
-//            cell.weekDayLabel.font = UIFont.boldSystemFont(ofSize: 10)
-//            cell.weekDayLabel.textColor = .orange
-//            cell.dayLabel.textColor = .orange
-//        }else {
-//            dayIsSelected[indexPath.row] = true
-//            cell.containerView.isHidden = dayIsSelected[indexPath.row]
-//            cell.dayLabel.font = UIFont.systemFont(ofSize: 10)
-//            cell.weekDayLabel.font = UIFont.systemFont(ofSize: 10)
-//            cell.weekDayLabel.textColor = .white
-//            cell.dayLabel.textColor = .white
-//        }
-//    }
+    //    func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
+    //        month.text = self.monthes[indexPath.row]
+    //        year.text = self.years[indexPath.row]
+    //        if dayIsSelected[indexPath.row] {
+    //            dayIsSelected[indexPath.row] = false
+    //            cell.containerView.isHidden = dayIsSelected[indexPath.row]
+    //            cell.dayLabel.font = UIFont.boldSystemFont(ofSize: 16)
+    //            cell.weekDayLabel.font = UIFont.boldSystemFont(ofSize: 10)
+    //            cell.weekDayLabel.textColor = .orange
+    //            cell.dayLabel.textColor = .orange
+    //        }else {
+    //            dayIsSelected[indexPath.row] = true
+    //            cell.containerView.isHidden = dayIsSelected[indexPath.row]
+    //            cell.dayLabel.font = UIFont.systemFont(ofSize: 10)
+    //            cell.weekDayLabel.font = UIFont.systemFont(ofSize: 10)
+    //            cell.weekDayLabel.textColor = .white
+    //            cell.dayLabel.textColor = .white
+    //        }
+    //    }
     
 }
 extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -274,7 +325,7 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
             let cellData = self.filteredPublicEventData?.publicEvents[indexPath.row]
             cellA.filteredPublicEventData = cellData
             cellA.showData()
-                
+            
             return cellA
         }else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalenderCell", for: indexPath) as! CalenderCell
@@ -296,8 +347,8 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
             return CGSize(width: view.frame.width, height: 280)
         }else {
             let width = collectionView.frame.width / 7
-                       let height = collectionView.frame.height
-                       return CGSize(width: width, height: height)        }
+            let height = collectionView.frame.height
+            return CGSize(width: width, height: height)        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -306,25 +357,22 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == subCollectionView {
             let index = IndexPath(item: 0, section: 0)
-               let firstCell = collectionView.cellForItem(at: index) as? CalenderCell
-               firstCell?.containerView.backgroundColor = .clear
-               firstCell?.nameLbl.textColor = .white
-               firstCell?.dateLbl.textColor = .white
-               
-               let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
-               cell.isSelected = true
-               let date = Date()
-               let dateFormatter = DateFormatter()
-               let selectDay = date.getDate(dayDifference: indexPath.row)
-               dateFormatter.dateFormat = "yyyy-MM-dd"
-               selectedDay = dateFormatter.string(from: selectDay)
-//               if let currentDay = selectedDay {
-//                   parameter["date"] = currentDay
-//                       showIndicator()
-//                       removeNoFields()
-//                       interactor?.filterSession(view: self, parameter: parameter)
-//
-//            }
+            let firstCell = collectionView.cellForItem(at: index) as? CalenderCell
+            firstCell?.containerView.backgroundColor = .clear
+            firstCell?.nameLbl.textColor = .white
+            firstCell?.dateLbl.textColor = .white
+            
+            let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
+            cell.isSelected = true
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            let selectDay = date.getDate(dayDifference: indexPath.row)
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            selectedDay = dateFormatter.string(from: selectDay)
+            if selectedDay != nil {
+                getFilteredPublicEvent()
+                
+            }
             //            handleDaySelection(cell: cellB,indexPath: indexPath)
         }
         else{
@@ -336,10 +384,10 @@ extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if collectionView == subCollectionView {
             let cell = collectionView.cellForItem(at: indexPath) as? CalenderCell
-             cell?.isSelected = false
+            cell?.isSelected = false
         }
     }
- 
+    
 }
 extension PublicEventsViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

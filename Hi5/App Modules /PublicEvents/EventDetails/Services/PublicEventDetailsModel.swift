@@ -21,17 +21,18 @@ struct PublicEventDetailsModel {
     }
     
     
+  
     // MARK: - PublicEventDetails
     struct PublicEventDetails: Codable {
-        let status: Bool
-        let publicEvent: PublicEvent
-        
+        let status: Bool?
+        let publicEvent: PublicEvent?
+
         enum CodingKeys: String, CodingKey {
             case status
             case publicEvent = "public_event"
         }
     }
-    
+
     // MARK: - PublicEvent
     struct PublicEvent: Codable {
         let id, fieldName: String?
@@ -44,7 +45,8 @@ struct PublicEventDetailsModel {
         let age: Int?
         let payment: String?
         let points: Int?
-        let status, fieldType, fieldSize, guaranteedRefundTime: String?
+        let status, fieldType, fieldSize: String?
+        let guaranteedRefundTime: Int?
         let feeForCancelation: String?
         let countEssentialPlayer: Int?
         let createrName, createrImage, createrUsername, playerEventStatus: String?
@@ -78,11 +80,10 @@ struct PublicEventDetailsModel {
             case players
         }
     }
-    
     // MARK: - Player
     struct Player: Codable {
-        let name, userName, image, eventStatus: String
-        
+        let name, userName, image, eventStatus: String?
+
         enum CodingKeys: String, CodingKey {
             case name
             case userName = "user_name"

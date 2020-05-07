@@ -13,6 +13,7 @@ import UIKit
 protocol ICheckOutSessionDetailsInteractor: class {
     var parameters: [String: Any]? { get set }
     func showDetails(view: UIViewController , eventId: String)
+    func join(view: UIViewController , eventId: String)
 }
 
 class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
@@ -30,8 +31,20 @@ class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
                 self.presenter?.showErrorAlert(title: "Alert", msg: "your request already booked before , or something goes wrong.")
             }
             else{
-            self.presenter?.showDetailsResponse(response: response)
+                self.presenter?.showErrorAlert(title: "Alert", msg: " Booked  ")
+          //  self.presenter?.showDetailsResponse(response: response)
             }
         })
     }
+    func join(view: UIViewController , eventId: String){
+           manager?.joinApi(id: eventId, complition: { (error, success, response) in
+               if response == nil {
+                   self.presenter?.showErrorAlert(title: "Alert", msg: "your request already booked before , or something goes wrong.")
+               }
+               else{
+                   self.presenter?.showErrorAlert(title: "Alert", msg: " Booked  ")
+             //  self.presenter?.showDetailsResponse(response: response)
+               }
+           })
+       }
 }

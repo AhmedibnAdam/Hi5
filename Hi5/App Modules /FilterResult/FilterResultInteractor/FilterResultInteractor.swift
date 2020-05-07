@@ -49,7 +49,7 @@ class FilterResultInteractor: IFilterResultInteractor {
     }
     
     func chechAvalabilty(view: UIViewController, parameter: [String : Any]) {
-        manager?.filterSessionFromApi(parameter: parameter, complition: { (error, success, response) in
+        manager?.checkAvalablityFromApi(parameter: parameter, complition: { (error, success, response) in
             if (success == true) {
                 guard let response = response else {return}
                 if (response.fields?.count != 0){

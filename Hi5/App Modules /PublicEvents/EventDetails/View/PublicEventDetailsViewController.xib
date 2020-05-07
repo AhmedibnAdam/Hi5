@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublicEventDetailsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
+                <outlet property="age" destination="k6X-K8-XaE" id="w57-iO-MOI"/>
                 <outlet property="babckButton" destination="e6x-uA-WSH" id="Pc1-Og-vMt"/>
                 <outlet property="cost" destination="Oor-uE-7gp" id="T0f-U0-YGB"/>
                 <outlet property="creator" destination="Mox-Hh-LU3" id="pH4-eJ-5bK"/>

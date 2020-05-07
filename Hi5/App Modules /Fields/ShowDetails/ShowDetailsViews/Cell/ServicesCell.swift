@@ -21,7 +21,7 @@ class ServicesCell: UICollectionViewCell {
     }
     
     func initView() {
-        self.containerImgView = CreateCornerRauis.viewRaduis(view: self.containerImgView, number: (self.containerImgView.frame.height / 2))
+    
     }
 
 }

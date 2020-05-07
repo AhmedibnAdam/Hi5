@@ -20,6 +20,7 @@ class ShowDetailsViewController: UIViewController   {
     //MARK: - Properties
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
+    var fieldRes:   ShowDetailsModel.FieldDetails?
     var field: FieldsModel.NearByfieldsResponseField?
     var services = [ShowDetailsModel.FieldDetailsService]()
     var field_id: String?
@@ -88,8 +89,8 @@ class ShowDetailsViewController: UIViewController   {
     }
     
     @IBAction func checkAvailabilityBtnTapped(_ sender: UIButton) {
-        let fieldId = field?.id
-        let fieldName = field?.name
+        let fieldId = fieldRes?.field?.id
+        let fieldName = fieldRes?.field?.name
         router?.navigateToSessionResult(fieldId: fieldId ?? 1 , fieldName: fieldName ?? "HighFive")
     }
     
@@ -107,6 +108,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
     func showDetailsResponse(response: ShowDetailsModel.FieldDetails) {
         guard let field = response.field else {return}
         fieldName.text = field.name
+        self.fieldRes = response
         commentLbl.text = "\(String(describing: field.comments ?? 0))"
         rateLbl.text = "\(String(describing: field.rating ?? 0))"
         fieldAddressLbl.text = field.address

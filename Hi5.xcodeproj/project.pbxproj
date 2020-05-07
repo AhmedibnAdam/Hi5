@@ -28,6 +28,40 @@
 		660A1433246008F2006DAD45 /* ReducerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A1432246008F2006DAD45 /* ReducerType.swift */; };
 		660A14352460091E006DAD45 /* RenderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14342460091E006DAD45 /* RenderType.swift */; };
 		660A143724600949006DAD45 /* StateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A143624600949006DAD45 /* StateType.swift */; };
+		660A14DA24619EF5006DAD45 /* SuggestFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A14A224619EF5006DAD45 /* SuggestFieldViewController.xib */; };
+		660A14DB24619EF5006DAD45 /* SuggestFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14A324619EF5006DAD45 /* SuggestFieldViewController.swift */; };
+		660A14DC24619EF5006DAD45 /* SuggestFieldRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14A524619EF5006DAD45 /* SuggestFieldRouter.swift */; };
+		660A14DD24619EF5006DAD45 /* SuggestFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14A724619EF5006DAD45 /* SuggestFieldModel.swift */; };
+		660A14DE24619EF5006DAD45 /* SuggestFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14A824619EF5006DAD45 /* SuggestFieldManager.swift */; };
+		660A14DF24619EF5006DAD45 /* SuggestFieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14AA24619EF5006DAD45 /* SuggestFieldPresenter.swift */; };
+		660A14E024619EF5006DAD45 /* SuggestFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14AC24619EF5006DAD45 /* SuggestFieldConfiguration.swift */; };
+		660A14E124619EF5006DAD45 /* SuggestFieldInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14AE24619EF5006DAD45 /* SuggestFieldInteractor.swift */; };
+		660A14E224619EF5006DAD45 /* SuggestFieldDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14B124619EF5006DAD45 /* SuggestFieldDetailsPresenter.swift */; };
+		660A14E324619EF5006DAD45 /* SuggestFieldDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14B324619EF5006DAD45 /* SuggestFieldDetailsConfiguration.swift */; };
+		660A14E424619EF5006DAD45 /* SuggestFieldDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14B524619EF5006DAD45 /* SuggestFieldDetailsInteractor.swift */; };
+		660A14E524619EF5006DAD45 /* SuggestFieldDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14B724619EF5006DAD45 /* SuggestFieldDetailsRouter.swift */; };
+		660A14E624619EF5006DAD45 /* PhotoFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14BB24619EF5006DAD45 /* PhotoFieldCell.swift */; };
+		660A14E724619EF5006DAD45 /* PhotoFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A14BC24619EF5006DAD45 /* PhotoFieldCell.xib */; };
+		660A14E824619EF5006DAD45 /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14BE24619EF5006DAD45 /* SportCell.swift */; };
+		660A14E924619EF5006DAD45 /* SportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A14BF24619EF5006DAD45 /* SportCell.xib */; };
+		660A14EA24619EF5006DAD45 /* FieldTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A14C124619EF5006DAD45 /* FieldTypeCell.xib */; };
+		660A14EB24619EF5006DAD45 /* FieldTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14C224619EF5006DAD45 /* FieldTypeCell.swift */; };
+		660A14EC24619EF5006DAD45 /* SuggestFieldDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A14C424619EF5006DAD45 /* SuggestFieldDetailsViewController.xib */; };
+		660A14ED24619EF5006DAD45 /* SuggestFieldDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14C524619EF5006DAD45 /* SuggestFieldDetailsViewController.swift */; };
+		660A14EE24619EF5006DAD45 /* SuggestFieldDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14C724619EF5006DAD45 /* SuggestFieldDetailsEndPoint.swift */; };
+		660A14EF24619EF5006DAD45 /* SuggestFieldDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14C824619EF5006DAD45 /* SuggestFieldDetailsManager.swift */; };
+		660A14F024619EF5006DAD45 /* SuggestFieldDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14C924619EF5006DAD45 /* SuggestFieldDetailsModel.swift */; };
+		660A14F124619EF5006DAD45 /* FieldOwnerDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14CC24619EF5006DAD45 /* FieldOwnerDetailsInteractor.swift */; };
+		660A14F224619EF5006DAD45 /* FieldOwnerDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14CE24619EF5006DAD45 /* FieldOwnerDetailsModel.swift */; };
+		660A14F324619EF5006DAD45 /* FieldOwnerDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14CF24619EF5006DAD45 /* FieldOwnerDetailsManager.swift */; };
+		660A14F424619EF5006DAD45 /* FieldOwnerDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14D024619EF5006DAD45 /* FieldOwnerDetailsEndPoint.swift */; };
+		660A14F524619EF5006DAD45 /* FieldOwnerDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14D224619EF5006DAD45 /* FieldOwnerDetailsRouter.swift */; };
+		660A14F624619EF6006DAD45 /* FieldOwnerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14D424619EF5006DAD45 /* FieldOwnerDetailsViewController.swift */; };
+		660A14F724619EF6006DAD45 /* FieldOwnerDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A14D524619EF5006DAD45 /* FieldOwnerDetailsViewController.xib */; };
+		660A14F824619EF6006DAD45 /* FieldOwnerDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14D724619EF5006DAD45 /* FieldOwnerDetailsConfiguration.swift */; };
+		660A14F924619EF6006DAD45 /* FieldOwnerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14D924619EF5006DAD45 /* FieldOwnerDetailsPresenter.swift */; };
+		660A15012461A17E006DAD45 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14FF2461A17E006DAD45 /* ServicesCell.swift */; };
+		660A15022461A17E006DAD45 /* ServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A15002461A17E006DAD45 /* ServicesCell.xib */; };
 		662922F42423AFFE0041157D /* MyBookingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */; };
 		662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */; };
 		662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167823C3E4B200A3695E /* TransactionsPresenter.swift */; };
@@ -85,38 +119,6 @@
 		662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */; };
 		662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */; };
 		662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */; };
-		6631177C243F254E007C3FED /* SuggestFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66311744243F254E007C3FED /* SuggestFieldViewController.xib */; };
-		6631177D243F254E007C3FED /* SuggestFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311745243F254E007C3FED /* SuggestFieldViewController.swift */; };
-		6631177E243F254E007C3FED /* SuggestFieldRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311747243F254E007C3FED /* SuggestFieldRouter.swift */; };
-		6631177F243F254E007C3FED /* SuggestFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311749243F254E007C3FED /* SuggestFieldModel.swift */; };
-		66311780243F254E007C3FED /* SuggestFieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631174A243F254E007C3FED /* SuggestFieldManager.swift */; };
-		66311781243F254E007C3FED /* SuggestFieldPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631174C243F254E007C3FED /* SuggestFieldPresenter.swift */; };
-		66311782243F254E007C3FED /* SuggestFieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631174E243F254E007C3FED /* SuggestFieldConfiguration.swift */; };
-		66311783243F254E007C3FED /* SuggestFieldInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311750243F254E007C3FED /* SuggestFieldInteractor.swift */; };
-		66311784243F254E007C3FED /* SuggestFieldDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311753243F254E007C3FED /* SuggestFieldDetailsPresenter.swift */; };
-		66311785243F254E007C3FED /* SuggestFieldDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311755243F254E007C3FED /* SuggestFieldDetailsConfiguration.swift */; };
-		66311786243F254E007C3FED /* SuggestFieldDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311757243F254E007C3FED /* SuggestFieldDetailsInteractor.swift */; };
-		66311787243F254E007C3FED /* SuggestFieldDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311759243F254E007C3FED /* SuggestFieldDetailsRouter.swift */; };
-		66311788243F254E007C3FED /* PhotoFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631175D243F254E007C3FED /* PhotoFieldCell.swift */; };
-		66311789243F254E007C3FED /* PhotoFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6631175E243F254E007C3FED /* PhotoFieldCell.xib */; };
-		6631178A243F254E007C3FED /* SportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311760243F254E007C3FED /* SportCell.swift */; };
-		6631178B243F254F007C3FED /* SportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66311761243F254E007C3FED /* SportCell.xib */; };
-		6631178C243F254F007C3FED /* FieldTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66311763243F254E007C3FED /* FieldTypeCell.xib */; };
-		6631178D243F254F007C3FED /* FieldTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311764243F254E007C3FED /* FieldTypeCell.swift */; };
-		6631178E243F254F007C3FED /* SuggestFieldDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66311766243F254E007C3FED /* SuggestFieldDetailsViewController.xib */; };
-		6631178F243F254F007C3FED /* SuggestFieldDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311767243F254E007C3FED /* SuggestFieldDetailsViewController.swift */; };
-		66311790243F254F007C3FED /* SuggestFieldDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311769243F254E007C3FED /* SuggestFieldDetailsEndPoint.swift */; };
-		66311791243F254F007C3FED /* SuggestFieldDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631176A243F254E007C3FED /* SuggestFieldDetailsManager.swift */; };
-		66311792243F254F007C3FED /* SuggestFieldDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631176B243F254E007C3FED /* SuggestFieldDetailsModel.swift */; };
-		66311793243F254F007C3FED /* FieldOwnerDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631176E243F254E007C3FED /* FieldOwnerDetailsInteractor.swift */; };
-		66311794243F254F007C3FED /* FieldOwnerDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311770243F254E007C3FED /* FieldOwnerDetailsModel.swift */; };
-		66311795243F254F007C3FED /* FieldOwnerDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311771243F254E007C3FED /* FieldOwnerDetailsManager.swift */; };
-		66311796243F254F007C3FED /* FieldOwnerDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311772243F254E007C3FED /* FieldOwnerDetailsEndPoint.swift */; };
-		66311797243F254F007C3FED /* FieldOwnerDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311774243F254E007C3FED /* FieldOwnerDetailsRouter.swift */; };
-		66311798243F254F007C3FED /* FieldOwnerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311776243F254E007C3FED /* FieldOwnerDetailsViewController.swift */; };
-		66311799243F254F007C3FED /* FieldOwnerDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66311777243F254E007C3FED /* FieldOwnerDetailsViewController.xib */; };
-		6631179A243F254F007C3FED /* FieldOwnerDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66311779243F254E007C3FED /* FieldOwnerDetailsConfiguration.swift */; };
-		6631179B243F254F007C3FED /* FieldOwnerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631177B243F254E007C3FED /* FieldOwnerDetailsPresenter.swift */; };
 		663117CE243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631179E243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift */; };
 		663117CF243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117A0243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift */; };
 		663117D0243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117A2243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift */; };
@@ -144,8 +146,6 @@
 		663117E6243F25D7007C3FED /* WalletSuccessCheckOutConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117CA243F25D7007C3FED /* WalletSuccessCheckOutConfiguration.swift */; };
 		663117E7243F25D7007C3FED /* WalletSuccessCheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117CC243F25D7007C3FED /* WalletSuccessCheckOutViewController.swift */; };
 		663117E8243F25D7007C3FED /* WalletSuccessCheckOutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663117CD243F25D7007C3FED /* WalletSuccessCheckOutViewController.xib */; };
-		663117EC243F268E007C3FED /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117EA243F268E007C3FED /* ServicesCell.swift */; };
-		663117ED243F268E007C3FED /* ServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 663117EB243F268E007C3FED /* ServicesCell.xib */; };
 		66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */; };
 		66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */; };
 		66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663409FE23B4C8FC009DB30A /* FieldsRouter.swift */; };
@@ -598,6 +598,40 @@
 		660A1432246008F2006DAD45 /* ReducerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReducerType.swift; sourceTree = "<group>"; };
 		660A14342460091E006DAD45 /* RenderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderType.swift; sourceTree = "<group>"; };
 		660A143624600949006DAD45 /* StateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateType.swift; sourceTree = "<group>"; };
+		660A14A224619EF5006DAD45 /* SuggestFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestFieldViewController.xib; sourceTree = "<group>"; };
+		660A14A324619EF5006DAD45 /* SuggestFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldViewController.swift; sourceTree = "<group>"; };
+		660A14A524619EF5006DAD45 /* SuggestFieldRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldRouter.swift; sourceTree = "<group>"; };
+		660A14A724619EF5006DAD45 /* SuggestFieldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldModel.swift; sourceTree = "<group>"; };
+		660A14A824619EF5006DAD45 /* SuggestFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldManager.swift; sourceTree = "<group>"; };
+		660A14AA24619EF5006DAD45 /* SuggestFieldPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldPresenter.swift; sourceTree = "<group>"; };
+		660A14AC24619EF5006DAD45 /* SuggestFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldConfiguration.swift; sourceTree = "<group>"; };
+		660A14AE24619EF5006DAD45 /* SuggestFieldInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldInteractor.swift; sourceTree = "<group>"; };
+		660A14B124619EF5006DAD45 /* SuggestFieldDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsPresenter.swift; sourceTree = "<group>"; };
+		660A14B324619EF5006DAD45 /* SuggestFieldDetailsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsConfiguration.swift; sourceTree = "<group>"; };
+		660A14B524619EF5006DAD45 /* SuggestFieldDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsInteractor.swift; sourceTree = "<group>"; };
+		660A14B724619EF5006DAD45 /* SuggestFieldDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsRouter.swift; sourceTree = "<group>"; };
+		660A14BB24619EF5006DAD45 /* PhotoFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFieldCell.swift; sourceTree = "<group>"; };
+		660A14BC24619EF5006DAD45 /* PhotoFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoFieldCell.xib; sourceTree = "<group>"; };
+		660A14BE24619EF5006DAD45 /* SportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportCell.swift; sourceTree = "<group>"; };
+		660A14BF24619EF5006DAD45 /* SportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SportCell.xib; sourceTree = "<group>"; };
+		660A14C124619EF5006DAD45 /* FieldTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldTypeCell.xib; sourceTree = "<group>"; };
+		660A14C224619EF5006DAD45 /* FieldTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldTypeCell.swift; sourceTree = "<group>"; };
+		660A14C424619EF5006DAD45 /* SuggestFieldDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestFieldDetailsViewController.xib; sourceTree = "<group>"; };
+		660A14C524619EF5006DAD45 /* SuggestFieldDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsViewController.swift; sourceTree = "<group>"; };
+		660A14C724619EF5006DAD45 /* SuggestFieldDetailsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsEndPoint.swift; sourceTree = "<group>"; };
+		660A14C824619EF5006DAD45 /* SuggestFieldDetailsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsManager.swift; sourceTree = "<group>"; };
+		660A14C924619EF5006DAD45 /* SuggestFieldDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsModel.swift; sourceTree = "<group>"; };
+		660A14CC24619EF5006DAD45 /* FieldOwnerDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsInteractor.swift; sourceTree = "<group>"; };
+		660A14CE24619EF5006DAD45 /* FieldOwnerDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsModel.swift; sourceTree = "<group>"; };
+		660A14CF24619EF5006DAD45 /* FieldOwnerDetailsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsManager.swift; sourceTree = "<group>"; };
+		660A14D024619EF5006DAD45 /* FieldOwnerDetailsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsEndPoint.swift; sourceTree = "<group>"; };
+		660A14D224619EF5006DAD45 /* FieldOwnerDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsRouter.swift; sourceTree = "<group>"; };
+		660A14D424619EF5006DAD45 /* FieldOwnerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsViewController.swift; sourceTree = "<group>"; };
+		660A14D524619EF5006DAD45 /* FieldOwnerDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldOwnerDetailsViewController.xib; sourceTree = "<group>"; };
+		660A14D724619EF5006DAD45 /* FieldOwnerDetailsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsConfiguration.swift; sourceTree = "<group>"; };
+		660A14D924619EF5006DAD45 /* FieldOwnerDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsPresenter.swift; sourceTree = "<group>"; };
+		660A14FF2461A17E006DAD45 /* ServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
+		660A15002461A17E006DAD45 /* ServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesCell.xib; sourceTree = "<group>"; };
 		662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsEndpoint.swift; sourceTree = "<group>"; };
 		662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsConfiguration.swift; sourceTree = "<group>"; };
 		662A167823C3E4B200A3695E /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
@@ -655,38 +689,6 @@
 		662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestModel.swift; sourceTree = "<group>"; };
 		662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsRequestViewController.xib; sourceTree = "<group>"; };
 		662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestManager.swift; sourceTree = "<group>"; };
-		66311744243F254E007C3FED /* SuggestFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestFieldViewController.xib; sourceTree = "<group>"; };
-		66311745243F254E007C3FED /* SuggestFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldViewController.swift; sourceTree = "<group>"; };
-		66311747243F254E007C3FED /* SuggestFieldRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldRouter.swift; sourceTree = "<group>"; };
-		66311749243F254E007C3FED /* SuggestFieldModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldModel.swift; sourceTree = "<group>"; };
-		6631174A243F254E007C3FED /* SuggestFieldManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldManager.swift; sourceTree = "<group>"; };
-		6631174C243F254E007C3FED /* SuggestFieldPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldPresenter.swift; sourceTree = "<group>"; };
-		6631174E243F254E007C3FED /* SuggestFieldConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldConfiguration.swift; sourceTree = "<group>"; };
-		66311750243F254E007C3FED /* SuggestFieldInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldInteractor.swift; sourceTree = "<group>"; };
-		66311753243F254E007C3FED /* SuggestFieldDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsPresenter.swift; sourceTree = "<group>"; };
-		66311755243F254E007C3FED /* SuggestFieldDetailsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsConfiguration.swift; sourceTree = "<group>"; };
-		66311757243F254E007C3FED /* SuggestFieldDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsInteractor.swift; sourceTree = "<group>"; };
-		66311759243F254E007C3FED /* SuggestFieldDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsRouter.swift; sourceTree = "<group>"; };
-		6631175D243F254E007C3FED /* PhotoFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFieldCell.swift; sourceTree = "<group>"; };
-		6631175E243F254E007C3FED /* PhotoFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoFieldCell.xib; sourceTree = "<group>"; };
-		66311760243F254E007C3FED /* SportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportCell.swift; sourceTree = "<group>"; };
-		66311761243F254E007C3FED /* SportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SportCell.xib; sourceTree = "<group>"; };
-		66311763243F254E007C3FED /* FieldTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldTypeCell.xib; sourceTree = "<group>"; };
-		66311764243F254E007C3FED /* FieldTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldTypeCell.swift; sourceTree = "<group>"; };
-		66311766243F254E007C3FED /* SuggestFieldDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestFieldDetailsViewController.xib; sourceTree = "<group>"; };
-		66311767243F254E007C3FED /* SuggestFieldDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsViewController.swift; sourceTree = "<group>"; };
-		66311769243F254E007C3FED /* SuggestFieldDetailsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsEndPoint.swift; sourceTree = "<group>"; };
-		6631176A243F254E007C3FED /* SuggestFieldDetailsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsManager.swift; sourceTree = "<group>"; };
-		6631176B243F254E007C3FED /* SuggestFieldDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestFieldDetailsModel.swift; sourceTree = "<group>"; };
-		6631176E243F254E007C3FED /* FieldOwnerDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsInteractor.swift; sourceTree = "<group>"; };
-		66311770243F254E007C3FED /* FieldOwnerDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsModel.swift; sourceTree = "<group>"; };
-		66311771243F254E007C3FED /* FieldOwnerDetailsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsManager.swift; sourceTree = "<group>"; };
-		66311772243F254E007C3FED /* FieldOwnerDetailsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsEndPoint.swift; sourceTree = "<group>"; };
-		66311774243F254E007C3FED /* FieldOwnerDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsRouter.swift; sourceTree = "<group>"; };
-		66311776243F254E007C3FED /* FieldOwnerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsViewController.swift; sourceTree = "<group>"; };
-		66311777243F254E007C3FED /* FieldOwnerDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FieldOwnerDetailsViewController.xib; sourceTree = "<group>"; };
-		66311779243F254E007C3FED /* FieldOwnerDetailsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsConfiguration.swift; sourceTree = "<group>"; };
-		6631177B243F254E007C3FED /* FieldOwnerDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsPresenter.swift; sourceTree = "<group>"; };
 		6631179E243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutSessionDetailsPresenter.swift; sourceTree = "<group>"; };
 		663117A0243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutSessionDetailsConfiguration.swift; sourceTree = "<group>"; };
 		663117A2243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutSessionDetailsRouter.swift; sourceTree = "<group>"; };
@@ -714,8 +716,6 @@
 		663117CA243F25D7007C3FED /* WalletSuccessCheckOutConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletSuccessCheckOutConfiguration.swift; sourceTree = "<group>"; };
 		663117CC243F25D7007C3FED /* WalletSuccessCheckOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletSuccessCheckOutViewController.swift; sourceTree = "<group>"; };
 		663117CD243F25D7007C3FED /* WalletSuccessCheckOutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalletSuccessCheckOutViewController.xib; sourceTree = "<group>"; };
-		663117EA243F268E007C3FED /* ServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
-		663117EB243F268E007C3FED /* ServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesCell.xib; sourceTree = "<group>"; };
 		663409FC23B4C8FC009DB30A /* FieldsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsConfiguration.swift; sourceTree = "<group>"; };
 		663409FD23B4C8FC009DB30A /* FieldsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsPresenter.swift; sourceTree = "<group>"; };
 		663409FE23B4C8FC009DB30A /* FieldsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsRouter.swift; sourceTree = "<group>"; };
@@ -1249,6 +1249,262 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		660A149F24619EF5006DAD45 /* SuggestField */ = {
+			isa = PBXGroup;
+			children = (
+				660A14A024619EF5006DAD45 /* SuggestFieldHome */,
+				660A14AF24619EF5006DAD45 /* SuggestFieldDetails */,
+				660A14CA24619EF5006DAD45 /* FieldOwnerDetails */,
+			);
+			path = SuggestField;
+			sourceTree = "<group>";
+		};
+		660A14A024619EF5006DAD45 /* SuggestFieldHome */ = {
+			isa = PBXGroup;
+			children = (
+				660A14A124619EF5006DAD45 /* SuggestFieldViews */,
+				660A14A424619EF5006DAD45 /* SuggestFieldRouter */,
+				660A14A624619EF5006DAD45 /* SuggestFieldServices */,
+				660A14A924619EF5006DAD45 /* SuggestFieldPresenter */,
+				660A14AB24619EF5006DAD45 /* SuggestFieldContract */,
+				660A14AD24619EF5006DAD45 /* SuggestFieldInteractor */,
+			);
+			path = SuggestFieldHome;
+			sourceTree = "<group>";
+		};
+		660A14A124619EF5006DAD45 /* SuggestFieldViews */ = {
+			isa = PBXGroup;
+			children = (
+				660A14A224619EF5006DAD45 /* SuggestFieldViewController.xib */,
+				660A14A324619EF5006DAD45 /* SuggestFieldViewController.swift */,
+			);
+			path = SuggestFieldViews;
+			sourceTree = "<group>";
+		};
+		660A14A424619EF5006DAD45 /* SuggestFieldRouter */ = {
+			isa = PBXGroup;
+			children = (
+				660A14A524619EF5006DAD45 /* SuggestFieldRouter.swift */,
+			);
+			path = SuggestFieldRouter;
+			sourceTree = "<group>";
+		};
+		660A14A624619EF5006DAD45 /* SuggestFieldServices */ = {
+			isa = PBXGroup;
+			children = (
+				660A14A724619EF5006DAD45 /* SuggestFieldModel.swift */,
+				660A14A824619EF5006DAD45 /* SuggestFieldManager.swift */,
+			);
+			path = SuggestFieldServices;
+			sourceTree = "<group>";
+		};
+		660A14A924619EF5006DAD45 /* SuggestFieldPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				660A14AA24619EF5006DAD45 /* SuggestFieldPresenter.swift */,
+			);
+			path = SuggestFieldPresenter;
+			sourceTree = "<group>";
+		};
+		660A14AB24619EF5006DAD45 /* SuggestFieldContract */ = {
+			isa = PBXGroup;
+			children = (
+				660A14AC24619EF5006DAD45 /* SuggestFieldConfiguration.swift */,
+			);
+			path = SuggestFieldContract;
+			sourceTree = "<group>";
+		};
+		660A14AD24619EF5006DAD45 /* SuggestFieldInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				660A14AE24619EF5006DAD45 /* SuggestFieldInteractor.swift */,
+			);
+			path = SuggestFieldInteractor;
+			sourceTree = "<group>";
+		};
+		660A14AF24619EF5006DAD45 /* SuggestFieldDetails */ = {
+			isa = PBXGroup;
+			children = (
+				660A14B024619EF5006DAD45 /* SuggestFieldDetailsPresenter */,
+				660A14B224619EF5006DAD45 /* SuggestFieldDetailsContract */,
+				660A14B424619EF5006DAD45 /* SuggestFieldDetailsInteractor */,
+				660A14B624619EF5006DAD45 /* SuggestFieldDetailsRouter */,
+				660A14B824619EF5006DAD45 /* SuggestFieldDetailsViews */,
+				660A14C624619EF5006DAD45 /* SuggestFieldDetailsServices */,
+			);
+			path = SuggestFieldDetails;
+			sourceTree = "<group>";
+		};
+		660A14B024619EF5006DAD45 /* SuggestFieldDetailsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				660A14B124619EF5006DAD45 /* SuggestFieldDetailsPresenter.swift */,
+			);
+			path = SuggestFieldDetailsPresenter;
+			sourceTree = "<group>";
+		};
+		660A14B224619EF5006DAD45 /* SuggestFieldDetailsContract */ = {
+			isa = PBXGroup;
+			children = (
+				660A14B324619EF5006DAD45 /* SuggestFieldDetailsConfiguration.swift */,
+			);
+			path = SuggestFieldDetailsContract;
+			sourceTree = "<group>";
+		};
+		660A14B424619EF5006DAD45 /* SuggestFieldDetailsInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				660A14B524619EF5006DAD45 /* SuggestFieldDetailsInteractor.swift */,
+			);
+			path = SuggestFieldDetailsInteractor;
+			sourceTree = "<group>";
+		};
+		660A14B624619EF5006DAD45 /* SuggestFieldDetailsRouter */ = {
+			isa = PBXGroup;
+			children = (
+				660A14B724619EF5006DAD45 /* SuggestFieldDetailsRouter.swift */,
+			);
+			path = SuggestFieldDetailsRouter;
+			sourceTree = "<group>";
+		};
+		660A14B824619EF5006DAD45 /* SuggestFieldDetailsViews */ = {
+			isa = PBXGroup;
+			children = (
+				660A14B924619EF5006DAD45 /* Cells */,
+				660A14C324619EF5006DAD45 /* View */,
+			);
+			path = SuggestFieldDetailsViews;
+			sourceTree = "<group>";
+		};
+		660A14B924619EF5006DAD45 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				660A14BA24619EF5006DAD45 /* PhotoFieldCell */,
+				660A14BD24619EF5006DAD45 /* SportCell */,
+				660A14C024619EF5006DAD45 /* FieldTypeCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		660A14BA24619EF5006DAD45 /* PhotoFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				660A14BB24619EF5006DAD45 /* PhotoFieldCell.swift */,
+				660A14BC24619EF5006DAD45 /* PhotoFieldCell.xib */,
+			);
+			path = PhotoFieldCell;
+			sourceTree = "<group>";
+		};
+		660A14BD24619EF5006DAD45 /* SportCell */ = {
+			isa = PBXGroup;
+			children = (
+				660A14BE24619EF5006DAD45 /* SportCell.swift */,
+				660A14BF24619EF5006DAD45 /* SportCell.xib */,
+			);
+			path = SportCell;
+			sourceTree = "<group>";
+		};
+		660A14C024619EF5006DAD45 /* FieldTypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				660A14C124619EF5006DAD45 /* FieldTypeCell.xib */,
+				660A14C224619EF5006DAD45 /* FieldTypeCell.swift */,
+			);
+			path = FieldTypeCell;
+			sourceTree = "<group>";
+		};
+		660A14C324619EF5006DAD45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				660A14C424619EF5006DAD45 /* SuggestFieldDetailsViewController.xib */,
+				660A14C524619EF5006DAD45 /* SuggestFieldDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		660A14C624619EF5006DAD45 /* SuggestFieldDetailsServices */ = {
+			isa = PBXGroup;
+			children = (
+				660A14C724619EF5006DAD45 /* SuggestFieldDetailsEndPoint.swift */,
+				660A14C824619EF5006DAD45 /* SuggestFieldDetailsManager.swift */,
+				660A14C924619EF5006DAD45 /* SuggestFieldDetailsModel.swift */,
+			);
+			path = SuggestFieldDetailsServices;
+			sourceTree = "<group>";
+		};
+		660A14CA24619EF5006DAD45 /* FieldOwnerDetails */ = {
+			isa = PBXGroup;
+			children = (
+				660A14CB24619EF5006DAD45 /* FieldOwnerDetailsInteractor */,
+				660A14CD24619EF5006DAD45 /* FieldOwnerDetailsServices */,
+				660A14D124619EF5006DAD45 /* FieldOwnerDetailsRouter */,
+				660A14D324619EF5006DAD45 /* FieldOwnerDetailsViews */,
+				660A14D624619EF5006DAD45 /* FieldOwnerDetailsContract */,
+				660A14D824619EF5006DAD45 /* FieldOwnerDetailsPresenter */,
+			);
+			path = FieldOwnerDetails;
+			sourceTree = "<group>";
+		};
+		660A14CB24619EF5006DAD45 /* FieldOwnerDetailsInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				660A14CC24619EF5006DAD45 /* FieldOwnerDetailsInteractor.swift */,
+			);
+			path = FieldOwnerDetailsInteractor;
+			sourceTree = "<group>";
+		};
+		660A14CD24619EF5006DAD45 /* FieldOwnerDetailsServices */ = {
+			isa = PBXGroup;
+			children = (
+				660A14CE24619EF5006DAD45 /* FieldOwnerDetailsModel.swift */,
+				660A14CF24619EF5006DAD45 /* FieldOwnerDetailsManager.swift */,
+				660A14D024619EF5006DAD45 /* FieldOwnerDetailsEndPoint.swift */,
+			);
+			path = FieldOwnerDetailsServices;
+			sourceTree = "<group>";
+		};
+		660A14D124619EF5006DAD45 /* FieldOwnerDetailsRouter */ = {
+			isa = PBXGroup;
+			children = (
+				660A14D224619EF5006DAD45 /* FieldOwnerDetailsRouter.swift */,
+			);
+			path = FieldOwnerDetailsRouter;
+			sourceTree = "<group>";
+		};
+		660A14D324619EF5006DAD45 /* FieldOwnerDetailsViews */ = {
+			isa = PBXGroup;
+			children = (
+				660A14D424619EF5006DAD45 /* FieldOwnerDetailsViewController.swift */,
+				660A14D524619EF5006DAD45 /* FieldOwnerDetailsViewController.xib */,
+			);
+			path = FieldOwnerDetailsViews;
+			sourceTree = "<group>";
+		};
+		660A14D624619EF5006DAD45 /* FieldOwnerDetailsContract */ = {
+			isa = PBXGroup;
+			children = (
+				660A14D724619EF5006DAD45 /* FieldOwnerDetailsConfiguration.swift */,
+			);
+			path = FieldOwnerDetailsContract;
+			sourceTree = "<group>";
+		};
+		660A14D824619EF5006DAD45 /* FieldOwnerDetailsPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				660A14D924619EF5006DAD45 /* FieldOwnerDetailsPresenter.swift */,
+			);
+			path = FieldOwnerDetailsPresenter;
+			sourceTree = "<group>";
+		};
+		660A14FE2461A17E006DAD45 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				660A14FF2461A17E006DAD45 /* ServicesCell.swift */,
+				660A15002461A17E006DAD45 /* ServicesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		662A167623C3E2B200A3695E /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1384,254 +1640,6 @@
 			children = (
 			);
 			path = MyFriendsRequestTableViewCell;
-			sourceTree = "<group>";
-		};
-		66311741243F254E007C3FED /* SuggestField */ = {
-			isa = PBXGroup;
-			children = (
-				66311742243F254E007C3FED /* SuggestFieldHome */,
-				66311751243F254E007C3FED /* SuggestFieldDetails */,
-				6631176C243F254E007C3FED /* FieldOwnerDetails */,
-			);
-			name = SuggestField;
-			path = "../../../../../Downloads/Hi5-suggestion/Hi5/App Modules /SuggestField";
-			sourceTree = "<group>";
-		};
-		66311742243F254E007C3FED /* SuggestFieldHome */ = {
-			isa = PBXGroup;
-			children = (
-				66311743243F254E007C3FED /* SuggestFieldViews */,
-				66311746243F254E007C3FED /* SuggestFieldRouter */,
-				66311748243F254E007C3FED /* SuggestFieldServices */,
-				6631174B243F254E007C3FED /* SuggestFieldPresenter */,
-				6631174D243F254E007C3FED /* SuggestFieldContract */,
-				6631174F243F254E007C3FED /* SuggestFieldInteractor */,
-			);
-			path = SuggestFieldHome;
-			sourceTree = "<group>";
-		};
-		66311743243F254E007C3FED /* SuggestFieldViews */ = {
-			isa = PBXGroup;
-			children = (
-				66311744243F254E007C3FED /* SuggestFieldViewController.xib */,
-				66311745243F254E007C3FED /* SuggestFieldViewController.swift */,
-			);
-			path = SuggestFieldViews;
-			sourceTree = "<group>";
-		};
-		66311746243F254E007C3FED /* SuggestFieldRouter */ = {
-			isa = PBXGroup;
-			children = (
-				66311747243F254E007C3FED /* SuggestFieldRouter.swift */,
-			);
-			path = SuggestFieldRouter;
-			sourceTree = "<group>";
-		};
-		66311748243F254E007C3FED /* SuggestFieldServices */ = {
-			isa = PBXGroup;
-			children = (
-				66311749243F254E007C3FED /* SuggestFieldModel.swift */,
-				6631174A243F254E007C3FED /* SuggestFieldManager.swift */,
-			);
-			path = SuggestFieldServices;
-			sourceTree = "<group>";
-		};
-		6631174B243F254E007C3FED /* SuggestFieldPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				6631174C243F254E007C3FED /* SuggestFieldPresenter.swift */,
-			);
-			path = SuggestFieldPresenter;
-			sourceTree = "<group>";
-		};
-		6631174D243F254E007C3FED /* SuggestFieldContract */ = {
-			isa = PBXGroup;
-			children = (
-				6631174E243F254E007C3FED /* SuggestFieldConfiguration.swift */,
-			);
-			path = SuggestFieldContract;
-			sourceTree = "<group>";
-		};
-		6631174F243F254E007C3FED /* SuggestFieldInteractor */ = {
-			isa = PBXGroup;
-			children = (
-				66311750243F254E007C3FED /* SuggestFieldInteractor.swift */,
-			);
-			path = SuggestFieldInteractor;
-			sourceTree = "<group>";
-		};
-		66311751243F254E007C3FED /* SuggestFieldDetails */ = {
-			isa = PBXGroup;
-			children = (
-				66311752243F254E007C3FED /* SuggestFieldDetailsPresenter */,
-				66311754243F254E007C3FED /* SuggestFieldDetailsContract */,
-				66311756243F254E007C3FED /* SuggestFieldDetailsInteractor */,
-				66311758243F254E007C3FED /* SuggestFieldDetailsRouter */,
-				6631175A243F254E007C3FED /* SuggestFieldDetailsViews */,
-				66311768243F254E007C3FED /* SuggestFieldDetailsServices */,
-			);
-			path = SuggestFieldDetails;
-			sourceTree = "<group>";
-		};
-		66311752243F254E007C3FED /* SuggestFieldDetailsPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				66311753243F254E007C3FED /* SuggestFieldDetailsPresenter.swift */,
-			);
-			path = SuggestFieldDetailsPresenter;
-			sourceTree = "<group>";
-		};
-		66311754243F254E007C3FED /* SuggestFieldDetailsContract */ = {
-			isa = PBXGroup;
-			children = (
-				66311755243F254E007C3FED /* SuggestFieldDetailsConfiguration.swift */,
-			);
-			path = SuggestFieldDetailsContract;
-			sourceTree = "<group>";
-		};
-		66311756243F254E007C3FED /* SuggestFieldDetailsInteractor */ = {
-			isa = PBXGroup;
-			children = (
-				66311757243F254E007C3FED /* SuggestFieldDetailsInteractor.swift */,
-			);
-			path = SuggestFieldDetailsInteractor;
-			sourceTree = "<group>";
-		};
-		66311758243F254E007C3FED /* SuggestFieldDetailsRouter */ = {
-			isa = PBXGroup;
-			children = (
-				66311759243F254E007C3FED /* SuggestFieldDetailsRouter.swift */,
-			);
-			path = SuggestFieldDetailsRouter;
-			sourceTree = "<group>";
-		};
-		6631175A243F254E007C3FED /* SuggestFieldDetailsViews */ = {
-			isa = PBXGroup;
-			children = (
-				6631175B243F254E007C3FED /* Cells */,
-				66311765243F254E007C3FED /* View */,
-			);
-			path = SuggestFieldDetailsViews;
-			sourceTree = "<group>";
-		};
-		6631175B243F254E007C3FED /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				6631175C243F254E007C3FED /* PhotoFieldCell */,
-				6631175F243F254E007C3FED /* SportCell */,
-				66311762243F254E007C3FED /* FieldTypeCell */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		6631175C243F254E007C3FED /* PhotoFieldCell */ = {
-			isa = PBXGroup;
-			children = (
-				6631175D243F254E007C3FED /* PhotoFieldCell.swift */,
-				6631175E243F254E007C3FED /* PhotoFieldCell.xib */,
-			);
-			path = PhotoFieldCell;
-			sourceTree = "<group>";
-		};
-		6631175F243F254E007C3FED /* SportCell */ = {
-			isa = PBXGroup;
-			children = (
-				66311760243F254E007C3FED /* SportCell.swift */,
-				66311761243F254E007C3FED /* SportCell.xib */,
-			);
-			path = SportCell;
-			sourceTree = "<group>";
-		};
-		66311762243F254E007C3FED /* FieldTypeCell */ = {
-			isa = PBXGroup;
-			children = (
-				66311763243F254E007C3FED /* FieldTypeCell.xib */,
-				66311764243F254E007C3FED /* FieldTypeCell.swift */,
-			);
-			path = FieldTypeCell;
-			sourceTree = "<group>";
-		};
-		66311765243F254E007C3FED /* View */ = {
-			isa = PBXGroup;
-			children = (
-				66311766243F254E007C3FED /* SuggestFieldDetailsViewController.xib */,
-				66311767243F254E007C3FED /* SuggestFieldDetailsViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		66311768243F254E007C3FED /* SuggestFieldDetailsServices */ = {
-			isa = PBXGroup;
-			children = (
-				66311769243F254E007C3FED /* SuggestFieldDetailsEndPoint.swift */,
-				6631176A243F254E007C3FED /* SuggestFieldDetailsManager.swift */,
-				6631176B243F254E007C3FED /* SuggestFieldDetailsModel.swift */,
-			);
-			path = SuggestFieldDetailsServices;
-			sourceTree = "<group>";
-		};
-		6631176C243F254E007C3FED /* FieldOwnerDetails */ = {
-			isa = PBXGroup;
-			children = (
-				6631176D243F254E007C3FED /* FieldOwnerDetailsInteractor */,
-				6631176F243F254E007C3FED /* FieldOwnerDetailsServices */,
-				66311773243F254E007C3FED /* FieldOwnerDetailsRouter */,
-				66311775243F254E007C3FED /* FieldOwnerDetailsViews */,
-				66311778243F254E007C3FED /* FieldOwnerDetailsContract */,
-				6631177A243F254E007C3FED /* FieldOwnerDetailsPresenter */,
-			);
-			path = FieldOwnerDetails;
-			sourceTree = "<group>";
-		};
-		6631176D243F254E007C3FED /* FieldOwnerDetailsInteractor */ = {
-			isa = PBXGroup;
-			children = (
-				6631176E243F254E007C3FED /* FieldOwnerDetailsInteractor.swift */,
-			);
-			path = FieldOwnerDetailsInteractor;
-			sourceTree = "<group>";
-		};
-		6631176F243F254E007C3FED /* FieldOwnerDetailsServices */ = {
-			isa = PBXGroup;
-			children = (
-				66311770243F254E007C3FED /* FieldOwnerDetailsModel.swift */,
-				66311771243F254E007C3FED /* FieldOwnerDetailsManager.swift */,
-				66311772243F254E007C3FED /* FieldOwnerDetailsEndPoint.swift */,
-			);
-			path = FieldOwnerDetailsServices;
-			sourceTree = "<group>";
-		};
-		66311773243F254E007C3FED /* FieldOwnerDetailsRouter */ = {
-			isa = PBXGroup;
-			children = (
-				66311774243F254E007C3FED /* FieldOwnerDetailsRouter.swift */,
-			);
-			path = FieldOwnerDetailsRouter;
-			sourceTree = "<group>";
-		};
-		66311775243F254E007C3FED /* FieldOwnerDetailsViews */ = {
-			isa = PBXGroup;
-			children = (
-				66311776243F254E007C3FED /* FieldOwnerDetailsViewController.swift */,
-				66311777243F254E007C3FED /* FieldOwnerDetailsViewController.xib */,
-			);
-			path = FieldOwnerDetailsViews;
-			sourceTree = "<group>";
-		};
-		66311778243F254E007C3FED /* FieldOwnerDetailsContract */ = {
-			isa = PBXGroup;
-			children = (
-				66311779243F254E007C3FED /* FieldOwnerDetailsConfiguration.swift */,
-			);
-			path = FieldOwnerDetailsContract;
-			sourceTree = "<group>";
-		};
-		6631177A243F254E007C3FED /* FieldOwnerDetailsPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				6631177B243F254E007C3FED /* FieldOwnerDetailsPresenter.swift */,
-			);
-			path = FieldOwnerDetailsPresenter;
 			sourceTree = "<group>";
 		};
 		6631179C243F25D7007C3FED /* CheckOutSessionDetails */ = {
@@ -1843,16 +1851,6 @@
 			path = WalletSuccessCheckOutView;
 			sourceTree = "<group>";
 		};
-		663117E9243F268E007C3FED /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				663117EA243F268E007C3FED /* ServicesCell.swift */,
-				663117EB243F268E007C3FED /* ServicesCell.xib */,
-			);
-			name = Cell;
-			path = "../../../../../../../../Downloads/Hi5-suggestion/Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/Cell";
-			sourceTree = "<group>";
-		};
 		663409E023B4C6E8009DB30A /* App Modules  */ = {
 			isa = PBXGroup;
 			children = (
@@ -1873,7 +1871,7 @@
 				E2FAE5BD240E649E00CD8CFC /* PublicEvents */,
 				66340A0D23B4CA54009DB30A /* NotificationSetting */,
 				66340A0C23B4CA44009DB30A /* Setting */,
-				66311741243F254E007C3FED /* SuggestField */,
+				660A149F24619EF5006DAD45 /* SuggestField */,
 			);
 			path = "App Modules ";
 			sourceTree = "<group>";
@@ -2948,7 +2946,7 @@
 			children = (
 				66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */,
 				66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */,
-				663117E9243F268E007C3FED /* Cell */,
+				660A14FE2461A17E006DAD45 /* Cell */,
 			);
 			path = ShowDetailsViews;
 			sourceTree = "<group>";
@@ -4578,19 +4576,21 @@
 				662A16DB23C3EB7600A3695E /* AddFriendRequestViewController.xib in Resources */,
 				66AEC601242266B0003CF2EB /* FilterResultViewController.xib in Resources */,
 				668C212E23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.xib in Resources */,
+				660A14EC24619EF5006DAD45 /* SuggestFieldDetailsViewController.xib in Resources */,
 				662A169723C3E75400A3695E /* MyFavoriteFriendsViewController.xib in Resources */,
 				E2FAE5BA240E648300CD8CFC /* SocialViewController.xib in Resources */,
 				662A16A823C3E80900A3695E /* MemberOfFriendsViewController.xib in Resources */,
 				668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */,
 				86A2FF6B23F4220F0053E5A1 /* FieldsTableViewCell.xib in Resources */,
 				6663363523B40298004E537C /* UserAccountViewController.xib in Resources */,
-				66311799243F254F007C3FED /* FieldOwnerDetailsViewController.xib in Resources */,
-				663117ED243F268E007C3FED /* ServicesCell.xib in Resources */,
+				660A14E924619EF5006DAD45 /* SportCell.xib in Resources */,
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
 				66AEC603242266B0003CF2EB /* FieldCell.xib in Resources */,
+				660A14F724619EF6006DAD45 /* FieldOwnerDetailsViewController.xib in Resources */,
 				861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
+				660A14E724619EF5006DAD45 /* PhotoFieldCell.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
 				6683E2CF23BCEB8800250702 /* SettingViewController.xib in Resources */,
 				E2FAE5B7240E648300CD8CFC /* SocialHeader.xib in Resources */,
@@ -4601,18 +4601,17 @@
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
 				66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */,
 				66AEC605242266B0003CF2EB /* CalenderCell.xib in Resources */,
-				66311789243F254E007C3FED /* PhotoFieldCell.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
 				861D22D823DCAEF5004F16F1 /* GalleryViewController.xib in Resources */,
 				868C28BD23C6042A003F237A /* Assets.xcassets in Resources */,
+				660A14DA24619EF5006DAD45 /* SuggestFieldViewController.xib in Resources */,
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
 				66AEC632242283B4003CF2EB /* MyBookingsTableViewCell.xib in Resources */,
 				660A140D24600376006DAD45 /* PlayersTableViewCell.xib in Resources */,
 				667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */,
-				6631178E243F254F007C3FED /* SuggestFieldDetailsViewController.xib in Resources */,
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
 				668C211E23C3F6C100C009A9 /* CheckOutViewController.xib in Resources */,
@@ -4626,7 +4625,9 @@
 				6682B38D242985920050CC9A /* SliderView.xcassets in Resources */,
 				6683E2A723BB5FD900250702 /* MyFriendsViewController.xib in Resources */,
 				666336A623B40B47004E537C /* ForgotPhoneViewController.xib in Resources */,
+				660A15022461A17E006DAD45 /* ServicesCell.xib in Resources */,
 				666336B723B40B84004E537C /* PhoneVerificationViewController.xib in Resources */,
+				660A14EA24619EF5006DAD45 /* FieldTypeCell.xib in Resources */,
 				6663368423B40AB3004E537C /* ForgetEmailViewController.xib in Resources */,
 				6682B3C52429924D0050CC9A /* SechaduleViewController.xib in Resources */,
 				E2FAE5D4240E649E00CD8CFC /* PublicEventsViewController.xib in Resources */,
@@ -4639,12 +4640,9 @@
 				86B14BCA23CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.xib in Resources */,
 				668C213E23C3F6F700C009A9 /* CommentListsViewController.xib in Resources */,
 				662A16B923C3E93900A3695E /* MyFriendsDetailsViewController.xib in Resources */,
-				6631178C243F254F007C3FED /* FieldTypeCell.xib in Resources */,
-				6631177C243F254E007C3FED /* SuggestFieldViewController.xib in Resources */,
 				86DB006C23D70B97001E99E8 /* GenderViewController.xib in Resources */,
 				66AEC62624227B3D003CF2EB /* MyBookingsViewController.xib in Resources */,
 				663117D7243F25D7007C3FED /* FieldContractsCell.xib in Resources */,
-				6631178B243F254F007C3FED /* SportCell.xib in Resources */,
 				662A168523C3E4B200A3695E /* TransactionsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4741,8 +4739,10 @@
 				6682B3BE2429924D0050CC9A /* SechaduleRouter.swift in Sources */,
 				662A168423C3E4B200A3695E /* TransactionsModel.swift in Sources */,
 				662A16B823C3E93900A3695E /* MyFriendsDetailsModel.swift in Sources */,
+				660A14F224619EF5006DAD45 /* FieldOwnerDetailsModel.swift in Sources */,
 				E2FAE576240BEF5C00CD8CFC /* CustomView.swift in Sources */,
 				6683E2A123BB5FD900250702 /* MyFriendsConfiguration.swift in Sources */,
+				660A14DF24619EF5006DAD45 /* SuggestFieldPresenter.swift in Sources */,
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
 				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
@@ -4754,7 +4754,6 @@
 				6663366F23B40A6A004E537C /* ForgetPasswordRouter.swift in Sources */,
 				86BBEE5F23CB5F840036C41D /* CreatePasswordManager.swift in Sources */,
 				861D22EC23DCAFB9004F16F1 /* LibraryInteractor.swift in Sources */,
-				6631178F243F254F007C3FED /* SuggestFieldDetailsViewController.swift in Sources */,
 				861C792723FAAB5A00AFCD7B /* MenuCell.swift in Sources */,
 				6663365223B40318004E537C /* RegisterConfiguration.swift in Sources */,
 				662A168623C3E4B200A3695E /* TransactionsManager.swift in Sources */,
@@ -4770,7 +4769,6 @@
 				66F6D09C23B6F352004BF95C /* APIError.swift in Sources */,
 				86DB006923D70B97001E99E8 /* GenderViewController.swift in Sources */,
 				864E920123E9BE530095B3EF /* LocationEndPoint.swift in Sources */,
-				6631178D243F254F007C3FED /* FieldTypeCell.swift in Sources */,
 				6663369323B40AFD004E537C /* EmailVerficationInteractor.swift in Sources */,
 				86F9B90C23DDAAA5008C1F80 /* LocationRouter.swift in Sources */,
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
@@ -4781,12 +4779,10 @@
 				668C210623C3F5BC00C009A9 /* AddSessionResultPresenter.swift in Sources */,
 				668C213B23C3F6F700C009A9 /* CommentListsViewController.swift in Sources */,
 				6683E2BA23BB631D00250702 /* NotificationSettingModel.swift in Sources */,
-				66311787243F254E007C3FED /* SuggestFieldDetailsRouter.swift in Sources */,
 				662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */,
 				66545F9A243B61AC007A547F /* PublicEventDetailsModel.swift in Sources */,
 				861D22ED23DCAFB9004F16F1 /* LibraryModel.swift in Sources */,
 				86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */,
-				66311783243F254E007C3FED /* SuggestFieldInteractor.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
 				860EFCAC2401671100B40901 /* ShowDetailsInteractor.swift in Sources */,
 				6683E31923BCEF1600250702 /* SideMenuConfiguration.swift in Sources */,
@@ -4795,11 +4791,12 @@
 				6683E2D023BCEB8800250702 /* SettingManager.swift in Sources */,
 				86BBEE5C23CB5F840036C41D /* CreatePasswordInteractor.swift in Sources */,
 				861D22D423DCAEF5004F16F1 /* GalleryRouter.swift in Sources */,
+				660A14F524619EF5006DAD45 /* FieldOwnerDetailsRouter.swift in Sources */,
+				660A14E024619EF5006DAD45 /* SuggestFieldConfiguration.swift in Sources */,
 				6663362F23B40298004E537C /* UserAccountConfiguration.swift in Sources */,
 				6683E2FE23BCEEB300250702 /* HelpCenterModel.swift in Sources */,
 				86DB006723D70B97001E99E8 /* GenderPresenter.swift in Sources */,
 				861D22D723DCAEF5004F16F1 /* GalleryModel.swift in Sources */,
-				6631178A243F254E007C3FED /* SportCell.swift in Sources */,
 				662A16B623C3E93900A3695E /* MyFriendsDetailsViewController.swift in Sources */,
 				66AEC602242266B0003CF2EB /* FieldCell.swift in Sources */,
 				6663361323B40206004E537C /* AppDelegate.swift in Sources */,
@@ -4812,6 +4809,7 @@
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
 				861CA2F723F40D45004FC02F /* TypeCollectionViewCell.swift in Sources */,
 				66AEC60F242266B0003CF2EB /* FilterViewController.swift in Sources */,
+				660A14E224619EF5006DAD45 /* SuggestFieldDetailsPresenter.swift in Sources */,
 				668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */,
 				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
 				66545F9C243B61AC007A547F /* PublicEventDetailsManager.swift in Sources */,
@@ -4824,8 +4822,8 @@
 				66AEC616242266B0003CF2EB /* FilterInteractor.swift in Sources */,
 				86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */,
 				6682B3C22429924D0050CC9A /* SechaduleConfiguration.swift in Sources */,
-				6631179A243F254F007C3FED /* FieldOwnerDetailsConfiguration.swift in Sources */,
 				66AEC5FF242266B0003CF2EB /* FilterResultInteractor.swift in Sources */,
+				660A14F124619EF5006DAD45 /* FieldOwnerDetailsInteractor.swift in Sources */,
 				660A141A246005A6006DAD45 /* MyWalletViewController.swift in Sources */,
 				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
 				668C210A23C3F5BC00C009A9 /* AddSessionResultModel.swift in Sources */,
@@ -4837,6 +4835,7 @@
 				6663365923B40318004E537C /* RegisterManager.swift in Sources */,
 				862A5E8A23CB72380058355E /* ChangeUsernameModel.swift in Sources */,
 				668C213923C3F6F700C009A9 /* CommentListsPresenter.swift in Sources */,
+				660A14EE24619EF5006DAD45 /* SuggestFieldDetailsEndPoint.swift in Sources */,
 				66340A0623B4C8FC009DB30A /* FieldsRouter.swift in Sources */,
 				66AEC612242266B0003CF2EB /* FilterModel.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
@@ -4849,7 +4848,6 @@
 				861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */,
 				E2FAE5D2240E649E00CD8CFC /* publicEventsCell.swift in Sources */,
 				862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */,
-				66311788243F254E007C3FED /* PhotoFieldCell.swift in Sources */,
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
 				8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */,
 				E2FAE5BC240E648300CD8CFC /* SocialConfiguration.swift in Sources */,
@@ -4863,16 +4861,17 @@
 				86B14BDE23CB543B00B3FEB1 /* WelcomeViewController.swift in Sources */,
 				662A168223C3E4B200A3695E /* TransactionsViewController.swift in Sources */,
 				6663365523B40318004E537C /* RegisterViewController.swift in Sources */,
+				660A14E424619EF5006DAD45 /* SuggestFieldDetailsInteractor.swift in Sources */,
 				668C215923C3F75300C009A9 /* CheckOutConfirmationConfiguration.swift in Sources */,
 				663117CF243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift in Sources */,
 				86E1293223D49E73007CB956 /* TabBarManager.swift in Sources */,
 				6683E2FD23BCEEB300250702 /* HelpCenterInteractor.swift in Sources */,
 				666336C323B40BD3004E537C /* NewPasswordPresenter.swift in Sources */,
-				66311782243F254E007C3FED /* SuggestFieldConfiguration.swift in Sources */,
 				6663363423B40298004E537C /* UserAccountModel.swift in Sources */,
 				660A140C24600376006DAD45 /* PlayersTableViewCell.swift in Sources */,
+				660A14F924619EF6006DAD45 /* FieldOwnerDetailsPresenter.swift in Sources */,
+				660A14F024619EF5006DAD45 /* SuggestFieldDetailsModel.swift in Sources */,
 				66AEC62424227B3D003CF2EB /* MyBookingsInteractor.swift in Sources */,
-				66311797243F254F007C3FED /* FieldOwnerDetailsRouter.swift in Sources */,
 				E2FAE5D7240E649E00CD8CFC /* PublicEventsRouter.swift in Sources */,
 				662A16A623C3E80900A3695E /* MemberOfFriendsInteractor.swift in Sources */,
 				666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */,
@@ -4882,8 +4881,8 @@
 				668C211A23C3F6C100C009A9 /* CheckOutRouter.swift in Sources */,
 				662A16D823C3EB7600A3695E /* AddFriendRequestViewController.swift in Sources */,
 				8671348423CF5950009093A0 /* NewPasswordEndPoint.swift in Sources */,
-				6631177F243F254E007C3FED /* SuggestFieldModel.swift in Sources */,
 				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
+				660A15012461A17E006DAD45 /* ServicesCell.swift in Sources */,
 				860EFCAF2401671100B40901 /* ShowDetailsManager.swift in Sources */,
 				6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */,
 				66AEC614242266B0003CF2EB /* FilterPresenter.swift in Sources */,
@@ -4898,15 +4897,16 @@
 				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
 				869BCA5C23E99C66000291EB /* DateOfBirthEndPoint.swift in Sources */,
+				660A14DD24619EF5006DAD45 /* SuggestFieldModel.swift in Sources */,
 				E2FAE5B0240E648300CD8CFC /* SocialManager.swift in Sources */,
 				668C212C23C3F6E200C009A9 /* LeaveCommentInCommentListInteractor.swift in Sources */,
 				66CCBE88240EAA840046D672 /* ShowDetailsViewController.swift in Sources */,
 				6682B3C9242994BF0050CC9A /* SechaduleTableViewCell.swift in Sources */,
 				66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */,
+				660A14DE24619EF5006DAD45 /* SuggestFieldManager.swift in Sources */,
 				862EB5B123D730AD00508F1A /* DateOfBirthModel.swift in Sources */,
 				861D22D223DCAEF5004F16F1 /* GalleryConfiguration.swift in Sources */,
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
-				66311786243F254E007C3FED /* SuggestFieldDetailsInteractor.swift in Sources */,
 				663117E5243F25D7007C3FED /* WalletSuccessCheckOutPresenter.swift in Sources */,
 				660A1433246008F2006DAD45 /* ReducerType.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
@@ -4923,6 +4923,7 @@
 				8608423923DC815200BA87D7 /* SearchLocationRouter.swift in Sources */,
 				862A5E8623CB72380058355E /* ChangeUsernamePresenter.swift in Sources */,
 				66340A0823B4C8FC009DB30A /* FieldsInteractor.swift in Sources */,
+				660A14F824619EF6006DAD45 /* FieldOwnerDetailsConfiguration.swift in Sources */,
 				861D22D923DCAEF5004F16F1 /* GalleryManager.swift in Sources */,
 				666336B423B40B84004E537C /* PhoneVerificationViewController.swift in Sources */,
 				86E1292E23D49E73007CB956 /* TabBarViewController.swift in Sources */,
@@ -4934,7 +4935,6 @@
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
 				E2FAE5D3240E649E00CD8CFC /* PublicEventsViewController.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
-				66311793243F254F007C3FED /* FieldOwnerDetailsInteractor.swift in Sources */,
 				6683E32023BCEF1600250702 /* SideMenuManager.swift in Sources */,
 				E2FAE5B9240E648300CD8CFC /* SocialViewController.swift in Sources */,
 				668C212D23C3F6E200C009A9 /* LeaveCommentInCommentListModel.swift in Sources */,
@@ -4955,6 +4955,8 @@
 				6663365D23B4036A004E537C /* GeneralRoute.swift in Sources */,
 				66545F99243B61AC007A547F /* PublicEventDetailsInteractor.swift in Sources */,
 				668C20FC23C3F57800C009A9 /* AddSessionResultFiltterManager.swift in Sources */,
+				660A14EB24619EF5006DAD45 /* FieldTypeCell.swift in Sources */,
+				660A14E324619EF5006DAD45 /* SuggestFieldDetailsConfiguration.swift in Sources */,
 				861D22D623DCAEF5004F16F1 /* GalleryInteractor.swift in Sources */,
 				660A1419246005A6006DAD45 /* MyWalletRouter.swift in Sources */,
 				8608423823DC815200BA87D7 /* SearchLocationPresenter.swift in Sources */,
@@ -4974,24 +4976,24 @@
 				6663364523B402F7004E537C /* LoginInteractor.swift in Sources */,
 				660A1417246005A6006DAD45 /* MyWalletConfiguration.swift in Sources */,
 				6683E30B23BCEEFF00250702 /* ProfileRouter.swift in Sources */,
-				663117EC243F268E007C3FED /* ServicesCell.swift in Sources */,
-				66311784243F254E007C3FED /* SuggestFieldDetailsPresenter.swift in Sources */,
 				6663363623B40298004E537C /* UserAccountManager.swift in Sources */,
+				660A14E624619EF5006DAD45 /* PhotoFieldCell.swift in Sources */,
 				666336C223B40BD3004E537C /* NewPasswordConfiguration.swift in Sources */,
 				6682B389242985920050CC9A /* NextView.swift in Sources */,
 				662A16A423C3E80900A3695E /* MemberOfFriendsRouter.swift in Sources */,
 				6683E31A23BCEF1600250702 /* SideMenuPresenter.swift in Sources */,
 				660A141B246005A6006DAD45 /* MyWalletInteractor.swift in Sources */,
+				660A14E824619EF5006DAD45 /* SportCell.swift in Sources */,
 				66AEC62724227B3D003CF2EB /* MyBookingsManager.swift in Sources */,
 				663117E1243F25D7007C3FED /* WalletSuccessCheckOutModel.swift in Sources */,
 				662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */,
 				6663369423B40AFD004E537C /* EmailVerficationModel.swift in Sources */,
+				660A14DC24619EF5006DAD45 /* SuggestFieldRouter.swift in Sources */,
 				86A2FF6A23F4220F0053E5A1 /* FieldsTableViewCell.swift in Sources */,
 				86E1292D23D49E73007CB956 /* TabBarRouter.swift in Sources */,
 				86DB006B23D70B97001E99E8 /* GenderModel.swift in Sources */,
 				86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */,
 				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
-				66311796243F254F007C3FED /* FieldOwnerDetailsEndPoint.swift in Sources */,
 				660A141C246005A6006DAD45 /* MyWalletModel.swift in Sources */,
 				660A1409245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift in Sources */,
 				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
@@ -5004,12 +5006,14 @@
 				663117E3243F25D7007C3FED /* WalletSuccessCheckOutRouter.swift in Sources */,
 				868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
+				660A14E124619EF5006DAD45 /* SuggestFieldInteractor.swift in Sources */,
 				662A16EA23C3ECE000A3695E /* MyFriendsRequestInteractor.swift in Sources */,
 				668C215C23C3F75300C009A9 /* CheckOutConfirmationViewController.swift in Sources */,
 				662A16A723C3E80900A3695E /* MemberOfFriendsModel.swift in Sources */,
 				66AEC62324227B3D003CF2EB /* MyBookingsViewController.swift in Sources */,
 				6682B38A242985920050CC9A /* UIView+.swift in Sources */,
 				862A5E8523CB72380058355E /* ChangeUsernameConfiguration.swift in Sources */,
+				660A14ED24619EF5006DAD45 /* SuggestFieldDetailsViewController.swift in Sources */,
 				6663368223B40AB3004E537C /* ForgetEmailInteractor.swift in Sources */,
 				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
 				668C214F23C3F70F00C009A9 /* BookSessionManager.swift in Sources */,
@@ -5020,19 +5024,19 @@
 				6682B3BD2429924D0050CC9A /* SechaduleInteractor.swift in Sources */,
 				6663369623B40AFD004E537C /* EmailVerficationManager.swift in Sources */,
 				668C214C23C3F70F00C009A9 /* BookSessionInteractor.swift in Sources */,
+				660A14F424619EF5006DAD45 /* FieldOwnerDetailsEndPoint.swift in Sources */,
 				6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */,
-				66311792243F254F007C3FED /* SuggestFieldDetailsModel.swift in Sources */,
 				862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */,
-				66311794243F254F007C3FED /* FieldOwnerDetailsModel.swift in Sources */,
 				668C210823C3F5BC00C009A9 /* AddSessionResultViewController.swift in Sources */,
+				660A14F324619EF5006DAD45 /* FieldOwnerDetailsManager.swift in Sources */,
 				66A44FFC243DC30E00849C91 /* PublicEventDetailsEndpoint.swift in Sources */,
 				E2FAE5AF240E648300CD8CFC /* SocialInteractor.swift in Sources */,
 				6683E2CE23BCEB8800250702 /* SettingModel.swift in Sources */,
 				66545F97243B61AC007A547F /* PublicEventDetailsRouter.swift in Sources */,
-				66311785243F254E007C3FED /* SuggestFieldDetailsConfiguration.swift in Sources */,
 				668C20F823C3F57800C009A9 /* AddSessionResultFiltterViewController.swift in Sources */,
 				6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */,
 				6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */,
+				660A14F624619EF6006DAD45 /* FieldOwnerDetailsViewController.swift in Sources */,
 				6683E30923BCEEFF00250702 /* ProfileConfiguration.swift in Sources */,
 				668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */,
 				663117DE243F25D7007C3FED /* SessionDetailsModel.swift in Sources */,
@@ -5050,6 +5054,7 @@
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
 				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
 				667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */,
+				660A14E524619EF5006DAD45 /* SuggestFieldDetailsRouter.swift in Sources */,
 				86DC11E323D5C19100E577D9 /* EditProfileInteractor.swift in Sources */,
 				663117D5243F25D7007C3FED /* CheckOutSessionDetailsViewController.swift in Sources */,
 				66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */,
@@ -5066,13 +5071,10 @@
 				862EB5B023D730AD00508F1A /* DateOfBirthInteractor.swift in Sources */,
 				66340A0423B4C8FC009DB30A /* FieldsConfiguration.swift in Sources */,
 				667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */,
-				6631177D243F254E007C3FED /* SuggestFieldViewController.swift in Sources */,
 				663117D0243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
-				66311780243F254E007C3FED /* SuggestFieldManager.swift in Sources */,
 				66AEC62524227B3D003CF2EB /* MyBookingsModel.swift in Sources */,
 				668C214B23C3F70F00C009A9 /* BookSessionViewController.swift in Sources */,
-				66311781243F254E007C3FED /* SuggestFieldPresenter.swift in Sources */,
 				86DC11E123D5C19100E577D9 /* EditProfileRouter.swift in Sources */,
 				662A16E723C3ECE000A3695E /* MyFriendsRequestPresenter.swift in Sources */,
 				6683E31E23BCEF1600250702 /* SideMenuModel.swift in Sources */,
@@ -5095,7 +5097,6 @@
 				862EB5B323D730AD00508F1A /* DateOfBirthManager.swift in Sources */,
 				668C211923C3F6C100C009A9 /* CheckOutPresenter.swift in Sources */,
 				6683E2CD23BCEB8800250702 /* SettingInteractor.swift in Sources */,
-				66311790243F254F007C3FED /* SuggestFieldDetailsEndPoint.swift in Sources */,
 				662A16C623C3EA9F00A3695E /* AddFriendsRouter.swift in Sources */,
 				6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */,
 				E2FAE5DA240E649E00CD8CFC /* PublicEventsModel.swift in Sources */,
@@ -5108,8 +5109,6 @@
 				8608423C23DC815200BA87D7 /* SearchLocationModel.swift in Sources */,
 				86F9B91123DDAAA5008C1F80 /* LocationManager.swift in Sources */,
 				6663363323B40298004E537C /* UserAccountInteractor.swift in Sources */,
-				66311798243F254F007C3FED /* FieldOwnerDetailsViewController.swift in Sources */,
-				66311795243F254F007C3FED /* FieldOwnerDetailsManager.swift in Sources */,
 				66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */,
 				667E4B6F23C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift in Sources */,
 				666336B123B40B84004E537C /* PhoneVerificationConfiguration.swift in Sources */,
@@ -5145,7 +5144,6 @@
 				660A141E246005A6006DAD45 /* MyWalletManager.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
 				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
-				6631177E243F254E007C3FED /* SuggestFieldRouter.swift in Sources */,
 				86DB006A23D70B97001E99E8 /* GenderInteractor.swift in Sources */,
 				862A5E8723CB72380058355E /* ChangeUsernameRouter.swift in Sources */,
 				662A168323C3E4B200A3695E /* TransactionsInteractor.swift in Sources */,
@@ -5153,11 +5151,12 @@
 				66AEC615242266B0003CF2EB /* FilterConfiguration.swift in Sources */,
 				668C214823C3F70F00C009A9 /* BookSessionConfiguration.swift in Sources */,
 				66AEC611242266B0003CF2EB /* FilterManager.swift in Sources */,
-				6631179B243F254F007C3FED /* FieldOwnerDetailsPresenter.swift in Sources */,
+				660A14DB24619EF5006DAD45 /* SuggestFieldViewController.swift in Sources */,
 				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
 				86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
+				660A14EF24619EF5006DAD45 /* SuggestFieldDetailsManager.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
 				6682B38C242985920050CC9A /* ImageCollectionViewCell.swift in Sources */,
@@ -5172,7 +5171,6 @@
 				663117E7243F25D7007C3FED /* WalletSuccessCheckOutViewController.swift in Sources */,
 				6663363223B40298004E537C /* UserAccountViewController.swift in Sources */,
 				66AEC60A242266B0003CF2EB /* FilterResultManager.swift in Sources */,
-				66311791243F254F007C3FED /* SuggestFieldDetailsManager.swift in Sources */,
 				86F9B90F23DDAAA5008C1F80 /* LocationModel.swift in Sources */,
 				6683E2FB23BCEEB300250702 /* HelpCenterRouter.swift in Sources */,
 				668C215B23C3F75300C009A9 /* CheckOutConfirmationRouter.swift in Sources */,
@@ -5336,7 +5334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.12;
+				CURRENT_PROJECT_VERSION = 1.0.13;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5359,7 +5357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.12;
+				CURRENT_PROJECT_VERSION = 1.0.13;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

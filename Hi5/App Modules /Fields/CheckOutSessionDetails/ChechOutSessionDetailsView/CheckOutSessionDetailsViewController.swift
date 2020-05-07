@@ -79,7 +79,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
 //        cancelPeriodFree.text =  "\(sessionData?.field?.guaranteedRefundTime ?? "0")" + "hours before the start "
         total.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
         subTotal.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
-        if fieldData?.publicEvent.payment == "online" || sessionData?.field?.payment == "Online"{
+        if fieldData?.publicEvent?.payment == "online" || sessionData?.field?.payment == "Online"{
             paymentType.text = "Wallet"
             paymentDetails.text = "Your request will be locked , other members cannot pay and book it."
             cancelTitle.isHidden = false
@@ -97,14 +97,14 @@ class CheckOutSessionDetailsViewController: UIViewController {
 
     }
     func loadEventCheckOut() {
-        comapnyName.text = fieldData?.publicEvent.partnerName
-        fieldName.text = fieldData?.publicEvent.fieldName
-        date.text = fieldData?.publicEvent.date
-        time.text = (fieldData?.publicEvent.startTime)! + " - " + (fieldData?.publicEvent.endTime)!
-        cancelPeriodFree.text =  "\(fieldData?.publicEvent.guaranteedRefundTime ?? "0")" + "hours before the start "
-        total.text = "\(String(describing: fieldData?.publicEvent.cost ?? 0))"
-        subTotal.text = "\(String(describing: fieldData?.publicEvent.cost ?? 0))"
-        if fieldData?.publicEvent.payment == "online" || fieldData?.publicEvent.payment == "Online"{
+        comapnyName.text = fieldData?.publicEvent?.partnerName
+        fieldName.text = fieldData?.publicEvent?.fieldName
+        date.text = fieldData?.publicEvent?.date
+        time.text = (fieldData?.publicEvent?.startTime)! + " - " + (fieldData?.publicEvent?.endTime)!
+        cancelPeriodFree.text =  "\(fieldData?.publicEvent?.guaranteedRefundTime ?? 0)" + "hours before the start "
+        total.text = "\(String(describing: fieldData?.publicEvent?.cost ?? 0))"
+        subTotal.text = "\(String(describing: fieldData?.publicEvent?.cost ?? 0))"
+        if fieldData?.publicEvent?.payment == "online" || fieldData?.publicEvent?.payment == "Online"{
             paymentType.text = "Wallet"
             paymentDetails.text = "Your request will be locked , other members cannot pay and book it."
             cancelTitle.isHidden = false
@@ -124,7 +124,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
     //MARK: - Actions
     @IBAction func proceesBtnTapped(_ sender: UIButton) {
   //      router?.navigateToWalletSuccessCheckOut()
-        interactor?.showDetails(view: self, eventId: (fieldData?.publicEvent.id!) ?? "\(sessionData?.field?.id!)")
+        interactor?.showDetails(view: self, eventId: (fieldData?.publicEvent?.id!) ?? "\(sessionData?.field?.id! ?? 0)")
     }
     
 }
@@ -135,7 +135,6 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?){
-        print(response)
     }
 }
 

@@ -85,6 +85,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
         param["sport_type"] = sportId
         param["start_time"] = minRange
         param["end_time"] = maxRange
+        param["name"] = "All Stadiums"
         print(param)
         router?.navigateToFilterResult(parameter: param)
         
@@ -297,8 +298,8 @@ extension FilterViewController {
 
 extension FilterViewController {
     func rangeSlider(_ sender: TTRangeSlider!, didChangeSelectedMinimumValue selectedMinimum: Float, andMaximumValue selectedMaximum: Float) {
-        self.minRange = String(Int(selectedMinimum))
-        self.maxRange = String(Int(selectedMaximum))
+        self.minRange = String(Int(selectedMinimum)) + ".0"
+        self.maxRange = String(Int(selectedMaximum)) + ".0"
         print(minRange)
         print(maxRange)
     }

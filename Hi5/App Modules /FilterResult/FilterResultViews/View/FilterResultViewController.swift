@@ -38,6 +38,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var PlayGroundtitle: UILabel!
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -53,23 +54,31 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     override func viewWillAppear(_ animated: Bool) {
         getDayName()
         let date = Date()
-        let dateFormatter = DateFormatter()
-        let selectDay = date.getDate(dayDifference: 0)
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+                let dateFormatter = DateFormatter()
+                let selectDay = date.getDate(dayDifference: 0)
+                dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDay = dateFormatter.string(from: selectDay)
-        if selectedDay != nil {
-            parameter["date"] = selectedDay
-            showIndicator()
-            removeNoFields()
-            if type == "filter"{
-                 interactor?.filterSession(view: self, parameter: parameter)
-            }
-            else{
-                parameter["date"] = selectedDay
-                 interactor?.filterSession(view: self, parameter: parameter)
-            }
-        }
+
+        getSessionsData()
         
+    }
+    
+    func getSessionsData(){
+       
+         if selectedDay != nil {
+             parameter["date"] = selectedDay
+             showIndicator()
+             removeNoFields()
+             if type == "filter"{
+                PlayGroundtitle.text =  parameter["name"] as? String
+                  interactor?.filterSession(view: self, parameter: parameter)
+             }
+             else{
+                 parameter["date"] = selectedDay
+                 PlayGroundtitle.text =  parameter["name"] as? String
+                  interactor?.chechAvalabilty(view: self, parameter: parameter)
+             }
+         }
     }
     
     func showIndicator() {
@@ -96,6 +105,12 @@ extension FilterResultViewController: IFilterResultViewController {
     func showResponse(response: FilterResultModel.FilterSessionResponse) {
         guard let field = response.fields else {return}
         self.fields = field
+        if field.count == 0 {
+          self.tableView.isHidden = true
+        }
+        else{
+           self.tableView.isHidden = false
+        }
         self.tableView.reloadData()
     }
     func showAlert(title: String, msg: String) {
@@ -256,14 +271,8 @@ extension FilterResultViewController {
         let selectDay = date.getDate(dayDifference: indexPath.row)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         selectedDay = dateFormatter.string(from: selectDay)
-        if let currentDay = selectedDay {
-            parameter["date"] = currentDay
-                showIndicator()
-                removeNoFields()
-                interactor?.filterSession(view: self, parameter: parameter)
-        }
-        
-        
+        getSessionsData()
+  
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

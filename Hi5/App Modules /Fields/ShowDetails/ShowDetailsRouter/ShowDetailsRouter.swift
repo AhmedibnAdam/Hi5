@@ -26,7 +26,8 @@ class ShowDetailsRouter: IShowDetailsRouter {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
     func navigateToSessionResult(fieldId: Int , fieldName: String) {
-        let parameters = ["field_id":"\(fieldId)"]
+        var parameters = ["field_id":"\(fieldId)"]
+        parameters["name"] = fieldName
         view?.navigate(type: .modal, module: GeneralRoute.filterResult(param: parameters, type: "checkAvalable"), completion: nil)
     }
 }

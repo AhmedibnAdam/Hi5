@@ -24,6 +24,7 @@ class ShowDetailsViewController: UIViewController   {
     var field: FieldsModel.NearByfieldsResponseField?
     var services = [ShowDetailsModel.FieldDetailsService]()
     var field_id: String?
+    var lat , long :String?
     //MARK: - Outlets
     @IBOutlet weak var statusStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,6 +48,7 @@ class ShowDetailsViewController: UIViewController   {
     @IBOutlet weak var fieldTypeLbl: UILabel!
     @IBOutlet weak var fieldDescriptionLbl: UILabel!
     @IBOutlet weak var rateLbl: UILabel!
+    @IBOutlet weak var showLocation: UIButton!
     @IBOutlet weak var checkAvailabilityBtn: UIButton!
     
     //MARK: - View life Cycle
@@ -97,7 +99,21 @@ class ShowDetailsViewController: UIViewController   {
     @IBAction func backBtnTapped(_ sender: UIButton) {
         router?.navigateToFields()
     }
+    
+    @IBAction func showLocation(_ sender: Any) {
+        if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
+            UIApplication.shared.openURL(NSURL(string:
+                "comgooglemaps://?saddr=&daddr=\( lat ?? "0.0")),\( long ?? "0.0"))&directionsmode=driving")! as URL)
+
+            } else {
+                NSLog("Can't use comgooglemaps://");
+            }
+        }
+    
+    
 }
+
+
 
 //MARK: - Extensions
 extension ShowDetailsViewController: IShowDetailsViewController {
@@ -109,6 +125,8 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         guard let field = response.field else {return}
         fieldName.text = field.name
         self.fieldRes = response
+        self.lat = field.latitude
+        self.long = field.longitude
         commentLbl.text = "\(String(describing: field.comments ?? 0))"
         rateLbl.text = "\(String(describing: field.rating ?? 0))"
         fieldAddressLbl.text = field.address

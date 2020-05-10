@@ -30,6 +30,7 @@ struct ShowDetailsModel {
         let name, partnerName: String?
         let partnerImage: String?
         let cost: Int?
+        let longitude, latitude : String?
         let gender, address, distance, sportType: String?
         let recommendedFor: String?
         let fieldImage: String?
@@ -44,7 +45,7 @@ struct ShowDetailsModel {
         let services: [FieldDetailsService]?
 
         enum CodingKeys: String, CodingKey {
-            case id, name
+            case id, name,longitude, latitude
             case partnerName = "partner_name"
             case partnerImage = "partner_image"
             case cost, gender, address, distance

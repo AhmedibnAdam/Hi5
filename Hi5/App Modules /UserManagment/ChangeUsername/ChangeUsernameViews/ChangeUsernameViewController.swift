@@ -17,7 +17,7 @@ protocol IChangeUsernameViewController: class {
     func hideIndicator()
 }
 
-class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
+class ChangeUsernameViewController: UIViewController {
 	var interactor: IChangeUsernameInteractor?
 	var router: IChangeUsernameRouter?
     //MARK:- Outlets
@@ -36,14 +36,7 @@ class ChangeUsernameViewController: UIViewController, UITextFieldDelegate {
         self.usernameTextField.delegate = self
         configer()
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
+  
     //MARK:- Actions
     @IBAction func changeBtnTapped(_ sender: UIButton) {
         changeBtnAction()
@@ -100,3 +93,13 @@ extension ChangeUsernameViewController {
     }
 }
 
+extension ChangeUsernameViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+          self.view.endEditing(true)
+      }
+      
+      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          self.view.endEditing(true)
+          return false
+      }
+}

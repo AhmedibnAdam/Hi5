@@ -30,6 +30,7 @@
                 <outlet property="paymentLbl" destination="aJk-mt-LJO" id="IOS-00-iii"/>
                 <outlet property="rateLbl" destination="DDg-5E-LNk" id="ikL-WV-pHr"/>
                 <outlet property="requestMemberShipBtn" destination="TJP-9w-KUR" id="UvC-FO-i2f"/>
+                <outlet property="showLocation" destination="tRu-Pc-t5P" id="EzD-ug-c6O"/>
                 <outlet property="sportTypeLbl" destination="3Vo-kN-XD1" id="CIj-KR-o0B"/>
                 <outlet property="statusLbl" destination="h8Y-JI-VHw" id="7YJ-AT-RrB"/>
                 <outlet property="statusStackView" destination="FKJ-zr-6mR" id="v2I-rt-7tu"/>
@@ -478,13 +479,22 @@
                                 </button>
                             </subviews>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRu-Pc-t5P">
+                            <rect key="frame" x="20" y="265" width="335" height="30"/>
+                            <connections>
+                                <action selector="showLocation:" destination="-1" eventType="touchUpInside" id="EYY-QC-y0v"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fn9-hy-szI" secondAttribute="trailing" constant="20" id="5dd-JR-Lh8"/>
+                        <constraint firstItem="tRu-Pc-t5P" firstAttribute="trailing" secondItem="maE-PN-7li" secondAttribute="trailing" id="ApE-ks-GM6"/>
                         <constraint firstItem="fn9-hy-szI" firstAttribute="leading" secondItem="8zE-TB-p5n" secondAttribute="leading" constant="20" id="hcK-YO-H0n"/>
                         <constraint firstAttribute="bottom" secondItem="fn9-hy-szI" secondAttribute="bottom" id="l2o-9R-LYo"/>
+                        <constraint firstItem="tRu-Pc-t5P" firstAttribute="centerY" secondItem="HWW-0p-bab" secondAttribute="centerY" id="nrI-rZ-9TU"/>
                         <constraint firstItem="fn9-hy-szI" firstAttribute="top" secondItem="8zE-TB-p5n" secondAttribute="top" id="oUj-Pn-r76"/>
                         <constraint firstItem="fn9-hy-szI" firstAttribute="width" secondItem="8zE-TB-p5n" secondAttribute="width" constant="-40" id="pj3-s0-80E"/>
+                        <constraint firstItem="tRu-Pc-t5P" firstAttribute="leading" secondItem="HWW-0p-bab" secondAttribute="leading" id="zbs-sK-hLK"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="sma-r0-auM"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="SGA-Nz-KY2"/>

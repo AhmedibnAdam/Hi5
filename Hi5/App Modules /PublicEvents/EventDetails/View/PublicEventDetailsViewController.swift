@@ -92,12 +92,13 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
         print(msg )
     }
     func showDetailsResponse(response: PublicEventDetailsModel.PublicEventDetails){
+        if response != nil {
         let field = response.publicEvent
         self.fieldData = response
         tableView.reloadData()
         name.text = field?.fieldName
         age.text  = field?.groupName
-        noOfPlayerSlider.value = Float((field?.playersNumber!)!)
+        noOfPlayerSlider.value = Float((field?.playersNumber ?? 0)!)
         sliderLableP.text = "\(field?.playersNumber ?? 1)"
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
@@ -124,7 +125,7 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
             creatorImage.kf.setImage(with: url)
         }
         playerNumbers.text = "\(String(describing: field?.players?.count ?? 0 )) members"
-        paymentMetod.text = "Payment method: " + (field?.payment!)!
+        paymentMetod.text = "Payment method: " + (field?.payment ?? "")!
         if field?.payment == "cash"{
             refundStack.isHidden = true
             refunbootomLineView.isHidden = true
@@ -132,6 +133,11 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
         else{
             refundStack.isHidden = false
             refunbootomLineView.isHidden = false
+            
+        }
+        }
+        else{
+            ShowAlertView.showAlert(title: "Alert", msg: "500 - internal server error", sender: self)
 
         }
     }

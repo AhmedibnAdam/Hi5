@@ -228,6 +228,7 @@ extension PublicEventsViewController: IPublicEventsViewController , CLLocationMa
         }
         else {
             self.mainCollectionView.isHidden = true
+            ShowAlertView.showAlert(title: "Alert", msg: "500 - internal server error", sender: self)
         }
     }
     // Print out the location to the console

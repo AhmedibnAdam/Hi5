@@ -1152,7 +1152,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "showDetailsResponse(response:)"
+            landmarkName = "showLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1184,8 +1184,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
+            landmarkName = "ShowDetailsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2094,8 +2094,8 @@
                   urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/CheckOutSessionDetails/ChechOutSessionDetailsInteractor/CheckOutSessionDetailsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "131">
                </Location>
                <Location
@@ -2109,8 +2109,8 @@
                   urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/CheckOutSessionDetails/ChechOutSessionDetailsInteractor/CheckOutSessionDetailsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
                   offsetFromSymbolStart = "190">
                </Location>
             </Locations>
@@ -2274,6 +2274,38 @@
             endingLineNumber = "29"
             landmarkName = "showDetails(view:eventId:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFEAA78A-E7A8-44E8-A4EE-649B7DD9EA7F - b4e28f325ab9962e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.CheckOutSessionDetailsInteractor.showDetails(view: __C.UIViewController, eventId: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/CheckOutSessionDetails/ChechOutSessionDetailsInteractor/CheckOutSessionDetailsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  uuid = "BFEAA78A-E7A8-44E8-A4EE-649B7DD9EA7F - 644e832615a7ea43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.CheckOutSessionDetailsModel.PublicEventDetailsJoin&gt;) -&gt; () in Hi5.CheckOutSessionDetailsInteractor.showDetails(view: __C.UIViewController, eventId: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/CheckOutSessionDetails/ChechOutSessionDetailsInteractor/CheckOutSessionDetailsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "190">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2290,6 +2322,38 @@
             endingLineNumber = "73"
             landmarkName = "header"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3E24C39-43FA-4725-98CA-702880201A8C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "showLocation(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09BFC010-D54D-41E9-9DB8-EC0BCFA36879"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "showLocation(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

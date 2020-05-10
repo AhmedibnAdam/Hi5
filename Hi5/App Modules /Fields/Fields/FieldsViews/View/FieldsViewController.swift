@@ -33,6 +33,8 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
     var currentLocation: CLLocation!
     var lat: Double?
     var long: Double?
+    var latitude: String?
+       var longtyde: String?
     var types = ["Nearby","Favourites","Member of"]
     var interactor: IFieldsInteractor?
     var router: IFieldsRouter?
@@ -303,8 +305,12 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
         cell.delegate = self
+        cell.map.tag = indexPath.row
+        cell.map.addTarget(self, action: #selector(locationAction(_:)), for: .touchUpInside)
         if self.fieldsTabType == 0 {
             let nearFields = nearByField[indexPath.row]
+            self.latitude = nearFields.latitude
+                       self.longtyde = nearFields.longitude
             cell.namelbl.text = nearFields.name
             cell.locationLbl.text = nearFields.address
             cell.commentLbl.text = String(nearFields.comments ?? 0)
@@ -355,9 +361,12 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             } else {
                 cell.favouriteBtn.setImage(UIImage(named: "fav"), for: .normal)
             }
+                 
         }
         else if self.fieldsTabType == 1 {
             let favorFields = favoriteFields[indexPath.row]
+            self.latitude = favorFields.latitude
+            self.longtyde = favorFields.longitude
             cell.namelbl.text = favorFields.name
              cell.partner.text = favorFields.name
             cell.locationLbl.text = favorFields.address
@@ -405,6 +414,8 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         }
         else {
             let memberFields = memberOfFields[indexPath.row]
+            self.latitude = memberFields.latitude
+                       self.longtyde = memberFields.longitude
             cell.namelbl.text = memberFields.name
             cell.partner.text = memberFields.name
             cell.locationLbl.text = memberFields.address
@@ -466,6 +477,17 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
         }
         
+    }
+    
+    
+    @objc func locationAction(_ sender: UIButton){
+    if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
+        UIApplication.shared.openURL(NSURL(string:
+            "comgooglemaps://?saddr=&daddr=\( latitude ?? "0.0")),\( longtyde ?? "0.0"))&directionsmode=driving")! as URL)
+
+        } else {
+            NSLog("Can't use comgooglemaps://");
+        }
     }
 }
 

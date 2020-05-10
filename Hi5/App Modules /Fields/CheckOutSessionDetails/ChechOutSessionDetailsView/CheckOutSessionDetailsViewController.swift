@@ -57,6 +57,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         initView()
+        promoCode.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +101,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
         comapnyName.text = fieldData?.publicEvent?.partnerName
         fieldName.text = fieldData?.publicEvent?.fieldName
         date.text = fieldData?.publicEvent?.date
-        time.text = (fieldData?.publicEvent?.startTime)! + " - " + (fieldData?.publicEvent?.endTime)!
+        time.text = (fieldData?.publicEvent?.startTime ?? "")! + " - " + (fieldData?.publicEvent?.endTime ?? "")! 
         cancelPeriodFree.text =  "\(fieldData?.publicEvent?.guaranteedRefundTime ?? 0)" + "hours before the start "
         total.text = "\(String(describing: fieldData?.publicEvent?.cost ?? 0))"
         subTotal.text = "\(String(describing: fieldData?.publicEvent?.cost ?? 0))"
@@ -152,3 +153,13 @@ extension CheckOutSessionDetailsViewController {
     }
 }
 
+extension CheckOutSessionDetailsViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+          self.view.endEditing(true)
+      }
+      
+      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+          self.view.endEditing(true)
+          return false
+      }
+}

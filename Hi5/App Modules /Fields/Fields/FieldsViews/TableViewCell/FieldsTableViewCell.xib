@@ -361,6 +361,9 @@
                                     <constraint firstItem="FAe-q4-Cgv" firstAttribute="height" secondItem="3nt-YY-Mhl" secondAttribute="height" id="qYW-U7-hdU"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Di8-Zn-cQz">
+                                <rect key="frame" x="8" y="226" width="115.5" height="30"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -371,8 +374,11 @@
                             <constraint firstItem="25D-4E-99V" firstAttribute="top" secondItem="lSX-gI-HB9" secondAttribute="bottom" constant="8" id="7JK-Oc-Kcl"/>
                             <constraint firstAttribute="trailing" secondItem="25D-4E-99V" secondAttribute="trailing" constant="18" id="DQ7-cu-9Sr"/>
                             <constraint firstItem="25D-4E-99V" firstAttribute="leading" secondItem="K12-J3-Alz" secondAttribute="leading" constant="8" id="cQ9-tp-4sM"/>
+                            <constraint firstItem="Di8-Zn-cQz" firstAttribute="leading" secondItem="jNH-mJ-gJ5" secondAttribute="leading" id="dVk-H8-VjB"/>
+                            <constraint firstItem="Di8-Zn-cQz" firstAttribute="trailing" secondItem="ewQ-wX-btu" secondAttribute="trailing" id="i1C-fv-IGH"/>
                             <constraint firstAttribute="height" constant="260" id="lX5-zU-gc9"/>
                             <constraint firstAttribute="bottom" secondItem="25D-4E-99V" secondAttribute="bottom" constant="12" id="uc0-Xp-QQX"/>
+                            <constraint firstItem="Di8-Zn-cQz" firstAttribute="centerY" secondItem="jNH-mJ-gJ5" secondAttribute="centerY" id="v25-0n-L6r"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
@@ -403,6 +409,7 @@
                 <outlet property="fieldImg" destination="zES-cl-lnN" id="3UN-7G-0SE"/>
                 <outlet property="genderIcon" destination="Kkx-ss-moe" id="d8w-3r-KD5"/>
                 <outlet property="locationLbl" destination="ewQ-wX-btu" id="8pi-0Y-tdS"/>
+                <outlet property="map" destination="Di8-Zn-cQz" id="sNZ-h6-qXM"/>
                 <outlet property="namelbl" destination="8x2-CA-NjM" id="hnb-W0-dF5"/>
                 <outlet property="partner" destination="QAe-ey-Lwg" id="2mC-BT-wgX"/>
                 <outlet property="paymentLbl" destination="WUX-rj-iYA" id="v4k-nm-w6J"/>

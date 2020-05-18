@@ -18,9 +18,19 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4D-Rk-BHH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcg-KL-IH4">
+                                <rect key="frame" x="251" y="28.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="77" id="947-hc-mlW"/>
+                            <constraint firstAttribute="trailing" secondItem="Fcg-KL-IH4" secondAttribute="trailing" constant="27" id="ot6-mk-LyY"/>
+                            <constraint firstItem="Fcg-KL-IH4" firstAttribute="centerY" secondItem="L4D-Rk-BHH" secondAttribute="centerY" id="shM-qo-fih"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="E47-gy-N91">
@@ -63,6 +73,7 @@
             <connections>
                 <outlet property="img" destination="E47-gy-N91" id="snZ-Jb-pU1"/>
                 <outlet property="name" destination="Rgn-Dj-4sK" id="Vjy-Z2-Oyj"/>
+                <outlet property="status" destination="Fcg-KL-IH4" id="WHw-8b-Y30"/>
                 <outlet property="userName" destination="SLv-xd-vWU" id="UZc-qv-XUN"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="94.754464285714278"/>

@@ -101,7 +101,7 @@ class PublicEventsViewController: UIViewController {
                 return nil
             }
         }
-        
+        self.lat = latitude
         var longitude: Double? {
             if let text = long {
                 return Double(text)
@@ -109,6 +109,7 @@ class PublicEventsViewController: UIViewController {
                 return nil
             }
         }
+        self.long = longitude
     }
     
     func setUP(){
@@ -226,7 +227,10 @@ extension PublicEventsViewController: IPublicEventsViewController , CLLocationMa
             self.mainCollectionView.isHidden = false
             self.mainCollectionView.reloadData()
         }
-        else {
+            else if response.publicEvents.count == 0 {
+             self.mainCollectionView.isHidden = true
+        }
+        else  {
             self.mainCollectionView.isHidden = true
             ShowAlertView.showAlert(title: "Alert", msg: "500 - internal server error", sender: self)
         }

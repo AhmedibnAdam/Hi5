@@ -20,7 +20,24 @@ struct PublicEventDetailsModel {
         }
     }
     
+    // MARK: - LeaveEvent
+    struct LeaveEvent: Codable {
+        let status: Bool?
+        let publicEvent: LeavePublicEvent?
+    }
+
+    // MARK: - PublicEvent
+    struct LeavePublicEvent: Codable {
+        let id: Int?
+        let payment, status: String?
+        let refund: Int?
+    }
+
     
+    struct ErrorLeave: Codable {
+        let status: Bool?
+        let msg: String?
+    }
   
     // MARK: - PublicEventDetails
     struct PublicEventDetails: Codable {
@@ -46,10 +63,11 @@ struct PublicEventDetailsModel {
         let payment: String?
         let points: Int?
         let status, fieldType, fieldSize: String?
-        let guaranteedRefundTime: Int?
-        let feeForCancelation: String?
+        let guaranteedRefundTime, guaranteedRefundPercentage: Int?
+        let feeForCancelation: Int?
         let countEssentialPlayer: Int?
         let createrName, createrImage, createrUsername, playerEventStatus: String?
+        let joinedPublicEventID: Int?
         let players: [Player]?
 
         enum CodingKeys: String, CodingKey {
@@ -71,12 +89,14 @@ struct PublicEventDetailsModel {
             case fieldType = "field_type"
             case fieldSize = "field_size"
             case guaranteedRefundTime = "guaranteed_refund_time"
+            case guaranteedRefundPercentage = "guaranteed_refund_percentage"
             case feeForCancelation = "fee_for_cancelation"
             case countEssentialPlayer = "count_essential_player"
             case createrName = "creater_name"
             case createrImage = "creater_image"
             case createrUsername = "creater_username"
             case playerEventStatus = "player_event_status"
+            case joinedPublicEventID = "joined_public__event_id"
             case players
         }
     }

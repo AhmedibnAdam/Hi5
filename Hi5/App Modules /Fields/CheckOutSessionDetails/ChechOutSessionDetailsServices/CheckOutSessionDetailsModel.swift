@@ -31,5 +31,10 @@ struct CheckOutSessionDetailsModel {
         let id: Int
         let payment, status: String
     }
+    struct BookRes: Codable {
+        let status: Bool?
+        let msg: String?
+    }
+
 
 }

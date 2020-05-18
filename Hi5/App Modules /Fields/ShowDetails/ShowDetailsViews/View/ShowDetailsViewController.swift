@@ -9,6 +9,7 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import GoogleMaps
 
 protocol IShowDetailsViewController: class {
 	var router: IShowDetailsRouter? { get set }
@@ -25,6 +26,7 @@ class ShowDetailsViewController: UIViewController   {
     var services = [ShowDetailsModel.FieldDetailsService]()
     var field_id: String?
     var lat , long :String?
+    var parameters: [String: Any]?
     //MARK: - Outlets
     @IBOutlet weak var statusStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -50,25 +52,41 @@ class ShowDetailsViewController: UIViewController   {
     @IBOutlet weak var rateLbl: UILabel!
     @IBOutlet weak var showLocation: UIButton!
     @IBOutlet weak var checkAvailabilityBtn: UIButton!
-    
+    @IBOutlet weak var googleMapView: GMSMapView!
+
     //MARK: - View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-//        registerCollectionCell()
+
         initView()
         configer()
+      
     }
     
+    
+    func setLocation(){
+        let camera = GMSCameraPosition.camera(withLatitude: Double( self.lat!)!,longitude: Double(  self.long!)!, zoom: 10)
+        self.googleMapView.isMyLocationEnabled = true
+
+          self.googleMapView.camera = camera
+
+          let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake( Double( self.lat!)!,Double(  self.long!)!)
+      
+          marker.map = googleMapView
+    }
     override func viewWillAppear(_ animated: Bool) {
         if let id = field_id{
             self.interactor?.showDetails(view: self, fieldId: id)
+            self.view.dropShadow()
         } else {
             showAlert(title: "Error", msg: "SomeThing Wrong")
         }
     }
     //MARK: - Actions
+    @IBAction func showComment(_ sender: UIButton) {
+        router?.navigateToAllComments(id: self.fieldRes?.field?.id ?? 0)
+    }
     @IBAction func requestMemberShipBtnTapped(_ sender: UIButton) {
         if (sender.currentTitle == "Request membership") {
             sender.setTitle("Cancel Request", for: .normal)
@@ -93,7 +111,7 @@ class ShowDetailsViewController: UIViewController   {
     @IBAction func checkAvailabilityBtnTapped(_ sender: UIButton) {
         let fieldId = fieldRes?.field?.id
         let fieldName = fieldRes?.field?.name
-        router?.navigateToSessionResult(fieldId: fieldId ?? 1 , fieldName: fieldName ?? "HighFive")
+        router?.navigateToSessionResult(param: parameters! ,fieldId: fieldId ?? 1 , fieldName: fieldName ?? "HighFive")
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -127,6 +145,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         self.fieldRes = response
         self.lat = field.latitude
         self.long = field.longitude
+        setLocation()
         commentLbl.text = "\(String(describing: field.comments ?? 0))"
         rateLbl.text = "\(String(describing: field.rating ?? 0))"
         fieldAddressLbl.text = field.address

@@ -14,6 +14,7 @@ import UIKit
 class FilterConfiguration {
     static func setup(parameters: [String: Any] = [:]) -> UIViewController {
         let controller = FilterViewController()
+        controller.param = parameters
         let router = FilterRouter(view: controller)
         let presenter = FilterPresenter(view: controller)
         let manager = FilterManager()

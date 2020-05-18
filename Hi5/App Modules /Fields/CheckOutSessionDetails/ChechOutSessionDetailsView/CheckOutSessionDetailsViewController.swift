@@ -51,6 +51,23 @@ class CheckOutSessionDetailsViewController: UIViewController {
     @IBOutlet weak var chargeStack: UIStackView!
     @IBOutlet weak var subTotal: UILabel!
     @IBOutlet weak var total: UILabel!
+    @IBOutlet weak var chooseCash: UIButton!
+    @IBOutlet weak var chooseWallet: UIButton!
+    @IBOutlet weak var walletView: UIView!
+    
+    var payment: String?
+    @IBAction func cashChoice(_ sender: UIButton) {
+        sender.borderWidth = 1
+        sender.borderColor = .orange
+        payment = "cash"
+        chooseWallet.borderWidth = 0
+    }
+    @IBAction func walletChoice(_ sender: UIButton) {
+         sender.borderWidth = 1
+         sender.borderColor = .orange
+         payment = "online"
+         chooseCash.borderWidth = 0
+     }
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -63,6 +80,8 @@ class CheckOutSessionDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if fieldData != nil{
             loadEventCheckOut()
+            self.walletView.isHidden = true
+            self.chooseWallet.isHidden = true
         }
         else {
             print("seession")
@@ -124,8 +143,13 @@ class CheckOutSessionDetailsViewController: UIViewController {
     
     //MARK: - Actions
     @IBAction func proceesBtnTapped(_ sender: UIButton) {
-  //      router?.navigateToWalletSuccessCheckOut()
-        interactor?.showDetails(view: self, eventId: (fieldData?.publicEvent?.id!) ?? "\(sessionData?.field?.id! ?? 0)")
+        if fieldData != nil{
+        interactor?.joinPublicEvent(view: self, eventId: (fieldData?.publicEvent?.id!) ?? "\(sessionData?.field?.id! ?? 0)")
+        }
+        else {
+            interactor?.parameters = ["payment_method": payment ?? "cash"]
+            interactor?.join(view: self, eventId: "\(sessionData?.field?.id! ?? 0)")
+        }
     }
     
 }

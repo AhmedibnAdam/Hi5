@@ -12,6 +12,7 @@ import UIKit
 
 protocol IMyBookingsRouter: class {
 	func navigateToTabBar()
+    func navigateToDetails(id: Int , type:Int )
 }
 
 class MyBookingsRouter: IMyBookingsRouter {	
@@ -23,5 +24,8 @@ class MyBookingsRouter: IMyBookingsRouter {
     func navigateToTabBar() {
          view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
      }
+    func navigateToDetails(id: Int ,type:Int  ){
+        view?.navigate(type: .modal, module: GeneralRoute.bookingDetails(id: id , type: type), completion: nil)
+    }
     
 }

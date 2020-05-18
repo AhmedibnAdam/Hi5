@@ -11,8 +11,8 @@
 import UIKit
 
 protocol IFilterResultRouter: class {
-  func navigateToFilter()
-    func navigateTosessionDetails(id: Int, payment: String, sessionId: Int)
+  func navigateToFilter(params: [String: Any])
+    func navigateTosessionDetails(param: [String: Any] ,id: Int, payment: String, sessionId: Int)
 }
 
 class FilterResultRouter: IFilterResultRouter {
@@ -23,11 +23,11 @@ class FilterResultRouter: IFilterResultRouter {
     init(view: FilterResultViewController?) {
         self.view = view
     }
-    func navigateToFilter() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
+    func navigateToFilter(params: [String: Any]) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter(param: params), completion: nil)
     }
-      func navigateTosessionDetails(id: Int, payment: String, sessionId: Int) {
-        view?.navigate(type: .modal, module: GeneralRoute.sessionDetails(id: id, payment: payment, sessionId: sessionId), completion: nil)
+      func navigateTosessionDetails(param: [String: Any] , id: Int, payment: String, sessionId: Int) {
+        view?.navigate(type: .modal, module: GeneralRoute.sessionDetails(param: param ,id: id, payment: payment, sessionId: sessionId), completion: nil)
        }
        
     

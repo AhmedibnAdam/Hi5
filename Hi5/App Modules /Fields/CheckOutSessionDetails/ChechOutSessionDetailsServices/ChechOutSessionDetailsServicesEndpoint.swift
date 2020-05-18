@@ -14,6 +14,7 @@ import Alamofire
 enum CheckOutSessionDetailsEndpoint {
     
     case join(event_id: String)
+    case book(event_id: String, parameter: [String: Any])
 //     case sample(parameter: [String: Any])
    
 }
@@ -35,7 +36,9 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
        switch self {
                case .join:
                    return .post
-               }
+       case .book:
+           return .post
+        }
     }
     
     var path: String {
@@ -43,20 +46,23 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
         switch self {
         case .join(let id ):
             return "http://api-ksa.com/demo/hi5/public/api/player/public_event/" + id + "/join"
+        case .book(let id , _):
+            return "http://api-ksa.com/demo/hi5/public/api/player/session/" + id + "/book"
         }
   
     }
     
     var parameter: Parameters? {
-        /*
-        Do like this:
+   
 
         switch self {
-        case .sample(let model):
-            return model.parameter()
+        case .book( _ , let parameter):
+            return parameter
+        case .join:
+            return nil
         }
-        */
-        return nil
+        
+      
     }
     
     var header: HTTPHeaders? {

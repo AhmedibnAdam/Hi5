@@ -12,8 +12,8 @@ import UIKit
 
 protocol IShowDetailsRouter: class {
     func navigateToFields()
-    func navigateToSessionResult(fieldId: Int , fieldName: String)
-    
+    func navigateToSessionResult(param: [String: Any] ,fieldId: Int , fieldName: String)
+    func navigateToAllComments(id: Int)
 }
 
 class ShowDetailsRouter: IShowDetailsRouter {
@@ -25,9 +25,14 @@ class ShowDetailsRouter: IShowDetailsRouter {
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
-    func navigateToSessionResult(fieldId: Int , fieldName: String) {
-        var parameters = ["field_id":"\(fieldId)"]
-        parameters["name"] = fieldName
-        view?.navigate(type: .modal, module: GeneralRoute.filterResult(param: parameters, type: "checkAvalable"), completion: nil)
+    func navigateToSessionResult(param: [String: Any] , fieldId: Int , fieldName: String) {
+        var paramerters: [String: Any]?
+        paramerters = param
+        paramerters?["field_id"] = "\(fieldId)"
+        paramerters?["name"] = fieldName
+        view?.navigate(type: .modal, module: GeneralRoute.filterResult(param: paramerters! , type: "checkAvalable"), completion: nil)
     }
+    func navigateToAllComments(id: Int){
+         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.allComments(fieldId: id), completion: nil)
+     }
 }

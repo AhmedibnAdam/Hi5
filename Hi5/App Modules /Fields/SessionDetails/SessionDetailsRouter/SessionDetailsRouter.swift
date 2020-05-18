@@ -12,6 +12,7 @@ import UIKit
 
 protocol ISessionDetailsRouter: class {
     func navigateToCheckOutSessionDetails(session:  SessionDetailsModel.SessionDetailsResponse)
+    func navigateToAllComments(id: Int)
 }
 
 class SessionDetailsRouter: ISessionDetailsRouter {
@@ -26,4 +27,7 @@ class SessionDetailsRouter: ISessionDetailsRouter {
         
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.checkOutSessionDetails(field: nil, session: session), completion: nil)
     }
-}
+       func navigateToAllComments(id: Int){
+         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.allComments(fieldId: id), completion: nil)
+     }
+} 

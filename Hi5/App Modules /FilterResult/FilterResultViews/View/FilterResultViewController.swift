@@ -86,7 +86,7 @@ class FilterResultViewController: UIViewController , UICollectionViewDelegate , 
     }
     //MARK: - Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        router?.navigateToFilter()
+        router?.navigateToFilter(params: parameter)
     }
 }
 
@@ -157,6 +157,7 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let field = fields[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell") as! FieldCell
+        cell.distance.text = field.distance ?? "--" + "km"
         cell.fieldNameLbl.text = field.name
         cell.partnerName.text = field.partnerName
         if field.visibility == "public"{
@@ -220,7 +221,7 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let field = fields[indexPath.row]
-        router?.navigateTosessionDetails(id: field.id!, payment: field.payment!, sessionId: field.sessionID!)
+        router?.navigateTosessionDetails(param: self.parameter, id: field.id!, payment: field.payment!, sessionId: field.sessionID!)
     }
 }
 

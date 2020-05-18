@@ -16,6 +16,7 @@ class PlayersTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var status: UILabel!
     
     @IBOutlet weak var img: UIImageView!
     override func setSelected(_ selected: Bool, animated: Bool) {

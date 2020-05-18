@@ -279,6 +279,18 @@ extension MyBookingsViewController: UITableViewDelegate , UITableViewDataSource 
             return cell
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if self.fieldsTabType == 0 {
+                router?.navigateToDetails(id: (self.upCommingBooking?.fields?[indexPath.row].id)!, type: 0)
+            }
+                else if self.fieldsTabType == 1 {
+                router?.navigateToDetails(id: (self.pastBooking?.fields?[indexPath.row].id)!, type: 1)
+                }
+                else{
+                router?.navigateToDetails(id: (self.canceledBooking?.fields?[indexPath.row].id)! , type: 2)
+
+                }
+    }
 }
 
 extension MyBookingsViewController {

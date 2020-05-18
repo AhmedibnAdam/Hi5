@@ -62,6 +62,16 @@
 		660A14F924619EF6006DAD45 /* FieldOwnerDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14D924619EF5006DAD45 /* FieldOwnerDetailsPresenter.swift */; };
 		660A15012461A17E006DAD45 /* ServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A14FF2461A17E006DAD45 /* ServicesCell.swift */; };
 		660A15022461A17E006DAD45 /* ServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 660A15002461A17E006DAD45 /* ServicesCell.xib */; };
+		661398F324698CCC0050938A /* BookingDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398EB24698CCC0050938A /* BookingDetailsConfiguration.swift */; };
+		661398F424698CCC0050938A /* BookingDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398EC24698CCC0050938A /* BookingDetailsPresenter.swift */; };
+		661398F524698CCC0050938A /* BookingDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398ED24698CCC0050938A /* BookingDetailsRouter.swift */; };
+		661398F624698CCC0050938A /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398EE24698CCC0050938A /* BookingDetailsViewController.swift */; };
+		661398F724698CCC0050938A /* BookingDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398EF24698CCC0050938A /* BookingDetailsInteractor.swift */; };
+		661398F824698CCC0050938A /* BookingDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398F024698CCC0050938A /* BookingDetailsModel.swift */; };
+		661398F924698CCC0050938A /* BookingDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 661398F124698CCC0050938A /* BookingDetailsViewController.xib */; };
+		661398FA24698CCC0050938A /* BookingDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661398F224698CCC0050938A /* BookingDetailsManager.swift */; };
+		66139904246AD9A30050938A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66139903246AD9A30050938A /* LaunchScreen.storyboard */; };
+		66139906246D677D0050938A /* BookingDetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66139905246D677C0050938A /* BookingDetailsEndpoint.swift */; };
 		662922F42423AFFE0041157D /* MyBookingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */; };
 		662A167F23C3E4B200A3695E /* TransactionsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */; };
 		662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A167823C3E4B200A3695E /* TransactionsPresenter.swift */; };
@@ -383,6 +393,22 @@
 		668C215E23C3F75300C009A9 /* CheckOutConfirmationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */; };
 		668C215F23C3F75300C009A9 /* CheckOutConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */; };
 		668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */; };
+		668E9EEB246EB0F7004A403E /* CommentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EE3246EB0F7004A403E /* CommentConfiguration.swift */; };
+		668E9EEC246EB0F7004A403E /* CommentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EE4246EB0F7004A403E /* CommentPresenter.swift */; };
+		668E9EED246EB0F7004A403E /* CommentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EE5246EB0F7004A403E /* CommentRouter.swift */; };
+		668E9EEE246EB0F7004A403E /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EE6246EB0F7004A403E /* CommentViewController.swift */; };
+		668E9EEF246EB0F7004A403E /* CommentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EE7246EB0F7004A403E /* CommentInteractor.swift */; };
+		668E9EF0246EB0F7004A403E /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EE8246EB0F7004A403E /* CommentModel.swift */; };
+		668E9EF1246EB0F7004A403E /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668E9EE9246EB0F7004A403E /* CommentViewController.xib */; };
+		668E9EF2246EB0F7004A403E /* CommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EEA246EB0F7004A403E /* CommentManager.swift */; };
+		668E9F03246EB46E004A403E /* AllCommentsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EFB246EB46D004A403E /* AllCommentsConfiguration.swift */; };
+		668E9F04246EB46E004A403E /* AllCommentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EFC246EB46D004A403E /* AllCommentsPresenter.swift */; };
+		668E9F05246EB46E004A403E /* AllCommentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EFD246EB46D004A403E /* AllCommentsRouter.swift */; };
+		668E9F06246EB46E004A403E /* AllCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EFE246EB46D004A403E /* AllCommentsViewController.swift */; };
+		668E9F07246EB46E004A403E /* AllCommentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9EFF246EB46D004A403E /* AllCommentsInteractor.swift */; };
+		668E9F08246EB46E004A403E /* AllCommentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9F00246EB46D004A403E /* AllCommentsModel.swift */; };
+		668E9F09246EB46E004A403E /* AllCommentsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668E9F01246EB46E004A403E /* AllCommentsViewController.xib */; };
+		668E9F0A246EB46E004A403E /* AllCommentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668E9F02246EB46E004A403E /* AllCommentsManager.swift */; };
 		66A44FFC243DC30E00849C91 /* PublicEventDetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A44FFB243DC30E00849C91 /* PublicEventDetailsEndpoint.swift */; };
 		66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */; };
 		66AEC5432420FA97003CF2EB /* PublicEventsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */; };
@@ -423,6 +449,9 @@
 		66AF571B242A587100702332 /* ShowDetailsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF571A242A587000702332 /* ShowDetailsEndPoint.swift */; };
 		66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */; };
 		66CCBE88240EAA840046D672 /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */; };
+		66E705C824719137003021DE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E705C624719137003021DE /* CommentTableViewCell.swift */; };
+		66E705C924719137003021DE /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E705C724719137003021DE /* CommentTableViewCell.xib */; };
+		66E705CB2471EFEE003021DE /* AllCommentsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
 		66F6D09C23B6F352004BF95C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09B23B6F352004BF95C /* APIError.swift */; };
 		8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608422F23DC815200BA87D7 /* SearchLocationConfiguration.swift */; };
@@ -632,6 +661,16 @@
 		660A14D924619EF5006DAD45 /* FieldOwnerDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldOwnerDetailsPresenter.swift; sourceTree = "<group>"; };
 		660A14FF2461A17E006DAD45 /* ServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesCell.swift; sourceTree = "<group>"; };
 		660A15002461A17E006DAD45 /* ServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServicesCell.xib; sourceTree = "<group>"; };
+		661398EB24698CCC0050938A /* BookingDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsConfiguration.swift; sourceTree = "<group>"; };
+		661398EC24698CCC0050938A /* BookingDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsPresenter.swift; sourceTree = "<group>"; };
+		661398ED24698CCC0050938A /* BookingDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsRouter.swift; sourceTree = "<group>"; };
+		661398EE24698CCC0050938A /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
+		661398EF24698CCC0050938A /* BookingDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsInteractor.swift; sourceTree = "<group>"; };
+		661398F024698CCC0050938A /* BookingDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsModel.swift; sourceTree = "<group>"; };
+		661398F124698CCC0050938A /* BookingDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookingDetailsViewController.xib; sourceTree = "<group>"; };
+		661398F224698CCC0050938A /* BookingDetailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsManager.swift; sourceTree = "<group>"; };
+		66139903246AD9A30050938A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66139905246D677C0050938A /* BookingDetailsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsEndpoint.swift; sourceTree = "<group>"; };
 		662922F32423AFFE0041157D /* MyBookingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsEndpoint.swift; sourceTree = "<group>"; };
 		662A167723C3E4B200A3695E /* TransactionsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsConfiguration.swift; sourceTree = "<group>"; };
 		662A167823C3E4B200A3695E /* TransactionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsPresenter.swift; sourceTree = "<group>"; };
@@ -955,6 +994,22 @@
 		668C215623C3F75300C009A9 /* CheckOutConfirmationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationModel.swift; sourceTree = "<group>"; };
 		668C215723C3F75300C009A9 /* CheckOutConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutConfirmationViewController.xib; sourceTree = "<group>"; };
 		668C215823C3F75300C009A9 /* CheckOutConfirmationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutConfirmationManager.swift; sourceTree = "<group>"; };
+		668E9EE3246EB0F7004A403E /* CommentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentConfiguration.swift; sourceTree = "<group>"; };
+		668E9EE4246EB0F7004A403E /* CommentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPresenter.swift; sourceTree = "<group>"; };
+		668E9EE5246EB0F7004A403E /* CommentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRouter.swift; sourceTree = "<group>"; };
+		668E9EE6246EB0F7004A403E /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		668E9EE7246EB0F7004A403E /* CommentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInteractor.swift; sourceTree = "<group>"; };
+		668E9EE8246EB0F7004A403E /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		668E9EE9246EB0F7004A403E /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		668E9EEA246EB0F7004A403E /* CommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentManager.swift; sourceTree = "<group>"; };
+		668E9EFB246EB46D004A403E /* AllCommentsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsConfiguration.swift; sourceTree = "<group>"; };
+		668E9EFC246EB46D004A403E /* AllCommentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsPresenter.swift; sourceTree = "<group>"; };
+		668E9EFD246EB46D004A403E /* AllCommentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsRouter.swift; sourceTree = "<group>"; };
+		668E9EFE246EB46D004A403E /* AllCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsViewController.swift; sourceTree = "<group>"; };
+		668E9EFF246EB46D004A403E /* AllCommentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsInteractor.swift; sourceTree = "<group>"; };
+		668E9F00246EB46D004A403E /* AllCommentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsModel.swift; sourceTree = "<group>"; };
+		668E9F01246EB46E004A403E /* AllCommentsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllCommentsViewController.xib; sourceTree = "<group>"; };
+		668E9F02246EB46E004A403E /* AllCommentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsManager.swift; sourceTree = "<group>"; };
 		66A44FFB243DC30E00849C91 /* PublicEventDetailsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsEndpoint.swift; sourceTree = "<group>"; };
 		66A4914B2418F08B00F52A06 /* PublicEventContainerviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventContainerviewController.swift; sourceTree = "<group>"; };
 		66AEC5422420FA97003CF2EB /* PublicEventsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventsEndpoint.swift; sourceTree = "<group>"; };
@@ -995,6 +1050,9 @@
 		66AF571A242A587000702332 /* ShowDetailsEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDetailsEndPoint.swift; sourceTree = "<group>"; };
 		66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowDetailsViewController.xib; path = View/ShowDetailsViewController.xib; sourceTree = "<group>"; };
 		66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowDetailsViewController.swift; path = View/ShowDetailsViewController.swift; sourceTree = "<group>"; };
+		66E705C624719137003021DE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		66E705C724719137003021DE /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsEndpoint.swift; sourceTree = "<group>"; };
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
 		66F6D09B23B6F352004BF95C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1503,6 +1561,83 @@
 				660A15002461A17E006DAD45 /* ServicesCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		661398E924698C6E0050938A /* Bookings */ = {
+			isa = PBXGroup;
+			children = (
+				66AEC62B24227C3B003CF2EB /* MyBookingView */,
+				66AEC62824227C05003CF2EB /* MyBookingContracts */,
+				66AEC62924227C16003CF2EB /* MyBookingPresenter */,
+				66AEC62A24227C24003CF2EB /* MyBookingRouter */,
+				66AEC62C24227C4C003CF2EB /* MyBookingInteractor */,
+				66AEC62D24227C5F003CF2EB /* MyBookingServices */,
+			);
+			path = Bookings;
+			sourceTree = "<group>";
+		};
+		661398EA24698C810050938A /* BookingDetails */ = {
+			isa = PBXGroup;
+			children = (
+				661398FB246AA45F0050938A /* contract */,
+				661398FC246AA4820050938A /* presenter */,
+				661398FD246AA48C0050938A /* router */,
+				661398FE246AA4990050938A /* view */,
+				661398FF246AA4A70050938A /* interactor */,
+				66139900246AA4B70050938A /* service */,
+			);
+			path = BookingDetails;
+			sourceTree = "<group>";
+		};
+		661398FB246AA45F0050938A /* contract */ = {
+			isa = PBXGroup;
+			children = (
+				661398EB24698CCC0050938A /* BookingDetailsConfiguration.swift */,
+			);
+			path = contract;
+			sourceTree = "<group>";
+		};
+		661398FC246AA4820050938A /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				661398EC24698CCC0050938A /* BookingDetailsPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		661398FD246AA48C0050938A /* router */ = {
+			isa = PBXGroup;
+			children = (
+				661398ED24698CCC0050938A /* BookingDetailsRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		661398FE246AA4990050938A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				661398EE24698CCC0050938A /* BookingDetailsViewController.swift */,
+				661398F124698CCC0050938A /* BookingDetailsViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		661398FF246AA4A70050938A /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				661398EF24698CCC0050938A /* BookingDetailsInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		66139900246AA4B70050938A /* service */ = {
+			isa = PBXGroup;
+			children = (
+				661398F024698CCC0050938A /* BookingDetailsModel.swift */,
+				661398F224698CCC0050938A /* BookingDetailsManager.swift */,
+				66139905246D677C0050938A /* BookingDetailsEndpoint.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		662A167623C3E2B200A3695E /* Transactions */ = {
@@ -2122,6 +2257,7 @@
 			children = (
 				6663365E23B405D0004E537C /* Main.storyboard */,
 				6663361623B40206004E537C /* ViewController.swift */,
+				66139903246AD9A30050938A /* LaunchScreen.storyboard */,
 			);
 			path = "Launch Screen";
 			sourceTree = "<group>";
@@ -2474,6 +2610,144 @@
 			path = CheckOutConfirmation;
 			sourceTree = "<group>";
 		};
+		668E9EE2246EB0D8004A403E /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EFA246EB44B004A403E /* ViewComments */,
+				668E9EF9246EB43B004A403E /* AddComment */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		668E9EF3246EB21F004A403E /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EE3246EB0F7004A403E /* CommentConfiguration.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		668E9EF4246EB3D7004A403E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EE4246EB0F7004A403E /* CommentPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		668E9EF5246EB3E0004A403E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EE5246EB0F7004A403E /* CommentRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		668E9EF6246EB3E7004A403E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EE9246EB0F7004A403E /* CommentViewController.xib */,
+				668E9EE6246EB0F7004A403E /* CommentViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		668E9EF7246EB3F7004A403E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EE7246EB0F7004A403E /* CommentInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		668E9EF8246EB40A004A403E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EE8246EB0F7004A403E /* CommentModel.swift */,
+				668E9EEA246EB0F7004A403E /* CommentManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		668E9EF9246EB43B004A403E /* AddComment */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EF3246EB21F004A403E /* Contract */,
+				668E9EF4246EB3D7004A403E /* Presenter */,
+				668E9EF5246EB3E0004A403E /* Router */,
+				668E9EF6246EB3E7004A403E /* view */,
+				668E9EF7246EB3F7004A403E /* Interactor */,
+				668E9EF8246EB40A004A403E /* Services */,
+			);
+			path = AddComment;
+			sourceTree = "<group>";
+		};
+		668E9EFA246EB44B004A403E /* ViewComments */ = {
+			isa = PBXGroup;
+			children = (
+				668E9F0C246EB48C004A403E /* contract */,
+				668E9F0D246EB495004A403E /* presenter */,
+				668E9F0E246EB49D004A403E /* Router */,
+				668E9F0B246EB47F004A403E /* view */,
+				668E9F0F246EB4AA004A403E /* Interactor */,
+				668E9F10246EB4B6004A403E /* Services */,
+			);
+			path = ViewComments;
+			sourceTree = "<group>";
+		};
+		668E9F0B246EB47F004A403E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EFE246EB46D004A403E /* AllCommentsViewController.swift */,
+				668E9F01246EB46E004A403E /* AllCommentsViewController.xib */,
+				66E705C624719137003021DE /* CommentTableViewCell.swift */,
+				66E705C724719137003021DE /* CommentTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		668E9F0C246EB48C004A403E /* contract */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EFB246EB46D004A403E /* AllCommentsConfiguration.swift */,
+			);
+			path = contract;
+			sourceTree = "<group>";
+		};
+		668E9F0D246EB495004A403E /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EFC246EB46D004A403E /* AllCommentsPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		668E9F0E246EB49D004A403E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EFD246EB46D004A403E /* AllCommentsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		668E9F0F246EB4AA004A403E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				668E9EFF246EB46D004A403E /* AllCommentsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		668E9F10246EB4B6004A403E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				668E9F00246EB46D004A403E /* AllCommentsModel.swift */,
+				668E9F02246EB46E004A403E /* AllCommentsManager.swift */,
+				66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		66A44FF5243DC2A800849C91 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
@@ -2720,12 +2994,9 @@
 		66AEC61724227AFE003CF2EB /* MyBookings */ = {
 			isa = PBXGroup;
 			children = (
-				66AEC62B24227C3B003CF2EB /* MyBookingView */,
-				66AEC62824227C05003CF2EB /* MyBookingContracts */,
-				66AEC62924227C16003CF2EB /* MyBookingPresenter */,
-				66AEC62A24227C24003CF2EB /* MyBookingRouter */,
-				66AEC62C24227C4C003CF2EB /* MyBookingInteractor */,
-				66AEC62D24227C5F003CF2EB /* MyBookingServices */,
+				661398E924698C6E0050938A /* Bookings */,
+				661398EA24698C810050938A /* BookingDetails */,
+				668E9EE2246EB0D8004A403E /* Comment */,
 			);
 			path = MyBookings;
 			sourceTree = "<group>";
@@ -4587,14 +4858,17 @@
 				86DC11E523D5C19100E577D9 /* EditProfileViewController.xib in Resources */,
 				6683E2FF23BCEEB300250702 /* HelpCenterViewController.xib in Resources */,
 				66AEC603242266B0003CF2EB /* FieldCell.xib in Resources */,
+				668E9EF1246EB0F7004A403E /* CommentViewController.xib in Resources */,
 				660A14F724619EF6006DAD45 /* FieldOwnerDetailsViewController.xib in Resources */,
 				861D22EE23DCAFB9004F16F1 /* LibraryViewController.xib in Resources */,
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				660A14E724619EF5006DAD45 /* PhotoFieldCell.xib in Resources */,
+				661398F924698CCC0050938A /* BookingDetailsViewController.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
 				6683E2CF23BCEB8800250702 /* SettingViewController.xib in Resources */,
 				E2FAE5B7240E648300CD8CFC /* SocialHeader.xib in Resources */,
 				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
+				668E9F09246EB46E004A403E /* AllCommentsViewController.xib in Resources */,
 				E2FAE5B2240E648300CD8CFC /* SocialCell.xib in Resources */,
 				66AEC60E242266B0003CF2EB /* FilterViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
@@ -4618,8 +4892,10 @@
 				86B14BE123CB543B00B3FEB1 /* WelcomeViewController.xib in Resources */,
 				E2FAE5D1240E649E00CD8CFC /* publicEventsCell.xib in Resources */,
 				6683E2AC23BB626700250702 /* TableViewCell.xib in Resources */,
+				66139904246AD9A30050938A /* LaunchScreen.storyboard in Resources */,
 				8608423D23DC815200BA87D7 /* SearchLocationViewController.xib in Resources */,
 				862A5E8B23CB72380058355E /* ChangeUsernameViewController.xib in Resources */,
+				66E705C924719137003021DE /* CommentTableViewCell.xib in Resources */,
 				668C20FB23C3F57800C009A9 /* AddSessionResultFiltterViewController.xib in Resources */,
 				663117E8243F25D7007C3FED /* WalletSuccessCheckOutViewController.xib in Resources */,
 				6682B38D242985920050CC9A /* SliderView.xcassets in Resources */,
@@ -4774,6 +5050,7 @@
 				6663367E23B40AB3004E537C /* ForgetEmailConfiguration.swift in Sources */,
 				E2FAE5B3240E648300CD8CFC /* SocialCell.swift in Sources */,
 				8608423A23DC815200BA87D7 /* SearchLocationViewController.swift in Sources */,
+				66E705CB2471EFEE003021DE /* AllCommentsEndpoint.swift in Sources */,
 				660A1431246008A3006DAD45 /* ModelType.swift in Sources */,
 				6683E2FC23BCEEB300250702 /* HelpCenterViewController.swift in Sources */,
 				668C210623C3F5BC00C009A9 /* AddSessionResultPresenter.swift in Sources */,
@@ -4806,11 +5083,13 @@
 				6663368023B40AB3004E537C /* ForgetEmailRouter.swift in Sources */,
 				667E4B8223C3E169007354A7 /* AddFundRouter.swift in Sources */,
 				E2FAE5B8240E648300CD8CFC /* ContainerController.swift in Sources */,
+				668E9F05246EB46E004A403E /* AllCommentsRouter.swift in Sources */,
 				6683E31B23BCEF1600250702 /* SideMenuRouter.swift in Sources */,
 				861CA2F723F40D45004FC02F /* TypeCollectionViewCell.swift in Sources */,
 				66AEC60F242266B0003CF2EB /* FilterViewController.swift in Sources */,
 				660A14E224619EF5006DAD45 /* SuggestFieldDetailsPresenter.swift in Sources */,
 				668C20F923C3F57800C009A9 /* AddSessionResultFiltterInteractor.swift in Sources */,
+				661398FA24698CCC0050938A /* BookingDetailsManager.swift in Sources */,
 				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
 				66545F9C243B61AC007A547F /* PublicEventDetailsManager.swift in Sources */,
 				E2FAE5DC240E649E00CD8CFC /* PublicEventsConfiguration.swift in Sources */,
@@ -4820,6 +5099,7 @@
 				663117DF243F25D7007C3FED /* SessionDetailsManager.swift in Sources */,
 				6683E2B823BB631D00250702 /* NotificationSettingViewController.swift in Sources */,
 				66AEC616242266B0003CF2EB /* FilterInteractor.swift in Sources */,
+				668E9F0A246EB46E004A403E /* AllCommentsManager.swift in Sources */,
 				86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */,
 				6682B3C22429924D0050CC9A /* SechaduleConfiguration.swift in Sources */,
 				66AEC5FF242266B0003CF2EB /* FilterResultInteractor.swift in Sources */,
@@ -4879,14 +5159,17 @@
 				86DC11E223D5C19100E577D9 /* EditProfileViewController.swift in Sources */,
 				6663368323B40AB3004E537C /* ForgetEmailModel.swift in Sources */,
 				668C211A23C3F6C100C009A9 /* CheckOutRouter.swift in Sources */,
+				661398F824698CCC0050938A /* BookingDetailsModel.swift in Sources */,
 				662A16D823C3EB7600A3695E /* AddFriendRequestViewController.swift in Sources */,
 				8671348423CF5950009093A0 /* NewPasswordEndPoint.swift in Sources */,
 				666336A523B40B47004E537C /* ForgotPhoneModel.swift in Sources */,
 				660A15012461A17E006DAD45 /* ServicesCell.swift in Sources */,
 				860EFCAF2401671100B40901 /* ShowDetailsManager.swift in Sources */,
+				66139906246D677D0050938A /* BookingDetailsEndpoint.swift in Sources */,
 				6663366D23B40A6A004E537C /* ForgetPasswordConfiguration.swift in Sources */,
 				66AEC614242266B0003CF2EB /* FilterPresenter.swift in Sources */,
 				662A16DA23C3EB7600A3695E /* AddFriendRequestModel.swift in Sources */,
+				661398F424698CCC0050938A /* BookingDetailsPresenter.swift in Sources */,
 				662A16A923C3E80900A3695E /* MemberOfFriendsManager.swift in Sources */,
 				6682B38B242985920050CC9A /* SliderView.swift in Sources */,
 				66AEC62124227B3D003CF2EB /* MyBookingsPresenter.swift in Sources */,
@@ -4894,6 +5177,7 @@
 				861D22EB23DCAFB9004F16F1 /* LibraryViewController.swift in Sources */,
 				66545F95243B61AC007A547F /* PublicEventDetailsConfiguration.swift in Sources */,
 				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
+				66E705C824719137003021DE /* CommentTableViewCell.swift in Sources */,
 				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
 				869BCA5C23E99C66000291EB /* DateOfBirthEndPoint.swift in Sources */,
@@ -4909,6 +5193,7 @@
 				667E4B8023C3E169007354A7 /* AddFundConfiguration.swift in Sources */,
 				663117E5243F25D7007C3FED /* WalletSuccessCheckOutPresenter.swift in Sources */,
 				660A1433246008F2006DAD45 /* ReducerType.swift in Sources */,
+				668E9EF0246EB0F7004A403E /* CommentModel.swift in Sources */,
 				668C212A23C3F6E200C009A9 /* LeaveCommentInCommentListRouter.swift in Sources */,
 				862EB5AF23D730AD00508F1A /* DateOfBirthViewController.swift in Sources */,
 				861D22D523DCAEF5004F16F1 /* GalleryViewController.swift in Sources */,
@@ -4995,6 +5280,9 @@
 				86BBEE5A23CB5F840036C41D /* CreatePasswordRouter.swift in Sources */,
 				668C211D23C3F6C100C009A9 /* CheckOutModel.swift in Sources */,
 				660A141C246005A6006DAD45 /* MyWalletModel.swift in Sources */,
+				661398F724698CCC0050938A /* BookingDetailsInteractor.swift in Sources */,
+				668E9F08246EB46E004A403E /* AllCommentsModel.swift in Sources */,
+				668E9F07246EB46E004A403E /* AllCommentsInteractor.swift in Sources */,
 				660A1409245FFDBF006DAD45 /* ChechOutSessionDetailsServicesEndpoint.swift in Sources */,
 				662A168123C3E4B200A3695E /* TransactionsRouter.swift in Sources */,
 				6683E2BC23BB631D00250702 /* NotificationSettingManager.swift in Sources */,
@@ -5004,6 +5292,7 @@
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				663117E3243F25D7007C3FED /* WalletSuccessCheckOutRouter.swift in Sources */,
+				668E9EEB246EB0F7004A403E /* CommentConfiguration.swift in Sources */,
 				868BF50723EAE9D0005D2437 /* EditProfileEndPoint.swift in Sources */,
 				666336C623B40BD3004E537C /* NewPasswordInteractor.swift in Sources */,
 				660A14E124619EF5006DAD45 /* SuggestFieldInteractor.swift in Sources */,
@@ -5018,6 +5307,7 @@
 				6663364123B402F7004E537C /* LoginConfiguration.swift in Sources */,
 				668C214F23C3F70F00C009A9 /* BookSessionManager.swift in Sources */,
 				666336B623B40B84004E537C /* PhoneVerificationModel.swift in Sources */,
+				668E9F04246EB46E004A403E /* AllCommentsPresenter.swift in Sources */,
 				663117CE243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift in Sources */,
 				6683E30023BCEEB300250702 /* HelpCenterManager.swift in Sources */,
 				6683E2CA23BCEB8800250702 /* SettingPresenter.swift in Sources */,
@@ -5027,6 +5317,7 @@
 				660A14F424619EF5006DAD45 /* FieldOwnerDetailsEndPoint.swift in Sources */,
 				6663367123B40A6A004E537C /* ForgetPasswordInteractor.swift in Sources */,
 				862A5E8C23CB72380058355E /* ChangeUsernameManager.swift in Sources */,
+				668E9EEF246EB0F7004A403E /* CommentInteractor.swift in Sources */,
 				668C210823C3F5BC00C009A9 /* AddSessionResultViewController.swift in Sources */,
 				660A14F324619EF5006DAD45 /* FieldOwnerDetailsManager.swift in Sources */,
 				66A44FFC243DC30E00849C91 /* PublicEventDetailsEndpoint.swift in Sources */,
@@ -5044,18 +5335,22 @@
 				662A16A523C3E80900A3695E /* MemberOfFriendsViewController.swift in Sources */,
 				6682B3C12429924D0050CC9A /* SechadulePresenter.swift in Sources */,
 				662922F42423AFFE0041157D /* MyBookingsEndpoint.swift in Sources */,
+				668E9EF2246EB0F7004A403E /* CommentManager.swift in Sources */,
 				86A5D9B223FC064A00BC7204 /* FieldsEndPoint.swift in Sources */,
 				86DB006823D70B97001E99E8 /* GenderRouter.swift in Sources */,
+				668E9EEC246EB0F7004A403E /* CommentPresenter.swift in Sources */,
 				86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */,
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
 				862EB5AC23D730AD00508F1A /* DateOfBirthConfiguration.swift in Sources */,
+				661398F324698CCC0050938A /* BookingDetailsConfiguration.swift in Sources */,
 				663117D8243F25D7007C3FED /* FieldContractsCell.swift in Sources */,
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
 				668C20F723C3F57800C009A9 /* AddSessionResultFiltterRouter.swift in Sources */,
 				667E4B8423C3E169007354A7 /* AddFundInteractor.swift in Sources */,
 				660A14E524619EF5006DAD45 /* SuggestFieldDetailsRouter.swift in Sources */,
 				86DC11E323D5C19100E577D9 /* EditProfileInteractor.swift in Sources */,
+				668E9F03246EB46E004A403E /* AllCommentsConfiguration.swift in Sources */,
 				663117D5243F25D7007C3FED /* CheckOutSessionDetailsViewController.swift in Sources */,
 				66A4914C2418F08B00F52A06 /* PublicEventContainerviewController.swift in Sources */,
 				667E4B7423C3DCA3007354A7 /* MakeWalletPasswordModel.swift in Sources */,
@@ -5100,6 +5395,7 @@
 				662A16C623C3EA9F00A3695E /* AddFriendsRouter.swift in Sources */,
 				6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */,
 				E2FAE5DA240E649E00CD8CFC /* PublicEventsModel.swift in Sources */,
+				668E9EEE246EB0F7004A403E /* CommentViewController.swift in Sources */,
 				6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */,
 				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
@@ -5121,11 +5417,13 @@
 				6663368F23B40AFD004E537C /* EmailVerficationConfiguration.swift in Sources */,
 				86B14BC723CB4AA500B3FEB1 /* SignupPhoneVerificationViewController.swift in Sources */,
 				86B14BDF23CB543B00B3FEB1 /* WelcomeInteractor.swift in Sources */,
+				661398F624698CCC0050938A /* BookingDetailsViewController.swift in Sources */,
 				668C211F23C3F6C100C009A9 /* CheckOutManager.swift in Sources */,
 				668C215D23C3F75300C009A9 /* CheckOutConfirmationInteractor.swift in Sources */,
 				8608423E23DC815200BA87D7 /* SearchLocationManager.swift in Sources */,
 				8665FEF923E86AC200EB4E1E /* ProfileEndPoint.swift in Sources */,
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
+				661398F524698CCC0050938A /* BookingDetailsRouter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
 				6682B3C42429924D0050CC9A /* SechaduleViewController.swift in Sources */,
@@ -5154,6 +5452,7 @@
 				660A14DB24619EF5006DAD45 /* SuggestFieldViewController.swift in Sources */,
 				66340A0523B4C8FC009DB30A /* FieldsPresenter.swift in Sources */,
 				86F9B90B23DDAAA5008C1F80 /* LocationPresenter.swift in Sources */,
+				668E9F06246EB46E004A403E /* AllCommentsViewController.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
 				660A14EF24619EF5006DAD45 /* SuggestFieldDetailsManager.swift in Sources */,
@@ -5195,6 +5494,7 @@
 				861D22E923DCAFB9004F16F1 /* LibraryPresenter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 				86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */,
+				668E9EED246EB0F7004A403E /* CommentRouter.swift in Sources */,
 				66AEC613242266B0003CF2EB /* FilterendPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5334,7 +5634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.13;
+				CURRENT_PROJECT_VERSION = 1.0.15;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5346,7 +5646,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -5357,7 +5657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.13;
+				CURRENT_PROJECT_VERSION = 1.0.15;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5369,7 +5669,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

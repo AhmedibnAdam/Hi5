@@ -34,6 +34,8 @@ class FieldsTableViewCell: UITableViewCell {
     @IBOutlet weak var rateLbl: UILabel!
     @IBOutlet weak var commentLbl: UILabel!
     @IBOutlet weak var namelbl: UILabel!
+    @IBOutlet weak var star: UIButton!
+    @IBOutlet weak var comment: UIButton!
     
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var recomendedLbl: UILabel!
@@ -41,6 +43,7 @@ class FieldsTableViewCell: UITableViewCell {
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var paymentLbl: UILabel!
     @IBOutlet weak var genderIcon: UIImageView!
+    @IBOutlet weak var distance: UILabel!
     
     //MARK: - Properties
     weak var delegate: FavouriteTableViewCellDelegate?

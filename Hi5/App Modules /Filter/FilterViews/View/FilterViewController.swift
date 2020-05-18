@@ -95,7 +95,7 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.orange, for: .normal)
             sender.borderColor = .orange
             self.nearByField = true
-            self.lat = 31.276941
+            self.lat = 29.95476
             self.long = 31.276941
             if let nearBy = nearByField , let lat = lat , let long = long {
                 param["near_by"] = nearBy
@@ -106,11 +106,10 @@ class FilterViewController: UIViewController , UICollectionViewDelegate , UIColl
             sender.setTitleColor(.lightGray, for: .normal)
             sender.borderColor = .lightGray
             self.nearByField = nil
-            self.lat = nil
-            self.long = nil
+            param["latitude"] = lat
+            param["longitude"] = long
             param.removeValue(forKey: "near_by")
-            param.removeValue(forKey: "latitude")
-            param.removeValue(forKey: "longitude")
+            
         }
     }
     

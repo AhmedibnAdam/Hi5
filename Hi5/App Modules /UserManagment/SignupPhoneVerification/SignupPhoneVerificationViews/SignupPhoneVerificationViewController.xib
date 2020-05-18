@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,10 +45,19 @@
                         </label>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFH-FY-qUk" userLabel="Logo View">
                             <rect key="frame" x="137.5" y="72" width="100" height="100"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="J6t-M6-p8R">
+                                    <rect key="frame" x="-0.5" y="0.0" width="100" height="100"/>
+                                </imageView>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="100" id="7yP-FW-QDw"/>
+                                <constraint firstItem="J6t-M6-p8R" firstAttribute="leading" secondItem="eFH-FY-qUk" secondAttribute="leading" constant="-0.5" id="OEE-1f-DBJ"/>
                                 <constraint firstAttribute="width" constant="100" id="RqV-FQ-4mL"/>
+                                <constraint firstAttribute="bottom" secondItem="J6t-M6-p8R" secondAttribute="bottom" id="U0C-8n-Hvq"/>
+                                <constraint firstItem="J6t-M6-p8R" firstAttribute="top" secondItem="eFH-FY-qUk" secondAttribute="top" id="hO0-0o-tYC"/>
+                                <constraint firstAttribute="trailing" secondItem="J6t-M6-p8R" secondAttribute="trailing" constant="0.5" id="qgB-OD-yaz"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
@@ -477,5 +486,6 @@
     <resources>
         <image name="leftArrow2" width="23" height="17"/>
         <image name="loginBackground" width="414" height="366"/>
+        <image name="orangeLogo" width="1024" height="1024"/>
     </resources>
 </document>

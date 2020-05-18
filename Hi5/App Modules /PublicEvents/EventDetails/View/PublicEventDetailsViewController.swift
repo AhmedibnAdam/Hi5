@@ -51,6 +51,7 @@ class PublicEventDetailsViewController: UIViewController {
     @IBOutlet weak var refundStack: UIStackView!
     @IBOutlet weak var refunbootomLineView: UIView!
     
+    @IBOutlet weak var joinOrLeave: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,12 @@ class PublicEventDetailsViewController: UIViewController {
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
     }
     @IBAction func join(_ sender: UIButton) {
-        router?.navigateToCheckOutSessionDetails(field: self.fieldData!)
+        if self.fieldData?.publicEvent?.playerEventStatus == "joined" {
+            interactor?.leaveEvent(view: self, eventId: ("\(self.fieldData?.publicEvent?.joinedPublicEventID ?? 0)") )
+        }
+        else{
+            router?.navigateToCheckOutSessionDetails(field: self.fieldData!)
+        }
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
@@ -89,7 +95,9 @@ class PublicEventDetailsViewController: UIViewController {
 extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
     func showErrorAlert(title: String, msg: String){
         print(title )
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
         print(msg )
+        interactor?.showDetails(view: self ,eventId: field_id!)
     }
     func showDetailsResponse(response: PublicEventDetailsModel.PublicEventDetails){
         if response != nil {
@@ -98,6 +106,12 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
         tableView.reloadData()
         name.text = field?.fieldName
         age.text  = field?.groupName
+            if field?.playerEventStatus == "joined" {
+                self.joinOrLeave.setTitle("Leave", for: .normal)
+            }
+            else {
+                self.joinOrLeave.setTitle("joined", for: .normal)
+            }
         noOfPlayerSlider.value = Float((field?.playersNumber ?? 0)!)
         sliderLableP.text = "\(field?.playersNumber ?? 1)"
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
@@ -136,7 +150,7 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
             
         }
         }
-        else{
+        else if response.status == false{
             ShowAlertView.showAlert(title: "Alert", msg: "500 - internal server error", sender: self)
 
         }
@@ -160,7 +174,7 @@ extension PublicEventDetailsViewController:  UITableViewDelegate , UITableViewDa
         let player = self.fieldData?.publicEvent?.players?[indexPath.row]
         cell.name.text = player?.name
         cell.userName.text = player?.userName
-      
+        cell.status.text = player?.eventStatus
         return cell
     }
 }

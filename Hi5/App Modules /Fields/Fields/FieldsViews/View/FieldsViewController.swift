@@ -93,7 +93,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
                 return nil
             }
         }
-        
+        self.lat = latitude
         var longitude: Double? {
             if let text = long {
                 return Double(text)
@@ -101,6 +101,7 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
                 return nil
             }
         }
+        self.long = longitude
     }
 }
 
@@ -253,7 +254,7 @@ extension FieldsViewController: CLLocationManagerDelegate {
     }
     
     @objc func searchSession() {
-        router?.navigateToFilter()
+        router?.navigateToFilter(param: ["latitude": self.lat ?? 29.86657 ,"longitude":self.long ?? 31.54345])
     }
     
     func alert() {
@@ -307,10 +308,16 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         cell.delegate = self
         cell.map.tag = indexPath.row
         cell.map.addTarget(self, action: #selector(locationAction(_:)), for: .touchUpInside)
+        cell.star.tag = indexPath.row
+        cell.comment.tag = indexPath.row
+        cell.star.addTarget(self, action: #selector(showComment(_:)), for: .touchUpInside)
+         cell.comment.addTarget(self, action: #selector(showComment(_:)), for: .touchUpInside)
         if self.fieldsTabType == 0 {
             let nearFields = nearByField[indexPath.row]
             self.latitude = nearFields.latitude
                        self.longtyde = nearFields.longitude
+            cell.distance.text = (nearFields.distance ?? "--") + " km"
+
             cell.namelbl.text = nearFields.name
             cell.locationLbl.text = nearFields.address
             cell.commentLbl.text = String(nearFields.comments ?? 0)
@@ -367,6 +374,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             let favorFields = favoriteFields[indexPath.row]
             self.latitude = favorFields.latitude
             self.longtyde = favorFields.longitude
+            cell.distance.text = (favorFields.distance ?? "--") + " km"
             cell.namelbl.text = favorFields.name
              cell.partner.text = favorFields.name
             cell.locationLbl.text = favorFields.address
@@ -417,6 +425,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             self.latitude = memberFields.latitude
                        self.longtyde = memberFields.longitude
             cell.namelbl.text = memberFields.name
+            cell.distance.text = (memberFields.distance ?? "--") + " km"
             cell.partner.text = memberFields.name
             cell.locationLbl.text = memberFields.address
             cell.commentLbl.text = String(memberFields.comments ?? 0)
@@ -460,26 +469,38 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
                 }
             }
         }
+      
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        print("\(field.id!)..........")
         if self.fieldsTabType == 0 {
             let nearFields = nearByField[indexPath.row]
-            router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
+            router?.navigateToShowdetails(param: ["longitude": self.long ?? 31.65465 , "latitude": self.lat ?? 29.75765 ] , field_id: "\(nearFields.id!)")
         }
         else  if self.fieldsTabType == 1{
             let nearFields = favoriteFields[indexPath.row]
-            router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
+            router?.navigateToShowdetails(param: ["longitude": self.long ?? 31.65465 , "latitude": self.lat ?? 29.75765 ] , field_id: "\(nearFields.id!)")
         }
         else{
             let nearFields = memberOfFields[indexPath.row]
-            router?.navigateToShowdetails(field_id: "\(nearFields.id!)")
+            router?.navigateToShowdetails(param: ["longitude": self.long ?? 31.65465 , "latitude": self.lat ?? 29.75765 ] , field_id: "\(nearFields.id!)")
         }
         
     }
     
-    
+    @objc func showComment(_ sender: UIButton){
+         if self.fieldsTabType == 0 {
+            router?.navigateToAllComments(field_id: self.nearByField[sender.tag].id ?? 0)
+        }
+         else  if self.fieldsTabType == 1{
+            router?.navigateToAllComments(field_id: self.favoriteFields[sender.tag].id ?? 0)
+        }
+         else{
+            router?.navigateToAllComments(field_id: self.memberOfFields[sender.tag].id ?? 0)
+        }
+       
+    }
     @objc func locationAction(_ sender: UIButton){
     if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
         UIApplication.shared.openURL(NSURL(string:
@@ -505,7 +526,7 @@ extension FieldsViewController: FavouriteTableViewCellDelegate {
 extension FieldsViewController: ShowDetailsTableViewCellDelegate {
     func showDetailsDidTap(_ button: UIButton, cell: UITableViewCell, field: FieldsModel.NearByfieldsResponseField) {
         print("\(field.id!)..........")
-        router?.navigateToShowdetails(field_id: "\(field.id ?? 0)")
+        router?.navigateToShowdetails(param: ["longitude": self.long ?? 31.65465 , "latitude": self.lat ?? 29.75765 ] , field_id: "\(field.id ?? 0)")
     }
 }
 

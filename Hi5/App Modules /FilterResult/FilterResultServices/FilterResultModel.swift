@@ -29,7 +29,7 @@ struct FilterResultModel {
         let name: String?
         let image: String?
         let images: [String]?
-        let fieldDescription, address, date, dateFormat: String?
+        let fieldDescription, address, date, distance, dateFormat: String?
         let time, sport, gender, bestFor: String?
         let cost: Int?
         let partnerName: String?
@@ -54,6 +54,7 @@ struct FilterResultModel {
             case time, sport, gender
             case bestFor = "best_for"
             case cost
+            case distance
             case partnerName = "partner_name"
             case partnerImage = "partner_image"
             case start_time = "start_time"

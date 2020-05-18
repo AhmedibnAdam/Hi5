@@ -12,13 +12,14 @@ import UIKit
 
 protocol IFieldsRouter: class {
     func navigateToTabBar()
-    func navigateToShowdetails(field_id: String)
-    func navigateToFilter()
-   
+    func navigateToShowdetails(param: [String : Any], field_id: String)
+    func navigateToFilter(param: [String : Any])
+   func navigateToAllComments(field_id: Int)
 }
 
 class FieldsRouter: IFieldsRouter {
-   
+  
+    
     weak var view: FieldsViewController?
     
     init(view: FieldsViewController?) {
@@ -28,13 +29,15 @@ class FieldsRouter: IFieldsRouter {
         view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
  
-    func navigateToFilter() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter, completion: nil)
+    func navigateToFilter(param: [String : Any]) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filter(param: param), completion: nil)
     }
-    func navigateToShowdetails(field_id: String) {
-           view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields(field_id: field_id))
+    func navigateToShowdetails(param:  [String : Any] , field_id: String) {
+           view?.navigate(type: .modal, module: GeneralRoute.showDetailsFields(param: param, field_id: field_id))
        }
   
-       
+    func navigateToAllComments(field_id: Int){
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.allComments(fieldId: field_id), completion: nil)
+    }
 }
 

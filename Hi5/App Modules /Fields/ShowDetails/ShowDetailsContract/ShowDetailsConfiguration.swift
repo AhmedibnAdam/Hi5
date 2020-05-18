@@ -15,6 +15,7 @@ class ShowDetailsConfiguration {
     static func setup(parameters: [String: Any] = [:] , field: String) -> UIViewController {
         let controller = ShowDetailsViewController()
         controller.field_id = field
+        controller.parameters = parameters
         let router = ShowDetailsRouter(view: controller)
         let presenter = ShowDetailsPresenter(view: controller)
         let manager = ShowDetailsManager()

@@ -12,6 +12,9 @@ import Foundation
 
 protocol IPublicEventDetailsManager: class {
 	func showDetailsFromApi(id: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: PublicEventDetailsModel.PublicEventDetails?)->Void)
+    
+    
+        func leaveFromApi(id: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: PublicEventDetailsModel.LeaveEvent?)->Void)
 }
 
 class PublicEventDetailsManager: IPublicEventDetailsManager {
@@ -52,5 +55,43 @@ class PublicEventDetailsManager: IPublicEventDetailsManager {
 
         })
     }
+    
+      func leaveFromApi(id: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: PublicEventDetailsModel.LeaveEvent?)->Void){
+          NetworkService.share.request(endpoint: PublicEventDetailsEndpoint.leave_public_event(id: id), success: { (responseData) in
+              let response = responseData
+              do {
+                  let decoder = JSONDecoder()
+                  let data = try decoder.decode(PublicEventDetailsModel.LeaveEvent.self, from: response)
+                  print(data)
+                  complition(nil , true , data)
+
+              } catch let error {
+                  print("error : ", error.localizedDescription  )
+
+                  do {
+                      let decoder = JSONDecoder()
+                      let error = try decoder.decode(ErrorModel.self, from: responseData )
+                      print(error)
+                      complition(error , false , nil)
+                  } catch let error {
+                      print(error)
+
+                  }
+          }
+
+      }, failure: { (error) in
+              do {
+                  let decoder = JSONDecoder()
+                  let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+                  print(error)
+                  complition(error , false , nil)
+
+              } catch let error {
+                  print(error)
+                  complition(nil , false , nil)
+              }
+
+          })
+      }
     
 }

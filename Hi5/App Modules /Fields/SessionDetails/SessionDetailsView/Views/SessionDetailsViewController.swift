@@ -9,6 +9,8 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import GoogleMaps
+
 
 protocol ISessionDetailsViewController: class {
     var router: ISessionDetailsRouter? { get set }
@@ -28,8 +30,11 @@ class SessionDetailsViewController: UIViewController , UICollectionViewDelegate 
     var sessionId: Int?
     var services: [SessionDetailsModel.Service] = []
     var fieldContacts: [SessionDetailsModel.FieldContact] = []
-//    var name: [String] = []
-//    var phoneNumber: [String] = []
+    var lat: Double?
+    var long: Double?
+var locationManager: CLLocationManager!
+ var currentLocation: CLLocation?
+ var zoomLevel: Float = 15.0
     
     //MARK: - Outlets
     @IBOutlet weak var fieldContactsContainerView: UIView!
@@ -55,6 +60,8 @@ class SessionDetailsViewController: UIViewController , UICollectionViewDelegate 
     @IBOutlet weak var paymentLbl: UILabel!
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var contactBtn: UIButton!
+    @IBOutlet weak var googleMapView: GMSMapView!
+    @IBOutlet weak var mapHeight: NSLayoutConstraint!
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -67,6 +74,7 @@ class SessionDetailsViewController: UIViewController , UICollectionViewDelegate 
         registerTableViewCell()
         initView()
         configer()
+//        setLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,6 +94,11 @@ class SessionDetailsViewController: UIViewController , UICollectionViewDelegate 
             router?.navigateToCheckOutSessionDetails(session: sessionData!)
         }
     }
+    
+    @IBAction func showComment(_ sender: UIButton) {
+        router?.navigateToAllComments(id: self.sessionData?.field?.id ?? 0)
+    }
+    
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         fieldContactsContainerView.isHidden = true
@@ -126,7 +139,8 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
         companyNameLbl.text = field.partnerName
         costLbl.text = "$\(String(describing: field.cost ?? 0))"
         paymentLbl.text = "payment method: \(String(describing: field.payment ?? ""))"
-        
+       
+        setLocation()
         if let fieldImg = field.image {
             let url = URL(string: fieldImg)
             DispatchQueue.global().async {
@@ -159,13 +173,30 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
 //MARK: - Extension Initialization
 extension SessionDetailsViewController {
     func initView(){
-        // MARK : - view raduis
-//        self.companyImg = CreateCornerRauis.imageViewRaduis(view: self.companyImg, number: (self.companyImg.frame.height / 2))
-//        self.fieldContactsContainerView = CreateCornerRauis.viewRaduis(view: self.fieldContactsContainerView , number: 5)
+
     }
     
     func configer(){
         router = SessionDetailsRouter(view: self)
+    }
+    func setLocation(){
+        let camera = GMSCameraPosition.camera(withLatitude: self.lat ?? 24.86, longitude: self.long ?? 46.20, zoom: 6)
+        self.googleMapView.isMyLocationEnabled = true
+
+          self.googleMapView.camera = camera
+
+          let marker = GMSMarker()
+          marker.position = CLLocationCoordinate2DMake(self.lat ?? 24.86,  self.long ?? 46.20)
+      
+        if self.lat == nil {
+            self.googleMapView.isHidden = true
+            mapHeight.constant = 0
+        }
+        else{
+            self.googleMapView.isHidden = false
+                       mapHeight.constant = 200
+        }
+          marker.map = googleMapView
     }
 }
 

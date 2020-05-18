@@ -18,6 +18,7 @@ enum PublicEventDetailsEndpoint {
      case sample(parameter: [String: Any])
     */
     case public_event(id: String)
+      case leave_public_event(id: String)
 }
 
 extension PublicEventDetailsEndpoint: IEndpoint {
@@ -43,6 +44,8 @@ extension PublicEventDetailsEndpoint: IEndpoint {
         switch self {
               case .public_event(let id):
             return "http://api-ksa.com/demo/hi5/public/api/player/public_event/" + id
+        case .leave_public_event(let id):
+             return "http://api-ksa.com/demo/hi5/public/api/player/joined_public_event/" + id + "/leave"
         }
  
 //        return "http://api-ksa.com/demo/hi5/public/api/player/public_event/"

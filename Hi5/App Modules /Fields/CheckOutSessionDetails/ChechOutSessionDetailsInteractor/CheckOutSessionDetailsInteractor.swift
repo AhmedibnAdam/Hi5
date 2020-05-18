@@ -12,11 +12,12 @@ import UIKit
 
 protocol ICheckOutSessionDetailsInteractor: class {
     var parameters: [String: Any]? { get set }
-    func showDetails(view: UIViewController , eventId: String)
+    func joinPublicEvent(view: UIViewController , eventId: String)
     func join(view: UIViewController , eventId: String)
 }
 
 class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
+ 
     var presenter: ICheckOutSessionDetailsPresenter?
     var manager: ICheckOutSessionDetailsManager?
     var parameters: [String: Any]?
@@ -25,8 +26,8 @@ class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
         self.presenter = presenter
         self.manager = manager
     }
-    func showDetails(view: UIViewController , eventId: String){
-        manager?.joinApi(id: eventId, complition: { (error, success, response) in
+    func joinPublicEvent(view: UIViewController , eventId: String){
+        manager?.joinApi(id: eventId,  complition: { (error, success, response) in
             if response == nil {
                 self.presenter?.showErrorAlert(title: "Alert", msg: "your request already booked before , or something goes wrong.")
             }
@@ -37,12 +38,12 @@ class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
         })
     }
     func join(view: UIViewController , eventId: String){
-           manager?.joinApi(id: eventId, complition: { (error, success, response) in
+           manager?.bookApi(id: eventId, parameter: parameters! , complition: { (error, success, response) in
                if response == nil {
                    self.presenter?.showErrorAlert(title: "Alert", msg: "your request already booked before , or something goes wrong.")
                }
                else{
-                   self.presenter?.showErrorAlert(title: "Alert", msg: " Booked  ")
+                self.presenter?.showErrorAlert(title: "Alert", msg: response?.msg ?? "Error")
              //  self.presenter?.showDetailsResponse(response: response)
                }
            })

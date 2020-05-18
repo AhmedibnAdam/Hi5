@@ -43,21 +43,23 @@ enum GeneralRoute: IRouter {
     case location
     case sideMenu
     case fields
-    case showDetailsFields(field_id: String)
-    case filter
+    case showDetailsFields(param: [String: Any], field_id: String)
+    case filter(param: [String: Any])
     case filterResult(param: [String: Any], type:String)
     case myBooking
+    case bookingDetails(id: Int , type: Int)
     case mySechadule
     case publicEvents(event_id: String)
     
     case suggestField
     case suggestFieldDetails(latitude: Double , longitude: Double)
     case fieldOwnerDetails(param: [String: Any] , images: [UIImage])
-    case sessionDetails(id: Int , payment: String , sessionId: Int)
+    case sessionDetails( param: [String: Any] , id: Int , payment: String , sessionId: Int)
     case checkOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails? , session: SessionDetailsModel.SessionDetailsResponse?)
     case walletSuccessCheckOut
     case MyWallet
-    
+    case comment
+    case allComments(fieldId: Int)
 }
 
 extension GeneralRoute {
@@ -122,10 +124,10 @@ extension GeneralRoute {
             return SideMenuConfiguration.setup()
         case .fields:
             return FieldsConfiguration.setup()
-        case .showDetailsFields(let field_id):
-            return ShowDetailsConfiguration.setup(field: field_id)
-        case .filter:
-            return FilterConfiguration.setup()
+        case .showDetailsFields(let param , let field_id):
+            return ShowDetailsConfiguration.setup(parameters: param, field: field_id)
+        case .filter(let params ):
+            return FilterConfiguration.setup(parameters: params)
         case .filterResult(let param , let type):
             return FilterResultConfiguration.setup(parameters: param, type: type)
         case .myBooking:
@@ -143,14 +145,22 @@ extension GeneralRoute {
                 return SuggestFieldDetailsConfiguration.setup(latitude: latitude, longitude: longitude)
             case .fieldOwnerDetails(let param , let images):
                 return FieldOwnerDetailsConfiguration.setup(param: param, images: images)
-            case .sessionDetails(let id , let payment , let sessionId):
-                return SessionDetailsConfiguration.setup(id: id, payment: payment , sessionId: sessionId)
+            case .sessionDetails(let param , let id , let payment , let sessionId):
+                return SessionDetailsConfiguration.setup(parameters : param , id: id, payment: payment , sessionId: sessionId)
             case .checkOutSessionDetails(let field , let session):
                 return CheckOutSessionDetailsConfiguration.setup(field: field , session: session)
             case .walletSuccessCheckOut:
                 return WalletSuccessCheckOutConfiguration.setup()
         case .MyWallet :
                 return MyWalletConfiguration.setup()
-        }
+       
+        case .bookingDetails(let id , let type ):
+            return BookingDetailsConfiguration.setup( id: id , type: type )
+        case .comment:
+            return CommentConfiguration.setup()
+        case .allComments(let id):
+            return AllCommentsConfiguration.setup(fieldId: id)
+         }
+       
     }
 }

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.00001) {
             let defaults = UserDefaults.standard
             if (defaults.string(forKey: "Token") != nil){
                 self.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)

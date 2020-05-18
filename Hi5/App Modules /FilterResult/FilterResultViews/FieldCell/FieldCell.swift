@@ -34,6 +34,7 @@ class FieldCell: UITableViewCell {
     @IBOutlet weak var beforeCenterView: UIView!
     @IBOutlet weak var currancy: UILabel!
     @IBOutlet weak var point: UILabel!
+    @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var visability: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

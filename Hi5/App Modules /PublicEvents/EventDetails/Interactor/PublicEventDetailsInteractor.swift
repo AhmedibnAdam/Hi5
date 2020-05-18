@@ -13,6 +13,7 @@ import UIKit
 protocol IPublicEventDetailsInteractor: class {
 	var parameters: [String: Any]? { get set }
      func showDetails(view: UIViewController , eventId: String)
+    func leaveEvent(view: UIViewController , eventId: String)
 }
 
 class PublicEventDetailsInteractor: IPublicEventDetailsInteractor {
@@ -33,6 +34,16 @@ class PublicEventDetailsInteractor: IPublicEventDetailsInteractor {
                 self.presenter?.showDetailsResponse(response: response)
             } else {
                 self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
+    }
+    func leaveEvent(view: UIViewController , eventId: String){
+        manager?.leaveFromApi(id: eventId, complition: { (error, success, response) in
+            if (success == true){
+                guard let response = response else {return}
+                self.presenter?.showErrorAlert(title: "alert", msg: response.publicEvent?.status ?? "sorry this record not found in DB")
+            } else {
+                self.presenter?.showErrorAlert(title: "Error", msg: error?.message ?? "you are joined this public event before ")
             }
         })
     }

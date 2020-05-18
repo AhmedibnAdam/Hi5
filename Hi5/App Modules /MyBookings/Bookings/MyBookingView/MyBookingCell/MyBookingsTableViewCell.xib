@@ -105,7 +105,7 @@
                                         <rect key="frame" x="5.5" y="0.0" width="73" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-23-2rf">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="25.000000000000028" height="25.000000000000028"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="BE3-J1-iLN"/>
@@ -193,10 +193,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nXA-cG-dnP">
-                                        <rect key="frame" x="355" y="20" width="8" height="38"/>
+                                        <rect key="frame" x="359" y="20" width="4" height="22"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO5-3m-l4p">
-                                                <rect key="frame" x="0.0" y="0.0" width="8" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="4" height="22"/>
                                                 <state key="normal" image="seting"/>
                                             </button>
                                         </subviews>
@@ -380,17 +380,17 @@
                                         <rect key="frame" x="118.5" y="0.0" width="118.5" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bill" translatesAutoresizingMaskIntoConstraints="NO" id="OGS-Wb-UNI">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="EOW-BW-fds"/>
                                                     <constraint firstAttribute="height" constant="40" id="jIr-rG-hOv"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ehk-W9-tYZ">
-                                                <rect key="frame" x="25" y="0.0" width="93.5" height="150"/>
+                                                <rect key="frame" x="25" y="0.0" width="93.5" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H52-Pv-7j8">
-                                                        <rect key="frame" x="15.5" y="0.0" width="62.5" height="75"/>
+                                                        <rect key="frame" x="15.5" y="0.0" width="62.5" height="37.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="62.5" id="E0T-Hh-j8n"/>
                                                         </constraints>
@@ -399,7 +399,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online (paid)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wP-8g-X0s">
-                                                        <rect key="frame" x="15.5" y="75" width="62.5" height="75"/>
+                                                        <rect key="frame" x="15.5" y="37.5" width="62.5" height="37.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="62.5" id="uSp-EU-cR6"/>
                                                         </constraints>

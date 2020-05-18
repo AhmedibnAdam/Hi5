@@ -24,6 +24,7 @@
                 <outlet property="fieldType" destination="1TD-lq-ti8" id="vHR-rS-6LG"/>
                 <outlet property="gender" destination="IwC-WP-bxG" id="eac-Uk-xV8"/>
                 <outlet property="guranteed" destination="ebt-lJ-bUc" id="fbM-p5-UnI"/>
+                <outlet property="joinOrLeave" destination="biB-Zl-3Sh" id="v2V-hR-lsn"/>
                 <outlet property="location" destination="Ust-P1-JF3" id="uuS-09-uh7"/>
                 <outlet property="name" destination="VAo-6D-mW7" id="Qh8-9d-GX7"/>
                 <outlet property="noOfPlayerSlider" destination="RpS-FY-NRi" id="h4M-Wd-gPk"/>

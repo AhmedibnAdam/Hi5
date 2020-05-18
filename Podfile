@@ -20,6 +20,7 @@ target 'Hi5' do
      pod 'Kingfisher'
      pod 'TTRangeSlider'
      pod 'GoogleMaps'
+     pod 'Cosmos'
   #   pod 'SWRevealViewController'
 
 end

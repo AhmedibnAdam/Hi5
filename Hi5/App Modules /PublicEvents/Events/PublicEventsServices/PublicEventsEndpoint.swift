@@ -18,6 +18,7 @@ enum PublicEventsEndpoint {
      case sample(parameter: [String: Any])
      */
     case filterPublicEvent(parameter: [String: Any])
+    case searchPublicEvent(parameter: [String: Any])
 }
 
 extension PublicEventsEndpoint: IEndpoint {
@@ -32,6 +33,8 @@ extension PublicEventsEndpoint: IEndpoint {
         switch self {
         case .filterPublicEvent:
             return .get
+        case .searchPublicEvent:
+            return .post
         }
         
     }
@@ -44,20 +47,19 @@ extension PublicEventsEndpoint: IEndpoint {
             return "http://api-ksa.com/demo/hi5/public/api/player/public_events/filter?" + "&date=\(String(describing: params["date"]!))" +
                 "&longitude=\(String(describing: params["longitude"]!))" +
             "&latitude=\(String(describing: params["latitude"]!))"
+        case .searchPublicEvent(let parameter):
+            return "http://api-ksa.com/demo/hi5/public/api/player/public_events/search"
         }
         
     }
     
     var parameter: Parameters? {
-        /*
-         Do like this:
-         
          switch self {
-         case .sample(let model):
-         return model.parameter()
-         }
-         */
-        return nil
+              case .filterPublicEvent:
+                  return nil
+              case .searchPublicEvent(let param):
+                  return param
+              }
     }
     
     var header: HTTPHeaders? {
@@ -73,6 +75,12 @@ extension PublicEventsEndpoint: IEndpoint {
             headers["latitude"] = "\(String(describing: parameter["latitude"]!))"
             headers["latitude"] = "\(String(describing: parameter["latitude"]!))"
              return headers
+        case .searchPublicEvent:
+              let defaults = UserDefaults.standard
+                      let token = defaults.string(forKey: "Token")
+                      
+              let headers = ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
+            return headers
         }
     }
     
@@ -85,6 +93,9 @@ extension PublicEventsEndpoint: IEndpoint {
         switch self {
         case .filterPublicEvent:
             return JSONEncoding.default
+        case .searchPublicEvent:
+             return JSONEncoding.default
+
         }
         
     }

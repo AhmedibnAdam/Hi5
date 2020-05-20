@@ -11,7 +11,8 @@
 import Foundation
 
 protocol IBookingDetailsManager: class {
-	    func bookedDetailsFromApi(fieldId: Int  , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: BookingDetailsModel.BookedDetails?)->Void)
+    func bookedDetailsFromApi(fieldId: Int  , complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: BookingDetailsModel.BookedDetails?)->Void)
+    func cancelBooking(id: String,parameter: [String : Any] , complition: @escaping (ErrorModel?, Bool, CheckOutSessionDetailsModel.BookRes?) -> Void)
 }
 
 class BookingDetailsManager: IBookingDetailsManager {
@@ -52,5 +53,44 @@ class BookingDetailsManager: IBookingDetailsManager {
                 }
                 
             })
+    }
+    
+    
+    func cancelBooking(id: String,parameter: [String : Any] , complition: @escaping (ErrorModel?, Bool, CheckOutSessionDetailsModel.BookRes?) -> Void) {
+        NetworkService.share.request(endpoint: BookingDetailsEndpoint.cancelBooking(parameter: parameter, id: id), success: { (responseData) in
+            let response = responseData
+            do {
+                let decoder = JSONDecoder()
+                let data = try decoder.decode(CheckOutSessionDetailsModel.BookRes.self, from: response)
+                print(data)
+                complition(nil , true , data)
+
+            } catch let error {
+                print("error : ", error.localizedDescription  )
+
+                do {
+                    let decoder = JSONDecoder()
+                    let error = try decoder.decode(ErrorModel.self, from: responseData )
+                    print(error)
+                    complition(error , false , nil)
+                } catch let error {
+                    print(error)
+
+                }
+        }
+
+    }, failure: { (error) in
+            do {
+                let decoder = JSONDecoder()
+                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+                print(error)
+                complition(error , false , nil)
+
+            } catch let error {
+                print(error)
+                complition(nil , false , nil)
+            }
+
+        })
     }
 }

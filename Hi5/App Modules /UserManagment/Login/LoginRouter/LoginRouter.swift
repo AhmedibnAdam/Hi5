@@ -35,7 +35,7 @@ class LoginRouter: ILoginRouter {
     }
     
     func navigateToProfile() {
-        view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.profile(param: ["":""], id: 0), completion: nil)
     }
     
     func navigateToTabBar() {

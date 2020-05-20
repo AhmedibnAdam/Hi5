@@ -51,4 +51,46 @@ struct ProfileModel {
     struct City: Codable {
         let val, flag: String?
     }
+
+    // MARK: - PartnerProfile
+    struct PartnerProfile: Codable {
+        let status: Bool?
+        let partner: Partner?
+    }
+
+    // MARK: - Partner
+    struct Partner: Codable {
+        let id: Int?
+        let name, phone, email: String?
+        let image: String?
+        let fields: [Field]?
+    }
+
+    // MARK: - Field
+    struct Field: Codable {
+        let id: Int?
+        let name: String?
+        let cost: Int?
+        let gender: String?
+        let address: String?
+        let longitude, latitude: String?
+        let distance, sportType, recommendedFor: String?
+        let fieldImage: String?
+        let comments: Int?
+        let rating: Double?
+        let visibility: String?
+        let payment: String?
+
+        enum CodingKeys: String, CodingKey {
+            case id, name, cost, gender, address, longitude, latitude, distance
+            case sportType = "sport_type"
+            case recommendedFor = "recommended_for"
+            case fieldImage = "field_image"
+            case comments, rating, visibility, payment
+        }
+    }
+
+
+
+
 }

@@ -146,8 +146,8 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         self.lat = field.latitude
         self.long = field.longitude
         setLocation()
-        commentLbl.text = "\(String(describing: field.comments ?? 0))"
-        rateLbl.text = "\(String(describing: field.rating ?? 0))"
+        commentLbl.text = (String(format: "%01d", field.comments ?? 0))
+        rateLbl.text = (String(format: "%01d", field.rating ?? 0))  
         fieldAddressLbl.text = field.address
         fieldDescriptionLbl.text = field.fieldDescription
         sportTypeLbl.text = field.sportType

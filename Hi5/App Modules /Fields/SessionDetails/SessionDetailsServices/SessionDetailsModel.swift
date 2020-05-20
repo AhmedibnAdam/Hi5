@@ -56,6 +56,8 @@ struct SessionDetailsModel {
         let favourite: Bool?
         let fieldSize, fieldType, bookingFrequencyPolicy: String?
         let services: [Service]?
+        let partner_id: Int?
+
 
         enum CodingKeys: String, CodingKey {
             case sessionID = "session_id"
@@ -73,6 +75,8 @@ struct SessionDetailsModel {
             case fieldType = "field_type"
             case bookingFrequencyPolicy = "booking_frequency_policy"
             case services
+            case partner_id
+
         }
     }
 

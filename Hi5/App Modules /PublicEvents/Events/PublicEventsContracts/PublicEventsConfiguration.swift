@@ -14,6 +14,7 @@ import UIKit
 class PublicEventsConfiguration {
     static func setup(parameters: [String: Any] = [:]) -> UIViewController {
         let controller = PublicEventsViewController()
+        controller.params = parameters
         let router = PublicEventsRouter(view: controller)
         let presenter = PublicEventsPresenter(view: controller)
         let manager = PublicEventsManager()

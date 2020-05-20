@@ -45,6 +45,7 @@ struct FieldsModel {
         let comments: Int?
         let rating: Double?
         let visibility, payment: String?
+        let partner_id: Int?
         let membership: Membership?
 
         enum CodingKeys: String, CodingKey {
@@ -56,6 +57,7 @@ struct FieldsModel {
             case recommendedFor = "recommended_for"
             case fieldImage = "field_image"
             case comments, rating, visibility, payment, membership
+            case partner_id
         }
     }
     // MARK: - Membership
@@ -87,6 +89,8 @@ struct FieldsModel {
         let rating: Double?
         let visibility, payment: String?
         let membership: Membership?
+        let partner_id: Int?
+
         
         enum CodingKeys: String, CodingKey {
             case id, name ,longitude, latitude
@@ -97,6 +101,8 @@ struct FieldsModel {
             case recommendedFor = "recommended_for"
             case fieldImage = "field_image"
             case comments, rating, visibility, payment, membership
+            case partner_id
+
         }
     }
     // MARK: - MemberShipFieldsResponse
@@ -118,6 +124,8 @@ struct FieldsModel {
         let comments, rating: Int?
         let visibility, payment: String?
         let membership: Membership?
+        let partner_id: Int?
+
         
         enum CodingKeys: String, CodingKey {
             case favourite, id, name , longitude, latitude
@@ -128,6 +136,8 @@ struct FieldsModel {
             case recommendedFor = "recommended_for"
             case fieldImage = "field_image"
             case comments, rating, visibility, payment, membership
+            case partner_id
+
         }
     }
 }

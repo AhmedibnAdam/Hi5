@@ -13,6 +13,7 @@ import UIKit
 protocol IPublicEventsInteractor: class {
 	var parameters: [String: Any]? { get set }
     func filterPublicEvent(view : UIViewController)
+    func searchPublicEvent()
 }
 
 class PublicEventsInteractor: IPublicEventsInteractor {
@@ -33,7 +34,18 @@ class PublicEventsInteractor: IPublicEventsInteractor {
                  self.presenter?.showFilteresPublicEvent(response: response)
              
               } else {
-                self.presenter?.showErrorAlert(title: "\(error?.code ?? 400)", msg: (error?.message ?? "error"))
+                self.presenter?.showErrorAlert(title: "Sorry!", msg: (error?.message ?? "No Events Found"))
+              }
+        })
+    }
+    func searchPublicEvent() {
+        manager?.requestSearchPublicEventFromApi(parameters: parameters!, complition: { (error, success, response) in
+             if (success == true) {
+                guard let response = response else {return}
+                 self.presenter?.showFilteresPublicEvent(response: response)
+             
+              } else {
+                self.presenter?.showErrorAlert(title: "Sorry!", msg: (error?.msg ?? "No Events Found"))
               }
         })
     }

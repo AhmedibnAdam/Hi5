@@ -59,23 +59,25 @@ extension AllCommentsViewController: IAllCommentsViewController {
         tableView.reloadData()
         rateView.rating = response.meta?.ratingAvg ?? 1.0
       
-        totalRate.text = String(format: "%02d", response.meta?.ratingAvg ?? 1.0)
+        totalRate.text = String(response.meta?.ratingAvg ?? 1.0)
         rarerCount.text = "(" + "\(response.meta?.totalRateCount ?? 0)" + ")"
         
         for n in response.rates ?? []{
-            let width =  ( (n.reviewersCount!) / (response.meta?.totalRateCount ?? 1) )
+            let reviewers = n.reviewersCount!
+            let total = response.meta?.totalRateCount!
+            let width =  200 / total!
             switch n.rate {
             case 1:
                 
-                rate1.constant = CGFloat(width * 200)
+                rate1.constant = CGFloat((reviewers / total!) * reviewers)
             case 2:
-                rate2.constant = CGFloat(width * 200)
+                rate2.constant = CGFloat(width * reviewers)
             case 3:
-                rate3.constant = CGFloat(width * 200)
+                rate3.constant = CGFloat(width * reviewers)
             case 4:
-                rate4.constant = CGFloat(width * 200)
+                rate4.constant = CGFloat(width * reviewers)
             case 5:
-                rate5.constant = CGFloat(width * 200)
+                rate5.constant = CGFloat(width * reviewers)
             default:
                 print("default")
             }

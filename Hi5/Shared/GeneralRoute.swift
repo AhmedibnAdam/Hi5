@@ -24,7 +24,6 @@ enum GeneralRoute: IRouter {
     
     case login
     case register
-    case userAccount
     case forgetPassword
     case forgetPhone
     case forgetEmail
@@ -35,7 +34,7 @@ enum GeneralRoute: IRouter {
     case createPassword
     case changeUsername
     case tabBar
-    case profile
+    case profile(param: [String: Any],id: Int)
     case editProfile
     case gender
     case dateOfBirth
@@ -58,8 +57,10 @@ enum GeneralRoute: IRouter {
     case checkOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails? , session: SessionDetailsModel.SessionDetailsResponse?)
     case walletSuccessCheckOut
     case MyWallet
-    case comment
+    case comment (parameters: [String: Any])
     case allComments(fieldId: Int)
+    case filterBublicEvent(parameters: [String: Any])
+    case publicEvent(parameters: [String: Any])
 }
 
 extension GeneralRoute {
@@ -86,8 +87,7 @@ extension GeneralRoute {
             return LoginConfiguration.setup()
         case .register:
             return RegisterConfiguration.setup()
-        case .userAccount:
-            return UserAccountConfiguration.setup()
+      
         case .forgetPassword:
             return ForgetPasswordConfiguration.setup()
         case .forgetPhone:
@@ -108,8 +108,8 @@ extension GeneralRoute {
             return ChangeUsernameConfiguration.setup()
         case .tabBar:
             return TabBarConfiguration.setup()
-        case .profile:
-            return ProfileConfiguration.setup()
+        case .profile(let param , let id):
+            return ProfileConfiguration.setup(parameters: param, id: id)
         case .editProfile:
             return EditProfileConfiguration.setup()
         case .gender:
@@ -156,10 +156,15 @@ extension GeneralRoute {
        
         case .bookingDetails(let id , let type ):
             return BookingDetailsConfiguration.setup( id: id , type: type )
-        case .comment:
-            return CommentConfiguration.setup()
+        case .comment(let param):
+            return CommentConfiguration.setup(parameters: param)
         case .allComments(let id):
             return AllCommentsConfiguration.setup(fieldId: id)
+        case .filterBublicEvent(let param):
+           return FilterBublicEventConfiguration.setup(parameters: param)
+           
+           case .publicEvent(let params):
+           return PublicEventsConfiguration.setup(parameters: params)
          }
        
     }

@@ -47,7 +47,7 @@ class PublicEventsViewController: UIViewController {
     var currentLocation: CLLocation!
     var lat: Double?
     var long: Double?
-    
+    var params: [String: Any]?
     
     
     var interactor: IPublicEventsInteractor?
@@ -66,21 +66,38 @@ class PublicEventsViewController: UIViewController {
         return UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(sideMenu))
     }()
     
+    
+    lazy var buttonFilter: UIBarButtonItem = {
+           return UIBarButtonItem(image: UIImage(named: "aaaaa"), style: .done, target: self, action: #selector(filter))
+       }()
+    
+    
     //MARK:-viewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        setUpUI()
+        
         configure()
         
     }
     override func viewWillAppear(_ animated: Bool){
         
         setUP()
-        getFilteredPublicEvent()
-        
         getCurrentLocation()
+        if params != nil {
+            setupNavigationBar()
+            registerCollectionCell()
+            searchPublicEvent()
+        }
+         
+        else{
+          setUpUI()
+          getFilteredPublicEvent()
+        }
+
+        
+       
         
     }
     func getCurrentLocation() {
@@ -152,7 +169,7 @@ class PublicEventsViewController: UIViewController {
         get15DayaAfter()
         setupNavigationBar()
         registerCollectionCell()
-        navigationItem.rightBarButtonItem?.image = UIImage(named: "notification", in: nil, with: nil)
+      
         //        imageView.layer.cornerRadius = 5
     }
     
@@ -168,16 +185,22 @@ class PublicEventsViewController: UIViewController {
     }
     
     func getFilteredPublicEvent(){
-        //        var vc = self
-        //        vc = PublicEventsConfiguration.setup() as! PublicEventsViewController
+      
         let params = ["date": selectedDay!,//  "2020-04-15" ,
-            "latitude": "\(/*self.lat ??*/ 29.95476)",
-            "longitude": "\(/*self.long ??*/ 31.2758)"
+            "latitude": "\(self.lat ?? 29.95476)",
+            "longitude": "\(self.long ?? 31.2758)"
         ]
         self.interactor?.parameters = params
         self.interactor?.filterPublicEvent(view: self)
     }
-    
+    func searchPublicEvent(){
+        //  "2020-04-15" ,
+        params?["latitude"] =  "\(self.lat ?? 29.95476)"
+        params?["longitude"] =  "\(self.long ?? 31.2758)"
+        
+        self.interactor?.parameters = params
+        self.interactor?.searchPublicEvent()
+    }
     func getToday(){
         let cal = NSCalendar.current
         // start with today
@@ -212,10 +235,19 @@ extension PublicEventsViewController: IPublicEventsViewController , CLLocationMa
         navigationItem.title = "Public Events"
         navigationItem.setLeftBarButton(buttonSlideBar, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
+        
+        
+        navigationItem.setRightBarButton(buttonFilter, animated: true)
+        navigationItem.rightBarButtonItem?.tintColor = .orange
     }
+    
+    
     @objc func sideMenu() {
         delegate?.handleMenuToggle()
     }
+    @objc func filter() {
+        router?.navigateToFilter(parameters: ["date" : self.selectedDay!])
+       }
     func showAlert(title: String, msg: String) {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }

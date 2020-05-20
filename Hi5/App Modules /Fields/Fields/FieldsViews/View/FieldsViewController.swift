@@ -310,8 +310,10 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         cell.map.addTarget(self, action: #selector(locationAction(_:)), for: .touchUpInside)
         cell.star.tag = indexPath.row
         cell.comment.tag = indexPath.row
+        cell.showPartner.tag = indexPath.row
         cell.star.addTarget(self, action: #selector(showComment(_:)), for: .touchUpInside)
          cell.comment.addTarget(self, action: #selector(showComment(_:)), for: .touchUpInside)
+        cell.showPartner.addTarget(self, action: #selector(showPartner(_:)), for: .touchUpInside)
         if self.fieldsTabType == 0 {
             let nearFields = nearByField[indexPath.row]
             self.latitude = nearFields.latitude
@@ -501,6 +503,19 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
         }
        
     }
+    @objc func showPartner(_ sender: UIButton){
+          if self.fieldsTabType == 0 {
+            router?.navigateToProfile(param: ["lat" : Double(self.latitude!)!, "long":Double(self.longtyde!)!], partner_id: self.nearByField[sender.tag].partner_id ?? 1)
+         }
+          else  if self.fieldsTabType == 1{
+            router?.navigateToProfile(param: ["lat" : Double(self.latitude!)! , "long": Double(self.longtyde!)!],partner_id: self.favoriteFields[sender.tag].partner_id ?? 1)
+         }
+          else{
+            router?.navigateToProfile(param: ["lat" : Double(self.latitude!)! , "long": Double(self.longtyde!)!],partner_id: self.memberOfFields[sender.tag].partner_id ?? 1)
+
+         }
+        
+     }
     @objc func locationAction(_ sender: UIButton){
     if (UIApplication.shared.canOpenURL(NSURL(string:"comgooglemaps://")! as URL)) {
         UIApplication.shared.openURL(NSURL(string:

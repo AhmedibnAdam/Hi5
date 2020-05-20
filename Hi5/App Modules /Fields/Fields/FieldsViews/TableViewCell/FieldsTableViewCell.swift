@@ -36,6 +36,7 @@ class FieldsTableViewCell: UITableViewCell {
     @IBOutlet weak var namelbl: UILabel!
     @IBOutlet weak var star: UIButton!
     @IBOutlet weak var comment: UIButton!
+    @IBOutlet weak var showPartner: UIButton!
     
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var recomendedLbl: UILabel!

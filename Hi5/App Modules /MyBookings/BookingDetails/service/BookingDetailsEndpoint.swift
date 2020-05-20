@@ -18,6 +18,7 @@ enum BookingDetailsEndpoint {
      case sample(parameter: [String: Any])
     */
     case getBookingDetails(id: Int)
+    case cancelBooking(parameter: [String: Any], id: String)
 }
 
 extension BookingDetailsEndpoint: IEndpoint {
@@ -26,15 +27,16 @@ extension BookingDetailsEndpoint: IEndpoint {
     }
     
     var method: HTTPMethod {
-        /*
-        Do like this:
+       
 
         switch self {
-        case .sample:
+        case .getBookingDetails:
             return .get
+  
+        case .cancelBooking:
+            return .post
         }
-        */
-        return .get
+   
     }
     
     var path: String {
@@ -43,21 +45,24 @@ extension BookingDetailsEndpoint: IEndpoint {
         switch self {
         case .getBookingDetails(let id):
             return "http://api-ksa.com/demo/hi5/public/api/player/booked_session/" + "\(id)"
+        case .cancelBooking( _ , let id):
+            return "http://api-ksa.com/demo/hi5/public/api/player/booked_session/" + id + "/cancel"
         }
     
    
     }
     
     var parameter: Parameters? {
-        /*
-        Do like this:
+        
 
-        switch self {
-        case .sample(let model):
-            return model.parameter()
-        }
-        */
-         return nil
+          switch self {
+              case .getBookingDetails:
+                  return nil
+        
+          case .cancelBooking(let parameter, _):
+                  return parameter
+              }
+       
     }
     
     var header: HTTPHeaders? {

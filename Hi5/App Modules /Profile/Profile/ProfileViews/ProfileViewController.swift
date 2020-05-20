@@ -15,6 +15,7 @@ protocol IProfileViewController: class {
 	var router: IProfileRouter? { get set }
     func showAlert(title: String, msg: String)
     func showResponse(data: ProfileModel.ShowProfileResponse)
+     func showPartnerResponse(data: ProfileModel.PartnerProfile)
     func navigateToEditProfile()
     func hideIndecator()
 }
@@ -24,6 +25,10 @@ class ProfileViewController: UIViewController {
 	var router: IProfileRouter?
     var dateOfBirth: String = ""
     var location: String = ""
+    var id: Int?
+    var lat: Double?
+    var long: Double?
+    var response: ProfileModel.PartnerProfile?
 //MARK:- Outlets
     
     @IBOutlet weak var countryName: UILabel!
@@ -35,6 +40,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+
     
 //MARK:- view LifeCycle
 	override func viewDidLoad() {
@@ -51,12 +58,15 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        router?.navigateToTabBar()
+        self.dismiss()
+        
     }
 }
 
 //MARK:- Extensions
 extension ProfileViewController: IProfileViewController {
+   
+    
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
@@ -66,6 +76,17 @@ extension ProfileViewController: IProfileViewController {
     func hideIndecator() {
         activityIndicator.isHidden = true
     }
+    func showPartnerResponse(data: ProfileModel.PartnerProfile) {
+        self.response = data
+//        countryName.text = response?.partner.
+        descriptionLbl.text = response?.partner?.email
+        userName.text = response?.partner?.phone
+//        age.text = response.
+        fullName.text = response?.partner?.name
+        let url = URL(string: (response?.partner?.image)!)!
+        profilePhoto.kf.setImage(with: url)
+        tableView.reloadData()
+       }
     func showResponse(data: ProfileModel.ShowProfileResponse) {
         guard let responseData = data.user else {
             return
@@ -130,6 +151,7 @@ extension ProfileViewController: IProfileViewController {
 extension ProfileViewController {
     func configer(){
         router = ProfileRouter(view: self)
+        registerTableCell()
     }
     func showIndecator() {
         activityIndicator.isHidden = false
@@ -137,6 +159,39 @@ extension ProfileViewController {
 }
 extension ProfileViewController {
     func loadShowProfileData() {
-    interactor?.doShowProfile(view: self)
+        interactor?.doShowProfile(id: id ?? 0 , lat: lat ?? 0.0 , long: long ?? 0.0)
+    }
+}
+extension ProfileViewController : UITableViewDelegate , UITableViewDataSource {
+    func registerTableCell() {
+        let cell = UINib(nibName: "FieldsTableViewCell", bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: "fieldsCell")
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  response?.partner?.fields?.count ??  0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
+        cell.partner.isHidden =  true
+        cell.companyImg.isHidden =  true
+        cell.companyName.isHidden =  true
+        cell.visabilityButton.isHidden = true
+        
+        let field = response?.partner?.fields?[indexPath.row]
+        let url = URL(string: (field?.fieldImage)!)!
+         cell.fieldImg.kf.setImage(with: url)
+        
+        cell.rateLbl.text = "\(field?.rating ?? 0)"
+        cell.commentLbl.text = "\(field?.comments ?? 0)"
+        cell.star.tag = indexPath.row
+        cell.comment.tag = indexPath.row
+        
+        cell.locationLbl.text = field?.address
+        cell.recomendedLbl.text = field?.recommendedFor
+        cell.costLbl.text = "\(field?.cost ?? 0)"
+        cell.paymentLbl.text = field?.payment
+        cell.distance.text = field?.distance
+        
+        return cell
     }
 }

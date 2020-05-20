@@ -13,6 +13,7 @@ import UIKit
 protocol IPublicEventsRouter: class {
 	// do someting...
     func navugateToDetails(event_id: String)
+    func navigateToFilter(parameters: [String : Any])
 }
 
 class PublicEventsRouter: IPublicEventsRouter {
@@ -26,6 +27,9 @@ class PublicEventsRouter: IPublicEventsRouter {
     
     func navugateToDetails(event_id: String) {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.publicEvents(event_id: event_id), completion: nil)
+    }
+    func navigateToFilter(parameters: [String : Any]){
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.filterBublicEvent(parameters: parameters), completion: nil)
     }
     
 }

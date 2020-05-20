@@ -43,6 +43,8 @@ struct FilterResultModel {
         let points: Int?
         let old_price: Int?
         let new_price: Int?
+        let partner_id: Int?
+
    
 
         enum CodingKeys: String, CodingKey {
@@ -59,6 +61,7 @@ struct FilterResultModel {
             case partnerImage = "partner_image"
             case start_time = "start_time"
             case end_time = "end_time"
+            case partner_id
             case visibility, payment, membership, favourite , day ,points,old_price,new_price
         }
     }

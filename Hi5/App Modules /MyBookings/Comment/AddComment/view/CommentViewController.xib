@@ -9,6 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
+                <outlet property="comment" destination="8du-Lt-Trh" id="vCr-mZ-bqX"/>
+                <outlet property="counterlbl" destination="zm3-Va-Z91" id="pMV-rr-Tlo"/>
+                <outlet property="placeholder" destination="SxC-cB-eJ3" id="9BD-KO-OC9"/>
+                <outlet property="rate" destination="x38-0Y-TG6" id="Ggh-z6-NqB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,7 +60,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="write comment here ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8du-Lt-Trh">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8du-Lt-Trh">
                     <rect key="frame" x="16" y="178.5" width="343" height="145"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="0.4940336044520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -76,6 +80,9 @@
                             <color key="value" white="0.33333333333333331" alpha="0.6599957191780822" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="ALT-EA-sDq"/>
+                    </connections>
                 </textView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wRK-m4-dt8">
                     <rect key="frame" x="288" y="160" width="71" height="13.5"/>
@@ -109,7 +116,16 @@
                             <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="leaveComment:" destination="-1" eventType="touchUpInside" id="Wm7-1t-cWW"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="write comment hete ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxC-cB-eJ3">
+                    <rect key="frame" x="26" y="188.5" width="171.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -117,10 +133,12 @@
                 <constraint firstItem="nOd-Pe-LDj" firstAttribute="leading" secondItem="8du-Lt-Trh" secondAttribute="leading" id="97R-RJ-yUy"/>
                 <constraint firstItem="wRK-m4-dt8" firstAttribute="trailing" secondItem="8du-Lt-Trh" secondAttribute="trailing" id="BVx-p3-sYX"/>
                 <constraint firstItem="x38-0Y-TG6" firstAttribute="centerX" secondItem="pWE-Yf-vFJ" secondAttribute="centerX" id="Cde-xV-X5n"/>
+                <constraint firstItem="SxC-cB-eJ3" firstAttribute="leading" secondItem="8du-Lt-Trh" secondAttribute="leading" constant="10" id="Gu1-bb-FGN"/>
                 <constraint firstItem="8du-Lt-Trh" firstAttribute="top" secondItem="x38-0Y-TG6" secondAttribute="bottom" constant="50" id="Lji-Zv-dmr"/>
                 <constraint firstItem="nOd-Pe-LDj" firstAttribute="trailing" secondItem="8du-Lt-Trh" secondAttribute="trailing" id="NPJ-RA-C0r"/>
                 <constraint firstItem="x38-0Y-TG6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="S9E-7J-8np"/>
                 <constraint firstItem="x38-0Y-TG6" firstAttribute="top" secondItem="pWE-Yf-vFJ" secondAttribute="bottom" constant="8" id="SXi-mI-ZEl"/>
+                <constraint firstItem="SxC-cB-eJ3" firstAttribute="top" secondItem="8du-Lt-Trh" secondAttribute="top" constant="10" id="WoW-VC-u14"/>
                 <constraint firstItem="8du-Lt-Trh" firstAttribute="top" secondItem="wRK-m4-dt8" secondAttribute="bottom" constant="5" id="ciB-NU-zEV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8du-Lt-Trh" secondAttribute="trailing" constant="16" id="g3T-iw-RIL"/>
                 <constraint firstItem="8du-Lt-Trh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hmA-Ee-AKR"/>

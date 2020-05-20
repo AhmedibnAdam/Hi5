@@ -138,7 +138,7 @@ extension MyBookingsViewController: UICollectionViewDelegate , UICollectionViewD
         cell.typeLbl.textColor = .orange
         cell.hightLightVieww.isHidden = false
         if (indexPath.row == 0) {
-            
+             self.interactor?.getUpCommingBookings(view: self)
         } else if (indexPath.row == 1){
             self.interactor?.getPastBookings(view: self)
         } else if (indexPath.row == 2){

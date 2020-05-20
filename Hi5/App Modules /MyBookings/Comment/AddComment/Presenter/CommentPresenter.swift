@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ICommentPresenter: class {
-	// do someting...
+	 func showErrorAlert(title: String, msg: String)
 }
 
 class CommentPresenter: ICommentPresenter {	
@@ -20,4 +20,7 @@ class CommentPresenter: ICommentPresenter {
 	init(view: ICommentViewController?) {
 		self.view = view
 	}
+    func showErrorAlert(title: String, msg: String) {
+           view?.showAlert(title: title, msg: msg)
+       }
 }

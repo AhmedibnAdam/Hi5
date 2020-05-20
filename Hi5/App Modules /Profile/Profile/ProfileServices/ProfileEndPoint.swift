@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum ProfileEndpoint {
-   case ShowProfile
+    case ShowProfile(id: Int , lat: Double ,long: Double)
 }
 //MARK:- Extension
 extension ProfileEndpoint: IEndpoint {
@@ -27,15 +27,15 @@ extension ProfileEndpoint: IEndpoint {
     
     var path: String {
         switch self {
-        case .ShowProfile:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "show_profile"
+        case .ShowProfile(let id , let lat , let long):
+            return "http://api-ksa.com/demo/hi5/public/api/partner/" + "\(id)" + "/show?" + "longitude=" + "\(long)&latitude=" + "\(lat)"
         }
     }
     
     var parameter: Parameters? {
         switch self {
         case .ShowProfile:
-            return ["": ""]
+            return nil
         }
     }
     

@@ -79,7 +79,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oi-t4-K48">
                                     <rect key="frame" x="0.0" y="0.0" width="84" height="71.5"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>

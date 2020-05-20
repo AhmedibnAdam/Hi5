@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IBookingDetailsRouter: class {
-    func navigateToComment()
+    func navigateToComment(params: [String: Any])
 }
 
 class BookingDetailsRouter: IBookingDetailsRouter {	
@@ -20,7 +20,7 @@ class BookingDetailsRouter: IBookingDetailsRouter {
 	init(view: BookingDetailsViewController?) {
 		self.view = view
 	}
-    func navigateToComment(){
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.comment, completion: nil)
+    func navigateToComment(params: [String: Any]){
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.comment(parameters: params), completion: nil)
     }
 }

@@ -14,6 +14,7 @@ protocol IProfilePresenter: class {
    func showErrorAlert(title: String, msg: String)
    func hideIndecator()
    func showResponse(data: ProfileModel.ShowProfileResponse)
+    func showPartnerResponse(data: ProfileModel.PartnerProfile )
 }
 
 class ProfilePresenter: IProfilePresenter {	
@@ -30,5 +31,8 @@ class ProfilePresenter: IProfilePresenter {
     }
     func showResponse(data: ProfileModel.ShowProfileResponse) {
         view?.showResponse(data: data)
+    }
+    func showPartnerResponse(data: ProfileModel.PartnerProfile ){
+        view?.showPartnerResponse(data: data)
     }
 }

@@ -25,16 +25,7 @@ struct PublicEventsModel {
 
     // MARK: - PublicEvent
     struct PublicEvent: Codable {
-//        let id, fieldName: String?
-//        let fieldImage: String?
-//        let bestFor, address, partnerName: String?
-//        let partnerImage: String?
-//        let playersNumber, joinedCount: Int?
-//        let cost, gender, day, date: String?
-//        let startTime, endTime, sportType, groupName: String?
-//        let age: Int?
-//        let payment: String?
-//        let points: Int?
+
         
         let id, fieldName: String?
            let fieldImage: String?
@@ -46,9 +37,10 @@ struct PublicEventsModel {
            let age: Int?
            let payment: String?
            let points: Int?
+        let partner_id: Int?
 
         enum CodingKeys: String, CodingKey {
-               case id
+                 case id
                  case fieldName = "field_name"
                  case fieldImage = "field_image"
                  case bestFor = "best_for"
@@ -62,8 +54,12 @@ struct PublicEventsModel {
                  case endTime = "end_time"
                  case sportType = "sport_type"
                  case groupName = "group_name"
-                 case age, payment, points
+                 case age, payment, points ,partner_id
         }
     }
+    struct shohrtageProfileResponse: Codable {
+          let status: Bool
+          let msg: String
+      }
 
 }

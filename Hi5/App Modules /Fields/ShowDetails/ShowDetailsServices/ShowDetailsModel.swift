@@ -43,6 +43,9 @@ struct ShowDetailsModel {
         let image: String?
         let images: [String]?
         let services: [FieldDetailsService]?
+        let partner_id: Int?
+
+        
 
         enum CodingKeys: String, CodingKey {
             case id, name,longitude, latitude
@@ -57,6 +60,8 @@ struct ShowDetailsModel {
             case fieldSize = "field_size"
             case fieldType = "field_type"
             case image, images, services
+            case partner_id
+
         }
     }
     // MARK: - Membership

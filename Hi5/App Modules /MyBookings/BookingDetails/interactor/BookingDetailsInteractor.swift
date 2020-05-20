@@ -13,7 +13,7 @@ import UIKit
 protocol IBookingDetailsInteractor: class {
 	var parameters: [String: Any]? { get set }
     func bookedDetails(view : UIViewController , fieldId: Int )
-    func cancelBooking( fieldId: Int )
+    func cancelBooking( fieldId: String )
 }
 
 class BookingDetailsInteractor: IBookingDetailsInteractor {
@@ -40,7 +40,16 @@ class BookingDetailsInteractor: IBookingDetailsInteractor {
             }
         })
     }
-    func cancelBooking( fieldId: Int ){
-        
+    func cancelBooking( fieldId: String ){
+        manager?.cancelBooking(id: fieldId, parameter: parameters! , complition: { (error, success, response) in
+            if response == nil {
+                self.presenter?.showErrorAlert(title: "Alert", msg: "your request already booked before , or something goes wrong.")
+            }
+            else{
+             self.presenter?.showErrorAlert(title: "Alert", msg: response?.msg ?? "Error")
+          //  self.presenter?.showDetailsResponse(response: response)
+            }
+        })
     }
+
 }

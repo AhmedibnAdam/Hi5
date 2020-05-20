@@ -30,6 +30,6 @@ class CreatePasswordRouter: ICreatePasswordRouter {
         view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
     }
     func navigateToProfile() {
-        view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.profile(param: ["":""], id: 0), completion: nil)
     }
 }

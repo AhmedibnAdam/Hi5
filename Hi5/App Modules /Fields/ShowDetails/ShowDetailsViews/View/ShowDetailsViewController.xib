@@ -409,7 +409,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="Asy-9u-pwh" userLabel="Container Stack View">
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Asy-9u-pwh" userLabel="Container Stack View">
                                     <rect key="frame" x="0.0" y="1046" width="335" height="50"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n5s-TM-kxP" userLabel="Company Stack View">
@@ -418,21 +418,24 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="ujM-EB-y9O">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="KH4-FI-e6h"/>
-                                                        <constraint firstAttribute="height" constant="50" id="M6J-dM-Gwq"/>
+                                                        <constraint firstAttribute="width" constant="40" id="KH4-FI-e6h"/>
+                                                        <constraint firstAttribute="height" constant="40" id="M6J-dM-Gwq"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="imageViewRaduis">
-                                                            <real key="value" value="25"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
-                                                            <real key="value" value="25"/>
+                                                            <real key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yozti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OS-pg-zoC">
                                                     <rect key="frame" x="58" y="0.0" width="37" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="mbR-lt-I0M"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -440,6 +443,10 @@
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJP-9w-KUR">
                                             <rect key="frame" x="189" y="0.0" width="146" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="541-wG-E6v"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <state key="normal" title="Request membership">
                                                 <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
@@ -509,7 +516,6 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9K-yX-SPW">
                             <rect key="frame" x="235" y="212" width="127" height="30"/>
-                            <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="showComment:" destination="-1" eventType="touchUpInside" id="Zm8-eW-eZB"/>
                             </connections>

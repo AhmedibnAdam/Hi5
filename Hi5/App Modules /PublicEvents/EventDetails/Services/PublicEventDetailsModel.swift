@@ -68,6 +68,8 @@ struct PublicEventDetailsModel {
         let countEssentialPlayer: Int?
         let createrName, createrImage, createrUsername, playerEventStatus: String?
         let joinedPublicEventID: Int?
+        let partner_id: Int?
+
         let players: [Player]?
 
         enum CodingKeys: String, CodingKey {
@@ -97,7 +99,7 @@ struct PublicEventDetailsModel {
             case createrUsername = "creater_username"
             case playerEventStatus = "player_event_status"
             case joinedPublicEventID = "joined_public__event_id"
-            case players
+            case players , partner_id
         }
     }
     // MARK: - Player

@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ISideMenuRouter: class {
-    func navigatetoProfile()
+    func navigatetoProfile(param: [String :Any], id: Int)
     func navigateToFields()
     func navigateToLogin()
     func navigateToMyBookings()
@@ -29,8 +29,8 @@ class SideMenuRouter: ISideMenuRouter {
     init(view: SideMenuViewController?) {
         self.view = view
     }
-    func navigatetoProfile() {
-         view?.navigate(type: .modal, module: GeneralRoute.profile, completion: nil)
+    func navigatetoProfile(param: [String : Any], id: Int) {
+        view?.navigate(type: .modal, module: GeneralRoute.profile(param: ["":""], id: 0), completion: nil)
      }
      func navigateToFields() {
          view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)

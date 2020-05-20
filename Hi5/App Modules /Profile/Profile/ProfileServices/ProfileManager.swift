@@ -14,16 +14,16 @@ import SwiftyJSON
 // MARK: - Handle all data requests and responses API / CoreData / Realm etc ...
 
 protocol IProfileManager: class {
-    func showProfileFromApi(complition :  @escaping (_ error:ErrorModel? ,_ success: Bool , _ data: ProfileModel.ShowProfileResponse?)->Void)
+    func showProfileFromApi(id:Int ,lat: Double,long: Double, complition :  @escaping (_ error:ErrorModel? ,_ success: Bool , _ data: ProfileModel.PartnerProfile?)->Void)
 }
 
 class ProfileManager: IProfileManager {
-    func showProfileFromApi(complition: @escaping (ErrorModel?, Bool , ProfileModel.ShowProfileResponse?) -> Void) {
-        NetworkService.share.request(endpoint: ProfileEndpoint.ShowProfile, success: { (responseData) in
+    func showProfileFromApi(id:Int ,lat: Double,long: Double, complition: @escaping (ErrorModel?, Bool , ProfileModel.PartnerProfile?) -> Void) {
+        NetworkService.share.request(endpoint: ProfileEndpoint.ShowProfile(id: id, lat: lat, long: long), success: { (responseData) in
         let response = responseData
         do {
             let decoder = JSONDecoder()
-            let user = try decoder.decode(ProfileModel.ShowProfileResponse.self, from: response)
+            let user = try decoder.decode(ProfileModel.PartnerProfile.self, from: response)
             print(user)
             complition(nil , true , user)
             

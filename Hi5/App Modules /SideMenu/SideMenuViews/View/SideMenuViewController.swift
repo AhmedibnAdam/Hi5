@@ -131,8 +131,7 @@ extension SideMenuViewController {
         profileImg.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc func handleTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {
-        router?.navigatetoProfile()
+    @objc func handleTapGesture(tapGestureRecognizer: UITapGestureRecognizer) {        router?.navigatetoProfile(param: ["" : ""], id: 0)
     }
     
     func configer(){

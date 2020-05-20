@@ -12,7 +12,7 @@ import UIKit
 
 protocol INewPasswordRouter: class {
 	func navigateToLogin()
-    func navigateToProfile()
+    func navigateToProfile(param: [String : Any], id: Int)
 }
 
 class NewPasswordRouter: INewPasswordRouter {	
@@ -24,7 +24,7 @@ class NewPasswordRouter: INewPasswordRouter {
     func navigateToLogin() {
         view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
     }
-    func navigateToProfile() {
-        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.profile, completion: nil)
+    func navigateToProfile(param: [String : Any], id: Int) {
+        view?.navigate(type: .modalWithNavigation, module: GeneralRoute.profile(param: ["":""], id: 0), completion: nil)
     }
 }

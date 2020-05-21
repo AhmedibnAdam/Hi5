@@ -148,7 +148,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
         }
         else {
             interactor?.parameters = ["payment_method": payment ?? "cash"]
-            interactor?.join(view: self, eventId: "\(sessionData?.field?.id! ?? 0)")
+            interactor?.join(view: self, eventId: "\(sessionData?.field?.sessionID! ?? 0)")
         }
     }
     

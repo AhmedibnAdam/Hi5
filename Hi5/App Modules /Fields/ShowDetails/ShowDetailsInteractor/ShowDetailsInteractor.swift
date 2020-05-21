@@ -30,7 +30,12 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
         manager?.showDetailsFromApi(id: fieldId, complition: { (error, success, response) in
             if (success == true){
                 guard let response = response else {return}
+                if response.field == nil {
+                    self.presenter?.showErrorAlert(title: "Error", msg: "sorry this record not found in DB")
+                }
+                else{
                 self.presenter?.showDetailsResponse(response: response)
+                }
             } else {
                 self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }

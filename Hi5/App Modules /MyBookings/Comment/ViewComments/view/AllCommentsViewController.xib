@@ -157,45 +157,45 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNg-T7-5Mh">
-                    <rect key="frame" x="30" y="73" width="120" height="7"/>
+                    <rect key="frame" x="30" y="73" width="0.0" height="7"/>
                     <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="7" id="3cu-1D-tO3"/>
-                        <constraint firstAttribute="width" constant="120" id="BSz-nR-utI"/>
+                        <constraint firstAttribute="width" id="BSz-nR-utI"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqQ-gT-3st">
-                    <rect key="frame" x="30" y="108" width="160" height="7"/>
+                    <rect key="frame" x="30" y="108" width="0.0" height="7"/>
                     <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="7" id="bTR-67-STr"/>
-                        <constraint firstAttribute="width" constant="160" id="wN2-ba-ZD0"/>
+                        <constraint firstAttribute="width" id="wN2-ba-ZD0"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="qdv-2y-jRJ"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXo-zz-afI">
-                    <rect key="frame" x="30" y="143" width="180" height="7"/>
+                    <rect key="frame" x="30" y="143" width="0.0" height="7"/>
                     <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="7" id="EpB-Si-cFY"/>
-                        <constraint firstAttribute="width" constant="180" id="IkZ-LW-9yY"/>
+                        <constraint firstAttribute="width" id="IkZ-LW-9yY"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="vxi-c6-KSS"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUb-K2-12g">
-                    <rect key="frame" x="30" y="178" width="100" height="7"/>
+                    <rect key="frame" x="30" y="178" width="0.0" height="7"/>
                     <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="epG-0w-sEc"/>
+                        <constraint firstAttribute="width" id="epG-0w-sEc"/>
                         <constraint firstAttribute="height" constant="7" id="fkj-g3-i2T"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="pbs-Gn-mrw"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehh-Sa-THE">
-                    <rect key="frame" x="30" y="213" width="20" height="7"/>
+                    <rect key="frame" x="30" y="213" width="0.0" height="7"/>
                     <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="20" id="eDa-aY-OcT"/>
+                        <constraint firstAttribute="width" id="eDa-aY-OcT"/>
                         <constraint firstAttribute="height" constant="7" id="hzw-Zv-2Kq"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Oyj-fl-JGU"/>

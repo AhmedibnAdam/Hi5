@@ -281,13 +281,13 @@ extension MyBookingsViewController: UITableViewDelegate , UITableViewDataSource 
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             if self.fieldsTabType == 0 {
-                router?.navigateToDetails(id: (self.upCommingBooking?.fields?[indexPath.row].id)!, type: 0)
+                router?.navigateToDetails(id: (self.upCommingBooking?.fields?[indexPath.row].bookedSessionID)!, type: 0)
             }
                 else if self.fieldsTabType == 1 {
-                router?.navigateToDetails(id: (self.pastBooking?.fields?[indexPath.row].id)!, type: 1)
+                router?.navigateToDetails(id: (self.pastBooking?.fields?[indexPath.row].bookedSessionID)!, type: 1)
                 }
                 else{
-                router?.navigateToDetails(id: (self.canceledBooking?.fields?[indexPath.row].id)! , type: 2)
+                router?.navigateToDetails(id: (self.canceledBooking?.fields?[indexPath.row].bookedSessionID)! , type: 2)
 
                 }
     }

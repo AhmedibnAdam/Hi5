@@ -114,6 +114,7 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
             }
         noOfPlayerSlider.value = Float((field?.playersNumber ?? 0)!)
         sliderLableP.text = "\(field?.playersNumber ?? 1)"
+            cost.text = "$ \(field?.cost ?? 0)/ Player "
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
         

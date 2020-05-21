@@ -137,6 +137,9 @@ class ShowDetailsViewController: UIViewController   {
 extension ShowDetailsViewController: IShowDetailsViewController {
     func showAlert(title: String, msg: String) {
       ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+        if msg == "sorry this record not found in DB"{
+            router?.navigateToFields()
+        }
     }
     //MARK:  showDetailsResponse
     func showDetailsResponse(response: ShowDetailsModel.FieldDetails) {

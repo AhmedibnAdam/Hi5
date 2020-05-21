@@ -172,15 +172,15 @@ extension ProfileViewController : UITableViewDelegate , UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
-        cell.partner.isHidden =  true
-        cell.companyImg.isHidden =  true
+//        cell.partner.isHidden =  true
+//        cell.companyImg.isHidden =  true
         cell.companyName.isHidden =  true
         cell.visabilityButton.isHidden = true
         
         let field = response?.partner?.fields?[indexPath.row]
         let url = URL(string: (field?.fieldImage)!)!
          cell.fieldImg.kf.setImage(with: url)
-        
+        cell.partner.text = field?.name
         cell.rateLbl.text = "\(field?.rating ?? 0)"
         cell.commentLbl.text = "\(field?.comments ?? 0)"
         cell.star.tag = indexPath.row
@@ -193,5 +193,12 @@ extension ProfileViewController : UITableViewDelegate , UITableViewDataSource {
         cell.distance.text = field?.distance
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let field = self.response?.partner?.fields?[indexPath.row].id else {
+            return
+        }
+        
+        router?.navigateToShowdetails(param: ["longitude": self.long ?? 31.65465 , "latitude": self.lat ?? 29.75765 ] , field_id: "\(field)")
     }
 }

@@ -76,7 +76,7 @@ class PublicEventDetailsViewController: UIViewController {
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
     }
     @IBAction func join(_ sender: UIButton) {
-        if self.fieldData?.publicEvent?.playerEventStatus == "joined" {
+        if self.fieldData?.publicEvent?.playerEventStatus == "Join" {
             interactor?.leaveEvent(view: self, eventId: ("\(self.fieldData?.publicEvent?.joinedPublicEventID ?? 0)") )
         }
         else{
@@ -106,11 +106,11 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
         tableView.reloadData()
         name.text = field?.fieldName
         age.text  = field?.groupName
-            if field?.playerEventStatus == "joined" {
+            if field?.playerEventStatus == "Join" {
                 self.joinOrLeave.setTitle("Leave", for: .normal)
             }
             else {
-                self.joinOrLeave.setTitle("joined", for: .normal)
+                self.joinOrLeave.setTitle("Join", for: .normal)
             }
         noOfPlayerSlider.value = Float((field?.playersNumber ?? 0)!)
         sliderLableP.text = "\(field?.playersNumber ?? 1)"

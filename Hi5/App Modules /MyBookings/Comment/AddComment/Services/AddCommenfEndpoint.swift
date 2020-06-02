@@ -18,6 +18,7 @@ enum AddCommenfEndpoint {
      case sample(parameter: [String: Any])
     */
     case addComment(parameter: [String: Any])
+    case lastComment( parameter: [String: Any])
 }
 
 extension AddCommenfEndpoint: IEndpoint {
@@ -26,15 +27,15 @@ extension AddCommenfEndpoint: IEndpoint {
     }
     
     var method: HTTPMethod {
-        /*
-        Do like this:
+      
 
         switch self {
-        case .sample:
+        case .lastComment:
             return .get
+        case .addComment:
+            return .post
         }
-        */
-        return .post
+  
     }
     
     var path: String {
@@ -42,8 +43,12 @@ extension AddCommenfEndpoint: IEndpoint {
 
         switch self {
         case .addComment(let parameter):
-            let id = parameter["field_id"]
+            let id = parameter["session_id"]
             return "http://api-ksa.com/demo/hi5/public/api/player/session/" + "\(id!)" + "/add_comment"
+        case .lastComment(let param):
+            let sesssionid = param["session_id"]
+            let fieldId = param["field_id"]
+            return "http://api-ksa.com/demo/hi5/public/api/player/field/\(fieldId!)/session/\(sesssionid!)/comment"
         }
        
         
@@ -54,8 +59,11 @@ extension AddCommenfEndpoint: IEndpoint {
      
 
         switch self {
-        case .addComment(let parameters):
+        case .addComment(var parameters):
+            parameters.removeValue(forKey: "session_id")
             return parameters
+        case .lastComment:
+            return nil
         }
        
     

@@ -31,7 +31,8 @@ struct PublicEventsModel {
            let fieldImage: String?
            let bestFor, address, partnerName: String?
            let partnerImage: String?
-           let playersNumber, joinedCount, cost: Int?
+           let playersNumber, joinedCount: Int?
+            let cost : Double?
            let gender, day, date, startTime: String?
            let endTime, sportType, groupName: String?
            let age: Int?

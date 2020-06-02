@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommentViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="comment" destination="8du-Lt-Trh" id="vCr-mZ-bqX"/>
+                <outlet property="commentButton" destination="nOd-Pe-LDj" id="sE4-dk-vBh"/>
                 <outlet property="counterlbl" destination="zm3-Va-Z91" id="pMV-rr-Tlo"/>
                 <outlet property="placeholder" destination="SxC-cB-eJ3" id="9BD-KO-OC9"/>
                 <outlet property="rate" destination="x38-0Y-TG6" id="Ggh-z6-NqB"/>

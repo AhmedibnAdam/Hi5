@@ -25,5 +25,20 @@ struct CommentModel {
         let status: Bool?
         let msg: String?
     }
+    // MARK: - LastComment
+    struct LastComment: Codable {
+        let status: Bool?
+        let comment: Comment?
+    }
+
+    // MARK: - Comment
+    struct Comment: Codable {
+        let commentDescription, rate, date: String?
+
+        enum CodingKeys: String, CodingKey {
+            case commentDescription = "description"
+            case rate, date
+        }
+    }
 
 }

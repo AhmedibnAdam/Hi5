@@ -14,6 +14,7 @@ import Cosmos
 protocol ICommentViewController: class {
 	var router: ICommentRouter? { get set }
     func showAlert(title: String, msg: String)
+     func showComment(response: CommentModel.LastComment)
 }
 
 class CommentViewController: UIViewController {
@@ -24,16 +25,19 @@ class CommentViewController: UIViewController {
         }()
     var counter = 0
     var fieldId: Int?
+    var sessionId: Int?
     var date: String?
     var params: [String: Any] = ["": ""]
 
     @IBOutlet weak var placeholder: UILabel!
     @IBOutlet weak var counterlbl: UILabel!
     @IBOutlet weak var rate: CosmosView!
+    @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var comment: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupNavigationBar()
+        interactor?.lastComment()
     }
     
   
@@ -47,6 +51,7 @@ class CommentViewController: UIViewController {
         params["description"] =  comment.text
         params["rate"] =  rate.rating
         params["field_id"] = fieldId
+        params["session_id"] = sessionId
         params["date"] = selectedDay
         interactor?.parameters = params
         interactor?.addComment()
@@ -62,7 +67,20 @@ extension CommentViewController: ICommentViewController {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     
-	// do someting...
+    func showComment(response: CommentModel.LastComment){
+        if response.status != false {
+            commentButton.setTitle("Update comment", for: .normal)
+            counterlbl.text = "\(response.comment?.commentDescription?.count ?? 1)"
+            rate.rating = Double((response.comment?.rate)!)!
+            comment.text = response.comment?.commentDescription
+            placeholder.isHidden = true
+        }
+        else {
+            commentButton.setTitle("Leave comment", for: .normal)
+             placeholder.isHidden = false
+        }
+    }
+
 }
 
 extension CommentViewController{

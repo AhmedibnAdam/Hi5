@@ -15,6 +15,7 @@ class CommentConfiguration {
     static func setup(parameters: [String: Any] = [:] ) -> UIViewController {
         let controller = CommentViewController()
         controller.fieldId = parameters["field_id"] as? Int
+        controller.sessionId = parameters["session_id"] as? Int
         controller.date = parameters["date"] as? String
         let router = CommentRouter(view: controller)
         let presenter = CommentPresenter(view: controller)

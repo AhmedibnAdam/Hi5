@@ -13,6 +13,7 @@ import UIKit
 protocol ICommentInteractor: class {
 	var parameters: [String: Any]? { get set }
      func addComment()
+    func lastComment()
 }
 
 class CommentInteractor: ICommentInteractor {
@@ -32,6 +33,16 @@ class CommentInteractor: ICommentInteractor {
              
               } else {
                 self.presenter?.showErrorAlert(title: "Sorry!", msg: (error?.message ?? "comment can not add"))
+              }
+        })
+    }
+    func lastComment() {
+        manager?.last(parameters: parameters!, complition: { (error, success, response) in
+             if (success == true) {
+                guard let response = response else {return}
+                self.presenter?.showComment(response: response)
+              } else {
+               
               }
         })
     }

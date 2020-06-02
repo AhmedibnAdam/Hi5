@@ -77,7 +77,7 @@ class BookingDetailsViewController: UIViewController , UICollectionViewDelegate 
             interactor?.cancelBooking(fieldId: "\(self.sessionData?.field?.bookedSessionID ?? 0)")
         }
           else if type == 1{
-            let params = ["field_id": self.sessionData?.field?.id ?? 0 ]
+            let params = ["field_id": self.sessionData?.field?.id ?? 0 , "session_id": self.sessionData?.field?.bookedSessionID ?? 0]
             router?.navigateToComment(params: params)
         }
           else {

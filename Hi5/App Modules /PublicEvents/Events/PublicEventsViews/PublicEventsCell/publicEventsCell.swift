@@ -69,13 +69,15 @@ class publicEventsCell: UICollectionViewCell {
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
         
         self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
-        cost.text = "\(String(describing: filteredPublicEventData?.cost ?? 0))"
         if filteredPublicEventData?.cost == 0 {
-            currancy.isHidden = true
+             cost.text = "Free"
+             currancy.isHidden = true
         }
-        else{
-            currancy.isHidden = false
+        else {
+            cost.text = "\(String(describing: filteredPublicEventData?.cost ?? 0))"
+              currancy.isHidden = false
         }
+        
        
         day.text = filteredPublicEventData?.day
         date.text = filteredPublicEventData?.date

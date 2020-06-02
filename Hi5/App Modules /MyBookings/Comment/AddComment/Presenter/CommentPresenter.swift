@@ -12,6 +12,7 @@ import UIKit
 
 protocol ICommentPresenter: class {
 	 func showErrorAlert(title: String, msg: String)
+    func showComment(response: CommentModel.LastComment)
 }
 
 class CommentPresenter: ICommentPresenter {	
@@ -22,5 +23,8 @@ class CommentPresenter: ICommentPresenter {
 	}
     func showErrorAlert(title: String, msg: String) {
            view?.showAlert(title: title, msg: msg)
-       }
+     }
+     func showComment(response: CommentModel.LastComment) {
+              view?.showComment(response: response)
+          }
 }

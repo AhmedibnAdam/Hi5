@@ -81,9 +81,11 @@ extension PublicEventContainerController: PublicEventControllerDelegate {
         if !isExpanded {
             configureMenuController()
         }
+       
         
         isExpanded = !isExpanded
         showMenuController(shouldExpand: isExpanded)
+        
     }
 }
 

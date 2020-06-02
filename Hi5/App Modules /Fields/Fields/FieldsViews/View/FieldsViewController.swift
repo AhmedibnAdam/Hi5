@@ -323,7 +323,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             cell.namelbl.text = nearFields.name
             cell.locationLbl.text = nearFields.address
             cell.commentLbl.text = String(nearFields.comments ?? 0)
-            cell.rateLbl.text = String(nearFields.rating ?? 0)
+            cell.rateLbl.text =  String(format: "%.2f", nearFields.rating ?? 0)
             //        cell.sportTypeLbl.text = nearFields.sportType
             //        cell.genderLbl.text = nearFields.gender
             cell.recomendedLbl.text = nearFields.recommendedFor
@@ -381,7 +381,8 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
              cell.partner.text = favorFields.name
             cell.locationLbl.text = favorFields.address
             cell.commentLbl.text = String(favorFields.comments ?? 0)
-            cell.rateLbl.text = String(favorFields.rating ?? 0)
+            cell.rateLbl.text = String(format: "%.2f", favorFields.rating ?? 0)
+             
             //        cell.sportTypeLbl.text = nearFields.sportType
             //        cell.genderLbl.text = nearFields.gender
             cell.recomendedLbl.text = favorFields.recommendedFor
@@ -431,7 +432,8 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             cell.partner.text = memberFields.name
             cell.locationLbl.text = memberFields.address
             cell.commentLbl.text = String(memberFields.comments ?? 0)
-            cell.rateLbl.text = String(memberFields.rating ?? 0)
+            cell.rateLbl.text =  String(format: "%.2f", memberFields.rating ?? 0)
+           
             //        cell.sportTypeLbl.text = nearFields.sportType
             //        cell.genderLbl.text = nearFields.gender
             cell.recomendedLbl.text = memberFields.recommendedFor
@@ -511,7 +513,7 @@ extension FieldsViewController: UITableViewDelegate , UITableViewDataSource {
             router?.navigateToProfile(param: ["lat" : Double(self.latitude!)! , "long": Double(self.longtyde!)!],partner_id: self.favoriteFields[sender.tag].partner_id ?? 1)
          }
           else{
-            router?.navigateToProfile(param: ["lat" : Double(self.latitude!)! , "long": Double(self.longtyde!)!],partner_id: self.memberOfFields[sender.tag].partner_id ?? 1)
+            router?.navigateToProfile(param: ["lat" : Double(self.latitude!)! , "long": Double(self.longtyde!)!],partner_id: self.memberOfFields[sender.tag].partnerID ?? 1)
 
          }
         

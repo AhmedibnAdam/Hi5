@@ -23,7 +23,7 @@ class ShowDetailsViewController: UIViewController   {
 	var router: IShowDetailsRouter?
     var fieldRes:   ShowDetailsModel.FieldDetails?
     var field: FieldsModel.NearByfieldsResponseField?
-    var services = [ShowDetailsModel.FieldDetailsService]()
+    var services : [ShowDetailsModel.FieldDetailsService]?
     var field_id: String?
     var lat , long :String?
     var parameters: [String: Any]?
@@ -144,6 +144,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
     //MARK:  showDetailsResponse
     func showDetailsResponse(response: ShowDetailsModel.FieldDetails) {
         guard let field = response.field else {return}
+     
         fieldName.text = field.name
         self.fieldRes = response
         self.lat = field.latitude
@@ -209,53 +210,49 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         paymentLbl.text = "payment: \(field.payment ?? "")"
         if let services = field.services {
             self.services = services
+        
             self.collectionView.reloadData()
         }
     }
 }
 
 //MARK: - CollectionViewMethods
-extension ShowDetailsViewController{
+extension ShowDetailsViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+    func registerCollectionCell() {
+        let cell = UINib(nibName: "ServicesCell", bundle: nil)
+        collectionView.register(cell, forCellWithReuseIdentifier: "ServicesCell")
+    }
     
-//    func registerCollectionCell() {
-//        let cell = UINib(nibName: "ServicesCell", bundle: nil)
-//        collectionView.register(cell, forCellWithReuseIdentifier: "ServicesCell")
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return services.count
-//    }
-//
-//     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath)// as! ServicesCell
-//     //   cell.serviceLbl.text = services[indexPath.row].name
-//        if let serviceImg = services[indexPath.row].image {
-//            let url = URL(string: serviceImg)
-//            DispatchQueue.global().async {
-//                if let data = try? Data(contentsOf: url!) {
-//                    DispatchQueue.main.async {
-//              //          cell.serviceimg.image = UIImage(data: data)
-//                    }
-//                }
-//            }
-//        }
-//            return cell
-//       }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//               let width = collectionView.frame.width / 4
-//               let height = collectionView.frame.height
-//               return CGSize(width: width, height: height)
-//       }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return services?.count ?? 0 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath) as! ServicesCell
+        cell.serviceLbl.text = services?[indexPath.row].name
+        if let serviceImg = services?[indexPath.row].image {
+               let url = URL(string: serviceImg)
+               DispatchQueue.global().async {
+                   if let data = try? Data(contentsOf: url!) {
+                       DispatchQueue.main.async {
+                           cell.serviceimg.image = UIImage(data: data)
+                       }
+                   }
+               }
+           }
+            return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width = collectionView.frame.width / 4
+            let height = collectionView.frame.height
+            return CGSize(width: width, height: height)
+    }
 }
 
 extension ShowDetailsViewController {
     func initView(){
-        // MARK : - view raduis
-//        self.companyImg = CreateCornerRauis.imageViewRaduis(view: self.companyImg, number: (self.companyImg.frame.height / 2))
-//        self.containerView = CreateCornerRauis.viewRaduis(view: self.containerView, number: 5)
-//          // MARK : - Button  raduis
-//        self.checkAvailabilityBtn = CreateCornerRauis.ButtonRaduis(button: self.checkAvailabilityBtn, number: 5)
+        registerCollectionCell()
     }
     
     func configer(){

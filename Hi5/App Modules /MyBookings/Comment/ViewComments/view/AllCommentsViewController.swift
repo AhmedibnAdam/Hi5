@@ -59,7 +59,8 @@ extension AllCommentsViewController: IAllCommentsViewController {
         tableView.reloadData()
         rateView.rating = response.meta?.ratingAvg ?? 1.0
       
-        totalRate.text = String(response.meta?.ratingAvg ?? 1.0)
+        totalRate.text = String(format: "%.2f", response.meta?.ratingAvg ?? 0)
+        
         rarerCount.text = "(" + "\(response.meta?.totalRateCount ?? 0)" + ")"
         
         for n in response.rates ?? []{
@@ -69,7 +70,7 @@ extension AllCommentsViewController: IAllCommentsViewController {
             switch n.rate {
             case 1:
                 
-                rate1.constant = CGFloat((reviewers / total!) * reviewers)
+                rate1.constant = CGFloat(width * reviewers)
             case 2:
                 rate2.constant = CGFloat(width * reviewers)
             case 3:

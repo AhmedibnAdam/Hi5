@@ -112,32 +112,31 @@ struct FieldsModel {
     }
     // MARK: - Field
     struct MemberShipField: Codable {
-        let favourite: Bool?
-        let id: Int?
-        let name, partnerName: String?
-        let partnerImage: String?
-        let cost: Int?
-        let longitude, latitude : String?
-        let gender, address, distance, sportType: String?
-        let recommendedFor: String?
-        let fieldImage: String?
-        let comments, rating: Int?
-        let visibility, payment: String?
-        let membership: Membership?
-        let partner_id: Int?
+     let favourite: Bool?
+           let id: Int?
+           let name: String?
+           let partnerID: Int?
+           let partnerName: String?
+           let partnerImage: String?
+           let cost: Int?
+           let gender, address, longitude, latitude: String?
+           let distance, sportType, recommendedFor: String?
+           let fieldImage: String?
+           let comments: Int?
+           let rating: Double?
+           let visibility, payment: String?
+           let membership: Membership?
 
-        
-        enum CodingKeys: String, CodingKey {
-            case favourite, id, name , longitude, latitude
-            case partnerName = "partner_name"
-            case partnerImage = "partner_image"
-            case cost, gender, address, distance
-            case sportType = "sport_type"
-            case recommendedFor = "recommended_for"
-            case fieldImage = "field_image"
-            case comments, rating, visibility, payment, membership
-            case partner_id
-
-        }
+           enum CodingKeys: String, CodingKey {
+               case favourite, id, name
+               case partnerID = "partner_id"
+               case partnerName = "partner_name"
+               case partnerImage = "partner_image"
+               case cost, gender, address, longitude, latitude, distance
+               case sportType = "sport_type"
+               case recommendedFor = "recommended_for"
+               case fieldImage = "field_image"
+               case comments, rating, visibility, payment, membership
+           }
     }
 }

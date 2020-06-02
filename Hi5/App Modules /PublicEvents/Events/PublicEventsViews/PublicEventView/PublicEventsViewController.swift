@@ -197,7 +197,7 @@ class PublicEventsViewController: UIViewController {
         //  "2020-04-15" ,
         params?["latitude"] =  "\(self.lat ?? 29.95476)"
         params?["longitude"] =  "\(self.long ?? 31.2758)"
-        
+        buttonSlideBar.image = UIImage(named: "leftArrow")
         self.interactor?.parameters = params
         self.interactor?.searchPublicEvent()
     }
@@ -243,7 +243,15 @@ extension PublicEventsViewController: IPublicEventsViewController , CLLocationMa
     
     
     @objc func sideMenu() {
-        delegate?.handleMenuToggle()
+        if buttonSlideBar.image == UIImage(named: "leftArrow"){
+            self.dismiss()
+        }
+        else {
+            buttonSlideBar.image = UIImage(named: "menu")
+            delegate?.handleMenuToggle()
+        }
+        
+        
     }
     @objc func filter() {
         router?.navigateToFilter(parameters: ["date" : self.selectedDay!])

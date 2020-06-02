@@ -2414,8 +2414,8 @@
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "422"
-            endingLineNumber = "422"
+            startingLineNumber = "423"
+            endingLineNumber = "423"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2430,8 +2430,8 @@
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "476"
-            endingLineNumber = "476"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2942,8 +2942,8 @@
             filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "showAlert(title:msg:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3566,8 +3566,8 @@
             filePath = "Hi5/App Modules /MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "showWalletResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3678,42 +3678,10 @@
             filePath = "Hi5/App Modules /MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "showWalletResponse(response:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CB51C4FE-6E50-4B49-9010-80B56A9920D6 - 1c6a1a863b54b63"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.AllCommentsViewController.showWalletResponse(response: Hi5.AllCommentsModel.Comments) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "4456">
-               </Location>
-               <Location
-                  uuid = "CB51C4FE-6E50-4B49-9010-80B56A9920D6 - 1c6a1a863b54b63"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.AllCommentsViewController.showWalletResponse(response: Hi5.AllCommentsModel.Comments) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "4951">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3726,8 +3694,8 @@
             filePath = "Hi5/App Modules /MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "showWalletResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3742,8 +3710,8 @@
             filePath = "Hi5/App Modules /MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "showWalletResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3758,8 +3726,8 @@
             filePath = "Hi5/App Modules /MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "showWalletResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3774,8 +3742,8 @@
             filePath = "Hi5/App Modules /MyBookings/Comment/ViewComments/view/AllCommentsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "showWalletResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3825,6 +3793,38 @@
             startingLineNumber = "59"
             endingLineNumber = "59"
             landmarkName = "submitRequestBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DFEE197-1F2A-40FA-A30F-62427470C2A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "requestFilteredPublicEventFromApi(parameters:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F7DF016-96E1-4148-855C-F56FD82104ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "showDetailsResponse(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

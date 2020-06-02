@@ -24,8 +24,8 @@ class FilterBublicEventViewController: UIViewController , UICollectionViewDelega
 	var interactor: IFilterBublicEventInteractor?
 	var router: IFilterBublicEventRouter?
     
-    var minRange: String = "10.0"
-    var maxRange: String = "14.0"
+    var minRange: String = "0.0"
+    var maxRange: String = "12.0"
     var sports: [FilterModel.Sport] = []
     var sportId = 11
     var nearByField: Bool?
@@ -46,7 +46,8 @@ class FilterBublicEventViewController: UIViewController , UICollectionViewDelega
     }()
     
     @objc func backBtntapped() {
-          router?.navigateToBublicEvent(parameters: param)
+//          router?.navigateToBublicEvent(parameters: param)
+        self.dismiss()
       }
     
     
@@ -76,7 +77,7 @@ class FilterBublicEventViewController: UIViewController , UICollectionViewDelega
 //        param["sport_type"] = sportId
         param["start_time"] = minRange
         param["end_time"] = maxRange
-        param["name"] = "All Stadiums"
+//        param["name"] = "All Stadiums"
         print(param)
         router?.navigateToBublicEvent(parameters: param)
         

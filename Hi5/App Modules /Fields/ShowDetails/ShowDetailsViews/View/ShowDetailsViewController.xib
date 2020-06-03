@@ -461,14 +461,15 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-y3-8aY">
-                                    <rect key="frame" x="0.0" y="1319" width="335" height="120"/>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bhW-y3-8aY">
+                                    <rect key="frame" x="0.0" y="1319" width="335" height="180"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="120" id="ccn-Fv-aSg"/>
+                                        <constraint firstAttribute="height" constant="200" id="FKm-ur-MCb"/>
+                                        <constraint firstAttribute="width" constant="335" id="U33-bb-pCq"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3d3-ff-n6i">
-                                        <size key="itemSize" width="50" height="50"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="3d3-ff-n6i">
+                                        <size key="itemSize" width="90" height="90"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>

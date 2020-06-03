@@ -30,6 +30,7 @@ class publicEventsCell: UICollectionViewCell {
     @IBOutlet weak var bestFor: UILabel!
     @IBOutlet weak var currancy: UILabel!
     @IBOutlet weak var points: UILabel!
+    @IBOutlet weak var payment: UILabel!
     
     
     var filteredPublicEventData: PublicEventsModel.PublicEvent?
@@ -85,6 +86,7 @@ class publicEventsCell: UICollectionViewCell {
         endTime.text = filteredPublicEventData?.endTime
         age.text = (filteredPublicEventData?.groupName ?? "") //+ " \(filteredPublicEventData?.age! ?? 0)"
         points.text = "\(filteredPublicEventData?.points! ?? 0)"
+        payment.text = filteredPublicEventData?.payment
         
     }
     

@@ -42,21 +42,21 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
         })
     }
     func requestMemberShip(view: UIViewController, fieldId: Int) {
-//        manager?.requestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
-//            if (success == true){
-//
-//            } else {
-//                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
-//            }
-//        })
+        manager?.requestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
+            if (success == true){
+
+            } else {
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
     }
     func cancelRequestMemberShip(view: UIViewController, fieldId: Int) {
-//        manager?.cancelRequestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
-//            if(success == true){
-//                
-//            } else {
-//                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
-//            }
-//        })
+        manager?.cancelRequestMemberShipFromApi(id: fieldId, complition: { (error, success, response) in
+            if(success == true){
+                
+            } else {
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
     }
 }

@@ -1,73 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ServicesCell" id="gTV-IL-0wX" customClass="ServicesCell" customModule="Hi5" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="90" height="109"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="90" height="109"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gii-0b-ohk">
-                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gii-0b-ohk">
+                        <rect key="frame" x="10" y="10" width="90" height="90"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ga1-j7-NvZ">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gbs-GQ-Gka">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz8-e3-0Vi">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                        <rect key="frame" x="20" y="20" width="60" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shower" translatesAutoresizingMaskIntoConstraints="NO" id="6AT-L3-NIR">
-                                                <rect key="frame" x="20.5" y="9" width="19" height="22"/>
+                                                <rect key="frame" x="20.5" y="19" width="19" height="22"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.29184503424657532" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="2DU-jf-xKr"/>
                                             <constraint firstItem="6AT-L3-NIR" firstAttribute="centerY" secondItem="Jz8-e3-0Vi" secondAttribute="centerY" id="HrJ-aa-dph"/>
-                                            <constraint firstAttribute="height" constant="60" id="OcP-ax-HtQ"/>
+                                            <constraint firstAttribute="width" constant="60" id="P9d-Xs-CL6"/>
+                                            <constraint firstAttribute="height" constant="60" id="WwZ-FW-ft6"/>
                                             <constraint firstItem="6AT-L3-NIR" firstAttribute="centerX" secondItem="Jz8-e3-0Vi" secondAttribute="centerX" id="txU-Rb-TDH"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shower" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74N-WP-kQF">
-                                        <rect key="frame" x="0.0" y="48" width="60" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shower" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74N-WP-kQF">
+                                        <rect key="frame" x="12" y="88" width="60" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="dsQ-gA-sCY"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="74N-WP-kQF" firstAttribute="top" secondItem="Jz8-e3-0Vi" secondAttribute="bottom" constant="8" id="PKk-D7-cLN"/>
-                                    <constraint firstItem="74N-WP-kQF" firstAttribute="centerX" secondItem="Jz8-e3-0Vi" secondAttribute="centerX" id="Qpo-fc-4qn"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ga1-j7-NvZ" firstAttribute="leading" secondItem="gii-0b-ohk" secondAttribute="leading" id="38a-hc-Ojy"/>
-                            <constraint firstAttribute="trailing" secondItem="ga1-j7-NvZ" secondAttribute="trailing" id="NRK-Qt-Oof"/>
-                            <constraint firstItem="ga1-j7-NvZ" firstAttribute="top" secondItem="gii-0b-ohk" secondAttribute="top" id="PD8-IB-XX5"/>
-                            <constraint firstAttribute="width" constant="60" id="UOu-x6-e8W"/>
-                            <constraint firstAttribute="bottom" secondItem="ga1-j7-NvZ" secondAttribute="bottom" id="s6V-ot-AGm"/>
+                            <constraint firstAttribute="height" constant="90" id="19t-Zf-blh"/>
+                            <constraint firstAttribute="bottom" secondItem="Gbs-GQ-Gka" secondAttribute="bottom" id="3DD-6o-YqU"/>
+                            <constraint firstAttribute="width" constant="90" id="WPg-fs-nVD"/>
+                            <constraint firstAttribute="trailing" secondItem="Gbs-GQ-Gka" secondAttribute="trailing" id="XUE-Xw-Leq"/>
+                            <constraint firstItem="Gbs-GQ-Gka" firstAttribute="leading" secondItem="gii-0b-ohk" secondAttribute="leading" id="irs-LR-5Ok"/>
+                            <constraint firstItem="Gbs-GQ-Gka" firstAttribute="top" secondItem="gii-0b-ohk" secondAttribute="top" constant="20" symbolic="YES" id="oSD-dN-uJO"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="gii-0b-ohk" secondAttribute="bottom" constant="10" id="DhB-bG-wbm"/>
                 <constraint firstItem="gii-0b-ohk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="v4y-VS-KSI"/>
                 <constraint firstItem="gii-0b-ohk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="xc9-sV-BFQ"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="111" height="117"/>
+            <size key="customSize" width="121" height="146"/>
             <connections>
                 <outlet property="containerImgView" destination="Jz8-e3-0Vi" id="dcC-mD-wG5"/>
                 <outlet property="serviceLbl" destination="74N-WP-kQF" id="PZX-Mg-Z4Z"/>

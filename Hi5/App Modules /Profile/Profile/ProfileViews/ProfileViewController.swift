@@ -12,24 +12,24 @@ import UIKit
 import Kingfisher
 
 protocol IProfileViewController: class {
-	var router: IProfileRouter? { get set }
+    var router: IProfileRouter? { get set }
     func showAlert(title: String, msg: String)
     func showResponse(data: ProfileModel.ShowProfileResponse)
-     func showPartnerResponse(data: ProfileModel.PartnerProfile)
+    func showPartnerResponse(data: ProfileModel.PartnerProfile)
     func navigateToEditProfile()
     func hideIndecator()
 }
 
 class ProfileViewController: UIViewController {
-	var interactor: IProfileInteractor?
-	var router: IProfileRouter?
+    var interactor: IProfileInteractor?
+    var router: IProfileRouter?
     var dateOfBirth: String = ""
     var location: String = ""
     var id: Int?
     var lat: Double?
     var long: Double?
     var response: ProfileModel.PartnerProfile?
-//MARK:- Outlets
+    //MARK:- Outlets
     
     @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
@@ -41,10 +41,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var numOfFriends: UILabel!
+    @IBOutlet weak var friendsLbl: UILabel!
+    @IBOutlet weak var countryLogo: UIButton!
+    @IBOutlet weak var countryNumber: UILabel!
+    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var fieldTitleLbl: UILabel!
+    @IBOutlet weak var phone: UILabel!
     
-//MARK:- view LifeCycle
-	override func viewDidLoad() {
+    
+    //MARK:- view LifeCycle
+    override func viewDidLoad() {
         super.viewDidLoad()
         configer()
     }
@@ -52,23 +59,23 @@ class ProfileViewController: UIViewController {
         showIndecator()
         loadShowProfileData()
     }
-//MARK:- Actions
+    //MARK:- Actions
     @IBAction func editBtnTapped(_ sender: UIButton) {
         navigateToEditProfile()
     }
     
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        self.dismiss()
+        router?.navigateToTabBar()
         
     }
 }
 
 //MARK:- Extensions
 extension ProfileViewController: IProfileViewController {
-   
+    
     
     func showAlert(title: String, msg: String) {
-         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func navigateToEditProfile() {
         router?.navigateToEditProfile()
@@ -77,20 +84,38 @@ extension ProfileViewController: IProfileViewController {
         activityIndicator.isHidden = true
     }
     func showPartnerResponse(data: ProfileModel.PartnerProfile) {
+        if data.partner != nil {
+            numOfFriends.isHidden = true
+            friendsLbl.isHidden = true
+            countryLogo.isHidden = true
+            countryNumber.isHidden = true
+            countryLbl.isHidden = true
+            fieldTitleLbl.isHidden = false
+        }
+        guard let responseData = data.partner else {
+                   return
+                   
+               }
         self.response = data
-//        countryName.text = response?.partner.
-        descriptionLbl.text = response?.partner?.email
+        phone.text = "Email: " + (response?.partner?.email ?? "")
         userName.text = response?.partner?.phone
-//        age.text = response.
+        
         fullName.text = response?.partner?.name
         let url = URL(string: (response?.partner?.image)!)!
         profilePhoto.kf.setImage(with: url)
         tableView.reloadData()
-       }
+    }
     func showResponse(data: ProfileModel.ShowProfileResponse) {
         guard let responseData = data.user else {
             return
+            
         }
+        fieldTitleLbl.isHidden = true
+        numOfFriends.isHidden = false
+        friendsLbl.isHidden = false
+        countryLogo.isHidden = false
+        countryNumber.isHidden = false
+        countryLbl.isHidden = false
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -98,12 +123,15 @@ extension ProfileViewController: IProfileViewController {
                 if let data = try? Data(contentsOf: url!) {
                     DispatchQueue.main.async {
                         self.profilePhoto.image = UIImage(data: data)
+                        let images = UIImage(data: data)?.pngData()
+                        UserDefaults().set(images, forKey: "image")
                     }
                 }
             }
         }
         
         self.countryName.text = responseData.country?.val
+        self.phone.text = "Phone: \(responseData.phoneNumber ?? 996)"
         self.fullName.text = responseData.name
         self.userName.text = responseData.vieID
         self.descriptionLbl.text = responseData.biography
@@ -133,18 +161,18 @@ extension ProfileViewController: IProfileViewController {
         }
         
         if let yearFlag = responseData.year?.flag , let monthFlag = responseData.month?.flag , let dayFlag = responseData.day?.flag {
-           defaults.set(yearFlag, forKey: "yearFlag")
-           defaults.set(monthFlag, forKey: "monthFlag")
-           defaults.set(dayFlag, forKey: "dayFlag")
+            defaults.set(yearFlag, forKey: "yearFlag")
+            defaults.set(monthFlag, forKey: "monthFlag")
+            defaults.set(dayFlag, forKey: "dayFlag")
         }
         
         if let countryFlag = responseData.country?.flag , let cityFlag = responseData.city?.flag , let stateFlag = responseData.state?.flag {
-                defaults.set(countryFlag, forKey: "countryFlag")
-                defaults.set(cityFlag, forKey: "cityFlag")
-                defaults.set(stateFlag, forKey: "stateFlag")
+            defaults.set(countryFlag, forKey: "countryFlag")
+            defaults.set(cityFlag, forKey: "cityFlag")
+            defaults.set(stateFlag, forKey: "stateFlag")
         }
         
-
+        
     }
 }
 
@@ -159,7 +187,16 @@ extension ProfileViewController {
 }
 extension ProfileViewController {
     func loadShowProfileData() {
-        interactor?.doShowProfile(id: id ?? 0 , lat: lat ?? 0.0 , long: long ?? 0.0)
+        
+          if id == nil || id == 0 {
+                 interactor?.showUsrerProfile()
+                  
+              }
+               else {
+                  
+              interactor?.doShowProfile(id: id! , lat: lat ?? 0.0 , long: long ?? 0.0)
+              }
+        
     }
 }
 extension ProfileViewController : UITableViewDelegate , UITableViewDataSource {
@@ -172,14 +209,16 @@ extension ProfileViewController : UITableViewDelegate , UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fieldsCell") as! FieldsTableViewCell
-//        cell.partner.isHidden =  true
-//        cell.companyImg.isHidden =  true
+        //        cell.partner.isHidden =  true
+        //        cell.companyImg.isHidden =  true
         cell.companyName.isHidden =  true
         cell.visabilityButton.isHidden = true
         
         let field = response?.partner?.fields?[indexPath.row]
-        let url = URL(string: (field?.fieldImage)!)!
-         cell.fieldImg.kf.setImage(with: url)
+        if let url = URL(string: (field?.fieldImage ?? "")){
+            cell.fieldImg.kf.setImage(with: url)
+        }
+        
         cell.partner.text = field?.name
         cell.rateLbl.text = "\(field?.rating ?? 0)"
         cell.commentLbl.text = "\(field?.comments ?? 0)"

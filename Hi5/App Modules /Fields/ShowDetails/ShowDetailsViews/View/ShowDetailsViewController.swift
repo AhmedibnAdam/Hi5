@@ -22,7 +22,7 @@ class ShowDetailsViewController: UIViewController   {
 	var interactor: IShowDetailsInteractor?
 	var router: IShowDetailsRouter?
     var fieldRes:   ShowDetailsModel.FieldDetails?
-    var field: FieldsModel.NearByfieldsResponseField?
+    var field: ShowDetailsModel.FieldDetails?
     var services : [ShowDetailsModel.FieldDetailsService]?
     var field_id: String?
     var lat , long :String?
@@ -93,7 +93,7 @@ class ShowDetailsViewController: UIViewController   {
             sender.setTitleColor(.lightGray, for: .normal)
             self.statusLbl.text = "pending"
             self.statusLbl.textColor = .lightGray
-            if let id = field?.id {
+            if let id = field?.field?.id {
                 self.interactor?.requestMemberShip(view: self, fieldId: id)
             }
             
@@ -102,7 +102,7 @@ class ShowDetailsViewController: UIViewController   {
             sender.setTitleColor(.red, for: .normal)
             self.statusLbl.text = "not a member"
             self.statusLbl.textColor = .black
-            if let id = field?.id {
+            if let id = field?.field?.id {
                 self.interactor?.cancelRequestMemberShip(view: self, fieldId: id)
             }
         }
@@ -144,7 +144,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
     //MARK:  showDetailsResponse
     func showDetailsResponse(response: ShowDetailsModel.FieldDetails) {
         guard let field = response.field else {return}
-     
+        self.field = response
         fieldName.text = field.name
         self.fieldRes = response
         self.lat = field.latitude

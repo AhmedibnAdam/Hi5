@@ -35,4 +35,5 @@ class ProfilePresenter: IProfilePresenter {
     func showPartnerResponse(data: ProfileModel.PartnerProfile ){
         view?.showPartnerResponse(data: data)
     }
+  
 }

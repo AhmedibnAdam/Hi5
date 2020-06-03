@@ -11,11 +11,18 @@
             <connections>
                 <outlet property="activityIndicator" destination="E2r-Y8-pQd" id="y4k-Ox-5B7"/>
                 <outlet property="age" destination="Ha3-dq-4Dr" id="ygP-77-rmW"/>
+                <outlet property="countryLbl" destination="eqB-GL-XdR" id="qRH-SB-mXu"/>
+                <outlet property="countryLogo" destination="Ifp-l3-D1H" id="58h-qM-ees"/>
                 <outlet property="countryName" destination="eqB-GL-XdR" id="j8E-ud-NJL"/>
+                <outlet property="countryNumber" destination="Rr5-lC-Wog" id="ZDl-EV-LNd"/>
                 <outlet property="descriptionLbl" destination="Rzj-kt-b1y" id="Mds-DK-ckr"/>
                 <outlet property="editBtn" destination="wOE-ck-2Tl" id="UnG-re-Krx"/>
+                <outlet property="fieldTitleLbl" destination="6E8-3l-YiS" id="es0-OU-2e5"/>
+                <outlet property="friendsLbl" destination="KS1-TV-9z5" id="85a-Sh-ao8"/>
                 <outlet property="fullName" destination="SH4-k8-fBx" id="xuJ-KT-T2P"/>
                 <outlet property="logoView" destination="vWr-CP-U3X" id="zVI-rE-dGo"/>
+                <outlet property="numOfFriends" destination="IGd-36-bD4" id="bbZ-rd-EG9"/>
+                <outlet property="phone" destination="pLF-xH-wW1" id="GZu-sg-Znd"/>
                 <outlet property="profilePhoto" destination="cXn-KU-ew9" id="nEG-fF-OUy"/>
                 <outlet property="tableView" destination="UfI-Kx-FhQ" id="FWN-yE-ruo"/>
                 <outlet property="userName" destination="T8g-jR-hfF" id="rtP-bd-pRq"/>
@@ -163,10 +170,15 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzj-kt-b1y">
-                            <rect key="frame" x="10" y="196" width="355" height="67"/>
-                            <string key="text">My full name is Robert Ainsworth. I was born in LA , USA in 2002 . Iam 24 years old . About my appearance, iam tall and thin , I have big blue eyes and blond hair.</string>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iiiii" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rzj-kt-b1y">
+                            <rect key="frame" x="10" y="217" width="355" height="17"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLF-xH-wW1">
+                            <rect key="frame" x="163.5" y="196" width="48.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -189,12 +201,14 @@
                         <constraint firstItem="9U5-GY-NUu" firstAttribute="top" secondItem="zup-9Z-HbJ" secondAttribute="top" id="SrJ-kO-APV"/>
                         <constraint firstItem="9U5-GY-NUu" firstAttribute="bottom" secondItem="zup-9Z-HbJ" secondAttribute="bottom" id="SwP-N3-3d9"/>
                         <constraint firstItem="zup-9Z-HbJ" firstAttribute="leading" secondItem="cEC-0m-smE" secondAttribute="leading" constant="30" id="b8D-aE-pb7"/>
+                        <constraint firstItem="Rzj-kt-b1y" firstAttribute="top" secondItem="pLF-xH-wW1" secondAttribute="bottom" constant="0.5" id="bS5-E6-7C3"/>
                         <constraint firstItem="wOE-ck-2Tl" firstAttribute="bottom" secondItem="vWr-CP-U3X" secondAttribute="bottom" id="bhZ-23-MfP"/>
+                        <constraint firstItem="pLF-xH-wW1" firstAttribute="top" secondItem="T8g-jR-hfF" secondAttribute="bottom" id="d4I-4h-XVh"/>
                         <constraint firstItem="fCs-OB-Z5P" firstAttribute="top" secondItem="cEC-0m-smE" secondAttribute="top" id="doh-Ls-bab"/>
                         <constraint firstItem="T8g-jR-hfF" firstAttribute="top" secondItem="Wcv-gh-Nvi" secondAttribute="bottom" id="fhD-w9-hDa"/>
                         <constraint firstItem="T8g-jR-hfF" firstAttribute="centerX" secondItem="Wcv-gh-Nvi" secondAttribute="centerX" id="gHa-qj-gZe"/>
-                        <constraint firstItem="Rzj-kt-b1y" firstAttribute="top" secondItem="T8g-jR-hfF" secondAttribute="bottom" id="hnW-Bn-3uf"/>
                         <constraint firstItem="zup-9Z-HbJ" firstAttribute="top" secondItem="cEC-0m-smE" secondAttribute="top" constant="40" id="t4K-Y5-XmE"/>
+                        <constraint firstItem="pLF-xH-wW1" firstAttribute="centerX" secondItem="T8g-jR-hfF" secondAttribute="centerX" id="uEV-gu-5Gv"/>
                         <constraint firstItem="4Pb-hm-fNy" firstAttribute="centerY" secondItem="vWr-CP-U3X" secondAttribute="centerY" id="xfe-8U-ySd"/>
                         <constraint firstAttribute="trailing" secondItem="Rzj-kt-b1y" secondAttribute="trailing" constant="10" id="ypX-a4-E0j"/>
                     </constraints>

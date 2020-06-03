@@ -13,6 +13,7 @@ import UIKit
 protocol IProfileInteractor: class {
 	var parameters: [String: Any]? { get set }
     func doShowProfile(id: Int , lat: Double , long: Double)
+    func showUsrerProfile()
 }
 
 class ProfileInteractor: IProfileInteractor {
@@ -33,6 +34,21 @@ class ProfileInteractor: IProfileInteractor {
                     return 
                 }
                 self.presenter?.showPartnerResponse(data: data)
+            } else {
+                self.presenter?.hideIndecator()
+                self.presenter?.showErrorAlert(title: "\(error?.code ?? 400)", msg: (error?.message ?? "error"))
+            }
+        })
+    }
+    
+    func showUsrerProfile(){
+        manager?.showUserProfileFromApi( complition: { (error, success , data) in
+            if (success == true) {
+                self.presenter?.hideIndecator()
+                guard let data = data else {
+                    return
+                }
+                self.presenter?.showResponse(data: data)
             } else {
                 self.presenter?.hideIndecator()
                 self.presenter?.showErrorAlert(title: "\(error?.code ?? 400)", msg: (error?.message ?? "error"))

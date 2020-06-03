@@ -16,6 +16,8 @@ struct ProfileModel {
 			return nil
 		}
 	}
+  
+    // MARK: - ShowProfileResponse
     struct ShowProfileResponse: Codable {
         let status: Bool?
         let user: User?
@@ -35,7 +37,8 @@ struct ProfileModel {
         let avatar: String?
         let year, month, day, country: City?
         let city, state: City?
-        let latitude, longitude: Int?
+        let latitude: Double?
+        let longitude: Int?
 
         enum CodingKeys: String, CodingKey {
             case id, name, email, gender

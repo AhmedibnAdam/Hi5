@@ -79,5 +79,11 @@ struct ShowDetailsModel {
         let name: String?
         let image: String?
     }
+    // MARK: - RequestMemberShipResponse
+    struct RequestMemberShipResponse: Codable {
+        let status: Bool?
+        let msg: String?
+    }
+
 }
 

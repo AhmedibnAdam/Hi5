@@ -105,11 +105,13 @@ struct PublicEventDetailsModel {
     // MARK: - Player
     struct Player: Codable {
         let name, userName, image, eventStatus: String?
+        let id: Int?
 
         enum CodingKeys: String, CodingKey {
             case name
             case userName = "user_name"
             case image
+            case id
             case eventStatus = "event_status"
         }
     }

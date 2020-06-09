@@ -16,6 +16,8 @@ protocol IProfileViewController: class {
     func showAlert(title: String, msg: String)
     func showResponse(data: ProfileModel.ShowProfileResponse)
     func showPartnerResponse(data: ProfileModel.PartnerProfile)
+    func showPlayerResponse(data: ProfileModel.PlayerShowProfile )
+    func showFullPlayerResponse(data: ProfileModel.FullPlayerShowProfile )
     func navigateToEditProfile()
     func hideIndecator()
 }
@@ -26,6 +28,7 @@ class ProfileViewController: UIViewController {
     var dateOfBirth: String = ""
     var location: String = ""
     var id: Int?
+    var type: String?
     var lat: Double?
     var long: Double?
     var response: ProfileModel.PartnerProfile?
@@ -40,14 +43,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var editSports: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var numOfFriends: UILabel!
     @IBOutlet weak var friendsLbl: UILabel!
     @IBOutlet weak var countryLogo: UIButton!
+    @IBOutlet weak var flag: UIButton!
     @IBOutlet weak var countryNumber: UILabel!
     @IBOutlet weak var countryLbl: UILabel!
     @IBOutlet weak var fieldTitleLbl: UILabel!
     @IBOutlet weak var phone: UILabel!
+    @IBOutlet weak var userProfileView: UIView!
     
     
     //MARK:- view LifeCycle
@@ -74,6 +80,8 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: IProfileViewController {
     
     
+    
+    
     func showAlert(title: String, msg: String) {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
@@ -89,13 +97,14 @@ extension ProfileViewController: IProfileViewController {
             friendsLbl.isHidden = true
             countryLogo.isHidden = true
             countryNumber.isHidden = true
-            countryLbl.isHidden = true
+            countryName.isHidden = true
+            flag.isHidden = true
             fieldTitleLbl.isHidden = false
         }
         guard let responseData = data.partner else {
-                   return
-                   
-               }
+            return
+            
+        }
         self.response = data
         phone.text = "Email: " + (response?.partner?.email ?? "")
         userName.text = response?.partner?.phone
@@ -116,6 +125,8 @@ extension ProfileViewController: IProfileViewController {
         countryLogo.isHidden = false
         countryNumber.isHidden = false
         countryLbl.isHidden = false
+        countryName.isHidden = false
+        flag.isHidden = false
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -131,9 +142,10 @@ extension ProfileViewController: IProfileViewController {
         }
         
         self.countryName.text = responseData.country?.val
-        self.phone.text = "Phone: \(responseData.phoneNumber ?? 996)"
+        self.phone.text = ""
+        
         self.fullName.text = responseData.name
-        self.userName.text = responseData.vieID
+        self.userName.text = "@" + (responseData.vieID ?? "")
         self.descriptionLbl.text = responseData.biography
         if let gender = responseData.gender{
             defaults.set(gender, forKey: "Gender")
@@ -174,6 +186,73 @@ extension ProfileViewController: IProfileViewController {
         
         
     }
+    
+    func showPlayerResponse(data: ProfileModel.PlayerShowProfile) {
+        guard let responseData = data.user else {
+            return
+            
+        }
+        fieldTitleLbl.isHidden = true
+        numOfFriends.isHidden = false
+        friendsLbl.isHidden = false
+        countryLogo.isHidden = false
+        countryNumber.isHidden = false
+        countryName.isHidden = false
+        countryName.isHidden = false
+        flag.isHidden = false
+        let defaults = UserDefaults.standard
+        if let img = responseData.avatar {
+            let url = URL(string: img)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        self.profilePhoto.image = UIImage(data: data)
+                        let images = UIImage(data: data)?.pngData()
+                    }
+                }
+            }
+        }
+        
+        //        self.countryName.text = responseData.country?.val
+        self.age.text = ", \(responseData.dateOfBirth ?? 0)"
+        self.phone.text = ""
+        self.fullName.text = responseData.name
+        self.userName.text = responseData.vieID
+        self.descriptionLbl.text = responseData.biography
+    }
+    
+    func showFullPlayerResponse(data: ProfileModel.FullPlayerShowProfile) {
+        guard let responseData = data.user else {
+            return
+            
+        }
+        fieldTitleLbl.isHidden = true
+        //            numOfFriends.isHidden = false
+        //            friendsLbl.isHidden = false
+        countryLogo.isHidden = false
+        //            countryNumber.isHidden = false
+        countryName.isHidden = false
+        let defaults = UserDefaults.standard
+        if let img = responseData.avatar {
+            let url = URL(string: img)
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: url!) {
+                    DispatchQueue.main.async {
+                        self.profilePhoto.image = UIImage(data: data)
+                        let images = UIImage(data: data)?.pngData()
+                    }
+                }
+            }
+        }
+        self.age.text = "," + (responseData.dateOfBirth ?? "")
+        self.countryName.isHidden = false
+        self.countryName.text = "\(responseData.country?.val ?? "" ), \(responseData.city?.val ?? "" ) . \(responseData.state?.val ?? "" )"
+        self.phone.text = ""
+        self.fullName.text = responseData.name
+        self.userName.text = responseData.vieID
+        self.descriptionLbl.text = responseData.biography
+    }
+    
 }
 
 extension ProfileViewController {
@@ -188,14 +267,21 @@ extension ProfileViewController {
 extension ProfileViewController {
     func loadShowProfileData() {
         
-          if id == nil || id == 0 {
-                 interactor?.showUsrerProfile()
-                  
-              }
-               else {
-                  
-              interactor?.doShowProfile(id: id! , lat: lat ?? 0.0 , long: long ?? 0.0)
-              }
+        if id == nil || id == 0 {
+            interactor?.showUsrerProfile()
+            userProfileView.isHidden = false
+            editBtn.isHidden = false
+        }
+        else {
+            editBtn.isHidden = true
+            if type == "player"{
+                interactor?.showPlyerProfile(id: id!)
+            }
+            else {
+                userProfileView.isHidden = true
+                interactor?.doShowProfile(id: id! , lat: lat ?? 0.0 , long: long ?? 0.0)
+            }
+        }
         
     }
 }

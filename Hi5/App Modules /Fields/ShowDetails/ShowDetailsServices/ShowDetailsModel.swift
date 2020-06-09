@@ -44,6 +44,9 @@ struct ShowDetailsModel {
         let images: [String]?
         let services: [FieldDetailsService]?
         let partner_id: Int?
+        let bookingFrequencyTime: Int?
+         let bookingFrequencyPer: String?
+         let freeCancellationTimeFrame, receivingBookingTimeFrame: Int?
 
         
 
@@ -61,6 +64,10 @@ struct ShowDetailsModel {
             case fieldType = "field_type"
             case image, images, services
             case partner_id
+            case bookingFrequencyTime = "booking_frequency_time"
+              case bookingFrequencyPer = "booking_frequency_per"
+              case freeCancellationTimeFrame = "free_cancellation_time_frame"
+              case receivingBookingTimeFrame = "receiving_booking_time_frame"
 
         }
     }

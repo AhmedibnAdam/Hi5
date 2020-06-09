@@ -15,6 +15,8 @@ protocol IProfilePresenter: class {
    func hideIndecator()
    func showResponse(data: ProfileModel.ShowProfileResponse)
     func showPartnerResponse(data: ProfileModel.PartnerProfile )
+     func showPlayerResponse(data: ProfileModel.PlayerShowProfile )
+    func showFullPlayerResponse(data: ProfileModel.FullPlayerShowProfile )
 }
 
 class ProfilePresenter: IProfilePresenter {	
@@ -35,5 +37,10 @@ class ProfilePresenter: IProfilePresenter {
     func showPartnerResponse(data: ProfileModel.PartnerProfile ){
         view?.showPartnerResponse(data: data)
     }
-  
+  func showPlayerResponse(data: ProfileModel.PlayerShowProfile ){
+       view?.showPlayerResponse(data: data)
+   }
+    func showFullPlayerResponse(data: ProfileModel.FullPlayerShowProfile ){
+         view?.showFullPlayerResponse(data: data)
+     }
 }

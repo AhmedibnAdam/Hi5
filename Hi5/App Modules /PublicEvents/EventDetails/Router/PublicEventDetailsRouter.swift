@@ -12,6 +12,7 @@ import UIKit
 
 protocol IPublicEventDetailsRouter: class {
     func navigateToCheckOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails)
+    func navigateToUserProfile(params: [String: Any] , id: Int)
 }
 
 class PublicEventDetailsRouter: IPublicEventDetailsRouter {
@@ -23,5 +24,8 @@ class PublicEventDetailsRouter: IPublicEventDetailsRouter {
     func navigateToCheckOutSessionDetails(field: PublicEventDetailsModel.PublicEventDetails) {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.checkOutSessionDetails(field: field ,session: nil), completion: nil)
     }
-
+    func navigateToUserProfile(params: [String: Any] , id: Int) {
+           view?.navigate(type: .modal, module: GeneralRoute.profile(param: params, id: id), completion: nil)
+       }
+    
 }

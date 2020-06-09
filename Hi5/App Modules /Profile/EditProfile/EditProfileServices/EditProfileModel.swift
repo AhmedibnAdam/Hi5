@@ -16,9 +16,8 @@ struct EditProfileModel {
 			return nil
 		}
 	}
-
-	struct EditProfileResponse: Codable {
-        let status: Bool?
+    struct EditProfileResponse: Codable {
+    let status: Bool?
         let user: User?
     }
 
@@ -36,7 +35,8 @@ struct EditProfileModel {
         let avatar: String?
         let year, month, day, country: City?
         let city, state: City?
-        let latitude, longitude: Int?
+        let latitude: Double?
+        let longitude: Int?
 
         enum CodingKeys: String, CodingKey {
             case id, name, email, gender

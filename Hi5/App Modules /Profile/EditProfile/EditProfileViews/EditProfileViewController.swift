@@ -123,6 +123,8 @@ extension EditProfileViewController: IEditProfileViewController {
    }
     func hideIndicator() {
         loadingIndicator.isHidden = true
+        ShowAlertView.showAlert(title: "Alert", msg: "Profile information updated successfuly !", sender: self)
+
     }
 }
 

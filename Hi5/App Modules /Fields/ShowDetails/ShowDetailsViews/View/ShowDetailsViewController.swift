@@ -53,7 +53,13 @@ class ShowDetailsViewController: UIViewController   {
     @IBOutlet weak var showLocation: UIButton!
     @IBOutlet weak var checkAvailabilityBtn: UIButton!
     @IBOutlet weak var googleMapView: GMSMapView!
-
+    @IBOutlet weak var memberShipView: UIView!
+    @IBOutlet weak var policyView: UIView!
+    @IBOutlet weak var policy1: UILabel!
+    @IBOutlet weak var policy2: UILabel!
+    @IBOutlet weak var policy3: UILabel!
+    @IBOutlet weak var youstatus: UILabel!
+    
     //MARK: - View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,7 +138,6 @@ class ShowDetailsViewController: UIViewController   {
 }
 
 
-
 //MARK: - Extensions
 extension ShowDetailsViewController: IShowDetailsViewController {
     func showAlert(title: String, msg: String) {
@@ -159,11 +164,22 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         fieldSizeLbl.text = field.fieldSize
         gendersLbl.text = field.gender
         bestForLbl.text = field.recommendedFor
+        youstatus.text = field.membership?.status
+        if field.bookingFrequencyTime == 0 {
+           policy1.text = "You can book session at any time "
+        }
+        else {
+            policy1.text = "You can book \(field.bookingFrequencyTime ?? 0) session every \( field.bookingFrequencyPer ?? "at any time" )"
+        }
+        policy2.text = "free cancelation until \(field.freeCancellationTimeFrame ?? 0)  hour before session starting time "
+        policy3.text = "you can book a session in \( field.receivingBookingTimeFrame ?? 0 ) hours ahead of starting time "
         if (field.visibility == "public") {
             availableLbl.text = field.visibility
             self.statusStackView.isHidden = true
             self.containerView.isHidden = true
             self.requestMemberShipBtn.isHidden = true
+            self.memberShipView.isHidden = true
+            self.policyView.isHidden = true
         } else {
             availableLbl.text = field.visibility
             statusLbl.text = field.membership?.status
@@ -171,14 +187,20 @@ extension ShowDetailsViewController: IShowDetailsViewController {
             //self.containerView.isHidden = false
             if (field.membership?.status == "not member") {
                 self.requestMemberShipBtn.isHidden = false
+                self.memberShipView.isHidden = false
+                self.policyView.isHidden = false
                 self.containerView.isHidden = true
             } else if (field.membership?.status == "member") {
                 self.requestMemberShipBtn.isHidden = true
+                self.memberShipView.isHidden = false
+                self.policyView.isHidden = false
                 self.containerView.isHidden = false
                 self.expireDateLbl.text = field.membership?.expireAt
             } else if (field.membership?.status == "pending") {
                 self.containerView.isHidden = true
                 self.requestMemberShipBtn.isHidden = false
+                self.memberShipView.isHidden = false
+                self.policyView.isHidden = false
                 self.statusLbl.textColor = .lightGray
                 self.requestMemberShipBtn.setTitle("Cancel Request", for: .normal)
                 self.requestMemberShipBtn.setTitleColor(.lightGray, for: .normal)

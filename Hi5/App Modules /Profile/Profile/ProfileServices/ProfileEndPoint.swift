@@ -12,6 +12,7 @@ import Alamofire
 enum ProfileEndpoint {
     case ShowProfile(id: Int , lat: Double ,long: Double)
     case showUserProfile
+    case playerProfile(id: Int)
 }
 //MARK:- Extension
 extension ProfileEndpoint: IEndpoint {
@@ -25,6 +26,8 @@ extension ProfileEndpoint: IEndpoint {
             return .get
         case .showUserProfile:
             return .get
+        case .playerProfile:
+            return .get
         }
     }
     
@@ -34,6 +37,8 @@ extension ProfileEndpoint: IEndpoint {
             return "http://api-ksa.com/demo/hi5/public/api/partner/" + "\(id)" + "/show?" + "longitude=" + "\(long)&latitude=" + "\(lat)"
         case .showUserProfile:
             return "http://api-ksa.com/demo/hi5/public/api/player/show_profile"
+        case .playerProfile(let id):
+            return "http://api-ksa.com/demo/hi5/public/api/player/\(id)/show"
         }
     }
     
@@ -42,6 +47,8 @@ extension ProfileEndpoint: IEndpoint {
         case .ShowProfile:
             return nil
         case .showUserProfile:
+            return nil
+        case .playerProfile:
             return nil
         }
     }

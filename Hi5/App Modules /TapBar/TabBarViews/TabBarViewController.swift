@@ -23,13 +23,13 @@ class TabBarViewController: UITabBarController {
 	var router: ITabBarRouter?
     
    //MARK: - Properties
-    lazy var social: UIViewController = {
-        let vc = ContainerController()
-         vc.tabBarItem.title = "social"
-         vc.tabBarItem.image = UIImage(named: "social")
-        //let nav = UINavigationController(rootViewController: vc)
-        return vc
-    }()
+//    lazy var social: UIViewController = {
+//        let vc = ContainerController()
+//         vc.tabBarItem.title = "social"
+//         vc.tabBarItem.image = UIImage(named: "social")
+//        //let nav = UINavigationController(rootViewController: vc)
+//        return vc
+//    }()
     
     lazy var events: UIViewController = {
         let vc = PublicEventContainerController()
@@ -50,7 +50,7 @@ class TabBarViewController: UITabBarController {
     //MARK:- View life Cycle
 	override func viewDidLoad() {
         super.viewDidLoad()
-        setViewControllers([social,events,notification], animated: true)
+        setViewControllers([/*social,*/events,notification], animated: true)
     }
 }
 

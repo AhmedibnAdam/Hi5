@@ -94,6 +94,75 @@ struct ProfileModel {
     }
 
 
+    // MARK: - UserShowProfile
+    struct PlayerShowProfile: Codable {
+        let status: Bool?
+        let user: FriendUser?
+    }
+
+    // MARK: - User
+    struct FriendUser: Codable {
+       let id: Int?
+        let name, email: String?
+        let phoneNumber: Int?
+        let biography, gender, vieID: String?
+        let avatar: String?
+        let dateOfBirth: Int?
+        let sports: [Sport]?
+
+        enum CodingKeys: String, CodingKey {
+            case id, name, email
+            case phoneNumber = "phone_number"
+            case biography, gender
+            case vieID = "vie_id"
+            case avatar
+            case dateOfBirth = "date_of_birth"
+            case sports
+        }
+    }
+
+
+    // MARK: - Sport
+    struct Sport: Codable {
+        let sportName: String?
+        let icon: String?
+        let sportType, position, createdAt: String?
+
+        enum CodingKeys: String, CodingKey {
+            case sportName = "sport_name"
+            case icon
+            case sportType = "sport_type"
+            case position
+            case createdAt = "created_at"
+        }
+    }
+
+    struct FullPlayerShowProfile: Codable {
+        let status: Bool?
+        let user: FullUser?
+    }
+
+    // MARK: - User
+    struct FullUser: Codable {
+        let id: Int?
+        let name, email: String?
+        let phoneNumber: Int?
+        let biography, gender, vieID: String?
+        let avatar: String?
+        let country, city, state: City?
+        let dateOfBirth: String?
+        let sports: [Sport]?
+
+        enum CodingKeys: String, CodingKey {
+            case id, name, email
+            case phoneNumber = "phone_number"
+            case biography, gender
+            case vieID = "vie_id"
+            case avatar, country, city, state
+            case dateOfBirth = "date_of_birth"
+            case sports
+        }
+    }
 
 
 }

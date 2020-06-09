@@ -15,6 +15,7 @@ class ProfileConfiguration {
     static func setup(parameters: [String: Any] = [:], id: Int) -> UIViewController {
         let controller = ProfileViewController()
         controller.id = id
+        controller.type = parameters["type"] as? String
         controller.lat = parameters["lat"] as? Double
         controller.long = parameters["long"] as? Double
         let router = ProfileRouter(view: controller)

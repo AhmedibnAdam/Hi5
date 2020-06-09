@@ -178,4 +178,8 @@ extension PublicEventDetailsViewController:  UITableViewDelegate , UITableViewDa
         cell.status.text = player?.eventStatus
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let id = self.fieldData?.publicEvent?.players?[indexPath.row].id
+        router?.navigateToUserProfile(params: ["type":"player"], id: id ?? 0)
+    }
 }

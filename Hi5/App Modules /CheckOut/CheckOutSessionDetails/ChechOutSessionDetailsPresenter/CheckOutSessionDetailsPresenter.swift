@@ -12,8 +12,9 @@ import UIKit
 
 protocol ICheckOutSessionDetailsPresenter: class {
     func showErrorAlert(title: String, msg: String)
-
-        func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?)
+    func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?)
+    
+        func checkOut(response: CheckOutSessionDetailsModel.CheckOut?)
 
 }
 
@@ -30,5 +31,9 @@ class CheckOutSessionDetailsPresenter: ICheckOutSessionDetailsPresenter {
     func showErrorAlert(title: String, msg: String){
         view?.showAlert(title: title, msg: msg)
     }
+    func checkOut(response: CheckOutSessionDetailsModel.CheckOut?){
+        view?.checkOut(response: response)
+           
+       }
 
 }

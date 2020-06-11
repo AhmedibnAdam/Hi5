@@ -126,6 +126,7 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
         }
         sessionData = response
         fieldName.text = field.name
+        
         fieldAddressLbl.text = field.address
         descriptionLbl.text = field.fieldDescription
         dateLbl.text = field.date

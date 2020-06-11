@@ -15,7 +15,7 @@ enum CheckOutSessionDetailsEndpoint {
     
     case join(event_id: String)
     case book(event_id: String, parameter: [String: Any])
-//     case sample(parameter: [String: Any])
+    case checkOut(session_id: String)
    
 }
 
@@ -38,6 +38,8 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
                    return .post
        case .book:
            return .post
+       case .checkOut:
+        return .post
         }
     }
     
@@ -48,6 +50,8 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
             return "http://api-ksa.com/demo/hi5/public/api/player/public_event/" + id + "/join"
         case .book(let id , _):
             return "http://api-ksa.com/demo/hi5/public/api/player/session/" + id + "/book"
+        case .checkOut(let session_id):
+            return "http://api-ksa.com/demo/hi5/public/api/player/session/" + session_id + "/checkOut"
         }
   
     }
@@ -59,6 +63,8 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
         case .book( _ , let parameter):
             return parameter
         case .join:
+            return nil
+        case .checkOut:
             return nil
         }
         

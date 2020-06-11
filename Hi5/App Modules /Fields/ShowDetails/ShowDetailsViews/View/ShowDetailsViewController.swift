@@ -41,6 +41,7 @@ class ShowDetailsViewController: UIViewController   {
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var companyImg: UIImageView!
     @IBOutlet weak var requestMemberShipBtn: UIButton!
+    @IBOutlet weak var favorite: UIButton!
     @IBOutlet weak var expireDateLbl: UILabel!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var availableLbl: UILabel!
@@ -96,7 +97,7 @@ class ShowDetailsViewController: UIViewController   {
     @IBAction func requestMemberShipBtnTapped(_ sender: UIButton) {
         if (sender.currentTitle == "Request membership") {
             sender.setTitle("Cancel Request", for: .normal)
-            sender.setTitleColor(.lightGray, for: .normal)
+            sender.setTitleColor(.white, for: .normal)
             self.statusLbl.text = "pending"
             self.statusLbl.textColor = .lightGray
             if let id = field?.field?.id {
@@ -105,7 +106,7 @@ class ShowDetailsViewController: UIViewController   {
             
         } else {
             sender.setTitle("Request membership", for: .normal)
-            sender.setTitleColor(.red, for: .normal)
+            sender.setTitleColor(.white, for: .normal)
             self.statusLbl.text = "not a member"
             self.statusLbl.textColor = .black
             if let id = field?.field?.id {
@@ -134,6 +135,27 @@ class ShowDetailsViewController: UIViewController   {
             }
         }
     
+    @IBAction func favorite(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.setImage(UIImage(named: "favFill"), for: .normal)
+            addFavouriteDidTap()
+        }
+        else{
+            sender.setImage(UIImage(named: "fav"), for: .normal)
+                removeFavouriteDidTap()
+            
+        }
+        sender.isSelected = !sender.isSelected
+    }
+    func addFavouriteDidTap() {
+        self.interactor?.addFavourite(view: self, fieldId: (self.field?.field?.id)!)
+          
+      }
+      func removeFavouriteDidTap() {
+        self.interactor?.removeFavourite(view: self, fieldId: (self.field?.field?.id)!)
+          
+      }
+    
     
 }
 
@@ -154,9 +176,17 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         self.fieldRes = response
         self.lat = field.latitude
         self.long = field.longitude
+        if field.favourite == true{
+            favorite.setImage(UIImage(named: "favFill"), for: .normal)
+            removeFavouriteDidTap()
+        }
+        else {
+            favorite.setImage(UIImage(named: "fav"), for: .normal)
+            removeFavouriteDidTap()
+        }
         setLocation()
-        commentLbl.text = (String(format: "%01d", field.comments ?? 0))
-        rateLbl.text = (String(format: "%01d", field.rating ?? 0))  
+        commentLbl.text = "(" + (String(format: "%01d", field.comments ?? 0)) + ")"
+        rateLbl.text =  String(format: "%.2f", field.rating ?? 0)
         fieldAddressLbl.text = field.address
         fieldDescriptionLbl.text = field.fieldDescription
         sportTypeLbl.text = field.sportType
@@ -203,7 +233,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
                 self.policyView.isHidden = false
                 self.statusLbl.textColor = .lightGray
                 self.requestMemberShipBtn.setTitle("Cancel Request", for: .normal)
-                self.requestMemberShipBtn.setTitleColor(.lightGray, for: .normal)
+                self.requestMemberShipBtn.setTitleColor(.white, for: .normal)
             }
         }
         availableLbl.text = field.visibility

@@ -14,6 +14,8 @@ protocol IShowDetailsManager: class {
     func showDetailsFromApi(id: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: ShowDetailsModel.FieldDetails?)->Void)
     func requestMemberShipFromApi(id: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: ShowDetailsModel.RequestMemberShipResponse?)->Void)
     func cancelRequestMemberShipFromApi(id: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: ShowDetailsModel.RequestMemberShipResponse?)->Void)
+    func addFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.AddfavouriteResponse?)->Void)
+      func removeFavouriteFromApi(fieldId: Int ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool,_ data: FieldsModel.RemovefavouriteResponse?)->Void)
 }
 
 class ShowDetailsManager: IShowDetailsManager {
@@ -137,43 +139,81 @@ class ShowDetailsManager: IShowDetailsManager {
 
         })
     }
-    
-//    func showDetailsFromApi(id: Int, complition: @escaping (ErrorModel?, Bool, ShowDetailsModel.ShowDetailsResponse?) -> Void) {
-//        NetworkService.share.request(endpoint: ShowDetailsFieldsEndpoint.showDetails(id: id), success: { (responseData) in
-//            let response = responseData
-//            do {
-//                let decoder = JSONDecoder()
-//                let user = try decoder.decode(ShowDetailsModel.ShowDetailsResponse.self, from: response)
-//                print(user)
-//                complition(nil , true , user)
-//
-//            } catch let error {
-//                print("error : ", error.localizedDescription  )
-//
-//                do {
-//                    let decoder = JSONDecoder()
-//                    let error = try decoder.decode(ErrorModel.self, from: responseData )
-//                    print(error)
-//                    complition(error , false , nil)
-//                } catch let error {
-//                    print(error)
-//
-//                }
-//        }
-//
-//    }, failure: { (error) in
-//            do {
-//                let decoder = JSONDecoder()
-//                let error = try decoder.decode(ErrorModel.self, from: error as! Data )
-//                print(error)
-//                complition(error , false , nil)
-//
-//            } catch let error {
-//                print(error)
-//                complition(nil , false , nil)
-//            }
-//
-//        })
-//    }
+
+   func removeFavouriteFromApi(fieldId: Int, complition: @escaping (ErrorModel?, Bool, FieldsModel.RemovefavouriteResponse?) -> Void) {
+           NetworkService.share.request(endpoint: FieldsEndpoint.removeFavourite(fieldId: fieldId), success: { (responseData) in
+           let response = responseData
+           do {
+               let decoder = JSONDecoder()
+               let user = try decoder.decode(FieldsModel.RemovefavouriteResponse.self, from: response)
+               print(user)
+               complition(nil , true , user)
+               
+           } catch let error {
+               print("error : ", error.localizedDescription  )
+               
+               do {
+                   let decoder = JSONDecoder()
+                   let error = try decoder.decode(ErrorModel.self, from: responseData )
+                   print(error)
+                   complition(error , false , nil)
+               } catch let error {
+                   print(error)
+                   
+               }
+       }
+           
+   }, failure: { (error) in
+           do {
+               let decoder = JSONDecoder()
+               let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+               print(error)
+               complition(error , false , nil)
+               
+           } catch let error {
+               print(error)
+               complition(nil , false , nil)
+           }
+           
+       })
+   }
+   
+   func addFavouriteFromApi(fieldId: Int ,complition: @escaping (ErrorModel?, Bool, FieldsModel.AddfavouriteResponse?) -> Void) {
+           NetworkService.share.request(endpoint: FieldsEndpoint.addFavourite(fieldId: fieldId), success: { (responseData) in
+           let response = responseData
+           do {
+               let decoder = JSONDecoder()
+               let user = try decoder.decode(FieldsModel.AddfavouriteResponse.self, from: response)
+               print(user)
+               complition(nil , true , user)
+               
+           } catch let error {
+               print("error : ", error.localizedDescription  )
+               
+               do {
+                   let decoder = JSONDecoder()
+                   let error = try decoder.decode(ErrorModel.self, from: responseData )
+                   print(error)
+                   complition(error , false , nil)
+               } catch let error {
+                   print(error)
+                   
+               }
+       }
+           
+   }, failure: { (error) in
+           do {
+               let decoder = JSONDecoder()
+               let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+               print(error)
+               complition(error , false , nil)
+               
+           } catch let error {
+               print(error)
+               complition(nil , false , nil)
+           }
+           
+       })
+   }
 
 }

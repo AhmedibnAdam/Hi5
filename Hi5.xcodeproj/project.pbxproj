@@ -2009,6 +2009,7 @@
 				66340A0D23B4CA54009DB30A /* NotificationSetting */,
 				66340A0C23B4CA44009DB30A /* Setting */,
 				660A149F24619EF5006DAD45 /* SuggestField */,
+				66DDEFE62491DE1600E5F12F /* CheckOut */,
 			);
 			path = "App Modules ";
 			sourceTree = "<group>";
@@ -2016,8 +2017,6 @@
 		663409FB23B4C8E2009DB30A /* Fields */ = {
 			isa = PBXGroup;
 			children = (
-				6631179C243F25D7007C3FED /* CheckOutSessionDetails */,
-				663117AB243F25D7007C3FED /* SessionDetails */,
 				663117BF243F25D7007C3FED /* WalletSuccessCheckOut */,
 				860EFC9F240166F000B40901 /* ShowDetails */,
 				668C20E823C3F47200C009A9 /* Fields */,
@@ -2051,6 +2050,7 @@
 		66340A0E23B4CA63009DB30A /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				663117AB243F25D7007C3FED /* SessionDetails */,
 				668C215023C3F73A00C009A9 /* CheckOutConfirmation */,
 				668C210F23C3F6A800C009A9 /* CheckOut */,
 				668C210E23C3F66F00C009A9 /* LeaveCommentInCommentList */,
@@ -3055,6 +3055,22 @@
 				66AEC630242283B4003CF2EB /* MyBookingsTableViewCell.xib */,
 			);
 			path = MyBookingCell;
+			sourceTree = "<group>";
+		};
+		66DDEFE62491DE1600E5F12F /* CheckOut */ = {
+			isa = PBXGroup;
+			children = (
+				66DDEFE72491DE3300E5F12F /* CheckOutBublicEvent */,
+				6631179C243F25D7007C3FED /* CheckOutSessionDetails */,
+			);
+			path = CheckOut;
+			sourceTree = "<group>";
+		};
+		66DDEFE72491DE3300E5F12F /* CheckOutBublicEvent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckOutBublicEvent;
 			sourceTree = "<group>";
 		};
 		66F44017247413220057268E /* FilterBublicEvent */ = {
@@ -5638,7 +5654,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.2;
+				CURRENT_PROJECT_VERSION = 1.1.5;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5661,7 +5677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.2;
+				CURRENT_PROJECT_VERSION = 1.1.5;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -14,6 +14,7 @@ protocol ICheckOutSessionDetailsInteractor: class {
     var parameters: [String: Any]? { get set }
     func joinPublicEvent(view: UIViewController , eventId: String)
     func join(view: UIViewController , eventId: String)
+     func checkOut(eventId: String)
 }
 
 class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
@@ -44,8 +45,17 @@ class CheckOutSessionDetailsInteractor: ICheckOutSessionDetailsInteractor {
                }
                else{
                 self.presenter?.showErrorAlert(title: "Alert", msg: response?.msg ?? "Error")
-             //  self.presenter?.showDetailsResponse(response: response)
                }
            })
        }
+    func checkOut( eventId: String){
+          manager?.checkout(id: eventId, complition: { (error, success, response) in
+                     if response != nil {
+                        self.presenter?.checkOut(response: response)
+                     }
+                     else{
+                      self.presenter?.showErrorAlert(title: "Alert", msg:  "Error found while checkout")
+                     }
+                 })
+    }
 }

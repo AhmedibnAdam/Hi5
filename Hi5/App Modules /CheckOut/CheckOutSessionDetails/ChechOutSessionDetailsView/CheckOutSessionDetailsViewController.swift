@@ -13,7 +13,8 @@ import UIKit
 protocol ICheckOutSessionDetailsViewController: class {
     var router: ICheckOutSessionDetailsRouter? { get set }
     func showAlert(title: String, msg: String)
-     func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?)
+    func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?)
+    func checkOut(response: CheckOutSessionDetailsModel.CheckOut?)
 }
 
 class CheckOutSessionDetailsViewController: UIViewController {
@@ -54,20 +55,28 @@ class CheckOutSessionDetailsViewController: UIViewController {
     @IBOutlet weak var chooseCash: UIButton!
     @IBOutlet weak var chooseWallet: UIButton!
     @IBOutlet weak var walletView: UIView!
+    @IBOutlet weak var bookedStatus: UILabel!
+    @IBOutlet weak var process: UIButton!
     
     var payment: String?
     @IBAction func cashChoice(_ sender: UIButton) {
         sender.borderWidth = 1
-        sender.borderColor = .orange
+        sender.backgroundColor = .orange
+        sender.setTitleColor(.white, for: .normal)
+        chooseWallet.backgroundColor = .white
+        chooseWallet.setTitleColor(.darkGray, for: .normal)
         payment = "cash"
         chooseWallet.borderWidth = 0
     }
     @IBAction func walletChoice(_ sender: UIButton) {
-         sender.borderWidth = 1
-         sender.borderColor = .orange
-         payment = "online"
-         chooseCash.borderWidth = 0
-     }
+        sender.borderWidth = 1
+        sender.backgroundColor = .orange
+        sender.setTitleColor(.white, for: .normal)
+        chooseCash.backgroundColor = .white
+        chooseCash.setTitleColor(.darkGray, for: .normal)
+        payment = "online"
+        chooseCash.borderWidth = 0
+    }
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -86,6 +95,8 @@ class CheckOutSessionDetailsViewController: UIViewController {
         else {
             print("seession")
             loadSession()
+            // call session CheckOut
+            interactor?.checkOut(eventId: "\(sessionData?.field?.id ?? 0)")
         }
     }
     
@@ -95,8 +106,8 @@ class CheckOutSessionDetailsViewController: UIViewController {
         comapnyName.text = sessionData?.field?.partnerName
         fieldName.text = sessionData?.field?.name
         date.text = sessionData?.field?.date
-        time.text = (sessionData?.field?.time)! //+ " - " + (sessionData?.field?.endTime)!
-//        cancelPeriodFree.text =  "\(sessionData?.field?.guaranteedRefundTime ?? "0")" + "hours before the start "
+        time.text = (sessionData?.field?.time) ?? "" //+ " - " + (sessionData?.field?.endTime)!
+        //        cancelPeriodFree.text =  "\(sessionData?.field?.guaranteedRefundTime ?? "0")" + "hours before the start "
         total.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
         subTotal.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
         if fieldData?.publicEvent?.payment == "online" || sessionData?.field?.payment == "Online"{
@@ -108,13 +119,13 @@ class CheckOutSessionDetailsViewController: UIViewController {
         }
             
         else {
-            paymentType.text = "Cash On field"
-            paymentDetails.text = "Your request booked but not locked for you unless either you pay online, Other users can pay online and your booking will be canceled."
-            cancelTitle.isHidden = true
-            freeStack.isHidden = true
-            chargeStack.isHidden = true
+            //            paymentType.text = "Cash On field"
+            //            paymentDetails.text = "Your request booked but not locked for you unless either you pay online, Other users can pay online and your booking will be canceled."
+            //            cancelTitle.isHidden = true
+            //            freeStack.isHidden = true
+            //            chargeStack.isHidden = true
         }
-
+        
     }
     func loadEventCheckOut() {
         comapnyName.text = fieldData?.publicEvent?.partnerName
@@ -144,7 +155,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
     //MARK: - Actions
     @IBAction func proceesBtnTapped(_ sender: UIButton) {
         if fieldData != nil{
-        interactor?.joinPublicEvent(view: self, eventId: (fieldData?.publicEvent?.id!) ?? "\(sessionData?.field?.id! ?? 0)")
+            interactor?.joinPublicEvent(view: self, eventId: (fieldData?.publicEvent?.id!) ?? "\(sessionData?.field?.id! ?? 0)")
         }
         else {
             interactor?.parameters = ["payment_method": payment ?? "cash"]
@@ -156,8 +167,55 @@ class CheckOutSessionDetailsViewController: UIViewController {
 
 //MARK: - Extensions
 extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewController {
+    func checkOut(response: CheckOutSessionDetailsModel.CheckOut?) {
+        
+        let status = response?.session?.booked?.status
+        let method = response?.session?.booked?.method
+        if status == true{
+            self.process.isHidden = true
+            bookedStatus.text = "Locked"
+            bookedStatus.textColor = .red
+            if method == "Online" || method == "online"{
+                self.chooseCash.isHidden = true
+                 self.chooseWallet.isHidden = false
+                 payment = "online"
+                chooseWallet.backgroundColor = .orange
+                chooseWallet.setTitleColor(.white, for: .normal)
+            }
+            else if method == "cash" || method == "Cash" {
+                self.process.isHidden = false
+                bookedStatus.text = "Unlocked"
+                bookedStatus.textColor = .green
+                self.chooseCash.isHidden = false
+                self.chooseWallet.isHidden = true
+                payment = "cash"
+                chooseCash.backgroundColor = .orange
+                chooseCash.setTitleColor(.white, for: .normal)
+            }
+        }
+        else {
+            bookedStatus.text = "Unlocked"
+            bookedStatus.textColor = .green
+            self.process.isHidden = false
+            if method == "Online" || method == "online"{
+                self.chooseCash.isHidden = true
+                self.chooseWallet.isHidden = false
+                 payment = "online"
+                chooseWallet.backgroundColor = .orange
+                chooseWallet.setTitleColor(.white, for: .normal)
+            }
+            else if method == "cash" || method == "Cash" {
+                self.chooseCash.isHidden = false
+                self.chooseWallet.isHidden = true
+                payment = "cash"
+                chooseCash.backgroundColor = .orange
+                chooseCash.setTitleColor(.white, for: .normal)
+            }
+        }
+    }
+    
     func showAlert(title: String, msg: String) {
-      ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+        ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?){
     }
@@ -172,18 +230,18 @@ extension CheckOutSessionDetailsViewController {
     }
     
     func initView() {
-
+        
         
     }
 }
 
 extension CheckOutSessionDetailsViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-          self.view.endEditing(true)
-      }
-      
-      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-          self.view.endEditing(true)
-          return false
-      }
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }

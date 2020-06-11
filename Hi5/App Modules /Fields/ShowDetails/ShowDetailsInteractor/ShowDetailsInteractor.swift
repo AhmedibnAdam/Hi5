@@ -15,6 +15,8 @@ protocol IShowDetailsInteractor: class {
     func showDetails(view: UIViewController , fieldId: String)
     func requestMemberShip(view: UIViewController , fieldId: Int)
     func cancelRequestMemberShip(view: UIViewController , fieldId: Int)
+    func addFavourite(view: UIViewController , fieldId: Int)
+     func removeFavourite(view: UIViewController , fieldId: Int)
 }
 
 class ShowDetailsInteractor: IShowDetailsInteractor {
@@ -55,6 +57,29 @@ class ShowDetailsInteractor: IShowDetailsInteractor {
             if(success == true){
                 
             } else {
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
+    }
+    
+    func addFavourite(view: UIViewController, fieldId: Int) {
+        manager?.addFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
+            if (success == true){
+//                self.presenter?.hideIndicator()
+                print("Added Favourite Done......")
+            } else {
+//                self.presenter?.hideIndicator()
+                self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
+            }
+        })
+    }
+    func removeFavourite(view: UIViewController, fieldId: Int) {
+        manager?.removeFavouriteFromApi(fieldId: fieldId, complition: { (error, success, response) in
+            if(success == true){
+//                self.presenter?.hideIndicator()
+                print("Removed Favourite Done.....")
+            } else {
+//                self.presenter?.hideIndicator()
                 self.presenter?.showErrorAlert(title: "Error", msg: "SomeThing Wrong")
             }
         })

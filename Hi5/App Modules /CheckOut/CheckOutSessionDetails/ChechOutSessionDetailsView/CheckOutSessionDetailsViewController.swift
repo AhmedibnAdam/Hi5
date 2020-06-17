@@ -57,7 +57,18 @@ class CheckOutSessionDetailsViewController: UIViewController {
     @IBOutlet weak var walletView: UIView!
     @IBOutlet weak var bookedStatus: UILabel!
     @IBOutlet weak var process: UIButton!
+    @IBOutlet weak var useCreditStack: UIStackView!
+    @IBOutlet weak var applePayStack: UIStackView!
+    @IBOutlet weak var CardPayStack: UIStackView!
+    @IBOutlet weak var promoStack: UIStackView!
+    @IBOutlet weak var paymentTypeStack: UIView!
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var applePayCheck: UIButton!
+    @IBOutlet weak var cardPayCheck: UIButton!
+    @IBOutlet weak var containerScrollView: UIScrollView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
+
     var payment: String?
     @IBAction func cashChoice(_ sender: UIButton) {
         sender.borderWidth = 1
@@ -66,6 +77,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
         chooseWallet.backgroundColor = .white
         chooseWallet.setTitleColor(.darkGray, for: .normal)
         payment = "cash"
+        hideWhileCash()
         chooseWallet.borderWidth = 0
     }
     @IBAction func walletChoice(_ sender: UIButton) {
@@ -75,7 +87,18 @@ class CheckOutSessionDetailsViewController: UIViewController {
         chooseCash.backgroundColor = .white
         chooseCash.setTitleColor(.darkGray, for: .normal)
         payment = "online"
+        showWhileOnline()
         chooseCash.borderWidth = 0
+    }
+    @IBAction func applePay(_ sender: UIButton) {
+        applePayCheck.setImage(UIImage(named: "agreeCheckBox2"), for: .normal)
+        cardPayCheck.setImage(UIImage(named: "agreeCheckBox"), for: .normal)
+        cardView.isHidden = true
+    }
+    @IBAction func cardPay(_ sender: UIButton) {
+        applePayCheck.setImage(UIImage(named: "agreeCheckBox"), for: .normal)
+        cardPayCheck.setImage(UIImage(named: "agreeCheckBox2"), for: .normal)
+        cardView.isHidden = false
     }
     
     //MARK: - ViewLifeCycle
@@ -88,15 +111,18 @@ class CheckOutSessionDetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if fieldData != nil{
+            containerScrollView.isHidden = false
+            indicator.stopAnimating()
             loadEventCheckOut()
             self.walletView.isHidden = true
             self.chooseWallet.isHidden = true
+           
         }
         else {
             print("seession")
             loadSession()
-            // call session CheckOut
-            interactor?.checkOut(eventId: "\(sessionData?.field?.id ?? 0)")
+            
+            interactor?.checkOut(eventId: "\(sessionData?.field?.sessionID ?? 0)")
         }
     }
     
@@ -168,17 +194,22 @@ class CheckOutSessionDetailsViewController: UIViewController {
 //MARK: - Extensions
 extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewController {
     func checkOut(response: CheckOutSessionDetailsModel.CheckOut?) {
-        
+        containerScrollView.isHidden = false
+        indicator.stopAnimating()
+
         let status = response?.session?.booked?.status
         let method = response?.session?.booked?.method
+        let canBook = response?.session?.booked?.canBook
+        
         if status == true{
             self.process.isHidden = true
             bookedStatus.text = "Locked"
+             hideWhileCash()
             bookedStatus.textColor = .red
             if method == "Online" || method == "online"{
                 self.chooseCash.isHidden = true
                  self.chooseWallet.isHidden = false
-                 payment = "online"
+                 payment = method
                 chooseWallet.backgroundColor = .orange
                 chooseWallet.setTitleColor(.white, for: .normal)
             }
@@ -186,21 +217,36 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
                 self.process.isHidden = false
                 bookedStatus.text = "Unlocked"
                 bookedStatus.textColor = .green
-                self.chooseCash.isHidden = false
-                self.chooseWallet.isHidden = true
-                payment = "cash"
+                self.chooseCash.isHidden = true
+                self.chooseWallet.isHidden = false
+                showWhileOnline()
+                payment = "online"
                 chooseCash.backgroundColor = .orange
                 chooseCash.setTitleColor(.white, for: .normal)
             }
+            else {
+                self.process.isHidden = true
+                bookedStatus.text = "Locked"
+                hideWhileCash()
+                self.chooseCash.isHidden = true
+                self.chooseWallet.isHidden = false
+                payment = method
+                chooseWallet.backgroundColor = .orange
+                chooseWallet.setTitleColor(.white, for: .normal)
+            }
+      
+            
         }
         else {
             bookedStatus.text = "Unlocked"
             bookedStatus.textColor = .green
             self.process.isHidden = false
+            
             if method == "Online" || method == "online"{
                 self.chooseCash.isHidden = true
                 self.chooseWallet.isHidden = false
                  payment = "online"
+                showWhileOnline()
                 chooseWallet.backgroundColor = .orange
                 chooseWallet.setTitleColor(.white, for: .normal)
             }
@@ -208,9 +254,30 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
                 self.chooseCash.isHidden = false
                 self.chooseWallet.isHidden = true
                 payment = "cash"
+                hideWhileCash()
                 chooseCash.backgroundColor = .orange
                 chooseCash.setTitleColor(.white, for: .normal)
             }
+            else {
+                      self.process.isHidden = false
+                      self.chooseCash.isHidden = false
+                      self.chooseWallet.isHidden = false
+                      payment = "online"
+                      showWhileOnline()
+                      chooseCash.backgroundColor = .orange
+                      chooseCash.setTitleColor(.white, for: .normal)
+                  }
+          
+        }
+        if canBook == false{
+            hideWhileCash()
+            bookedStatus.text = "Locked"
+            paymentTypeStack.isHidden = true
+            process.isHidden = true
+        }
+        else {
+             process.isHidden = false
+            bookedStatus.text = "Unlocked"
         }
     }
     
@@ -232,6 +299,20 @@ extension CheckOutSessionDetailsViewController {
     func initView() {
         
         
+    }
+    func hideWhileCash() {
+        useCreditStack.isHidden = true
+        applePayStack.isHidden = true
+        CardPayStack.isHidden = true
+        promoStack.isHidden = true
+        cardView.isHidden = true
+    }
+    func showWhileOnline() {
+        useCreditStack.isHidden = false
+        applePayStack.isHidden = false
+        CardPayStack.isHidden = false
+        promoStack.isHidden = false
+        cardView.isHidden = false
     }
 }
 

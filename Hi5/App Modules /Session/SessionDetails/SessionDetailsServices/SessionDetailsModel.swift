@@ -48,7 +48,7 @@ struct SessionDetailsModel {
         let images: [String]?
         let fieldDescription, address, sport, gender: String?
         let bestFor: String?
-        let cost: Int?
+        let cost: Double?
         let partnerName: String?
         let partnerImage: String?
         let visibility, payment: String?
@@ -56,26 +56,24 @@ struct SessionDetailsModel {
         let favourite: Bool?
         let fieldSize, fieldType, bookingFrequencyPolicy: String?
         let services: [Service]?
-        let partner_id: Int?
-
-
-        enum CodingKeys: String, CodingKey {
-            case sessionID = "session_id"
-            case date
-            case dateFormat = "date_format"
-            case time, id, name, image, images
-            case fieldDescription = "description"
-            case address, sport, gender
-            case bestFor = "best_for"
-            case cost
-            case partnerName = "partner_name"
-            case partnerImage = "partner_image"
-            case visibility, payment, membership, favourite
-            case fieldSize = "field_size"
-            case fieldType = "field_type"
-            case bookingFrequencyPolicy = "booking_frequency_policy"
-            case services
-            case partner_id
+        let partnerID: Int
+         enum CodingKeys: String, CodingKey {
+             case sessionID = "session_id"
+             case date
+             case dateFormat = "date_format"
+             case time, id, name, image, images
+             case fieldDescription = "description"
+             case address, sport, gender
+             case bestFor = "best_for"
+             case cost
+             case partnerID = "partner_id"
+             case partnerName = "partner_name"
+             case partnerImage = "partner_image"
+             case visibility, payment, membership, favourite
+             case fieldSize = "field_size"
+             case fieldType = "field_type"
+             case bookingFrequencyPolicy = "booking_frequency_policy"
+             case services
 
         }
     }

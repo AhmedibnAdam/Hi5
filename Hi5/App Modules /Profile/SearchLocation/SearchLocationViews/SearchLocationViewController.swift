@@ -106,14 +106,31 @@ extension SearchLocationViewController {
 extension SearchLocationViewController: GMSAutocompleteViewControllerDelegate {
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        if let place = place.name {
-            let defaults = UserDefaults.standard
-            defaults.set(place, forKey: "location")
-        }
-        getPlace()
-      dismiss(animated: true, completion: nil)
+
+    dismiss(animated: true, completion: nil)
+
     }
 
+    func viewController(_ viewController: GMSAutocompleteViewController, didSelect prediction: GMSAutocompletePrediction) -> Bool {
+        let pre = prediction.attributedFullText.string
+        print(prediction)
+//        var addressARR = [String]()
+        var   addressARR = pre.split(separator: ",")
+        addressARR.reverse()
+        print(addressARR)
+        var address: String = ""
+        for a in addressARR {
+            address.append(contentsOf: a)
+             address.append(contentsOf: ",")
+        }
+        
+     
+        let defaults = UserDefaults.standard
+         defaults.set(address, forKey: "location")
+  
+              getPlace()
+        return true
+    }
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
       // TODO: handle the error.
       print("Error: ", error.localizedDescription)
@@ -133,3 +150,4 @@ extension SearchLocationViewController: GMSAutocompleteViewControllerDelegate {
       UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
+

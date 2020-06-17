@@ -124,7 +124,7 @@ extension ProfileViewController: IProfileViewController {
         friendsLbl.isHidden = false
         countryLogo.isHidden = false
         countryNumber.isHidden = false
-        countryLbl.isHidden = false
+//        countryLbl.isHidden = false
         countryName.isHidden = false
         flag.isHidden = false
         let defaults = UserDefaults.standard

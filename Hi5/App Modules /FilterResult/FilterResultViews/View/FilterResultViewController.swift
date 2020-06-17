@@ -169,15 +169,15 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
         }
         cell.fieldLocationLbl.text = field.address
         cell.date.text = field.date
-        cell.endTime.text = field.end_time
-        cell.starttime.text = field.start_time
-        cell.cost.text = "\(String(describing: field.new_price!))"
-        cell.pastCost.text = "\(field.old_price!)"
+        cell.endTime.text = field.endTime
+        cell.starttime.text = field.startTime
+        cell.cost.text = "\(String(describing: field.newPrice!))"
+        cell.pastCost.text = "\(field.oldPrice!)"
 //        cell.sportTypeLbl.text = field.sport
 //        cell.genderLbl.text = field.gender
         cell.bestForLbl.text = field.bestFor
         cell.paymentLbl.text = field.payment
-        if field.old_price == field.new_price {
+        if field.oldPrice == field.newPrice {
             cell.before.isHidden = true
             cell.pastCost.isHidden = true
 
@@ -191,7 +191,7 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
             cell.beforeCenterView.isHidden = false
             cell.currancy.isHidden = false
         }
-        if let cost = field.cost {
+        if let cost = field.newPrice {
             cell.costLbl.text = "$\(String(describing: cost))"
         }
         

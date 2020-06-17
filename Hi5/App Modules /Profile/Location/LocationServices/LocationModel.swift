@@ -24,27 +24,28 @@ struct LocationModel {
 
     // MARK: - User
     struct User: Codable {
-        let id: Int?
-        let name: String?
-        let email: String?
-        let gender, vieID: String?
+     let id: Int?
+        let name, email: String?
         let phoneNumber: Int?
+        let biography, gender, vieID: String?
+        let avatar: String?
+        let country, city, state: City?
         let isActive: Bool?
         let createdAt: String?
         let status: Int?
-        let biography: String?
-        let avatar: String?
-        let year, month, day, country: City?
-        let city, state: City?
-        let latitude, longitude: Int?
+        let day, month, year: City?
+        let latitude: Double?
+        let longitude: Int?
 
         enum CodingKeys: String, CodingKey {
-            case id, name, email, gender
-            case vieID = "vie_id"
-            case phoneNumber = "phone_number"
-            case isActive = "is_active"
-            case createdAt = "created_at"
-            case status, biography, avatar, year, month, day, country, city, state, latitude, longitude
+            case id, name, email
+                   case phoneNumber = "phone_number"
+                   case biography, gender
+                   case vieID = "vie_id"
+                   case avatar, country, city, state
+                   case isActive = "is_active"
+                   case createdAt = "created_at"
+                   case status, day, month, year, latitude, longitude
         }
     }
 

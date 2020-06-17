@@ -166,23 +166,20 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         stateFlag = defaults.string(forKey: "stateFlag") ?? "public"
         gender = defaults.string(forKey: "gender") ?? "male"
         if let location = defaults.string(forKey: "location") {
-            location.enumerateSubstrings(in: location.startIndex..<location.endIndex, options: .byWords) { substring, _, _, _ in
-                if let substring = substring {
-                    self.locationWords.append(substring)
-                }
-            }
+           let locationWords = location.split(separator: ",") 
+
             if locationWords.count == 1{
-                country = locationWords[0]
+                country = String(locationWords[0])
                 city = ""
                 state = ""
             } else if locationWords.count == 2 {
-                country = locationWords[0]
-                city = locationWords[1]
+                country = String(locationWords[0])
+                city = String(locationWords[1])
                 state = ""
             } else {
-                country = locationWords[0]
-                city = locationWords[1]
-                state = locationWords[2]
+                country = String(locationWords[0])
+                city = String(locationWords[1])
+                state = String(locationWords[2])
             }
         }
         

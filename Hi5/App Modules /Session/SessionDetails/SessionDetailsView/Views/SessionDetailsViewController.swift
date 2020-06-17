@@ -62,6 +62,8 @@ var locationManager: CLLocationManager!
     @IBOutlet weak var contactBtn: UIButton!
     @IBOutlet weak var googleMapView: GMSMapView!
     @IBOutlet weak var mapHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerScrollView: UIScrollView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -79,6 +81,7 @@ var locationManager: CLLocationManager!
     
     override func viewWillAppear(_ animated: Bool) {
         guard let sessionId = sessionId , let payment = payment else {return}
+        containerScrollView.isHidden = true
         self.interactor?.sessionDetails(view: self, fieldId: sessionId, payment: payment)
     }
     //MARK: - Actions
@@ -119,6 +122,10 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
     }
     func showResponse(response: SessionDetailsModel.SessionDetailsResponse) {
         guard let field = response.field else {return}
+        containerScrollView.isHidden = false
+        indicator.hidesWhenStopped = true
+        indicator.stopAnimating()
+//        indicator.isHidden = true
         if (field.payment == "contact owner"){
             contactBtn.setTitle("Contact", for: .normal)
         } else {

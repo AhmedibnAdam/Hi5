@@ -32,7 +32,7 @@ struct CheckOutSessionDetailsModel {
         let partnerName, fieldName, date, time: String?
         let freeCancellationTime, feesForCancellation: Int?
         let discount: String?
-        let price: Int?
+        let price: Double?
         let booked: Booked?
 
         enum CodingKeys: String, CodingKey {
@@ -48,8 +48,14 @@ struct CheckOutSessionDetailsModel {
 
     // MARK: - Booked
     struct Booked: Codable {
-        let status: Bool?
-        let method: String?
+           let status: Bool?
+         let method: String?
+         let canBook: Bool?
+
+         enum CodingKeys: String, CodingKey {
+             case status, method
+             case canBook = "can_book"
+         }
     }
 
     // MARK: - PublicEventDetailsJoin

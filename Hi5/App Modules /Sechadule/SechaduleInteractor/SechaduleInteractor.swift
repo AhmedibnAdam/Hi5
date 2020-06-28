@@ -11,44 +11,44 @@
 import UIKit
 
 protocol ISechaduleInteractor: class {
-	var parameters: [String: Any]? { get set }
+    var parameters: [String: Any]? { get set }
     func getPastSechadule(view: UIViewController)
-       func getUpCommingSechadule(view: UIViewController)
-       func getCancelSechadule(view: UIViewController)
+    func getUpCommingSechadule(view: UIViewController)
+    func getCancelSechadule(view: UIViewController)
 }
 
 class SechaduleInteractor: ISechaduleInteractor {
-
+    
     var presenter: ISechadulePresenter?
     var manager: ISechaduleManager?
     var parameters: [String: Any]?
-
+    
     init(presenter: ISechadulePresenter, manager: ISechaduleManager) {
-    	self.presenter = presenter
-    	self.manager = manager
+        self.presenter = presenter
+        self.manager = manager
     }
+    
+    func getUpCommingSechadule(view: UIViewController) {        manager?.getUpCommingSechaduleFromApi(complition: { (error, success, response) in
+        if (success == true) {
+            
+            guard let response = response else {return}
+            self.presenter?.showUpCommingSechadule(response: response)
+            if (response.public_events?.count == 0){
+                
+            }
+        } else {
+            self.presenter?.showAlert(title: "Error", msg: "SomeThing Wrong")
+        }
+    })
+    }
+    
     
     func getPastSechadule(view: UIViewController) {
-        manager?.getUpCommingSechaduleFromApi(complition: { (error, success, response) in
-            if (success == true) {
-                
-                guard let response = response else {return}
-                self.presenter?.showUpCommingSechadule(response: response)
-                if (response.fields?.count == 0){
-                   
-                }
-            } else {
-                self.presenter?.showAlert(title: "Error", msg: "SomeThing Wrong")
-            }
-        })
-    }
-    
-    func getUpCommingSechadule(view: UIViewController) {
         manager?.getPastSechaduleFromApi(complition: { (error, success, response) in
             if (success == true) {
                 
                 guard let response = response else {return}
-                if (response.fields?.count != 0){
+                if (response.public_events?.count != 0){
                     self.presenter?.showPastSechadule(response: response)
                 }
             } else {
@@ -63,7 +63,7 @@ class SechaduleInteractor: ISechaduleInteractor {
             if (success == true) {
                 
                 guard let response = response else {return}
-                if (response.fields?.count != 0){
+                if (response.public_events?.count != 0){
                     self.presenter?.showCancledSechadule(response: response)
                     
                 }

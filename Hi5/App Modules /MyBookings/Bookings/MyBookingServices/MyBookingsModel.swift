@@ -36,7 +36,7 @@ struct MyBookingsModel {
         let status, payment, partnerName: String?
         let partnerImage: String?
         let oldPrice, newPrice, points: Int?
-        
+
         enum CodingKeys: String, CodingKey {
             case bookedSessionID = "booked_session_id"
             case id, name, image, day, date
@@ -70,15 +70,15 @@ struct MyBookingsModel {
 
     // MARK: - Field
     struct CanceledBookingField: Codable {
-        let bookedSessionID, id: Int?
+          let bookedSessionID, id: Int
         let name: String?
         let image: String?
         let day, date, startTime, endTime: String?
-        let gender, address, bestFor, status: String?
-        let payment, partnerName: String?
+        let gender, address, bestFor, sport: String?
+        let status, payment, partnerName: String?
         let partnerImage: String?
-        let oldPrice, newPrice, points: Int?
-
+        let  points: Int?
+        let oldPrice, newPrice : Double?
         enum CodingKeys: String, CodingKey {
             case bookedSessionID = "booked_session_id"
             case id, name, image, day, date
@@ -86,7 +86,7 @@ struct MyBookingsModel {
             case endTime = "end_time"
             case gender, address
             case bestFor = "best_for"
-            case status, payment
+            case sport, status, payment
             case partnerName = "partner_name"
             case partnerImage = "partner_image"
             case oldPrice = "old_price"
@@ -102,14 +102,15 @@ struct MyBookingsModel {
 
     // MARK: - Field
     struct PastBookingField: Codable {
-        let bookedSessionID, id: Int?
+      let bookedSessionID, id: Int?
         let name: String?
         let image: String?
         let day, date, startTime, endTime: String?
         let gender, address, bestFor, sport: String?
         let status, payment, partnerName: String?
         let partnerImage: String?
-        let oldPrice, newPrice, points: Int?
+         let  points: Int?
+               let oldPrice, newPrice : Double?
 
         enum CodingKeys: String, CodingKey {
             case bookedSessionID = "booked_session_id"

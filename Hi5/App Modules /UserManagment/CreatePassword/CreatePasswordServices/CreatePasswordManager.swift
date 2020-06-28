@@ -21,6 +21,10 @@ class CreatePasswordManager: ICreatePasswordManager {
             do {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(CreatePasswordModel.CreatePasswordResponse.self, from: response)
+                
+                let defaults = UserDefaults.standard
+                let token = defaults.string(forKey: "TokenI")
+                defaults.set(token, forKey: "Token") as? String
                 print(user)
                 complition(nil , true)
                 

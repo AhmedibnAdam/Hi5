@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,10 +28,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-C3-F0L">
-                                <rect key="frame" x="306" y="0.0" width="0.0" height="51"/>
-                                <state key="normal" image="plus"/>
-                            </button>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -47,13 +43,11 @@
             <connections>
                 <outlet property="img" destination="ath-K0-KeJ" id="9Vi-3L-Zb4"/>
                 <outlet property="lbl" destination="qV9-HG-BqX" id="7wL-9N-aDk"/>
-                <outlet property="plusBtn" destination="hAf-C3-F0L" id="alx-Xg-N0q"/>
             </connections>
             <point key="canvasLocation" x="156.52173913043478" y="129.57589285714286"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="friends" width="20.5" height="18.5"/>
-        <image name="plus" width="30" height="30"/>
     </resources>
 </document>

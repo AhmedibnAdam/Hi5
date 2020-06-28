@@ -45,7 +45,8 @@ extension CreatePasswordEndpoint: IEndpoint {
         switch self {
            case .CreatePassword:
             let defaults = UserDefaults.standard
-            let token = defaults.string(forKey: "Token")
+            let token = defaults.string(forKey: "TokenI")
+            
             return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
         }
     }

@@ -28,22 +28,31 @@ struct CheckOutSessionDetailsModel {
 
     // MARK: - Session
     struct Session: Codable {
-        let id: Int?
-        let partnerName, fieldName, date, time: String?
-        let freeCancellationTime, feesForCancellation: Int?
-        let discount: String?
-        let price: Double?
-        let booked: Booked?
+      let id: Int
+             let partnerName, fieldName, date, time: String
+             let freeCancellationTime, feesForCancellation, proCode: Int
+             let basePrice, discount, sessionPrice, subTotal: Double
+             let taxPercent: Int
+             let tax, totalPrice: Double
+             let booked: Booked
 
-        enum CodingKeys: String, CodingKey {
-            case id
-            case partnerName = "partner_name"
-            case fieldName = "field_name"
-            case date, time
-            case freeCancellationTime = "free_cancellation_time"
-            case feesForCancellation = "fees_for_cancellation"
-            case discount, price, booked
-        }
+             enum CodingKeys: String, CodingKey {
+                 case id
+                 case partnerName = "partner_name"
+                 case fieldName = "field_name"
+                 case date, time
+                 case freeCancellationTime = "free_cancellation_time"
+                 case feesForCancellation = "fees_for_cancellation"
+                 case proCode = "pro_code"
+                 case basePrice = "base_price"
+                 case discount
+                 case sessionPrice = "session_price"
+                 case subTotal = "sub_total"
+                 case taxPercent = "tax_percent"
+                 case tax
+                 case totalPrice = "total_price"
+                 case booked
+             }
     }
 
     // MARK: - Booked

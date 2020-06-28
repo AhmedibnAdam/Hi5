@@ -23,35 +23,54 @@ struct SechaduleModel {
 	 // MARK: - SechaduleSessions
        struct SechaduleSessions: Codable {
            let status: Bool?
-           let fields: [SechaduleSessionsField]?
+           let public_events: [SechaduleSessionsField]?
        }
 
        // MARK: - PublicEvent
        struct SechaduleSessionsField: Codable {
-           let bookedSessionID, id: Int?
-           let name: String?
-           let image: String?
-           let day, date, startTime, endTime: String?
-           let gender, address, bestFor, sport: String?
-           let status, payment, partnerName: String?
-           let partnerImage: String?
-           let oldPrice, newPrice, points: Int?
-           
-           enum CodingKeys: String, CodingKey {
-               case bookedSessionID = "booked_session_id"
-               case id, name, image, day, date
-               case startTime = "start_time"
-               case endTime = "end_time"
-               case gender, address
-               case bestFor = "best_for"
-               case sport, status, payment
-               case partnerName = "partner_name"
-               case partnerImage = "partner_image"
-               case oldPrice = "old_price"
-               case newPrice = "new_price"
-               case points
-           }
-       }
+       let id, joinedPublicEventID: Int?
+             let fieldName: String?
+             let fieldImage: String?
+             let bestFor: String?
+             let address: String?
+             let partnerName: String?
+             let partnerImage: String?
+             let playersNumber: Int?
+             let day, date, startTime, endTime: String?
+             let sportType: String?
+             let status: String?
+             let groupName: String?
+             let age, joinedCount: Int?
+             let gender: Gender?
+             let cost: Int?
+             let paymentMethodStatus: String?
+             let paymentStatus: String?
+             let points: Int?
+
+             enum CodingKeys: String, CodingKey {
+                 case id
+                 case joinedPublicEventID = "joined_public_event_id"
+                 case fieldName = "field_name"
+                 case fieldImage = "field_image"
+                 case bestFor = "best_for"
+                 case address
+                 case partnerName = "partner_name"
+                 case partnerImage = "partner_image "
+                 case playersNumber = "players_number"
+                 case day, date
+                 case startTime = "start_time"
+                 case endTime = "end_time"
+                 case sportType = "sport_type"
+                 case status
+                 case groupName = "group_name"
+                 case age
+                 case joinedCount = "joined_count"
+                 case gender, cost
+                 case paymentMethodStatus = "payment_method_status"
+                 case paymentStatus = "payment_status"
+                 case points
+             }
+         }
        // MARK: - Membership
        struct Membership: Codable {
            let status, expireAt: String?
@@ -65,65 +84,114 @@ struct SechaduleModel {
        // MARK: - CanceledSechaduleResponse
        struct CanceledSechaduleResponse: Codable {
            let status: Bool?
-           let fields: [CanceledSechaduleField]?
+           let public_events: [CanceledSechaduleField]?
        }
 
        // MARK: - Field
        struct CanceledSechaduleField: Codable {
-           let bookedSessionID, id: Int?
-           let name: String?
-           let image: String?
-           let day, date, startTime, endTime: String?
-           let gender, address, bestFor, status: String?
-           let payment, partnerName: String?
-           let partnerImage: String?
-           let oldPrice, newPrice, points: Int?
+      let id, joinedPublicEventID: Int?
+            let fieldName: String?
+            let fieldImage: String?
+            let bestFor: String?
+            let address: String?
+            let partnerName: String?
+            let partnerImage: String?
+            let playersNumber: Int?
+            let day, date, startTime, endTime: String?
+            let sportType: String?
+            let status: String?
+            let groupName: String?
+            let age, joinedCount: Int?
+            let gender: Gender?
+            let cost: Int?
+            let paymentMethodStatus: String?
+            let paymentStatus: String?
+            let points: Int?
 
-           enum CodingKeys: String, CodingKey {
-               case bookedSessionID = "booked_session_id"
-               case id, name, image, day, date
-               case startTime = "start_time"
-               case endTime = "end_time"
-               case gender, address
-               case bestFor = "best_for"
-               case status, payment
-               case partnerName = "partner_name"
-               case partnerImage = "partner_image"
-               case oldPrice = "old_price"
-               case newPrice = "new_price"
-               case points
-           }
-       }
+            enum CodingKeys: String, CodingKey {
+                case id
+                case joinedPublicEventID = "joined_public_event_id"
+                case fieldName = "field_name"
+                case fieldImage = "field_image"
+                case bestFor = "best_for"
+                case address
+                case partnerName = "partner_name"
+                case partnerImage = "partner_image "
+                case playersNumber = "players_number"
+                case day, date
+                case startTime = "start_time"
+                case endTime = "end_time"
+                case sportType = "sport_type"
+                case status
+                case groupName = "group_name"
+                case age
+                case joinedCount = "joined_count"
+                case gender, cost
+                case paymentMethodStatus = "payment_method_status"
+                case paymentStatus = "payment_status"
+                case points
+            }
+        }
+
+    
+
+        enum Gender: String, Codable {
+            case both = "both"
+            case female = "female"
+            case male = "male"
+        }
+
+
+
        // MARK: - PastSechaduleResponse
        struct PastSechaduleResponse: Codable {
            let status: Bool?
-           let fields: [PastSechaduleField]?
+           let public_events: [PastSechaduleField]?
        }
 
        // MARK: - Field
        struct PastSechaduleField: Codable {
-           let bookedSessionID, id: Int?
-           let name: String?
-           let image: String?
-           let day, date, startTime, endTime: String?
-           let gender, address, bestFor, sport: String?
-           let status, payment, partnerName: String?
-           let partnerImage: String?
-           let oldPrice, newPrice, points: Int?
+       let id, joinedPublicEventID: Int?
+             let fieldName: String?
+             let fieldImage: String?
+             let bestFor: String?
+             let address: String?
+             let partnerName: String?
+             let partnerImage: String?
+             let playersNumber: Int?
+             let day, date, startTime, endTime: String?
+             let sportType: String?
+             let status: String?
+             let groupName: String?
+             let age, joinedCount: Int?
+             let gender: Gender?
+             let cost: Int?
+             let paymentMethodStatus: String?
+             let paymentStatus: String?
+             let points: Int?
 
-           enum CodingKeys: String, CodingKey {
-               case bookedSessionID = "booked_session_id"
-               case id, name, image, day, date
-               case startTime = "start_time"
-               case endTime = "end_time"
-               case gender, address
-               case bestFor = "best_for"
-               case sport, status, payment
-               case partnerName = "partner_name"
-               case partnerImage = "partner_image"
-               case oldPrice = "old_price"
-               case newPrice = "new_price"
-               case points
-           }
-       }
+             enum CodingKeys: String, CodingKey {
+                 case id
+                 case joinedPublicEventID = "joined_public_event_id"
+                 case fieldName = "field_name"
+                 case fieldImage = "field_image"
+                 case bestFor = "best_for"
+                 case address
+                 case partnerName = "partner_name"
+                 case partnerImage = "partner_image "
+                 case playersNumber = "players_number"
+                 case day, date
+                 case startTime = "start_time"
+                 case endTime = "end_time"
+                 case sportType = "sport_type"
+                 case status
+                 case groupName = "group_name"
+                 case age
+                 case joinedCount = "joined_count"
+                 case gender, cost
+                 case paymentMethodStatus = "payment_method_status"
+                 case paymentStatus = "payment_status"
+                 case points
+             }
+         }
 }

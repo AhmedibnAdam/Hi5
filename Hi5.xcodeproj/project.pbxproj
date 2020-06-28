@@ -445,6 +445,7 @@
 		66E705C824719137003021DE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E705C624719137003021DE /* CommentTableViewCell.swift */; };
 		66E705C924719137003021DE /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E705C724719137003021DE /* CommentTableViewCell.xib */; };
 		66E705CB2471EFEE003021DE /* AllCommentsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */; };
+		66E85A6924A4F00900219F22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66E85A6824A4F00900219F22 /* GoogleService-Info.plist */; };
 		66F44020247413600057268E /* FilterBublicEventConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F440182474135F0057268E /* FilterBublicEventConfiguration.swift */; };
 		66F44021247413600057268E /* FilterBublicEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F440192474135F0057268E /* FilterBublicEventPresenter.swift */; };
 		66F44022247413600057268E /* FilterBublicEventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4401A2474135F0057268E /* FilterBublicEventRouter.swift */; };
@@ -1047,6 +1048,8 @@
 		66E705C624719137003021DE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		66E705C724719137003021DE /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsEndpoint.swift; sourceTree = "<group>"; };
+		66E85A6724A4E9FA00219F22 /* Hi5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hi5.entitlements; sourceTree = "<group>"; };
+		66E85A6824A4F00900219F22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Hi5/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		66F440182474135F0057268E /* FilterBublicEventConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBublicEventConfiguration.swift; sourceTree = "<group>"; };
 		66F440192474135F0057268E /* FilterBublicEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBublicEventPresenter.swift; sourceTree = "<group>"; };
 		66F4401A2474135F0057268E /* FilterBublicEventRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBublicEventRouter.swift; sourceTree = "<group>"; };
@@ -2184,10 +2187,12 @@
 		6663361123B40206004E537C /* Hi5 */ = {
 			isa = PBXGroup;
 			children = (
+				66E85A6724A4E9FA00219F22 /* Hi5.entitlements */,
 				6663366123B408E2004E537C /* Launch Screen */,
 				868C28C323C60935003F237A /* Shared */,
 				66340A1423B4DB3C009DB30A /* Common */,
 				663409E023B4C6E8009DB30A /* App Modules  */,
+				66E85A6824A4F00900219F22 /* GoogleService-Info.plist */,
 				6663362023B4020A004E537C /* Info.plist */,
 			);
 			path = Hi5;
@@ -4893,6 +4898,7 @@
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
 				6663367323B40A6A004E537C /* ForgetPasswordViewController.xib in Resources */,
 				66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */,
+				66E85A6924A4F00900219F22 /* GoogleService-Info.plist in Resources */,
 				66AEC605242266B0003CF2EB /* CalenderCell.xib in Resources */,
 				6663365823B40318004E537C /* RegisterViewController.xib in Resources */,
 				66340A0A23B4C8FC009DB30A /* FieldsViewController.xib in Resources */,
@@ -5652,9 +5658,10 @@
 			baseConfigurationReference = 685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.7;
+				CURRENT_PROJECT_VERSION = 1.1.10;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5675,9 +5682,10 @@
 			baseConfigurationReference = 88552C1E316D1C23B58D7AA5 /* Pods-Hi5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.7;
+				CURRENT_PROJECT_VERSION = 1.1.10;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

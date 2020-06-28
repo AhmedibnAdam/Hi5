@@ -39,18 +39,22 @@ class CheckOutSessionDetailsViewController: UIViewController {
     @IBOutlet weak var fieldName: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var basPrice: UILabel!
     @IBOutlet weak var cancelPeriodFree: UILabel!
     @IBOutlet weak var chargeAfterFreePeriod: UILabel!
+    @IBOutlet weak var disscount: UILabel!
     @IBOutlet weak var promoCode: UITextField!
     @IBOutlet weak var paymentType: UILabel!
+    @IBOutlet weak var sessionPrice: UILabel!
     @IBOutlet weak var paymentDetails: UILabel!
     @IBOutlet weak var subtotal: UILabel!
     @IBOutlet weak var cobonDiscount: UILabel!
     @IBOutlet weak var tax: UILabel!
     @IBOutlet weak var cancelTitle: UILabel!
+    @IBOutlet weak var subTotal: UILabel!
+    @IBOutlet weak var coubonDiscount: UILabel!
     @IBOutlet weak var freeStack: UIStackView!
     @IBOutlet weak var chargeStack: UIStackView!
-    @IBOutlet weak var subTotal: UILabel!
     @IBOutlet weak var total: UILabel!
     @IBOutlet weak var chooseCash: UIButton!
     @IBOutlet weak var chooseWallet: UIButton!
@@ -68,7 +72,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
     @IBOutlet weak var containerScrollView: UIScrollView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
-
+    
     var payment: String?
     @IBAction func cashChoice(_ sender: UIButton) {
         sender.borderWidth = 1
@@ -116,7 +120,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
             loadEventCheckOut()
             self.walletView.isHidden = true
             self.chooseWallet.isHidden = true
-           
+            
         }
         else {
             print("seession")
@@ -135,7 +139,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
         time.text = (sessionData?.field?.time) ?? "" //+ " - " + (sessionData?.field?.endTime)!
         //        cancelPeriodFree.text =  "\(sessionData?.field?.guaranteedRefundTime ?? "0")" + "hours before the start "
         total.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
-        subTotal.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
+        //        subTotal.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
         if fieldData?.publicEvent?.payment == "online" || sessionData?.field?.payment == "Online"{
             paymentType.text = "Wallet"
             paymentDetails.text = "Your request will be locked , other members cannot pay and book it."
@@ -196,20 +200,32 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
     func checkOut(response: CheckOutSessionDetailsModel.CheckOut?) {
         containerScrollView.isHidden = false
         indicator.stopAnimating()
-
-        let status = response?.session?.booked?.status
-        let method = response?.session?.booked?.method
-        let canBook = response?.session?.booked?.canBook
+        guard let data = response?.session else {
+            return
+        }
+        
+        
+        basPrice.text = "\(String(format: "%.2f", data.basePrice)) $"
+        disscount.text = "\(String(format: "%.2f", data.discount)) $"
+        sessionPrice.text = "\(String(format: "%.2f", data.sessionPrice)) $"
+        subTotal.text = "\(String(format: "%.2f", data.subTotal)) $"
+        tax.text = "\(String(format: "%.2f", data.tax)) $"
+        
+        total.text = "\(String(format: "%.2f", data.totalPrice)) $"
+        
+        let status = response?.session?.booked.status
+        let method = response?.session?.booked.method
+        let canBook = response?.session?.booked.canBook
         
         if status == true{
             self.process.isHidden = true
             bookedStatus.text = "Locked"
-             hideWhileCash()
+            hideWhileCash()
             bookedStatus.textColor = .red
             if method == "Online" || method == "online"{
                 self.chooseCash.isHidden = true
-                 self.chooseWallet.isHidden = false
-                 payment = method
+                self.chooseWallet.isHidden = false
+                payment = method
                 chooseWallet.backgroundColor = .orange
                 chooseWallet.setTitleColor(.white, for: .normal)
             }
@@ -234,7 +250,7 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
                 chooseWallet.backgroundColor = .orange
                 chooseWallet.setTitleColor(.white, for: .normal)
             }
-      
+            
             
         }
         else {
@@ -245,7 +261,7 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
             if method == "Online" || method == "online"{
                 self.chooseCash.isHidden = true
                 self.chooseWallet.isHidden = false
-                 payment = "online"
+                payment = "online"
                 showWhileOnline()
                 chooseWallet.backgroundColor = .orange
                 chooseWallet.setTitleColor(.white, for: .normal)
@@ -259,15 +275,15 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
                 chooseCash.setTitleColor(.white, for: .normal)
             }
             else {
-                      self.process.isHidden = false
-                      self.chooseCash.isHidden = false
-                      self.chooseWallet.isHidden = false
-                      payment = "online"
-                      showWhileOnline()
-                      chooseCash.backgroundColor = .orange
-                      chooseCash.setTitleColor(.white, for: .normal)
-                  }
-          
+                self.process.isHidden = false
+                self.chooseCash.isHidden = false
+                self.chooseWallet.isHidden = false
+                payment = "online"
+                showWhileOnline()
+//                chooseCash.backgroundColor = .orange
+//                chooseCash.setTitleColor(.white, for: .normal)
+            }
+            
         }
         if canBook == false{
             hideWhileCash()
@@ -276,7 +292,7 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
             process.isHidden = true
         }
         else {
-             process.isHidden = false
+            process.isHidden = false
             bookedStatus.text = "Unlocked"
         }
     }

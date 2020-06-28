@@ -37,8 +37,8 @@ struct BookingDetailsModel {
         let gender, address, bestFor, sport: String?
         let status, partnerName: String?
         let partnerImage: String?
-        let oldPrice, newPrice, points: Int?
-
+        let points: Int?
+        let oldPrice, newPrice: Double?
         enum CodingKeys: String, CodingKey {
             case payment
             case paymentStatus = "payment status"

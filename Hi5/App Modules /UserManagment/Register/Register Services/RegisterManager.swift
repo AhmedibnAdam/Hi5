@@ -12,21 +12,29 @@ import Foundation
 
 protocol IRegisterManager: class {
 	// MARK : - do someting...
-    func signupFromApi(fullName: String ,phoneNumber: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
+    func signupFromApi(fullName: String ,phoneNumber: String ,complition :  @escaping (_ error:RegisterModel.AuthError? ,_ success: Bool)->Void)
 }
 class RegisterManager: IRegisterManager {
 	// MARK : - do someting...
-    func signupFromApi(fullName: String, phoneNumber: String, complition: @escaping (ErrorModel?, Bool) -> Void) {
+    func signupFromApi(fullName: String, phoneNumber: String, complition: @escaping (RegisterModel.AuthError?, Bool) -> Void) {
         NetworkService.share.request(endpoint: RegisterEndpoint.signup(fullName: fullName, phoneNumber: phoneNumber), success: { (responseData) in
                    let response = responseData
                    do {
                        let decoder = JSONDecoder()
                        let user = try decoder.decode(RegisterModel.SignupResponse.self, from: response)
                        print(user) // the value here is nil
+                    if user.status! == false{
+                     
+                            let decoder = JSONDecoder()
+                         let error = try decoder.decode(RegisterModel.AuthError.self, from: responseData )
+                            print(error)
+                            complition(error , false)
+                 
+                    }
                     guard let token = user.token , let username = user.userName else {return}
                        let defaults = UserDefaults.standard
-                       defaults.set(token, forKey: "Token") as? String
-                       defaults.set(username, forKey: "UserName") as? String
+                       defaults.set(token, forKey: "TokenI") as? String
+//                       defaults.set(username, forKey: "UserName") as? String
                        complition(nil , true)
                        
                    } catch let error {
@@ -34,7 +42,7 @@ class RegisterManager: IRegisterManager {
                        
                        do {
                            let decoder = JSONDecoder()
-                           let error = try decoder.decode(ErrorModel.self, from: responseData )
+                        let error = try decoder.decode(RegisterModel.AuthError.self, from: responseData )
                            print(error)
                            complition(error , false)
                        } catch let error {
@@ -46,7 +54,7 @@ class RegisterManager: IRegisterManager {
            }, failure: { (error) in
                    do {
                        let decoder = JSONDecoder()
-                       let error = try decoder.decode(ErrorModel.self, from: error as! Data )
+                       let error = try decoder.decode(RegisterModel.AuthError.self, from: error as! Data )
                        print(error)
                        complition(error , false)
                        

@@ -31,7 +31,7 @@ class RegisterInteractor: IRegisterInteractor {
                 self.presenter?.navigateToSignupPhoneVerification()
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "\(error?.errors[0].key ?? "")", msg: (error?.errors[0].value) ?? "Error ")
             }
         })
     }

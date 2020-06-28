@@ -19,7 +19,7 @@ protocol ISechaduleManager: class {
 
 class SechaduleManager: ISechaduleManager {
     func getUpCommingSechaduleFromApi(complition: @escaping (ErrorModel?, Bool, SechaduleModel.SechaduleSessions?) -> Void) {
-            NetworkService.share.request(endpoint: MyBookingsEndpoint.upCommingBookings, success: { (responseData) in
+            NetworkService.share.request(endpoint: SechaduleEndpoint.upCommingSechadule, success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
@@ -57,7 +57,7 @@ class SechaduleManager: ISechaduleManager {
     }
     
     func getPastSechaduleFromApi(complition: @escaping (ErrorModel?, Bool, SechaduleModel.PastSechaduleResponse?) -> Void) {
-            NetworkService.share.request(endpoint: MyBookingsEndpoint.pastBookings, success: { (responseData) in
+            NetworkService.share.request(endpoint: SechaduleEndpoint.pastSechadule, success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
@@ -95,7 +95,7 @@ class SechaduleManager: ISechaduleManager {
     }
     
     func getCancelSechaduleFromApi(complition: @escaping (ErrorModel?, Bool, SechaduleModel.CanceledSechaduleResponse?) -> Void) {
-            NetworkService.share.request(endpoint: MyBookingsEndpoint.cancelBookings, success: { (responseData) in
+            NetworkService.share.request(endpoint: SechaduleEndpoint.cancelSechadule, success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()

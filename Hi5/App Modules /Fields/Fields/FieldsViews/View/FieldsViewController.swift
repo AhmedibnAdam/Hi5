@@ -60,7 +60,6 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         super.viewDidLoad()
         initView()
         //configer()
-        
         setupNavigationBar()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -68,12 +67,21 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
         tableView.dataSource = self
         registerCollectionCell()
         registerTableCell()
+        getCurrentLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         getCurrentLocation()
-          alert()
-        
+    }
+    
+    func getNearBy(){
+        guard let latitude = self.lat  else {
+            return
+        }
+        guard let longtude = self.long  else {
+                   return
+               }
+         self.interactor?.nearBy(view: self, lon: longtude, lat: latitude )
     }
     func getCurrentLocation() {
         locationManager.delegate = self
@@ -102,6 +110,8 @@ class FieldsViewController: UIViewController , UICollectionViewDelegate , UIColl
             }
         }
         self.long = longitude
+     
+
     }
 }
 
@@ -220,7 +230,7 @@ extension FieldsViewController {
         cell.typeLbl.textColor = .orange
         cell.hightLightVieww.isHidden = false
         if (indexPath.row == 0) {
-            alert()
+             self.getNearBy()
         } else if (indexPath.row == 1){
             self.interactor?.favourite(view: self)
         } else if (indexPath.row == 2){
@@ -278,6 +288,7 @@ extension FieldsViewController: CLLocationManagerDelegate {
             //print(location.coordinate.latitude)
             self.lat = location.coordinate.latitude
             self.long = location.coordinate.longitude
+            getNearBy()
         }
     }
     

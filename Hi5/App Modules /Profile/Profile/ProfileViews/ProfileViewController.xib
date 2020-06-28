@@ -43,7 +43,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="253.5"/>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcv-gh-Nvi">
-                            <rect key="frame" x="100.5" y="142" width="174" height="32"/>
+                            <rect key="frame" x="79" y="142" width="217.5" height="32"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gou-Q1-VAg">
                                     <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -59,8 +59,8 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha3-dq-4Dr">
-                                    <rect key="frame" x="167.5" y="0.0" width="6.5" height="32"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha3-dq-4Dr">
+                                    <rect key="frame" x="167.5" y="0.0" width="50" height="32"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>

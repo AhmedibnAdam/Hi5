@@ -192,7 +192,7 @@ extension FilterResultViewController: UITableViewDelegate , UITableViewDataSourc
             cell.currancy.isHidden = false
         }
         if let cost = field.newPrice {
-            cell.costLbl.text = "$\(String(describing: cost))"
+            cell.costLbl.text = "$\(String(format: "%.2f", cost))"
         }
         
         if let partnerImg = field.partnerImage {

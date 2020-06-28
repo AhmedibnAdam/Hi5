@@ -154,9 +154,7 @@ extension SideMenuViewController {
         cell.lbl.text = text
         cell.img.image = UIImage(named: image)
         cell.selectionStyle = .none
-        if(indexPath.row == 0 || indexPath.row == 3){
-            cell.plusBtn.isHidden = false
-        }
+
         return cell
     }
     

@@ -14,7 +14,7 @@ class MenuCell: UITableViewCell {
     //MARK: - Outlets
     @IBOutlet weak var lbl: UILabel!
     @IBOutlet weak var img: UIImageView!
-    @IBOutlet weak var plusBtn: UIButton!
+//    @IBOutlet weak var plusBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

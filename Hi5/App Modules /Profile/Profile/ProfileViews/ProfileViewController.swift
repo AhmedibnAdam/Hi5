@@ -232,19 +232,23 @@ extension ProfileViewController: IProfileViewController {
         countryLogo.isHidden = false
         //            countryNumber.isHidden = false
         countryName.isHidden = false
-        let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
             DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: url!) {
                     DispatchQueue.main.async {
                         self.profilePhoto.image = UIImage(data: data)
-                        let images = UIImage(data: data)?.pngData()
                     }
                 }
             }
         }
-        self.age.text = "," + (responseData.dateOfBirth ?? "")
+        if let age =  responseData.dateOfBirth  {
+           self.age.text = " , " + "\(age)"
+        }
+        else{
+           self.age.text = ""
+        }
+        
         self.countryName.isHidden = false
         self.countryName.text = "\(responseData.country?.val ?? "" ), \(responseData.city?.val ?? "" ) . \(responseData.state?.val ?? "" )"
         self.phone.text = ""

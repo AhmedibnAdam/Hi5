@@ -48,6 +48,7 @@ class DateOfBirthViewController: UIViewController {
         super.viewDidLoad()
 		setupNavigationBar()
         configure()
+        datePicker.maximumDate = Date()
     }
     
     override func viewWillAppear(_ animated: Bool) {

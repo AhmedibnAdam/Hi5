@@ -28,22 +28,21 @@ class ShowDetailsViewController: UIViewController   {
     var lat , long :String?
     var parameters: [String: Any]?
     //MARK: - Outlets
-    @IBOutlet weak var statusStackView: UIStackView!
+//    @IBOutlet weak var statusStackView: UIStackView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var fieldImg: UIImageView!
     @IBOutlet weak var fieldName: UILabel!
     @IBOutlet weak var commentLbl: UILabel!
     @IBOutlet weak var fieldAddressLbl: UILabel!
     @IBOutlet weak var sportTypeLbl: UILabel!
-    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var paymentLbl: UILabel!
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var companyImg: UIImageView!
     @IBOutlet weak var requestMemberShipBtn: UIButton!
     @IBOutlet weak var favorite: UIButton!
-    @IBOutlet weak var expireDateLbl: UILabel!
-    @IBOutlet weak var statusLbl: UILabel!
+//    @IBOutlet weak var expireDateLbl: UILabel!
+//    @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var availableLbl: UILabel!
     @IBOutlet weak var bestForLbl: UILabel!
     @IBOutlet weak var gendersLbl: UILabel!
@@ -98,8 +97,8 @@ class ShowDetailsViewController: UIViewController   {
         if (sender.currentTitle == "Request membership") {
             sender.setTitle("Cancel Request", for: .normal)
             sender.setTitleColor(.white, for: .normal)
-            self.statusLbl.text = "pending"
-            self.statusLbl.textColor = .lightGray
+//            self.statusLbl.text = "pending"
+//            self.statusLbl.textColor = .lightGray
             if let id = field?.field?.id {
                 self.interactor?.requestMemberShip(view: self, fieldId: id)
             }
@@ -107,8 +106,8 @@ class ShowDetailsViewController: UIViewController   {
         } else {
             sender.setTitle("Request membership", for: .normal)
             sender.setTitleColor(.white, for: .normal)
-            self.statusLbl.text = "not a member"
-            self.statusLbl.textColor = .black
+//            self.statusLbl.text = "not a member"
+//            self.statusLbl.textColor = .black
             if let id = field?.field?.id {
                 self.interactor?.cancelRequestMemberShip(view: self, fieldId: id)
             }
@@ -194,7 +193,12 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         fieldSizeLbl.text = field.fieldSize
         gendersLbl.text = field.gender
         bestForLbl.text = field.recommendedFor
-        youstatus.text = field.membership?.status
+        youstatus.text = "Status: \(field.membership?.status ?? "") "
+        
+        if field.membership?.status != "not member" {
+            youstatus.text?.append("expired at \(field.membership?.expireAt ?? "") ")
+        }
+       
         if field.bookingFrequencyTime == 0 {
            policy1.text = "You can book session at any time "
         }
@@ -205,33 +209,28 @@ extension ShowDetailsViewController: IShowDetailsViewController {
         policy3.text = "you can book a session in \( field.receivingBookingTimeFrame ?? 0 ) hours ahead of starting time "
         if (field.visibility == "public") {
             availableLbl.text = field.visibility
-            self.statusStackView.isHidden = true
-            self.containerView.isHidden = true
+//            self.statusStackView.isHidden = true
             self.requestMemberShipBtn.isHidden = true
             self.memberShipView.isHidden = true
             self.policyView.isHidden = true
         } else {
             availableLbl.text = field.visibility
-            statusLbl.text = field.membership?.status
-            self.statusStackView.isHidden = false
-            //self.containerView.isHidden = false
+//            statusLbl.text = field.membership?.status
+//            self.statusStackView.isHidden = false
             if (field.membership?.status == "not member") {
                 self.requestMemberShipBtn.isHidden = false
                 self.memberShipView.isHidden = false
                 self.policyView.isHidden = false
-                self.containerView.isHidden = true
             } else if (field.membership?.status == "member") {
                 self.requestMemberShipBtn.isHidden = true
                 self.memberShipView.isHidden = false
                 self.policyView.isHidden = false
-                self.containerView.isHidden = false
-                self.expireDateLbl.text = field.membership?.expireAt
+//                self.expireDateLbl.text = "Your status: \(field.membership?.status ?? "") expired at \(field.membership?.expireAt ?? "") "
             } else if (field.membership?.status == "pending") {
-                self.containerView.isHidden = true
                 self.requestMemberShipBtn.isHidden = false
                 self.memberShipView.isHidden = false
                 self.policyView.isHidden = false
-                self.statusLbl.textColor = .lightGray
+//                self.statusLbl.textColor = .lightGray
                 self.requestMemberShipBtn.setTitle("Cancel Request", for: .normal)
                 self.requestMemberShipBtn.setTitleColor(.white, for: .normal)
             }
@@ -258,7 +257,7 @@ extension ShowDetailsViewController: IShowDetailsViewController {
                 }
             }
         }
-        costLbl.text = "Started from: $\(String(describing: field.cost ?? 0)) / hour"
+        costLbl.text = "Started from: $\(String(describing: field.cost ?? 0)) "
         paymentLbl.text = "payment: \(field.payment ?? "")"
         if let services = field.services {
             self.services = services

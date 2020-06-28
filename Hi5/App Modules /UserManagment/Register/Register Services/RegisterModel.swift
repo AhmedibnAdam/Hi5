@@ -29,4 +29,16 @@ struct RegisterModel {
             case token
         }
     }
+    
+    // MARK: - AuthError
+    struct AuthError: Codable {
+        let status: Bool
+        let errors: [Error]
+    }
+
+    // MARK: - Error
+    struct Error: Codable {
+        let key, value: String
+    }
+
 }

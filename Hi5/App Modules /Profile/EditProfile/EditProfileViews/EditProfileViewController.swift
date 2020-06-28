@@ -50,7 +50,7 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
     @IBOutlet weak var profilePhoto: UIImageView!
     @IBOutlet weak var dateOfBirthBtn: UIButton!
     @IBOutlet weak var genderBtn: UIButton!
-    @IBOutlet weak var biographyTextField: UITextField!
+    @IBOutlet weak var biographyTextField: UITextView!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var photoView: UIView!
     @IBOutlet weak var biographyContainerView: UIView!
@@ -64,7 +64,6 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
 	override func viewDidLoad() {
         super.viewDidLoad()
         fullNameTextField.delegate = self
-        biographyTextField.delegate = self
         setupNavigationBar()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -166,7 +165,7 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         stateFlag = defaults.string(forKey: "stateFlag") ?? "public"
         gender = defaults.string(forKey: "gender") ?? "male"
         if let location = defaults.string(forKey: "location") {
-           let locationWords = location.split(separator: ",") 
+           let locationWords = location.split(separator: ",")
 
             if locationWords.count == 1{
                 country = String(locationWords[0])
@@ -181,6 +180,26 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
                 city = String(locationWords[1])
                 state = String(locationWords[2])
             }
+        }
+        
+        if city == ""{
+            if let location = defaults.string(forKey: "location") {
+                    let locationWords = location.split(separator: " ")
+
+                     if locationWords.count == 1{
+                         country = String(locationWords[0])
+                         city = ""
+                         state = ""
+                     } else if locationWords.count == 2 {
+                         country = String(locationWords[0])
+                         city = String(locationWords[1])
+                         state = ""
+                     } else {
+                         country = String(locationWords[0])
+                         city = String(locationWords[1])
+                         state = String(locationWords[2])
+                     }
+                 }
         }
         
         if(fullNameTextField.text?.isEmpty == false && biographyTextField.text?.isEmpty == true){

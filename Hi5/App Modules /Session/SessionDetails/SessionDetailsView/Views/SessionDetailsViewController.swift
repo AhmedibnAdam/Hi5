@@ -145,7 +145,7 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
         bestforLbl.text = field.bestFor
         availableLbl.text = field.visibility
         companyNameLbl.text = field.partnerName
-        costLbl.text = "$\(String(describing: field.cost ?? 0))"
+        costLbl.text = "$\(String(format: "%.2f", field.cost ?? 0))"
         paymentLbl.text = "payment method: \(String(describing: field.payment ?? ""))"
        
         setLocation()

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldsViewController" customModule="Hi5" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="aoi-Ll-dAu" id="2sg-uq-iSw"/>
+                <outlet property="noFavouriteFieldsLbl" destination="60u-6x-3SU" id="9HV-b2-TvY"/>
                 <outlet property="tableView" destination="Dyf-PC-Ms3" id="BVf-w9-v7u"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -41,12 +42,12 @@
                             </subviews>
                         </stackView>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-Ll-dAu">
-                            <rect key="frame" x="20" y="10" width="335" height="40"/>
+                            <rect key="frame" x="10" y="10" width="355" height="40"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Pd7-Xr-RUm"/>
                             </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CZZ-eS-z5q">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="CZZ-eS-z5q">
                                 <size key="itemSize" width="50" height="50"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -62,8 +63,8 @@
                     <constraints>
                         <constraint firstItem="hdZ-MF-KnB" firstAttribute="centerY" secondItem="xcQ-pS-Ima" secondAttribute="centerY" id="3PJ-05-DzX"/>
                         <constraint firstAttribute="trailing" secondItem="Dyf-PC-Ms3" secondAttribute="trailing" constant="5" id="3wH-eq-IKU"/>
-                        <constraint firstAttribute="trailing" secondItem="aoi-Ll-dAu" secondAttribute="trailing" constant="20" id="9cf-cC-uuG"/>
-                        <constraint firstItem="aoi-Ll-dAu" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="20" id="GQc-Ru-MFO"/>
+                        <constraint firstAttribute="trailing" secondItem="aoi-Ll-dAu" secondAttribute="trailing" constant="10" id="9cf-cC-uuG"/>
+                        <constraint firstItem="aoi-Ll-dAu" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="10" id="GQc-Ru-MFO"/>
                         <constraint firstItem="Dyf-PC-Ms3" firstAttribute="leading" secondItem="xcQ-pS-Ima" secondAttribute="leading" constant="5" id="N0Y-ei-FhZ"/>
                         <constraint firstItem="Dyf-PC-Ms3" firstAttribute="top" secondItem="aoi-Ll-dAu" secondAttribute="bottom" id="RGi-kD-zvb"/>
                         <constraint firstItem="aoi-Ll-dAu" firstAttribute="top" secondItem="xcQ-pS-Ima" secondAttribute="top" constant="10" id="bGa-IP-Cy2"/>

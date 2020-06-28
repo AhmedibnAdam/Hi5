@@ -69,7 +69,7 @@ extension SechaduleViewController: ISechaduleViewController {
         let upCommingSechadule = response
         self.upCommingSechadule = upCommingSechadule
         fieldsTabType = 0
-        sechaduleCellCount = upCommingSechadule.fields?.count ?? 0
+        sechaduleCellCount = upCommingSechadule.public_events?.count ?? 0
         self.tableView.reloadData()
         print(response)
     }
@@ -78,7 +78,7 @@ extension SechaduleViewController: ISechaduleViewController {
         let pastSechadule = response
         self.pastSechadule = pastSechadule
         fieldsTabType = 1
-        sechaduleCellCount = pastSechadule.fields?.count ?? 0
+        sechaduleCellCount = pastSechadule.public_events?.count ?? 0
         self.tableView.reloadData()
         print(response)
     }
@@ -86,7 +86,7 @@ extension SechaduleViewController: ISechaduleViewController {
         let canceledSechadule = response
         self.canceledSechadule = canceledSechadule
         fieldsTabType = 2
-        sechaduleCellCount = canceledSechadule.fields?.count ?? 0
+        sechaduleCellCount = canceledSechadule.public_events?.count ?? 0
         self.tableView.reloadData()
         print(response)
     }
@@ -137,7 +137,7 @@ extension SechaduleViewController: UICollectionViewDelegate , UICollectionViewDa
         cell.typeLbl.textColor = .orange
         cell.hightLightVieww.isHidden = false
         if (indexPath.row == 0) {
-            
+            self.interactor?.getUpCommingSechadule(view: self)
         } else if (indexPath.row == 1){
             self.interactor?.getPastSechadule(view: self)
         } else if (indexPath.row == 2){
@@ -158,9 +158,9 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SechaduleTableViewCell") as! SechaduleTableViewCell
         
         if self.fieldsTabType == 0 {
-            let sechaduleData = self.upCommingSechadule?.fields?[indexPath.row]
-            cell.fieldName.text = sechaduleData?.partnerName
-            if let image = sechaduleData?.image {
+            let sechaduleData = self.upCommingSechadule?.public_events?[indexPath.row]
+            cell.fieldName.text = sechaduleData?.fieldName
+            if let image = sechaduleData?.fieldImage {
                 let url = URL(string: image)
                 cell.ballImageView.kf.setImage(with: url)
                 cell.fieldImage.kf.setImage(with: url)
@@ -171,12 +171,12 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
                 cell.partnerImage.kf.setImage(with: url)
                 
             }
-            cell.partnerName.text = sechaduleData?.name
+            cell.partnerName.text = sechaduleData?.partnerName
             
             cell.location.text = sechaduleData?.address
 //            cell.pastCost.text = "\( sechaduleData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(sechaduleData?.newPrice! ?? 0)"
-            cell.point.text = "\( sechaduleData?.points! ?? 0)"
+            cell.cost.text = "\(sechaduleData?.cost! ?? 0)"
+            cell.point.text = "\( String(describing: sechaduleData?.points) )"
             
             cell.bestFor.text = sechaduleData?.bestFor
             cell.day.text = sechaduleData?.day
@@ -187,9 +187,9 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
             return cell
         }
         else if self.fieldsTabType == 1 {
-            let sechaduleData = self.pastSechadule?.fields?[indexPath.row]
-            cell.fieldName.text = sechaduleData?.partnerName
-            if let image = sechaduleData?.image {
+            let sechaduleData = self.pastSechadule?.public_events?[indexPath.row]
+            cell.fieldName.text = sechaduleData?.fieldName
+            if let image = sechaduleData?.fieldImage {
                 let url = URL(string: image)
                 cell.ballImageView.kf.setImage(with: url)
                 cell.fieldImage.kf.setImage(with: url)
@@ -200,11 +200,11 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
                 cell.partnerImage.kf.setImage(with: url)
                 
             }
-            cell.partnerName.text = sechaduleData?.name
+            cell.partnerName.text = sechaduleData?.partnerName
             cell.location.text = sechaduleData?.address
 //            cell.pastCost.text = "\( sechaduleData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(sechaduleData?.newPrice! ?? 0)"
-            cell.point.text = "\( sechaduleData?.points! ?? 0)"
+            cell.cost.text = "\(sechaduleData?.cost! ?? 0)"
+            cell.point.text = "\( sechaduleData?.points )"
             cell.bestFor.text = sechaduleData?.bestFor
             cell.day.text = sechaduleData?.day
             cell.date.text = sechaduleData?.date
@@ -215,9 +215,9 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
             return cell
         }
         else {
-            let sechaduleData = self.canceledSechadule?.fields?[indexPath.row]
-            cell.fieldName.text = sechaduleData?.partnerName
-            if let image = sechaduleData?.image {
+            let sechaduleData = self.canceledSechadule?.public_events?[indexPath.row]
+            cell.fieldName.text = sechaduleData?.fieldName
+            if let image = sechaduleData?.partnerImage {
                 let url = URL(string: image)
                 cell.ballImageView.kf.setImage(with: url)
                 cell.fieldImage.kf.setImage(with: url)
@@ -228,11 +228,11 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
                 cell.partnerImage.kf.setImage(with: url)
                 
             }
-            cell.partnerName.text = sechaduleData?.name
+            cell.partnerName.text = sechaduleData?.partnerName
             cell.location.text = sechaduleData?.address
 //            cell.pastCost.text = "\( sechaduleData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(sechaduleData?.newPrice! ?? 0)"
-            cell.point.text = "\( sechaduleData?.points! ?? 0)"
+            cell.cost.text = "\(sechaduleData?.cost! ?? 0)"
+            cell.point.text = "\( String(describing: sechaduleData?.points) )"
             cell.bestFor.text = sechaduleData?.bestFor
             cell.day.text = sechaduleData?.day
             cell.date.text = sechaduleData?.date
@@ -246,7 +246,7 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
 extension SechaduleViewController {
     
     func setupNavigationBar() {
-        navigationItem.title = " Sechadule"
+        navigationItem.title = "My schedule"
         let button = UIButton(type: .system)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
         button.sizeToFit()

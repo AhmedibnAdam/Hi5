@@ -9,8 +9,8 @@ target 'Hi5' do
      pod 'IQKeyboardManagerSwift'
      pod 'Alamofire', '~> 4.9.1'
   #   pod 'BTHorizontalPageableView'
-  #   pod 'YSSegmentedControl'
-     pod 'SideMenu'
+  #   pod 'YSSegmentedControl' 6.4.8
+     pod 'SideMenu' , '~> 6.4.8'
      pod 'SwiftyJSON'
      pod 'DropDown'
      pod 'FlagPhoneNumber'
@@ -21,6 +21,7 @@ target 'Hi5' do
      pod 'TTRangeSlider'
      pod 'GoogleMaps'
      pod 'Cosmos'
-  #   pod 'SWRevealViewController'
+     pod 'Firebase'
+      pod 'Firebase/Messaging'
 
 end

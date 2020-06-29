@@ -64,13 +64,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="SPH-xH-p07">
-                                            <rect key="frame" x="-20" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="200" id="57A-2h-Byt"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="778-tL-G7t">
-                                            <rect key="frame" x="-20" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.49959867294520549" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
@@ -202,6 +202,9 @@
                                                     <state key="normal" title="See company Profile">
                                                         <color key="titleColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="seeCompanyProfile:" destination="-1" eventType="touchUpInside" id="hRl-yd-LCP"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -475,7 +478,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HZ-8D-1ni">
-                                                            <rect key="frame" x="35" y="0.0" width="300" height="60"/>
+                                                            <rect key="frame" x="15" y="0.0" width="320" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="320" id="B6r-ba-Kdi"/>
                                                                 <constraint firstAttribute="height" constant="60" id="PDt-Mr-abA"/>
@@ -497,7 +500,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgv-tk-LDr">
-                                                            <rect key="frame" x="35" y="0.0" width="300" height="60"/>
+                                                            <rect key="frame" x="15" y="0.0" width="320" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -515,7 +518,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUk-RR-ZV7">
-                                                            <rect key="frame" x="35" y="0.0" width="300" height="60"/>
+                                                            <rect key="frame" x="15" y="0.0" width="320" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>

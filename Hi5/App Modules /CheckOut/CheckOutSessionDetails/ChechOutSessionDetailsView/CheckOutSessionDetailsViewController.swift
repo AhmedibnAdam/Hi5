@@ -295,6 +295,14 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
             process.isHidden = false
             bookedStatus.text = "Unlocked"
         }
+        
+        if data.timeControllBook == false{
+            self.process.isHidden = true
+            ShowAlertView.showAlert(title: "Alert", msg: data.timeControllBookingMsg ?? "", sender: self)
+        }
+        else{
+            self.process.isHidden = false
+        }
     }
     
     func showAlert(title: String, msg: String) {

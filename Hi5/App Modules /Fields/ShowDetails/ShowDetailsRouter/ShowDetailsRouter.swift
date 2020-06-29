@@ -14,6 +14,7 @@ protocol IShowDetailsRouter: class {
     func navigateToFields()
     func navigateToSessionResult(param: [String: Any] ,fieldId: Int , fieldName: String)
     func navigateToAllComments(id: Int)
+    func navigateToProfile(param: [String: Any], partner_id: Int)
 }
 
 class ShowDetailsRouter: IShowDetailsRouter {
@@ -35,4 +36,8 @@ class ShowDetailsRouter: IShowDetailsRouter {
     func navigateToAllComments(id: Int){
          view?.navigate(type: .modalWithNavigation, module: GeneralRoute.allComments(fieldId: id), completion: nil)
      }
+    
+    func navigateToProfile(param: [String: Any], partner_id: Int){
+          view?.navigate(type: .modal, module: GeneralRoute.profile(param: param, id: partner_id), completion: nil)
+      }
 }

@@ -34,6 +34,8 @@ class ProfileViewController: UIViewController {
     var response: ProfileModel.PartnerProfile?
     //MARK:- Outlets
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var userName: UILabel!
@@ -84,6 +86,7 @@ extension ProfileViewController: IProfileViewController {
     
     func showAlert(title: String, msg: String) {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+        indicator.stopAnimating()
     }
     func navigateToEditProfile() {
         router?.navigateToEditProfile()
@@ -105,6 +108,8 @@ extension ProfileViewController: IProfileViewController {
             return
             
         }
+        topView.isHidden = false
+        indicator.stopAnimating()
         self.response = data
         phone.text = "Email: " + (response?.partner?.email ?? "")
         userName.text = response?.partner?.phone
@@ -119,6 +124,8 @@ extension ProfileViewController: IProfileViewController {
             return
             
         }
+        topView.isHidden = false
+        indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
         numOfFriends.isHidden = false
         friendsLbl.isHidden = false
@@ -192,6 +199,8 @@ extension ProfileViewController: IProfileViewController {
             return
             
         }
+        topView.isHidden = false
+        indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
         numOfFriends.isHidden = false
         friendsLbl.isHidden = false
@@ -226,6 +235,8 @@ extension ProfileViewController: IProfileViewController {
             return
             
         }
+        topView.isHidden = false
+        indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
         //            numOfFriends.isHidden = false
         //            friendsLbl.isHidden = false

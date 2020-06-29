@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,11 +21,13 @@
                 <outlet property="flag" destination="Ia2-bm-g6b" id="IuU-n3-Qim"/>
                 <outlet property="friendsLbl" destination="KS1-TV-9z5" id="85a-Sh-ao8"/>
                 <outlet property="fullName" destination="SH4-k8-fBx" id="xuJ-KT-T2P"/>
+                <outlet property="indicator" destination="nwi-qK-vn5" id="EQo-CD-9CQ"/>
                 <outlet property="logoView" destination="vWr-CP-U3X" id="zVI-rE-dGo"/>
                 <outlet property="numOfFriends" destination="IGd-36-bD4" id="bbZ-rd-EG9"/>
                 <outlet property="phone" destination="pLF-xH-wW1" id="GZu-sg-Znd"/>
                 <outlet property="profilePhoto" destination="cXn-KU-ew9" id="nEG-fF-OUy"/>
                 <outlet property="tableView" destination="UfI-Kx-FhQ" id="FWN-yE-ruo"/>
+                <outlet property="topView" destination="cEC-0m-smE" id="sKY-vo-FBK"/>
                 <outlet property="userName" destination="T8g-jR-hfF" id="rtP-bd-pRq"/>
                 <outlet property="userProfileView" destination="Ely-lQ-BYB" id="c8P-cY-GM7"/>
                 <outlet property="view" destination="CWr-VT-VUw" id="lsR-0Q-vFG"/>
@@ -36,7 +38,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-0m-smE" userLabel="Top View">
+                <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-0m-smE" userLabel="Top View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="253.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fCs-OB-Z5P" customClass="Register">
@@ -233,7 +235,7 @@
                         <constraint firstAttribute="trailing" secondItem="Rzj-kt-b1y" secondAttribute="trailing" constant="10" id="ypX-a4-E0j"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4w-Gg-vkh" userLabel="Bottom View">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N4w-Gg-vkh" userLabel="Bottom View">
                     <rect key="frame" x="0.0" y="253.5" width="375" height="413.5"/>
                     <subviews>
                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="E2r-Y8-pQd">
@@ -247,7 +249,7 @@
                                 <outlet property="delegate" destination="-1" id="5kR-vj-uBf"/>
                             </connections>
                         </tableView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E8-3l-YiS">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E8-3l-YiS">
                             <rect key="frame" x="16" y="10" width="52" height="24"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
@@ -341,10 +343,15 @@
                         <constraint firstItem="Ely-lQ-BYB" firstAttribute="leading" secondItem="N4w-Gg-vkh" secondAttribute="leading" id="sW1-fn-PH6"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-qK-vn5">
+                    <rect key="frame" x="169" y="315" width="37" height="37"/>
+                    <color key="color" red="0.98431372549999996" green="0.30588235289999999" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="PXJ-L2-Z1o" firstAttribute="bottom" secondItem="N4w-Gg-vkh" secondAttribute="bottom" id="2n8-nw-Q9e"/>
+                <constraint firstItem="nwi-qK-vn5" firstAttribute="centerY" secondItem="PXJ-L2-Z1o" secondAttribute="centerY" id="4KL-X5-tQ1"/>
                 <constraint firstItem="N4w-Gg-vkh" firstAttribute="leading" secondItem="PXJ-L2-Z1o" secondAttribute="leading" id="60v-WV-xkR"/>
                 <constraint firstItem="cEC-0m-smE" firstAttribute="leading" secondItem="CWr-VT-VUw" secondAttribute="leading" id="FUy-cr-bR1"/>
                 <constraint firstItem="cEC-0m-smE" firstAttribute="height" secondItem="CWr-VT-VUw" secondAttribute="height" multiplier="0.38" id="Qmh-SW-Esr"/>
@@ -352,6 +359,7 @@
                 <constraint firstItem="N4w-Gg-vkh" firstAttribute="top" secondItem="cEC-0m-smE" secondAttribute="bottom" id="jpD-zq-I5c"/>
                 <constraint firstAttribute="trailing" secondItem="cEC-0m-smE" secondAttribute="trailing" id="lhB-5a-p4d"/>
                 <constraint firstItem="cEC-0m-smE" firstAttribute="top" secondItem="CWr-VT-VUw" secondAttribute="top" id="pZ0-ra-rv8"/>
+                <constraint firstItem="nwi-qK-vn5" firstAttribute="centerX" secondItem="PXJ-L2-Z1o" secondAttribute="centerX" id="xPL-qG-Tdu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="PXJ-L2-Z1o"/>
             <point key="canvasLocation" x="88.799999999999997" y="235.23238380809596"/>

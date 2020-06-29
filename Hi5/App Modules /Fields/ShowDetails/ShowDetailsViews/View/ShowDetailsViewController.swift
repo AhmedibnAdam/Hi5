@@ -97,7 +97,7 @@ class ShowDetailsViewController: UIViewController   {
         if (sender.currentTitle == "Request membership") {
             sender.setTitle("Cancel Request", for: .normal)
             sender.setTitleColor(.white, for: .normal)
-//            self.statusLbl.text = "pending"
+            self.youstatus.text = "Status: pending"
 //            self.statusLbl.textColor = .lightGray
             if let id = field?.field?.id {
                 self.interactor?.requestMemberShip(view: self, fieldId: id)
@@ -106,7 +106,7 @@ class ShowDetailsViewController: UIViewController   {
         } else {
             sender.setTitle("Request membership", for: .normal)
             sender.setTitleColor(.white, for: .normal)
-//            self.statusLbl.text = "not a member"
+            self.youstatus.text = "Status: not a member"
 //            self.statusLbl.textColor = .black
             if let id = field?.field?.id {
                 self.interactor?.cancelRequestMemberShip(view: self, fieldId: id)
@@ -133,6 +133,13 @@ class ShowDetailsViewController: UIViewController   {
                 NSLog("Can't use comgooglemaps://");
             }
         }
+    
+    
+    
+    @IBAction func seeCompanyProfile(_ sender: UIButton) {
+        router?.navigateToProfile(param: ["lat" : Double(self.lat!)!, "long":Double(self.long!)!], partner_id: (field?.field?.partner_id)!)
+    }
+    
     
     @IBAction func favorite(_ sender: UIButton) {
         if sender.isSelected {

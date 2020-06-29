@@ -35,6 +35,9 @@ struct CheckOutSessionDetailsModel {
              let taxPercent: Int
              let tax, totalPrice: Double
              let booked: Booked
+        let timeControllBook: Bool
+           let timeControllBookingMsg: String
+ 
 
              enum CodingKeys: String, CodingKey {
                  case id
@@ -52,6 +55,8 @@ struct CheckOutSessionDetailsModel {
                  case tax
                  case totalPrice = "total_price"
                  case booked
+                case timeControllBook = "time_controll_book"
+                        case timeControllBookingMsg = "time_controll_booking_msg"
              }
     }
 

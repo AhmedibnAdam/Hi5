@@ -64,11 +64,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     @IBAction func eyeBtnTapped(_ sender: UIButton) {
-        if sender.currentImage == UIImage(named:"eyeLocked") {
+        if self.password.isSecureTextEntry {
            sender.setImage(UIImage(named:"eye"), for: .normal)
             self.password.isSecureTextEntry = false
          }
-        else if sender.currentImage == UIImage(named:"eye") {
+        else {
             sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
             self.password.isSecureTextEntry = true
         }
@@ -85,7 +85,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         doLoginAction()
     }
 }
-//MARK: - extenions
+
 extension LoginViewController: ILoginViewController {
     func showAlert(title: String, msg: String) {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)

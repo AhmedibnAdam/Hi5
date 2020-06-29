@@ -58,25 +58,26 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func confirmPasswordEyeBtnTapped(_ sender: UIButton) {
-        if sender.currentImage == UIImage(named:"eyeLocked") {
-           sender.setImage(UIImage(named:"eye"), for: .normal)
-            self.confirmPasswordTextField.isSecureTextEntry = false
-         }
-        else if sender.currentImage == UIImage(named:"eye") {
-            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
-            self.confirmPasswordTextField.isSecureTextEntry = true
-        }
+        if self.confirmPasswordTextField.isSecureTextEntry {
+                 sender.setImage(UIImage(named:"eye"), for: .normal)
+                  self.confirmPasswordTextField.isSecureTextEntry = false
+               }
+              else {
+                  sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
+                  self.confirmPasswordTextField.isSecureTextEntry = true
+              }
     }
     
     @IBAction func passwordEyeBtnTapped(_ sender: UIButton) {
-        if sender.currentImage == UIImage(named:"eyeLocked") {
-           sender.setImage(UIImage(named:"eye"), for: .normal)
-            self.passwordTextField.isSecureTextEntry = false
-         }
-        else if sender.currentImage == UIImage(named:"eye") {
-            sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
-            self.passwordTextField.isSecureTextEntry = true
-        }
+   
+        if self.passwordTextField.isSecureTextEntry {
+              sender.setImage(UIImage(named:"eye"), for: .normal)
+               self.passwordTextField.isSecureTextEntry = false
+            }
+           else {
+               sender.setImage( UIImage(named:"eyeLocked"), for: .normal)
+               self.passwordTextField.isSecureTextEntry = true
+           }
     }
     
     @IBAction func getStartedBtnTapped(_ sender: UIButton) {

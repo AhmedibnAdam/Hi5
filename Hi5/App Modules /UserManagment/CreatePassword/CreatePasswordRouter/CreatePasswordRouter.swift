@@ -14,6 +14,7 @@ protocol ICreatePasswordRouter: class {
 	func navigateToWelcome()
     func navigateToLogin()
     func navigateToProfile()
+     func navigateToVerify()
 }
 
 class CreatePasswordRouter: ICreatePasswordRouter {	
@@ -32,4 +33,8 @@ class CreatePasswordRouter: ICreatePasswordRouter {
     func navigateToProfile() {
         view?.navigate(type: .modal, module: GeneralRoute.profile(param: ["":""], id: 0), completion: nil)
     }
+    
+    func navigateToVerify() {
+           view?.navigate(type: .modal, module: GeneralRoute.phoneVerification, completion: nil)
+       }
 }

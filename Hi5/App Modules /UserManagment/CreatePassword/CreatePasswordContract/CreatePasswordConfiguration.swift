@@ -19,8 +19,10 @@ class CreatePasswordConfiguration {
         let manager = CreatePasswordManager()
         let interactor = CreatePasswordInteractor(presenter: presenter, manager: manager)
         
+        controller.parameters = parameters
         controller.interactor = interactor
         controller.router = router
+        
         interactor.parameters = parameters
         return controller
     }

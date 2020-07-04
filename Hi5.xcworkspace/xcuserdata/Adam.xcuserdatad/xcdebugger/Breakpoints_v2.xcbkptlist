@@ -212,14 +212,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C360B250-72B8-4195-AF22-A8143D9D3BB5 - 410f64a91223f21b"
+                  uuid = "C360B250-72B8-4195-AF22-A8143D9D3BB5 - 4d0bc3ba81857253"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in Hi5.NetworkService.request&lt;A where A: Hi5.IEndpoint&gt;(endpoint: A, success: Swift.Optional&lt;(Foundation.Data) -&gt; ()&gt;, failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "53"
@@ -227,14 +227,14 @@
                   offsetFromSymbolStart = "997">
                </Location>
                <Location
-                  uuid = "C360B250-72B8-4195-AF22-A8143D9D3BB5 - 41ef842e1b9ca2ff"
+                  uuid = "C360B250-72B8-4195-AF22-A8143D9D3BB5 - 4deb233d883a22b7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in closure #1 () -&gt; () in Hi5.NetworkService.request&lt;A where A: Hi5.IEndpoint&gt;(endpoint: A, success: Swift.Optional&lt;(Foundation.Data) -&gt; ()&gt;, failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "54"
@@ -420,14 +420,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CACA7BAF-AEF5-44C2-BE1F-0A7E0BDC4A33 - 6180b626ff1ed01d"
+                  uuid = "CACA7BAF-AEF5-44C2-BE1F-0A7E0BDC4A33 - 66615d1fdca94667"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.FieldsInteractor.nearBy(view: __C.UIViewController, lon: Swift.Double, lat: Swift.Double) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -435,14 +435,14 @@
                   offsetFromSymbolStart = "155">
                </Location>
                <Location
-                  uuid = "CACA7BAF-AEF5-44C2-BE1F-0A7E0BDC4A33 - ea5295e710283f58"
+                  uuid = "CACA7BAF-AEF5-44C2-BE1F-0A7E0BDC4A33 - edb37ede339fa922"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.FieldsModel.NearByfieldsResponse&gt;) -&gt; () in Hi5.FieldsInteractor.nearBy(view: __C.UIViewController, lon: Swift.Double, lat: Swift.Double) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "33"
@@ -468,14 +468,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AA00BAE5-1DDB-4FB6-BD9C-98F69523D2EB - ac0034f1930e2956"
+                  uuid = "AA00BAE5-1DDB-4FB6-BD9C-98F69523D2EB - 3595a44878c6439e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.FieldsManager.nearByFromApi(lon: Swift.Double, lat: Swift.Double, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.FieldsModel.NearByfieldsResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsServices/FieldsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsServices/FieldsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "103"
@@ -483,14 +483,14 @@
                   offsetFromSymbolStart = "74">
                </Location>
                <Location
-                  uuid = "AA00BAE5-1DDB-4FB6-BD9C-98F69523D2EB - 60062914e7812e73"
+                  uuid = "AA00BAE5-1DDB-4FB6-BD9C-98F69523D2EB - f993b9ad0c4944bb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.FieldsManager.nearByFromApi(lon: Swift.Double, lat: Swift.Double, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.FieldsModel.NearByfieldsResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsServices/FieldsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsServices/FieldsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "104"
@@ -1300,14 +1300,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89 - b125981075cb63c6"
+                  uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89 - 1dcd5fd3823255c8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.PublicEventDetailsInteractor.showDetails(view: __C.UIViewController, eventId: Swift.String) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -1315,14 +1315,14 @@
                   offsetFromSymbolStart = "131">
                </Location>
                <Location
-                  uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89 - a9d371b62bd93851"
+                  uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89 - 53bb675dc200e5f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.PublicEventDetails&gt;) -&gt; () in Hi5.PublicEventDetailsInteractor.showDetails(view: __C.UIViewController, eventId: Swift.String) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -1364,14 +1364,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B - f067d4b2567be2bd"
+                  uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B - c41fa8430c00153c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.PublicEventDetailsManager.showDetailsFromApi(id: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.PublicEventDetails&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1379,14 +1379,14 @@
                   offsetFromSymbolStart = "61">
                </Location>
                <Location
-                  uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B - ec073c08b271c4d2"
+                  uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B - d87f40f9e80a3353"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventDetailsManager.showDetailsFromApi(id: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.PublicEventDetails&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -1428,14 +1428,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "7A4CE95B-4792-44B8-9D39-9476AABCC36C - 5d0dbfb6504fa65"
+                  uuid = "7A4CE95B-4792-44B8-9D39-9476AABCC36C - 23130c246b36c1f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.FieldsInteractor.addFavourite(view: __C.UIViewController, fieldId: Swift.Int) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "48"
@@ -1443,14 +1443,14 @@
                   offsetFromSymbolStart = "118">
                </Location>
                <Location
-                  uuid = "7A4CE95B-4792-44B8-9D39-9476AABCC36C - eafa2212d37c35b5"
+                  uuid = "7A4CE95B-4792-44B8-9D39-9476AABCC36C - ed1bc92bf0cba3cf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.FieldsModel.AddfavouriteResponse&gt;) -&gt; () in Hi5.FieldsInteractor.addFavourite(view: __C.UIViewController, fieldId: Swift.Int) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -1540,14 +1540,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - f12ba345ad1f8465"
+                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - dfcd0f4834a92e7f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.LoginInteractor.doLogin(view: __C.UIViewController, userName: Swift.String, password: Swift.String) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/Login/LoginInteractor/LoginInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/Login/LoginInteractor/LoginInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -1555,19 +1555,19 @@
                   offsetFromSymbolStart = "207">
                </Location>
                <Location
-                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - 36a06ad541878dd1"
+                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - 1846c6d8d83127cb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.LoginModel.LoginResponse&gt;) -&gt; () in Hi5.LoginInteractor.doLogin(view: __C.UIViewController, userName: Swift.String, password: Swift.String) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/Login/LoginInteractor/LoginInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/Login/LoginInteractor/LoginInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "95">
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "250">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1620,14 +1620,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "68DF2CD8-FE13-4550-B951-041F265384F7 - 9764634809c7f4a5"
+                  uuid = "68DF2CD8-FE13-4550-B951-041F265384F7 - 1dd2e974730f3adf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.PublicEventsInteractor.filterPublicEvent(view: __C.UIViewController) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -1635,14 +1635,14 @@
                   offsetFromSymbolStart = "87">
                </Location>
                <Location
-                  uuid = "68DF2CD8-FE13-4550-B951-041F265384F7 - 1ea1f3d6215dc460"
+                  uuid = "68DF2CD8-FE13-4550-B951-041F265384F7 - 941779ea5b950a1a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; () in Hi5.PublicEventsInteractor.filterPublicEvent(view: __C.UIViewController) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -1700,14 +1700,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D - 7391dc6fee9f609d"
+                  uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D - 2e8dbac8f5488ede"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
@@ -1715,14 +1715,14 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D - 4cee2883aadf1ff6"
+                  uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D - 11f24e24b108f1b5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -1748,14 +1748,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6 - 7391dc6fee9f609d"
+                  uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6 - 2e8dbac8f5488ede"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
@@ -1763,14 +1763,14 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6 - 4cee2883aadf1ff6"
+                  uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6 - 11f24e24b108f1b5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -2436,14 +2436,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "18BCE580-AD13-4190-BF63-B1EEE6E50B49 - 4c801345408e47cf"
+                  uuid = "18BCE580-AD13-4190-BF63-B1EEE6E50B49 - 78f86fb41af5b04e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.PublicEventDetailsManager.leaveFromApi(id: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.LeaveEvent&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -2451,14 +2451,14 @@
                   offsetFromSymbolStart = "61">
                </Location>
                <Location
-                  uuid = "18BCE580-AD13-4190-BF63-B1EEE6E50B49 - 505b1ad97f94129b"
+                  uuid = "18BCE580-AD13-4190-BF63-B1EEE6E50B49 - 6423662825efe51a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventDetailsManager.leaveFromApi(id: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventDetailsModel.LeaveEvent&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -2724,14 +2724,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B1DD84E1-901E-4ADB-9131-ABABE50B4815 - 4ee4b477bac3c232"
+                  uuid = "B1DD84E1-901E-4ADB-9131-ABABE50B4815 - a3a13c4f564d41c4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ShowDetailsManager.cancelRequestMemberShipFromApi(id: Swift.Int, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ShowDetailsModel.RequestMemberShipResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -2739,14 +2739,14 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "B1DD84E1-901E-4ADB-9131-ABABE50B4815 - f4cdae5a1e51fd8d"
+                  uuid = "B1DD84E1-901E-4ADB-9131-ABABE50B4815 - 19882662f2df7e7b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.ShowDetailsManager.cancelRequestMemberShipFromApi(id: Swift.Int, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ShowDetailsModel.RequestMemberShipResponse&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -3060,44 +3060,14 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - db3a324009b7c557"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.ProfileManager.__allocating_init() -&gt; Hi5.ProfileManager"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - e34db8c0fd08f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.ProfileManager.init() -&gt; Hi5.ProfileManager"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - ba907c7f723444a6"
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 8b930affc6af27e6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileManager.deinit"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -3105,18 +3075,48 @@
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 5e56247382dd5eb5"
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 6f5552f336463df5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileManager.__deallocating_deinit"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - ea3944c0bd2ca617"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ProfileManager.__allocating_init() -&gt; Hi5.ProfileManager"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 310d425b3894b3cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ProfileManager.init() -&gt; Hi5.ProfileManager"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -3154,14 +3154,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "41181D14-1ABE-4F41-9561-89637FCAA838 - 4c61babab71d95c0"
+                  uuid = "41181D14-1ABE-4F41-9561-89637FCAA838 - 64649db7e1e20ffa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileInteractor.doShowProfile(id: Swift.Int, lat: Swift.Double, long: Swift.Double) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -3169,14 +3169,14 @@
                   offsetFromSymbolStart = "155">
                </Location>
                <Location
-                  uuid = "41181D14-1ABE-4F41-9561-89637FCAA838 - 4af677283e40ce10"
+                  uuid = "41181D14-1ABE-4F41-9561-89637FCAA838 - 62f3502568bf542a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ProfileModel.PartnerProfile&gt;) -&gt; () in Hi5.ProfileInteractor.doShowProfile(id: Swift.Int, lat: Swift.Double, long: Swift.Double) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -3250,14 +3250,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "8BED0886-D1C0-49F3-9E24-8AB694B93315 - ef99634d96ee8256"
+                  uuid = "8BED0886-D1C0-49F3-9E24-8AB694B93315 - de9a15cd2275e116"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileManager.showProfileFromApi(id: Swift.Int, lat: Swift.Double, long: Swift.Double, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ProfileModel.PartnerProfile&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -3265,14 +3265,14 @@
                   offsetFromSymbolStart = "86">
                </Location>
                <Location
-                  uuid = "8BED0886-D1C0-49F3-9E24-8AB694B93315 - 21dd15314863e82c"
+                  uuid = "8BED0886-D1C0-49F3-9E24-8AB694B93315 - 10de63b1fcf88b6c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.ProfileManager.showProfileFromApi(id: Swift.Int, lat: Swift.Double, long: Swift.Double, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ProfileModel.PartnerProfile&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -3714,14 +3714,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CFB61127-9087-4854-9358-21207459A59B - 363087b1ee55393e"
+                  uuid = "CFB61127-9087-4854-9358-21207459A59B - dce0843396fb1f04"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.EditProfileInteractor.doEditProfile(view: __C.UIViewController, editProfile: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, image: __C.UIImage) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileInteractor/EditProfileInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileInteractor/EditProfileInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -3729,14 +3729,14 @@
                   offsetFromSymbolStart = "149">
                </Location>
                <Location
-                  uuid = "CFB61127-9087-4854-9358-21207459A59B - e445b407918a0ca9"
+                  uuid = "CFB61127-9087-4854-9358-21207459A59B - e95b785e9242a93"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; () in Hi5.EditProfileInteractor.doEditProfile(view: __C.UIViewController, editProfile: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, image: __C.UIImage) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileInteractor/EditProfileInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileInteractor/EditProfileInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -3762,14 +3762,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "673049CE-96B8-4FC7-AB06-1E449970342B - 34b1dfac7d8a0ccf"
+                  uuid = "673049CE-96B8-4FC7-AB06-1E449970342B - e46a8e9c6870c344"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.EditProfileManager.editProfileFromApi(editProfile: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, image: __C.UIImage, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileServices/EditProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileServices/EditProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
@@ -3777,14 +3777,14 @@
                   offsetFromSymbolStart = "73">
                </Location>
                <Location
-                  uuid = "673049CE-96B8-4FC7-AB06-1E449970342B - 98be766e77138536"
+                  uuid = "673049CE-96B8-4FC7-AB06-1E449970342B - 4865275e62e94abd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.EditProfileManager.editProfileFromApi(editProfile: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, image: __C.UIImage, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileServices/EditProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/EditProfile/EditProfileServices/EditProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -3874,14 +3874,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B042DA91-918F-49CC-ABC9-7FD9AC6460AD - 98454e1b40f53a34"
+                  uuid = "B042DA91-918F-49CC-ABC9-7FD9AC6460AD - b0406916160aa00e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileInteractor.showPlyerProfile(id: Swift.Int) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "60"
@@ -3889,14 +3889,14 @@
                   offsetFromSymbolStart = "84">
                </Location>
                <Location
-                  uuid = "B042DA91-918F-49CC-ABC9-7FD9AC6460AD - 26c3aac592fb8512"
+                  uuid = "B042DA91-918F-49CC-ABC9-7FD9AC6460AD - ec68dc8c4041f28"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Hi5.ProfileModel.FullPlayerShowProfile&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ProfileModel.PlayerShowProfile&gt;) -&gt; () in Hi5.ProfileInteractor.showPlyerProfile(id: Swift.Int) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileInteractor/ProfileInteractor.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -3938,14 +3938,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3710FEB1-CCFB-4EB9-9CE7-956B95F126C0 - f5d4c509e4d9eb36"
+                  uuid = "3710FEB1-CCFB-4EB9-9CE7-956B95F126C0 - c4d7b38950428876"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileManager.showPlayerFromApi(id: Swift.Int, complition: (Swift.Optional&lt;Hi5.ProfileModel.FullPlayerShowProfile&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ProfileModel.PlayerShowProfile&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
@@ -3953,14 +3953,14 @@
                   offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "3710FEB1-CCFB-4EB9-9CE7-956B95F126C0 - ab06a98ff69351cf"
+                  uuid = "3710FEB1-CCFB-4EB9-9CE7-956B95F126C0 - 9a05df0f4208328f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.ProfileManager.showPlayerFromApi(id: Swift.Int, complition: (Swift.Optional&lt;Hi5.ProfileModel.FullPlayerShowProfile&gt;, Swift.Bool, Swift.Optional&lt;Hi5.ProfileModel.PlayerShowProfile&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
@@ -4018,14 +4018,14 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "C27755CA-68A8-42BD-8A38-7117BD78B9E6 - f7a102079bcd4ce0"
+                  uuid = "C27755CA-68A8-42BD-8A38-7117BD78B9E6 - 5708058433ae65d2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileModel.FriendUser.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Hi5.ProfileModel.FriendUser.CodingKeys&gt;"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileModel.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "115"
@@ -4033,14 +4033,14 @@
                   offsetFromSymbolStart = "212">
                </Location>
                <Location
-                  uuid = "C27755CA-68A8-42BD-8A38-7117BD78B9E6 - deffcca4cf4e4a4d"
+                  uuid = "C27755CA-68A8-42BD-8A38-7117BD78B9E6 - 7e56cb27672d637f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.ProfileModel.FriendUser.CodingKeys.rawValue.getter : Swift.String"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileModel.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "115"
@@ -4766,14 +4766,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "09807E65-542F-400E-A0CA-4F0EA2993AC1 - 7978919806378e6c"
+                  uuid = "09807E65-542F-400E-A0CA-4F0EA2993AC1 - 757c368b95910e24"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in Hi5.NetworkService.uploadToServerWith&lt;A where A: Hi5.IEndpoint&gt;(endpoint: A, success: Swift.Optional&lt;(Foundation.Data) -&gt; ()&gt;, failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "97"
@@ -4781,14 +4781,14 @@
                   offsetFromSymbolStart = "1272">
                </Location>
                <Location
-                  uuid = "09807E65-542F-400E-A0CA-4F0EA2993AC1 - c7a028f6a93dd989"
+                  uuid = "09807E65-542F-400E-A0CA-4F0EA2993AC1 - cba48fe53a9b59c1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.MultipartFormData) -&gt; () in closure #1 () -&gt; () in Hi5.NetworkService.uploadToServerWith&lt;A where A: Hi5.IEndpoint&gt;(endpoint: A, success: Swift.Optional&lt;(Foundation.Data) -&gt; ()&gt;, failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "93"
@@ -4862,14 +4862,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EF7A69FB-E7EB-4F6C-8017-6E93F43741B4 - ba0f660e2bdb33c5"
+                  uuid = "EF7A69FB-E7EB-4F6C-8017-6E93F43741B4 - b60bc11db87db38d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 (Alamofire.SessionManager.MultipartFormDataEncodingResult) -&gt; () in closure #1 () -&gt; () in Hi5.NetworkService.uploadToServerWith&lt;A where A: Hi5.IEndpoint&gt;(endpoint: A, success: Swift.Optional&lt;(Foundation.Data) -&gt; ()&gt;, failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
@@ -4877,14 +4877,14 @@
                   offsetFromSymbolStart = "343">
                </Location>
                <Location
-                  uuid = "EF7A69FB-E7EB-4F6C-8017-6E93F43741B4 - 853c9fddc8fb7a1d"
+                  uuid = "EF7A69FB-E7EB-4F6C-8017-6E93F43741B4 - 893838ce5b5dfa55"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__C.NSProgress) -&gt; () in closure #2 (Alamofire.SessionManager.MultipartFormDataEncodingResult) -&gt; () in closure #1 () -&gt; () in Hi5.NetworkService.uploadToServerWith&lt;A where A: Hi5.IEndpoint&gt;(endpoint: A, success: Swift.Optional&lt;(Foundation.Data) -&gt; ()&gt;, failure: Swift.Optional&lt;(Swift.Optional&lt;Swift.Error&gt;) -&gt; ()&gt;) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Shared/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -5102,14 +5102,14 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "20879D6D-BB73-41CB-8160-E98842286A72 - ef4895f88f552a36"
+                  uuid = "20879D6D-BB73-41CB-8160-E98842286A72 - 69fa6bdd4608f4d9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.SechaduleModel.CanceledSechaduleField.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;Hi5.SechaduleModel.CanceledSechaduleField.CodingKeys&gt;"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Sechadule/SechaduleServices/SechaduleModel.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Sechadule/SechaduleServices/SechaduleModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -5117,14 +5117,14 @@
                   offsetFromSymbolStart = "128">
                </Location>
                <Location
-                  uuid = "20879D6D-BB73-41CB-8160-E98842286A72 - 47f1ef0a72377e5f"
+                  uuid = "20879D6D-BB73-41CB-8160-E98842286A72 - c143112fbb6aa0b0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Hi5.SechaduleModel.CanceledSechaduleField.CodingKeys.rawValue.getter : Swift.String"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/GitHub/hi5/hi5-ios/Hi5/App%20Modules%20/Sechadule/SechaduleServices/SechaduleModel.swift"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Sechadule/SechaduleServices/SechaduleModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -5160,8 +5160,8 @@
             filePath = "Hi5/App Modules /UserManagment/Login/LoginViews/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "eyeBtnTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5176,9 +5176,441 @@
             filePath = "Hi5/App Modules /UserManagment/Login/LoginViews/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "eyeBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "764BBCA8-22B3-43EB-B092-2CEFAABA4FD9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameViews/ChangeUsernameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "changeBtnAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA2384D0-24CE-44FF-BAC6-195F2ACA0CD3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameServices/ChangeUsernameManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "changeUsernameFromApi(username:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41D431EB-269A-45D6-88C8-9897A6443964"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameInteractor/ChangeUsernameInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "doChangeUserName(view:username:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBCAD98B-F8C5-4699-97AD-21670E2C7AC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordInteractor/CreatePasswordInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "doCreatePassword()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EBCAD98B-F8C5-4699-97AD-21670E2C7AC5 - a31160df4ff76551"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.CreatePasswordInteractor.doCreatePassword() -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/CreatePassword/CreatePasswordInteractor/CreatePasswordInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  uuid = "EBCAD98B-F8C5-4699-97AD-21670E2C7AC5 - 90c8958ad5646ce4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; () in Hi5.CreatePasswordInteractor.doCreatePassword() -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/CreatePassword/CreatePasswordInteractor/CreatePasswordInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8AA7581-C11F-4739-AC36-50A5DE9B507A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameViews/ChangeUsernameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "backBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C088D44E-8CA3-49A4-9F8B-F49D15D5405C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "sendVerificationCode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E869E4A4-6F69-434D-9050-8F082970DEA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "sendVerificationCode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55DB7E3D-1BCE-42E5-918E-9C6727F7B6A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "sendVerificationCode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63E767CE-B38D-4A73-A8F6-8F89C8EEADB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "prozessTimer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57577BE9-3D3D-4712-87D7-5F3581511FEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordServices/CreatePasswordManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "createPasswordFromApi(parameters:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8B0A4BB-C5B0-4E71-A792-7C4059871D83"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/Login/LoginServices/LoginManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "loginFromApi(userName:password:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC5E15B3-B217-4754-8F66-A3D607164C46"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/Login/LoginServices/LoginManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loginFromApi(userName:password:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39B10F2C-2577-4E0A-8E6F-29AA36E76CB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/Login/LoginInteractor/LoginInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "doLogin(view:userName:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80830352-5E8F-4859-A628-96EA9C9A378E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/Login/LoginInteractor/LoginInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "doLogin(view:userName:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F404E0DA-B5EE-403E-A00D-D7D97DCE2422"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/Login/LoginInteractor/LoginInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "doLogin(view:userName:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3115C6DD-FD6E-4BD4-B884-A4BF409E4E12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "continueBtnAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3BFF054-FBBE-4FC6-9DB4-EC7B48254B11"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "42190CE0-A743-4C4C-8BA2-F0012F358B85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A9C07C5-9DBD-45EA-A589-2A4852FE6815"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE60CF4D-4912-40F2-9A3E-2511FC8DCFB8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E8CB496E-DE4F-4DBC-BB95-C64608092E17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5F58287-57E4-4438-8865-2E5C2FC834E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E0EED8E-C8BE-4BD4-8FE9-0E0A475C3932"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73C4A832-4112-4253-9682-2AED7126CB73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BF7708A-0799-4773-9B05-A3E8A6A785A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

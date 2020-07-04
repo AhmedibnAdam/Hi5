@@ -24,11 +24,11 @@ class WelcomeRouter: IWelcomeRouter {
 		self.view = view
 	}
     func navigateToChangeUsername() {
-        view?.navigate(type: .modal, module: GeneralRoute.changeUsername, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.changeUsername(param: ["String" : "Any"]), completion: nil)
     }
     
     func navigateToCreatePassword() {
-        view?.navigate(type: .modal, module: GeneralRoute.createPassword, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.createPassword(param: ["String" : "Any"]), completion: nil)
     }
     
     func navigateToLogin() {

@@ -21,7 +21,14 @@ struct PhoneVerificationModel {
 	}
 
     struct PhoneVerificationResponse: Codable {
-		
+        let status: Bool?
+           let  msg: String?
+
+           enum CodingKeys: String, CodingKey {
+               case status
+           
+               case  msg
+           }
 	}
     
     struct ResendVerificationCodeResponse: Codable {

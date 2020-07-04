@@ -21,7 +21,7 @@ enum GeneralRoute: IRouter {
      
      you can use: String, Int, [String: Any], etc..
      */
-    
+    case enterance
     case login
     case register
     case forgetPassword
@@ -31,8 +31,8 @@ enum GeneralRoute: IRouter {
     case phoneVerification
     case sigupVerificationPhone
     case welcome
-    case createPassword
-    case changeUsername
+    case createPassword(param: [String: Any])
+    case changeUsername(param: [String: Any])
     case tabBar
     case profile(param: [String: Any],id: Int)
     case editProfile
@@ -83,11 +83,13 @@ extension GeneralRoute {
          */
         
         switch self {
+        case .enterance:
+            return EntranceConfiguration.setup()
         case .login:
             return LoginConfiguration.setup()
         case .register:
             return RegisterConfiguration.setup()
-      
+            
         case .forgetPassword:
             return ForgetPasswordConfiguration.setup()
         case .forgetPhone:
@@ -102,10 +104,10 @@ extension GeneralRoute {
             return SignupPhoneVerificationConfiguration.setup()
         case .welcome:
             return WelcomeConfiguration.setup()
-        case .createPassword:
-            return CreatePasswordConfiguration.setup()
-        case .changeUsername:
-            return ChangeUsernameConfiguration.setup()
+        case .createPassword(let params):
+            return CreatePasswordConfiguration.setup(parameters: params)
+        case .changeUsername(let params):
+            return ChangeUsernameConfiguration.setup(parameters: params)
         case .tabBar:
             return TabBarConfiguration.setup()
         case .profile(let param , let id):
@@ -134,26 +136,26 @@ extension GeneralRoute {
             return MyBookingsConfiguration.setup()
         case .mySechadule:
             return SechaduleConfiguration.setup()
-        
+            
         case .publicEvents(let event_id):
             return PublicEventDetailsConfiguration.setup(field_id: event_id)
             
             
-            case .suggestField:
-                return SuggestFieldConfiguration.setup()
-            case .suggestFieldDetails(let latitude , let longitude):
-                return SuggestFieldDetailsConfiguration.setup(latitude: latitude, longitude: longitude)
-            case .fieldOwnerDetails(let param , let images):
-                return FieldOwnerDetailsConfiguration.setup(param: param, images: images)
-            case .sessionDetails(let param , let id , let payment , let sessionId):
-                return SessionDetailsConfiguration.setup(parameters : param , id: id, payment: payment , sessionId: sessionId)
-            case .checkOutSessionDetails(let field , let session):
-                return CheckOutSessionDetailsConfiguration.setup(field: field , session: session)
-            case .walletSuccessCheckOut:
-                return WalletSuccessCheckOutConfiguration.setup()
+        case .suggestField:
+            return SuggestFieldConfiguration.setup()
+        case .suggestFieldDetails(let latitude , let longitude):
+            return SuggestFieldDetailsConfiguration.setup(latitude: latitude, longitude: longitude)
+        case .fieldOwnerDetails(let param , let images):
+            return FieldOwnerDetailsConfiguration.setup(param: param, images: images)
+        case .sessionDetails(let param , let id , let payment , let sessionId):
+            return SessionDetailsConfiguration.setup(parameters : param , id: id, payment: payment , sessionId: sessionId)
+        case .checkOutSessionDetails(let field , let session):
+            return CheckOutSessionDetailsConfiguration.setup(field: field , session: session)
+        case .walletSuccessCheckOut:
+            return WalletSuccessCheckOutConfiguration.setup()
         case .MyWallet :
-                return MyWalletConfiguration.setup()
-       
+            return MyWalletConfiguration.setup()
+            
         case .bookingDetails(let id , let type ):
             return BookingDetailsConfiguration.setup( id: id , type: type )
         case .comment(let param):
@@ -161,11 +163,12 @@ extension GeneralRoute {
         case .allComments(let id):
             return AllCommentsConfiguration.setup(fieldId: id)
         case .filterBublicEvent(let param):
-           return FilterBublicEventConfiguration.setup(parameters: param)
-           
-           case .publicEvent(let params):
-           return PublicEventsConfiguration.setup(parameters: params)
-         }
+            return FilterBublicEventConfiguration.setup(parameters: param)
+            
+        case .publicEvent(let params):
+            return PublicEventsConfiguration.setup(parameters: params)
+            
+        }
        
     }
 }

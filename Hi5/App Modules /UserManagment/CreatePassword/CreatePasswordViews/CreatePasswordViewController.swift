@@ -20,6 +20,7 @@ protocol ICreatePasswordViewController: class {
 class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
 	var interactor: ICreatePasswordInteractor?
 	var router: ICreatePasswordRouter?
+    var parameters: [String: Any]?
     //MARK:- Outlets
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -95,7 +96,8 @@ extension CreatePasswordViewController: ICreatePasswordViewController {
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func navigateToProfile() {
-        router?.navigateToProfile()
+        print("registered")
+        router?.navigateToVerify()
     }
     func hideIndicator() {
         loadingIndicator.isHidden = true
@@ -130,7 +132,10 @@ extension CreatePasswordViewController {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
         }
         showIndicator()
-        interactor?.doCreatePassword(view: self, password: password, confirmPassword: confirmPassword)
+        parameters?["password"] = password
+        parameters?["password_confirmation"] = confirmPassword
+        interactor?.parameters = parameters
+        interactor?.doCreatePassword()
     }
     func loginBtnAction() {
         router?.navigateToLogin()

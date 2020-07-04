@@ -14,6 +14,7 @@ protocol IPhoneVerificationInteractor: class {
 	var parameters: [String: Any]? { get set }
     func doPhoneVerification(view : UIViewController , code: String)
     func doResendVerificationCode(view : UIViewController)
+     func doSendVerificationCode(view : UIViewController)
 }
 
 class PhoneVerificationInteractor: IPhoneVerificationInteractor {
@@ -29,9 +30,9 @@ class PhoneVerificationInteractor: IPhoneVerificationInteractor {
     func doPhoneVerification(view: UIViewController, code: String) {
         manager?.PhoneVerificationFromApi(code: code, complition: { (error, succes) in
             if (succes == true) {
-                self.presenter?.navigateToCreatePassword()
+                self.presenter?.navigateToProfile()
             } else {
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Alert", msg: "sorry code verification not matach the code sent")
             }
         })
     }
@@ -47,4 +48,15 @@ class PhoneVerificationInteractor: IPhoneVerificationInteractor {
             }
         })
     }
+    func doSendVerificationCode(view: UIViewController) {
+         manager?.sendVerificationCodeFromApi(complition: { (error, succes) in
+             if (succes == true) {
+                 self.presenter?.hideIndicator()
+                 print("Done Resend Verification Code......")
+             } else {
+                 self.presenter?.hideIndicator()
+                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+             }
+         })
+     }
 }

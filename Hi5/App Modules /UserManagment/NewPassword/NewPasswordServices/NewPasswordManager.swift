@@ -22,6 +22,8 @@ class NewPasswordManager: INewPasswordManager {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(NewPasswordModel.NewPasswordResponse.self, from: response)
                 print(user)
+                
+             
                 complition(nil , true)
                 
             } catch let error {

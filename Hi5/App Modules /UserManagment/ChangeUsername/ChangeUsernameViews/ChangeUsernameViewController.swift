@@ -20,6 +20,8 @@ protocol IChangeUsernameViewController: class {
 class ChangeUsernameViewController: UIViewController {
 	var interactor: IChangeUsernameInteractor?
 	var router: IChangeUsernameRouter?
+
+    var parameters: [String: Any]?
     //MARK:- Outlets
 
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -31,9 +33,11 @@ class ChangeUsernameViewController: UIViewController {
     @IBOutlet weak var containerView1: UIView!
     @IBOutlet weak var containerView2: UIView!
     @IBOutlet weak var logoView: UIView!
+    @IBOutlet weak var errorMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameTextField.delegate = self
+        errorMessage.text = ""
         configer()
     }
   
@@ -52,10 +56,13 @@ class ChangeUsernameViewController: UIViewController {
    //MARK:- extensions
 extension ChangeUsernameViewController: IChangeUsernameViewController {
     func showAlert(title: String, msg: String) {
-         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
+        errorMessage.text = msg
+//         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func navigateToCreatePassword() {
-        router?.navigateToCreatePassword()
+        guard let username = usernameTextField.text else {return}
+        parameters?["vie_id"] = username
+        router?.navigateToCreatePassword(param: parameters!)
     }
     func hideIndicator() {
         loadingIndicator.isHidden = true
@@ -89,6 +96,7 @@ extension ChangeUsernameViewController {
     }
     
     func loginBtnAction() {
+        
         router?.navigateToLogin()
     }
 }

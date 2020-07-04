@@ -19,6 +19,7 @@ class ChangeUsernameConfiguration {
         let manager = ChangeUsernameManager()
         let interactor = ChangeUsernameInteractor(presenter: presenter, manager: manager)
         
+        controller.parameters = parameters
         controller.interactor = interactor
         controller.router = router
         interactor.parameters = parameters

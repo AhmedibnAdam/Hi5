@@ -16,9 +16,11 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.00001) {
             let defaults = UserDefaults.standard
             if (defaults.string(forKey: "Token") != nil){
+                
                 self.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
+                
             } else {
-                self.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
+                self.navigate(type: .modal, module: GeneralRoute.enterance, completion: nil)
             }
         }
        

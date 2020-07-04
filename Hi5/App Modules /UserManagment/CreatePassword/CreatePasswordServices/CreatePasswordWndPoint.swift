@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum CreatePasswordEndpoint {
-   case CreatePassword(password: String , confirmPassword: String)
+   case CreatePassword(parameters:[String: Any]?)
 }
 
 //MARK:- Extension
@@ -30,25 +30,19 @@ extension CreatePasswordEndpoint: IEndpoint {
     var path: String {
         switch self {
            case .CreatePassword:
-             return "http://api-ksa.com/demo/hi5/public/api/player/" + "create_password"
+             return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
         }
     }
     
     var parameter: Parameters? {
         switch self {
-            case .CreatePassword(let password , let confirmPassword):
-                return ["password": password , "password_confirmation": confirmPassword]
+            case .CreatePassword(let param):
+                return param
         }
     }
     
     var header: HTTPHeaders? {
-        switch self {
-           case .CreatePassword:
-            let defaults = UserDefaults.standard
-            let token = defaults.string(forKey: "TokenI")
-            
-            return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
-        }
+     return nil
     }
     
     var encoding: ParameterEncoding {

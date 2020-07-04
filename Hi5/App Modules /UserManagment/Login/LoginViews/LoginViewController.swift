@@ -35,8 +35,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordView: UIView!
     
      //MARK: - buttons outlet
-    @IBOutlet weak var signInOutlet: UIButton!
-    @IBOutlet weak var SignupOutlet: UIButton!
+//    @IBOutlet weak var signInOutlet: UIButton!
+//    @IBOutlet weak var SignupOutlet: UIButton!
     @IBOutlet weak var forgetPasswordOutlet: UIButton!
     @IBOutlet weak var doLoginButtonOutlet: UIButton!
     
@@ -60,8 +60,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: - Actions
-    @IBAction func login(_ sender: UIButton) {
-        
+
+    @IBAction func back(_ sender: UIButton) {
+        self.navigate(type: .modal, module: GeneralRoute.enterance, completion: nil)
     }
     @IBAction func eyeBtnTapped(_ sender: UIButton) {
         if self.password.isSecureTextEntry {
@@ -77,9 +78,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ForgetPasswordTapped(_ sender: Any) {
         router?.navigateToForgetPassword()
     }
-    @IBAction func signUP(_ sender: UIButton) {
-        router?.navigateToSignUp()
-    }
+//    @IBAction func signUP(_ sender: UIButton) {
+//        router?.navigateToSignUp()
+//    }
     @IBAction func doLogin(_ sender: UIButton) {
         
         doLoginAction()
@@ -88,6 +89,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 extension LoginViewController: ILoginViewController {
     func showAlert(title: String, msg: String) {
+        if msg ==  "User not Active"{
+            router?.navigateToVerification()
+        }
          ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func navigateToProfile() {

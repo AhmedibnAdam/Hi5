@@ -19,6 +19,6 @@ struct ChangeUsernameModel {
 
     struct ChangeUsernameResponse: Codable {
         let status: Bool?
-        let success: String?
+        let msg: String?
     }
 }

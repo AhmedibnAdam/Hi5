@@ -10,12 +10,11 @@
 
 import UIKit
 import DropDown
-import FlagPhoneNumber
+//import FlagPhoneNumber
 
 protocol IRegisterViewController: class {
 	var router: IRegisterRouter? { get set }
     func showAlert(title: String, msg: String)
-    func navigateToSignupPhoneVerification()
     func hideIndicator()
 }
 
@@ -26,12 +25,12 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var checkBoxBtn: UIButton!
-    @IBOutlet weak var countryCode: FPNTextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
+//    @IBOutlet weak var countryCode: FPNTextField!
+//    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var fullNameView: UIView!
-    @IBOutlet weak var phoneNumberView: UIView!
+//    @IBOutlet weak var phoneNumberView: UIView!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var containerView4: UIView!
     @IBOutlet weak var containerView3: UIView!
@@ -43,10 +42,10 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fullNameTextField.delegate = self
-        self.phoneNumberTextField.delegate = self
+//        self.phoneNumberTextField.delegate = self
         initView()
         configure()
-        delegateCountryCode()
+//        delegateCountryCode()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -58,8 +57,10 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
+        
+        
         if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
-            signupAction()
+            navigateToCreateUserName()
              }
         else {
             showAlert(title: "Message", msg: "Please Accept Terms And Conditions")
@@ -85,8 +86,9 @@ extension RegisterViewController: IRegisterViewController {
     func showAlert(title: String, msg: String) {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-    func navigateToSignupPhoneVerification() {
-        router?.navigateToSignupPhoneVerification()
+    func navigateToCreateUserName() {
+         guard let username = fullNameTextField.text else {return}
+        router?.navigateToCreateUserName(param: ["full_name": username])
     }
     func hideIndicator() {
         loadingIndicator.isHidden = true
@@ -104,38 +106,38 @@ extension RegisterViewController {
     }
 }
 extension RegisterViewController {
-    func signupAction() {
-        guard let fullName = fullNameTextField.text , let phoneNumber = phoneNumberTextField.text else {return}
-        let replacedDialCode = dialCode?.replacingOccurrences(of: "+", with: "")
-        let phone = (replacedDialCode ?? "966") + phoneNumber
-        print(phone)
-         if(fullName.isEmpty || phoneNumber.isEmpty){
-            fullNameView.viewBorderWidth = 1.0
-            fullNameView.viewBorderColor = UIColor.red
-            phoneNumberView.viewBorderWidth = 1.0
-            phoneNumberView.viewBorderColor = UIColor.red
-             return
-         }
-        let defaults = UserDefaults.standard
-        defaults.set(fullName, forKey: "FullName") as? String
-        showIndicator()
-        interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phone)
-    }
+//    func signupAction() {
+//        guard let fullName = fullNameTextField.text , let phoneNumber = phoneNumberTextField.text else {return}
+//        let replacedDialCode = dialCode?.replacingOccurrences(of: "+", with: "")
+//        let phone = (replacedDialCode ?? "966") + phoneNumber
+//        print(phone)
+//         if(fullName.isEmpty || phoneNumber.isEmpty){
+//            fullNameView.viewBorderWidth = 1.0
+//            fullNameView.viewBorderColor = UIColor.red
+//            phoneNumberView.viewBorderWidth = 1.0
+//            phoneNumberView.viewBorderColor = UIColor.red
+//             return
+//         }
+//        let defaults = UserDefaults.standard
+//        defaults.set(fullName, forKey: "FullName") as? String
+//        showIndicator()
+//        interactor?.doSignup(view: self, fullName: fullName, phoneNumber: phone)
+//    }
     func loginBtnAction() {
         router?.navigateToLogin()
     }
 }
 
 //MARK:- DropDown Pod
-extension RegisterViewController: FPNTextFieldDelegate {
+extension RegisterViewController /*: FPNTextFieldDelegate */{
     
-    func delegateCountryCode() {
-        countryCode.inputView = FPNCountryPicker()
-        countryCode.setFlag(countryCode: .SA)
-        countryCode.hasPhoneNumberExample = false
-        countryCode.placeholder = ""
-        countryCode.delegate = self
-    }
+//    func delegateCountryCode() {
+//        countryCode.inputView = FPNCountryPicker()
+//        countryCode.setFlag(countryCode: .SA)
+//        countryCode.hasPhoneNumberExample = false
+//        countryCode.placeholder = ""
+//        countryCode.delegate = self
+//    }
     
     func fpnDisplayCountryList() {
     }
@@ -145,17 +147,17 @@ extension RegisterViewController: FPNTextFieldDelegate {
         self.dialCode = dialCode
     }
 
-    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
-        if isValid {
-            // Do something...
-//            textField.getFormattedPhoneNumber(format: .E164)           // Output "+33600000001"
-//            textField.getFormattedPhoneNumber(format: .International)  // Output "+33 6 00 00 00 01"
-//            textField.getFormattedPhoneNumber(format: .National)       // Output "06 00 00 00 01"
-//            textField.getFormattedPhoneNumber(format: .RFC3966)        // Output "tel:+33-6-00-00-00-01"
-//            textField.getRawPhoneNumber()                               // Output "600000001"
-        } else {
-            // Do something...
-        }
-    }
+//    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+//        if isValid {
+//            // Do something...
+////            textField.getFormattedPhoneNumber(format: .E164)           // Output "+33600000001"
+////            textField.getFormattedPhoneNumber(format: .International)  // Output "+33 6 00 00 00 01"
+////            textField.getFormattedPhoneNumber(format: .National)       // Output "06 00 00 00 01"
+////            textField.getFormattedPhoneNumber(format: .RFC3966)        // Output "tel:+33-6-00-00-00-01"
+////            textField.getRawPhoneNumber()                               // Output "600000001"
+//        } else {
+//            // Do something...
+//        }
+//    }
 }
 

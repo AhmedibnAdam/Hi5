@@ -129,6 +129,14 @@
 		662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */; };
 		662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */; };
 		662A16ED23C3ECE000A3695E /* MyFriendsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */; };
+		662EF18224AC9AF600AB7F66 /* EntranceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF17A24AC9AF600AB7F66 /* EntranceConfiguration.swift */; };
+		662EF18324AC9AF600AB7F66 /* EntrancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF17B24AC9AF600AB7F66 /* EntrancePresenter.swift */; };
+		662EF18424AC9AF600AB7F66 /* EntranceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF17C24AC9AF600AB7F66 /* EntranceWorker.swift */; };
+		662EF18524AC9AF600AB7F66 /* EntranceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF17D24AC9AF600AB7F66 /* EntranceRouter.swift */; };
+		662EF18624AC9AF600AB7F66 /* EntranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF17E24AC9AF600AB7F66 /* EntranceViewController.swift */; };
+		662EF18724AC9AF600AB7F66 /* EntranceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF17F24AC9AF600AB7F66 /* EntranceInteractor.swift */; };
+		662EF18824AC9AF600AB7F66 /* EntranceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662EF18024AC9AF600AB7F66 /* EntranceModel.swift */; };
+		662EF18924AC9AF600AB7F66 /* EntranceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 662EF18124AC9AF600AB7F66 /* EntranceViewController.xib */; };
 		663117CE243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631179E243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift */; };
 		663117CF243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117A0243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift */; };
 		663117D0243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663117A2243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift */; };
@@ -730,6 +738,14 @@
 		662A16E323C3ECE000A3695E /* MyFriendsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestModel.swift; sourceTree = "<group>"; };
 		662A16E423C3ECE000A3695E /* MyFriendsRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFriendsRequestViewController.xib; sourceTree = "<group>"; };
 		662A16E523C3ECE000A3695E /* MyFriendsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsRequestManager.swift; sourceTree = "<group>"; };
+		662EF17A24AC9AF600AB7F66 /* EntranceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceConfiguration.swift; sourceTree = "<group>"; };
+		662EF17B24AC9AF600AB7F66 /* EntrancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrancePresenter.swift; sourceTree = "<group>"; };
+		662EF17C24AC9AF600AB7F66 /* EntranceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceWorker.swift; sourceTree = "<group>"; };
+		662EF17D24AC9AF600AB7F66 /* EntranceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceRouter.swift; sourceTree = "<group>"; };
+		662EF17E24AC9AF600AB7F66 /* EntranceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceViewController.swift; sourceTree = "<group>"; };
+		662EF17F24AC9AF600AB7F66 /* EntranceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceInteractor.swift; sourceTree = "<group>"; };
+		662EF18024AC9AF600AB7F66 /* EntranceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceModel.swift; sourceTree = "<group>"; };
+		662EF18124AC9AF600AB7F66 /* EntranceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntranceViewController.xib; sourceTree = "<group>"; };
 		6631179E243F25D7007C3FED /* CheckOutSessionDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutSessionDetailsPresenter.swift; sourceTree = "<group>"; };
 		663117A0243F25D7007C3FED /* CheckOutSessionDetailsConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutSessionDetailsConfiguration.swift; sourceTree = "<group>"; };
 		663117A2243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutSessionDetailsRouter.swift; sourceTree = "<group>"; };
@@ -1782,6 +1798,77 @@
 			path = MyFriendsRequestTableViewCell;
 			sourceTree = "<group>";
 		};
+		662EF16224AC968300AB7F66 /* Entrance */ = {
+			isa = PBXGroup;
+			children = (
+				662EF18C24AC9B6D00AB7F66 /* Configure */,
+				662EF18D24AC9B7900AB7F66 /* Presenter */,
+				662EF18B24AC9B1700AB7F66 /* worker */,
+				662EF18E24AC9B8800AB7F66 /* router */,
+				662EF18A24AC9B0900AB7F66 /* view */,
+				662EF18F24AC9B9500AB7F66 /* Interactor */,
+				662EF19024AC9B9F00AB7F66 /* services */,
+			);
+			path = Entrance;
+			sourceTree = "<group>";
+		};
+		662EF18A24AC9B0900AB7F66 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				662EF17E24AC9AF600AB7F66 /* EntranceViewController.swift */,
+				662EF18124AC9AF600AB7F66 /* EntranceViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		662EF18B24AC9B1700AB7F66 /* worker */ = {
+			isa = PBXGroup;
+			children = (
+				662EF17C24AC9AF600AB7F66 /* EntranceWorker.swift */,
+			);
+			path = worker;
+			sourceTree = "<group>";
+		};
+		662EF18C24AC9B6D00AB7F66 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				662EF17A24AC9AF600AB7F66 /* EntranceConfiguration.swift */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		662EF18D24AC9B7900AB7F66 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				662EF17B24AC9AF600AB7F66 /* EntrancePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		662EF18E24AC9B8800AB7F66 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				662EF17D24AC9AF600AB7F66 /* EntranceRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		662EF18F24AC9B9500AB7F66 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				662EF17F24AC9AF600AB7F66 /* EntranceInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		662EF19024AC9B9F00AB7F66 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				662EF18024AC9AF600AB7F66 /* EntranceModel.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		6631179C243F25D7007C3FED /* CheckOutSessionDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -2188,9 +2275,9 @@
 			isa = PBXGroup;
 			children = (
 				66E85A6724A4E9FA00219F22 /* Hi5.entitlements */,
-				6663366123B408E2004E537C /* Launch Screen */,
 				868C28C323C60935003F237A /* Shared */,
 				66340A1423B4DB3C009DB30A /* Common */,
+				6663366123B408E2004E537C /* Launch Screen */,
 				663409E023B4C6E8009DB30A /* App Modules  */,
 				66E85A6824A4F00900219F22 /* GoogleService-Info.plist */,
 				6663362023B4020A004E537C /* Info.plist */,
@@ -2201,6 +2288,7 @@
 		6663362623B40221004E537C /* UserManagment */ = {
 			isa = PBXGroup;
 			children = (
+				662EF16224AC968300AB7F66 /* Entrance */,
 				862A5E7C23CB72130058355E /* ChangeUsername */,
 				86BBEE4F23CB5F5D0036C41D /* CreatePassword */,
 				86B14BD223CB53E600B3FEB1 /* Welcome */,
@@ -4860,6 +4948,7 @@
 				E2FAE5B5240E648300CD8CFC /* SocialHeaderCell.xib in Resources */,
 				663117D9243F25D7007C3FED /* SessionDetailsViewController.xib in Resources */,
 				6683E30F23BCEEFF00250702 /* ProfileViewController.xib in Resources */,
+				662EF18924AC9AF600AB7F66 /* EntranceViewController.xib in Resources */,
 				861C792823FAAB5A00AFCD7B /* MenuCell.xib in Resources */,
 				662A16EC23C3ECE000A3695E /* MyFriendsRequestViewController.xib in Resources */,
 				86F9B91023DDAAA5008C1F80 /* LocationViewController.xib in Resources */,
@@ -5046,6 +5135,7 @@
 				660A14DF24619EF5006DAD45 /* SuggestFieldPresenter.swift in Sources */,
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
 				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
+				662EF18524AC9AF600AB7F66 /* EntranceRouter.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
 				662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */,
 				66AEC62224227B3D003CF2EB /* MyBookingsRouter.swift in Sources */,
@@ -5128,6 +5218,7 @@
 				86E1293023D49E73007CB956 /* TabBarModel.swift in Sources */,
 				6682B3C22429924D0050CC9A /* SechaduleConfiguration.swift in Sources */,
 				66AEC5FF242266B0003CF2EB /* FilterResultInteractor.swift in Sources */,
+				662EF18324AC9AF600AB7F66 /* EntrancePresenter.swift in Sources */,
 				660A14F124619EF5006DAD45 /* FieldOwnerDetailsInteractor.swift in Sources */,
 				660A141A246005A6006DAD45 /* MyWalletViewController.swift in Sources */,
 				662A169823C3E75400A3695E /* MyFavoriteFriendsManager.swift in Sources */,
@@ -5370,6 +5461,7 @@
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
 				6683E31023BCEEFF00250702 /* ProfileManager.swift in Sources */,
 				862EB5AC23D730AD00508F1A /* DateOfBirthConfiguration.swift in Sources */,
+				662EF18824AC9AF600AB7F66 /* EntranceModel.swift in Sources */,
 				661398F324698CCC0050938A /* BookingDetailsConfiguration.swift in Sources */,
 				663117D8243F25D7007C3FED /* FieldContractsCell.swift in Sources */,
 				662A16EB23C3ECE000A3695E /* MyFriendsRequestModel.swift in Sources */,
@@ -5412,6 +5504,7 @@
 				86DB006623D70B97001E99E8 /* GenderConfiguration.swift in Sources */,
 				663117D3243F25D7007C3FED /* CheckOutSessionDetailsInteractor.swift in Sources */,
 				6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */,
+				662EF18724AC9AF600AB7F66 /* EntranceInteractor.swift in Sources */,
 				6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */,
 				86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */,
 				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
@@ -5425,6 +5518,7 @@
 				6663369123B40AFD004E537C /* EmailVerficationRouter.swift in Sources */,
 				E2FAE5DA240E649E00CD8CFC /* PublicEventsModel.swift in Sources */,
 				668E9EEE246EB0F7004A403E /* CommentViewController.swift in Sources */,
+				662EF18224AC9AF600AB7F66 /* EntranceConfiguration.swift in Sources */,
 				6683E2A223BB5FD900250702 /* MyFriendsPresenter.swift in Sources */,
 				668C213823C3F6F700C009A9 /* CommentListsConfiguration.swift in Sources */,
 				6683E31C23BCEF1600250702 /* SideMenuViewController.swift in Sources */,
@@ -5452,6 +5546,7 @@
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				661398F524698CCC0050938A /* BookingDetailsRouter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
+				662EF18424AC9AF600AB7F66 /* EntranceWorker.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
 				6682B3C42429924D0050CC9A /* SechaduleViewController.swift in Sources */,
 				668C212F23C3F6E200C009A9 /* LeaveCommentInCommentListManager.swift in Sources */,
@@ -5466,6 +5561,7 @@
 				663117DD243F25D7007C3FED /* SessionDetailsInteractor.swift in Sources */,
 				860EFCAA2401671100B40901 /* ShowDetailsRouter.swift in Sources */,
 				86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */,
+				662EF18624AC9AF600AB7F66 /* EntranceViewController.swift in Sources */,
 				660A141E246005A6006DAD45 /* MyWalletManager.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
 				662A16B323C3E93900A3695E /* MyFriendsDetailsConfiguration.swift in Sources */,
@@ -5661,7 +5757,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.10;
+				CURRENT_PROJECT_VERSION = 1.1.11;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5685,7 +5781,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.10;
+				CURRENT_PROJECT_VERSION = 1.1.11;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

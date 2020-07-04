@@ -11,22 +11,26 @@
 import Foundation
 
 protocol ICreatePasswordManager: class {
-    func createPasswordFromApi(password: String ,confirmPassword: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
+    func createPasswordFromApi(parameters:[String: Any]?,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
 }
 
 class CreatePasswordManager: ICreatePasswordManager {
-    func createPasswordFromApi(password: String, confirmPassword: String, complition: @escaping (ErrorModel?, Bool) -> Void) {
-            NetworkService.share.request(endpoint: CreatePasswordEndpoint.CreatePassword(password: password, confirmPassword: confirmPassword), success: { (responseData) in
+    func createPasswordFromApi(parameters:[String: Any]?, complition: @escaping (ErrorModel?, Bool) -> Void) {
+            NetworkService.share.request(endpoint: CreatePasswordEndpoint.CreatePassword(parameters: parameters), success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(CreatePasswordModel.CreatePasswordResponse.self, from: response)
-                
-                let defaults = UserDefaults.standard
-                let token = defaults.string(forKey: "TokenI")
-                defaults.set(token, forKey: "Token") as? String
-                print(user)
-                complition(nil , true)
+                   let defaults = UserDefaults.standard
+                             if let token = user.token , let username = user.userName , let fullname = user.fullName {
+                                 defaults.set(token, forKey: "Token") as? String
+                                 defaults.set(username, forKey: "UserName") as? String
+                                 defaults.set(fullname, forKey: "FullName") as? String
+                             }
+                if let status = user.status {
+                    complition(nil , status)
+                }
+                complition(nil , false)
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )

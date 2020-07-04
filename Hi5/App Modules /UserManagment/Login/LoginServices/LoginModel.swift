@@ -23,17 +23,13 @@ struct LoginModel {
    }
     //MARK:- Response
 struct LoginResponse: Codable {
-    let status: Bool?
-    let token, userName, fullName: String?
-    let phoneNumber: Int?
-    let image: String?
+   let status, isActive: Bool?
+       let token, msg: String?
 
-    enum CodingKeys: String, CodingKey {
-        case status, token
-        case userName = "user_name"
-        case fullName = "full_name"
-        case phoneNumber = "phone_number"
-        case image
-    }
+       enum CodingKeys: String, CodingKey {
+           case status
+           case isActive = "is_active"
+           case token, msg
+       }
   }
 }

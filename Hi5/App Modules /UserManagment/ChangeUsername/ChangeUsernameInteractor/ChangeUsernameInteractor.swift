@@ -32,7 +32,7 @@ class ChangeUsernameInteractor: IChangeUsernameInteractor {
                 self.presenter?.navigateToCreatePassword()
             } else {
                  self.presenter?.hideIndicator()
-                 self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                 self.presenter?.showErrorAlert(title: "Alert", msg: "Sorry this name is not available")
             }
         })
     }

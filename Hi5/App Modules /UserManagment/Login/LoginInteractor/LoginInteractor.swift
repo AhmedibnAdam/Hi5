@@ -28,18 +28,27 @@ class LoginInteractor: ILoginInteractor {
         //let request = LoginModel.Request()
         //let param = request.parameters(userName: userName, password: password)
         manager?.loginFromApi(userName: userName , password: password, complition: { (error , success , response) in
-            if (success == true) {
-                if (response?.status == true) {
-                    self.presenter?.hideIndecator()
-                    self.presenter?.navigateToTabBar()
+            
+            if response?.isActive == false{
+                self.presenter?.hideIndecator()
+                self.presenter?.showErrorAlert(title: "Error", msg: "User not Active")
+                self.presenter?.setResponseToErrorLbl()
+            }
+            else {
+                
+                if (success == true) {
+                    if (response?.status == true) {
+                        self.presenter?.hideIndecator()
+                        self.presenter?.navigateToTabBar()
+                    } else {
+                        self.presenter?.hideIndecator()
+                        self.presenter?.showErrorAlert(title: "Error", msg: "userName Or Password is incorrect")
+                        self.presenter?.setResponseToErrorLbl()
+                    }
                 } else {
                     self.presenter?.hideIndecator()
-                    self.presenter?.showErrorAlert(title: "Error", msg: "userName Or Password is incorrect")
-                    self.presenter?.setResponseToErrorLbl()
+                    self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
                 }
-            } else {
-                self.presenter?.hideIndecator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
             }
             
         })

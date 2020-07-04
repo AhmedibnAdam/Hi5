@@ -25,7 +25,7 @@ class RegisterPresenter: IRegisterPresenter {
         view?.showAlert(title: title, msg: msg)
     }
     func navigateToSignupPhoneVerification() {
-        view?.navigateToSignupPhoneVerification()
+//        view?.navigateToSignupPhoneVerification()
     }
     func hideIndicator() {
         view?.hideIndicator()

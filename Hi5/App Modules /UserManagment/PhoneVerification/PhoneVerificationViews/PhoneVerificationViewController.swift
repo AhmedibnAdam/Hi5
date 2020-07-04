@@ -9,19 +9,25 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import DropDown
+import FlagPhoneNumber
 
 protocol IPhoneVerificationViewController: class {
 	var router: IPhoneVerificationRouter? { get set }
     func showAlert(title: String, msg: String)
-    func navigateToCreatePassword()
+    func navigateToProfile()
     func hideIndicator()
 }
 
 class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IPhoneVerificationInteractor?
 	var router: IPhoneVerificationRouter?
+    
+    var dialCode: String?
     //MARK: - Outlets
     
+        @IBOutlet weak var countryCode: FPNTextField!
+        @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var textField1: UITextField!
@@ -31,12 +37,16 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var continueBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        countryCode.delegate = self
+        countryCode.selectedCountry?.code = .SA
         self.textField1.delegate = self
         self.textField2.delegate = self
         self.textField3.delegate = self
         self.textField4.delegate = self
         configer()
     }
+    @IBOutlet weak var sendVerifyBtn: UIButton!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -46,6 +56,51 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     //MARK: - Actions
+    @IBAction func sendVerificationCode(_ sender: UIButton) {
+        
+        guard let number = countryCode.text  else {
+            
+            return}
+        guard let dial = dialCode  else {
+            
+            return}
+        let  phone = dial + number
+            print(phone)
+      sendCode()
+    }
+    func sendCode(){
+        interactor?.doSendVerificationCode(view: self)
+        counterSend()
+    }
+    
+    
+    var timer : Timer?
+    var counter = 0
+
+
+
+    @objc func prozessTimer() {
+        counter += 1
+        print("This is a second ", counter)
+        sendVerifyBtn.setTitle("\(counter)", for: .normal)
+        
+        
+        if counter >= 30 {
+            sendVerifyBtn.isEnabled = true
+            sendVerifyBtn.setTitle("Resend", for: .normal)
+            counter = 0
+        timer?.invalidate()
+              timer = nil
+        }
+    }
+    func counterSend(){
+        
+        sendVerifyBtn.isEnabled = false
+        timer = Timer.scheduledTimer(timeInterval:1, target:self, selector:#selector(prozessTimer), userInfo: nil, repeats: true)
+
+        
+    }
+    
     @IBAction func continueBtnTapped(_ sender: Any) {
         showIndicator()
         continueBtnAction()
@@ -65,8 +120,8 @@ extension PhoneVerificationViewController: IPhoneVerificationViewController {
     func showAlert(title: String, msg: String) {
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
-    func navigateToCreatePassword() {
-        router?.navigateToCreatePassword()
+    func navigateToProfile() {
+        router?.navigateToProfile()
     }
     func hideIndicator() {
         loadingIndicator.isHidden = true
@@ -100,3 +155,23 @@ extension PhoneVerificationViewController {
     }
 }
 
+extension PhoneVerificationViewController: FPNTextFieldDelegate{
+    
+    
+    func fpnDisplayCountryList() {
+        
+    }
+    
+    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
+        print(name, dialCode, code)
+        self.dialCode = dialCode
+    }
+
+        func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+            
+           
+            
+         
+        }
+    
+}

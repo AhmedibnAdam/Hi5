@@ -16,6 +16,7 @@ protocol ILoginRouter: class {
     func navigateToProfile()
     func navigateToTabBar()
     func navigateToFields()
+    func navigateToVerification()
 }
 
 class LoginRouter: ILoginRouter {
@@ -44,4 +45,7 @@ class LoginRouter: ILoginRouter {
     func navigateToFields() {
         view?.navigate(type: .modalWithNavigation, module: GeneralRoute.fields, completion: nil)
     }
+    func navigateToVerification() {
+           view?.navigate(type: .modal, module: GeneralRoute.phoneVerification, completion: nil)
+       }
 }

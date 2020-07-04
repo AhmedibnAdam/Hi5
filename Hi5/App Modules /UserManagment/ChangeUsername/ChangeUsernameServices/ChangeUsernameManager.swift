@@ -21,8 +21,20 @@ class ChangeUsernameManager: IChangeUsernameManager {
             do {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(ChangeUsernameModel.ChangeUsernameResponse.self, from: response)
-                print(user)
-                complition(nil , true)
+                if user.msg != "Sorry this name is not available" {
+                    if user.msg == "This name is available" {
+                         complition(nil , true)
+                    }
+                    else{
+                         complition(nil , false)
+                    }
+                  
+                }
+                else{
+                    complition(nil , false)
+                }
+                print(user.msg ?? "")
+               
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )

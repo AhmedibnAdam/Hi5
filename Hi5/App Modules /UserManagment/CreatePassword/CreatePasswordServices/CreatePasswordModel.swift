@@ -17,7 +17,14 @@ struct CreatePasswordModel {
         }
 	}
     struct CreatePasswordResponse: Codable {
-        let status: Bool?
-        let success: String?
+         let status: Bool?
+          let userName, fullName, token: String?
+
+          enum CodingKeys: String, CodingKey {
+              case status
+              case userName = "user_name"
+              case fullName = "full_name"
+              case token
+          }
     }
 }

@@ -12,7 +12,7 @@ import UIKit
 
 protocol ICreatePasswordInteractor: class {
 	var parameters: [String: Any]? { get set }
-    func doCreatePassword(view : UIViewController , password: String , confirmPassword: String)
+    func doCreatePassword()
 }
 
 class CreatePasswordInteractor: ICreatePasswordInteractor {
@@ -26,14 +26,14 @@ class CreatePasswordInteractor: ICreatePasswordInteractor {
     	self.manager = manager
     }
     
-    func doCreatePassword(view: UIViewController, password: String, confirmPassword: String) {
-        manager?.createPasswordFromApi(password: password , confirmPassword: confirmPassword, complition: { (error , success) in
+    func doCreatePassword() {
+        manager?.createPasswordFromApi(parameters: parameters, complition: { (error , success) in
             if (success == true) {
                 self.presenter?.hideIndicator()
                 self.presenter?.navigateToProfile()
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Alert", msg: "Password should be 8  characters at least")
             }
             
         })

@@ -54,12 +54,9 @@ extension ProfileEndpoint: IEndpoint {
     }
     
     var header: HTTPHeaders? {
-//       switch self {
-//           case .ShowProfile:
-            let defaults = UserDefaults.standard
-            let token = defaults.string(forKey: "Token")
-            return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
-//        }
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: "Token")
+        return ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
     }
     
     var encoding: ParameterEncoding {

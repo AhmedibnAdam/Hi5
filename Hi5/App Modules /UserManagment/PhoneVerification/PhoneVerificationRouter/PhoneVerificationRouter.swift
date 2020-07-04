@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IPhoneVerificationRouter: class {
-	func navigateToCreatePassword()
+	func navigateToProfile()
 }
 
 class PhoneVerificationRouter: IPhoneVerificationRouter {	
@@ -20,7 +20,7 @@ class PhoneVerificationRouter: IPhoneVerificationRouter {
 	init(view: PhoneVerificationViewController?) {
 		self.view = view
 	}
-    func navigateToCreatePassword() {
-        view?.navigate(type: .modal, module: GeneralRoute.createPassword, completion: nil)
+    func navigateToProfile() {
+        view?.navigate(type: .modal, module: GeneralRoute.profile(param: ["" : ""], id: 0), completion: nil)
     }
 }

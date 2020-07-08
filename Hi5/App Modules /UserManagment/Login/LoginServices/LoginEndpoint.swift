@@ -69,8 +69,11 @@ extension LoginEndpoint: IEndpoint {
         */
         
     switch self {
+        
         case .login(let userName , let password):
-             return ["vie_id": userName , "password": password]
+            let defaults = UserDefaults.standard
+            let device_token = defaults.string(forKey: "firebase_token")
+            return ["vie_id": userName , "password": password , "device_token": device_token]
         }
   }
     

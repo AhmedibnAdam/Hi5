@@ -22,6 +22,6 @@ target 'Hi5' do
      pod 'GoogleMaps'
      pod 'Cosmos'
      pod 'Firebase'
-      pod 'Firebase/Messaging'
+    pod 'Firebase/Messaging'
 
 end

@@ -12,6 +12,7 @@ import UIKit
 
 protocol INewPasswordInteractor: class {
 	var parameters: [String: Any]? { get set }
+    func addNewPassword()
 }
 
 class NewPasswordInteractor: INewPasswordInteractor {
@@ -22,5 +23,18 @@ class NewPasswordInteractor: INewPasswordInteractor {
     init(presenter: INewPasswordPresenter, manager: INewPasswordManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    func addNewPassword(){
+        guard let param = parameters else {
+            return
+        }
+        manager?.resetPasswordFromApi(parameters: param, complition: { (error, success) in
+            if success {
+                self.presenter?.hideIndicator()
+            }
+            else {
+                print("error")
+            }
+        })
     }
 }

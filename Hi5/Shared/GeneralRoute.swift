@@ -27,6 +27,7 @@ enum GeneralRoute: IRouter {
     case forgetPassword
     case forgetPhone
     case forgetEmail
+    case newPassword(phone: String)
     case emailVerification
     case phoneVerification
     case sigupVerificationPhone
@@ -49,7 +50,7 @@ enum GeneralRoute: IRouter {
     case bookingDetails(id: Int , type: Int)
     case mySechadule
     case publicEvents(event_id: String)
-    
+    case setting
     case suggestField
     case suggestFieldDetails(latitude: Double , longitude: Double)
     case fieldOwnerDetails(param: [String: Any] , images: [UIImage])
@@ -89,7 +90,8 @@ extension GeneralRoute {
             return LoginConfiguration.setup()
         case .register:
             return RegisterConfiguration.setup()
-            
+        case .setting:
+            return SettingConfiguration.setup()
         case .forgetPassword:
             return ForgetPasswordConfiguration.setup()
         case .forgetPhone:
@@ -168,6 +170,8 @@ extension GeneralRoute {
         case .publicEvent(let params):
             return PublicEventsConfiguration.setup(parameters: params)
             
+        case .newPassword(let phone):
+            return NewPasswordConfiguration.setup(phone: phone)
         }
        
     }

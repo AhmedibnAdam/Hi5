@@ -15,6 +15,7 @@ protocol IPhoneVerificationInteractor: class {
     func doPhoneVerification(view : UIViewController , code: String)
     func doResendVerificationCode(view : UIViewController)
      func doSendVerificationCode(view : UIViewController)
+    func doSendphone(phone: String)
 }
 
 class PhoneVerificationInteractor: IPhoneVerificationInteractor {
@@ -59,4 +60,16 @@ class PhoneVerificationInteractor: IPhoneVerificationInteractor {
              }
          })
      }
+    
+    func doSendphone(phone: String) {
+        manager?.phone(phone: phone ,complition: { (error, succes) in
+                if (succes == true) {
+                    self.presenter?.hideIndicator()
+                    print("Done send phone number Code......")
+                } else {
+                    self.presenter?.hideIndicator()
+                    self.presenter?.showErrorAlert(title: "Error", msg: "phone not sent")
+                }
+            })
+        }
 }

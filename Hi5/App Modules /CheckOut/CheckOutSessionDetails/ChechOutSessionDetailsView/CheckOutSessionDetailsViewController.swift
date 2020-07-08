@@ -217,6 +217,14 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
         let method = response?.session?.booked.method
         let canBook = response?.session?.booked.canBook
         
+        if data.frequencyBook == false {
+            hideWhileCash()
+            bookedStatus.text = "Locked"
+            paymentTypeStack.isHidden = true
+            process.isHidden = true
+            ShowAlertView.showAlert(title: "Alert", msg: data.frequencyBookMsg, sender: self)
+        }
+        
         if status == true{
             self.process.isHidden = true
             bookedStatus.text = "Locked"
@@ -297,15 +305,15 @@ extension CheckOutSessionDetailsViewController: ICheckOutSessionDetailsViewContr
         }
         
         if data.timeControllBook == false{
+            
             self.process.isHidden = true
-            ShowAlertView.showAlert(title: "Alert", msg: data.timeControllBookingMsg ?? "", sender: self)
+            ShowAlertView.showAlert(title: "Alert", msg: data.timeControllBookingMsg , sender: self)
         }
-        else{
-            self.process.isHidden = false
-        }
+    
     }
     
     func showAlert(title: String, msg: String) {
+        
         ShowAlertView.showAlert(title: title, msg: msg, sender: self)
     }
     func showDetailsResponse(response: CheckOutSessionDetailsModel.PublicEventDetailsJoin?){

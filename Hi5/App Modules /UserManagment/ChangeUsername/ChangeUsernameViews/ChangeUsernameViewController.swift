@@ -85,15 +85,33 @@ extension ChangeUsernameViewController {
         if(username.isEmpty){
             showAlert(title: "Error", msg: "Please Fill Empty Field")
             return
-        } else if (username.count < 3) {
-            showAlert(title: "Error", msg: "Username Must Be More Than 3 Character")
+        } else if (username.count < 4) {
+            showAlert(title: "Error", msg: "Username Must Be More Than 4 Character")
             return
-        } else {
+        }else if (username.count > 16){
+            showAlert(title: "Error", msg: "Username Must Be less Than 16 Character")
+                       return
+        }
+        else  {
             checkMark.isHidden = false
         }
-        showIndicator()
-        interactor?.doChangeUserName(view: self, username: username)
+        
+        let valid =  isValidInput(Input: username)
+        if valid {
+            showIndicator()
+            interactor?.doChangeUserName(view: self, username: username)
+        }
+        else {
+            let msg = "- At least 4 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters."
+             ShowAlertView.showAlert(title: "Alert", msg: msg, sender: self)
+        }
     }
+           
+           func isValidInput(Input:String) -> Bool {
+               let RegEx = "\\w{7,18}"
+               let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+               return Test.evaluate(with: Input)
+           }
     
     func loginBtnAction() {
         

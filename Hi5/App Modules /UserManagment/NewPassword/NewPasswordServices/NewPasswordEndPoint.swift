@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum NewPasswordEndpoint {
-   case NewPassword(password: String , confirmPassword: String)
+    case NewPassword(parameters: [String: Any])
 }
 //MARK:- extension
 extension NewPasswordEndpoint: IEndpoint {
@@ -34,8 +34,8 @@ extension NewPasswordEndpoint: IEndpoint {
     
     var parameter: Parameters? {
         switch self {
-        case .NewPassword(let password , let confirmPassword):
-            return ["password": password , "password_confirmation": confirmPassword]
+        case .NewPassword(let parameters):
+            return parameters
         }
     }
     

@@ -19,8 +19,8 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
     var router: ISideMenuRouter?
     var height = 0.0
     //MARK: - Properties
-    var textArr = ["Friends","My Schedule","My bookings","Fields","Wallet","Suggest Field","Settings & Privacy","Notification setting","Help Center","Logout"]
-    var imgArr = ["friends","mySchadule","bookings","fields","wallet","suggestFields","settings","notificationSettings","helpCenter","helpCenter"]
+    var textArr = ["My Events","My bookings","Fields","Suggested New Field","Wallet","Settings " , "Help Center","Supprt"]
+    var imgArr =  ["mySchadule","bookings","fields","Group 2750","wallet","settings","helpCenter","support"]
     //MARK: - Outlets
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var fullNamelbl: UILabel!
@@ -32,8 +32,8 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
         
         profileImgTapped()
         registerCell()
@@ -110,12 +110,12 @@ extension SideMenuViewController {
         tableHeight.constant = CGFloat(height)
     }
     func plusHeight(){
-        height = 540.0 + 50
+        height = 540.0 
         self.tableView.frame.size.height = CGFloat(height)
         tableHeight.constant = CGFloat(height)
     }
     func largeHeight(){
-        height = 540.0 + 130
+        height = 540.0 + 180
         self.tableView.frame.size.height = CGFloat(height)
         tableHeight.constant = CGFloat(height)
     }
@@ -154,41 +154,39 @@ extension SideMenuViewController {
         cell.lbl.text = text
         cell.img.image = UIImage(named: image)
         cell.selectionStyle = .none
+        if(indexPath.row == 1 || indexPath.row == 3){
+            cell.bottomView.isHidden = false
+               }
+        else if(indexPath.row == 0 || indexPath.row == 2 || indexPath.row == 4 || indexPath.row == 5 || indexPath.row == 6 || indexPath.row == 7 ) {
+             cell.bottomView.isHidden = true
+        }
+        
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == 0){
-            print("Friends")
-        } else if(indexPath.row == 1){
-            print("My Schedule..")
+            print("My Events ...")
             router?.navigateToSechadule()
-        } else if(indexPath.row == 2){
+        } else if(indexPath.row == 1){
             router?.navigateToMyBookings()
-        } else if(indexPath.row == 3){
+        } else if(indexPath.row == 2){
             router?.navigateToFields()
+        } else if(indexPath.row == 3){
+            print("Suggest Field...")
+            router?.navigateToSuggestedField()
         } else if(indexPath.row == 4){
             print("wallet...")
             router?.navigatetoMyWallet()
         } else if(indexPath.row == 5){
-            print("Suggest Field...")
-            router?.navigateToSuggestedField()
-        } else if(indexPath.row == 6){
             print("Setting....")
+            router?.navigatetoSetting()
+        } else if(indexPath.row == 6){
+            print("Help center.....")
         } else if(indexPath.row == 7){
             print("Notificatio Setting....")
-        } else if(indexPath.row == 8){
-            print("Help center.....")
-        } else if(indexPath.row == 9){
-            print("logout......")
-            let defaults = UserDefaults.standard
-            let dictionary = defaults.dictionaryRepresentation()
-            dictionary.keys.forEach { key in
-                defaults.removeObject(forKey: key)
-            }
-            router?.navigateToLogin()
-        }
+        } 
     }
 }
 

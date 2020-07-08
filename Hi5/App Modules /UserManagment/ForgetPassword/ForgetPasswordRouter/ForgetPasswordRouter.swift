@@ -18,10 +18,10 @@ protocol IForgetPasswordRouter: class {
 
 class ForgetPasswordRouter: IForgetPasswordRouter {
     func navigateToForgetPhone() {
-        view?.navigate(type: .modal, module: GeneralRoute.forgetPhone, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.sigupVerificationPhone, completion: nil)
     }
     func navigateToForgetEmail() {
-        view?.navigate(type: .modal, module: GeneralRoute.forgetEmail, completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.phoneVerification, completion: nil)
     }
     
 	weak var view: ForgetPasswordViewController?

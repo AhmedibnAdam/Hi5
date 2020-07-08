@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var countryName: UILabel!
+//    @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var age: UILabel!
@@ -47,21 +47,28 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var editSports: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var numOfFriends: UILabel!
-    @IBOutlet weak var friendsLbl: UILabel!
-    @IBOutlet weak var countryLogo: UIButton!
-    @IBOutlet weak var flag: UIButton!
-    @IBOutlet weak var countryNumber: UILabel!
-    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var address: UILabel!
+    //    @IBOutlet weak var numOfFriends: UILabel!
+//    @IBOutlet weak var friendsLbl: UILabel!
+//    @IBOutlet weak var countryLogo: UIButton!
+//    @IBOutlet weak var flag: UIButton!
+//    @IBOutlet weak var countryNumber: UILabel!
+//    @IBOutlet weak var countryLbl: UILabel!
+    @IBOutlet weak var imageprofileTop: NSLayoutConstraint!
     @IBOutlet weak var fieldTitleLbl: UILabel!
     @IBOutlet weak var phone: UILabel!
     @IBOutlet weak var userProfileView: UIView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var imageprofileHight: NSLayoutConstraint!
+    @IBOutlet weak var imgProfileWidth: NSLayoutConstraint!
+    @IBOutlet weak var joinOn: UILabel!
     
     
     //MARK:- view LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configer()
+        logoView.layer.cornerRadius = logoView.bounds.size.height / 2
     }
     override func viewWillAppear(_ animated: Bool) {
         showIndecator()
@@ -96,12 +103,12 @@ extension ProfileViewController: IProfileViewController {
     }
     func showPartnerResponse(data: ProfileModel.PartnerProfile) {
         if data.partner != nil {
-            numOfFriends.isHidden = true
-            friendsLbl.isHidden = true
-            countryLogo.isHidden = true
-            countryNumber.isHidden = true
-            countryName.isHidden = true
-            flag.isHidden = true
+//            numOfFriends.isHidden = true
+//            friendsLbl.isHidden = true
+//            countryLogo.isHidden = true
+//            countryNumber.isHidden = true
+//            countryName.isHidden = true
+//            flag.isHidden = true
             fieldTitleLbl.isHidden = false
         }
         guard let responseData = data.partner else {
@@ -127,13 +134,13 @@ extension ProfileViewController: IProfileViewController {
         topView.isHidden = false
         indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
-        numOfFriends.isHidden = false
-        friendsLbl.isHidden = false
-        countryLogo.isHidden = false
-        countryNumber.isHidden = false
-//        countryLbl.isHidden = false
-        countryName.isHidden = false
-        flag.isHidden = false
+//        numOfFriends.isHidden = false
+//        friendsLbl.isHidden = false
+//        countryLogo.isHidden = false
+//        countryNumber.isHidden = false
+////        countryLbl.isHidden = false
+//        countryName.isHidden = false
+//        flag.isHidden = false
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -148,9 +155,9 @@ extension ProfileViewController: IProfileViewController {
             }
         }
         
-        self.countryName.text = responseData.country?.val
+//        self.countryName.text = responseData.country?.val
         self.phone.text = ""
-        
+        joinOn.text = " Joined on \(responseData.joined_at!) ."
         self.fullName.text = responseData.name
         self.userName.text = "@" + (responseData.vieID ?? "")
         self.descriptionLbl.text = responseData.biography
@@ -165,6 +172,7 @@ extension ProfileViewController: IProfileViewController {
         
         if let country = responseData.country?.val , let city = responseData.city?.val , let state = responseData.state?.val {
             location = country+" "+city+" "+state
+            address.text = location
             defaults.set(location, forKey: "location")
             print(location)
         }
@@ -202,13 +210,13 @@ extension ProfileViewController: IProfileViewController {
         topView.isHidden = false
         indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
-        numOfFriends.isHidden = false
-        friendsLbl.isHidden = false
-        countryLogo.isHidden = false
-        countryNumber.isHidden = false
-        countryName.isHidden = false
-        countryName.isHidden = false
-        flag.isHidden = false
+//        numOfFriends.isHidden = false
+//        friendsLbl.isHidden = false
+//        countryLogo.isHidden = false
+//        countryNumber.isHidden = false
+//        countryName.isHidden = false
+//        countryName.isHidden = false
+//        flag.isHidden = false
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -240,9 +248,9 @@ extension ProfileViewController: IProfileViewController {
         fieldTitleLbl.isHidden = true
         //            numOfFriends.isHidden = false
         //            friendsLbl.isHidden = false
-        countryLogo.isHidden = false
-        //            countryNumber.isHidden = false
-        countryName.isHidden = false
+//        countryLogo.isHidden = false
+//        //            countryNumber.isHidden = false
+//        countryName.isHidden = false
         if let img = responseData.avatar {
             let url = URL(string: img)
             DispatchQueue.global().async {
@@ -260,8 +268,8 @@ extension ProfileViewController: IProfileViewController {
            self.age.text = ""
         }
         
-        self.countryName.isHidden = false
-        self.countryName.text = "\(responseData.country?.val ?? "" ), \(responseData.city?.val ?? "" ) . \(responseData.state?.val ?? "" )"
+//        self.countryName.isHidden = false
+//        self.countryName.text = "\(responseData.country?.val ?? "" ), \(responseData.city?.val ?? "" ) . \(responseData.state?.val ?? "" )"
         self.phone.text = ""
         self.fullName.text = responseData.name
         self.userName.text = responseData.vieID
@@ -285,9 +293,15 @@ extension ProfileViewController {
         if id == nil || id == 0 {
             interactor?.showUsrerProfile()
             userProfileView.isHidden = false
+            bottomView.isHidden = true
             editBtn.isHidden = false
         }
         else {
+            imageprofileTop.constant = 50
+            imageprofileHight.constant = 100
+            imgProfileWidth.constant = 100
+            logoView.layer.cornerRadius = 50
+
             editBtn.isHidden = true
             if type == "player"{
                 interactor?.showPlyerProfile(id: id!)

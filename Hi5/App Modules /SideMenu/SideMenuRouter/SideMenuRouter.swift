@@ -18,6 +18,7 @@ protocol ISideMenuRouter: class {
     func navigateToSechadule()
     func navigateToSuggestedField()
     func navigatetoMyWallet()
+    func navigatetoSetting() 
 }
 class SideMenuRouter: ISideMenuRouter {
 
@@ -50,7 +51,9 @@ class SideMenuRouter: ISideMenuRouter {
        func navigatetoMyWallet() {
            view?.navigate(type: .modalWithNavigation, module: GeneralRoute.MyWallet, completion: nil)
        }
-       
+       func navigatetoSetting() {
+           view?.navigate(type: .modalWithNavigation, module: GeneralRoute.setting, completion: nil)
+       }
       
     
       

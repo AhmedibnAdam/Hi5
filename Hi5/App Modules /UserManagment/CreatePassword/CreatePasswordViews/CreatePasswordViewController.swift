@@ -53,6 +53,14 @@ class CreatePasswordViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    func validpassword(mypassword : String) -> Bool
+    {
+
+        let passwordreg =  ("(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&*]).{8,}")
+        let passwordtesting = NSPredicate(format: "SELF MATCHES %@", passwordreg)
+        return passwordtesting.evaluate(with: mypassword)
+    }
+    
     //MARK:- Actions
     @IBAction func backBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -131,11 +139,22 @@ extension CreatePasswordViewController {
         } else if(password != confirmPassword) {
             showAlert(title: "Error", msg: "Confirm Password Do Not Match Password")
         }
-        showIndicator()
-        parameters?["password"] = password
-        parameters?["password_confirmation"] = confirmPassword
-        interactor?.parameters = parameters
-        interactor?.doCreatePassword()
+        
+        
+        let valid = validpassword(mypassword: password)
+        if valid{
+            showIndicator()
+            let defaults = UserDefaults.standard
+            let device_token = defaults.string(forKey: "firebase_token")
+            parameters?["device_token"] = device_token
+            parameters?["password_confirmation"] = confirmPassword
+            interactor?.parameters = parameters
+            interactor?.doCreatePassword()
+        }
+        else{
+            showAlert(title: "Alert", msg: "1) Your password must be between 8 and 30 characters.  \n 2) Your password must contain at least one uppercase, or capital, letter (ex: A, B, etc.)  \n 3) Your password must contain at least one lowercase letter.  \n 4) Your password must contain at least one number digit (ex: 0, 1, 2, 3, etc.) \n 5) Your password must contain at least one special character -for example: $, #, @, !,%,^,&,*,(,)")
+        }
+        
     }
     func loginBtnAction() {
         router?.navigateToLogin()

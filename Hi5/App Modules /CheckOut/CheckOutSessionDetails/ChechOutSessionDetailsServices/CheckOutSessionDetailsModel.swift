@@ -28,36 +28,39 @@ struct CheckOutSessionDetailsModel {
 
     // MARK: - Session
     struct Session: Codable {
-      let id: Int
-             let partnerName, fieldName, date, time: String
-             let freeCancellationTime, feesForCancellation, proCode: Int
-             let basePrice, discount, sessionPrice, subTotal: Double
-             let taxPercent: Int
-             let tax, totalPrice: Double
-             let booked: Booked
+        let id: Int
+        let partnerName, fieldName, date, time: String
+        let freeCancellationTime, feesForCancellation, proCode: Int
+        let basePrice, discount, sessionPrice, subTotal: Double
+        let taxPercent: Int
+        let tax, totalPrice: Double
+        let booked: Booked
         let timeControllBook: Bool
-           let timeControllBookingMsg: String
- 
-
-             enum CodingKeys: String, CodingKey {
-                 case id
-                 case partnerName = "partner_name"
-                 case fieldName = "field_name"
-                 case date, time
-                 case freeCancellationTime = "free_cancellation_time"
-                 case feesForCancellation = "fees_for_cancellation"
-                 case proCode = "pro_code"
-                 case basePrice = "base_price"
-                 case discount
-                 case sessionPrice = "session_price"
-                 case subTotal = "sub_total"
-                 case taxPercent = "tax_percent"
-                 case tax
-                 case totalPrice = "total_price"
-                 case booked
-                case timeControllBook = "time_controll_book"
-                        case timeControllBookingMsg = "time_controll_booking_msg"
-             }
+        let timeControllBookingMsg: String
+        let frequencyBook: Bool
+        let frequencyBookMsg: String
+        
+        enum CodingKeys: String, CodingKey {
+            case id
+            case partnerName = "partner_name"
+            case fieldName = "field_name"
+            case date, time
+            case freeCancellationTime = "free_cancellation_time"
+            case feesForCancellation = "fees_for_cancellation"
+            case proCode = "pro_code"
+            case basePrice = "base_price"
+            case discount
+            case sessionPrice = "session_price"
+            case subTotal = "sub_total"
+            case taxPercent = "tax_percent"
+            case tax
+            case totalPrice = "total_price"
+            case booked
+            case timeControllBook = "time_controll_book"
+            case timeControllBookingMsg = "time_controll_booking_msg"
+            case frequencyBook = "frequency_book"
+            case frequencyBookMsg = "frequency_book_msg"
+        }
     }
 
     // MARK: - Booked

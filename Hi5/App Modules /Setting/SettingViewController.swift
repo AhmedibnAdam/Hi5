@@ -22,6 +22,14 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 		// do someting...
     }
+    @IBAction func logout(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+                   let dictionary = defaults.dictionaryRepresentation()
+                   dictionary.keys.forEach { key in
+                       defaults.removeObject(forKey: key)
+                   }
+                   router?.navigateToLogin()
+    }
 }
 
 extension SettingViewController: ISettingViewController {

@@ -174,6 +174,7 @@
 		66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0323B4C8FC009DB30A /* FieldsManager.swift */; };
 		66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1A23B4E091009DB30A /* LoginEndpoint.swift */; };
 		66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1C23B4E0B3009DB30A /* NetworkService.swift */; };
+		664D24FD24B6087D007DA867 /* launchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D24FC24B6087D007DA867 /* launchEndpoint.swift */; };
 		66545F95243B61AC007A547F /* PublicEventDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8D243B61AC007A547F /* PublicEventDetailsConfiguration.swift */; };
 		66545F96243B61AC007A547F /* PublicEventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8E243B61AC007A547F /* PublicEventDetailsPresenter.swift */; };
 		66545F97243B61AC007A547F /* PublicEventDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8F243B61AC007A547F /* PublicEventDetailsRouter.swift */; };
@@ -450,6 +451,7 @@
 		66B03EB2247556B500D2BBD4 /* AddCommenfEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B03EB1247556B500D2BBD4 /* AddCommenfEndpoint.swift */; };
 		66CCBE86240EAA7D0046D672 /* ShowDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */; };
 		66CCBE88240EAA840046D672 /* ShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */; };
+		66D99C5A24B21B5E004BAABE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D99C5924B21B5E004BAABE /* StoreKit.framework */; };
 		66E705C824719137003021DE /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E705C624719137003021DE /* CommentTableViewCell.swift */; };
 		66E705C924719137003021DE /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66E705C724719137003021DE /* CommentTableViewCell.xib */; };
 		66E705CB2471EFEE003021DE /* AllCommentsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */; };
@@ -783,6 +785,7 @@
 		66340A0323B4C8FC009DB30A /* FieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsManager.swift; sourceTree = "<group>"; };
 		66340A1A23B4E091009DB30A /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		66340A1C23B4E0B3009DB30A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		664D24FC24B6087D007DA867 /* launchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchEndpoint.swift; sourceTree = "<group>"; };
 		66545F8D243B61AC007A547F /* PublicEventDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsConfiguration.swift; sourceTree = "<group>"; };
 		66545F8E243B61AC007A547F /* PublicEventDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsPresenter.swift; sourceTree = "<group>"; };
 		66545F8F243B61AC007A547F /* PublicEventDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsRouter.swift; sourceTree = "<group>"; };
@@ -1061,10 +1064,10 @@
 		66B03EB1247556B500D2BBD4 /* AddCommenfEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommenfEndpoint.swift; sourceTree = "<group>"; };
 		66CCBE85240EAA7D0046D672 /* ShowDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShowDetailsViewController.xib; path = View/ShowDetailsViewController.xib; sourceTree = "<group>"; };
 		66CCBE87240EAA830046D672 /* ShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowDetailsViewController.swift; path = View/ShowDetailsViewController.swift; sourceTree = "<group>"; };
+		66D99C5924B21B5E004BAABE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		66E705C624719137003021DE /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		66E705C724719137003021DE /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		66E705CA2471EFEE003021DE /* AllCommentsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsEndpoint.swift; sourceTree = "<group>"; };
-		66E85A6724A4E9FA00219F22 /* Hi5.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hi5.entitlements; sourceTree = "<group>"; };
 		66E85A6824A4F00900219F22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Hi5/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		66F440182474135F0057268E /* FilterBublicEventConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBublicEventConfiguration.swift; sourceTree = "<group>"; };
 		66F440192474135F0057268E /* FilterBublicEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBublicEventPresenter.swift; sourceTree = "<group>"; };
@@ -1235,6 +1238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D69A747F4B18050698D093 /* Pods_Hi5.framework in Frameworks */,
+				66D99C5A24B21B5E004BAABE /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,6 +1248,7 @@
 		1FF46D04AA2457088992A375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66D99C5924B21B5E004BAABE /* StoreKit.framework */,
 				28CD2ED2C5BC6A470E27DFCE /* Pods_Hi5.framework */,
 			);
 			name = Frameworks;
@@ -2274,7 +2279,6 @@
 		6663361123B40206004E537C /* Hi5 */ = {
 			isa = PBXGroup;
 			children = (
-				66E85A6724A4E9FA00219F22 /* Hi5.entitlements */,
 				868C28C323C60935003F237A /* Shared */,
 				66340A1423B4DB3C009DB30A /* Common */,
 				6663366123B408E2004E537C /* Launch Screen */,
@@ -2337,6 +2341,7 @@
 				6663365E23B405D0004E537C /* Main.storyboard */,
 				6663361623B40206004E537C /* ViewController.swift */,
 				66139903246AD9A30050938A /* LaunchScreen.storyboard */,
+				664D24FC24B6087D007DA867 /* launchEndpoint.swift */,
 			);
 			path = "Launch Screen";
 			sourceTree = "<group>";
@@ -5578,6 +5583,7 @@
 				668E9F06246EB46E004A403E /* AllCommentsViewController.swift in Sources */,
 				666336A023B40B47004E537C /* ForgotPhoneConfiguration.swift in Sources */,
 				66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */,
+				664D24FD24B6087D007DA867 /* launchEndpoint.swift in Sources */,
 				660A14EF24619EF5006DAD45 /* SuggestFieldDetailsManager.swift in Sources */,
 				666336A123B40B47004E537C /* ForgotPhonePresenter.swift in Sources */,
 				6663366E23B40A6A004E537C /* ForgetPasswordPresenter.swift in Sources */,
@@ -5757,7 +5763,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.11;
+				CURRENT_PROJECT_VERSION = 1.1.14;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5781,7 +5787,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.11;
+				CURRENT_PROJECT_VERSION = 1.1.14;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

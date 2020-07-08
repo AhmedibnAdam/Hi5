@@ -1591,198 +1591,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F80B283E-00C7-48C0-98FC-BCE23E0447E7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "filterPublicEvent(view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "68DF2CD8-FE13-4550-B951-041F265384F7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "filterPublicEvent(view:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "68DF2CD8-FE13-4550-B951-041F265384F7 - 1dd2e974730f3adf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.PublicEventsInteractor.filterPublicEvent(view: __C.UIViewController) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "87">
-               </Location>
-               <Location
-                  uuid = "68DF2CD8-FE13-4550-B951-041F265384F7 - 941779ea5b950a1a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; () in Hi5.PublicEventsInteractor.filterPublicEvent(view: __C.UIViewController) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "77">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5EFA176A-AFC1-4E1D-9C09-3E52FA8D76FD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "filterPublicEvent(view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9DA1DA71-F101-4881-A946-7B346AFD551D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsInteractor/PublicEventsInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "filterPublicEvent(view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "requestFilteredPublicEventFromApi(parameters:complition:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D - 2e8dbac8f5488ede"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "2258543F-F72B-4081-ADBF-F3BBEF76C56D - 11f24e24b108f1b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "163">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "requestFilteredPublicEventFromApi(parameters:complition:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6 - 2e8dbac8f5488ede"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "C9327094-175D-4C60-BAFA-1B8E4D151FB6 - 11f24e24b108f1b5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PublicEventsManager.requestFilteredPublicEventFromApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.PublicEventsModel.PublicEventResponse&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "163">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "197326DA-E4BC-4B39-B0C0-2968DE6B9A5B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -3038,8 +2846,8 @@
             filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "showPartnerResponse(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3059,36 +2867,6 @@
             landmarkName = "ProfileManager"
             landmarkType = "3">
             <Locations>
-               <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 8b930affc6af27e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.ProfileManager.deinit"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 6f5552f336463df5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.ProfileManager.__deallocating_deinit"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
                <Location
                   uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - ea3944c0bd2ca617"
                   shouldBeEnabled = "Yes"
@@ -3117,6 +2895,36 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
                   endingLineNumber = "25"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 8b930affc6af27e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ProfileManager.deinit"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 6f5552f336463df5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ProfileManager.__deallocating_deinit"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -3605,22 +3413,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3DFEE197-1F2A-40FA-A30F-62427470C2A8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /PublicEvents/Events/PublicEventsServices/PublicEventsManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "requestFilteredPublicEventFromApi(parameters:complition:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6F7DF016-96E1-4148-855C-F56FD82104ED"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -3660,8 +3452,8 @@
             filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "showPlayerResponse(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -3804,8 +3596,8 @@
             filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "loadShowProfileData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3820,8 +3612,8 @@
             filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "showIndecator()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3836,8 +3628,8 @@
             filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "loadShowProfileData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3852,8 +3644,8 @@
             filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
             landmarkName = "loadShowProfileData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4226,7 +4018,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1F984107-B712-416E-B51C-D2A5A71F4867"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Profile/SearchLocation/SearchLocationViews/SearchLocationViewController.swift"
@@ -4242,7 +4034,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D62C0540-10C6-4ACD-83DB-01C7101BF0D0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Session/SessionDetails/SessionDetailsServices/SessionDetailsManager.swift"
@@ -4360,8 +4152,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4408,8 +4200,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4418,22 +4210,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0B46EA6D-AF1C-4F0B-A15A-E171ED8DC30C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
-            landmarkName = "checkOut(response:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E1D95D11-EE78-4668-8A42-553348165C97"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4449,7 +4225,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24A27037-0159-4FF4-B814-E75B826D2673"
+            uuid = "E1D95D11-EE78-4668-8A42-553348165C97"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4465,6 +4241,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "24A27037-0159-4FF4-B814-E75B826D2673"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "checkOut(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "9E5C8D90-1C0E-43E5-9726-483B093BAE6D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -4472,8 +4264,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4488,8 +4280,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "294"
-            endingLineNumber = "294"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4504,8 +4296,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4520,8 +4312,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4536,8 +4328,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4552,8 +4344,8 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "checkOut(response:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4728,10 +4520,10 @@
             filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsServices/CheckOutSessionDetailsModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "payment"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -5185,22 +4977,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "764BBCA8-22B3-43EB-B092-2CEFAABA4FD9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameViews/ChangeUsernameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "changeBtnAction()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BA2384D0-24CE-44FF-BAC6-195F2ACA0CD3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -5281,22 +5057,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C8AA7581-C11F-4739-AC36-50A5DE9B507A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameViews/ChangeUsernameViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "backBtnTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C088D44E-8CA3-49A4-9F8B-F49D15D5405C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -5304,8 +5064,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "sendVerificationCode(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5320,8 +5080,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "sendVerificationCode(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5336,8 +5096,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "sendVerificationCode(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5352,8 +5112,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "prozessTimer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5464,24 +5224,24 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "continueBtnAction()"
-            landmarkType = "7">
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "PhoneVerificationViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D3BFF054-FBBE-4FC6-9DB4-EC7B48254B11"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5490,14 +5250,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "42190CE0-A743-4C4C-8BA2-F0012F358B85"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5512,8 +5272,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5528,8 +5288,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5544,8 +5304,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5560,8 +5320,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5576,8 +5336,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5592,8 +5352,8 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -5608,9 +5368,633 @@
             filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "PhoneVerificationFromApi(code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EEE4B047-FE37-4BCB-96F1-D60A33D4F2C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "phone(phone:complition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EEE4B047-FE37-4BCB-96F1-D60A33D4F2C4 - ce1d37bd60f457bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.PhoneVerificationManager.phone(phone: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  uuid = "EEE4B047-FE37-4BCB-96F1-D60A33D4F2C4 - 608670aef32fd77e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.PhoneVerificationManager.phone(phone: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9477E412-0A2E-421E-B7FE-82648C153F42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationServices/PhoneVerificationEndPoint.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "parameter"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01E1A34B-6CD0-4FCC-B83A-794EBEA64AA6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationInteractor/PhoneVerificationInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "doSendphone(phone:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01E1A34B-6CD0-4FCC-B83A-794EBEA64AA6 - 68aa1f1de2c16838"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.PhoneVerificationInteractor.doSendphone(phone: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/PhoneVerification/PhoneVerificationInteractor/PhoneVerificationInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "93">
+               </Location>
+               <Location
+                  uuid = "01E1A34B-6CD0-4FCC-B83A-794EBEA64AA6 - 1439aad960204fc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; () in Hi5.PhoneVerificationInteractor.doSendphone(phone: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/PhoneVerification/PhoneVerificationInteractor/PhoneVerificationInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51F35A19-11E1-47AB-A149-7D1595BB6573"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordViews/CreatePasswordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "getStartedAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69076AEF-B6D1-4642-B416-A528B4579A18"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordViews/CreatePasswordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "getStartedAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE201379-717F-4892-95D3-CFD547C0C773"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordViews/CreatePasswordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "getStartedAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CE55425-8748-4C8E-B85B-93EEBDA897C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/PhoneVerification/PhoneVerificationViews/PhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "continueBtnAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F44DCE75-4A81-41FF-AA72-1438A19A9CDD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "checkOut(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95BA1144-8DEE-4225-83FF-FB52AE7837D1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /CheckOut/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7EDC8898-D119-4F0B-83BC-B4D2CD273C5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationViews/SignupPhoneVerificationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "sendVerificationCode(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B52958B-5B18-4BA4-90F3-63B028664BC4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationInteractor/SignupPhoneVerificationInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "doSignupPhoneVerification(phone:code:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1B52958B-5B18-4BA4-90F3-63B028664BC4 - 7de6d7d7a982d28d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.SignupPhoneVerificationInteractor.doSignupPhoneVerification(phone: Swift.String, code: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/SignupPhoneVerification/SignupPhoneVerificationInteractor/SignupPhoneVerificationInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "1B52958B-5B18-4BA4-90F3-63B028664BC4 - bc178a54e62a0b66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; () in Hi5.SignupPhoneVerificationInteractor.doSignupPhoneVerification(phone: Swift.String, code: Swift.String) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/SignupPhoneVerification/SignupPhoneVerificationInteractor/SignupPhoneVerificationInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "49">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9C4DD42-A455-4A40-B72C-56B2466CA30C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationServices/SignupPhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "signupPhoneVerificationFromApi(phone:code:complition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9C4DD42-A455-4A40-B72C-56B2466CA30C - 7058a8d8048a72ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.SignupPhoneVerificationManager.signupPhoneVerificationFromApi(phone: Swift.String, code: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/SignupPhoneVerification/SignupPhoneVerificationServices/SignupPhoneVerificationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  uuid = "D9C4DD42-A455-4A40-B72C-56B2466CA30C - 65bbd8d56346b48b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.SignupPhoneVerificationManager.signupPhoneVerificationFromApi(phone: Swift.String, code: Swift.String, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/SignupPhoneVerification/SignupPhoneVerificationServices/SignupPhoneVerificationManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25CC3618-972A-4B89-A66F-C6EC29CEDE00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationServices/SignupPhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "signupPhoneVerificationFromApi(phone:code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5976D0B-AE44-40D9-AB6A-8CCC9315C1A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationServices/SignupPhoneVerificationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "signupPhoneVerificationFromApi(phone:code:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7A37F45-6475-4988-9370-F0E6956C62BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationServices/SignupPhoneVerificationEndPoint.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "path"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8112D48B-FA60-49F5-AEE3-707919866DAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /SideMenu/SideMenuViews/View/SideMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "108E827A-CC69-4095-8AC0-1CACCD2E7D3D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /SideMenu/SideMenuViews/View/SideMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "280540B0-6972-4041-AAF2-F62ED4FDB0F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /SideMenu/SideMenuViews/View/SideMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94A569DC-4AF8-49BA-AEAD-4D2976D72EF3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /SideMenu/SideMenuViews/View/SideMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C9D11AA-3035-459B-91CF-2AB35F9F8B7F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "loadShowProfileData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E4F3E03-DD28-4F4B-8F3A-4FF39C749763"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /Profile/Profile/ProfileViews/ProfileViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "loadShowProfileData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5372C55-F8A7-4AD2-A4F1-EBCB8B7188DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/SignupPhoneVerification/SignupPhoneVerificationInteractor/SignupPhoneVerificationInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "sendCodeAndPhone(phone:code:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0959F01C-340D-494D-87A1-19852DFDFC4D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/NewPassword/NewPasswordViews/NewPasswordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "getStartedAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6F9931B-4170-4E46-A61B-BDA72A47F6B9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/NewPassword/NewPasswordViews/NewPasswordViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "getStartedAction()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "242092CE-783D-4B16-A7BC-C04A067DFE1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/Launch Screen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "sendDeviceIdToApi(parameters:complition:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "242092CE-783D-4B16-A7BC-C04A067DFE1C - e203714efc91b8df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ViewController.sendDeviceIdToApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Launch%20Screen/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  uuid = "242092CE-783D-4B16-A7BC-C04A067DFE1C - b030c5abd4fe8ff1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Data) -&gt; () in Hi5.ViewController.sendDeviceIdToApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, complition: (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/Launch%20Screen/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "749B6C9E-6AFB-4026-B139-F78BEAD9618F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/Launch Screen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "sendDeviceIdToApi(parameters:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAD422E7-8FA0-4632-A1C3-09DEA6BC5589"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/Launch Screen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "sendDeviceIdToApi(parameters:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1860990-CA7E-4FC0-9810-EA620CE79984"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/Launch Screen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "969D9DD8-6E59-4EEA-A4C0-B97E30DC3E5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/Launch Screen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

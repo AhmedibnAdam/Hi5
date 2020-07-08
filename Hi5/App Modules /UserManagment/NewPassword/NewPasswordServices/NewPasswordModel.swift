@@ -18,6 +18,7 @@ struct NewPasswordModel {
 	}
 
     struct NewPasswordResponse: Codable {
-		
+        let status: Bool?
+        let success: String?
 	}
 }

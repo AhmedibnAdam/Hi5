@@ -58,13 +58,28 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     //MARK:- Actions
     @IBAction func continueBtnTapped(_ sender: UIButton) {
         
-        
-        if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
-            navigateToCreateUserName()
-             }
-        else {
-            showAlert(title: "Message", msg: "Please Accept Terms And Conditions")
+        guard let name = fullNameTextField.text else {
+             showAlert(title: "Alert", msg: "- At least 4 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters.")
+            return
         }
+       let valid =  isValidInput(Input: name)
+        if valid {
+            if (checkBoxBtn.currentImage == UIImage(named: "agreeCheckBox2")){
+                navigateToCreateUserName()
+            }
+            else {
+                showAlert(title: "Message", msg: "Please Accept Terms And Conditions")
+            }
+        }
+        else {
+            showAlert(title: "Alert", msg: "- At least 4 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters.")
+        }
+    }
+    
+    func isValidInput(Input:String) -> Bool {
+        let RegEx = "\\w{7,18}"
+        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+        return Test.evaluate(with: Input)
     }
     @IBAction func checkBoxBtn(_ sender: UIButton) {
         if sender.currentImage == UIImage(named:"checkBox") {

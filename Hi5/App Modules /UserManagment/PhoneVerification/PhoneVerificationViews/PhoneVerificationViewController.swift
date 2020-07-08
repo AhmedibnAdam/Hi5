@@ -23,6 +23,7 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
 	var interactor: IPhoneVerificationInteractor?
 	var router: IPhoneVerificationRouter?
     
+    var phone: String?
     var dialCode: String?
     //MARK: - Outlets
     
@@ -45,7 +46,39 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
         self.textField3.delegate = self
         self.textField4.delegate = self
         configer()
-    }
+    
+        textField1.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        textField2.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        textField3.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        textField4.addTarget(self, action: #selector(self.textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+
+        }
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(true)
+            textField1.becomeFirstResponder()
+
+        }
+    @objc func textFieldDidChange(textField: UITextField){
+
+            let text = textField.text
+
+            if text?.utf16.count==1{
+                switch textField{
+                case textField1:
+                    textField2.becomeFirstResponder()
+                case textField2:
+                    textField3.becomeFirstResponder()
+                case textField3:
+                    textField4.becomeFirstResponder()
+                case textField4:
+                    textField4.resignFirstResponder()
+                default:
+                    break
+                }
+            }else{
+
+            }
+        }
     @IBOutlet weak var sendVerifyBtn: UIButton!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -65,10 +98,12 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
             
             return}
         let  phone = dial + number
+        self.phone = phone
             print(phone)
       sendCode()
     }
     func sendCode(){
+       
         interactor?.doSendVerificationCode(view: self)
         counterSend()
     }
@@ -134,6 +169,12 @@ extension PhoneVerificationViewController {
     }
     
     func showIndicator() {
+        guard let phoneNum = self.phone  else {
+               
+               return}
+               var phone = phoneNum
+               phone.removeFirst()
+               interactor?.doSendphone(phone: phone )
         loadingIndicator.isHidden = false
     }
 }

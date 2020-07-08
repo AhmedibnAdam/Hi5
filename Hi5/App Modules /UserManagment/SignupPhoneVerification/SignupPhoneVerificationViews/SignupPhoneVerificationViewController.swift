@@ -9,6 +9,7 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import FlagPhoneNumber
 
 protocol ISignupPhoneVerificationViewController: class {
 	var router: ISignupPhoneVerificationRouter? { get set }
@@ -22,9 +23,11 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
 	var router: ISignupPhoneVerificationRouter?
     var count = 0
     
+    var phone: String?
+       var dialCode: String?
+    
     //MARK:- Outlets
     
-    @IBOutlet weak var counterResendLbl: UILabel!
     @IBOutlet weak var resendBtn: UIButton!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var textField4: UITextField!
@@ -32,16 +35,15 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
     @IBOutlet weak var textField2: UITextField!
     @IBOutlet weak var logoView: UIView!
     
+    @IBOutlet weak var phoneText: FPNTextField!
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var containerView4: UIView!
-    @IBOutlet weak var containerView3: UIView!
-    @IBOutlet weak var containerView2: UIView!
-    @IBOutlet weak var containerView1: UIView!
+
     //MARK:- View life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        phoneText.delegate = self
         self.textField1.delegate = self
         self.textField2.delegate = self
         self.textField3.delegate = self
@@ -61,7 +63,7 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
         return false
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
+    private func textFieldDidBeginEditing(textField: UITextField) {
         textField.text = ""
     }
     //MARK:- Actions
@@ -69,8 +71,37 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func sendVerificationCode(_ sender: UIButton) {
+        
+        guard let phoneNum = self.phoneText.text  else {
+            return}
+        guard let dial = dialCode  else {
+            
+            return}
+        let  phone = dial + phoneNum
+        
+        var telephone = phone.replacingOccurrences(of: " ", with: "")
+        telephone.removeFirst()
+        self.phone = telephone
+        interactor?.forgetPassword(phone: telephone)
+        
+    }
     @IBAction func continueBtnTapped(_ sender: UIButton) {
-         continueBtnAction()
+             guard let text1 = textField1.text , let text2 = textField2.text , let text3 = textField3.text , let text4 = textField4.text else {return}
+             if (text1.isEmpty || text2.isEmpty || text3.isEmpty || text4.isEmpty) {
+                 showAlert(title: "Error", msg: "Please Fill All Text Fields")
+             } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
+                 showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
+             }
+             let code = text1+text2+text3+text4
+        showIndicator()
+      
+        guard let phone = self.phone else {
+            return
+        }
+        let telephone = phone.replacingOccurrences(of: "-", with: "")
+        self.phone = telephone
+        interactor?.sendCodeAndPhone(phone: telephone, code: code)
     }
     
     @IBAction func resendBtnTapped(_ sender: UIButton) {
@@ -88,7 +119,10 @@ extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewCon
     }
     
     func navigateToCreatePassword() {
-        router?.navigateToCreatePassword()
+        guard let phone = self.phone else {
+            return
+        }
+        router?.navigateToCreatePassword(phone: phone)
     }
     
     func hideIndicator() {
@@ -96,7 +130,20 @@ extension SignupPhoneVerificationViewController: ISignupPhoneVerificationViewCon
     }
  }
 
-extension SignupPhoneVerificationViewController {    
+extension SignupPhoneVerificationViewController: FPNTextFieldDelegate {
+    func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
+        print(name, dialCode, code)
+              self.dialCode = dialCode
+    }
+    
+    func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
+        
+    }
+    
+    func fpnDisplayCountryList() {
+       
+    }
+    
     func configer(){
         router = SignupPhoneVerificationRouter(view: self)
     }
@@ -128,31 +175,6 @@ extension SignupPhoneVerificationViewController {
 }
 
 extension SignupPhoneVerificationViewController {
-    func continueBtnAction() {
-        guard let text1 = textField1.text , let text2 = textField2.text , let text3 = textField3.text , let text4 = textField4.text else {return}
-        if (text1.isEmpty || text2.isEmpty || text3.isEmpty || text4.isEmpty) {
-            showAlert(title: "Error", msg: "Please Fill All Text Fields")
-        } else if (text1.count > 1 || text2.count > 1 || text3.count > 1 || text4.count > 1){
-            showAlert(title: "Error", msg: "Every Text Field Must Have One Number")
-        }
-        showIndicator()
-        let code = text1+text2+text3+text4
-        interactor?.doSignupPhoneVerification(view: self, code: code)
-       // counterResendLbl.isHidden = false
-//        while count != 30 {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-//                self.count += 1
-//                self.counterResendLbl.text = "\(self.count)"
-//            })
-//        }
-        
-//        counterResendLbl.isHidden = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 30.0, execute: {
-           self.resendBtn.isEnabled = true
-        })
-        
-    }
-    
     func resendBtnAction() {
          showIndicator()
          self.interactor?.doSignupResendVerificationCode(view: self)

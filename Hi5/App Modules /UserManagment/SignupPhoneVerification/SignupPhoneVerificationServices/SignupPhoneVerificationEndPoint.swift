@@ -10,8 +10,10 @@ import Foundation
 import Alamofire
 
 enum SignupPhoneVerificationEndpoint {
-    case signupPhoneVerification(code: String)
+    case forgetPassword(number: String)
+    case signupPhoneVerification(phone: String , code: String)
     case signupResendVerificationCode
+    case sendCodeAndPhone(phone: String , code: String)
 }
 
 extension SignupPhoneVerificationEndpoint: IEndpoint {
@@ -26,17 +28,25 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
         return .get
     case .signupResendVerificationCode:
         return .post
-    }
+    case .forgetPassword:
+        return .get
+    case .sendCodeAndPhone:
+        return .get
+        }
 }
     
     var path: String {
 
     switch self {
        case .signupPhoneVerification:
-         return "http://api-ksa.com/demo/hi5/public/api/player/register" + "check_verification_code"
+         return "http://api-ksa.com/demo/hi5/public/api/player/check_verification_code"
        case .signupResendVerificationCode:
          return "http://api-ksa.com/demo/hi5/public/api/player/" + "resend"
-       }
+    case .forgetPassword(number: let number):
+         return "http://api-ksa.com/demo/hi5/public/api/player/forget/password?phone_number=\(number)"
+    case .sendCodeAndPhone(let phone , let code):
+        return "http://api-ksa.com/demo/hi5/public/api/player/check_verification_code?code=\(code)&phone_number=\(phone)"
+        }
     }
     
     var parameter: Parameters? {
@@ -46,27 +56,42 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
             return ["code": code]
     case .signupResendVerificationCode:
             return ["email": ""]
+    case .forgetPassword:
+        return nil
+    case .sendCodeAndPhone:
+        return nil
         }
   }
     
     var header: HTTPHeaders? {
 
-    switch self {
-       case .signupPhoneVerification:
-           return ["Accept": "application/json"]
-       case .signupResendVerificationCode:
-          return ["Accept": "application/json"]
-       }
+        switch self {
+            case .signupPhoneVerification(let phone, let code):
+             return ["Accept": "application/json"]
+              //  return ["Accept": "application/json","phone_number": phone , "code": code]
+        case .signupResendVerificationCode:
+                 return ["Accept": "application/json"]
+        case .forgetPassword:
+              return ["Accept": "application/json"]
+        case .sendCodeAndPhone:
+            return ["Accept": "application/json"]
+        }
+           
     }
     
     var encoding: ParameterEncoding {
-
         switch self {
-         case .signupPhoneVerification:
-            return URLEncoding.default
-         case .signupResendVerificationCode:
+            case .signupPhoneVerification:
+                return JSONEncoding.default
+        case .signupResendVerificationCode:
+               return JSONEncoding.default
+        case .forgetPassword:
             return JSONEncoding.default
+            
+        case .sendCodeAndPhone:
+               return JSONEncoding.default
         }
+       
     }
 }
 

@@ -12,8 +12,9 @@ import Foundation
 import UIKit
 
 class NewPasswordConfiguration {
-    static func setup(parameters: [String: Any] = [:]) -> UIViewController {
+    static func setup(parameters: [String: Any] = [:], phone: String) -> UIViewController {
         let controller = NewPasswordViewController()
+        controller.phone = phone
         let router = NewPasswordRouter(view: controller)
         let presenter = NewPasswordPresenter(view: controller)
         let manager = NewPasswordManager()

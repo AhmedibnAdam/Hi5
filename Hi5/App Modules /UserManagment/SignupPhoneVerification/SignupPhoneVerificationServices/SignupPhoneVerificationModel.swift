@@ -19,7 +19,7 @@ struct SignupPhoneVerificationModel {
 
     struct SignupPhoneVerificationResponse: Codable {
         let status: Bool?
-        let error: String?
+        let msg: String?
 	}
     
     struct SignupResendVerificationCodeResponse: Codable {

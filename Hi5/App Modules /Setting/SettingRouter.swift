@@ -12,6 +12,7 @@ import UIKit
 
 protocol ISettingRouter: class {
 	// do someting...
+     func navigateToLogin() 
 }
 
 class SettingRouter: ISettingRouter {	
@@ -20,4 +21,7 @@ class SettingRouter: ISettingRouter {
 	init(view: SettingViewController?) {
 		self.view = view
 	}
+    func navigateToLogin() {
+           view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)
+       }
 }

@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ISignupPhoneVerificationRouter: class {
-    func navigateToCreatePassword()
+    func navigateToCreatePassword(phone: String)
     func navigateToLogin()
 }
 
@@ -22,8 +22,8 @@ class SignupPhoneVerificationRouter: ISignupPhoneVerificationRouter {
 	init(view: SignupPhoneVerificationViewController?) {
 		self.view = view
 	}
-    func navigateToCreatePassword() {
-        view?.navigate(type: .modal, module: GeneralRoute.welcome, completion: nil)
+    func navigateToCreatePassword(phone: String) {
+        view?.navigate(type: .modal, module: GeneralRoute.newPassword(phone: phone), completion: nil)
     }
     func navigateToLogin() {
         view?.navigate(type: .modal, module: GeneralRoute.login, completion: nil)

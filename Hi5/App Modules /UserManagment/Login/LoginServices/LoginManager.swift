@@ -28,9 +28,12 @@ class LoginManager: ILoginManager {
                 let user = try decoder.decode(LoginModel.LoginResponse.self, from: response)
                 print(user)
                 let defaults = UserDefaults.standard
-                if let token = user.token  {
-                    defaults.set(token, forKey: "Token") as? String
+                if user !=  nil{
+                    defaults.set(user.token, forKey: "Token") as? String
+                    defaults.set(user.fullName, forKey: "FullName") as? String
+                    defaults.set(user.userName, forKey: "UserName") as? String
                 }
+                
                 complition(nil,true,user)
                 
             } catch let error {

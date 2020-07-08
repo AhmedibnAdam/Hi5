@@ -11,20 +11,23 @@
 import Foundation
 
 protocol INewPasswordManager: class {
-    func resetPasswordFromApi(password: String ,confirmPassword: String ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
+    func resetPasswordFromApi(parameters: [String: Any] ,complition :  @escaping (_ error:ErrorModel? ,_ success: Bool)->Void)
 }
 
 class NewPasswordManager: INewPasswordManager {
-    func resetPasswordFromApi(password: String, confirmPassword: String, complition: @escaping (ErrorModel?, Bool) -> Void) {
-        NetworkService.share.request(endpoint: NewPasswordEndpoint.NewPassword(password: password, confirmPassword: confirmPassword), success: { (responseData) in
+    func resetPasswordFromApi(parameters: [String: Any] , complition: @escaping (ErrorModel?, Bool) -> Void) {
+        NetworkService.share.request(endpoint: NewPasswordEndpoint.NewPassword(parameters: parameters), success: { (responseData) in
             let response = responseData
             do {
                 let decoder = JSONDecoder()
                 let user = try decoder.decode(NewPasswordModel.NewPasswordResponse.self, from: response)
                 print(user)
                 
-             
-                complition(nil , true)
+                guard let state = user.status else {
+                    complition(nil , false)
+                    return
+                }
+                complition(nil , state)
                 
             } catch let error {
                 print("error : ", error.localizedDescription  )

@@ -39,14 +39,14 @@ struct ProfileModel {
         let city, state: City?
         let latitude: Double?
         let longitude: Int?
-
+        let joined_at: String?
         enum CodingKeys: String, CodingKey {
             case id, name, email, gender
             case vieID = "vie_id"
             case phoneNumber = "phone_number"
             case isActive = "is_active"
             case createdAt = "created_at"
-            case status, biography, avatar, year, month, day, country, city, state, latitude, longitude
+            case status, biography, avatar, year, month, day, country, city, state, latitude, longitude , joined_at
         }
     }
 

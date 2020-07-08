@@ -21,6 +21,6 @@ class PhoneVerificationRouter: IPhoneVerificationRouter {
 		self.view = view
 	}
     func navigateToProfile() {
-        view?.navigate(type: .modal, module: GeneralRoute.profile(param: ["" : ""], id: 0), completion: nil)
+        view?.navigate(type: .modal, module: GeneralRoute.tabBar, completion: nil)
     }
 }

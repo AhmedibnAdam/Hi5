@@ -140,6 +140,6 @@ extension LoginViewController {
             return
         }
         showIndecator()
-        interactor?.doLogin(view: self, userName: userName, password: password)
+        interactor?.doLogin(userName: userName, password: password)
     }
 }

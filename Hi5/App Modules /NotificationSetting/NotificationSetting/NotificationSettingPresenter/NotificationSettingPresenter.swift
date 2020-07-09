@@ -11,7 +11,7 @@
 import UIKit
 
 protocol INotificationSettingPresenter: class {
-	// do someting...
+	 func showNotifications(response: NotificationSettingModel.NotificationsModel?)
 }
 
 class NotificationSettingPresenter: INotificationSettingPresenter {	
@@ -20,4 +20,9 @@ class NotificationSettingPresenter: INotificationSettingPresenter {
 	init(view: INotificationSettingViewController?) {
 		self.view = view
 	}
+    
+    func showNotifications(response: NotificationSettingModel.NotificationsModel?) {
+          view?.showNotifications(response: response)
+    }
+    
 }

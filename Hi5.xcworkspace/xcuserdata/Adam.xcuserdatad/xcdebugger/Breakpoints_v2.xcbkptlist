@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6EBB59D9-9C25-4BED-B6A6-10AE76FA53E0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CC45E376-A4BC-4C97-9971-6AC021F7D981"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "66F10C33-8F73-47AD-B4F2-F290B49FCDA8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "97A7E925-3744-4AB0-8BB9-7E21BC90F417"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventsCell/publicEventsCell.swift"
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "052827A5-5A79-4113-B13B-2DA3D8242C55"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventsCell/publicEventsCell.swift"
@@ -88,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "911CDDAD-C995-4173-A95B-834FE909ACBD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventsCell/publicEventsCell.swift"
@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "93301F40-E53C-4F24-B076-7BE284746578"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventsCell/publicEventsCell.swift"
@@ -120,7 +120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DC4618FA-0A91-40B2-9A48-E1BA79AA2584"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -200,7 +200,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C360B250-72B8-4195-AF22-A8143D9D3BB5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/Shared/NetworkService.swift"
@@ -280,7 +280,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "89769DFE-37C6-4104-B5BF-BAF1F63E6BEA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingServices/MyBookingsManager.swift"
@@ -296,7 +296,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "09562199-C44A-496D-9A4F-1F74A693E160"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingServices/MyBookingsManager.swift"
@@ -408,7 +408,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CACA7BAF-AEF5-44C2-BE1F-0A7E0BDC4A33"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
@@ -456,7 +456,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AA00BAE5-1DDB-4FB6-BD9C-98F69523D2EB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsServices/FieldsManager.swift"
@@ -504,7 +504,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C6E87427-4914-4A67-BF93-FF490FF3F2B3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsServices/FieldsManager.swift"
@@ -520,7 +520,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D4A5B1A7-F00A-4F04-A713-B29078DD084B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventsCell/publicEventsCell.swift"
@@ -536,7 +536,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "55FEDA01-2590-44D2-A19A-60C6E165BD00"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventsCell/publicEventsCell.swift"
@@ -584,7 +584,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "01FCDF17-341F-48EF-9C9E-A2C96880F4FC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -600,7 +600,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C8F04A28-17D0-4E08-ABD3-FF1C7373E350"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -616,7 +616,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E23E4360-7B0B-49C7-8E9B-7C58E1745588"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -776,7 +776,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A93323C4-50D2-43DE-A91F-BCE7B6148229"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -792,7 +792,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D42AB95F-E4B6-4C48-8B75-2127A978115A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -808,7 +808,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DDE0B98B-D604-46A9-960D-95EED61E108F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -824,7 +824,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "80D82148-F99D-4A0B-B16E-A3D650BD6D83"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -840,7 +840,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "76548823-D1E5-423F-8F8E-89625F46F864"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -856,7 +856,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0BB7B3F0-EF24-4019-99F1-B1413B53581E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingView/view/MyBookingsViewController.swift"
@@ -872,7 +872,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5BA97789-D11A-4327-B23E-17D796807CCD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingPresenter/MyBookingsPresenter.swift"
@@ -888,7 +888,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8F45BB9D-DF2B-41AE-A955-B05FD6CF6ACA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingPresenter/MyBookingsPresenter.swift"
@@ -904,7 +904,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "60987095-97FA-4075-9171-C1DF431C4C14"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /MyBookings/MyBookingPresenter/MyBookingsPresenter.swift"
@@ -920,7 +920,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EFBB837F-2E35-45FF-B60C-BBC4521EB532"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -936,7 +936,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FF03F7C1-1245-4243-8968-ADCE24A12EB4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -1032,7 +1032,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E385EB7F-A44A-4317-AAB8-77227FA3ED15"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsServices/PublicEventsManager.swift"
@@ -1048,7 +1048,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "20CDC8EC-A72D-4772-88F2-5659B19564F6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -1064,7 +1064,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C3BBC7D2-3266-4FF4-A220-1696995A52F7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
@@ -1080,7 +1080,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8FF498E8-6EDD-4B54-92AE-15FE219DB8D1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsPresenter/ShowDetailsPresenter.swift"
@@ -1096,7 +1096,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7BD670EF-96B5-4117-9C6A-7281539FBAA5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
@@ -1112,7 +1112,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "53B0A1C8-2700-4B0C-9EDA-CE571542CCDE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -1128,7 +1128,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E56DC401-C284-43C7-86DB-BF5E46C08DC8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -1144,7 +1144,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D21A7C31-7494-42D1-9E3E-81858BB5E52F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/PublicEventsViews/PublicEventView/PublicEventsViewController.swift"
@@ -1176,7 +1176,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "68E8BFCB-5F10-4D77-AC61-282623D6FB78"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /SuggestField/SuggestFieldViews/SuggestFieldViewController.swift"
@@ -1192,7 +1192,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6C4D7435-C010-49E6-8925-10649712D4DB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /SuggestField/SuggestFieldViews/SuggestFieldViewController.swift"
@@ -1208,7 +1208,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "60BCD79E-AD97-45AB-837F-F3B6CC14451F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /SuggestField/SuggestFieldViews/SuggestFieldViewController.swift"
@@ -1224,7 +1224,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F9FA8C1F-72FD-4B54-9359-48E1500F858B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /SuggestField/SuggestFieldViews/SuggestFieldViewController.swift"
@@ -1240,7 +1240,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "932E5D06-93FA-4786-83C0-ABA303324F4E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /SuggestField/SuggestFieldViews/SuggestFieldViewController.swift"
@@ -1256,7 +1256,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B5E185CE-7B82-4D0A-AFD8-CA2C92FE8373"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /SuggestField/SuggestFieldViews/SuggestFieldViewController.swift"
@@ -1272,7 +1272,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D8405486-62CB-40CA-895F-EDCCEB24A9D8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
@@ -1288,7 +1288,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A1B3F3CB-E2A6-44C0-9282-71FB69067F89"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
@@ -1336,7 +1336,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7E169A9E-4E2E-40AD-B0E6-C8A452ECD372"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -1352,7 +1352,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5492824B-9A9C-46BC-9128-CF5031F5E41B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -1416,7 +1416,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7A4CE95B-4792-44B8-9D39-9476AABCC36C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsInteractor/FieldsInteractor.swift"
@@ -1528,7 +1528,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "04431828-B6CF-4343-BB57-60639D237460"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /UserManagment/Login/LoginInteractor/LoginInteractor.swift"
@@ -1540,11 +1540,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - dfcd0f4834a92e7f"
+                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - af9b8831ebb54a0d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Hi5.LoginInteractor.doLogin(view: __C.UIViewController, userName: Swift.String, password: Swift.String) -&gt; ()"
+                  symbolName = "Hi5.LoginInteractor.doLogin(userName: Swift.String, password: Swift.String) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/Login/LoginInteractor/LoginInteractor.swift"
@@ -1552,14 +1552,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "207">
+                  offsetFromSymbolStart = "144">
                </Location>
                <Location
-                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - 1846c6d8d83127cb"
+                  uuid = "04431828-B6CF-4343-BB57-60639D237460 - 13e53a0da1512cc4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.LoginModel.LoginResponse&gt;) -&gt; () in Hi5.LoginInteractor.doLogin(view: __C.UIViewController, userName: Swift.String, password: Swift.String) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.LoginModel.LoginResponse&gt;) -&gt; () in Hi5.LoginInteractor.doLogin(userName: Swift.String, password: Swift.String) -&gt; ()"
                   moduleName = "Hi5"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/UserManagment/Login/LoginInteractor/LoginInteractor.swift"
@@ -1576,7 +1576,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CAEE7CA0-4186-4A25-83FF-68B1F6BEAE90"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /UserManagment/Login/LoginServices/LoginManager.swift"
@@ -1640,7 +1640,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "748F8F65-7D2C-4CBC-8882-EF92E44DFDE1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultInteractor/FilterResultInteractor.swift"
@@ -1656,7 +1656,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0AE4848D-0FA3-467D-B991-83DC78EA40B5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
@@ -1672,7 +1672,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "25512B80-6CA8-4369-9EF2-BF40224EAEBD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
@@ -1688,7 +1688,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "677AEC11-67F1-49F2-B7DB-1F357B8503BE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/View/PublicEventDetailsViewController.swift"
@@ -1704,7 +1704,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A387FBCD-E8BB-4422-995D-F43F29F4B939"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -1720,7 +1720,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9BDF24CC-3B67-415B-8968-9E12AB313DCD"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
@@ -1736,7 +1736,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F42BFA01-13E7-4671-B0D0-74D980830A3D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsInteractor/CheckOutSessionDetailsInteractor.swift"
@@ -1752,7 +1752,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1DAB1577-D4FB-41A8-AE61-8B9C4CE392CA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsServices/CheckOutSessionDetailsManager.swift"
@@ -1768,7 +1768,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A7355170-F5C7-4D83-A0CA-311597C92323"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsServices/CheckOutSessionDetailsManager.swift"
@@ -1784,7 +1784,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "843097A0-3DF9-4FD9-A5D6-722F9DF1EBFF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsServices/CheckOutSessionDetailsManager.swift"
@@ -1800,7 +1800,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EA825D70-96C6-408D-BE4F-6AFB380D059C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsServices/CheckOutSessionDetailsManager.swift"
@@ -1816,7 +1816,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C3113152-DA12-4DE6-A218-11E529D9519E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsServices/CheckOutSessionDetailsManager.swift"
@@ -1832,7 +1832,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "39249FF1-4B3C-45F1-B93F-4A08BD97A3F0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
@@ -1848,7 +1848,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "944989C7-020B-4736-B264-3E6BDBE5CA33"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsView/CheckOutSessionDetailsViewController.swift"
@@ -1864,7 +1864,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BFEAA78A-E7A8-44E8-A4EE-649B7DD9EA7F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsInteractor/CheckOutSessionDetailsInteractor.swift"
@@ -1880,7 +1880,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "BDB6EDC1-8C61-4B5D-8418-4A9AF1D43A4F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/CheckOutSessionDetails/ChechOutSessionDetailsServices/ChechOutSessionDetailsServicesEndpoint.swift"
@@ -1896,7 +1896,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E3E24C39-43FA-4725-98CA-702880201A8C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
@@ -1912,7 +1912,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "09BFC010-D54D-41E9-9DB8-EC0BCFA36879"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
@@ -1928,7 +1928,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EA530D03-CB3C-482F-9A07-7365AAED8DD8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultViews/View/FilterResultViewController.swift"
@@ -1944,7 +1944,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "31B36FDC-E963-4565-AB48-B1FE1C4B3071"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /FilterResult/FilterResultServices/FilterResultManager.swift"
@@ -1960,7 +1960,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EE8C65A9-E387-4DBB-B7E4-4C345C620CDB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Filter/FilterViews/View/FilterViewController.swift"
@@ -1976,7 +1976,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "606FEB79-6853-4FD7-8088-9790BDBC17BA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -1992,7 +1992,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ABBB44F3-F885-4E06-A742-B7B5956CEA44"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsRouter/FieldsRouter.swift"
@@ -2008,7 +2008,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4A6E121D-5D10-452E-859A-1E774D9AFBE9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2024,7 +2024,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E728624B-C359-49AE-B293-C1450C3DF25E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2040,7 +2040,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8263CE1D-3B63-4AE9-B470-E9C689C06DD4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2056,7 +2056,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6FE822BE-5DC2-4DCB-8871-07159A7A3C16"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2088,7 +2088,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C73E5CF7-7D0A-49FE-8762-697BD4A21DA4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/SessionDetails/SessionDetailsView/Views/SessionDetailsViewController.swift"
@@ -2120,7 +2120,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "875D923D-A515-4DB1-B728-F523F50CCEFE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2152,7 +2152,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B493849E-BC2A-4613-BE59-B3E8D398ECAA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2168,7 +2168,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5D09C18C-8941-4595-BEDF-5E5E9B355DD7"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2184,7 +2184,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "11E4BC10-0F23-4CD6-A6D6-0EE3131DF6B0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/Fields/FieldsViews/View/FieldsViewController.swift"
@@ -2200,7 +2200,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E88BD96B-96BE-44E4-B158-61B24FB7BE0A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
@@ -2216,7 +2216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8288BCC2-674C-4A50-BB12-AFCF17C4C80D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Interactor/PublicEventDetailsInteractor.swift"
@@ -2232,7 +2232,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "18BCE580-AD13-4190-BF63-B1EEE6E50B49"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2280,7 +2280,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EB762F69-5A90-4CC7-9E9B-D6978F3698CC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2296,7 +2296,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A8677ED7-E397-46A1-AD67-B03DEDD6D082"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2312,7 +2312,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E25FBF4C-C116-471E-8EEC-3E4C202DBDCB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2328,7 +2328,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5D9A17D8-985F-4125-9BD3-2BA8B8E87AE5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2344,7 +2344,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "89A39355-CD5E-4182-A849-5C865D0EFDAA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2360,7 +2360,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A7B78943-21F0-4817-A541-34D25A10590E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2376,7 +2376,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4E650162-2955-440B-A9CC-E6E2CB990146"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2392,7 +2392,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3A2C4F5-01E9-4B08-A3A6-2AF71C43603D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Presenter/PublicEventDetailsPresenter.swift"
@@ -2408,7 +2408,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "15E41CB6-98D1-4412-817D-7B9458B5F9FF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsInteractor/ShowDetailsInteractor.swift"
@@ -2424,7 +2424,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7E9F55CF-465D-4E98-9CDA-D23F916EBCD3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
@@ -2440,7 +2440,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F918E74-CEE3-4E3A-9FCC-7579D9E8E3C5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/SessionDetails/SessionDetailsView/Views/SessionDetailsViewController.swift"
@@ -2456,7 +2456,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C1370713-68B5-4D61-B57C-05ADF36340A9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsViews/View/ShowDetailsViewController.swift"
@@ -2472,7 +2472,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F311233A-AB3F-4914-A684-79EF3A6EEA23"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/Services/PublicEventDetailsManager.swift"
@@ -2488,7 +2488,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "573A5BC9-B7C9-4804-929D-97B2B37BE35C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsInteractor/ShowDetailsInteractor.swift"
@@ -2504,7 +2504,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4524B8C5-7E2A-4D14-AF82-02C077829FD5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsInteractor/ShowDetailsInteractor.swift"
@@ -2520,7 +2520,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B1DD84E1-901E-4ADB-9131-ABABE50B4815"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
@@ -2568,7 +2568,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "661E0715-264E-4CAD-B6CC-4FF7CD13F3AE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
@@ -2584,7 +2584,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "20C9AC3E-6420-4106-8EC8-2A43053EBC86"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Fields/ShowDetails/ShowDetailsServices/ShowDetailsManager.swift"
@@ -2600,7 +2600,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "81E50B44-7737-4ADC-9F55-DE2D61DE999B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /PublicEvents/EventDetails/View/PublicEventDetailsViewController.swift"
@@ -2868,36 +2868,6 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - ea3944c0bd2ca617"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.ProfileManager.__allocating_init() -&gt; Hi5.ProfileManager"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 310d425b3894b3cf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Hi5.ProfileManager.init() -&gt; Hi5.ProfileManager"
-                  moduleName = "Hi5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
                   uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 8b930affc6af27e6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -2925,6 +2895,36 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - ea3944c0bd2ca617"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ProfileManager.__allocating_init() -&gt; Hi5.ProfileManager"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "F0D0722A-73AA-415D-B650-48A66F809303 - 310d425b3894b3cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.ProfileManager.init() -&gt; Hi5.ProfileManager"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/Profile/Profile/ProfileServices/ProfileManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -4722,7 +4722,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "343BA6AD-CD48-4CC7-8F05-0ABDFA7C0F4E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Profile/EditProfile/EditProfileViews/EditProfileViewController.swift"
@@ -4738,7 +4738,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4316B1A2-3F29-4427-87A5-A170E965DC14"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Sechadule/SechaduleServices/SechaduleManager.swift"
@@ -4754,7 +4754,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9C3DEAD9-6372-43B7-B36A-C73FBFE1FE09"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Sechadule/SechaduleServices/SechaduleManager.swift"
@@ -4770,7 +4770,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F15E3A4E-CC92-4EBB-8499-E70BB46C8FA2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Hi5/App Modules /Sechadule/SechaduleServices/SechaduleManager.swift"
@@ -5528,8 +5528,8 @@
             filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordViews/CreatePasswordViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "getStartedAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -5995,6 +5995,150 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06AAC8FB-C0B3-49B0-9BDF-95B115427A0C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/ChangeUsername/ChangeUsernameViews/ChangeUsernameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loginBtnTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68D48690-B49D-4CC9-8E7F-58D68090557D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordInteractor/CreatePasswordInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "doCreatePassword()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2602FF5-A99F-4C3F-AA83-C8932238A4AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /UserManagment/CreatePassword/CreatePasswordInteractor/CreatePasswordInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "doCreatePassword()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50F24C21-E7B2-42AA-8A7F-1DAF1E5A1B2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /NotificationSetting/NotificationSetting/NotificationSettingViews/View/NotificationSettingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getNotificattions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B50D268-05F6-468C-B2C0-6CEE599395A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /NotificationSetting/NotificationSetting/NotificationSettingInteractor/NotificationSettingInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getNotifications(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6B50D268-05F6-468C-B2C0-6CEE599395A4 - eb2ff8a5703a749"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hi5.NotificationSettingInteractor.getNotifications(page: Swift.Int) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/NotificationSetting/NotificationSetting/NotificationSettingInteractor/NotificationSettingInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "6B50D268-05F6-468C-B2C0-6CEE599395A4 - 9f4433f235de6a5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Hi5.ErrorModel&gt;, Swift.Bool, Swift.Optional&lt;Hi5.NotificationSettingModel.NotificationsModel&gt;) -&gt; () in Hi5.NotificationSettingInteractor.getNotifications(page: Swift.Int) -&gt; ()"
+                  moduleName = "Hi5"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Adam/Documents/Fudex/hi5/hi5-ios/Hi5/App%20Modules%20/NotificationSetting/NotificationSetting/NotificationSettingInteractor/NotificationSettingInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "238">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31F2FDED-B2EB-4214-AFDC-2C35E3F97119"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /NotificationSetting/NotificationSetting/NotificationSettingInteractor/NotificationSettingInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getNotifications(page:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9532A512-3042-4AE5-8A15-4D55D68592AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hi5/App Modules /NotificationSetting/NotificationSetting/NotificationSettingViews/View/NotificationSettingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "scrollViewDidEndDragging(_:willDecelerate:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

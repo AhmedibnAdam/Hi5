@@ -175,6 +175,7 @@
 		66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1A23B4E091009DB30A /* LoginEndpoint.swift */; };
 		66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1C23B4E0B3009DB30A /* NetworkService.swift */; };
 		664D24FD24B6087D007DA867 /* launchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D24FC24B6087D007DA867 /* launchEndpoint.swift */; };
+		664D24FF24B77530007DA867 /* NotificationsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D24FE24B77530007DA867 /* NotificationsEndpoint.swift */; };
 		66545F95243B61AC007A547F /* PublicEventDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8D243B61AC007A547F /* PublicEventDetailsConfiguration.swift */; };
 		66545F96243B61AC007A547F /* PublicEventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8E243B61AC007A547F /* PublicEventDetailsPresenter.swift */; };
 		66545F97243B61AC007A547F /* PublicEventDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8F243B61AC007A547F /* PublicEventDetailsRouter.swift */; };
@@ -786,6 +787,7 @@
 		66340A1A23B4E091009DB30A /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		66340A1C23B4E0B3009DB30A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		664D24FC24B6087D007DA867 /* launchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchEndpoint.swift; sourceTree = "<group>"; };
+		664D24FE24B77530007DA867 /* NotificationsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsEndpoint.swift; sourceTree = "<group>"; };
 		66545F8D243B61AC007A547F /* PublicEventDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsConfiguration.swift; sourceTree = "<group>"; };
 		66545F8E243B61AC007A547F /* PublicEventDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsPresenter.swift; sourceTree = "<group>"; };
 		66545F8F243B61AC007A547F /* PublicEventDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsRouter.swift; sourceTree = "<group>"; };
@@ -4632,6 +4634,7 @@
 			children = (
 				6683E2B223BB631D00250702 /* NotificationSettingModel.swift */,
 				6683E2B423BB631D00250702 /* NotificationSettingManager.swift */,
+				664D24FE24B77530007DA867 /* NotificationsEndpoint.swift */,
 			);
 			path = NotificationSettingServices;
 			sourceTree = "<group>";
@@ -5109,6 +5112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				668C213C23C3F6F700C009A9 /* CommentListsInteractor.swift in Sources */,
+				664D24FF24B77530007DA867 /* NotificationsEndpoint.swift in Sources */,
 				6663364423B402F7004E537C /* LoginViewController.swift in Sources */,
 				6683E2CB23BCEB8800250702 /* SettingRouter.swift in Sources */,
 				668C215A23C3F75300C009A9 /* CheckOutConfirmationPresenter.swift in Sources */,
@@ -5763,7 +5767,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.14;
+				CURRENT_PROJECT_VERSION = 1.1.15;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5787,7 +5791,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.14;
+				CURRENT_PROJECT_VERSION = 1.1.15;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

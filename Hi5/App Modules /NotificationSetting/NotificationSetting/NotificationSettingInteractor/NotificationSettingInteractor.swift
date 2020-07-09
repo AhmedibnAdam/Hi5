@@ -12,6 +12,7 @@ import UIKit
 
 protocol INotificationSettingInteractor: class {
 	var parameters: [String: Any]? { get set }
+      func getNotifications(page: Int)
 }
 
 class NotificationSettingInteractor: INotificationSettingInteractor {
@@ -22,5 +23,16 @@ class NotificationSettingInteractor: INotificationSettingInteractor {
     init(presenter: INotificationSettingPresenter, manager: INotificationSettingManager) {
     	self.presenter = presenter
     	self.manager = manager
+    }
+    
+    func getNotifications(page: Int){
+        manager?.getNotifiactionsFromApi(page: page, complition: { (error, success, response) in
+            if success {
+                self.presenter?.showNotifications(response: response!)
+            }
+            else {
+                print(error)
+            }
+        })
     }
 }

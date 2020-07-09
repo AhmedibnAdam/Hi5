@@ -34,7 +34,16 @@ class NotificationSettingContainerController: UIViewController {
     //MARK: - Handlers
     
     func configureNotificationSettingControllerController() {
+               
         let notificationSettingController = NotificationSettingViewController()
+        
+        let router = NotificationSettingRouter(view: notificationSettingController)
+        let presenter = NotificationSettingPresenter(view: notificationSettingController)
+        let manager = NotificationSettingManager()
+        let interactor = NotificationSettingInteractor(presenter: presenter, manager: manager)
+
+        notificationSettingController.interactor = interactor
+        notificationSettingController.router = router
         notificationSettingController.delegate = self
         centerController = UINavigationController(rootViewController: notificationSettingController)
         

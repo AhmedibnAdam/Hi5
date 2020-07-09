@@ -20,7 +20,29 @@ struct NotificationSettingModel {
 		}
 	}
 
-	struct Response {
-		// do someting...
-	}
+	// MARK: - NotificationsModel
+    struct NotificationsModel: Codable {
+        let status: Bool?
+        let data: [Datum]?
+        let total: Int?
+        let onFirstPage: Bool?
+        let perPage, currentPage, totalPages: Int?
+
+        enum CodingKeys: String, CodingKey {
+            case status, data, total
+            case onFirstPage = "on_first_page"
+            case perPage = "per_page"
+            case currentPage = "current_page"
+            case totalPages = "total_pages"
+        }
+    }
+
+    // MARK: - Datum
+    struct Datum: Codable {
+        let id: Int?
+        let title, message: String?
+        let image: String?
+        let date, time: String?
+    }
+
 }

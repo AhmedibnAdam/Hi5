@@ -21,6 +21,7 @@ class NotificationSettingViewController: UIViewController {
 	var router: INotificationSettingRouter?
     
     var notifications: NotificationSettingModel.NotificationsModel?
+    var listOfNotifications: [NotificationSettingModel.Datum]? = []
     //For Pagination
    var isDataLoading:Bool=false
     var pageNo: Int = 1
@@ -49,6 +50,11 @@ class NotificationSettingViewController: UIViewController {
        getNotificattions()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        listOfNotifications?.removeAll()
+    }
+    
+    
     func getNotificattions(){
         interactor?.getNotifications(page: pageNo)
     }
@@ -58,10 +64,13 @@ class NotificationSettingViewController: UIViewController {
   //MARK: -Extensions
 extension NotificationSettingViewController: INotificationSettingViewController {
     func showNotifications(response: NotificationSettingModel.NotificationsModel?) {
-        guard let data = response else{
+        guard let data = response?.data else{
             return
         }
-        self.notifications = data
+//        self.notifications = data
+        for noti in data{
+            listOfNotifications?.append(noti)
+        }
         table.reloadData()
     }
     
@@ -79,16 +88,16 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notifications?.data?.count ?? 0 + offset
+        return listOfNotifications?.count ?? 0 + offset
      }
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "notificationTableViewCell", for: indexPath) as! notificationTableViewCell
-        let notify = self.notifications?.data?[indexPath.row]
+        let notify = self.listOfNotifications?[indexPath.row]
         cell.time.text = notify?.date
         cell.title.text = notify?.title
         cell.msg.text = notify?.message
-         let url = notify?.image 
+        let url = notify?.image
         cell.img.kf.setImage(with: URL(string: url!))
          return cell
      }
@@ -109,15 +118,15 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
             print("scrollViewDidEndDragging")
             if ((table.contentOffset.y + table.frame.size.height) >= table.contentSize.height)
             {
-                if !isDataLoading{
-                    if (self.notifications?.onFirstPage == false) {
+//                if !isDataLoading{
+//                    if (self.notifications?.onFirstPage == false) {
                     isDataLoading = true
                     self.pageNo = self.pageNo + 1
                     self.limit = self.limit + 8
                     getNotificattions()
-                    }
+//                    }
 
-                }
+//                }
             }
 
 

@@ -47,7 +47,7 @@ class LoginInteractor: ILoginInteractor {
                     }
                 } else {
                     self.presenter?.hideIndecator()
-                    self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                    self.presenter?.showErrorAlert(title: "Error", msg: "Login Error!")
                 }
             }
             

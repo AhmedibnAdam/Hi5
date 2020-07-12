@@ -38,15 +38,13 @@ extension NotificationsEndpoint: IEndpoint {
     }
     
     var path: String {
-        /*
-        Do like this:
+
 
         switch self {
-        case .sample:
-            return "https://httpbin.org/get"
+        case .notifications(let page ):
+            return "http://api-ksa.com/demo/hi5/public/api/player/notifications?page=\(page)"
         }
-        */
-        return "http://api-ksa.com/demo/hi5/public/api/player/notifications"
+      
     }
     
     var parameter: Parameters? {
@@ -65,7 +63,8 @@ extension NotificationsEndpoint: IEndpoint {
         let defaults = UserDefaults.standard
         let token = defaults.string(forKey: "Token")
         
-        let headers = ["Accept": "application/json" , "Authorization": "Bearer \(token!)"]
+        let headers = ["Accept": "application/json" ,
+                       "Authorization": "Bearer \(token!)"]
         return headers
     }
     

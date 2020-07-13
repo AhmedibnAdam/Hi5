@@ -147,7 +147,7 @@ extension CreatePasswordViewController {
             let defaults = UserDefaults.standard
             let device_token = defaults.string(forKey: "firebase_token")
             parameters?["password"] = confirmPassword
-            parameters?["device_token"] = device_token
+            parameters?["device_token"] = device_token ?? "device_token"
             parameters?["password_confirmation"] = confirmPassword
             interactor?.parameters = parameters
             interactor?.doCreatePassword()

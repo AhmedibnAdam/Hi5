@@ -59,8 +59,12 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
     @IBAction func continueBtnTapped(_ sender: UIButton) {
         
         guard let name = fullNameTextField.text else {
-             showAlert(title: "Alert", msg: "- At least 4 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters.")
+             showAlert(title: "Alert", msg: "- At least 5 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters.")
             return
+        }
+        
+        if name.count < 5 {
+            showAlert(title: "Alert", msg: "- At least 5 characters. ")
         }
        let valid =  isValidInput(Input: name)
         if valid {
@@ -72,14 +76,14 @@ class RegisterViewController: UIViewController , UITextFieldDelegate{
             }
         }
         else {
-            showAlert(title: "Alert", msg: "- At least 4 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters.")
+            showAlert(title: "Alert", msg: "- At least 5 characters. \n - Username should start with latin letters. \n - Username can be only include latin letters, numbers and one of -,_, or . but no spical characters! \n - Username length shall less than 15 characters.")
         }
     }
     
     func isValidInput(Input:String) -> Bool {
-        let RegEx = "\\w{7,18}"
-        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
-        return Test.evaluate(with: Input)
+//        let RegEx = "\\w{7,18}"
+//        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+        return true //Test.evaluate(with: Input)
     }
     @IBAction func checkBoxBtn(_ sender: UIButton) {
         if sender.currentImage == UIImage(named:"checkBox") {

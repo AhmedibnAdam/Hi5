@@ -134,13 +134,7 @@ extension ProfileViewController: IProfileViewController {
         topView.isHidden = false
         indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
-//        numOfFriends.isHidden = false
-//        friendsLbl.isHidden = false
-//        countryLogo.isHidden = false
-//        countryNumber.isHidden = false
-////        countryLbl.isHidden = false
-//        countryName.isHidden = false
-//        flag.isHidden = false
+       
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -158,6 +152,7 @@ extension ProfileViewController: IProfileViewController {
 //        self.countryName.text = responseData.country?.val
         self.phone.text = ""
         joinOn.text = " Joined on \(responseData.joined_at!) ."
+       
         self.fullName.text = responseData.name
         self.userName.text = "@" + (responseData.vieID ?? "")
         self.descriptionLbl.text = responseData.biography

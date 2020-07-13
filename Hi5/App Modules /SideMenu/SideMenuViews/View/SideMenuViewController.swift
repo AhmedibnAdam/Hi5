@@ -72,19 +72,19 @@ extension SideMenuViewController {
         case "iPhone":
             plusHeight()
         case "iPhone 8 Plus":
-            smallHeight()
+            plusHeight()
         case "iPhone 8":
             smallHeight()
         case "iPhone 7 Plus":
-            smallHeight()
+            plusHeight()
         case "iPhone 7":
            smallHeight()
         case "iPhone 6 Plus":
-          smallHeight()
+          plusHeight()
         case "iPhone 6":
             smallHeight()
         case "iPhone X":
-            smallHeight()
+            plusHeight()
         case "iPhone XS":
             largeHeight()
         case "iPhone XS Max":
@@ -105,7 +105,7 @@ extension SideMenuViewController {
     }
     
     func smallHeight(){
-        height = 540.0
+        height = 450.0
         self.tableView.frame.size.height = CGFloat(height)
         tableHeight.constant = CGFloat(height)
     }

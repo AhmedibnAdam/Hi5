@@ -45,6 +45,8 @@ class NotificationSettingViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         registerTableCell()
+        table.estimatedRowHeight = 300.0
+        table.rowHeight = UITableView.automaticDimension
     }
     override func viewWillAppear(_ animated: Bool) {
        getNotificattions()
@@ -72,6 +74,7 @@ extension NotificationSettingViewController: INotificationSettingViewController 
             listOfNotifications?.append(noti)
         }
         table.reloadData()
+        self.view.layoutIfNeeded()
     }
     
     
@@ -93,8 +96,10 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          let cell = tableView.dequeueReusableCell(withIdentifier: "notificationTableViewCell", for: indexPath) as! notificationTableViewCell
+        cell.msg.preferredMaxLayoutWidth = tableView.bounds.width
+        cell.title.preferredMaxLayoutWidth = tableView.bounds.width
         let notify = self.listOfNotifications?[indexPath.row]
-        cell.time.text = notify?.date
+        cell.time.text = notify?.time
         cell.title.text = notify?.title
         cell.msg.text = notify?.message
         let url = notify?.image
@@ -106,7 +111,12 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
         print("scrollViewWillBeginDragging")
         isDataLoading = false
     }
-
+    private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+          return UITableView.automaticDimension
+         }
 
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

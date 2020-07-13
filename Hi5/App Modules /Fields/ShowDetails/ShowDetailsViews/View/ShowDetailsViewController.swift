@@ -158,7 +158,10 @@ class ShowDetailsViewController: UIViewController   {
           
       }
       func removeFavouriteDidTap() {
-        self.interactor?.removeFavourite(view: self, fieldId: (self.field?.field?.id)!)
+        guard let id = self.field?.field?.id  else {
+            return
+        }
+        self.interactor?.removeFavourite(view: self, fieldId:id)
           
       }
     

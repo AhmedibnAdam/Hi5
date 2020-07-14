@@ -119,5 +119,9 @@ extension CommentViewController: UITextViewDelegate   {
            self.view.endEditing(true)
            return false
        }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+               return textView.text.count + (newText.count - range.length) <= 300
+           }
        
 }

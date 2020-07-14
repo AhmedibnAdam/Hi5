@@ -17,6 +17,7 @@ struct ProfileModel {
 		}
 	}
   
+
     // MARK: - ShowProfileResponse
     struct ShowProfileResponse: Codable {
         let status: Bool?
@@ -26,27 +27,28 @@ struct ProfileModel {
     // MARK: - User
     struct User: Codable {
         let id: Int?
-        let name: String?
-        let email: String?
-        let gender, vieID: String?
+        let name, email: String?
         let phoneNumber: Int?
-        let isActive: Bool?
-        let createdAt: String?
-        let status: Int?
-        let biography: String?
+        let biography, gender, joinedAt, vieID: String?
         let avatar: String?
-        let year, month, day, country: City?
-        let city, state: City?
-        let latitude: Double?
-        let longitude: Int?
-        let joined_at: String?
+        let dateOfBirth: Int?
+        let country, city, state: City?
+        let isActive: Bool?
+        let status: Int?
+        let day, month, year: City?
+        let latitude, longitude: Double?
+
         enum CodingKeys: String, CodingKey {
-            case id, name, email, gender
-            case vieID = "vie_id"
+            case id, name, email
             case phoneNumber = "phone_number"
+            case biography, gender
+            case joinedAt = "joined_at"
+            case vieID = "vie_id"
+            case avatar
+            case dateOfBirth = "date_of_birth"
+            case country, city, state
             case isActive = "is_active"
-            case createdAt = "created_at"
-            case status, biography, avatar, year, month, day, country, city, state, latitude, longitude , joined_at
+            case status, day, month, year, latitude, longitude
         }
     }
 
@@ -54,6 +56,7 @@ struct ProfileModel {
     struct City: Codable {
         let val, flag: String?
     }
+
 
     // MARK: - PartnerProfile
     struct PartnerProfile: Codable {
@@ -76,7 +79,7 @@ struct ProfileModel {
         let cost: Int?
         let gender: String?
         let address: String?
-        let longitude, latitude: String?
+        let longitude, latitude: Double?
         let distance, sportType, recommendedFor: String?
         let fieldImage: String?
         let comments: Int?
@@ -102,23 +105,24 @@ struct ProfileModel {
 
     // MARK: - User
     struct FriendUser: Codable {
-       let id: Int?
-        let name, email: String?
-        let phoneNumber: Int?
-        let biography, gender, vieID: String?
-        let avatar: String?
-        let dateOfBirth: Int?
-        let sports: [Sport]?
+     let id: Int?
+     let name, email: String?
+     let phoneNumber: Int?
+     let biography, gender, joinedAt, vieID: String?
+     let avatar: String?
+     let dateOfBirth: Int?
+     let country, city, state: City?
 
-        enum CodingKeys: String, CodingKey {
-            case id, name, email
-            case phoneNumber = "phone_number"
-            case biography, gender
-            case vieID = "vie_id"
-            case avatar
-            case dateOfBirth = "date_of_birth"
-            case sports
-        }
+     enum CodingKeys: String, CodingKey {
+         case id, name, email
+         case phoneNumber = "phone_number"
+         case biography, gender
+         case joinedAt = "joined_at"
+         case vieID = "vie_id"
+         case avatar
+         case dateOfBirth = "date_of_birth"
+         case country, city, state
+     }
     }
 
 

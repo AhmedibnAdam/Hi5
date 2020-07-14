@@ -108,7 +108,7 @@ extension ChangeUsernameViewController {
     }
            
            func isValidInput(Input:String) -> Bool {
-               let RegEx = "\\w{7,18}"
+               let RegEx = "\\w{4,16}"
                let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
                return Test.evaluate(with: Input)
            }

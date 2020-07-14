@@ -42,10 +42,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var fullName: UILabel!
     @IBOutlet weak var profilePhoto: UIImageView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var logoView: UIView!
     @IBOutlet weak var editBtn: UIButton!
-    @IBOutlet weak var editSports: UIButton!
+//    @IBOutlet weak var editSports: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var address: UILabel!
     //    @IBOutlet weak var numOfFriends: UILabel!
@@ -57,11 +57,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var imageprofileTop: NSLayoutConstraint!
     @IBOutlet weak var fieldTitleLbl: UILabel!
     @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var userProfileView: UIView!
+//    @IBOutlet weak var userProfileView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var imageprofileHight: NSLayoutConstraint!
     @IBOutlet weak var imgProfileWidth: NSLayoutConstraint!
     @IBOutlet weak var joinOn: UILabel!
+    @IBOutlet weak var genderButton: UIButton!
     
     
     //MARK:- view LifeCycle
@@ -120,7 +121,7 @@ extension ProfileViewController: IProfileViewController {
         self.response = data
         phone.text = "Email: " + (response?.partner?.email ?? "")
         userName.text = response?.partner?.phone
-        
+         
         fullName.text = response?.partner?.name
         let url = URL(string: (response?.partner?.image)!)!
         profilePhoto.kf.setImage(with: url)
@@ -134,7 +135,7 @@ extension ProfileViewController: IProfileViewController {
         topView.isHidden = false
         indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
-       
+      
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -148,17 +149,25 @@ extension ProfileViewController: IProfileViewController {
                 }
             }
         }
-        
-//        self.countryName.text = responseData.country?.val
+
         self.phone.text = ""
-        joinOn.text = " Joined on \(responseData.joined_at!) ."
-       
+        joinOn.text = " Joined on \(responseData.joinedAt ?? "") ."
+        if let userage = responseData.dateOfBirth {
+            age.text = "\(userage)"
+        }
+        
         self.fullName.text = responseData.name
         self.userName.text = "@" + (responseData.vieID ?? "")
         self.descriptionLbl.text = responseData.biography
         if let gender = responseData.gender{
             defaults.set(gender, forKey: "Gender")
+            if gender == "male" ||  gender == "Male"{
+                genderButton.setImage(UIImage(named: "male11"), for: .normal)
+            }else if gender == "female" || gender == "Female"{
+               genderButton.setImage(UIImage(named: "female11"), for: .normal)
+            }
         }
+        
         
         if let day = responseData.day?.val , let month = responseData.month?.val , let year = responseData.year?.val {
             dateOfBirth = day+" "+month+" "+year
@@ -205,13 +214,6 @@ extension ProfileViewController: IProfileViewController {
         topView.isHidden = false
         indicator.stopAnimating()
         fieldTitleLbl.isHidden = true
-//        numOfFriends.isHidden = false
-//        friendsLbl.isHidden = false
-//        countryLogo.isHidden = false
-//        countryNumber.isHidden = false
-//        countryName.isHidden = false
-//        countryName.isHidden = false
-//        flag.isHidden = false
         let defaults = UserDefaults.standard
         if let img = responseData.avatar {
             let url = URL(string: img)
@@ -225,8 +227,25 @@ extension ProfileViewController: IProfileViewController {
             }
         }
         
-        //        self.countryName.text = responseData.country?.val
-        self.age.text = ", \(responseData.dateOfBirth ?? 0)"
+        joinOn.text = " Joined on \(responseData.joinedAt ?? "") ."
+        if let userage = responseData.dateOfBirth {
+            age.text = "\(userage)"
+        }
+        if let gender = responseData.gender{
+                 defaults.set(gender, forKey: "Gender")
+                 if gender == "male" ||  gender == "Male"{
+                     genderButton.setImage(UIImage(named: "male11"), for: .normal)
+                 }else if gender == "female" || gender == "Female"{
+                    genderButton.setImage(UIImage(named: "female11"), for: .normal)
+                 }
+             }
+        if let country = responseData.country?.val , let city = responseData.city?.val , let state = responseData.state?.val {
+                   location = country+" "+city+" "+state
+                   address.text = location
+                   defaults.set(location, forKey: "location")
+                   print(location)
+               }
+        
         self.phone.text = ""
         self.fullName.text = responseData.name
         self.userName.text = responseData.vieID
@@ -287,7 +306,7 @@ extension ProfileViewController {
         
         if id == nil || id == 0 {
             interactor?.showUsrerProfile()
-            userProfileView.isHidden = false
+//            userProfileView.isHidden = false
             bottomView.isHidden = true
             editBtn.isHidden = false
         }
@@ -302,7 +321,7 @@ extension ProfileViewController {
                 interactor?.showPlyerProfile(id: id!)
             }
             else {
-                userProfileView.isHidden = true
+//                userProfileView.isHidden = true
                 interactor?.doShowProfile(id: id! , lat: lat ?? 0.0 , long: long ?? 0.0)
             }
         }

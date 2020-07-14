@@ -37,6 +37,7 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
     var state = "nasrCity"
     var locationWords: [String] = []
     var parameters: [String: Any]?
+    var counter = 0
     lazy var backBtn: UIBarButtonItem = {
         return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(dismissView))
     }()
@@ -46,6 +47,7 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
     }
 //MARK:- Outlets
     @IBOutlet weak var locationBtn: UIButton!
+    @IBOutlet weak var counterlbl: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var profilePhoto: UIImageView!
     @IBOutlet weak var dateOfBirthBtn: UIButton!
@@ -65,6 +67,8 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
         super.viewDidLoad()
         fullNameTextField.delegate = self
         setupNavigationBar()
+        biographyTextField.delegate = self
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
@@ -83,6 +87,7 @@ class EditProfileViewController: UIViewController , UITextFieldDelegate{
         genderBtn.setTitle(gend, for: .normal)
         dateOfBirthBtn.setTitle(dateOfBirth, for: .normal)
         locationBtn.setTitle(location, for: .normal)
+        counterlbl.text = "\(biographyTextField.text.count)"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -267,17 +272,27 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         router?.navigateToGender()
     }
 }
+extension EditProfileViewController: UITextViewDelegate   {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+//        placeholder.isHidden = true
+    }
+    func textViewDidChange(_ textView: UITextView) {
+        
+        counter = biographyTextField.text.count
+        counterlbl.text = "\(counter)"
+        if counter >= 160 {
+            ShowAlertView.showAlert(title: "Alert", msg: "your biography should be less than 160 character", sender: self)
+       
+        }
+        else {
+            biographyTextField.isEditable = true
+        }
+    }
+    
+    
 
-//extension UserDefaults {
-//    func imageArray(forKey key: String) -> [UIImage]? {
-//        guard let array = self.array(forKey: key) as? [Data] else {
-//            return nil
-//        }
-//        return array.flatMap() { UIImage(data: $0) }
-//    }
-//
-//    func set(_ imageArray: [UIImage], forKey key: String) {
-//        self.set(imageArray.flatMap({ $0.pngData() }), forKey: key)
-//    }
-//}
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+            return textView.text.count + (newText.count - range.length) <= 160
+        }
+}
 

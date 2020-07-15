@@ -254,6 +254,14 @@
 		666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336BF23B40BD3004E537C /* NewPasswordModel.swift */; };
 		666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666336C023B40BD3004E537C /* NewPasswordViewController.xib */; };
 		666336C923B40BD3004E537C /* NewPasswordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666336C123B40BD3004E537C /* NewPasswordManager.swift */; };
+		66647CB824BF5F5700873B38 /* TermsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB024BF5F5700873B38 /* TermsConfiguration.swift */; };
+		66647CB924BF5F5800873B38 /* TermsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB124BF5F5700873B38 /* TermsPresenter.swift */; };
+		66647CBA24BF5F5800873B38 /* TermsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB224BF5F5700873B38 /* TermsWorker.swift */; };
+		66647CBB24BF5F5800873B38 /* TermsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB324BF5F5700873B38 /* TermsRouter.swift */; };
+		66647CBC24BF5F5800873B38 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB424BF5F5700873B38 /* TermsViewController.swift */; };
+		66647CBD24BF5F5800873B38 /* TermsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB524BF5F5700873B38 /* TermsInteractor.swift */; };
+		66647CBE24BF5F5800873B38 /* TermsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66647CB624BF5F5700873B38 /* TermsModel.swift */; };
+		66647CBF24BF5F5800873B38 /* TermsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66647CB724BF5F5700873B38 /* TermsViewController.xib */; };
 		667E4B6F23C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6723C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift */; };
 		667E4B7023C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6823C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift */; };
 		667E4B7123C3DCA3007354A7 /* MakeWalletPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667E4B6923C3DCA3007354A7 /* MakeWalletPasswordRouter.swift */; };
@@ -868,6 +876,14 @@
 		666336BF23B40BD3004E537C /* NewPasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordModel.swift; sourceTree = "<group>"; };
 		666336C023B40BD3004E537C /* NewPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewPasswordViewController.xib; sourceTree = "<group>"; };
 		666336C123B40BD3004E537C /* NewPasswordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordManager.swift; sourceTree = "<group>"; };
+		66647CB024BF5F5700873B38 /* TermsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConfiguration.swift; sourceTree = "<group>"; };
+		66647CB124BF5F5700873B38 /* TermsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsPresenter.swift; sourceTree = "<group>"; };
+		66647CB224BF5F5700873B38 /* TermsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsWorker.swift; sourceTree = "<group>"; };
+		66647CB324BF5F5700873B38 /* TermsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsRouter.swift; sourceTree = "<group>"; };
+		66647CB424BF5F5700873B38 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		66647CB524BF5F5700873B38 /* TermsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsInteractor.swift; sourceTree = "<group>"; };
+		66647CB624BF5F5700873B38 /* TermsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsModel.swift; sourceTree = "<group>"; };
+		66647CB724BF5F5700873B38 /* TermsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsViewController.xib; sourceTree = "<group>"; };
 		667E4B6723C3DCA3007354A7 /* MakeWalletPasswordConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordConfiguration.swift; sourceTree = "<group>"; };
 		667E4B6823C3DCA3007354A7 /* MakeWalletPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordPresenter.swift; sourceTree = "<group>"; };
 		667E4B6923C3DCA3007354A7 /* MakeWalletPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWalletPasswordRouter.swift; sourceTree = "<group>"; };
@@ -2294,6 +2310,7 @@
 		6663362623B40221004E537C /* UserManagment */ = {
 			isa = PBXGroup;
 			children = (
+				66647CAF24BF5F3900873B38 /* terms */,
 				662EF16224AC968300AB7F66 /* Entrance */,
 				862A5E7C23CB72130058355E /* ChangeUsername */,
 				86BBEE4F23CB5F5D0036C41D /* CreatePassword */,
@@ -2424,6 +2441,21 @@
 				8643730823CB1E1C009CAF28 /* NewPasswordViews */,
 			);
 			path = NewPassword;
+			sourceTree = "<group>";
+		};
+		66647CAF24BF5F3900873B38 /* terms */ = {
+			isa = PBXGroup;
+			children = (
+				66647CB024BF5F5700873B38 /* TermsConfiguration.swift */,
+				66647CB124BF5F5700873B38 /* TermsPresenter.swift */,
+				66647CB224BF5F5700873B38 /* TermsWorker.swift */,
+				66647CB324BF5F5700873B38 /* TermsRouter.swift */,
+				66647CB424BF5F5700873B38 /* TermsViewController.swift */,
+				66647CB524BF5F5700873B38 /* TermsInteractor.swift */,
+				66647CB624BF5F5700873B38 /* TermsModel.swift */,
+				66647CB724BF5F5700873B38 /* TermsViewController.xib */,
+			);
+			path = terms;
 			sourceTree = "<group>";
 		};
 		667E4B6623C3DC78007354A7 /* MakeWalletPassword */ = {
@@ -5007,6 +5039,7 @@
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
 				66AEC632242283B4003CF2EB /* MyBookingsTableViewCell.xib in Resources */,
 				660A140D24600376006DAD45 /* PlayersTableViewCell.xib in Resources */,
+				66647CBF24BF5F5800873B38 /* TermsViewController.xib in Resources */,
 				667E4B8623C3E169007354A7 /* AddFundViewController.xib in Resources */,
 				668C210B23C3F5BC00C009A9 /* AddSessionResultViewController.xib in Resources */,
 				666336C823B40BD3004E537C /* NewPasswordViewController.xib in Resources */,
@@ -5137,6 +5170,7 @@
 				E2FAE5D9240E649E00CD8CFC /* PublicEventsManager.swift in Sources */,
 				6682B3BE2429924D0050CC9A /* SechaduleRouter.swift in Sources */,
 				662A168423C3E4B200A3695E /* TransactionsModel.swift in Sources */,
+				66647CB824BF5F5700873B38 /* TermsConfiguration.swift in Sources */,
 				662A16B823C3E93900A3695E /* MyFriendsDetailsModel.swift in Sources */,
 				660A14F224619EF5006DAD45 /* FieldOwnerDetailsModel.swift in Sources */,
 				E2FAE576240BEF5C00CD8CFC /* CustomView.swift in Sources */,
@@ -5217,6 +5251,7 @@
 				668C211C23C3F6C100C009A9 /* CheckOutInteractor.swift in Sources */,
 				66545F9C243B61AC007A547F /* PublicEventDetailsManager.swift in Sources */,
 				E2FAE5DC240E649E00CD8CFC /* PublicEventsConfiguration.swift in Sources */,
+				66647CBE24BF5F5800873B38 /* TermsModel.swift in Sources */,
 				862A5E8923CB72380058355E /* ChangeUsernameInteractor.swift in Sources */,
 				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
 				6683E30A23BCEEFF00250702 /* ProfilePresenter.swift in Sources */,
@@ -5252,6 +5287,7 @@
 				6683E2B723BB631D00250702 /* NotificationSettingRouter.swift in Sources */,
 				861D22E823DCAFB9004F16F1 /* LibraryConfiguration.swift in Sources */,
 				E2FAE5D2240E649E00CD8CFC /* publicEventsCell.swift in Sources */,
+				66647CBB24BF5F5800873B38 /* TermsRouter.swift in Sources */,
 				862EB5AD23D730AD00508F1A /* DateOfBirthPresenter.swift in Sources */,
 				662A16E923C3ECE000A3695E /* MyFriendsRequestViewController.swift in Sources */,
 				8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */,
@@ -5415,6 +5451,7 @@
 				662A16C823C3EA9F00A3695E /* AddFriendsInteractor.swift in Sources */,
 				86FB635723F97DE4001019B1 /* NotificationSettingContainerController.swift in Sources */,
 				6683E2AB23BB626700250702 /* TableViewCell.swift in Sources */,
+				66647CBA24BF5F5800873B38 /* TermsWorker.swift in Sources */,
 				668C20F623C3F57800C009A9 /* AddSessionResultFiltterPresenter.swift in Sources */,
 				66F44021247413600057268E /* FilterBublicEventPresenter.swift in Sources */,
 				663117E3243F25D7007C3FED /* WalletSuccessCheckOutRouter.swift in Sources */,
@@ -5465,6 +5502,7 @@
 				668E9EF2246EB0F7004A403E /* CommentManager.swift in Sources */,
 				86A5D9B223FC064A00BC7204 /* FieldsEndPoint.swift in Sources */,
 				86DB006823D70B97001E99E8 /* GenderRouter.swift in Sources */,
+				66647CBD24BF5F5800873B38 /* TermsInteractor.swift in Sources */,
 				668E9EEC246EB0F7004A403E /* CommentPresenter.swift in Sources */,
 				86B14BDD23CB543B00B3FEB1 /* WelcomeRouter.swift in Sources */,
 				6683E2A623BB5FD900250702 /* MyFriendsModel.swift in Sources */,
@@ -5515,6 +5553,7 @@
 				6683E2B923BB631D00250702 /* NotificationSettingInteractor.swift in Sources */,
 				662EF18724AC9AF600AB7F66 /* EntranceInteractor.swift in Sources */,
 				6683E2BF23BB63AA00250702 /* notificationTableViewCell.swift in Sources */,
+				66647CB924BF5F5800873B38 /* TermsPresenter.swift in Sources */,
 				86B14BC623CB4AA500B3FEB1 /* SignupPhoneVerificationRouter.swift in Sources */,
 				6683E2A423BB5FD900250702 /* MyFriendsViewController.swift in Sources */,
 				666336A423B40B47004E537C /* ForgotPhoneInteractor.swift in Sources */,
@@ -5615,6 +5654,7 @@
 				6683E30C23BCEEFF00250702 /* ProfileViewController.swift in Sources */,
 				662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */,
 				663117D6243F25D7007C3FED /* SessionDetailsConfiguration.swift in Sources */,
+				66647CBC24BF5F5800873B38 /* TermsViewController.swift in Sources */,
 				86F9B90D23DDAAA5008C1F80 /* LocationViewController.swift in Sources */,
 				86652BE723D0A31400E68E54 /* ForgetEmailEndPoint.swift in Sources */,
 				86E1292C23D49E73007CB956 /* TabBarPresenter.swift in Sources */,
@@ -5767,7 +5807,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.18;
+				CURRENT_PROJECT_VERSION = 1.1.20;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5791,7 +5831,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.18;
+				CURRENT_PROJECT_VERSION = 1.1.20;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

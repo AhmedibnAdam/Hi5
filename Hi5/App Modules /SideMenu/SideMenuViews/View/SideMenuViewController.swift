@@ -52,7 +52,7 @@ class SideMenuViewController: UIViewController , UITableViewDelegate , UITableVi
         let fullName = defaults.string(forKey: "FullName")
         let userName = defaults.string(forKey: "UserName")
         fullNamelbl.text = fullName
-        userNamelbl.text = userName
+        userNamelbl.text = "@" + userName! 
     }
     //MARK: - Actions
     

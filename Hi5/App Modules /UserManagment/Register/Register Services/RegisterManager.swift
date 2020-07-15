@@ -13,6 +13,7 @@ import Foundation
 protocol IRegisterManager: class {
 	// MARK : - do someting...
     func signupFromApi(fullName: String ,phoneNumber: String ,complition :  @escaping (_ error:RegisterModel.AuthError? ,_ success: Bool)->Void)
+    func terms( complition: @escaping (RegisterModel.AuthError?, Bool) -> Void)
 }
 class RegisterManager: IRegisterManager {
 	// MARK : - do someting...
@@ -65,5 +66,23 @@ class RegisterManager: IRegisterManager {
                    
                })
         }
+
+    func terms( complition: @escaping (RegisterModel.AuthError?, Bool) -> Void) {
+        NetworkService.share.request(endpoint: RegisterEndpoint.terms, success: { (responseData) in
+            do {
+                let decoder = JSONDecoder()
+                let data = try decoder.decode(RegisterModel.AuthError.self, from: responseData )
+                print(data)
+                complition(data , true)
+                
+            } catch let error {
+                print(error)
+                complition(nil , false)
+            }
+            
+        }) { (error) in
+            
+        }
+    }
 }
 

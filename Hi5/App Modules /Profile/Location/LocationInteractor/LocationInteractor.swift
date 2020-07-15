@@ -37,7 +37,7 @@ class LocationInteractor: ILocationInteractor {
                 
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Alert", msg: "please enter your country, city and state")
             }
         })
     }

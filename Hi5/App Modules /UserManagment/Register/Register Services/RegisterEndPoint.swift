@@ -16,6 +16,7 @@ enum RegisterEndpoint {
      case sample(parameter: [String: Any])
     */
     case signup(fullName: String , phoneNumber: String)
+    case terms
 }
 
 extension RegisterEndpoint: IEndpoint {
@@ -36,7 +37,9 @@ extension RegisterEndpoint: IEndpoint {
     switch self {
       case .signup:
         return .post
-    }
+    case .terms:
+        return .get
+        }
 }
     
     var path: String {
@@ -51,7 +54,9 @@ extension RegisterEndpoint: IEndpoint {
     switch self {
        case .signup:
          return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
-       }
+    case .terms:
+        return "http://api-ksa.com/demo/hi5/public/api/player/terms"
+        }
     }
     
     var parameter: Parameters? {
@@ -67,6 +72,8 @@ extension RegisterEndpoint: IEndpoint {
     switch self {
         case .signup(let fullName , let phoneNumber):
             return ["full_name": fullName , "phone_number": phoneNumber]
+    case .terms:
+        return nil
         }
   }
     
@@ -82,7 +89,9 @@ extension RegisterEndpoint: IEndpoint {
     switch self {
        case .signup:
            return ["Accept": "application/json"]
-       }
+    case .terms:
+          return ["Accept": "application/json"]
+        }
     }
     
     var encoding: ParameterEncoding {
@@ -98,6 +107,8 @@ extension RegisterEndpoint: IEndpoint {
         */
         switch self {
         case .signup:
+            return JSONEncoding.default
+        case .terms:
             return JSONEncoding.default
         }
     }

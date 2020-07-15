@@ -15,6 +15,7 @@ protocol IRegisterPresenter: class {
     func showErrorAlert(title: String, msg: String)
     func navigateToSignupPhoneVerification()
     func hideIndicator()
+    func showTerms(response: RegisterModel.AuthError?)
 }
 class RegisterPresenter: IRegisterPresenter {
 	weak var view: IRegisterViewController?
@@ -29,5 +30,8 @@ class RegisterPresenter: IRegisterPresenter {
     }
     func hideIndicator() {
         view?.hideIndicator()
+    }
+    func showTerms(response: RegisterModel.AuthError?){
+        view?.showTerms(response: response)
     }
 }

@@ -28,7 +28,7 @@ struct ProfileModel {
     struct User: Codable {
         let id: Int?
         let name, email: String?
-        let phoneNumber: Int?
+      
         let biography, gender, joinedAt, vieID: String?
         let avatar: String?
         let dateOfBirth: Int?
@@ -40,7 +40,7 @@ struct ProfileModel {
 
         enum CodingKeys: String, CodingKey {
             case id, name, email
-            case phoneNumber = "phone_number"
+     
             case biography, gender
             case joinedAt = "joined_at"
             case vieID = "vie_id"

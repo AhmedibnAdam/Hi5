@@ -33,7 +33,7 @@ struct RegisterModel {
     // MARK: - AuthError
     struct AuthError: Codable {
         let status: Bool
-        let errors: [Error]
+        let url: String
     }
 
     // MARK: - Error

@@ -31,7 +31,7 @@ class EditProfileInteractor: IEditProfileInteractor {
                 self.presenter?.hideIndicator()
             }else{
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.code! ?? 400)", msg: (error?.message)!)
+                self.presenter?.showErrorAlert(title: "Alert", msg: "error profile information")
             }
         })
     }

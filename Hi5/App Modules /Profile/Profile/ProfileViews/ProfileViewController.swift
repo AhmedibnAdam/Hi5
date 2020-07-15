@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var topView: UIView!
 //    @IBOutlet weak var countryName: UILabel!
+    @IBOutlet weak var genderView: UIView!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var age: UILabel!
@@ -160,13 +161,22 @@ extension ProfileViewController: IProfileViewController {
         self.userName.text = "@" + (responseData.vieID ?? "")
         self.descriptionLbl.text = responseData.biography
         if let gender = responseData.gender{
-            defaults.set(gender, forKey: "Gender")
-            if gender == "male" ||  gender == "Male"{
-                genderButton.setImage(UIImage(named: "male11"), for: .normal)
-            }else if gender == "female" || gender == "Female"{
-               genderButton.setImage(UIImage(named: "female11"), for: .normal)
+                 defaults.set(gender, forKey: "Gender")
+                 if gender == "male" ||  gender == "Male"{
+                    genderButton.isHidden = false
+                   
+                     genderView.backgroundColor = hexStringToUIColor(hex: "#16BFFF")
+                     genderButton.setImage(UIImage(named: "male11"), for: .normal)
+                 }else if gender == "female" || gender == "Female"{
+                    genderButton.isHidden = false
+                    genderView.backgroundColor = hexStringToUIColor(hex: "#FF1972")
+                    genderButton.setImage(UIImage(named: "female11"), for: .normal)
+                 }
+                 else {
+                    genderButton.isHidden = true
+
             }
-        }
+             }
         
         
         if let day = responseData.day?.val , let month = responseData.month?.val , let year = responseData.year?.val {
@@ -234,10 +244,19 @@ extension ProfileViewController: IProfileViewController {
         if let gender = responseData.gender{
                  defaults.set(gender, forKey: "Gender")
                  if gender == "male" ||  gender == "Male"{
+                    genderButton.isHidden = false
+                   
+                     genderView.backgroundColor = hexStringToUIColor(hex: "#16BFFF")
                      genderButton.setImage(UIImage(named: "male11"), for: .normal)
                  }else if gender == "female" || gender == "Female"{
+                    genderButton.isHidden = false
+                    genderView.backgroundColor = hexStringToUIColor(hex: "#FF1972")
                     genderButton.setImage(UIImage(named: "female11"), for: .normal)
                  }
+                 else {
+                    genderButton.isHidden = true
+
+            }
              }
         if let country = responseData.country?.val , let city = responseData.city?.val , let state = responseData.state?.val {
                    location = country+" "+city+" "+state
@@ -368,5 +387,28 @@ extension ProfileViewController : UITableViewDelegate , UITableViewDataSource {
         }
         
         router?.navigateToShowdetails(param: ["longitude": self.long ?? 31.65465 , "latitude": self.lat ?? 29.75765 ] , field_id: "\(field)")
+    }
+}
+extension UIViewController{
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
 }

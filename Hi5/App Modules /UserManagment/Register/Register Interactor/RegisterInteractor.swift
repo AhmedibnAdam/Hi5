@@ -13,6 +13,7 @@ import UIKit
 protocol IRegisterInteractor: class {
     var parameters: [String: Any]? { get set }
     func doSignup(view : UIViewController , fullName: String , phoneNumber: String)
+    func terms()
 }
 
 class RegisterInteractor: IRegisterInteractor {
@@ -31,7 +32,14 @@ class RegisterInteractor: IRegisterInteractor {
                 self.presenter?.navigateToSignupPhoneVerification()
             } else {
                 self.presenter?.hideIndicator()
-                self.presenter?.showErrorAlert(title: "\(error?.errors[0].key ?? "")", msg: (error?.errors[0].value) ?? "Error ")
+//                self.presenter?.showErrorAlert(title: "\(error?.errors[0].key ?? "")", msg: (error?.errors[0].value) ?? "Error ")
+            }
+        })
+    }
+    func terms(){
+        manager?.terms(complition: { (response, status) in
+            if status == true {
+                self.presenter?.showTerms(response: response )
             }
         })
     }

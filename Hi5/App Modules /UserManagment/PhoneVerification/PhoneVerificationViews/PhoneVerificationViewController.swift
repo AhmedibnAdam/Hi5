@@ -38,7 +38,7 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var continueBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        dialCode = "966"
         countryCode.delegate = self
         countryCode.selectedCountry?.code = .SA
         self.textField1.delegate = self
@@ -110,20 +110,20 @@ class PhoneVerificationViewController: UIViewController, UITextFieldDelegate {
     
     
     var timer : Timer?
-    var counter = 0
+    var counter = 30
 
 
 
     @objc func prozessTimer() {
-        counter += 1
+        counter -= 1
         print("This is a second ", counter)
         sendVerifyBtn.setTitle("\(counter)", for: .normal)
         
         
-        if counter >= 30 {
+        if counter <= 0 {
             sendVerifyBtn.isEnabled = true
             sendVerifyBtn.setTitle("Resend", for: .normal)
-            counter = 0
+            counter = 30
         timer?.invalidate()
               timer = nil
         }

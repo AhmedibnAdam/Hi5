@@ -48,7 +48,14 @@ class DateOfBirthViewController: UIViewController {
         super.viewDidLoad()
 		setupNavigationBar()
         configure()
-        datePicker.maximumDate = Date()
+       let calendar = Calendar(identifier: .gregorian)
+        var comps = DateComponents()
+        comps.year = -13
+        let maxDate = calendar.date(byAdding: comps, to: Date())
+
+        datePicker.maximumDate = maxDate
+
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -24,6 +24,7 @@ enum GeneralRoute: IRouter {
     case enterance
     case login
     case register
+    case terms(url: String)
     case forgetPassword
     case forgetPhone
     case forgetEmail
@@ -90,6 +91,8 @@ extension GeneralRoute {
             return LoginConfiguration.setup()
         case .register:
             return RegisterConfiguration.setup()
+        case .terms(let url):
+            return TermsConfiguration.setup(url: url)
         case .setting:
             return SettingConfiguration.setup()
         case .forgetPassword:

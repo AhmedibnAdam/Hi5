@@ -168,7 +168,7 @@ extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigati
         countryFlag = defaults.string(forKey: "countryFlag") ?? "public"
         cityFlag = defaults.string(forKey: "cityFlag") ?? "public"
         stateFlag = defaults.string(forKey: "stateFlag") ?? "public"
-        gender = defaults.string(forKey: "gender") ?? "male"
+        gender = defaults.string(forKey: "gender") ?? "not specified"
         if let location = defaults.string(forKey: "location") {
            let locationWords = location.split(separator: ",")
 

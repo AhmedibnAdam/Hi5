@@ -53,6 +53,7 @@ class SignupPhoneVerificationViewController: UIViewController, UITextFieldDelega
         textField3.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         textField4.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         configer()
+        dialCode = "966"
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)

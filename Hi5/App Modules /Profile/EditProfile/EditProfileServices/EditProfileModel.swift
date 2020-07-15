@@ -27,7 +27,7 @@ struct EditProfileModel {
         let name: String?
         let email: String?
         let gender, vieID: String?
-        let phoneNumber: Int?
+//        let phoneNumber: Int?
         let isActive: Bool?
         let createdAt: String?
         let status: Int?
@@ -36,12 +36,12 @@ struct EditProfileModel {
         let year, month, day, country: City?
         let city, state: City?
         let latitude: Double?
-        let longitude: Int?
+        let longitude: Double?
 
         enum CodingKeys: String, CodingKey {
             case id, name, email, gender
             case vieID = "vie_id"
-            case phoneNumber = "phone_number"
+//            case phoneNumber = "phone_number"
             case isActive = "is_active"
             case createdAt = "created_at"
             case status, biography, avatar, year, month, day, country, city, state, latitude, longitude

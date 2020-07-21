@@ -8,10 +8,11 @@ target 'Hi5' do
      pod 'LUExpandableTableView'
      pod 'IQKeyboardManagerSwift'
      pod 'Alamofire', '~> 4.9.1'
+     pod 'SwiftyJSON'
   #   pod 'BTHorizontalPageableView'
   #   pod 'YSSegmentedControl' 6.4.8
      pod 'SideMenu' , '~> 6.4.8'
-     pod 'SwiftyJSON'
+
      pod 'DropDown'
      pod 'FlagPhoneNumber'
      pod 'ActionSheetPicker-3.0'

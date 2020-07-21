@@ -25,7 +25,7 @@ extension FieldOwnerDetailsEndPoint: IEndpoint {
     var path: String {
         switch self {
         case .addSuggestField:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "add_suggestion_field"
+            return Constant.base + "player/" + "add_suggestion_field"
         }
     }
     

@@ -28,9 +28,9 @@ extension SessionDetailsEndPoint: IEndpoint {
     var path: String {
         switch self {
         case .getSessionDetails(let fieldId, let payment):
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "session/\(fieldId)/details"
+            return Constant.base + "player/" + "session/\(fieldId)/details"
         case .getFieldContacts(let id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "field/\(id)/contacts"
+            return Constant.base + "player/" + "field/\(id)/contacts"
         }
     }
     

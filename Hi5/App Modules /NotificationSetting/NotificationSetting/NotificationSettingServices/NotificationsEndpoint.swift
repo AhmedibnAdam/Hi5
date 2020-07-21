@@ -42,7 +42,7 @@ extension NotificationsEndpoint: IEndpoint {
 
         switch self {
         case .notifications(let page ):
-            return "http://api-ksa.com/demo/hi5/public/api/player/notifications?page=\(page)"
+            return Constant.base + "player/notifications?page=\(page)"
         }
       
     }

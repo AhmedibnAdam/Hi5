@@ -28,7 +28,7 @@ extension ForgetEmailEndpoint: IEndpoint {
     var path: String {
         switch self {
         case .ForgetEmail:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "forget/password"
+            return Constant.base + "player/" + "forget/password"
         }
     }
     

@@ -30,7 +30,7 @@ extension CreatePasswordEndpoint: IEndpoint {
     var path: String {
         switch self {
            case .CreatePassword:
-             return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
+             return Constant.base + "player/" + "register"
         }
     }
     

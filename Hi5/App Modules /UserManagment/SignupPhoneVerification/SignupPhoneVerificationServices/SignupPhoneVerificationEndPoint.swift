@@ -39,13 +39,13 @@ extension SignupPhoneVerificationEndpoint: IEndpoint {
 
     switch self {
        case .signupPhoneVerification:
-         return "http://api-ksa.com/demo/hi5/public/api/player/check_verification_code"
+         return Constant.base + "player/check_verification_code"
        case .signupResendVerificationCode:
-         return "http://api-ksa.com/demo/hi5/public/api/player/" + "resend"
+         return Constant.base + "player/" + "resend"
     case .forgetPassword(number: let number):
-         return "http://api-ksa.com/demo/hi5/public/api/player/forget/password?phone_number=\(number)"
+         return Constant.base + "player/forget/password?phone_number=\(number)"
     case .sendCodeAndPhone(let phone , let code):
-        return "http://api-ksa.com/demo/hi5/public/api/player/check_verification_code?code=\(code)&phone_number=\(phone)"
+        return Constant.base + "player/check_verification_code?code=\(code)&phone_number=\(phone)"
         }
     }
     

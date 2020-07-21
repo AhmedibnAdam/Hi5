@@ -30,11 +30,11 @@ extension SechaduleEndpoint: IEndpoint {
     var path: String {
         switch self {
         case .pastSechadule:
-            return "http://api-ksa.com/demo/hi5/public/api/player/my_schedule?status=past"
+            return Constant.base + "player/my_schedule?status=past"
         case .upCommingSechadule:
-            return "http://api-ksa.com/demo/hi5/public/api/player/my_schedule?status=upcoming"
+            return Constant.base + "player/my_schedule?status=upcoming"
         case .cancelSechadule:
-            return "http://api-ksa.com/demo/hi5/public/api/player/my_schedule?status=canceled"
+            return Constant.base + "player/my_schedule?status=canceled"
         }
     }
     

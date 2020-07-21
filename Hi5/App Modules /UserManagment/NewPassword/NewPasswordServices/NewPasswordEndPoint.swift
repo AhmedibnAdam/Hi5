@@ -28,7 +28,7 @@ extension NewPasswordEndpoint: IEndpoint {
     var path: String {
         switch self {
         case .NewPassword:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "player_reset_password"
+            return Constant.base + "player/" + "player_reset_password"
         }
     }
     

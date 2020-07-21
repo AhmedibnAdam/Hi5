@@ -50,11 +50,11 @@ extension LoginEndpoint: IEndpoint {
             return "https://httpbin.org/get"
         }
         */
-       // http://api-ksa.com/demo/hi5/public/api/player/login?
+       // Constant.base + "player/login?
     switch self {
        case .login:
          //return "https://www.soqiaa-app.com/app/api/" + "userLogin"
-           return "http://api-ksa.com/demo/hi5/public/api/player/" + "login"
+           return Constant.base + "player/" + "login"
        }
     }
     

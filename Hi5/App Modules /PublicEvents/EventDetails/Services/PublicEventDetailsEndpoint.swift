@@ -43,12 +43,12 @@ extension PublicEventDetailsEndpoint: IEndpoint {
 
         switch self {
               case .public_event(let id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/public_event/" + id
+            return Constant.base + "player/public_event/" + id
         case .leave_public_event(let id):
-             return "http://api-ksa.com/demo/hi5/public/api/player/joined_public_event/" + id + "/leave"
+             return Constant.base + "player/joined_public_event/" + id + "/leave"
         }
  
-//        return "http://api-ksa.com/demo/hi5/public/api/player/public_event/"
+//        return Constant.base + "player/public_event/"
     }
     
     var parameter: Parameters? {

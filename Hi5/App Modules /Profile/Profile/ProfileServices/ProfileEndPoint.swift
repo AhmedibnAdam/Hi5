@@ -34,11 +34,11 @@ extension ProfileEndpoint: IEndpoint {
     var path: String {
         switch self {
         case .ShowProfile(let id , let lat , let long):
-            return "http://api-ksa.com/demo/hi5/public/api/partner/" + "\(id)" + "/show?" + "longitude=" + "\(long)&latitude=" + "\(lat)"
+            return Constant.base + "partner/" + "\(id)" + "/show?" + "longitude=" + "\(long)&latitude=" + "\(lat)"
         case .showUserProfile:
-            return "http://api-ksa.com/demo/hi5/public/api/player/show_profile"
+            return Constant.base + "player/show_profile"
         case .playerProfile(let id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/\(id)/show"
+            return Constant.base + "player/\(id)/show"
         }
     }
     

@@ -28,9 +28,9 @@ extension FilterResultEndPoint: IEndpoint {
     var path: String {
         switch self {
         case .filterSession:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "filter_session"
+            return Constant.base + "player/" + "filter_session"
         case .checkAvalabilty:
-            return "http://api-ksa.com/demo/hi5/public/api/player/field/check_availability"
+            return Constant.base + "player/field/check_availability"
         }
       
     }

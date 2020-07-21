@@ -44,9 +44,9 @@ extension BookingDetailsEndpoint: IEndpoint {
 
         switch self {
         case .getBookingDetails(let id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/booked_session/" + "\(id)"
+            return Constant.base + "player/booked_session/" + "\(id)"
         case .cancelBooking( _ , let id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/booked_session/" + id + "/cancel"
+            return Constant.base + "player/booked_session/" + id + "/cancel"
         }
     
    

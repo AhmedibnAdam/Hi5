@@ -42,7 +42,7 @@ extension AllCommentsEndpoint: IEndpoint {
         
         switch self {
         case .showComment (let id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/field/" + "\(id)" + "/show_comments"
+            return Constant.base + "player/field/" + "\(id)" + "/show_comments"
             
         }
         

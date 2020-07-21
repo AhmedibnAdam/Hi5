@@ -29,7 +29,7 @@ extension GenderEndPoint: IEndpoint {
     var path: String {
         switch self {
         case .gender:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "edit_profile"
+            return Constant.base + "player/" + "edit_profile"
         }
     }
     

@@ -25,7 +25,7 @@ extension FilterEndPoint: IEndpoint {
     var path: String {
         switch self {
         case .suggestionField:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "suggestion_field_data"
+            return Constant.base + "player/" + "suggestion_field_data"
         }
     }
     

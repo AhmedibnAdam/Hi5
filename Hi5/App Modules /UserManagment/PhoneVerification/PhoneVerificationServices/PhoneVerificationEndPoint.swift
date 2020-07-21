@@ -38,13 +38,13 @@ extension PhoneVerificationEndpoint: IEndpoint {
     var path: String {
     switch self {
        case .PhoneVerification(let code):
-         return "http://api-ksa.com/demo/hi5/public/api/player/register/check_verification_code?code==\(code)"
+         return Constant.base + "player/register/check_verification_code?code==\(code)"
        case .ResendVerificationCode:
-         return "http://api-ksa.com/demo/hi5/public/api/player/" + "resend"
+         return Constant.base + "player/" + "resend"
     case .sendVerificationCode:
-        return "http://api-ksa.com/demo/hi5/public/api/player/send-verification-code"
+        return Constant.base + "player/send-verification-code"
     case .phone:
-        return "http://api-ksa.com/demo/hi5/public/api/player/phone_number/create"
+        return Constant.base + "player/phone_number/create"
         }
     }
     var parameter: Parameters? {

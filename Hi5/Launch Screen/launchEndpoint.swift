@@ -26,7 +26,7 @@ extension launchEndpoint: IEndpoint {
     }
     
     var path: String {
-        return "http://api-ksa.com/demo/hi5/public/api/player/update_device_token"
+        return Constant.base + "player/update_device_token"
     }
     
     var parameter: Parameters? {

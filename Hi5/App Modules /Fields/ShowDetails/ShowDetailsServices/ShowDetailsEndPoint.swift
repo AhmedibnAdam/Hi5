@@ -31,11 +31,11 @@ extension ShowDetailsFieldsEndpoint: IEndpoint {
     var path: String {
         switch self {
         case .showDetails:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "show_field"
+            return Constant.base + "player/" + "show_field"
         case .requestMemberShip:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "add_member_ship"
+            return Constant.base + "player/" + "add_member_ship"
         case .cancelRequestMemberShip:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "remove_member_ship"
+            return Constant.base + "player/" + "remove_member_ship"
         }
     }
     

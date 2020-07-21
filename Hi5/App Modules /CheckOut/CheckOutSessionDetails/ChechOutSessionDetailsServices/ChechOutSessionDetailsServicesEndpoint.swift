@@ -47,11 +47,11 @@ extension CheckOutSessionDetailsEndpoint: IEndpoint {
   
         switch self {
         case .join(let id ):
-            return "http://api-ksa.com/demo/hi5/public/api/player/public_event/" + id + "/join"
+            return Constant.base + "player/public_event/" + id + "/join"
         case .book(let id , _):
-            return "http://api-ksa.com/demo/hi5/public/api/player/session/" + id + "/book"
+            return Constant.base + "player/session/" + id + "/book"
         case .checkOut(let session_id):
-            return "http://api-ksa.com/demo/hi5/public/api/player/session/" + session_id + "/checkOut"
+            return Constant.base + "api/player/session/" + session_id + "/checkOut"
         }
   
     }

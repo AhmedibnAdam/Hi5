@@ -40,11 +40,11 @@ extension MyBookingsEndpoint: IEndpoint {
     var path: String {
           switch self {
              case .pastBookings:
-                 return "http://api-ksa.com/demo/hi5/public/api/player/sessions/my_booking?status=past"
+                 return Constant.base + "player/sessions/my_booking?status=past"
              case .upCommingBookings:
-                 return "http://api-ksa.com/demo/hi5/public/api/player/sessions/my_booking?status=upcoming"
+                 return Constant.base + "player/sessions/my_booking?status=upcoming"
              case .cancelBookings:
-                 return "http://api-ksa.com/demo/hi5/public/api/player/sessions/my_booking?status=canceled"
+                 return Constant.base + "player/sessions/my_booking?status=canceled"
              }
     }
     

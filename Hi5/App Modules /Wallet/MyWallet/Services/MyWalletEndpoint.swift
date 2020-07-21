@@ -46,7 +46,7 @@ extension MyWalletEndpoint: IEndpoint {
             return "https://httpbin.org/get"
         }
         */
-        return "http://api-ksa.com/demo/hi5/public/api/player/transactions"
+        return Constant.base + "player/transactions"
     }
     
     var parameter: Parameters? {

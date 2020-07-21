@@ -27,8 +27,8 @@ extension ChangeUsernameEndpoint: IEndpoint {
     
     var path: String {
         switch self {
-        case .ChangeUsername(let user):  //http://api-ksa.com/demo/hi5/public/api/player/ahmedadam/exists
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + user + "/exists"
+        case .ChangeUsername(let user):  //Constant.base + "player/ahmedadam/exists
+            return Constant.base + "player/" + user + "/exists"
         }
     }
     

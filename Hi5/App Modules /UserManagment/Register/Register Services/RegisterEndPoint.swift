@@ -53,9 +53,9 @@ extension RegisterEndpoint: IEndpoint {
         */
     switch self {
        case .signup:
-         return "http://api-ksa.com/demo/hi5/public/api/player/" + "register"
+         return Constant.base + "player/" + "register"
     case .terms:
-        return "http://api-ksa.com/demo/hi5/public/api/player/terms"
+        return Constant.base + "player/terms"
         }
     }
     

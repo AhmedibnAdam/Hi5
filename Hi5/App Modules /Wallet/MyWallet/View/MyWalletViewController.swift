@@ -49,7 +49,7 @@ extension MyWalletViewController: IMyWalletViewController {
        func showWalletResponse(response: MyWalletModel.Wallet) {
         wallet = response
         total.text = "$ \(response.data?.meta?.totalRefund ?? 0 )"
-        avalableBalance.text =  "$ \(response.data?.meta?.totalRefund ?? 0)"
+//        avalableBalance.text =  "$ \(response.data?.meta?.totalRefund ?? 0)"
         tableView.reloadData()
          }
          

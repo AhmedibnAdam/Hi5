@@ -37,15 +37,15 @@ extension FieldsEndpoint: IEndpoint{
     var path: String {
         switch self {
         case .nearBy:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "near_by_fields"
+            return Constant.base + "player/" + "near_by_fields"
         case .favourite:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "get_favourite_fields"
+            return Constant.base + "player/" + "get_favourite_fields"
         case .memberOf:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "get_memberShip"
+            return Constant.base + "player/" + "get_memberShip"
         case .addFavourite:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "field/add_to_favourite"
+            return Constant.base + "player/" + "field/add_to_favourite"
         case .removeFavourite:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "remove_favourite"
+            return Constant.base + "player/" + "remove_favourite"
         }
     }
     

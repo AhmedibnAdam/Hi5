@@ -44,11 +44,11 @@ extension PublicEventsEndpoint: IEndpoint {
         
         switch self {
         case .filterPublicEvent(let params):
-            return "http://api-ksa.com/demo/hi5/public/api/player/public_events/filter?" + "&date=\(String(describing: params["date"]!))" +
+            return Constant.base + "player/public_events/filter?" + "&date=\(String(describing: params["date"]!))" +
                 "&longitude=\(String(describing: params["longitude"]!))" +
             "&latitude=\(String(describing: params["latitude"]!))"
         case .searchPublicEvent(let parameter):
-            return "http://api-ksa.com/demo/hi5/public/api/player/public_events/search"
+            return Constant.base + "player/public_events/search"
         }
         
     }

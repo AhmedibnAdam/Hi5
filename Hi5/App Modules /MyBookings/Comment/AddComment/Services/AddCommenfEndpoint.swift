@@ -44,11 +44,11 @@ extension AddCommenfEndpoint: IEndpoint {
         switch self {
         case .addComment(let parameter):
             let id = parameter["session_id"]
-            return "http://api-ksa.com/demo/hi5/public/api/player/session/" + "\(id!)" + "/add_comment"
+            return Constant.base + "player/session/" + "\(id!)" + "/add_comment"
         case .lastComment(let param):
             let sesssionid = param["session_id"]
             let fieldId = param["field_id"]
-            return "http://api-ksa.com/demo/hi5/public/api/player/field/\(fieldId!)/session/\(sesssionid!)/comment"
+            return Constant.base + "player/field/\(fieldId!)/session/\(sesssionid!)/comment"
         }
        
         

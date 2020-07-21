@@ -28,7 +28,7 @@ extension LocationEndPoint: IEndpoint {
     var path: String {
         switch self {
         case .location:
-            return "http://api-ksa.com/demo/hi5/public/api/player/" + "edit_profile"
+            return Constant.base + "player/" + "edit_profile"
         }
     }
     

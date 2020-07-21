@@ -21,6 +21,7 @@ struct MyWalletModel {
     }
 
     
+    
     // MARK: - Wallet
     struct Wallet: Codable {
         let status: Bool?
@@ -45,7 +46,14 @@ struct MyWalletModel {
     // MARK: - Transaction
     struct Transaction: Codable {
         let id, refund: Int?
-        let date, type: String?
+        let transactionType, date, time, type: String?
+
+        enum CodingKeys: String, CodingKey {
+            case id, refund
+            case transactionType = "transaction_type"
+            case date, time, type
+        }
     }
+
 
 }

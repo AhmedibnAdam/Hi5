@@ -13,6 +13,7 @@ class WalletTransActionsTableViewCell: UITableViewCell {
     @IBOutlet weak var cost: UILabel!
     @IBOutlet weak var from: UILabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var request: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

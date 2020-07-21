@@ -48,8 +48,8 @@ class MyWalletViewController: UIViewController {
 extension MyWalletViewController: IMyWalletViewController {
        func showWalletResponse(response: MyWalletModel.Wallet) {
         wallet = response
-        total.text = "$ \(response.data?.meta?.totalRefund ?? 0 )"
-//        avalableBalance.text =  "$ \(response.data?.meta?.totalRefund ?? 0)"
+        
+        total.text = "\(response.data?.meta?.totalRefund ?? 0 )$"
         tableView.reloadData()
          }
          
@@ -69,9 +69,17 @@ extension MyWalletViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WalletTransActionsTableViewCell") as! WalletTransActionsTableViewCell
         let transaction = wallet?.data?.transactions?[indexPath.row]
-        cell.cost.text = "$ \(String(describing: transaction?.refund ?? 0))"
-        cell.date.text = transaction?.date
-        cell.from.text = "from: " + (transaction?.type ?? "")
+        var sign = "+"
+        if transaction?.transactionType == "refund"{
+            sign = "+"
+        }
+        else {
+            sign = "-"
+        }
+        cell.cost.text = sign +  "\(String(describing: transaction?.refund ?? 0))$ "
+        cell.date.text = transaction?.time
+        cell.from.text = "Transaction Type: " + (transaction?.transactionType ?? "")
+        cell.request.text = "\(transaction?.id)"
         return cell
     }
 }

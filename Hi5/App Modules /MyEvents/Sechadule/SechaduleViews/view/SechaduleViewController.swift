@@ -241,7 +241,29 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
             return cell
         }
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.fieldsTabType == 0 {
+            let cellData = self.upCommingSechadule?.public_events?[indexPath.row]
+            guard let id = cellData?.id else {
+                return
+            }
+            router?.navugateToDetails(event_id: "\(id)" )
+        }
+        else  if self.fieldsTabType == 1 {
+            let cellData = self.pastSechadule?.public_events?[indexPath.row]
+            guard let id = cellData?.id else {
+                return
+            }
+            router?.navugateToDetails(event_id: "\(id)" )
+        }
+        else {
+            let cellData = self.canceledSechadule?.public_events?[indexPath.row]
+            guard let id = cellData?.id else {
+                return
+            }
+            router?.navugateToDetails(event_id: "\(id)" )
+        }
+    }
     
 }
 

@@ -24,6 +24,7 @@ class PublicEventDetailsViewController: UIViewController {
     var field_id: String?
     var fieldData: PublicEventDetailsModel.PublicEventDetails?
     
+     var todayDate = ""
     @IBOutlet weak var noOfPlayerSlider: UISlider!
     @IBOutlet weak var sliderLableP: UILabel!
     @IBOutlet weak var fieldImage: UIImageView!
@@ -69,7 +70,12 @@ class PublicEventDetailsViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         noOfPlayerSlider.value = 1.0
         self.sliderLableP.text = "1"
-        
+        let date = Date()
+      print(date)
+        let d = "\(date)"
+        let dateArr = d.split{$0 == " "}.map(String.init)
+        let current: String = dateArr[0]
+        todayDate = current
         let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
         let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value - 0.9)
         
@@ -101,59 +107,68 @@ extension PublicEventDetailsViewController: IPublicEventDetailsViewController {
     }
     func showDetailsResponse(response: PublicEventDetailsModel.PublicEventDetails){
         if response != nil {
-        let field = response.publicEvent
-        self.fieldData = response
-        tableView.reloadData()
-        name.text = field?.fieldName
-        age.text  = field?.groupName
+            let field = response.publicEvent
+            self.fieldData = response
+            tableView.reloadData()
+            name.text = field?.fieldName
+            age.text  = field?.groupName
             if field?.playerEventStatus == "Join" {
                 self.joinOrLeave.setTitle("Leave", for: .normal)
             }
             else {
                 self.joinOrLeave.setTitle("Join", for: .normal)
             }
-        noOfPlayerSlider.value = Float((field?.playersNumber ?? 0)!)
-        sliderLableP.text = "\(field?.playersNumber ?? 1)"
-            cost.text = "$ \(field?.cost ?? 0)/ Player "
-        let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
-        let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
-        
-        self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
-        if let image = field?.fieldImage {
-            let url = URL(string: image)
-            fieldImage.kf.setImage(with: url)
-        }
-        
-        location.text = field?.address
-        descreption.text = ""
-        sportsType.text = field?.sportType
-        fieldType.text = field?.fieldType
-        fieldSize.text = field?.fieldSize
-        gender.text = field?.gender
-        guranteed.text = "\(String(describing: field?.guaranteedRefundTime ?? 0)) hour before"
-        time.text = "\(String(describing: field?.startTime ?? "")) - \(String(describing: field?.endTime ?? ""))"
-        dat3.text = field?.date
-        status.text = field?.status
-        creator.text = field?.createrName
-        if let image2 = field?.partnerImage {
-            let url = URL(string: image2)
-            creatorImage.kf.setImage(with: url)
-        }
-        playerNumbers.text = "\(String(describing: field?.players?.count ?? 0 )) members"
-        paymentMetod.text = "Payment method: " + (field?.payment ?? "")!
-        if field?.payment == "cash"{
-            refundStack.isHidden = true
-            refunbootomLineView.isHidden = true
-        }
-        else{
-            refundStack.isHidden = false
-            refunbootomLineView.isHidden = false
             
-        }
+            
+            noOfPlayerSlider.value = Float((field?.playersNumber ?? 0)!)
+            sliderLableP.text = "\(field?.playersNumber ?? 1)"
+            cost.text = "$ \(field?.cost ?? 0)/ Player "
+            let trackRect = noOfPlayerSlider.trackRect(forBounds: noOfPlayerSlider.frame)
+            let thumbRect = noOfPlayerSlider.thumbRect(forBounds: noOfPlayerSlider.bounds, trackRect: trackRect, value: noOfPlayerSlider.value )
+            
+            self.sliderLableP.center = CGPoint(x: thumbRect.midX, y: self.sliderLableP.center.y)
+            if let image = field?.fieldImage {
+                let url = URL(string: image)
+                fieldImage.kf.setImage(with: url)
+            }
+            
+            location.text = field?.address
+            descreption.text = ""
+            sportsType.text = field?.sportType
+            fieldType.text = field?.fieldType
+            fieldSize.text = field?.fieldSize
+            gender.text = field?.gender
+            guranteed.text = "\(String(describing: field?.guaranteedRefundTime ?? 0)) hour before"
+            time.text = "\(String(describing: field?.startTime ?? "")) - \(String(describing: field?.endTime ?? ""))"
+            dat3.text = field?.date
+            status.text = field?.status
+            creator.text = field?.createrName
+            if let image2 = field?.partnerImage {
+                let url = URL(string: image2)
+                creatorImage.kf.setImage(with: url)
+            }
+            playerNumbers.text = "\(String(describing: field?.players?.count ?? 0 )) members"
+            paymentMetod.text = "Payment method: " + (field?.payment ?? "")!
+            if field?.payment == "cash"{
+                refundStack.isHidden = true
+                refunbootomLineView.isHidden = true
+            }
+            else{
+                refundStack.isHidden = false
+                refunbootomLineView.isHidden = false
+                
+            }
+            
+            if todayDate > field?.date ?? "" {
+                joinOrLeave.isHidden = true
+                       }
+            else{
+                joinOrLeave.isHidden = false
+            }
         }
         else if response.status == false{
             ShowAlertView.showAlert(title: "Alert", msg: "500 - internal server error", sender: self)
-
+            
         }
     }
 }

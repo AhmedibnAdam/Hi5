@@ -32,33 +32,22 @@ class CheckOutSessionDetailsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     //MARK: - Outlets
-    @IBOutlet weak var cashContainerView: UIView!
-    @IBOutlet weak var walletContainerView: UIView!
     @IBOutlet weak var promocodeContainerView: UIView!
     @IBOutlet weak var comapnyName: UILabel!
     @IBOutlet weak var fieldName: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var basPrice: UILabel!
-    @IBOutlet weak var cancelPeriodFree: UILabel!
-    @IBOutlet weak var chargeAfterFreePeriod: UILabel!
     @IBOutlet weak var disscount: UILabel!
     @IBOutlet weak var promoCode: UITextField!
-    @IBOutlet weak var paymentType: UILabel!
     @IBOutlet weak var sessionPrice: UILabel!
-    @IBOutlet weak var paymentDetails: UILabel!
     @IBOutlet weak var subtotal: UILabel!
-    @IBOutlet weak var cobonDiscount: UILabel!
     @IBOutlet weak var tax: UILabel!
-    @IBOutlet weak var cancelTitle: UILabel!
     @IBOutlet weak var subTotal: UILabel!
     @IBOutlet weak var coubonDiscount: UILabel!
-    @IBOutlet weak var freeStack: UIStackView!
-    @IBOutlet weak var chargeStack: UIStackView!
     @IBOutlet weak var total: UILabel!
     @IBOutlet weak var chooseCash: UIButton!
     @IBOutlet weak var chooseWallet: UIButton!
-    @IBOutlet weak var walletView: UIView!
     @IBOutlet weak var bookedStatus: UILabel!
     @IBOutlet weak var process: UIButton!
     @IBOutlet weak var useCreditStack: UIStackView!
@@ -118,7 +107,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
             containerScrollView.isHidden = false
             indicator.stopAnimating()
             loadEventCheckOut()
-            self.walletView.isHidden = true
+//            self.walletView.isHidden = true
             self.chooseWallet.isHidden = true
             
         }
@@ -137,23 +126,13 @@ class CheckOutSessionDetailsViewController: UIViewController {
         fieldName.text = sessionData?.field?.name
         date.text = sessionData?.field?.date
         time.text = (sessionData?.field?.time) ?? "" //+ " - " + (sessionData?.field?.endTime)!
-        //        cancelPeriodFree.text =  "\(sessionData?.field?.guaranteedRefundTime ?? "0")" + "hours before the start "
         total.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
-        //        subTotal.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
         if fieldData?.publicEvent?.payment == "online" || sessionData?.field?.payment == "Online"{
-            paymentType.text = "Wallet"
-            paymentDetails.text = "Your request will be locked , other members cannot pay and book it."
-            cancelTitle.isHidden = false
-            freeStack.isHidden = false
-            chargeStack.isHidden = false
+            showWhileOnline()
         }
             
         else {
-            //            paymentType.text = "Cash On field"
-            //            paymentDetails.text = "Your request booked but not locked for you unless either you pay online, Other users can pay online and your booking will be canceled."
-            //            cancelTitle.isHidden = true
-            //            freeStack.isHidden = true
-            //            chargeStack.isHidden = true
+            hideWhileCash()
         }
         
     }
@@ -161,24 +140,16 @@ class CheckOutSessionDetailsViewController: UIViewController {
         comapnyName.text = fieldData?.publicEvent?.partnerName
         fieldName.text = fieldData?.publicEvent?.fieldName
         date.text = fieldData?.publicEvent?.date
-        time.text = (fieldData?.publicEvent?.startTime ?? "")! + " - " + (fieldData?.publicEvent?.endTime ?? "")! 
-        cancelPeriodFree.text =  "\(fieldData?.publicEvent?.guaranteedRefundTime ?? 0)" + "hours before the start "
+        time.text = (fieldData?.publicEvent?.startTime ?? "")! + " - " + (fieldData?.publicEvent?.endTime ?? "")!
         total.text = "\(String(describing: fieldData?.publicEvent?.cost ?? 0))"
         subTotal.text = "\(String(describing: fieldData?.publicEvent?.cost ?? 0))"
         if fieldData?.publicEvent?.payment == "online" || fieldData?.publicEvent?.payment == "Online"{
-            paymentType.text = "Wallet"
-            paymentDetails.text = "Your request will be locked , other members cannot pay and book it."
-            cancelTitle.isHidden = false
-            freeStack.isHidden = false
-            chargeStack.isHidden = false
+            showWhileOnline()
+
         }
             
         else {
-            paymentType.text = "Cash On field"
-            paymentDetails.text = "Your request booked but not locked for you unless either you pay online, Other users can pay online and your booking will be canceled."
-            cancelTitle.isHidden = true
-            freeStack.isHidden = true
-            chargeStack.isHidden = true
+            hideWhileCash()
         }
     }
     

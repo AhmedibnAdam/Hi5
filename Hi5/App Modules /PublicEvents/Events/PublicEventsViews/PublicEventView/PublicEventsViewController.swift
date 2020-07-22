@@ -333,27 +333,8 @@ extension PublicEventsViewController {
     }
     func setScrollPosition() {
         self.mainCollectionView.contentOffset = CGPoint(x:1, y: 1)
-        // there is something went unexplainable here, when do we I change the x and y to 0 the scroll became a little intermittent
     }
-    //    func handleDaySelection(cell: dateCell, indexPath:IndexPath) {
-    //        month.text = self.monthes[indexPath.row]
-    //        year.text = self.years[indexPath.row]
-    //        if dayIsSelected[indexPath.row] {
-    //            dayIsSelected[indexPath.row] = false
-    //            cell.containerView.isHidden = dayIsSelected[indexPath.row]
-    //            cell.dayLabel.font = UIFont.boldSystemFont(ofSize: 16)
-    //            cell.weekDayLabel.font = UIFont.boldSystemFont(ofSize: 10)
-    //            cell.weekDayLabel.textColor = .orange
-    //            cell.dayLabel.textColor = .orange
-    //        }else {
-    //            dayIsSelected[indexPath.row] = true
-    //            cell.containerView.isHidden = dayIsSelected[indexPath.row]
-    //            cell.dayLabel.font = UIFont.systemFont(ofSize: 10)
-    //            cell.weekDayLabel.font = UIFont.systemFont(ofSize: 10)
-    //            cell.weekDayLabel.textColor = .white
-    //            cell.dayLabel.textColor = .white
-    //        }
-    //    }
+  
     
 }
 extension PublicEventsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {

@@ -35,16 +35,16 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>dev.fudexsb.com</key>
+			<key>api-ksa.com</key>
 			<dict>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
 				<key>NSIncludesSubdomains</key>
 				<true/>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
 				<true/>
 			</dict>
-			<key>api-ksa.com</key>
+			<key>dev.fudexsb.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>

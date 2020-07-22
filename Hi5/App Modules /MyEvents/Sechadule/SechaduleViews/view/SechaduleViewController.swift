@@ -203,7 +203,7 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
             cell.partnerName.text = sechaduleData?.partnerName
             cell.location.text = sechaduleData?.address
 //            cell.pastCost.text = "\( sechaduleData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(sechaduleData?.cost! ?? 0)"
+//            cell.cost.text = "\(sechaduleData?.cost! ?? 0)"
             cell.point.text = "\( sechaduleData?.points )"
             cell.bestFor.text = sechaduleData?.bestFor
             cell.day.text = sechaduleData?.day
@@ -241,6 +241,8 @@ extension SechaduleViewController: UITableViewDelegate , UITableViewDataSource {
             return cell
         }
     }
+    
+    
 }
 
 extension SechaduleViewController {

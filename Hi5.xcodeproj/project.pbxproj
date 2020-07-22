@@ -474,6 +474,15 @@
 		66F44026247413600057268E /* FilterBublicEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F4401E2474135F0057268E /* FilterBublicEventViewController.xib */; };
 		66F44027247413600057268E /* FilterBublicEventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4401F2474135F0057268E /* FilterBublicEventManager.swift */; };
 		66F50A9B24C709B2002519A9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50A9A24C709B2002519A9 /* Const.swift */; };
+		66F50AA724C734A3002519A9 /* MyHeaderViewContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F50AA524C734A3002519A9 /* MyHeaderViewContent.xib */; };
+		66F50AB224C85DA8002519A9 /* MyEventDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AAA24C85DA8002519A9 /* MyEventDetailsConfiguration.swift */; };
+		66F50AB324C85DA8002519A9 /* MyEventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AAB24C85DA8002519A9 /* MyEventDetailsPresenter.swift */; };
+		66F50AB424C85DA8002519A9 /* MyEventDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AAC24C85DA8002519A9 /* MyEventDetailsWorker.swift */; };
+		66F50AB524C85DA8002519A9 /* MyEventDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AAD24C85DA8002519A9 /* MyEventDetailsRouter.swift */; };
+		66F50AB624C85DA8002519A9 /* MyEventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AAE24C85DA8002519A9 /* MyEventDetailsViewController.swift */; };
+		66F50AB724C85DA8002519A9 /* MyEventDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AAF24C85DA8002519A9 /* MyEventDetailsInteractor.swift */; };
+		66F50AB824C85DA8002519A9 /* MyEventDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F50AB024C85DA8002519A9 /* MyEventDetailsModel.swift */; };
+		66F50AB924C85DA8002519A9 /* MyEventDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F50AB124C85DA8002519A9 /* MyEventDetailsViewController.xib */; };
 		66F6D09A23B4F4A2004BF95C /* ShowAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */; };
 		66F6D09C23B6F352004BF95C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6D09B23B6F352004BF95C /* APIError.swift */; };
 		8608423723DC815200BA87D7 /* SearchLocationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8608422F23DC815200BA87D7 /* SearchLocationConfiguration.swift */; };
@@ -1097,6 +1106,15 @@
 		66F4401E2474135F0057268E /* FilterBublicEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterBublicEventViewController.xib; sourceTree = "<group>"; };
 		66F4401F2474135F0057268E /* FilterBublicEventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBublicEventManager.swift; sourceTree = "<group>"; };
 		66F50A9A24C709B2002519A9 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		66F50AA524C734A3002519A9 /* MyHeaderViewContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeaderViewContent.xib; sourceTree = "<group>"; };
+		66F50AAA24C85DA8002519A9 /* MyEventDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsConfiguration.swift; sourceTree = "<group>"; };
+		66F50AAB24C85DA8002519A9 /* MyEventDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsPresenter.swift; sourceTree = "<group>"; };
+		66F50AAC24C85DA8002519A9 /* MyEventDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsWorker.swift; sourceTree = "<group>"; };
+		66F50AAD24C85DA8002519A9 /* MyEventDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsRouter.swift; sourceTree = "<group>"; };
+		66F50AAE24C85DA8002519A9 /* MyEventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsViewController.swift; sourceTree = "<group>"; };
+		66F50AAF24C85DA8002519A9 /* MyEventDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsInteractor.swift; sourceTree = "<group>"; };
+		66F50AB024C85DA8002519A9 /* MyEventDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventDetailsModel.swift; sourceTree = "<group>"; };
+		66F50AB124C85DA8002519A9 /* MyEventDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyEventDetailsViewController.xib; sourceTree = "<group>"; };
 		66F6D09923B4F4A2004BF95C /* ShowAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertView.swift; sourceTree = "<group>"; };
 		66F6D09B23B6F352004BF95C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		685E0B9DFFCE45016E692C54 /* Pods-Hi5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hi5.debug.xcconfig"; path = "Target Support Files/Pods-Hi5/Pods-Hi5.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1318,6 +1336,7 @@
 				660A1415246005A6006DAD45 /* MyWalletViewController.xib */,
 				660A1427246006D3006DAD45 /* WalletTransActionsTableViewCell.swift */,
 				660A1428246006D3006DAD45 /* WalletTransActionsTableViewCell.xib */,
+				66F50AA524C734A3002519A9 /* MyHeaderViewContent.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2113,7 +2132,7 @@
 				663409FB23B4C8E2009DB30A /* Fields */,
 				66AEC5EB242266AF003CF2EB /* Filter */,
 				66AEC5D4242266AE003CF2EB /* FilterResult */,
-				6682B3AD2429924C0050CC9A /* Sechadule */,
+				66F50AA824C857FC002519A9 /* MyEvents */,
 				66AEC61724227AFE003CF2EB /* MyBookings */,
 				66340A0E23B4CA63009DB30A /* Session */,
 				6683E29823BB5FB500250702 /* MyFriends */,
@@ -3221,6 +3240,30 @@
 				66F4401F2474135F0057268E /* FilterBublicEventManager.swift */,
 			);
 			path = FilterBublicEvent;
+			sourceTree = "<group>";
+		};
+		66F50AA824C857FC002519A9 /* MyEvents */ = {
+			isa = PBXGroup;
+			children = (
+				66F50AA924C85D82002519A9 /* MyEventDetails */,
+				6682B3AD2429924C0050CC9A /* Sechadule */,
+			);
+			path = MyEvents;
+			sourceTree = "<group>";
+		};
+		66F50AA924C85D82002519A9 /* MyEventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				66F50AAA24C85DA8002519A9 /* MyEventDetailsConfiguration.swift */,
+				66F50AAB24C85DA8002519A9 /* MyEventDetailsPresenter.swift */,
+				66F50AAC24C85DA8002519A9 /* MyEventDetailsWorker.swift */,
+				66F50AAD24C85DA8002519A9 /* MyEventDetailsRouter.swift */,
+				66F50AAE24C85DA8002519A9 /* MyEventDetailsViewController.swift */,
+				66F50AAF24C85DA8002519A9 /* MyEventDetailsInteractor.swift */,
+				66F50AB024C85DA8002519A9 /* MyEventDetailsModel.swift */,
+				66F50AB124C85DA8002519A9 /* MyEventDetailsViewController.xib */,
+			);
+			path = MyEventDetails;
 			sourceTree = "<group>";
 		};
 		8608422E23DC813100BA87D7 /* SearchLocation */ = {
@@ -5020,6 +5063,7 @@
 				6683E31F23BCEF1600250702 /* SideMenuViewController.xib in Resources */,
 				660A14E724619EF5006DAD45 /* PhotoFieldCell.xib in Resources */,
 				661398F924698CCC0050938A /* BookingDetailsViewController.xib in Resources */,
+				66F50AA724C734A3002519A9 /* MyHeaderViewContent.xib in Resources */,
 				6663366023B405D0004E537C /* Main.storyboard in Resources */,
 				6683E2CF23BCEB8800250702 /* SettingViewController.xib in Resources */,
 				E2FAE5B7240E648300CD8CFC /* SocialHeader.xib in Resources */,
@@ -5037,6 +5081,7 @@
 				6683E2C023BB63AA00250702 /* notificationTableViewCell.xib in Resources */,
 				861D22D823DCAEF5004F16F1 /* GalleryViewController.xib in Resources */,
 				868C28BD23C6042A003F237A /* Assets.xcassets in Resources */,
+				66F50AB924C85DA8002519A9 /* MyEventDetailsViewController.xib in Resources */,
 				660A14DA24619EF5006DAD45 /* SuggestFieldViewController.xib in Resources */,
 				86E1293123D49E73007CB956 /* TabBarViewController.xib in Resources */,
 				6683E2BB23BB631D00250702 /* NotificationSettingViewController.xib in Resources */,
@@ -5182,6 +5227,7 @@
 				666336C723B40BD3004E537C /* NewPasswordModel.swift in Sources */,
 				662A168023C3E4B200A3695E /* TransactionsPresenter.swift in Sources */,
 				662EF18524AC9AF600AB7F66 /* EntranceRouter.swift in Sources */,
+				66F50AB324C85DA8002519A9 /* MyEventDetailsPresenter.swift in Sources */,
 				6663365423B40318004E537C /* RegisterRouter.swift in Sources */,
 				662A16C923C3EA9F00A3695E /* AddFriendsModel.swift in Sources */,
 				66AEC62224227B3D003CF2EB /* MyBookingsRouter.swift in Sources */,
@@ -5220,6 +5266,7 @@
 				662A16C723C3EA9F00A3695E /* AddFriendsViewController.swift in Sources */,
 				66545F9A243B61AC007A547F /* PublicEventDetailsModel.swift in Sources */,
 				861D22ED23DCAFB9004F16F1 /* LibraryModel.swift in Sources */,
+				66F50AB524C85DA8002519A9 /* MyEventDetailsRouter.swift in Sources */,
 				86BBEE5923CB5F840036C41D /* CreatePasswordPresenter.swift in Sources */,
 				6663361723B40206004E537C /* ViewController.swift in Sources */,
 				860EFCAC2401671100B40901 /* ShowDetailsInteractor.swift in Sources */,
@@ -5341,6 +5388,7 @@
 				861D22EB23DCAFB9004F16F1 /* LibraryViewController.swift in Sources */,
 				66545F95243B61AC007A547F /* PublicEventDetailsConfiguration.swift in Sources */,
 				66340A0923B4C8FC009DB30A /* FieldsModel.swift in Sources */,
+				66F50AB224C85DA8002519A9 /* MyEventDetailsConfiguration.swift in Sources */,
 				66E705C824719137003021DE /* CommentTableViewCell.swift in Sources */,
 				86B14BC523CB4AA500B3FEB1 /* SignupPhoneVerificationPresenter.swift in Sources */,
 				6663369023B40AFD004E537C /* EmailVerficationPresenter.swift in Sources */,
@@ -5398,6 +5446,7 @@
 				66AEC5432420FA97003CF2EB /* PublicEventsEndpoint.swift in Sources */,
 				8671348023CF32E3009093A0 /* ChangeUsernameEndPoint.swift in Sources */,
 				666336A223B40B47004E537C /* ForgotPhoneRouter.swift in Sources */,
+				66F50AB624C85DA8002519A9 /* MyEventDetailsViewController.swift in Sources */,
 				8671348223CF4437009093A0 /* PhoneVerificationEndPoint.swift in Sources */,
 				66AEC631242283B4003CF2EB /* MyBookingsTableViewCell.swift in Sources */,
 				668C210923C3F5BC00C009A9 /* AddSessionResultInteractor.swift in Sources */,
@@ -5598,6 +5647,7 @@
 				86DC11E023D5C19100E577D9 /* EditProfilePresenter.swift in Sources */,
 				661398F524698CCC0050938A /* BookingDetailsRouter.swift in Sources */,
 				662A16CB23C3EA9F00A3695E /* AddFriendsManager.swift in Sources */,
+				66F50AB824C85DA8002519A9 /* MyEventDetailsModel.swift in Sources */,
 				662EF18424AC9AF600AB7F66 /* EntranceWorker.swift in Sources */,
 				86B14BE223CB543B00B3FEB1 /* WelcomeManager.swift in Sources */,
 				6682B3C42429924D0050CC9A /* SechaduleViewController.swift in Sources */,
@@ -5613,6 +5663,7 @@
 				663117DD243F25D7007C3FED /* SessionDetailsInteractor.swift in Sources */,
 				860EFCAA2401671100B40901 /* ShowDetailsRouter.swift in Sources */,
 				86515E6423CDBEE5002A2FF1 /* CreatePasswordWndPoint.swift in Sources */,
+				66F50AB724C85DA8002519A9 /* MyEventDetailsInteractor.swift in Sources */,
 				662EF18624AC9AF600AB7F66 /* EntranceViewController.swift in Sources */,
 				660A141E246005A6006DAD45 /* MyWalletManager.swift in Sources */,
 				86B14BCB23CB4AA500B3FEB1 /* SignupPhoneVerificationManager.swift in Sources */,
@@ -5670,6 +5721,7 @@
 				861D22E923DCAFB9004F16F1 /* LibraryPresenter.swift in Sources */,
 				6663367223B40A6A004E537C /* ForgetPasswordModel.swift in Sources */,
 				86F9B90A23DDAAA5008C1F80 /* LocationConfiguration.swift in Sources */,
+				66F50AB424C85DA8002519A9 /* MyEventDetailsWorker.swift in Sources */,
 				668E9EED246EB0F7004A403E /* CommentRouter.swift in Sources */,
 				66AEC613242266B0003CF2EB /* FilterendPoint.swift in Sources */,
 			);
@@ -5811,7 +5863,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.20;
+				CURRENT_PROJECT_VERSION = 1.1.21;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5835,7 +5887,7 @@
 				CODE_SIGN_ENTITLEMENTS = Hi5/Hi5.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1.20;
+				CURRENT_PROJECT_VERSION = 1.1.21;
 				DEVELOPMENT_TEAM = TBYZE4288M;
 				INFOPLIST_FILE = Hi5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

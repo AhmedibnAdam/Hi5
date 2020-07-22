@@ -19,8 +19,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1BL-wf-kHc">
                         <rect key="frame" x="1" y="0.0" width="367" height="70"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X23-zc-4CE">
-                                <rect key="frame" x="96" y="33.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X23-zc-4CE">
+                                <rect key="frame" x="96" y="33.5" width="197.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -75,6 +75,7 @@
                     <constraint firstItem="X23-zc-4CE" firstAttribute="centerY" secondItem="i2R-wp-UJ7" secondAttribute="centerY" id="NoX-2F-i2E"/>
                     <constraint firstItem="l4v-EK-dLG" firstAttribute="top" secondItem="gS3-DZ-GLR" secondAttribute="top" id="WkB-K9-DPd"/>
                     <constraint firstItem="1BL-wf-kHc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eiW-yY-Ydh"/>
+                    <constraint firstItem="i2R-wp-UJ7" firstAttribute="leading" secondItem="X23-zc-4CE" secondAttribute="trailing" constant="20" id="m6H-Rd-oKJ"/>
                     <constraint firstItem="i2R-wp-UJ7" firstAttribute="top" secondItem="l4v-EK-dLG" secondAttribute="bottom" constant="8" id="maL-Q7-Znf"/>
                     <constraint firstItem="i2R-wp-UJ7" firstAttribute="trailing" secondItem="IM7-FD-ehE" secondAttribute="trailing" id="nlt-XW-uC7"/>
                     <constraint firstAttribute="bottom" secondItem="1BL-wf-kHc" secondAttribute="bottom" id="qbh-8q-dIE"/>
@@ -89,7 +90,7 @@
                 <outlet property="from" destination="l4v-EK-dLG" id="ZmL-00-o9z"/>
                 <outlet property="request" destination="X23-zc-4CE" id="zcZ-vB-sTG"/>
             </connections>
-            <point key="canvasLocation" x="69.565217391304358" y="120.87053571428571"/>
+            <point key="canvasLocation" x="69.565217391304358" y="120.53571428571428"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -4,9 +4,7 @@
 //
 //  Created by Adam on 4/17/20.
 //  Copyright (c) 2020 FudexApp. All rights reserved.
-//  Modify By:  * Ari Munandar
-//              * arimunandar.dev@gmail.com
-//              * https://github.com/arimunandar
+
 
 import UIKit
 
@@ -25,6 +23,8 @@ class MyWalletViewController: UIViewController {
            return UIBarButtonItem(image: UIImage(named: "leftArrow"), style: .done, target: self, action: #selector(backBtnTapped))
        }()
        
+    var sectionTitle = ""
+    var dates: [String] = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var centerView: UIView!
@@ -49,6 +49,10 @@ extension MyWalletViewController: IMyWalletViewController {
        func showWalletResponse(response: MyWalletModel.Wallet) {
         wallet = response
         
+        for date in wallet?.data?.transactions ?? [] {
+            dates.append(date.date!)
+        }
+        
         total.text = "\(response.data?.meta?.totalRefund ?? 0 )$"
         tableView.reloadData()
          }
@@ -62,8 +66,29 @@ extension MyWalletViewController : UITableViewDelegate , UITableViewDataSource {
     func registerTableCell() {
         let cell = UINib(nibName: "WalletTransActionsTableViewCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "WalletTransActionsTableViewCell")
+        self.tableView.register(MyHeaderView.self,
+        forHeaderFooterViewReuseIdentifier: "header")
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dates.count
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(
+        withIdentifier: "header")
+        guard let title = wallet?.data?.transactions?[section].date  else {
+            return view
+        }
+        view?.textLabel?.isHidden = false
+        view?.textLabel?.text = title
+        sectionTitle = title
+        return view
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return  wallet?.data?.transactions?.count ?? 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,11 +101,30 @@ extension MyWalletViewController : UITableViewDelegate , UITableViewDataSource {
         else {
             sign = "-"
         }
-        cell.cost.text = sign +  "\(String(describing: transaction?.refund ?? 0))$ "
-        cell.date.text = transaction?.time
-        cell.from.text = "Transaction Type: " + (transaction?.transactionType ?? "")
-        cell.request.text = "\(transaction?.id)"
+        let d = dates[indexPath.section]
+        
+            cell.cost.text = sign +  "\(String(describing: transaction?.refund ?? 0))$ "
+            cell.date.text = transaction?.time
+            cell.from.text =  "\(transaction?.transactionType ?? "")  " + (transaction?.type ?? "" )
+            if let requrst = transaction?.id {
+                cell.request.text = "\(transaction?.type ?? "") #\(requrst)"
+            }
+        if transaction?.date != d {
+            cell.isHidden = true
+        }
+        
+    
+       
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let d = dates[indexPath.section]
+        let transaction = wallet?.data?.transactions?[indexPath.row]
+        if transaction?.date != d {
+                   return 0
+               }
+        return 70
     }
 }
 
@@ -98,4 +142,7 @@ extension MyWalletViewController {
     @objc func backBtnTapped() {
          router?.navigateToTabBar()
      }
+}
+class MyHeaderView : UITableViewHeaderFooterView {
+      @IBOutlet weak var lab : UILabel!
 }

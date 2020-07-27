@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,25 +15,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="90" height="109"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gii-0b-ohk">
-                        <rect key="frame" x="10" y="10" width="90" height="90"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gii-0b-ohk">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="108"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gbs-GQ-Gka">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="108"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jz8-e3-0Vi">
-                                        <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shower" translatesAutoresizingMaskIntoConstraints="NO" id="6AT-L3-NIR">
-                                                <rect key="frame" x="20.5" y="19" width="19" height="22"/>
+                                                <rect key="frame" x="15" y="5" width="60" height="40"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.29184503424657532" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="6AT-L3-NIR" secondAttribute="trailing" constant="15" id="1Ss-a6-DEI"/>
                                             <constraint firstItem="6AT-L3-NIR" firstAttribute="centerY" secondItem="Jz8-e3-0Vi" secondAttribute="centerY" id="HrJ-aa-dph"/>
-                                            <constraint firstAttribute="width" constant="60" id="P9d-Xs-CL6"/>
-                                            <constraint firstAttribute="height" constant="60" id="WwZ-FW-ft6"/>
+                                            <constraint firstItem="6AT-L3-NIR" firstAttribute="top" secondItem="Jz8-e3-0Vi" secondAttribute="top" constant="5" id="LjH-Cg-FhL"/>
+                                            <constraint firstAttribute="bottom" secondItem="6AT-L3-NIR" secondAttribute="bottom" constant="5" id="ope-GH-TUn"/>
                                             <constraint firstItem="6AT-L3-NIR" firstAttribute="centerX" secondItem="Jz8-e3-0Vi" secondAttribute="centerX" id="txU-Rb-TDH"/>
+                                            <constraint firstItem="6AT-L3-NIR" firstAttribute="leading" secondItem="Jz8-e3-0Vi" secondAttribute="leading" constant="15" id="u1A-pU-pny"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
@@ -41,11 +43,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shower" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74N-WP-kQF">
-                                        <rect key="frame" x="12" y="88" width="60" height="12"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="dsQ-gA-sCY"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shower" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74N-WP-kQF">
+                                        <rect key="frame" x="0.0" y="58" width="90" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -55,19 +54,17 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="90" id="19t-Zf-blh"/>
                             <constraint firstAttribute="bottom" secondItem="Gbs-GQ-Gka" secondAttribute="bottom" id="3DD-6o-YqU"/>
-                            <constraint firstAttribute="width" constant="90" id="WPg-fs-nVD"/>
                             <constraint firstAttribute="trailing" secondItem="Gbs-GQ-Gka" secondAttribute="trailing" id="XUE-Xw-Leq"/>
                             <constraint firstItem="Gbs-GQ-Gka" firstAttribute="leading" secondItem="gii-0b-ohk" secondAttribute="leading" id="irs-LR-5Ok"/>
-                            <constraint firstItem="Gbs-GQ-Gka" firstAttribute="top" secondItem="gii-0b-ohk" secondAttribute="top" constant="20" symbolic="YES" id="oSD-dN-uJO"/>
+                            <constraint firstItem="Gbs-GQ-Gka" firstAttribute="top" secondItem="gii-0b-ohk" secondAttribute="top" id="oSD-dN-uJO"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="gii-0b-ohk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="v4y-VS-KSI"/>
-                <constraint firstItem="gii-0b-ohk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="xc9-sV-BFQ"/>
+                <constraint firstItem="gii-0b-ohk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xc9-sV-BFQ"/>
             </constraints>
             <size key="customSize" width="121" height="146"/>
             <connections>

@@ -63,12 +63,11 @@
                         <constraints>
                             <constraint firstItem="NMg-JX-bFj" firstAttribute="leading" secondItem="9Wi-oy-Jq6" secondAttribute="trailing" constant="10" id="6oX-7k-7fK"/>
                             <constraint firstAttribute="bottom" secondItem="NMg-JX-bFj" secondAttribute="bottom" constant="70" id="CUQ-FG-IgA"/>
-                            <constraint firstAttribute="bottom" secondItem="ES0-HU-OtF" secondAttribute="bottom" constant="70" id="KyR-6B-ind"/>
                             <constraint firstItem="9Wi-oy-Jq6" firstAttribute="leading" secondItem="ES0-HU-OtF" secondAttribute="trailing" constant="10" id="Rm0-Ha-fc8"/>
                             <constraint firstItem="9Wi-oy-Jq6" firstAttribute="top" secondItem="bE6-YM-aMH" secondAttribute="top" constant="10" id="fIZ-k1-laA"/>
                             <constraint firstItem="NMg-JX-bFj" firstAttribute="top" secondItem="bE6-YM-aMH" secondAttribute="top" constant="10" id="hue-fS-LQI"/>
                             <constraint firstItem="ES0-HU-OtF" firstAttribute="leading" secondItem="bE6-YM-aMH" secondAttribute="leading" constant="10" id="iAJ-Yg-J7a"/>
-                            <constraint firstItem="ES0-HU-OtF" firstAttribute="top" secondItem="bE6-YM-aMH" secondAttribute="top" constant="10" id="pqy-Uo-8Q1"/>
+                            <constraint firstItem="ES0-HU-OtF" firstAttribute="centerY" secondItem="bE6-YM-aMH" secondAttribute="centerY" id="kGi-zS-rrB"/>
                             <constraint firstAttribute="trailing" secondItem="NMg-JX-bFj" secondAttribute="trailing" constant="5" id="vnS-34-g1U"/>
                             <constraint firstAttribute="bottom" secondItem="9Wi-oy-Jq6" secondAttribute="bottom" constant="10" id="whl-pV-GFW"/>
                         </constraints>

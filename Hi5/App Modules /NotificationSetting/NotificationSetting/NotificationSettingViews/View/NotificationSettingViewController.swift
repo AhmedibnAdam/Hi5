@@ -28,8 +28,11 @@ class NotificationSettingViewController: UIViewController {
     var limit: Int = 8
     var offset: Int = 0 //pageNo*limit
     var didEndReached :Bool = false
+    @IBOutlet weak var centerIndecator: UIActivityIndicatorView!
+    var dates: [String] = [String]()
     
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var moreIndicator: UIActivityIndicatorView!
     //MARK: - Properties
     
     var delegate: NotificationSettingControllerDelegate?
@@ -50,6 +53,8 @@ class NotificationSettingViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
        getNotificattions()
+        centerIndecator.startAnimating()
+        moreIndicator.stopAnimating()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -72,8 +77,13 @@ extension NotificationSettingViewController: INotificationSettingViewController 
 //        self.notifications = data
         for noti in data{
             listOfNotifications?.append(noti)
+            dates.append(noti.date!)
         }
+        let unique = Array(Set(dates))
+        dates = unique
         table.reloadData()
+        centerIndecator.stopAnimating()
+        moreIndicator.stopAnimating()
         self.view.layoutIfNeeded()
     }
     
@@ -88,7 +98,22 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
       func registerTableCell() {
           let cell = UINib(nibName: "notificationTableViewCell", bundle: nil)
           table.register(cell, forCellReuseIdentifier: "notificationTableViewCell")
+        table.register(MyHeaderView.self,
+        forHeaderFooterViewReuseIdentifier: "header")
       }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+          return dates.count
+      }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(
+        withIdentifier: "header")
+         let title = dates[section] 
+        view?.textLabel?.isHidden = false
+        view?.textLabel?.text = title
+        return view
+    }
+      
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfNotifications?.count ?? 0 + offset
@@ -104,8 +129,25 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
         cell.msg.text = notify?.message
         let url = notify?.image
         cell.img.kf.setImage(with: URL(string: url!))
+        
+         let d = dates[indexPath.section]
+        if notify?.date != d {
+                  cell.isHidden = true
+              }
          return cell
      }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let d = dates[indexPath.section]
+        
+        if  let notify = listOfNotifications?[indexPath.row]{
+            if notify.date != d {
+                return 0
+            }
+        }
+        
+        return 90
+    }
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
 
         print("scrollViewWillBeginDragging")
@@ -133,6 +175,7 @@ extension NotificationSettingViewController: UITableViewDelegate, UITableViewDat
                     isDataLoading = true
                     self.pageNo = self.pageNo + 1
                     self.limit = self.limit + 8
+                moreIndicator.startAnimating()
                     getNotificattions()
 //                    }
 

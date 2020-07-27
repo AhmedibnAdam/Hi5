@@ -52,7 +52,8 @@ extension MyWalletViewController: IMyWalletViewController {
         for date in wallet?.data?.transactions ?? [] {
             dates.append(date.date!)
         }
-        
+        let unique = Array(Set(dates))
+               dates = unique
         total.text = "\(response.data?.meta?.totalRefund ?? 0 )$"
         tableView.reloadData()
          }
@@ -79,12 +80,9 @@ extension MyWalletViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = tableView.dequeueReusableHeaderFooterView(
         withIdentifier: "header")
-        guard let title = wallet?.data?.transactions?[section].date  else {
-            return view
-        }
-        view?.textLabel?.isHidden = false
-        view?.textLabel?.text = title
-        sectionTitle = title
+        let title = dates[section]
+               view?.textLabel?.isHidden = false
+               view?.textLabel?.text = title
         return view
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

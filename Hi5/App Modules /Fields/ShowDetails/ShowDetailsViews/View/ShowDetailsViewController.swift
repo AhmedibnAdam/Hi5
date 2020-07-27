@@ -10,6 +10,7 @@
 
 import UIKit
 import GoogleMaps
+import Kingfisher
 
 protocol IShowDetailsViewController: class {
 	var router: IShowDetailsRouter? { get set }
@@ -293,13 +294,14 @@ extension ShowDetailsViewController : UICollectionViewDelegate, UICollectionView
         cell.serviceLbl.text = services?[indexPath.row].name
         if let serviceImg = services?[indexPath.row].image {
                let url = URL(string: serviceImg)
-               DispatchQueue.global().async {
-                   if let data = try? Data(contentsOf: url!) {
-                       DispatchQueue.main.async {
-                           cell.serviceimg.image = UIImage(data: data)
-                       }
-                   }
-               }
+            cell.serviceimg.kf.setImage(with: url)
+//               DispatchQueue.global().async {
+//                   if let data = try? Data(contentsOf: url!) {
+//                       DispatchQueue.main.async {
+//                           cell.serviceimg.image = UIImage(data: data)
+//                       }
+//                   }
+//               }
            }
             return cell
     }

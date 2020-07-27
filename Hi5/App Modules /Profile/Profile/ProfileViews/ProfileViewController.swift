@@ -49,21 +49,17 @@ class ProfileViewController: UIViewController {
 //    @IBOutlet weak var editSports: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var address: UILabel!
-    //    @IBOutlet weak var numOfFriends: UILabel!
-//    @IBOutlet weak var friendsLbl: UILabel!
-//    @IBOutlet weak var countryLogo: UIButton!
-//    @IBOutlet weak var flag: UIButton!
-//    @IBOutlet weak var countryNumber: UILabel!
-//    @IBOutlet weak var countryLbl: UILabel!
+   
     @IBOutlet weak var imageprofileTop: NSLayoutConstraint!
     @IBOutlet weak var fieldTitleLbl: UILabel!
     @IBOutlet weak var phone: UILabel!
-//    @IBOutlet weak var userProfileView: UIView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var imageprofileHight: NSLayoutConstraint!
     @IBOutlet weak var imgProfileWidth: NSLayoutConstraint!
     @IBOutlet weak var joinOn: UILabel!
     @IBOutlet weak var genderButton: UIButton!
+    @IBOutlet weak var addressGenderAgeStack: UIStackView!
+    @IBOutlet weak var locationIcon: UIImageView!
     
     
     //MARK:- view LifeCycle
@@ -325,6 +321,9 @@ extension ProfileViewController {
         
         if id == nil || id == 0 {
             interactor?.showUsrerProfile()
+             addressGenderAgeStack.isHidden = false
+            locationIcon.isHidden = false
+            genderButton.isHidden = false
 //            userProfileView.isHidden = false
             bottomView.isHidden = true
             editBtn.isHidden = false
@@ -334,13 +333,18 @@ extension ProfileViewController {
             imageprofileHight.constant = 100
             imgProfileWidth.constant = 100
             logoView.layer.cornerRadius = 50
-
+            bottomView.isHidden = false
+            locationIcon.isHidden = true
+            genderButton.isHidden = true
+            addressGenderAgeStack.isHidden = true
             editBtn.isHidden = true
             if type == "player"{
                 interactor?.showPlyerProfile(id: id!)
             }
             else {
-//                userProfileView.isHidden = true
+                addressGenderAgeStack.isHidden = false
+               locationIcon.isHidden = false
+                genderButton.isHidden = false
                 interactor?.doShowProfile(id: id! , lat: lat ?? 0.0 , long: long ?? 0.0)
             }
         }

@@ -20,7 +20,7 @@ protocol ISessionDetailsViewController: class {
     func showResponseFromContacts(response: SessionDetailsModel.FieldContactsResponse)
 }
 
-class SessionDetailsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
+class SessionDetailsViewController: UIViewController {
 
     var interactor: ISessionDetailsInteractor?
     var router: ISessionDetailsRouter?
@@ -40,24 +40,11 @@ var locationManager: CLLocationManager!
     //MARK: - Outlets
     @IBOutlet weak var fieldContactsContainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var collectionView: UICollectionView!
+
     @IBOutlet weak var fieldName: UILabel!
-    @IBOutlet weak var rateLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
+
     @IBOutlet weak var fieldImg: UIImageView!
-    @IBOutlet weak var fieldAddressLbl: UILabel!
-    @IBOutlet weak var bestforLbl: UILabel!
-    @IBOutlet weak var statusLbl: UILabel!
-    @IBOutlet weak var availableLbl: UILabel!
-    @IBOutlet weak var companyImg: UIImageView!
-    @IBOutlet weak var fieldTypeLbl: UILabel!
-    @IBOutlet weak var fieldSizeLbl: UILabel!
-    @IBOutlet weak var sportTypeLbl: UILabel!
-    @IBOutlet weak var commentLbl: UILabel!
-    @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var genderLbl: UILabel!
-    @IBOutlet weak var companyNameLbl: UILabel!
-    @IBOutlet weak var timeLbl: UILabel!
+
     @IBOutlet weak var paymentLbl: UILabel!
     @IBOutlet weak var costLbl: UILabel!
     @IBOutlet weak var contactBtn: UIButton!
@@ -66,14 +53,35 @@ var locationManager: CLLocationManager!
     @IBOutlet weak var containerScrollView: UIScrollView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     
+     //MARK: - New Outlets
+    
+    @IBOutlet weak var bestFor: UILabel!
+    
+    
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var endTime: UILabel!
+    
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var genderStatusIcon: UIImageView!
+    
+    @IBOutlet weak var privacy: UILabel!
+    @IBOutlet weak var privcyStatus: UILabel!
+    @IBOutlet weak var privacyStatusIcon: UIImageView!
+    
+    @IBOutlet weak var reasonOne: UILabel!
+    
+    @IBOutlet weak var reasonTow: UILabel!
+    
+    
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+
         tableView.delegate = self
         tableView.dataSource = self
-        registerCollectionCell()
+       
         registerTableViewCell()
         initView()
         configer()
@@ -99,10 +107,7 @@ var locationManager: CLLocationManager!
         }
     }
     
-    @IBAction func showComment(_ sender: UIButton) {
-        router?.navigateToAllComments(id: self.sessionData?.field?.id ?? 0)
-    }
-    
+
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         fieldContactsContainerView.isHidden = true
@@ -134,18 +139,7 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
         }
         sessionData = response
         fieldName.text = field.name
-        
-        fieldAddressLbl.text = field.address
-        descriptionLbl.text = field.fieldDescription
-        dateLbl.text = field.date
-        timeLbl.text = field.time
-        sportTypeLbl.text = field.sport
-        fieldTypeLbl.text = field.fieldType
-        fieldSizeLbl.text = field.fieldSize
-        genderLbl.text = field.gender
-        bestforLbl.text = field.bestFor
-        availableLbl.text = field.visibility
-        companyNameLbl.text = field.partnerName
+
         costLbl.text = "$\(String(format: "%.2f", field.cost ?? 0))"
         paymentLbl.text = "payment method: \(String(describing: field.payment ?? ""))"
        
@@ -161,21 +155,45 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
             }
         }
         
-        if let partnerImg = field.partnerImage {
-            let url = URL(string: partnerImg)
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url!) {
-                    DispatchQueue.main.async {
-                        self.companyImg.image = UIImage(data: data)
-                    }
-                }
-            }
+        
+         //MARK: - new
+        
+        bestFor.text = "\(String(describing: field.fieldType!))  (\(String(describing: field.bestFor!)))"
+        
+        date.text =  field.date
+        guard let start = field.startTime else {
+            return
+        }
+        guard let end = field.endTime else {
+            return
+        }
+        startTime.text = "Start: " + start
+        endTime.text = "End: " + end
+        
+        if field.overnight == true {
+           endTime.text = "End: " + end + " (overnight)"
+        }
+        gender.text = field.gender
+        status.text = field.genderMatch
+        if field.genderMatch != "Not Applied"{
+            genderStatusIcon.image = UIImage(named: "correct")
+             reasonOne.isHidden = true
+        }
+        else {
+            reasonOne.isHidden = false
+            reasonOne.text = "Gender is not matching but you can book this session."
         }
         
-        if let services = field.services {
-            self.services = services
-            collectionView.reloadData()
+        privacy.text = field.visibility
+        if field.membership?.status == "not member"{
+            privcyStatus.text = "Notapplied"
+            reasonTow.isHidden = false
+            reasonTow.text = "Membership is required to book this session."
         }
+        else {
+            reasonOne.isHidden = true
+        }
+
     }
 }
 
@@ -198,12 +216,12 @@ extension SessionDetailsViewController {
           marker.position = CLLocationCoordinate2DMake(self.lat ?? 24.86,  self.long ?? 46.20)
       
         if self.lat == nil {
-            self.googleMapView.isHidden = true
-            mapHeight.constant = 0
+//            self.googleMapView.isHidden = true
+//            mapHeight.constant = 0
         }
         else{
-            self.googleMapView.isHidden = false
-                       mapHeight.constant = 200
+//            self.googleMapView.isHidden = false
+//                       mapHeight.constant = 200
         }
           marker.map = googleMapView
     }
@@ -211,37 +229,8 @@ extension SessionDetailsViewController {
 
 //MARK: - collectionViewMethods
 extension SessionDetailsViewController {
-    func registerCollectionCell() {
-        let cell = UINib(nibName: "ServicesCell", bundle: nil)
-        collectionView.register(cell, forCellWithReuseIdentifier: "ServicesCell")
-    }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return services.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath) as! ServicesCell
-           cell.serviceLbl.text = services[indexPath.row].name
-           if let serviceImg = services[indexPath.row].image {
-               let url = URL(string: serviceImg)
-                cell.serviceimg.kf.setImage(with: url)
-//               DispatchQueue.global().async {
-//                   if let data = try? Data(contentsOf: url!) {
-//                       DispatchQueue.main.async {
-//                           cell.serviceimg.image = UIImage(data: data)
-//                       }
-//                   }
-//               }
-           }
-            return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = collectionView.frame.width / 4
-            let height = collectionView.frame.height
-            return CGSize(width: width, height: height)
-    }
+ 
 }
 
 extension SessionDetailsViewController: UITableViewDelegate , UITableViewDataSource {

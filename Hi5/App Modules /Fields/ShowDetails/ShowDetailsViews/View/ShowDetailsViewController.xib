@@ -64,13 +64,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="field" translatesAutoresizingMaskIntoConstraints="NO" id="SPH-xH-p07">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
+                                            <rect key="frame" x="-20" y="0.0" width="375" height="200"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="200" id="57A-2h-Byt"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="778-tL-G7t">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
+                                            <rect key="frame" x="-20" y="0.0" width="375" height="200"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.49959867294520549" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="viewRadius">
@@ -133,7 +133,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vby-FS-0Cc">
                                                     <rect key="frame" x="0.0" y="0.0" width="17.5" height="50"/>
-                                                    <state key="normal" image="rate"/>
+                                                    <state key="normal" image="nonstar"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-5E-LNk">
                                                     <rect key="frame" x="27.5" y="0.0" width="50" height="50"/>
@@ -153,7 +153,7 @@
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KP-pD-clg">
                                     <rect key="frame" x="0.0" y="270" width="335" height="0.0"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.48991331335616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.82590432363013699" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -197,9 +197,9 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1V-AK-Bd1">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1V-AK-Bd1">
                                                     <rect key="frame" x="161" y="5" width="141" height="30"/>
-                                                    <state key="normal" title="See company Profile">
+                                                    <state key="normal" title="See company Profile ❯">
                                                         <color key="titleColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
@@ -210,7 +210,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.25358518835616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" white="0.83859517694063912" alpha="0.10041202910958905" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="H8J-y0-46K"/>
                                     </constraints>
@@ -782,7 +782,7 @@
         <image name="icons8-identification_documents" width="50" height="50"/>
         <image name="leftArrow2" width="23" height="17"/>
         <image name="location" width="10" height="15"/>
-        <image name="rate" width="17.5" height="17.5"/>
+        <image name="nonstar" width="17.5" height="17.5"/>
         <image name="seting" width="4" height="19"/>
     </resources>
 </document>

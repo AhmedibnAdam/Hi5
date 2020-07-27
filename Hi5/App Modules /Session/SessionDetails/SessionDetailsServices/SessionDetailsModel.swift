@@ -32,8 +32,8 @@ struct SessionDetailsModel {
     struct FieldContact: Codable {
         let name, phone: String?
     }
-
-	struct SessionDetailsResponse: Codable {
+    // MARK: - SessionDetailsResponse
+    struct SessionDetailsResponse: Codable {
         let status: Bool?
         let field: Field?
     }
@@ -41,41 +41,47 @@ struct SessionDetailsModel {
     // MARK: - Field
     struct Field: Codable {
         let sessionID: Int?
-        let date, dateFormat, time: String?
+        let date, startTime, endTime: String?
+        let overnight: Bool?
         let id: Int?
         let name: String?
         let image: String?
         let images: [String]?
-        let fieldDescription, address, sport, gender: String?
-        let bestFor: String?
-        let cost: Double?
+        let longitude, latitude, address, sport: String?
+        let sportImage: String?
+        let gender, genderMatch, bestFor: String?
+        let cost, partnerID: Int?
         let partnerName: String?
         let partnerImage: String?
         let visibility, payment: String?
         let membership: Membership?
         let favourite: Bool?
-        let fieldSize, fieldType, bookingFrequencyPolicy: String?
-        let services: [Service]?
-        let partnerID: Int
-         enum CodingKeys: String, CodingKey {
+        let fieldType: String?
+        let bookingFrequencyTime: Int?
+        let bookingFrequencyPer, frequencyBookMsg, onlineBookingCancelationMsg, onlineBookingCancelationFeeMsg: String?
+
+       enum CodingKeys: String, CodingKey {
              case sessionID = "session_id"
              case date
-             case dateFormat = "date_format"
-             case time, id, name, image, images
-             case fieldDescription = "description"
-             case address, sport, gender
+             case startTime = "start_time"
+             case endTime = "end_time"
+             case overnight, id, name, image, images, longitude, latitude, address, sport
+             case sportImage = "sport_image"
+             case gender
+             case genderMatch = "gender_match"
              case bestFor = "best_for"
              case cost
              case partnerID = "partner_id"
              case partnerName = "partner_name"
              case partnerImage = "partner_image"
              case visibility, payment, membership, favourite
-             case fieldSize = "field_size"
              case fieldType = "field_type"
-             case bookingFrequencyPolicy = "booking_frequency_policy"
-             case services
-
-        }
+             case bookingFrequencyTime = "booking_frequency_time"
+             case bookingFrequencyPer = "booking_frequency_per"
+             case frequencyBookMsg = "frequency_book_msg"
+             case onlineBookingCancelationMsg = "online_booking_cancelation_msg"
+             case onlineBookingCancelationFeeMsg = "online_booking_cancelation_fee_msg"
+         }
     }
 
     // MARK: - Membership
@@ -84,9 +90,10 @@ struct SessionDetailsModel {
 
         enum CodingKeys: String, CodingKey {
             case status
-            case expireAt = "expire_at"
+            case expireAt
         }
     }
+
 
     // MARK: - Service
     struct Service: Codable {

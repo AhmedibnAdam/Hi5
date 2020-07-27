@@ -125,7 +125,7 @@ class CheckOutSessionDetailsViewController: UIViewController {
         comapnyName.text = sessionData?.field?.partnerName
         fieldName.text = sessionData?.field?.name
         date.text = sessionData?.field?.date
-        time.text = (sessionData?.field?.time) ?? "" //+ " - " + (sessionData?.field?.endTime)!
+        time.text = (sessionData?.field?.startTime) ?? "" //+ " - " + (sessionData?.field?.endTime)!
         total.text = "\(String(describing: sessionData?.field?.cost ?? 0))"
         if fieldData?.publicEvent?.payment == "online" || sessionData?.field?.payment == "Online"{
             showWhileOnline()

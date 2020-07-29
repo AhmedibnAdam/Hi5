@@ -73,7 +73,13 @@ var locationManager: CLLocationManager!
     @IBOutlet weak var reasonOne: UILabel!
     
     @IBOutlet weak var reasonTow: UILabel!
+    @IBOutlet weak var policy: UILabel!
+    @IBOutlet weak var ploicymes: UILabel!
     
+    @IBOutlet weak var paymentType: UILabel!
+    @IBOutlet weak var cancelation: UILabel!
+    @IBOutlet weak var cancelationFee: UILabel!
+    @IBOutlet weak var priceBeforTax: UILabel!
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -193,6 +199,15 @@ extension SessionDetailsViewController: ISessionDetailsViewController {
         else {
             reasonOne.isHidden = true
         }
+        
+        policy.text  = "● you can book \(field.bookingFrequencyTime ?? 0) sessions every \(field.bookingFrequencyPer ?? "" )"
+        ploicymes.text = field.frequencyBookMsg
+        
+        paymentType.text = "● \(field.payment!)"
+        cancelation.text = field.onlineBookingCancelationMsg
+        cancelationFee.text = field.onlineBookingCancelationFeeMsg
+        
+        priceBeforTax.text = "\(field.priceBeforeTax ?? 0)"
 
     }
 }

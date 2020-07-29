@@ -175,8 +175,8 @@ extension MyBookingsViewController: UITableViewDelegate , UITableViewDataSource 
             cell.partnerName.text = bookingData?.name
             cell.bookingStatus.text = bookingData?.status
             cell.location.text = bookingData?.address
-            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
+//            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
+//            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
             cell.point.text = "\( bookingData?.points! ?? 0)"
             cell.paymentType.text = bookingData?.payment
             cell.bestFor.text = bookingData?.bestFor
@@ -216,18 +216,18 @@ extension MyBookingsViewController: UITableViewDelegate , UITableViewDataSource 
             }
             cell.partnerName.text = bookingData?.name
             cell.location.text = bookingData?.address
-            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
+            cell.pastCost.text = "\( bookingData?.basePrice! ?? 0)"
+            cell.cost.text = "\(bookingData?.totalPrice! ?? 0)"
             cell.point.text = "\( bookingData?.points! ?? 0)"
             cell.bestFor.text = bookingData?.bestFor
-            cell.day.text = bookingData?.day
+//            cell.day.text = bookingData?.
             cell.date.text = bookingData?.date
             cell.starttime.text = bookingData?.startTime
             cell.endTime.text = bookingData?.endTime
             cell.paymentType.text = bookingData?.payment
             cell.bookingStatus.text = bookingData?.status
 
-            if bookingData?.newPrice == bookingData?.oldPrice {
+            if bookingData?.basePrice == bookingData?.totalPrice {
                 cell.pastCost.isHidden = true
                 cell.before.isHidden = true
                 cell.beforeCenterView.isHidden = true
@@ -257,8 +257,8 @@ extension MyBookingsViewController: UITableViewDelegate , UITableViewDataSource 
             }
             cell.partnerName.text = bookingData?.name
             cell.location.text = bookingData?.address
-            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
-            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
+//            cell.pastCost.text = "\( bookingData?.oldPrice! ?? 0)"
+//            cell.cost.text = "\(bookingData?.newPrice! ?? 0)"
             cell.point.text = "\( bookingData?.points! ?? 0)"
             cell.bestFor.text = bookingData?.bestFor
             cell.day.text = bookingData?.day

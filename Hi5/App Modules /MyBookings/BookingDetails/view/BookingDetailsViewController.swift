@@ -17,7 +17,7 @@ protocol IBookingDetailsViewController: class {
     
 }
 
-class BookingDetailsViewController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+class BookingDetailsViewController: UIViewController {
     var interactor: IBookingDetailsInteractor?
     var router: IBookingDetailsRouter?
     
@@ -34,28 +34,13 @@ class BookingDetailsViewController: UIViewController , UICollectionViewDelegate 
     
     
     //MARK: - Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var fieldName: UILabel!
-    @IBOutlet weak var rateLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
+   
     @IBOutlet weak var fieldImg: UIImageView!
-    @IBOutlet weak var fieldAddressLbl: UILabel!
-    @IBOutlet weak var bestforLbl: UILabel!
-    @IBOutlet weak var statusLbl: UILabel!
-    @IBOutlet weak var availableLbl: UILabel!
+
     @IBOutlet weak var companyImg: UIImageView!
-    @IBOutlet weak var fieldTypeLbl: UILabel!
-    @IBOutlet weak var fieldSizeLbl: UILabel!
-    @IBOutlet weak var sportTypeLbl: UILabel!
-    @IBOutlet weak var commentLbl: UILabel!
-    @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var genderLbl: UILabel!
-    @IBOutlet weak var companyNameLbl: UILabel!
-    @IBOutlet weak var timeLbl: UILabel!
-    @IBOutlet weak var paymentLbl: UILabel!
-    @IBOutlet weak var costLbl: UILabel!
+  
     @IBOutlet weak var contactBtn: UIButton!
-    @IBOutlet weak var commentAndReview: UIStackView!
     
     
     override func viewDidLoad() {
@@ -98,20 +83,8 @@ extension BookingDetailsViewController: IBookingDetailsViewController {
         
         sessionData = response
         fieldName.text = field.name
-        fieldAddressLbl.text = field.address
-        dateLbl.text = field.date
-        timeLbl.text = (field.startTime ?? "") + "-" + (field.endTime ?? "") 
-        sportTypeLbl.text = field.sport
-        fieldTypeLbl.text = field.fieldType
-        fieldSizeLbl.text = field.fieldSize
-        statusLbl.text = field.status
-        //        genderLbl.text = field.gender
-        bestforLbl.text = field.bestFor
-        //        availableLbl.text = field.visibility
-        companyNameLbl.text = field.partnerName
-        costLbl.text = "$\(String(describing: field.newPrice ?? 0))"
-        paymentLbl.text = "payment method: \(String(describing: field.payment ?? ""))"
-        
+     
+   
         if let fieldImg = field.image {
             let url = URL(string: fieldImg)
             DispatchQueue.global().async {
@@ -136,7 +109,6 @@ extension BookingDetailsViewController: IBookingDetailsViewController {
         
         if let services = field.services {
             self.services = services
-            collectionView.reloadData()
         }
     }
 }
@@ -144,7 +116,6 @@ extension BookingDetailsViewController: IBookingDetailsViewController {
 extension BookingDetailsViewController {
     func initView(){
         
-        commentAndReview.isHidden = true
         if type == 0 {
             contactBtn.isHidden = false
             contactBtn.setTitle("Cancel", for: .normal)
@@ -166,45 +137,10 @@ extension BookingDetailsViewController {
     }
     
     func configer(){
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        registerCollectionCell()
+       
     }
 }
 
-extension BookingDetailsViewController {
-    func registerCollectionCell() {
-        let cell = UINib(nibName: "ServicesCell", bundle: nil)
-        collectionView.register(cell, forCellWithReuseIdentifier: "ServicesCell")
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return services.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ServicesCell", for: indexPath) as! ServicesCell
-        cell.serviceLbl.text = services[indexPath.row].name
-        if let serviceImg = services[indexPath.row].image {
-            let url = URL(string: serviceImg)
-            DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url!) {
-                    DispatchQueue.main.async {
-                        cell.serviceimg.image = UIImage(data: data)
-                    }
-                }
-            }
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width / 6
-        let height = collectionView.frame.height / 2
-        return CGSize(width: width, height: height)
-    }
-}
 extension BookingDetailsViewController {
     // do someting...
 }

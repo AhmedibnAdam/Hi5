@@ -174,6 +174,14 @@
 		66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A0323B4C8FC009DB30A /* FieldsManager.swift */; };
 		66340A1B23B4E091009DB30A /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1A23B4E091009DB30A /* LoginEndpoint.swift */; };
 		66340A1D23B4E0B3009DB30A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66340A1C23B4E0B3009DB30A /* NetworkService.swift */; };
+		664285C624D18C81007DCBC9 /* ReceiptConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285BE24D18C81007DCBC9 /* ReceiptConfiguration.swift */; };
+		664285C724D18C81007DCBC9 /* ReceiptPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285BF24D18C81007DCBC9 /* ReceiptPresenter.swift */; };
+		664285C824D18C81007DCBC9 /* ReceiptWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285C024D18C81007DCBC9 /* ReceiptWorker.swift */; };
+		664285C924D18C81007DCBC9 /* ReceiptRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285C124D18C81007DCBC9 /* ReceiptRouter.swift */; };
+		664285CA24D18C81007DCBC9 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285C224D18C81007DCBC9 /* ReceiptViewController.swift */; };
+		664285CB24D18C81007DCBC9 /* ReceiptInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285C324D18C81007DCBC9 /* ReceiptInteractor.swift */; };
+		664285CC24D18C81007DCBC9 /* ReceiptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664285C424D18C81007DCBC9 /* ReceiptModel.swift */; };
+		664285CD24D18C81007DCBC9 /* ReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664285C524D18C81007DCBC9 /* ReceiptViewController.xib */; };
 		664D24FD24B6087D007DA867 /* launchEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D24FC24B6087D007DA867 /* launchEndpoint.swift */; };
 		664D24FF24B77530007DA867 /* NotificationsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664D24FE24B77530007DA867 /* NotificationsEndpoint.swift */; };
 		66545F95243B61AC007A547F /* PublicEventDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545F8D243B61AC007A547F /* PublicEventDetailsConfiguration.swift */; };
@@ -804,6 +812,14 @@
 		66340A0323B4C8FC009DB30A /* FieldsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsManager.swift; sourceTree = "<group>"; };
 		66340A1A23B4E091009DB30A /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
 		66340A1C23B4E0B3009DB30A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		664285BE24D18C81007DCBC9 /* ReceiptConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptConfiguration.swift; sourceTree = "<group>"; };
+		664285BF24D18C81007DCBC9 /* ReceiptPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptPresenter.swift; sourceTree = "<group>"; };
+		664285C024D18C81007DCBC9 /* ReceiptWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptWorker.swift; sourceTree = "<group>"; };
+		664285C124D18C81007DCBC9 /* ReceiptRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRouter.swift; sourceTree = "<group>"; };
+		664285C224D18C81007DCBC9 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		664285C324D18C81007DCBC9 /* ReceiptInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptInteractor.swift; sourceTree = "<group>"; };
+		664285C424D18C81007DCBC9 /* ReceiptModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptModel.swift; sourceTree = "<group>"; };
+		664285C524D18C81007DCBC9 /* ReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptViewController.xib; sourceTree = "<group>"; };
 		664D24FC24B6087D007DA867 /* launchEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = launchEndpoint.swift; sourceTree = "<group>"; };
 		664D24FE24B77530007DA867 /* NotificationsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsEndpoint.swift; sourceTree = "<group>"; };
 		66545F8D243B61AC007A547F /* PublicEventDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEventDetailsConfiguration.swift; sourceTree = "<group>"; };
@@ -2272,6 +2288,21 @@
 			path = CommonUIView;
 			sourceTree = "<group>";
 		};
+		664285BD24D18C4E007DCBC9 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				664285BE24D18C81007DCBC9 /* ReceiptConfiguration.swift */,
+				664285BF24D18C81007DCBC9 /* ReceiptPresenter.swift */,
+				664285C024D18C81007DCBC9 /* ReceiptWorker.swift */,
+				664285C124D18C81007DCBC9 /* ReceiptRouter.swift */,
+				664285C224D18C81007DCBC9 /* ReceiptViewController.swift */,
+				664285C324D18C81007DCBC9 /* ReceiptInteractor.swift */,
+				664285C424D18C81007DCBC9 /* ReceiptModel.swift */,
+				664285C524D18C81007DCBC9 /* ReceiptViewController.xib */,
+			);
+			path = Receipt;
+			sourceTree = "<group>";
+		};
 		66545F8B243B615B007A547F /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -3135,6 +3166,7 @@
 		66AEC61724227AFE003CF2EB /* MyBookings */ = {
 			isa = PBXGroup;
 			children = (
+				664285BD24D18C4E007DCBC9 /* Receipt */,
 				661398E924698C6E0050938A /* Bookings */,
 				661398EA24698C810050938A /* BookingDetails */,
 				668E9EE2246EB0D8004A403E /* Comment */,
@@ -5069,6 +5101,7 @@
 				E2FAE5B7240E648300CD8CFC /* SocialHeader.xib in Resources */,
 				667E4B7523C3DCA3007354A7 /* MakeWalletPasswordViewController.xib in Resources */,
 				668E9F09246EB46E004A403E /* AllCommentsViewController.xib in Resources */,
+				664285CD24D18C81007DCBC9 /* ReceiptViewController.xib in Resources */,
 				E2FAE5B2240E648300CD8CFC /* SocialCell.xib in Resources */,
 				66AEC60E242266B0003CF2EB /* FilterViewController.xib in Resources */,
 				6663369523B40AFD004E537C /* EmailVerficationViewController.xib in Resources */,
@@ -5203,6 +5236,7 @@
 				869BCA5A23E98C63000291EB /* GenderEndPoint.swift in Sources */,
 				E2FAE5DB240E649E00CD8CFC /* PublicEventsPresenter.swift in Sources */,
 				668C210723C3F5BC00C009A9 /* AddSessionResultRouter.swift in Sources */,
+				664285CC24D18C81007DCBC9 /* ReceiptModel.swift in Sources */,
 				662A16C423C3EA9F00A3695E /* AddFriendsConfiguration.swift in Sources */,
 				6663365723B40318004E537C /* RegisterModel.swift in Sources */,
 				668C210C23C3F5BC00C009A9 /* AddSessionResultManager.swift in Sources */,
@@ -5303,6 +5337,7 @@
 				E2FAE5DC240E649E00CD8CFC /* PublicEventsConfiguration.swift in Sources */,
 				66647CBE24BF5F5800873B38 /* TermsModel.swift in Sources */,
 				862A5E8923CB72380058355E /* ChangeUsernameInteractor.swift in Sources */,
+				664285C624D18C81007DCBC9 /* ReceiptConfiguration.swift in Sources */,
 				666336C523B40BD3004E537C /* NewPasswordViewController.swift in Sources */,
 				6683E30A23BCEEFF00250702 /* ProfilePresenter.swift in Sources */,
 				663117DF243F25D7007C3FED /* SessionDetailsManager.swift in Sources */,
@@ -5330,6 +5365,7 @@
 				66AEC612242266B0003CF2EB /* FilterModel.swift in Sources */,
 				66340A0B23B4C8FC009DB30A /* FieldsManager.swift in Sources */,
 				6663367423B40A6A004E537C /* ForgetPasswordManager.swift in Sources */,
+				664285C924D18C81007DCBC9 /* ReceiptRouter.swift in Sources */,
 				861D22D323DCAEF5004F16F1 /* GalleryPresenter.swift in Sources */,
 				667E4B8323C3E169007354A7 /* AddFundViewController.swift in Sources */,
 				6663364823B402F7004E537C /* LoginManager.swift in Sources */,
@@ -5430,6 +5466,7 @@
 				668C214923C3F70F00C009A9 /* BookSessionPresenter.swift in Sources */,
 				660A1418246005A6006DAD45 /* MyWalletPresenter.swift in Sources */,
 				6683E2A523BB5FD900250702 /* MyFriendsInteractor.swift in Sources */,
+				664285C724D18C81007DCBC9 /* ReceiptPresenter.swift in Sources */,
 				E2FAE5D3240E649E00CD8CFC /* PublicEventsViewController.swift in Sources */,
 				666336A323B40B47004E537C /* ForgotPhoneViewController.swift in Sources */,
 				6683E32023BCEF1600250702 /* SideMenuManager.swift in Sources */,
@@ -5543,6 +5580,7 @@
 				668C20F823C3F57800C009A9 /* AddSessionResultFiltterViewController.swift in Sources */,
 				6663367023B40A6A004E537C /* ForgetPasswordViewController.swift in Sources */,
 				6663368123B40AB3004E537C /* ForgetEmailViewController.swift in Sources */,
+				664285C824D18C81007DCBC9 /* ReceiptWorker.swift in Sources */,
 				660A14F624619EF6006DAD45 /* FieldOwnerDetailsViewController.swift in Sources */,
 				6683E30923BCEEFF00250702 /* ProfileConfiguration.swift in Sources */,
 				668C216023C3F75300C009A9 /* CheckOutConfirmationManager.swift in Sources */,
@@ -5589,6 +5627,7 @@
 				663117D0243F25D7007C3FED /* CheckOutSessionDetailsRouter.swift in Sources */,
 				666336B823B40B84004E537C /* PhoneVerificationManager.swift in Sources */,
 				66AEC62524227B3D003CF2EB /* MyBookingsModel.swift in Sources */,
+				664285CB24D18C81007DCBC9 /* ReceiptInteractor.swift in Sources */,
 				668C214B23C3F70F00C009A9 /* BookSessionViewController.swift in Sources */,
 				86DC11E123D5C19100E577D9 /* EditProfileRouter.swift in Sources */,
 				662A16E723C3ECE000A3695E /* MyFriendsRequestPresenter.swift in Sources */,
@@ -5707,6 +5746,7 @@
 				668C212B23C3F6E200C009A9 /* LeaveCommentInCommentListViewController.swift in Sources */,
 				660A14262460066D006DAD45 /* MyWalletEndpoint.swift in Sources */,
 				6683E30C23BCEEFF00250702 /* ProfileViewController.swift in Sources */,
+				664285CA24D18C81007DCBC9 /* ReceiptViewController.swift in Sources */,
 				662A16B423C3E93900A3695E /* MyFriendsDetailsPresenter.swift in Sources */,
 				663117D6243F25D7007C3FED /* SessionDetailsConfiguration.swift in Sources */,
 				66647CBC24BF5F5800873B38 /* TermsViewController.swift in Sources */,

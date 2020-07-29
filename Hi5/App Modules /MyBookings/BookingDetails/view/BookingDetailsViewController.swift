@@ -70,6 +70,9 @@ class BookingDetailsViewController: UIViewController {
         }
         
     }
+    @IBAction func receiptShow(_ sender: UIButton) {
+        router?.navigateToReceipt()
+    }
     
 }
 

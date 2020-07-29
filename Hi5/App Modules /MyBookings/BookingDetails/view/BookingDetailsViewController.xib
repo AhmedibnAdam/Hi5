@@ -560,6 +560,9 @@
                                             <color key="value" white="0.10000000000000001" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="receiptShow:" destination="-1" eventType="touchUpInside" id="yMd-nc-ZOD"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-55-8xw" userLabel="Name And Rate Stack View">
                                     <rect key="frame" x="0.0" y="900.5" width="335" height="50"/>

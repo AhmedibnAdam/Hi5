@@ -61,6 +61,7 @@ enum GeneralRoute: IRouter {
     case allComments(fieldId: Int)
     case filterBublicEvent(parameters: [String: Any])
     case publicEvent(parameters: [String: Any])
+    case receipt
 }
 
 extension GeneralRoute {
@@ -173,6 +174,8 @@ extension GeneralRoute {
             
         case .newPassword(let phone):
             return NewPasswordConfiguration.setup(phone: phone)
+        case .receipt:
+            return ReceiptConfiguration.setup()
         }
        
     }
